@@ -1,54 +1,74 @@
 # 项目当前状态
 
 更新时间：2026-09-01  
-当前阶段：GitHub 仓库初始化
+当前阶段：竞品分析 Skill V0.1 产品定义完成，待执行架构设计
 
-## 本次任务
+## 当前目标
 
-检查本地 Git 与 GitHub 状态，建立协作文件，完成首次提交并推送到 Private GitHub Repository。
+基于已确认的 V0.1 产品定义，设计 Skill 的实际执行架构，包括工具调用、页面采集流程、素材保存方式、动态分类逻辑和网页报告生成方式，再进入 Codex 实现。
 
 ## 已完成
 
-- [x] 检查本地 Git 仓库状态：当前目录原先不是 Git 仓库。
-- [x] 检查 GitHub CLI：未安装 `gh`。
-- [x] 建立根目录协作文件。
-- [x] 发现启动规范文件 `CODEX_GITHUB_BOOTSTRAP.md` 缺失；本轮依据随目录提供的 `codex-github-bootstrap/template-reference/` 执行。
-- [x] 创建并核实 GitHub Private Repository：`lyc500/competitor-analysis-skill`。
-- [x] 添加 remote：`https://github.com/lyc500/competitor-analysis-skill.git`。
-- [x] 推送 `main` 到 GitHub，并建立 `origin/main` 跟踪关系。
+### GitHub 协作基础
 
-## 修改文件
+- [x] 建立根目录协作文件：`AGENTS.md`、`CONTEXT.md`、`DECISIONS.md`、`STATUS.md`。
+- [x] 创建并核实 Private Repository：`lyc500/competitor-analysis-skill`。
+- [x] 添加 remote 并推送 `main`。
+- [x] 建立 `origin/main` 跟踪关系。
+- [x] 保留 `codex-github-bootstrap/` 现有模板内容。
 
-| 文件 | 修改内容 |
-|---|---|
-| `AGENTS.md` | 建立 Codex 长期协作规则 |
-| `CONTEXT.md` | 记录项目现状、范围和约束 |
-| `DECISIONS.md` | 记录协作文件位置与仓库可见性决策 |
-| `STATUS.md` | 记录初始化进度、验证结果和风险 |
-| `.gitignore` | 忽略 macOS `.DS_Store` 文件 |
+### V0.1 产品定义
 
-## 验证结果
+- [x] 明确 Skill 面向产品设计师。
+- [x] 明确自然语言一句话作为主要输入方式。
+- [x] 明确主流程：目标识别 → 竞品范围 → 页面采集 → 动态分类 → 网页报告。
+- [x] 明确竞品采集支持在线公开来源、用户上传截图和 iPhone 镜像真机截图。
+- [x] 明确分类维度不固定，根据需求和实际页面动态判断。
+- [x] 明确 V0.1 采用“轻分析、重搜集和整理”原则。
+- [x] 明确最终输出为可直接打开的网页报告，截图可点击放大。
+- [x] 将 V0.1 产品定义同步至 `CONTEXT.md`。
+- [x] 将关键产品决策同步至 `DECISIONS.md`。
 
-### 已执行
+## 当前仓库事实
 
-- [x] 本地目录与文件检查
-- [x] Git 仓库、remote、提交历史检查
-- [x] GitHub CLI 与环境认证线索检查
-- [ ] build / lint / typecheck / test：当前目录无项目代码与配置，未执行
-- [x] 首次 commit：`b8fd7e3 chore: bootstrap project collaboration files`
-- [x] push：已完成，远程 `main` 已验证
+当前仓库已经完成协作基础和 V0.1 产品定义，但尚未开始真正的 Skill 代码 / 配置实现。
+
+目前不存在需要继承的半成品实现；后续 Codex 不应根据旧聊天自行补充未写入仓库的产品要求。
 
 ## 当前问题 / 风险
 
-- `CODEX_GITHUB_BOOTSTRAP.md` 不在当前目录及其子目录中。
-- 本机未安装 GitHub CLI；GitHub HTTPS 凭据已可用于推送，但凭据内容未写入仓库。
-- 已配置本地提交身份：`Codex <codex@localhost>`。
-- GitHub HTTPS 凭据已由用户在本机完成授权；凭据内容未进入聊天或仓库。
+- 还未确定 V0.1 的具体 Skill 技术结构与目录结构。
+- 还未确定在线 UI 来源的实际抓取方式、页面筛选和截图获取策略。
+- 还未确定用户上传截图与在线采集素材如何统一保存和引用。
+- iPhone 镜像真机截图的授权、操作边界和失败降级流程尚未落成执行规范。
+- 网页报告的技术实现、素材路径和打开方式尚未确定。
+- 还未建立真实任务测试集与验收样例。
+- 当前无项目代码与构建配置，因此 build / lint / typecheck / test 尚不可执行。
 
-## 待完成事项
+## 下一步待完成事项
 
-- [x] 配置本地 Git 提交身份。
-- [x] 创建 Private GitHub Repository。
-- [x] 添加 remote 并完成首次 commit。
-- [x] 配置 GitHub HTTPS 凭据并 push。
-- [x] 验证 remote、commit、push 和远程仓库状态。
+### P0：V0.1 执行架构设计
+
+- [ ] 定义 Skill 目录结构与入口文件。
+- [ ] 定义自然语言需求解析结果的数据结构。
+- [ ] 定义竞品清单生成与确认策略。
+- [ ] 定义在线来源搜索、筛选、截图采集与失败降级流程。
+- [ ] 定义用户上传截图的接入与统一整理方式。
+- [ ] 定义 iPhone 镜像采集的触发条件、授权步骤与回退方式。
+- [ ] 定义页面元数据结构：产品名、页面类型、分类、来源、时间等。
+- [ ] 定义动态分类逻辑。
+- [ ] 定义网页报告结构、图片放大交互和素材存储方式。
+
+### P1：实现与验证
+
+- [ ] 由 Codex 搭建 V0.1 Skill。
+- [ ] 建立至少 2–3 个真实设计调研测试任务。
+- [ ] 验证竞品范围合理性、截图有效性、分类可读性和网页浏览体验。
+- [ ] 根据测试结果迭代并更新 `STATUS.md` / `DECISIONS.md`。
+
+## 历史初始化信息
+
+- 首次 commit：`b8fd7e3 chore: bootstrap project collaboration files`
+- 本机未安装 GitHub CLI；GitHub HTTPS 凭据已可用于推送。
+- 本地提交身份曾配置为：`Codex <codex@localhost>`。
+- `CODEX_GITHUB_BOOTSTRAP.md` 不在当前目录及其子目录中；初始化时依据 `codex-github-bootstrap/template-reference/` 执行。
