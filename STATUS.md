@@ -41,7 +41,7 @@
 ## 当前问题 / 风险
 
 - `CODEX_GITHUB_BOOTSTRAP.md` 不在当前目录及其子目录中。
-- 本机未安装 GitHub CLI，且未发现 Git credential helper、GitHub token 或 GitHub remote。
+- 本机未安装 GitHub CLI；GitHub HTTPS 凭据已可用于推送，但凭据内容未写入仓库。
 - 已配置本地提交身份：`Codex <codex@localhost>`。
 - GitHub HTTPS 凭据已由用户在本机完成授权；凭据内容未进入聊天或仓库。
 
