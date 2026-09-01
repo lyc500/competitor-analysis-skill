@@ -13,6 +13,8 @@
 - [x] 检查 GitHub CLI：未安装 `gh`。
 - [x] 建立根目录协作文件。
 - [x] 发现启动规范文件 `CODEX_GITHUB_BOOTSTRAP.md` 缺失；本轮依据随目录提供的 `codex-github-bootstrap/template-reference/` 执行。
+- [x] 创建并核实 GitHub Private Repository：`lyc500/competitor-analysis-skill`。
+- [x] 添加 remote：`https://github.com/lyc500/competitor-analysis-skill.git`。
 
 ## 修改文件
 
@@ -32,18 +34,20 @@
 - [x] Git 仓库、remote、提交历史检查
 - [x] GitHub CLI 与环境认证线索检查
 - [ ] build / lint / typecheck / test：当前目录无项目代码与配置，未执行
-- [ ] 首次 commit：待执行
-- [ ] push：待 GitHub 认证与远程仓库完成后执行
+- [x] 首次 commit：`b8fd7e3 chore: bootstrap project collaboration files`
+- [ ] push：HTTPS 凭据未配置，待用户完成 GitHub 授权后执行
 
 ## 当前问题 / 风险
 
 - `CODEX_GITHUB_BOOTSTRAP.md` 不在当前目录及其子目录中。
 - 本机未安装 GitHub CLI，且未发现 Git credential helper、GitHub token 或 GitHub remote。
-- Git 用户名和邮箱尚未配置，首次 commit 前需要设置本地提交身份。
+- 已配置本地提交身份：`Codex <codex@localhost>`。
+- GitHub 页面会话已登录为 `lyc500`，但该登录状态未提供给命令行 Git 使用。
 
 ## 待完成事项
 
-- [ ] 配置本地 Git 提交身份。
-- [ ] 创建或复用 Private GitHub Repository。
-- [ ] 添加 remote、完成首次 commit 并 push。
+- [x] 配置本地 Git 提交身份。
+- [x] 创建 Private GitHub Repository。
+- [x] 添加 remote 并完成首次 commit。
+- [ ] 配置 GitHub HTTPS 凭据并 push。
 - [ ] 验证 remote、commit、push 和远程仓库状态。
