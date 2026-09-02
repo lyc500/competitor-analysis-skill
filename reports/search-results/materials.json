@@ -1,0 +1,253 @@
+{
+  "task": {
+    "request": "帮我搜集一下海内外热门产品的搜索结果页。",
+    "research_goal": "为产品设计提供页面参考",
+    "target_page": "搜索结果页",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "product_scope": [],
+    "specified_products": [],
+    "platforms": [],
+    "constraints": [],
+    "collection_status": "planned"
+  },
+  "competitors": [
+    {
+      "product_name": "百度",
+      "region": "CN",
+      "product_type": "综合搜索",
+      "reason": "百度搜索结果页",
+      "priority": "high",
+      "target_url": "https://www.baidu.com/s?wd=product+design",
+      "collection_status": "pending",
+      "candidate_source": "builtin_candidate"
+    },
+    {
+      "product_name": "小红书",
+      "region": "CN",
+      "product_type": "内容社区",
+      "reason": "小红书搜索结果页",
+      "priority": "medium",
+      "target_url": "https://www.xiaohongshu.com/search_result?keyword=design",
+      "collection_status": "pending",
+      "candidate_source": "builtin_candidate"
+    },
+    {
+      "product_name": "淘宝",
+      "region": "CN",
+      "product_type": "电商",
+      "reason": "淘宝搜索结果页",
+      "priority": "medium",
+      "target_url": "https://s.taobao.com/search?q=product+design",
+      "collection_status": "pending",
+      "candidate_source": "builtin_candidate"
+    },
+    {
+      "product_name": "Google",
+      "region": "Global",
+      "product_type": "综合搜索",
+      "reason": "Google 搜索结果页",
+      "priority": "high",
+      "target_url": "https://www.google.com/search?q=product+design",
+      "collection_status": "pending",
+      "candidate_source": "builtin_candidate"
+    },
+    {
+      "product_name": "Bing",
+      "region": "Global",
+      "product_type": "综合搜索",
+      "reason": "Bing 搜索结果页",
+      "priority": "medium",
+      "target_url": "https://www.bing.com/search?q=product+design",
+      "collection_status": "pending",
+      "candidate_source": "builtin_candidate"
+    },
+    {
+      "product_name": "Amazon",
+      "region": "Global",
+      "product_type": "电商",
+      "reason": "Amazon 搜索结果页",
+      "priority": "medium",
+      "target_url": "https://www.amazon.com/s?k=product+design",
+      "collection_status": "pending",
+      "candidate_source": "builtin_candidate"
+    },
+    {
+      "product_name": "YouTube",
+      "region": "Global",
+      "product_type": "视频",
+      "reason": "YouTube 搜索结果页",
+      "priority": "medium",
+      "target_url": "https://www.youtube.com/results?search_query=product+design",
+      "collection_status": "pending",
+      "candidate_source": "builtin_candidate"
+    },
+    {
+      "product_name": "Pinterest",
+      "region": "Global",
+      "product_type": "灵感社区",
+      "reason": "Pinterest 搜索结果页",
+      "priority": "medium",
+      "target_url": "https://www.pinterest.com/search/pins/?q=product%20design",
+      "collection_status": "pending",
+      "candidate_source": "builtin_candidate"
+    }
+  ],
+  "assets": [
+    {
+      "id": "百度-search-01",
+      "product_name": "百度",
+      "page_name": "百度搜索结果页",
+      "region": "CN",
+      "product_type": "综合搜索",
+      "platform": "Web",
+      "source_type": "web",
+      "source_url": "https://www.baidu.com/s?wd=product+design",
+      "captured_at": "",
+      "notes": "",
+      "quality_status": "missing",
+      "collection_status": "needs_manual_capture",
+      "provenance": "online",
+      "failure_reason": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "id": "小红书-search-01",
+      "product_name": "小红书",
+      "page_name": "小红书搜索结果页",
+      "region": "CN",
+      "product_type": "内容社区",
+      "platform": "Web",
+      "source_type": "web",
+      "source_url": "https://www.xiaohongshu.com/search_result?keyword=design",
+      "captured_at": "",
+      "notes": "",
+      "quality_status": "missing",
+      "collection_status": "needs_manual_capture",
+      "provenance": "online",
+      "failure_reason": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "id": "淘宝-search-01",
+      "product_name": "淘宝",
+      "page_name": "淘宝搜索结果页",
+      "region": "CN",
+      "product_type": "电商",
+      "platform": "Web",
+      "source_type": "web",
+      "source_url": "https://s.taobao.com/search?q=product+design",
+      "captured_at": "",
+      "notes": "",
+      "quality_status": "missing",
+      "collection_status": "needs_manual_capture",
+      "provenance": "online",
+      "failure_reason": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "id": "google-search-01",
+      "product_name": "Google",
+      "page_name": "Google 搜索结果页",
+      "region": "Global",
+      "product_type": "综合搜索",
+      "platform": "Web",
+      "source_type": "web",
+      "source_url": "https://www.google.com/search?q=product+design",
+      "captured_at": "",
+      "notes": "",
+      "quality_status": "missing",
+      "collection_status": "needs_manual_capture",
+      "provenance": "online",
+      "failure_reason": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "id": "bing-search-01",
+      "product_name": "Bing",
+      "page_name": "Bing 搜索结果页",
+      "region": "Global",
+      "product_type": "综合搜索",
+      "platform": "Web",
+      "source_type": "web",
+      "source_url": "https://www.bing.com/search?q=product+design",
+      "captured_at": "",
+      "notes": "",
+      "quality_status": "missing",
+      "collection_status": "needs_manual_capture",
+      "provenance": "online",
+      "failure_reason": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "id": "amazon-search-01",
+      "product_name": "Amazon",
+      "page_name": "Amazon 搜索结果页",
+      "region": "Global",
+      "product_type": "电商",
+      "platform": "Web",
+      "source_type": "web",
+      "source_url": "https://www.amazon.com/s?k=product+design",
+      "captured_at": "",
+      "notes": "",
+      "quality_status": "missing",
+      "collection_status": "needs_manual_capture",
+      "provenance": "online",
+      "failure_reason": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "id": "youtube-search-01",
+      "product_name": "YouTube",
+      "page_name": "YouTube 搜索结果页",
+      "region": "Global",
+      "product_type": "视频",
+      "platform": "Web",
+      "source_type": "web",
+      "source_url": "https://www.youtube.com/results?search_query=product+design",
+      "captured_at": "",
+      "notes": "",
+      "quality_status": "missing",
+      "collection_status": "needs_manual_capture",
+      "provenance": "online",
+      "failure_reason": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "id": "pinterest-search-01",
+      "product_name": "Pinterest",
+      "page_name": "Pinterest 搜索结果页",
+      "region": "Global",
+      "product_type": "灵感社区",
+      "platform": "Web",
+      "source_type": "web",
+      "source_url": "https://www.pinterest.com/search/pins/?q=product%20design",
+      "captured_at": "",
+      "notes": "",
+      "quality_status": "missing",
+      "collection_status": "needs_manual_capture",
+      "provenance": "online",
+      "failure_reason": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    }
+  ],
+  "classification": {
+    "classification_dimension": "页面结构模式",
+    "groups": [
+      {
+        "name": "综合结果",
+        "reason": "以综合结果列表承载多种内容",
+        "asset_ids": [
+          "百度-search-01",
+          "小红书-search-01",
+          "google-search-01",
+          "bing-search-01",
+          "youtube-search-01",
+          "pinterest-search-01"
+        ]
+      },
+      {
+        "name": "分栏筛选",
+        "reason": "通过分栏和筛选组织大量结果",
+        "asset_ids": [
+          "淘宝-search-01",
+          "amazon-search-01"
+        ]
+      }
+    ]
+  }
+}
