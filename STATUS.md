@@ -1,7 +1,7 @@
 # 项目当前状态
 
 更新时间：2026-09-04
-当前阶段：V0.1 第二轮阶段 2——独立验收通过
+当前阶段：V0.1 第二轮阶段 3A——实现完成，等待独立验收
 
 ## 阶段 1 本轮已完成
 
@@ -37,7 +37,7 @@
 - 需求解析、图片质量筛选、页面结构分类和地区分类选择。
 - 公开采集器独立边界。
 - JSON/HTML 产物生成和放大交互标记。
-- `python3 -m unittest discover -s tests -v`：31 项通过（含阶段 1 回归与阶段 2 补正测试）。
+- `python3 -m unittest discover -s tests -v`：38 项通过（含阶段 1/2 回归与阶段 3A 测试）。
 
 ### 因当前网络环境无法真实验证的在线采集能力
 
@@ -59,9 +59,15 @@
 - `semantic_status` 与 `quality_status` 分离；只有两者均 accepted 且路径有效才为 `collected`。
 - `og:image`/`twitter:image` 候选保持 `web_candidate` 与 `pending`。
 
+## 阶段 3A 实现完成（等待独立验收）
+
+- 新增独立 Source Candidate 契约、URL 标准化、稳定 ID、同竞品去重和 `sources.json` 持久化。
+- 正式入口支持 `--task-file + --sources-file`；候选只保持 `candidate_status=pending`，不进入素材或截图流程。
+- Agent 负责发现公开来源 URL，Python 不访问 URL、不搜索互联网、不下载图片。
+
 ## 尚未实现
 
-- 浏览器自动化、真实在线来源发现、用户上传交互和语义确认仍未实现（阶段 3）。
+- 浏览器自动化、真实页面访问/截图、用户上传交互和语义确认仍未实现（阶段 3B/3C）。
 - iPhone 镜像自动化或人工协作流程。
 - 动态网页的真实浏览器截图适配器。
 - 复杂竞品分析、Dashboard 和轻量设计洞察。
@@ -72,4 +78,4 @@
 
 ## 下一步建议
 
-下一步：等待阶段 3A——公开来源发现。浏览器截图、真实在线采集和页面语义确认仍未完成。正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
+下一步：等待阶段 3A 独立验收；之后再进入阶段 3B。当前仅支持 Agent 提供候选 URL，未完成浏览器截图、真实在线采集或页面语义确认。正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
