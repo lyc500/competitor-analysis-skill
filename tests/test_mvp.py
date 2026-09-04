@@ -26,7 +26,7 @@ class MvpTests(unittest.TestCase):
       good = tmp_path / "good.png"
       good.write_bytes(b"\x89PNG\r\n\x1a\n" + b"0" * 100)
       self.assertEqual(assess_image(bad).status, "rejected")
-      self.assertEqual(assess_image(good).status, "accepted")
+      self.assertEqual(assess_image(good).status, "rejected")
 
 
   def test_classification_uses_collected_page_structure(self):

@@ -3,13 +3,14 @@ from pathlib import Path
 
 from .classification import classify_assets
 from .collector import collect_candidate
+from .materials import process_materials
 from .planning import plan_competitors
 from .report import render_report
 from .requirements import parse_request
 from .task_contract import load_task
 
 
-def run_pipeline(request, output_dir: Path, fetch: bool = True):
+def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=None):
     output_dir.mkdir(parents=True, exist_ok=True)
     if isinstance(request, str):
         task = parse_request(request)
@@ -25,7 +26,13 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True):
     else:
         task = load_task(request)
         competitors = plan_competitors(task)
-    assets = [] if not isinstance(request, str) else [collect_candidate(item, output_dir, fetch=fetch) for item in competitors]
+    if materials_file:
+        material_path = Path(materials_file)
+        data = json.loads(material_path.read_text(encoding="utf-8"))
+        records = data.get("materials", data) if isinstance(data, dict) else data
+        assets = process_materials(records, output_dir, material_path.parent)
+    else:
+        assets = [] if not isinstance(request, str) else [collect_candidate(item, output_dir, fetch=fetch) for item in competitors]
     classification = classify_assets(assets)
     payload = {"task": task.to_dict(), "competitors": competitors, "assets": assets, "classification": classification}
     assets_json = output_dir / "materials.json"
