@@ -1,7 +1,20 @@
 # 项目当前状态
 
-更新时间：2026-09-02
-当前阶段：竞品分析 Skill V0.1 MVP 已实现，首轮真实任务已运行
+更新时间：2026-09-04
+当前阶段：V0.1 第二轮阶段 1——需求理解与竞品规划
+
+## 阶段 1 本轮已完成
+
+- [x] 增加 `task_contract.py`，校验任务字段、任务状态、竞品来源和规划策略。
+- [x] 需求任务改为包含 `raw_request`、`assumptions`、`task_status`、`planning_strategy` 等字段。
+- [x] 用户指定竞品优先保留并标记 `user_specified`；Agent 补充项标记 `agent_planned`；fixture 仅显式启用。
+- [x] 更新 `SKILL.md`，明确 Agent 语义理解与 Python 确定性处理边界。
+- [x] 新增阶段 1 测试和验收记录 `docs/acceptance/V0.1_STAGE1_ACCEPTANCE.md`。
+
+## 阶段 1 当前限制
+
+- 当前 Python 输入适配仅覆盖阶段 1 验收所需的明确短语，不是通用自然语言理解模型。
+- 尚未开始阶段 2–5：图片质量、浏览器截图、页面语义确认、动态分类和 HTML 优化均保持未实现。
 
 ## 本轮已完成
 
@@ -52,4 +65,3 @@
 ## 下一步建议
 
 在具备公开网络访问能力的执行环境重跑指定任务，并视动态页面情况接入浏览器截图适配器；保持 `online` 与 `builtin_candidate` provenance 区分。
-
