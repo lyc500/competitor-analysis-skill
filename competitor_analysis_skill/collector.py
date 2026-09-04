@@ -8,7 +8,7 @@ from .quality import assess_image
 
 
 class PublicSourceCollector:
-    source_type = "web"
+    source_type = "public_web"
 
     def collect(self, competitor: dict, output_dir: Path) -> dict:
         return collect_candidate(competitor, output_dir, fetch=True)

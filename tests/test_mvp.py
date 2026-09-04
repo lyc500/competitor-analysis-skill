@@ -47,7 +47,7 @@ class MvpTests(unittest.TestCase):
     self.assertEqual(result["classification_dimension"], "地区")
 
   def test_public_collector_is_separate_from_builtin_candidate_catalog(self):
-    self.assertTrue(PublicSourceCollector().source_type == "web")
+    self.assertTrue(PublicSourceCollector().source_type == "public_web")
     self.assertNotIn("target_url", PublicSourceCollector.__dict__)
 
 

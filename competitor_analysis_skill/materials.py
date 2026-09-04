@@ -16,7 +16,9 @@ class MaterialError(ValueError):
 def _text(value, field):
     if not isinstance(value, str):
         raise MaterialError(f"{field} 必须是字符串")
-    return value
+    if not value.strip():
+        raise MaterialError(f"{field} 不能为空")
+    return value.strip()
 
 def standardize_material(data, output_dir=None):
     if not isinstance(data, dict):
@@ -25,7 +27,7 @@ def standardize_material(data, output_dir=None):
     if missing:
         raise MaterialError(f"素材缺少字段: {', '.join(missing)}")
     result = deepcopy(data)
-    for field in ("id", "product_name", "page_name", "region", "product_type", "platform", "semantic_reason", "quality_reason", "notes"):
+    for field in ("id", "product_name", "page_name", "region", "product_type", "platform"):
         _text(result[field], field)
     for field, allowed in (("source_type", SOURCE_TYPES), ("collection_method", COLLECTION_METHODS), ("provenance", PROVENANCES), ("semantic_status", SEMANTIC_STATUSES), ("quality_status", QUALITY_STATUSES), ("collection_status", COLLECTION_STATUSES)):
         if result[field] not in allowed:
@@ -33,10 +35,28 @@ def standardize_material(data, output_dir=None):
     for field in ("observed_structure", "observed_patterns"):
         if not isinstance(result[field], list) or not all(isinstance(v, str) for v in result[field]):
             raise MaterialError(f"{field} 必须是字符串数组")
+    combinations = {
+        "ui_database": {("database_asset", "online"), ("database_asset", "builtin_candidate")},
+        "public_web": {("web_candidate", "online")},
+        "browser": {("browser_screenshot", "online")},
+        "user_upload": {("user_provided", "user_upload")},
+        "device_capture": {("manual_device_capture", "device_capture")},
+    }
+    if (result["collection_method"], result["provenance"]) not in combinations[result["source_type"]]:
+        raise MaterialError(f"来源字段组合不一致: {result['source_type']}/{result['collection_method']}/{result['provenance']}")
+    for field in ("semantic_reason", "quality_reason", "notes"):
+        if not isinstance(result[field], str):
+            raise MaterialError(f"{field} 必须是字符串")
+    if result["semantic_status"] in {"accepted", "rejected"} and not result["semantic_reason"].strip():
+        raise MaterialError("semantic_reason 不能为空")
     result.setdefault("image_path", "")
     result.setdefault("source_url", "")
     result.setdefault("captured_at", "")
     result.setdefault("failure_reason", "")
+    if not isinstance(result["failure_reason"], str):
+        raise MaterialError("failure_reason 必须是字符串")
+    if result["collection_status"] in {"rejected", "unavailable", "needs_manual_capture"} and not result["failure_reason"].strip():
+        raise MaterialError("失败状态必须填写 failure_reason")
     if output_dir and result.get("image_path"):
         p = Path(result["image_path"])
         if p.is_absolute():
@@ -48,7 +68,7 @@ def standardize_material(data, output_dir=None):
 def finalize_collection(material):
     if material.get("duplicate_of"):
         material["collection_status"] = "rejected"
-    elif material.get("semantic_status") == "accepted" and material.get("quality_status") == "accepted" and material.get("image_path"):
+    elif material.get("_mechanically_verified") is True and material.get("provenance") != "builtin_candidate" and material.get("semantic_status") == "accepted" and material.get("quality_status") == "accepted" and material.get("image_path"):
         material["collection_status"] = "collected"
     elif material.get("quality_status") == "rejected" or material.get("semantic_status") == "rejected":
         material["collection_status"] = "rejected"
@@ -63,8 +83,12 @@ def process_materials(records, output_dir, base_dir=None):
     assets_dir = output_dir / "assets"; assets_dir.mkdir(parents=True, exist_ok=True)
     results = []
     by_digest = {}
+    seen_ids = set()
     for index, raw in enumerate(records):
         material = standardize_material(raw)
+        if material["id"] in seen_ids:
+            raise MaterialError(f"素材 ID 重复: {material['id']}")
+        seen_ids.add(material["id"])
         source = Path(material.get("image_path", "")) if material.get("image_path") else None
         if source and not source.is_absolute(): source = base_dir / source
         if source and source.exists() and source.is_file():
@@ -77,8 +101,13 @@ def process_materials(records, output_dir, base_dir=None):
             material.update({"quality_status": quality.status, "quality_reason": quality.reason, "width": quality.width, "height": quality.height, "decode_format": quality.format, "content_sha256": quality.content_sha256})
             if quality.content_sha256 and quality.content_sha256 in by_digest:
                 material["duplicate_of"] = by_digest[quality.content_sha256]
+                target.unlink(missing_ok=True)
+            else:
+                material["_mechanically_verified"] = quality.status == "accepted"
         else:
-            material.update({"quality_status": "missing", "quality_reason": "图片不存在", "image_path": ""})
+            material.update({"quality_status": "missing", "quality_reason": "图片不存在", "image_path": "", "failure_reason": "图片不存在"})
+        if material.get("quality_status") == "rejected" and not material.get("failure_reason"):
+            material["failure_reason"] = material.get("quality_reason", "图片质量校验失败")
         material = finalize_collection(material)
         if material.get("content_sha256") and not material.get("duplicate_of"):
             by_digest[material["content_sha256"]] = material["id"]

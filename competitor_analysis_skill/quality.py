@@ -34,6 +34,7 @@ def assess_image(path: Path) -> QualityResult:
         with Image.open(path) as image:
             image.verify()
         with Image.open(path) as image:
+            image.load()
             width, height, fmt = image.width, image.height, image.format or ""
         expected = {".png": "PNG", ".jpg": "JPEG", ".jpeg": "JPEG", ".gif": "GIF", ".webp": "WEBP"}[path.suffix.lower()]
         if fmt.upper() != expected:
