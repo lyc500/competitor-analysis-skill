@@ -37,7 +37,7 @@
 - 需求解析、图片质量筛选、页面结构分类和地区分类选择。
 - 公开采集器独立边界。
 - JSON/HTML 产物生成和放大交互标记。
-- `python3 -m unittest discover -s tests -v`：30 项通过（含阶段 1 回归与阶段 2 补正测试）。
+- `python3 -m unittest discover -s tests -v`：31 项通过（含阶段 1 回归与阶段 2 补正测试）。
 
 ### 因当前网络环境无法真实验证的在线采集能力
 

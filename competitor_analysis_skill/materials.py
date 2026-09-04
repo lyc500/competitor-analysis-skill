@@ -28,7 +28,7 @@ def standardize_material(data, output_dir=None):
         raise MaterialError(f"素材缺少字段: {', '.join(missing)}")
     result = deepcopy(data)
     for field in ("id", "product_name", "page_name", "region", "product_type", "platform"):
-        _text(result[field], field)
+        result[field] = _text(result[field], field)
     for field, allowed in (("source_type", SOURCE_TYPES), ("collection_method", COLLECTION_METHODS), ("provenance", PROVENANCES), ("semantic_status", SEMANTIC_STATUSES), ("quality_status", QUALITY_STATUSES), ("collection_status", COLLECTION_STATUSES)):
         if result[field] not in allowed:
             raise MaterialError(f"无效 {field}: {result[field]}")
@@ -65,10 +65,10 @@ def standardize_material(data, output_dir=None):
         result["image_path"] = p.as_posix()
     return result
 
-def finalize_collection(material):
+def finalize_collection(material, mechanically_verified=False):
     if material.get("duplicate_of"):
         material["collection_status"] = "rejected"
-    elif material.get("_mechanically_verified") is True and material.get("provenance") != "builtin_candidate" and material.get("semantic_status") == "accepted" and material.get("quality_status") == "accepted" and material.get("image_path"):
+    elif mechanically_verified and material.get("provenance") != "builtin_candidate" and material.get("semantic_status") == "accepted" and material.get("quality_status") == "accepted" and material.get("image_path"):
         material["collection_status"] = "collected"
     elif material.get("quality_status") == "rejected" or material.get("semantic_status") == "rejected":
         material["collection_status"] = "rejected"
@@ -86,9 +86,11 @@ def process_materials(records, output_dir, base_dir=None):
     seen_ids = set()
     for index, raw in enumerate(records):
         material = standardize_material(raw)
+        material.pop("_mechanically_verified", None)
         if material["id"] in seen_ids:
             raise MaterialError(f"素材 ID 重复: {material['id']}")
         seen_ids.add(material["id"])
+        mechanically_verified = False
         source = Path(material.get("image_path", "")) if material.get("image_path") else None
         if source and not source.is_absolute(): source = base_dir / source
         if source and source.exists() and source.is_file():
@@ -101,14 +103,16 @@ def process_materials(records, output_dir, base_dir=None):
             material.update({"quality_status": quality.status, "quality_reason": quality.reason, "width": quality.width, "height": quality.height, "decode_format": quality.format, "content_sha256": quality.content_sha256})
             if quality.content_sha256 and quality.content_sha256 in by_digest:
                 material["duplicate_of"] = by_digest[quality.content_sha256]
+                material["image_path"] = ""
                 target.unlink(missing_ok=True)
             else:
-                material["_mechanically_verified"] = quality.status == "accepted"
+                mechanically_verified = quality.status == "accepted"
         else:
             material.update({"quality_status": "missing", "quality_reason": "图片不存在", "image_path": "", "failure_reason": "图片不存在"})
         if material.get("quality_status") == "rejected" and not material.get("failure_reason"):
             material["failure_reason"] = material.get("quality_reason", "图片质量校验失败")
-        material = finalize_collection(material)
+        material = finalize_collection(material, mechanically_verified=mechanically_verified)
+        material.pop("_mechanically_verified", None)
         if material.get("content_sha256") and not material.get("duplicate_of"):
             by_digest[material["content_sha256"]] = material["id"]
         results.append(material)

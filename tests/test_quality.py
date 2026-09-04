@@ -18,7 +18,7 @@ class QualityStage2Tests(unittest.TestCase):
     def test_material_contract_and_collection_state(self):
         base={"id":"x","product_name":"P","page_name":"Page","region":"CN","product_type":"app","platform":"iOS","image_path":"assets/x.png","source_type":"user_upload","source_url":"","captured_at":"","collection_method":"user_provided","provenance":"user_upload","semantic_status":"pending","semantic_reason":"待确认","collection_status":"pending","quality_status":"accepted","quality_reason":"ok","observed_structure":[],"observed_patterns":[],"notes":""}
         self.assertEqual(finalize_collection(standardize_material(base))["collection_status"],"pending")
-        base["semantic_status"]="accepted"; checked=standardize_material(base); checked["_mechanically_verified"]=True; self.assertEqual(finalize_collection(checked)["collection_status"],"collected")
+        base["semantic_status"]="accepted"; checked=standardize_material(base); self.assertEqual(finalize_collection(checked, mechanically_verified=True)["collection_status"],"collected")
         base["source_type"]="bad"
         with self.assertRaises(MaterialError): standardize_material(base)
     def test_duplicate_digest_is_preserved(self):
@@ -27,9 +27,10 @@ class QualityStage2Tests(unittest.TestCase):
             self.assertEqual(assess_image(p).content_sha256, assess_image(q).content_sha256)
 
     def test_missing_file_cannot_be_collected_from_forged_quality(self):
-        base=self.material('missing.png'); base.update(image_path='missing.png', quality_status='accepted', semantic_status='accepted')
+        base=self.material('missing.png'); base.update(image_path='missing.png', quality_status='accepted', semantic_status='accepted', _mechanically_verified=True)
         result=process_materials([base], Path(tempfile.mkdtemp()))[0]
         self.assertEqual(result['quality_status'], 'missing'); self.assertNotEqual(result['collection_status'], 'collected')
+        self.assertNotIn('_mechanically_verified', result)
 
     def material(self, image='valid.png', **overrides):
         value={"id":"m1","product_name":"P","page_name":"Page","region":"CN","product_type":"app","platform":"iOS","image_path":str(self.FIXTURES/image),"source_type":"user_upload","source_url":"","captured_at":"","collection_method":"user_provided","provenance":"user_upload","semantic_status":"pending","semantic_reason":"待确认","collection_status":"pending","quality_status":"pending","quality_reason":"","observed_structure":[],"observed_patterns":[],"notes":""}
@@ -44,7 +45,15 @@ class QualityStage2Tests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             result=process_materials([self.material(id='a'),self.material(id='b')],Path(d))
             self.assertEqual(result[1]['duplicate_of'],'a'); self.assertNotEqual(result[1]['collection_status'],'collected')
+            self.assertFalse(result[1]['image_path'])
+            self.assertTrue(all(not a.get('image_path') or (Path(d)/a['image_path']).exists() for a in result))
             self.assertEqual(len(list((Path(d)/'assets').iterdir())),1)
+
+    def test_text_fields_are_trimmed_before_id_uniqueness(self):
+        one=self.material(id=' x ', product_name=' P ', page_name=' Page ', region=' CN ', product_type=' app ', platform=' iOS ')
+        normalized=standardize_material(one)
+        self.assertEqual(normalized['id'],'x'); self.assertEqual(normalized['product_name'],'P'); self.assertEqual(normalized['page_name'],'Page')
+        with self.assertRaises(MaterialError): process_materials([one, self.material(id='x')], Path(tempfile.mkdtemp()))
 
     def test_source_combinations_are_strict(self):
         valid={('user_upload','user_provided','user_upload'),('device_capture','manual_device_capture','device_capture'),('browser','browser_screenshot','online'),('public_web','web_candidate','online'),('ui_database','database_asset','online')}
