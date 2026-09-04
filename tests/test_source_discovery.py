@@ -1,4 +1,6 @@
 import json
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -52,5 +54,21 @@ class SourceDiscoveryTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             path=Path(d)/'sources.json'; path.write_text(json.dumps({"sources":[self.candidate()]}))
             with self.assertRaises(Exception): run_pipeline("legacy request",Path(d)/'out',sources_file=path)
+
+    def test_formal_cli_sources_file_persists_pending_candidates(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d); task_path=root/'task.json'; source_path=root/'sources-input.json'; out=root/'output'
+            task_path.write_text(json.dumps(self.task(), ensure_ascii=False)); source_path.write_text(json.dumps({"sources":[self.candidate()]}, ensure_ascii=False))
+            completed=subprocess.run([sys.executable,'-m','competitor_analysis_skill','--task-file',str(task_path),'--sources-file',str(source_path),'--output',str(out)],cwd=Path(__file__).parents[1],capture_output=True,text=True)
+            self.assertEqual(completed.returncode,0,completed.stderr)
+            payload=json.loads((out/'sources.json').read_text())
+            self.assertEqual(len(payload['sources']),1); row=payload['sources'][0]
+            self.assertEqual(row['candidate_status'],'pending'); self.assertNotIn('image_path',row); self.assertNotIn('collection_status',row)
+
+    def test_cli_rejects_sources_without_task_file(self):
+        with tempfile.TemporaryDirectory() as d:
+            path=Path(d)/'sources.json'; path.write_text(json.dumps({'sources':[self.candidate()]}))
+            completed=subprocess.run([sys.executable,'-m','competitor_analysis_skill','--sources-file',str(path)],cwd=Path(__file__).parents[1],capture_output=True,text=True)
+            self.assertNotEqual(completed.returncode,0)
 
 if __name__ == '__main__': unittest.main()
