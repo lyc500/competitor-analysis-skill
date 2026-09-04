@@ -1,4 +1,6 @@
 from copy import deepcopy
+import json
+from pathlib import Path
 
 
 TASK_STATUSES = {"planned", "needs_clarification", "ready", "blocked", "completed"}
@@ -12,6 +14,7 @@ REQUIRED_COMPETITOR_FIELDS = {
     "product_name", "region", "product_type", "platform", "target_page",
     "planning_source", "priority", "reason",
 }
+ALLOWED_PRIORITIES = {"high", "medium", "low"}
 
 
 class ContractError(ValueError):
@@ -74,6 +77,13 @@ def validate_task(task):
             raise ContractError(f"无效 planning_source: {source}")
         sources.append(source)
         name = competitor["product_name"]
+        for field in ("product_name", "region", "product_type", "platform", "target_page", "reason"):
+            if not isinstance(competitor[field], str) or not competitor[field].strip():
+                raise ContractError(f"competitors[{index}].{field} 不能为空")
+        if competitor["priority"] not in ALLOWED_PRIORITIES:
+            raise ContractError(f"无效 priority: {competitor['priority']}")
+        if competitor["target_page"] != task["target_page"]:
+            raise ContractError(f"competitors[{index}].target_page 与任务不一致")
         if name.casefold() in seen_products:
             raise ContractError(f"竞品重复: {name}")
         seen_products.add(name.casefold())
@@ -81,6 +91,17 @@ def validate_task(task):
             raise ContractError(f"user_specified 竞品未出现在 specified_products: {name}")
         if source != "user_specified" and name.casefold() in specified:
             raise ContractError(f"指定竞品必须标记为 user_specified: {name}")
+        if source == "user_specified" and competitor["priority"] != "high":
+            raise ContractError(f"指定竞品必须为 high priority: {name}")
+    if specified != {c["product_name"].casefold() for c in task["competitors"] if c["planning_source"] == "user_specified"}:
+        raise ContractError("specified_products 与 user_specified 竞品不一致")
+    agent_seen = False
+    for competitor in task["competitors"]:
+        if competitor["planning_source"] == "user_specified":
+            if agent_seen:
+                raise ContractError("user_specified 竞品必须位于补充竞品之前")
+        else:
+            agent_seen = True
     if task["task_status"] == "ready":
         expected = ("user_only" if sources and all(s == "user_specified" for s in sources)
                     else "agent_only" if sources and all(s == "agent_planned" for s in sources)
@@ -101,3 +122,25 @@ def make_task(**values):
     task = StructuredTask(values)
     validate_task(task)
     return task
+
+
+def load_task(data):
+    """Load and validate an Agent-produced structured task."""
+    if isinstance(data, StructuredTask):
+        task = data
+    elif isinstance(data, dict):
+        task = StructuredTask(deepcopy(data))
+    else:
+        raise ContractError("task 必须是对象")
+    task.setdefault("request", task["raw_request"])
+    validate_task(task)
+    return task
+
+
+def load_task_file(path):
+    path = Path(path)
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ContractError(f"无法读取任务文件 {path}: {exc}") from exc
+    return load_task(data)

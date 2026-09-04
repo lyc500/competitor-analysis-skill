@@ -7,7 +7,15 @@ description: 根据自然语言需求搜集竞品页面、筛选公开素材、�
 
 ## 使用入口
 
-执行：
+正式入口要求 Agent 先完成语义理解和竞品规划，输出结构化任务 JSON，再执行：
+
+```bash
+python3 -m competitor_analysis_skill --task-file <task.json> --output reports/<name>
+```
+
+Python 只读取、校验、排序和持久化 Agent 提供的任务，不负责通过关键词或固定名单生成语义判断。自然语言位置参数仅保留为 `legacy/demo` 兼容入口，不代表通用自然语言理解能力。
+
+legacy/demo 兼容入口（不承担通用语义理解）：
 
 ```bash
 python3 -m competitor_analysis_skill "<自然语言调研需求>" --output reports/<name>

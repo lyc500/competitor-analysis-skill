@@ -24,18 +24,12 @@ def parse_request(request: str) -> StructuredTask:
         "constraints": [],
         "assumptions": assumptions,
         "needs_clarification": needs_clarification,
-        "task_status": "needs_clarification" if needs_clarification else "ready",
+        "task_status": "needs_clarification" if needs_clarification else "planned",
         "planning_strategy": "user_only" if specified else "agent_only",
         "competitors": [],
     })
     if not needs_clarification:
-        from .planning import plan_competitors
-        task["competitors"] = plan_competitors(task)
-        sources = {row["planning_source"] for row in task["competitors"]}
-        task["planning_strategy"] = ("mixed" if len(sources) > 1 else
-                                      "user_only" if sources == {"user_specified"} else
-                                      "fixture_demo" if sources == {"fixture_demo"} else
-                                      "agent_only")
+        task["assumptions"].append("legacy/demo 自然语言入口不承担通用语义理解；正式流程应使用 Agent 任务文件")
     validate_task(task)
     return task
 
