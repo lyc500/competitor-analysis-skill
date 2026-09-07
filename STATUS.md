@@ -1,7 +1,7 @@
 # 项目当前状态
 
 更新时间：2026-09-07
-当前阶段：V0.1 第二轮 Stage 5A——真实端到端验收准备完成，等待独立复验
+当前阶段：V0.1 第二轮 Stage 5A——独立验收通过（已关闭）
 
 ## 阶段 1 本轮已完成
 
@@ -95,7 +95,7 @@
 - [x] 校验 fallback open/resolved 与 collected Material 事实一致性。
 - [x] 真实移动报告目录后，由 Chromium 验证主图和放大图均可加载。
 
-## Stage 5A 已准备完成，等待独立复验
+## Stage 5A 已关闭并通过独立验收
 
 - [x] 保存 Task A / B 的确定性用户输入与本次 Agent 生成的 Task Contract；竞品清单不写入 production catalog、planner 或 Python 固定映射。
 - [x] Task A 使用 `agent_only`，覆盖国内与海外搜索结果页；Task B 保留四个用户指定直播产品并使用 `mixed` 补充代表性竞品。
@@ -115,4 +115,4 @@
 
 ## 下一步建议
 
-等待 Stage 5A 独立复验。Stage 5B 尚未执行，Stage 5C 尚未执行，不在 Stage 5A 进行真实公网采集。完整真实公网竞品 E2E 尚未完成，V0.1 MVP 尚未完成，iPhone 镜像自动化仍未实现。Stage 4 已生成 `classification.json`、`report_data.json` 和自包含 HTML 报告，`reviewed_materials.json` 已正式接入 Stage 4 分类与图墙。正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
+Stage 5A 已关闭并通过独立验收。Stage 5B 尚未执行，Stage 5C 尚未执行；完整真实公网竞品 E2E 尚未完成，V0.1 MVP 尚未完成，iPhone 镜像自动化仍未实现。Stage 4 已生成 `classification.json`、`report_data.json` 和自包含 HTML 报告，`reviewed_materials.json` 已正式接入 Stage 4 分类与图墙。正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
