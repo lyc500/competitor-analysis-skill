@@ -35,6 +35,8 @@ python3 -m competitor_analysis_skill --task-file <task.json> \
 
 Agent 必须逐项判断产品身份、目标页面匹配、页面主体完整性和图片类型，并提供 `semantic_reason`。只有 matched/matched/complete/ui_page 才能声明 `semantic_status=accepted`。Python 只校验 Review Contract，并将 browser、user_upload、device_capture 统一交给阶段 2 机械质量复验；它不通过关键词、文件名、URL、OCR 或图像规则推断语义。输出独立的 `reviewed_materials.json` 与 `fallback_requests.json`，不会提前进入分类或 HTML 报告。
 
+阶段 4 消费 `reviewed_materials.json` 和 Agent 生成的 `classification-plan.json`：Python 只过滤三重状态均通过的 collected Materials、校验分类计划、复制报告所需图片到独立 `assets/`，并生成 `classification.json`、`report_data.json` 和 HTML 报告。分类维度、分组、分组原因和多维 labels 全部来自 Agent；Python 不根据 `product_type`、`notes` 或关键词推断页面结构。无有效素材时输出 `unavailable` 和 fallback 清单。
+
 安装浏览器依赖：
 
 ```bash

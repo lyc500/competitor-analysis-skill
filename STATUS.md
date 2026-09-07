@@ -1,7 +1,7 @@
 # 项目当前状态
 
 更新时间：2026-09-07
-当前阶段：V0.1 第二轮阶段 3C——独立验收通过
+当前阶段：V0.1 第二轮 Stage 4——实现完成，等待独立验收
 
 ## 阶段 1 本轮已完成
 
@@ -79,10 +79,16 @@
 - [x] `reviewed_materials.json`、`fallback_requests.json` 和 open/resolved 回退状态。
 - [x] semantic + mechanical 双门槛 collected；Stage 3C 结果不进入现有分类和 HTML 报告。
 
+## Stage 4 已实现，等待独立验收
+
+- [x] collected-only 报告输入与 Agent Classification Plan 契约校验。
+- [x] 动态分类、多维 Agent labels、`classification.json` 和 `report_data.json`。
+- [x] HTML 图墙、点击放大、unavailable/fallback 清单和自包含 `assets/`。
+- [x] 真实 Chromium 报告交互与移动 viewport 测试。
+
 ## 尚未实现
 
 - 完整真实公网竞品 E2E 验收。
-- 阶段 4 动态分类与正式报告修正。
 - iPhone 镜像自动化。
 - 复杂竞品分析、Dashboard 和轻量设计洞察。
 
@@ -92,4 +98,4 @@
 
 ## 下一步建议
 
-下一步：阶段 4——动态分类与 HTML 报告。Stage 4 尚未开始；完整真实公网竞品 E2E 尚未完成；iPhone 镜像自动化仍未实现。`reviewed_materials.json` 已具备，但尚未正式接入 Stage 4 分类与图墙。正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
+下一步：等待 Stage 4 独立验收。Stage 5 尚未开始；完整真实公网竞品 E2E 尚未完成；iPhone 镜像自动化仍未实现。Stage 4 已生成 `classification.json`、`report_data.json` 和自包含 HTML 报告，`reviewed_materials.json` 已正式接入 Stage 4 分类与图墙。正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
