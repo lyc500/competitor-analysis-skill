@@ -1,7 +1,7 @@
 # 项目当前状态
 
 更新时间：2026-09-07
-当前阶段：V0.1 第二轮阶段 3B——独立验收通过
+当前阶段：V0.1 第二轮阶段 3C——实现完成，等待独立验收
 
 ## 阶段 1 本轮已完成
 
@@ -37,7 +37,7 @@
 - 需求解析、图片质量筛选、页面结构分类和地区分类选择。
 - 公开采集器独立边界。
 - JSON/HTML 产物生成和放大交互标记。
-- `python3 -m unittest discover -s tests -v`：49 项通过（含阶段 1/2/3A 回归与阶段 3B 测试）。
+- `python3 -m unittest discover -s tests -v`：62 项通过（含阶段 1/2/3A/3B 回归与阶段 3C 测试）。
 
 ### 因当前网络环境无法真实验证的在线采集能力
 
@@ -69,20 +69,27 @@
 
 - 新增真实 Playwright Chromium 浏览器截图、动态等待、截图元数据、机械质量检查和 `captures.json`（Playwright 1.60.0，Chromium 148.0.7778.96）。
 - 增加 public-only DNS/IP 防护、重定向防护、HTTP/超时/空白渲染失败记录；截图不进入 Material、分类或报告图墙。
-- 阶段 3B 已通过独立验收；页面语义审核、用户上传和真机 fallback 仍属于尚未开始的阶段 3C。
+- 阶段 3B 已通过独立验收；其截图现由阶段 3C 的 Agent Review handoff 审核后进入统一 Material 流程。
+
+## 阶段 3C 已实现，等待独立验收
+
+- [x] Agent Semantic Review Contract：由 Agent 提供产品身份、目标页面、主体完整性和素材类型判断，Python 只校验契约一致性。
+- [x] Browser Capture → Material：captured 截图必须逐条审核，并重新通过阶段 2 机械质量校验。
+- [x] 用户上传 handoff 与 device/manual capture handoff：两类来源均需同一套 Agent Review。
+- [x] `reviewed_materials.json`、`fallback_requests.json` 和 open/resolved 回退状态。
+- [x] semantic + mechanical 双门槛 collected；Stage 3C 结果不进入现有分类和 HTML 报告。
 
 ## 尚未实现
 
-- 真实公网竞品页面集成验收。
-- 页面视觉语义审核、Logo/分享图/营销图排除和 `target_page` 语义确认（阶段 3C）。
-- 用户上传、人工截图、iPhone 镜像和真机 fallback（阶段 3C）。
+- 完整真实公网竞品 E2E 验收。
 - 阶段 4 动态分类与正式报告修正。
+- iPhone 镜像自动化。
 - 复杂竞品分析、Dashboard 和轻量设计洞察。
 
 ## 当前最大问题
 
-浏览器截图链路已经跑通，但尚未进行真实公网竞品页面集成验收；浏览器截图也尚未经过页面语义审核，因此不能直接视为有效竞品素材。
+浏览器截图与结构化 Agent Review handoff 已跑通，但尚未进行真实公网竞品页面端到端验收；未经 Agent Review 和机械质量双重通过的截图仍不能视为有效竞品素材。
 
 ## 下一步建议
 
-下一步：阶段 3C——页面语义审核与人工回退。Stage 3C 尚未开始；正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
+下一步：等待阶段 3C 独立验收。Stage 4 尚未开始；正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。

@@ -12,9 +12,13 @@ from .requirements import parse_request
 from .task_contract import load_task
 
 
-def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=None, sources_file=None, capture_sources_flag=False):
+def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=None, sources_file=None, capture_sources_flag=False, captures_file=None, semantic_reviews_file=None, manual_captures_file=None):
     if sources_file and isinstance(request, str):
         raise ValueError("--sources-file 必须与结构化 --task-file 一起使用")
+    if semantic_reviews_file and isinstance(request, str):
+        raise ValueError("--semantic-reviews-file 必须与结构化 --task-file 一起使用")
+    if (captures_file or manual_captures_file) and not semantic_reviews_file:
+        raise ValueError("--captures-file/--manual-captures-file 必须搭配 --semantic-reviews-file")
     output_dir.mkdir(parents=True, exist_ok=True)
     if isinstance(request, str):
         task = parse_request(request)
@@ -30,6 +34,27 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
     else:
         task = load_task(request)
         competitors = plan_competitors(task)
+    if semantic_reviews_file:
+        if not captures_file and not manual_captures_file:
+            raise ValueError("--semantic-reviews-file 必须搭配 --captures-file 或 --manual-captures-file")
+        if capture_sources_flag or fetch is False or materials_file:
+            raise ValueError("阶段 3C 不得与 --capture-sources、--offline 或 --materials-file 同时使用")
+        from .semantic_review import process_semantic_reviews
+        def read_records(path, key):
+            data = json.loads(Path(path).read_text(encoding="utf-8"))
+            return data.get(key, data) if isinstance(data, dict) else data
+        captures = read_records(captures_file, "captures") if captures_file else []
+        manuals = read_records(manual_captures_file, "manual_captures") if manual_captures_file else []
+        reviews = read_records(semantic_reviews_file, "reviews")
+        result = process_semantic_reviews(task, captures, manuals, reviews, output_dir,
+                                          Path(captures_file).parent if captures_file else None,
+                                          Path(manual_captures_file).parent if manual_captures_file else None)
+        reviewed = output_dir / "reviewed_materials.json"
+        fallback = output_dir / "fallback_requests.json"
+        payload = {"task": task.to_dict(), **result}
+        reviewed.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        fallback.write_text(json.dumps(result["fallback_requests"], ensure_ascii=False, indent=2), encoding="utf-8")
+        return {"reviewed_materials_json": reviewed, "fallback_requests_json": fallback, "payload": payload}
     sources_json = None
     if sources_file:
         source_path = Path(sources_file)

@@ -23,6 +23,18 @@ python3 -m competitor_analysis_skill --task-file <task.json> --sources-file <sou
 
 阶段 3B 浏览器工作流在显式 `--capture-sources` 下消费 `sources.json` 并输出独立 `captures.json`。Browser Capture 只证明候选 URL 被真实浏览器加载并截图；截图仍待阶段 3C 语义审核，不会自动成为 `semantic accepted` 或 `collected Material`。
 
+阶段 3C 消费已有截图和 Agent 的结构化视觉审核：
+
+```bash
+python3 -m competitor_analysis_skill --task-file <task.json> \
+  --captures-file <captures.json> \
+  --manual-captures-file <manual-captures.json> \
+  --semantic-reviews-file <semantic-reviews.json> \
+  --output reports/<name>
+```
+
+Agent 必须逐项判断产品身份、目标页面匹配、页面主体完整性和图片类型，并提供 `semantic_reason`。只有 matched/matched/complete/ui_page 才能声明 `semantic_status=accepted`。Python 只校验 Review Contract，并将 browser、user_upload、device_capture 统一交给阶段 2 机械质量复验；它不通过关键词、文件名、URL、OCR 或图像规则推断语义。输出独立的 `reviewed_materials.json` 与 `fallback_requests.json`，不会提前进入分类或 HTML 报告。
+
 安装浏览器依赖：
 
 ```bash
