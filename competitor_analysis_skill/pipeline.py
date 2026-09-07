@@ -1,3 +1,4 @@
+import hashlib
 import json
 import shutil
 from pathlib import Path
@@ -11,6 +12,46 @@ from .planning import plan_competitors
 from .report import render_report
 from .requirements import parse_request
 from .task_contract import load_task
+
+
+def _non_stage4_classification():
+    return {
+        "classification_status": "unavailable",
+        "classification_dimension": "",
+        "classification_reason": "正式动态分类仅在 Stage 4 Agent Classification Plan 流程执行",
+        "groups": [],
+        "material_labels": [],
+    }
+
+
+def _validate_fallback_consistency(task, valid_materials, fallback_requests):
+    if not isinstance(fallback_requests, list):
+        raise ValueError("fallback_requests 必须是数组")
+    task_pairs = {
+        (competitor["product_name"].casefold(), task["target_page"])
+        for competitor in task["competitors"]
+    }
+    collected_pairs = {
+        (material["product_name"].casefold(), material["page_name"])
+        for material in valid_materials
+    }
+    for index, fallback in enumerate(fallback_requests):
+        if not isinstance(fallback, dict):
+            raise ValueError(f"fallback_requests[{index}] 必须是对象")
+        product_name = fallback.get("product_name")
+        target_page = fallback.get("target_page")
+        status = fallback.get("status")
+        if not isinstance(product_name, str) or not isinstance(target_page, str):
+            raise ValueError(f"fallback_requests[{index}] 缺少产品或目标页面")
+        if status not in {"open", "resolved"}:
+            raise ValueError(f"fallback_requests[{index}] status 无效")
+        pair = (product_name.casefold(), target_page)
+        if pair not in task_pairs:
+            continue
+        if pair in collected_pairs and status != "resolved":
+            raise ValueError("fallback 状态与 collected 素材矛盾：已有素材必须 resolved")
+        if pair not in collected_pairs and status == "resolved":
+            raise ValueError("fallback 状态与 collected 素材矛盾：无素材不得 resolved")
 
 
 def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=None, sources_file=None, capture_sources_flag=False, captures_file=None, semantic_reviews_file=None, manual_captures_file=None, reviewed_materials_file=None, classification_plan_file=None):
@@ -54,6 +95,8 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
             if m.get("product_name", "").casefold() not in task_products or m.get("page_name") != task["target_page"]: raise ValueError("reviewed material 与任务不一致")
             if m.get("collection_status") == "collected" and not (m.get("semantic_status") == "accepted" and m.get("quality_status") == "accepted" and m.get("image_path")): raise ValueError("collected material 状态不一致")
         valid = [m for m in materials if m.get("collection_status") == "collected" and m.get("semantic_status") == "accepted" and m.get("quality_status") == "accepted"]
+        fallback = data.get("fallback_requests", [])
+        _validate_fallback_consistency(task, valid, fallback)
         plan = None
         if classification_plan_file:
             plan_data = json.loads(Path(classification_plan_file).read_text(encoding="utf-8")); plan = plan_data.get("classification", plan_data) if isinstance(plan_data, dict) else plan_data
@@ -68,9 +111,15 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
             try: source.relative_to(source_root)
             except ValueError: raise ValueError("reviewed material image_path 不得逃逸输入目录")
             if not source.is_file(): raise ValueError(f"collected 图片不存在: {material['id']}")
-            suffix = source.suffix.lower() or ".png"; target = assets_dir / f"{material['id']}{suffix}"; shutil.copyfile(source, target)
+            suffix = source.suffix.lower() or ".png"
+            digest = hashlib.sha256(material["id"].encode("utf-8")).hexdigest()[:16]
+            target = assets_dir / f"{digest}{suffix}"
+            try:
+                target.resolve().relative_to(assets_dir.resolve())
+            except ValueError as exc:
+                raise ValueError("Stage 4 资产目标路径不得逃逸 assets 目录") from exc
+            shutil.copyfile(source, target)
             item = dict(material); item["image_path"] = target.relative_to(output_dir).as_posix(); copied.append(item)
-        fallback = data.get("fallback_requests", [])
         report_data = {"task": task.to_dict(), "materials": copied, "classification": classification, "fallback_requests": fallback, "excluded_summary": {status: sum(1 for m in materials if m.get("collection_status") == status) for status in ("rejected", "pending", "unavailable")}}
         (output_dir / "classification.json").write_text(json.dumps(classification, ensure_ascii=False, indent=2), encoding="utf-8")
         (output_dir / "report_data.json").write_text(json.dumps(report_data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -118,7 +167,7 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
         assets = process_materials(records, output_dir, material_path.parent)
     else:
         assets = [] if not isinstance(request, str) else [collect_candidate(item, output_dir, fetch=fetch) for item in competitors]
-    classification = classify_assets(assets)
+    classification = _non_stage4_classification()
     payload = {"task": task.to_dict(), "competitors": competitors, "assets": assets, "classification": classification}
     assets_json = output_dir / "materials.json"
     report_html = output_dir / "report.html"

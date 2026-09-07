@@ -1,4 +1,4 @@
-import json, threading, unittest
+import json, shutil, threading, unittest
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -21,7 +21,9 @@ class BrowserReportTests(unittest.TestCase):
             plan={"classification_dimension":"布局","classification_reason":"Agent 观察","groups":[{"name":"自定义组","reason":"Agent","material_ids":["mat-a"]}],"material_labels":[{"material_id":"mat-a","labels":{"布局":"单列"}}]}
             reviewed_path=src/'reviewed_materials.json'; reviewed_path.write_text(json.dumps(reviewed,ensure_ascii=False)); plan_path=root/'plan.json'; plan_path.write_text(json.dumps(plan,ensure_ascii=False))
             out=root/'out'; run_pipeline(task,out,reviewed_materials_file=reviewed_path,classification_plan_file=plan_path)
+            report_data=json.loads((out/'report_data.json').read_text(encoding='utf-8')); asset_path=report_data['materials'][0]['image_path']
+            moved=root/'new_location'; shutil.move(out,moved); self.assertFalse(out.exists())
             class S(ThreadingHTTPServer): pass
-            S.root=out; server=S(('127.0.0.1',0),Handler); thread=threading.Thread(target=server.serve_forever,daemon=True); thread.start(); self.addCleanup(server.shutdown)
+            S.root=moved; server=S(('127.0.0.1',0),Handler); thread=threading.Thread(target=server.serve_forever,daemon=True); thread.start(); self.addCleanup(server.shutdown)
             with sync_playwright() as p:
-                browser=p.chromium.launch(headless=True); page=browser.new_page(viewport={"width":390,"height":844}); page.goto(f'http://127.0.0.1:{server.server_port}/report.html'); self.assertEqual(page.locator('.asset-image').count(),1); page.locator('.asset-image').click(); self.assertTrue(page.locator('dialog[open]').count()==1); self.assertIn('assets/mat-a.png', page.locator('#viewer-image').get_attribute('src')); page.locator('button').click(); self.assertEqual(page.locator('dialog[open]').count(),0); self.assertLessEqual(page.evaluate('document.documentElement.scrollWidth'), page.evaluate('window.innerWidth')+2); browser.close()
+                browser=p.chromium.launch(headless=True); page=browser.new_page(viewport={"width":390,"height":844}); page.goto(f'http://127.0.0.1:{server.server_port}/report.html'); self.assertEqual(page.locator('.asset-image').count(),1); self.assertTrue(page.locator('.asset-image').evaluate('image => image.complete && image.naturalWidth > 0')); page.locator('.asset-image').click(); self.assertTrue(page.locator('dialog[open]').count()==1); self.assertTrue(page.locator('#viewer-image').get_attribute('src').endswith('/'+asset_path)); page.wait_for_function("document.getElementById('viewer-image').complete && document.getElementById('viewer-image').naturalWidth > 0"); self.assertGreater(page.locator('#viewer-image').evaluate('image => image.naturalWidth'),0); page.locator('button').click(); self.assertEqual(page.locator('dialog[open]').count(),0); self.assertLessEqual(page.evaluate('document.documentElement.scrollWidth'), page.evaluate('window.innerWidth')+2); browser.close()

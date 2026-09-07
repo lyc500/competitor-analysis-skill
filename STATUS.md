@@ -37,7 +37,7 @@
 - 需求解析、图片质量筛选、页面结构分类和地区分类选择。
 - 公开采集器独立边界。
 - JSON/HTML 产物生成和放大交互标记。
-- `python3 -m unittest discover -s tests -v`：62 项通过（含阶段 1/2/3A/3B 回归与阶段 3C 测试）。
+- `python3 -m unittest discover -s tests -v`：78 项通过（含阶段 1/2/3A/3B/3C 回归、Stage 4 补正与真实 Chromium 测试）。
 
 ### 因当前网络环境无法真实验证的在线采集能力
 
@@ -85,6 +85,10 @@
 - [x] 动态分类、多维 Agent labels、`classification.json` 和 `report_data.json`。
 - [x] HTML 图墙、点击放大、unavailable/fallback 清单和自包含 `assets/`。
 - [x] 真实 Chromium 报告交互与移动 viewport 测试。
+- [x] Stage 4 资产目标改用 Material ID 的确定性 SHA-256 摘要文件名，并防御性拒绝目标路径逃逸。
+- [x] 恢复 Stage 2 `--materials-file` collected 正式流程兼容；非 Stage 4 分支不要求 Classification Plan，也未恢复关键词分类 heuristic。
+- [x] 校验 fallback open/resolved 与 collected Material 事实一致性。
+- [x] 真实移动报告目录后，由 Chromium 验证主图和放大图均可加载。
 
 ## 尚未实现
 
