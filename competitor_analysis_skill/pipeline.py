@@ -5,13 +5,14 @@ from .classification import classify_assets
 from .collector import collect_candidate
 from .materials import process_materials
 from .source_discovery import process_sources
+from .browser_capture import capture_sources
 from .planning import plan_competitors
 from .report import render_report
 from .requirements import parse_request
 from .task_contract import load_task
 
 
-def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=None, sources_file=None):
+def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=None, sources_file=None, capture_sources_flag=False):
     if sources_file and isinstance(request, str):
         raise ValueError("--sources-file 必须与结构化 --task-file 一起使用")
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -37,6 +38,12 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
         sources = process_sources(task, source_records)
         sources_json = output_dir / "sources.json"
         sources_json.write_text(json.dumps({"task": task.to_dict(), "sources": sources}, ensure_ascii=False, indent=2), encoding="utf-8")
+        if capture_sources_flag:
+            captures = capture_sources(sources, output_dir)
+            captures_json = output_dir / "captures.json"
+            captures_json.write_text(json.dumps({"task": task.to_dict(), "sources": sources, "captures": captures}, ensure_ascii=False, indent=2), encoding="utf-8")
+        else:
+            captures_json = None
     if materials_file:
         material_path = Path(materials_file)
         data = json.loads(material_path.read_text(encoding="utf-8"))
@@ -52,4 +59,4 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
     report_html.write_text(render_report(task.to_dict(), assets, classification), encoding="utf-8")
     if sources_json:
         payload["sources"] = sources
-    return {"assets_json": assets_json, "report_html": report_html, "sources_json": sources_json, "payload": payload}
+    return {"assets_json": assets_json, "report_html": report_html, "sources_json": sources_json, "captures_json": locals().get("captures_json"), "payload": payload}
