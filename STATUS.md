@@ -1,7 +1,7 @@
 # 项目当前状态
 
 更新时间：2026-09-07
-当前阶段：V0.1 第二轮 Stage 4——实现完成，等待独立验收
+当前阶段：V0.1 第二轮 Stage 4——独立验收通过
 
 ## 阶段 1 本轮已完成
 
@@ -14,12 +14,17 @@
 ## 阶段 1 当前限制
 
 - 当前 Python 输入适配仅覆盖阶段 1 验收所需的明确短语，不是通用自然语言理解模型。
-- 阶段 1：关闭；阶段 2：关闭；阶段 3A：关闭；阶段 3B：关闭；阶段 3C：关闭并通过独立验收。
+- Stage 1：关闭。
+- Stage 2：关闭。
+- Stage 3A：关闭。
+- Stage 3B：关闭。
+- Stage 3C：关闭。
+- Stage 4：关闭并通过独立验收。
 
 ## 本轮已完成
 
 - [x] 建立 `competitor_analysis_skill/` 最小 Skill 实现与根目录 `SKILL.md` 入口说明。
-- [x] 实现需求解析、候选规划、公开来源采集器、质量筛选、统一素材 JSON、动态分类和 HTML 报告。
+- [x] 实现结构化任务、竞品规划、公开来源候选、浏览器截图、Agent Review handoff、Agent Classification Plan 校验和 HTML 报告。
 - [x] 将内置候选目录与公开来源采集器解耦；候选仅作为输入、测试和 fallback。
 - [x] HTML 截图点击放大，无法确认页面图片时显示 `needs_manual_capture` 占位。
 
@@ -30,11 +35,11 @@
 - Skill 入口说明、Python 模块入口和 CLI 参数。
 - 需求解析、候选规划与候选/采集器解耦。
 - 公开来源采集器、图片基础质量筛选、失败状态记录。
-- 统一素材 JSON、按素材差异选择地区/产品类型/页面结构模式、HTML 报告和放大脚本。
+- 统一素材 JSON；Agent 根据实际 collected 素材生成 Classification Plan，Python 校验计划并稳定生成分组、HTML 报告和放大交互。
 
 ### 已通过单元测试的能力
 
-- 需求解析、图片质量筛选、页面结构分类和地区分类选择。
+- 需求解析、图片机械质量筛选、Classification Plan 契约与稳定分组；Python 不根据 `product_type`、`notes` 或关键词推断页面结构。
 - 公开采集器独立边界。
 - JSON/HTML 产物生成和放大交互标记。
 - `python3 -m unittest discover -s tests -v`：78 项通过（含阶段 1/2/3A/3B/3C 回归、Stage 4 补正与真实 Chromium 测试）。
@@ -79,7 +84,7 @@
 - [x] `reviewed_materials.json`、`fallback_requests.json` 和 open/resolved 回退状态。
 - [x] semantic + mechanical 双门槛 collected；Stage 3C 结果不进入现有分类和 HTML 报告。
 
-## Stage 4 已实现，等待独立验收
+## Stage 4 已关闭并通过独立验收
 
 - [x] collected-only 报告输入与 Agent Classification Plan 契约校验。
 - [x] 动态分类、多维 Agent labels、`classification.json` 和 `report_data.json`。
@@ -102,4 +107,4 @@
 
 ## 下一步建议
 
-下一步：等待 Stage 4 独立验收。Stage 5 尚未开始；完整真实公网竞品 E2E 尚未完成；iPhone 镜像自动化仍未实现。Stage 4 已生成 `classification.json`、`report_data.json` 和自包含 HTML 报告，`reviewed_materials.json` 已正式接入 Stage 4 分类与图墙。正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
+下一步：Stage 5——真实端到端验收。Stage 5 尚未开始；完整真实公网竞品 E2E 尚未完成；iPhone 镜像自动化仍未实现。Stage 4 已生成 `classification.json`、`report_data.json` 和自包含 HTML 报告，`reviewed_materials.json` 已正式接入 Stage 4 分类与图墙。正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。V0.1 MVP 尚未完成。
