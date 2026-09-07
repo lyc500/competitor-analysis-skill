@@ -1,0 +1,99 @@
+{
+  "raw_request": "帮我搜集一下国内外热门直播产品的礼物面板，重点关注虎牙、斗鱼、抖音直播和 Twitch。",
+  "research_goal": "比较国内外热门直播产品礼物面板的入口、礼物组织、价格表达与赠送交互，为直播送礼体验设计提供真实页面参考。",
+  "target_page": "直播产品礼物面板",
+  "regions": [
+    "CN",
+    "Global"
+  ],
+  "product_scope": [
+    "游戏直播",
+    "短视频与综合直播",
+    "社交直播"
+  ],
+  "specified_products": [
+    "虎牙",
+    "斗鱼",
+    "抖音直播",
+    "Twitch"
+  ],
+  "platforms": [
+    "Web",
+    "iOS",
+    "Android"
+  ],
+  "constraints": [
+    "四个用户指定产品必须优先保留，不得因后续截图获取难度删除",
+    "后续验收仅将真实操作后出现的礼物面板截图计入有效素材",
+    "不得以 fixture 或内置候选替代真实公网采集"
+  ],
+  "assumptions": [
+    "将“国内外”解释为同时覆盖中国市场与全球市场",
+    "Agent 可补充具有不同直播场景的产品，但不能取代用户指定产品"
+  ],
+  "needs_clarification": false,
+  "task_status": "ready",
+  "planning_strategy": "mixed",
+  "competitors": [
+    {
+      "product_name": "虎牙",
+      "region": "CN",
+      "product_type": "游戏直播",
+      "platform": "Web / iOS / Android",
+      "target_page": "直播产品礼物面板",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确指定，代表国内游戏直播场景的礼物面板。"
+    },
+    {
+      "product_name": "斗鱼",
+      "region": "CN",
+      "product_type": "游戏直播",
+      "platform": "Web / iOS / Android",
+      "target_page": "直播产品礼物面板",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确指定，用于对照国内游戏直播送礼交互。"
+    },
+    {
+      "product_name": "抖音直播",
+      "region": "CN",
+      "product_type": "短视频与综合直播",
+      "platform": "iOS / Android",
+      "target_page": "直播产品礼物面板",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确指定，覆盖短视频生态中的综合直播送礼场景。"
+    },
+    {
+      "product_name": "Twitch",
+      "region": "Global",
+      "product_type": "游戏与创作者直播",
+      "platform": "Web / iOS / Android",
+      "target_page": "直播产品礼物面板",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确指定，覆盖全球游戏与创作者直播场景。"
+    },
+    {
+      "product_name": "快手直播",
+      "region": "CN",
+      "product_type": "短视频与综合直播",
+      "platform": "iOS / Android",
+      "target_page": "直播产品礼物面板",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "补充国内短视频与直播融合场景，用于比较礼物推荐和赠送路径。"
+    },
+    {
+      "product_name": "BIGO LIVE",
+      "region": "Global",
+      "product_type": "社交直播",
+      "platform": "iOS / Android",
+      "target_page": "直播产品礼物面板",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "补充全球社交直播场景，用于比较虚拟礼物的组织与互动方式。"
+    }
+  ]
+}

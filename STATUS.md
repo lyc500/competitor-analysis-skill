@@ -1,7 +1,7 @@
 # 项目当前状态
 
 更新时间：2026-09-07
-当前阶段：V0.1 第二轮 Stage 4——独立验收通过
+当前阶段：V0.1 第二轮 Stage 5A——真实端到端验收准备完成，等待独立复验
 
 ## 阶段 1 本轮已完成
 
@@ -37,12 +37,12 @@
 - 公开来源采集器、图片基础质量筛选、失败状态记录。
 - 统一素材 JSON；Agent 根据实际 collected 素材生成 Classification Plan，Python 校验计划并稳定生成分组、HTML 报告和放大交互。
 
-### 已通过单元测试的能力
+### 已通过自动化测试的能力
 
 - 需求解析、图片机械质量筛选、Classification Plan 契约与稳定分组；Python 不根据 `product_type`、`notes` 或关键词推断页面结构。
 - 公开采集器独立边界。
 - JSON/HTML 产物生成和放大交互标记。
-- `python3 -m unittest discover -s tests -v`：78 项通过（含阶段 1/2/3A/3B/3C 回归、Stage 4 补正与真实 Chromium 测试）。
+- `python3 -m unittest discover -s tests -v`：81 项通过（含阶段 1/2/3A/3B/3C 回归、Stage 4 补正、真实 Chromium 测试和 Stage 5A Task Contract 检查）。
 
 ### 因当前网络环境无法真实验证的在线采集能力
 
@@ -95,6 +95,14 @@
 - [x] 校验 fallback open/resolved 与 collected Material 事实一致性。
 - [x] 真实移动报告目录后，由 Chromium 验证主图和放大图均可加载。
 
+## Stage 5A 已准备完成，等待独立复验
+
+- [x] 保存 Task A / B 的确定性用户输入与本次 Agent 生成的 Task Contract；竞品清单不写入 production catalog、planner 或 Python 固定映射。
+- [x] Task A 使用 `agent_only`，覆盖国内与海外搜索结果页；Task B 保留四个用户指定直播产品并使用 `mixed` 补充代表性竞品。
+- [x] 新增 Task / Planning Contract 与防固定目录回归测试，不使用 mock、假公网截图或假 collected Material 冒充真实 E2E。
+- [x] 建立 Stage 5B / 5C 真实产物目录与运行记录规范，不创建空的成功产物。
+- [x] 建立 V0.1 MVP Acceptance Report 骨架并写明后续硬门槛。
+
 ## 尚未实现
 
 - 完整真实公网竞品 E2E 验收。
@@ -107,4 +115,4 @@
 
 ## 下一步建议
 
-下一步：Stage 5——真实端到端验收。Stage 5 尚未开始；完整真实公网竞品 E2E 尚未完成；iPhone 镜像自动化仍未实现。Stage 4 已生成 `classification.json`、`report_data.json` 和自包含 HTML 报告，`reviewed_materials.json` 已正式接入 Stage 4 分类与图墙。正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。V0.1 MVP 尚未完成。
+等待 Stage 5A 独立复验。Stage 5B 尚未执行，Stage 5C 尚未执行，不在 Stage 5A 进行真实公网采集。完整真实公网竞品 E2E 尚未完成，V0.1 MVP 尚未完成，iPhone 镜像自动化仍未实现。Stage 4 已生成 `classification.json`、`report_data.json` 和自包含 HTML 报告，`reviewed_materials.json` 已正式接入 Stage 4 分类与图墙。正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
