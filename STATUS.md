@@ -1,7 +1,15 @@
 # 项目当前状态
 
 更新时间：2026-09-08
-当前阶段：V0.1 第二轮 Stage 5B-R1——移动端 Task A 补正执行完成，等待 GPT 独立复验
+当前阶段：V0.1 第二轮 Stage 5B（R1 移动端补正后）——独立验收通过 / 已关闭
+
+Stage 5 当前状态：
+
+- Stage 5A：已关闭。
+- Stage 5B：R1 移动端补正后正式通过并关闭。
+- Stage 5C：尚未执行。
+- V0.1 MVP：尚未完成。
+- iPhone 镜像自动化：尚未实现。
 
 ## 阶段 1 本轮已完成
 
@@ -106,7 +114,7 @@
 - [x] 建立 Stage 5B / 5C 真实产物目录与运行记录规范，不创建空的成功产物。
 - [x] 建立 V0.1 MVP Acceptance Report 骨架并写明后续硬门槛。
 
-## Stage 5B-R1 移动端 Task A 补正执行完成，等待 GPT 独立复验
+## Stage 5B（R1 移动端补正后）——独立验收通过 / 已关闭
 
 - [x] 原始需求保持不变；Task Contract 显式增加 `target_surface = mobile_app`，目标平台只含 iOS/Android，不含 Web。
 - [x] Agent 按移动端研究价值规划起点读书、LinkedIn、WhatsApp，覆盖 CN + Global；清单只存在于验收 Task，不进入 production 固定映射。
@@ -117,18 +125,18 @@
 - [x] Agent 根据实际 Screen 生成“移动端搜索结果的任务与信息组织方式”Classification Plan；关键词 classification heuristic 未恢复。
 - [x] 新报告图墙只含四张 iOS App Screen，上一轮 Amazon / 哔哩哔哩 Desktop Web 没有进入；旧 `reports/acceptance/task-a/` 保持完整。
 - [x] 本地 HTTP + Chromium 148.0.7778.96 真实加载全部主图并点击起点读书 Screen；dialog 图片成功加载，资源请求失败为 0。
-- [ ] Stage 5B-R1 尚未通过 GPT 独立复验，当前不可关闭。
+- [x] GPT 已基于 commit `3186bd0bed112414988782636c4ffe11d751f990` 完成 GitHub、四张原始 Mobile App UI 与报告交互证据的独立视觉复验；Stage 5B-R1 通过，Task A 正式验收通过，Stage 5B 已关闭。
 
 ## 尚未实现
 
-- Stage 5B-R1 独立复验与 Stage 5C Task B 真实端到端验收；完整 V0.1 真实公网 E2E 仍未完成。
+- Stage 5C Task B 真实端到端验收；完整 V0.1 真实公网 E2E 仍未完成。
 - iPhone 镜像自动化。
 - 复杂竞品分析、Dashboard 和轻量设计洞察。
 
 ## 当前最大问题
 
-移动端 Task A 已达到本地产品自验收硬门槛，但 Stage 5B-R1 尚待独立复验；Task B / Stage 5C 尚未执行。未经 Agent Review、Surface 匹配和机械质量共同通过的截图仍不能视为有效移动端竞品素材。
+Stage 5B 已在 R1 移动端补正后通过独立验收并关闭；当前未完成项是 Task B / Stage 5C。未经 Agent Review、Surface 匹配和机械质量共同通过的截图仍不能视为有效移动端竞品素材。
 
 ## 下一步建议
 
-Stage 5B-R1 移动端 Task A 已达到产品自验收门槛，下一步只等待 GPT 独立复验；不得进入 Stage 5C，除非用户另行指示。Stage 5C 尚未执行，V0.1 MVP 尚未完成，iPhone 镜像自动化仍未实现。首次 Web 工程 E2E 证据位于 `reports/acceptance/task-a/`，移动端补正证据位于 `reports/acceptance/task-a-mobile/`；正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
+Stage 5B 已正式关闭。下一阶段是尚未执行的 Stage 5C，但本轮不进入 Stage 5C；需等待用户另行指示。V0.1 MVP 尚未完成，iPhone 镜像自动化仍未实现。首次 Web 工程 E2E 证据位于 `reports/acceptance/task-a/`，移动端补正及独立验收依据位于 `reports/acceptance/task-a-mobile/`；正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
