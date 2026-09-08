@@ -1,0 +1,100 @@
+{
+  "sources": [
+    {
+      "product_name": "百度",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.baidu.com/s?wd=product%20design",
+      "source_title": "百度搜索：product design",
+      "source_context": "百度官方公开搜索结果 URL；查询词为 product design，用于观察综合网页搜索结果。"
+    },
+    {
+      "product_name": "百度",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://m.baidu.com/s?word=product%20design",
+      "source_title": "百度移动搜索：product design",
+      "source_context": "百度官方移动 Web 搜索结果 URL；继续使用查询词 product design，作为桌面来源触发安全验证后的第二个真实候选。"
+    },
+    {
+      "product_name": "Google",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.google.com/search?q=product%20design",
+      "source_title": "Google Search: product design",
+      "source_context": "Google 官方公开搜索结果 URL；查询词为 product design，用于观察综合网页搜索结果。"
+    },
+    {
+      "product_name": "Google",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.google.com.hk/search?q=product%20design&hl=en",
+      "source_title": "Google Hong Kong Search: product design",
+      "source_context": "Google 香港官方公开搜索结果 URL；继续使用查询词 product design，作为首次 Google 来源触发 reCAPTCHA 后的第二个真实候选。"
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.xiaohongshu.com/search_result?keyword=product%20design",
+      "source_title": "小红书搜索：product design",
+      "source_context": "小红书官方公开 Web 搜索结果 URL；查询词为 product design，用于观察内容社区的搜索结果。"
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.xiaohongshu.com/search_result?keyword=product%20design&type=51",
+      "source_title": "小红书笔记搜索：product design",
+      "source_context": "小红书官方公开 Web 笔记搜索 URL；继续使用查询词 product design，作为首次来源触发 IP 安全限制后的第二个真实候选。"
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://search.bilibili.com/all?keyword=Product%20Design",
+      "source_title": "哔哩哔哩搜索：Product Design",
+      "source_context": "哔哩哔哩官方公开搜索 URL；查询词为 Product Design，Web 检索已发现可见结果列表。"
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://search.bilibili.com/all?keyword=design%20pattern",
+      "source_title": "哔哩哔哩搜索：design pattern",
+      "source_context": "哔哩哔哩官方公开搜索 URL；第二查询词为 design pattern，用于取得另一组真实视频搜索结果并验证结果结构稳定性。"
+    },
+    {
+      "product_name": "Perplexity",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.perplexity.ai/search?q=product%20design",
+      "source_title": "Perplexity Search: product design",
+      "source_context": "Perplexity 官方公开 Search 路径；查询词为 product design，用于验证对话式搜索结果是否可公开渲染。"
+    },
+    {
+      "product_name": "Perplexity",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.perplexity.ai/search?q=mobile%20interface%20design",
+      "source_title": "Perplexity Search: mobile interface design",
+      "source_context": "Perplexity 官方公开 Search 路径；第二查询词为 mobile interface design，作为首次页面因子资源 DNS 异常后的第二个真实候选。"
+    },
+    {
+      "product_name": "Amazon",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.amazon.com/s?k=product+design",
+      "source_title": "Amazon Search: product design",
+      "source_context": "Amazon 官方商品搜索结果 URL；查询词为 product design，用于观察电商商品结果、筛选与排序。"
+    },
+    {
+      "product_name": "Amazon",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.amazon.com/s?k=mobile+interface+design",
+      "source_title": "Amazon Search: mobile interface design",
+      "source_context": "Amazon 官方商品搜索结果 URL；第二查询词为 mobile interface design，用于取得另一组真实商品结果并验证筛选结构。"
+    }
+  ]
+}

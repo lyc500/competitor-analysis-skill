@@ -1,0 +1,62 @@
+[
+  {
+    "product_name": "百度",
+    "target_page": "搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Google",
+    "target_page": "搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "小红书",
+    "target_page": "搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "哔哩哔哩",
+    "target_page": "搜索结果页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Perplexity",
+    "target_page": "搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Amazon",
+    "target_page": "搜索结果页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  }
+]

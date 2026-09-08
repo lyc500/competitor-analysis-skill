@@ -47,7 +47,7 @@ def _review(raw, index):
 
 def _path(base, value):
     path = Path(value)
-    return path if path.is_absolute() else Path(base) / path
+    return path if path.is_absolute() else Path(base).resolve() / path
 
 
 def process_semantic_reviews(task, captures, manuals, reviews, output_dir, captures_base_dir=None, manuals_base_dir=None):

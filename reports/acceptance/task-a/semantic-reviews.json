@@ -1,0 +1,114 @@
+{
+  "reviews": [
+    {
+      "target_id": "cap-src-0d8d07f1d408216f",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "逐图查看确认这是 Amazon 的真实商品搜索结果页：搜索框显示 mobile interface design，页面包含结果数量、筛选栏、排序和多条商品结果；配送提示未替代或遮断主体结果。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-d556f9749ec10508",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "逐图查看确认这是 Amazon 的真实商品搜索结果页：搜索框显示 product design，结果区完整呈现筛选、排序、商品卡片、价格和评分；非阻断式提示不影响识别页面主体。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-e93d83b58c5594dc",
+      "target_kind": "browser_capture",
+      "semantic_status": "rejected",
+      "product_identity": "matched",
+      "target_page_match": "mismatched",
+      "page_completeness": "incomplete",
+      "asset_kind": "unrelated",
+      "semantic_reason": "逐图查看只看到 Google unusual traffic 提示，没有任何搜索结果内容；这是机器人验证/错误状态而不是目标搜索结果页。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-85702feb952dceaa",
+      "target_kind": "browser_capture",
+      "semantic_status": "rejected",
+      "product_identity": "matched",
+      "target_page_match": "mismatched",
+      "page_completeness": "incomplete",
+      "asset_kind": "unrelated",
+      "semantic_reason": "逐图查看只看到 Google unusual traffic 提示，没有可见查询结果；验证状态不能作为搜索结果页面素材。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-5fc980bcc2cd107c",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "逐图查看确认这是哔哩哔哩真实视频搜索结果页：搜索框显示 Product Design，综合/视频等结果类型、排序选项和多行视频结果均清晰可见；登录提示不是登录墙且未替代结果主体。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-4be2221da568abc7",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "逐图查看确认这是哔哩哔哩真实视频搜索结果页：搜索框显示 design pattern，页面完整展示类型切换、排序与多行视频卡片；非阻断式登录提示未妨碍主体结果识别。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-a01ef9fac5d01dd7",
+      "target_kind": "browser_capture",
+      "semantic_status": "rejected",
+      "product_identity": "unclear",
+      "target_page_match": "mismatched",
+      "page_completeness": "incomplete",
+      "asset_kind": "unrelated",
+      "semantic_reason": "逐图查看只显示“安全限制 / IP 存在风险”错误信息，没有任何小红书搜索结果或可判断的结果结构。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-4dd62a239fa4ed8d",
+      "target_kind": "browser_capture",
+      "semantic_status": "rejected",
+      "product_identity": "unclear",
+      "target_page_match": "mismatched",
+      "page_completeness": "incomplete",
+      "asset_kind": "unrelated",
+      "semantic_reason": "逐图查看只显示“安全限制 / IP 存在风险”错误信息，未渲染目标搜索结果页。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-fc474754ee75081c",
+      "target_kind": "browser_capture",
+      "semantic_status": "rejected",
+      "product_identity": "matched",
+      "target_page_match": "mismatched",
+      "page_completeness": "incomplete",
+      "asset_kind": "unrelated",
+      "semantic_reason": "逐图查看确认画面为百度安全验证滑块，搜索结果没有出现，不能计为目标页面。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-d72be00fe924e6ce",
+      "target_kind": "browser_capture",
+      "semantic_status": "rejected",
+      "product_identity": "matched",
+      "target_page_match": "mismatched",
+      "page_completeness": "incomplete",
+      "asset_kind": "unrelated",
+      "semantic_reason": "逐图查看确认画面为百度安全验证滑块而非搜索结果列表，必须拒绝。",
+      "review_source": "agent_visual_review"
+    }
+  ]
+}

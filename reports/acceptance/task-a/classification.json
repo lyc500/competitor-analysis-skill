@@ -1,0 +1,73 @@
+{
+  "classification_status": "ready",
+  "classification_dimension": "真实搜索结果的内容组织方式",
+  "classification_reason": "Agent 逐张查看本次 collected 截图后确认：Amazon 以商品决策信息、筛选和排序组织结果；哔哩哔哩以内容类型、排序和视频封面卡片组织结果。该维度只来自本次真实截图，不由 product_type、notes 或关键词推断。",
+  "groups": [
+    {
+      "name": "商品筛选与购买决策列表",
+      "reason": "截图中的结果主体由商品图、价格、评分、配送信息组成，并配有筛选与排序控件。",
+      "material_ids": [
+        "mat-cap-src-0d8d07f1d408216f",
+        "mat-cap-src-d556f9749ec10508"
+      ],
+      "asset_ids": [
+        "mat-cap-src-0d8d07f1d408216f",
+        "mat-cap-src-d556f9749ec10508"
+      ]
+    },
+    {
+      "name": "视频内容筛选与封面卡片流",
+      "reason": "截图中的结果主体由视频封面、标题、作者与播放信息组成，并提供内容类型和排序入口。",
+      "material_ids": [
+        "mat-cap-src-5fc980bcc2cd107c",
+        "mat-cap-src-4be2221da568abc7"
+      ],
+      "asset_ids": [
+        "mat-cap-src-5fc980bcc2cd107c",
+        "mat-cap-src-4be2221da568abc7"
+      ]
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cap-src-0d8d07f1d408216f",
+      "labels": {
+        "产品": "Amazon",
+        "查询词": "mobile interface design",
+        "结果载体": "商品列表",
+        "主要决策信息": "商品图、价格、评分、配送",
+        "筛选排序": "侧栏筛选与顶部排序"
+      }
+    },
+    {
+      "material_id": "mat-cap-src-d556f9749ec10508",
+      "labels": {
+        "产品": "Amazon",
+        "查询词": "product design",
+        "结果载体": "商品列表",
+        "主要决策信息": "商品图、价格、评分、配送",
+        "筛选排序": "侧栏筛选与顶部排序"
+      }
+    },
+    {
+      "material_id": "mat-cap-src-5fc980bcc2cd107c",
+      "labels": {
+        "产品": "哔哩哔哩",
+        "查询词": "Product Design",
+        "结果载体": "视频封面卡片流",
+        "主要决策信息": "封面、标题、作者、播放信息",
+        "筛选排序": "内容类型标签与排序"
+      }
+    },
+    {
+      "material_id": "mat-cap-src-4be2221da568abc7",
+      "labels": {
+        "产品": "哔哩哔哩",
+        "查询词": "design pattern",
+        "结果载体": "视频封面卡片流",
+        "主要决策信息": "封面、标题、作者、播放信息",
+        "筛选排序": "内容类型标签与排序"
+      }
+    }
+  ]
+}

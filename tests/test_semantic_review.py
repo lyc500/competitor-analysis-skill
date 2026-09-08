@@ -1,4 +1,5 @@
 import json
+import os
 import subprocess
 import sys
 import unittest
@@ -182,8 +183,13 @@ class SemanticReviewTests(unittest.TestCase):
             captures_path = root / "captures.json"
             reviews_path = root / "reviews.json"
             output = root / "output"
+            screenshot = root / "captures" / "valid.png"
+            screenshot.parent.mkdir()
+            screenshot.write_bytes((self.FIXTURES / "valid.png").read_bytes())
+            capture = self.capture()
+            capture["screenshot_path"] = "captures/valid.png"
             task_path.write_text(json.dumps(self.task(), ensure_ascii=False), encoding="utf-8")
-            captures_path.write_text(json.dumps({"captures": [self.capture()]}, ensure_ascii=False), encoding="utf-8")
+            captures_path.write_text(json.dumps({"captures": [capture]}, ensure_ascii=False), encoding="utf-8")
             reviews_path.write_text(json.dumps({"reviews": [self.review()]}, ensure_ascii=False), encoding="utf-8")
             completed = subprocess.run([
                 sys.executable, "-m", "competitor_analysis_skill",
@@ -196,6 +202,32 @@ class SemanticReviewTests(unittest.TestCase):
             self.assertTrue((output / "fallback_requests.json").exists())
             self.assertFalse((output / "materials.json").exists())
             self.assertFalse((output / "report.html").exists())
+
+    def test_formal_cli_resolves_relative_capture_file_from_working_directory(self):
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            task_path = root / "task.json"
+            captures_path = root / "captures.json"
+            reviews_path = root / "reviews.json"
+            output = root / "output"
+            screenshot = root / "captures" / "valid.png"
+            screenshot.parent.mkdir()
+            screenshot.write_bytes((self.FIXTURES / "valid.png").read_bytes())
+            capture = self.capture()
+            capture["screenshot_path"] = "captures/valid.png"
+            task_path.write_text(json.dumps(self.task(), ensure_ascii=False), encoding="utf-8")
+            captures_path.write_text(json.dumps({"captures": [capture]}, ensure_ascii=False), encoding="utf-8")
+            reviews_path.write_text(json.dumps({"reviews": [self.review()]}, ensure_ascii=False), encoding="utf-8")
+            project_root = Path(__file__).parents[1]
+            relative_captures = os.path.relpath(captures_path, project_root)
+            completed = subprocess.run([
+                sys.executable, "-m", "competitor_analysis_skill",
+                "--task-file", str(task_path), "--captures-file", relative_captures,
+                "--semantic-reviews-file", str(reviews_path), "--output", str(output),
+            ], cwd=project_root, capture_output=True, text=True)
+            self.assertEqual(completed.returncode, 0, completed.stderr)
+            payload = json.loads((output / "reviewed_materials.json").read_text(encoding="utf-8"))
+            self.assertEqual(payload["materials"][0]["collection_status"], "collected")
 
     def test_cli_rejects_reviews_without_capture_or_manual_input(self):
         completed = subprocess.run([

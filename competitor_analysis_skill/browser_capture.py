@@ -60,7 +60,11 @@ def _capture_one(browser, source, capture_dir, output_dir, timeout_ms, settle_ms
             from urllib.parse import urlsplit
             target = route.request.url
             if urlsplit(target).scheme in {"http", "https"}:
-                _public_host(target, allow_private)
+                try:
+                    _public_host(target, allow_private)
+                except ValueError:
+                    route.abort()
+                    return
             route.continue_()
         context.route("**/*", guard)
         page = context.new_page()

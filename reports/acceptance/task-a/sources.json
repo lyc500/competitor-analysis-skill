@@ -1,0 +1,232 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下海内外热门产品的搜索结果页。",
+    "research_goal": "比较海内外热门产品搜索结果页的信息架构、结果组织与筛选方式，为产品设计提供真实页面参考。",
+    "target_page": "搜索结果页",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "product_scope": [
+      "综合搜索",
+      "内容社区",
+      "视频社区",
+      "AI 搜索",
+      "电商"
+    ],
+    "specified_products": [],
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "constraints": [
+      "后续验收仅将真实页面截图计入有效素材",
+      "不得以 fixture 或内置候选替代真实公网采集"
+    ],
+    "assumptions": [
+      "将“海内外”解释为同时覆盖中国市场与全球市场",
+      "Agent 按搜索结果信息组织差异规划本次竞品，不因后续截图获取难度删减范围"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "百度",
+        "region": "CN",
+        "product_type": "综合搜索",
+        "platform": "Web",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖中国综合网页搜索及多类型结果模块的组织方式。"
+      },
+      {
+        "product_name": "Google",
+        "region": "Global",
+        "product_type": "综合搜索",
+        "platform": "Web",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖全球综合网页搜索及多类型结果模块的组织方式。"
+      },
+      {
+        "product_name": "小红书",
+        "region": "CN",
+        "product_type": "内容社区",
+        "platform": "Web / iOS / Android",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "覆盖内容社区中图文、视频与用户内容混排的搜索结果。"
+      },
+      {
+        "product_name": "哔哩哔哩",
+        "region": "CN",
+        "product_type": "视频社区",
+        "platform": "Web / iOS / Android",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "覆盖视频社区中内容、用户与分区相关的搜索结果。"
+      },
+      {
+        "product_name": "Perplexity",
+        "region": "Global",
+        "product_type": "AI 搜索",
+        "platform": "Web / iOS / Android",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "覆盖引用来源驱动的对话式 AI 搜索结果。"
+      },
+      {
+        "product_name": "Amazon",
+        "region": "Global",
+        "product_type": "电商",
+        "platform": "Web / iOS / Android",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "覆盖海外电商商品检索、筛选与排序结果。"
+      }
+    ],
+    "request": "帮我搜集一下海内外热门产品的搜索结果页。"
+  },
+  "sources": [
+    {
+      "product_name": "Amazon",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.amazon.com/s?k=mobile+interface+design",
+      "normalized_url": "https://www.amazon.com/s?k=mobile+interface+design",
+      "candidate_status": "pending",
+      "id": "src-0d8d07f1d408216f",
+      "source_title": "Amazon Search: mobile interface design",
+      "source_context": "Amazon 官方商品搜索结果 URL；第二查询词为 mobile interface design，用于取得另一组真实商品结果并验证筛选结构。"
+    },
+    {
+      "product_name": "Amazon",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.amazon.com/s?k=product+design",
+      "normalized_url": "https://www.amazon.com/s?k=product+design",
+      "candidate_status": "pending",
+      "id": "src-d556f9749ec10508",
+      "source_title": "Amazon Search: product design",
+      "source_context": "Amazon 官方商品搜索结果 URL；查询词为 product design，用于观察电商商品结果、筛选与排序。"
+    },
+    {
+      "product_name": "Google",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.google.com.hk/search?q=product%20design&hl=en",
+      "normalized_url": "https://www.google.com.hk/search?q=product%20design&hl=en",
+      "candidate_status": "pending",
+      "id": "src-e93d83b58c5594dc",
+      "source_title": "Google Hong Kong Search: product design",
+      "source_context": "Google 香港官方公开搜索结果 URL；继续使用查询词 product design，作为首次 Google 来源触发 reCAPTCHA 后的第二个真实候选。"
+    },
+    {
+      "product_name": "Google",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.google.com/search?q=product%20design",
+      "normalized_url": "https://www.google.com/search?q=product%20design",
+      "candidate_status": "pending",
+      "id": "src-85702feb952dceaa",
+      "source_title": "Google Search: product design",
+      "source_context": "Google 官方公开搜索结果 URL；查询词为 product design，用于观察综合网页搜索结果。"
+    },
+    {
+      "product_name": "Perplexity",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.perplexity.ai/search?q=mobile%20interface%20design",
+      "normalized_url": "https://www.perplexity.ai/search?q=mobile%20interface%20design",
+      "candidate_status": "pending",
+      "id": "src-ebf4023387ba22ea",
+      "source_title": "Perplexity Search: mobile interface design",
+      "source_context": "Perplexity 官方公开 Search 路径；第二查询词为 mobile interface design，作为首次页面因子资源 DNS 异常后的第二个真实候选。"
+    },
+    {
+      "product_name": "Perplexity",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.perplexity.ai/search?q=product%20design",
+      "normalized_url": "https://www.perplexity.ai/search?q=product%20design",
+      "candidate_status": "pending",
+      "id": "src-5583c5b9d949ea93",
+      "source_title": "Perplexity Search: product design",
+      "source_context": "Perplexity 官方公开 Search 路径；查询词为 product design，用于验证对话式搜索结果是否可公开渲染。"
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://search.bilibili.com/all?keyword=Product%20Design",
+      "normalized_url": "https://search.bilibili.com/all?keyword=Product%20Design",
+      "candidate_status": "pending",
+      "id": "src-5fc980bcc2cd107c",
+      "source_title": "哔哩哔哩搜索：Product Design",
+      "source_context": "哔哩哔哩官方公开搜索 URL；查询词为 Product Design，Web 检索已发现可见结果列表。"
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://search.bilibili.com/all?keyword=design%20pattern",
+      "normalized_url": "https://search.bilibili.com/all?keyword=design%20pattern",
+      "candidate_status": "pending",
+      "id": "src-4be2221da568abc7",
+      "source_title": "哔哩哔哩搜索：design pattern",
+      "source_context": "哔哩哔哩官方公开搜索 URL；第二查询词为 design pattern，用于取得另一组真实视频搜索结果并验证结果结构稳定性。"
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.xiaohongshu.com/search_result?keyword=product%20design",
+      "normalized_url": "https://www.xiaohongshu.com/search_result?keyword=product%20design",
+      "candidate_status": "pending",
+      "id": "src-a01ef9fac5d01dd7",
+      "source_title": "小红书搜索：product design",
+      "source_context": "小红书官方公开 Web 搜索结果 URL；查询词为 product design，用于观察内容社区的搜索结果。"
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.xiaohongshu.com/search_result?keyword=product%20design&type=51",
+      "normalized_url": "https://www.xiaohongshu.com/search_result?keyword=product%20design&type=51",
+      "candidate_status": "pending",
+      "id": "src-4dd62a239fa4ed8d",
+      "source_title": "小红书笔记搜索：product design",
+      "source_context": "小红书官方公开 Web 笔记搜索 URL；继续使用查询词 product design，作为首次来源触发 IP 安全限制后的第二个真实候选。"
+    },
+    {
+      "product_name": "百度",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://m.baidu.com/s?word=product%20design",
+      "normalized_url": "https://m.baidu.com/s?word=product%20design",
+      "candidate_status": "pending",
+      "id": "src-fc474754ee75081c",
+      "source_title": "百度移动搜索：product design",
+      "source_context": "百度官方移动 Web 搜索结果 URL；继续使用查询词 product design，作为桌面来源触发安全验证后的第二个真实候选。"
+    },
+    {
+      "product_name": "百度",
+      "target_page": "搜索结果页",
+      "source_type": "public_web",
+      "source_url": "https://www.baidu.com/s?wd=product%20design",
+      "normalized_url": "https://www.baidu.com/s?wd=product%20design",
+      "candidate_status": "pending",
+      "id": "src-d72be00fe924e6ce",
+      "source_title": "百度搜索：product design",
+      "source_context": "百度官方公开搜索结果 URL；查询词为 product design，用于观察综合网页搜索结果。"
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下海内外热门产品的搜索结果页。",
+    "research_goal": "比较海内外热门产品搜索结果页的信息架构、结果组织与筛选方式，为产品设计提供真实页面参考。",
+    "target_page": "搜索结果页",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "product_scope": [
+      "综合搜索",
+      "内容社区",
+      "视频社区",
+      "AI 搜索",
+      "电商"
+    ],
+    "specified_products": [],
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "constraints": [
+      "后续验收仅将真实页面截图计入有效素材",
+      "不得以 fixture 或内置候选替代真实公网采集"
+    ],
+    "assumptions": [
+      "将“海内外”解释为同时覆盖中国市场与全球市场",
+      "Agent 按搜索结果信息组织差异规划本次竞品，不因后续截图获取难度删减范围"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "百度",
+        "region": "CN",
+        "product_type": "综合搜索",
+        "platform": "Web",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖中国综合网页搜索及多类型结果模块的组织方式。"
+      },
+      {
+        "product_name": "Google",
+        "region": "Global",
+        "product_type": "综合搜索",
+        "platform": "Web",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖全球综合网页搜索及多类型结果模块的组织方式。"
+      },
+      {
+        "product_name": "小红书",
+        "region": "CN",
+        "product_type": "内容社区",
+        "platform": "Web / iOS / Android",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "覆盖内容社区中图文、视频与用户内容混排的搜索结果。"
+      },
+      {
+        "product_name": "哔哩哔哩",
+        "region": "CN",
+        "product_type": "视频社区",
+        "platform": "Web / iOS / Android",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "覆盖视频社区中内容、用户与分区相关的搜索结果。"
+      },
+      {
+        "product_name": "Perplexity",
+        "region": "Global",
+        "product_type": "AI 搜索",
+        "platform": "Web / iOS / Android",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "覆盖引用来源驱动的对话式 AI 搜索结果。"
+      },
+      {
+        "product_name": "Amazon",
+        "region": "Global",
+        "product_type": "电商",
+        "platform": "Web / iOS / Android",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "覆盖海外电商商品检索、筛选与排序结果。"
+      }
+    ],
+    "request": "帮我搜集一下海内外热门产品的搜索结果页。"
+  },
+  "materials": [
+    {
+      "id": "mat-cap-src-0d8d07f1d408216f",
+      "product_name": "Amazon",
+      "page_name": "搜索结果页",
+      "region": "Global",
+      "product_type": "电商",
+      "platform": "Web / iOS / Android",
+      "image_path": "assets/799e517c3fa25844.png",
+      "source_type": "browser",
+      "source_url": "https://www.amazon.com/s?k=mobile+interface+design",
+      "captured_at": "2026-09-08T01:49:27.089948+00:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "逐图查看确认这是 Amazon 的真实商品搜索结果页：搜索框显示 mobile interface design，页面包含结果数量、筛选栏、排序和多条商品结果；配送提示未替代或遮断主体结果。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-src-0d8d07f1d408216f",
+      "source_candidate_id": "src-0d8d07f1d408216f",
+      "requested_url": "https://www.amazon.com/s?k=mobile+interface+design",
+      "final_url": "https://www.amazon.com/s?k=mobile+interface+design",
+      "width": 1440,
+      "height": 1200,
+      "decode_format": "PNG",
+      "content_sha256": "3fa8e3a8fe2bff5413857c9c8b5542c5176239ddf466accc4a873fdeddd598df"
+    },
+    {
+      "id": "mat-cap-src-d556f9749ec10508",
+      "product_name": "Amazon",
+      "page_name": "搜索结果页",
+      "region": "Global",
+      "product_type": "电商",
+      "platform": "Web / iOS / Android",
+      "image_path": "assets/49322f5d8ec092af.png",
+      "source_type": "browser",
+      "source_url": "https://www.amazon.com/s?k=product+design",
+      "captured_at": "2026-09-08T01:49:45.670225+00:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "逐图查看确认这是 Amazon 的真实商品搜索结果页：搜索框显示 product design，结果区完整呈现筛选、排序、商品卡片、价格和评分；非阻断式提示不影响识别页面主体。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-src-d556f9749ec10508",
+      "source_candidate_id": "src-d556f9749ec10508",
+      "requested_url": "https://www.amazon.com/s?k=product+design",
+      "final_url": "https://www.amazon.com/s?k=product+design",
+      "width": 1440,
+      "height": 1200,
+      "decode_format": "PNG",
+      "content_sha256": "4c2640ac965856334861adf12a8a0354ed1770f555f69a03040fec0abb2149eb"
+    },
+    {
+      "id": "mat-cap-src-5fc980bcc2cd107c",
+      "product_name": "哔哩哔哩",
+      "page_name": "搜索结果页",
+      "region": "CN",
+      "product_type": "视频社区",
+      "platform": "Web / iOS / Android",
+      "image_path": "assets/11484f283e843bdc.png",
+      "source_type": "browser",
+      "source_url": "https://search.bilibili.com/all?keyword=Product%20Design",
+      "captured_at": "2026-09-08T01:50:07.530457+00:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "逐图查看确认这是哔哩哔哩真实视频搜索结果页：搜索框显示 Product Design，综合/视频等结果类型、排序选项和多行视频结果均清晰可见；登录提示不是登录墙且未替代结果主体。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-src-5fc980bcc2cd107c",
+      "source_candidate_id": "src-5fc980bcc2cd107c",
+      "requested_url": "https://search.bilibili.com/all?keyword=Product%20Design",
+      "final_url": "https://search.bilibili.com/all?keyword=Product%20Design",
+      "width": 1440,
+      "height": 1200,
+      "decode_format": "PNG",
+      "content_sha256": "0ead326522a42b02b860f88687d4c6a296dc73daae3bd149bc01f7b203b43bdb"
+    },
+    {
+      "id": "mat-cap-src-4be2221da568abc7",
+      "product_name": "哔哩哔哩",
+      "page_name": "搜索结果页",
+      "region": "CN",
+      "product_type": "视频社区",
+      "platform": "Web / iOS / Android",
+      "image_path": "assets/f6692b324c8e5db0.png",
+      "source_type": "browser",
+      "source_url": "https://search.bilibili.com/all?keyword=design%20pattern",
+      "captured_at": "2026-09-08T01:50:12.112810+00:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "逐图查看确认这是哔哩哔哩真实视频搜索结果页：搜索框显示 design pattern，页面完整展示类型切换、排序与多行视频卡片；非阻断式登录提示未妨碍主体结果识别。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-src-4be2221da568abc7",
+      "source_candidate_id": "src-4be2221da568abc7",
+      "requested_url": "https://search.bilibili.com/all?keyword=design%20pattern",
+      "final_url": "https://search.bilibili.com/all?keyword=design%20pattern",
+      "width": 1440,
+      "height": 1200,
+      "decode_format": "PNG",
+      "content_sha256": "dda1199acd0cd038cc4c143af6e0084819106fe65043f7894f30591302a66240"
+    }
+  ],
+  "classification": {
+    "classification_status": "ready",
+    "classification_dimension": "真实搜索结果的内容组织方式",
+    "classification_reason": "Agent 逐张查看本次 collected 截图后确认：Amazon 以商品决策信息、筛选和排序组织结果；哔哩哔哩以内容类型、排序和视频封面卡片组织结果。该维度只来自本次真实截图，不由 product_type、notes 或关键词推断。",
+    "groups": [
+      {
+        "name": "商品筛选与购买决策列表",
+        "reason": "截图中的结果主体由商品图、价格、评分、配送信息组成，并配有筛选与排序控件。",
+        "material_ids": [
+          "mat-cap-src-0d8d07f1d408216f",
+          "mat-cap-src-d556f9749ec10508"
+        ],
+        "asset_ids": [
+          "mat-cap-src-0d8d07f1d408216f",
+          "mat-cap-src-d556f9749ec10508"
+        ]
+      },
+      {
+        "name": "视频内容筛选与封面卡片流",
+        "reason": "截图中的结果主体由视频封面、标题、作者与播放信息组成，并提供内容类型和排序入口。",
+        "material_ids": [
+          "mat-cap-src-5fc980bcc2cd107c",
+          "mat-cap-src-4be2221da568abc7"
+        ],
+        "asset_ids": [
+          "mat-cap-src-5fc980bcc2cd107c",
+          "mat-cap-src-4be2221da568abc7"
+        ]
+      }
+    ],
+    "material_labels": [
+      {
+        "material_id": "mat-cap-src-0d8d07f1d408216f",
+        "labels": {
+          "产品": "Amazon",
+          "查询词": "mobile interface design",
+          "结果载体": "商品列表",
+          "主要决策信息": "商品图、价格、评分、配送",
+          "筛选排序": "侧栏筛选与顶部排序"
+        }
+      },
+      {
+        "material_id": "mat-cap-src-d556f9749ec10508",
+        "labels": {
+          "产品": "Amazon",
+          "查询词": "product design",
+          "结果载体": "商品列表",
+          "主要决策信息": "商品图、价格、评分、配送",
+          "筛选排序": "侧栏筛选与顶部排序"
+        }
+      },
+      {
+        "material_id": "mat-cap-src-5fc980bcc2cd107c",
+        "labels": {
+          "产品": "哔哩哔哩",
+          "查询词": "Product Design",
+          "结果载体": "视频封面卡片流",
+          "主要决策信息": "封面、标题、作者、播放信息",
+          "筛选排序": "内容类型标签与排序"
+        }
+      },
+      {
+        "material_id": "mat-cap-src-4be2221da568abc7",
+        "labels": {
+          "产品": "哔哩哔哩",
+          "查询词": "design pattern",
+          "结果载体": "视频封面卡片流",
+          "主要决策信息": "封面、标题、作者、播放信息",
+          "筛选排序": "内容类型标签与排序"
+        }
+      }
+    ]
+  },
+  "fallback_requests": [
+    {
+      "product_name": "百度",
+      "target_page": "搜索结果页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Google",
+      "target_page": "搜索结果页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "搜索结果页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "target_page": "搜索结果页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Perplexity",
+      "target_page": "搜索结果页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Amazon",
+      "target_page": "搜索结果页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    }
+  ],
+  "excluded_summary": {
+    "rejected": 6,
+    "pending": 0,
+    "unavailable": 0
+  }
+}

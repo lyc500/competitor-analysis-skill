@@ -1,7 +1,7 @@
 # 项目当前状态
 
-更新时间：2026-09-07
-当前阶段：V0.1 第二轮 Stage 5A——独立验收通过（已关闭）
+更新时间：2026-09-08
+当前阶段：V0.1 第二轮 Stage 5B——真实 Task A 执行完成，等待独立复验
 
 ## 阶段 1 本轮已完成
 
@@ -42,13 +42,15 @@
 - 需求解析、图片机械质量筛选、Classification Plan 契约与稳定分组；Python 不根据 `product_type`、`notes` 或关键词推断页面结构。
 - 公开采集器独立边界。
 - JSON/HTML 产物生成和放大交互标记。
-- `python3 -m unittest discover -s tests -v`：81 项通过（含阶段 1/2/3A/3B/3C 回归、Stage 4 补正、真实 Chromium 测试和 Stage 5A Task Contract 检查）。
+- `python3 -m unittest discover -s tests -v`：83 项通过、0 失败、0 skip（含阶段 1/2/3A/3B/3C 回归、Stage 4 补正、真实 Chromium、Stage 5A Task Contract 和 Stage 5B 通用缺陷回归检查）。
 
-### 因当前网络环境无法真实验证的在线采集能力
+### Stage 5B 已真实验证及仍受网站限制的在线采集
 
-- 访问百度、小红书、淘宝、Google、Bing、Amazon、YouTube、Pinterest 并取得可确认的真实页面图片。
-- 在线图片的真实性、清晰度、完整性和页面版本质量。
-- 指定首轮任务在线模式已执行并生成 8 个素材记录，但 8 条均为 `collection_status: needs_manual_capture`，不能描述为公开来源采集已完成。
+- Task A 通过 Agent 发现的 12 个真实官方公开 URL 和正式 Chromium Capture 入口执行；Amazon 与哔哩哔哩各取得 2 个真实 collected Material，CN / Global 各 2 张。
+- Agent 逐张查看全部 10 张 captured 截图；百度验证码、Google unusual traffic 和小红书 IP 风控页面均如实 semantic rejected，Perplexity 两个候选均为 HTTP 403。
+- 所有 accepted Material 均重新通过 Pillow 机械质量检查；未将 CAPTCHA、错误页、登录/风控页或 failed Capture 视为有效截图。
+- Task A 的 Stage 4 HTML 已由本地 HTTP + 真实 Chromium 打开，4 张主图成功加载，并实际点击 Amazon 截图验证 dialog 放大图成功加载。
+- 首轮 8 个内置候选在线失败记录仍只是历史记录，不代表本次 Stage 5B 的真实结果。
 
 ### fallback / 内置候选能力
 
@@ -103,16 +105,28 @@
 - [x] 建立 Stage 5B / 5C 真实产物目录与运行记录规范，不创建空的成功产物。
 - [x] 建立 V0.1 MVP Acceptance Report 骨架并写明后续硬门槛。
 
+## Stage 5B 真实 Task A 已执行，等待独立复验
+
+- [x] 使用已验收 Task A Contract，保留百度、Google、小红书、哔哩哔哩、Perplexity、Amazon 全部竞品；本次清单和查询词未写入 production 固定映射。
+- [x] Agent 发现并提交 12 个真实官方公开 URL，使用正式 Playwright Chromium Capture 入口执行。
+- [x] 对 10 张 captured 截图逐张进行真实视觉语义审核；2 个 HTTP 403 Capture 未创建伪 Review。
+- [x] Stage 3C 最终得到 4 个真实 collected Material：CN 2、Global 2，达到 Task A `>= 4` 且双地域硬门槛。
+- [x] Agent 根据实际截图生成“真实搜索结果的内容组织方式”分类计划；Python 只校验计划和稳定生成结果，没有恢复关键词 heuristic。
+- [x] Stage 4 报告主图墙只含 4 个 collected Material；本地 HTTP + 真实 Chromium 验证所有主图及点击后的 dialog 图片实际加载。
+- [x] 百度、Google、小红书、Perplexity 的真实失败原因和 open fallback 均保留；没有伪造用户上传或设备截图。
+- [x] 真实 E2E 暴露的第三方子资源路由异常和相对 captures-file 路径解析问题已做最小通用修复并增加回归测试，没有站点专用硬编码。
+- [ ] Stage 5B 尚未通过独立复验，当前不可关闭。
+
 ## 尚未实现
 
-- 完整真实公网竞品 E2E 验收。
+- Stage 5B 独立复验与 Stage 5C Task B 真实端到端验收；完整 V0.1 真实公网 E2E 仍未完成。
 - iPhone 镜像自动化。
 - 复杂竞品分析、Dashboard 和轻量设计洞察。
 
 ## 当前最大问题
 
-浏览器截图与结构化 Agent Review handoff 已跑通，但尚未进行真实公网竞品页面端到端验收；未经 Agent Review 和机械质量双重通过的截图仍不能视为有效竞品素材。
+Task A 已达到本地自验收硬门槛，但 Stage 5B 尚待独立复验；Task B / Stage 5C 尚未执行。未经 Agent Review 和机械质量双重通过的截图仍不能视为有效竞品素材。
 
 ## 下一步建议
 
-Stage 5A 已关闭并通过独立验收。Stage 5B 尚未执行，Stage 5C 尚未执行；完整真实公网竞品 E2E 尚未完成，V0.1 MVP 尚未完成，iPhone 镜像自动化仍未实现。Stage 4 已生成 `classification.json`、`report_data.json` 和自包含 HTML 报告，`reviewed_materials.json` 已正式接入 Stage 4 分类与图墙。正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
+Stage 5B Task A 已真实执行并达到自验收门槛，下一步只等待独立复验；不得进入 Stage 5C，除非用户另行指示。Stage 5C 尚未执行，V0.1 MVP 尚未完成，iPhone 镜像自动化仍未实现。Task A 的完整真实产物位于 `reports/acceptance/task-a/`；正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。

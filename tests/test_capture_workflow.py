@@ -6,6 +6,7 @@ import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from unittest.mock import patch
 
 from PIL import Image
 
@@ -21,6 +22,7 @@ class FixtureHandler(BaseHTTPRequestHandler):
         pages = {
             "/static": "<title>Static</title><h1 style='font-size:64px;color:#123'>Static Capture Ready</h1>",
             "/dynamic": "<title>Waiting</title><h1>Waiting</h1><script>setTimeout(()=>{document.title='Dynamic Ready';document.body.style.background='#def';document.body.innerHTML='<h1>Ready</h1>'},250)</script>",
+            "/broken-subresource": "<title>Primary Page</title><h1 style='font-size:64px;color:#123'>Primary Page Ready</h1><img src='https://stage5b-invalid.invalid/missing.png'>",
             "/blank": "<style>html,body{margin:0;background:white}</style>",
             "/slow": "<title>Slow</title><h1>Slow</h1>",
         }
@@ -74,6 +76,25 @@ class CaptureWorkflowTests(unittest.TestCase):
             row = capture_sources([self.source("slow", "/slow")], Path(d), timeout_ms=100, settle_ms=0, allow_private_network=True)[0]
             self.assertEqual(row["capture_status"], "failed"); self.assertIn("超时", row["failure_reason"])
 
+    def test_unresolvable_subresource_does_not_fail_primary_page(self):
+        real_public_host = _public_host
+
+        def selective_public_host(url, allow_private_network=False):
+            if "stage5b-invalid.invalid" in url:
+                raise ValueError("DNS 解析失败: deterministic test")
+            return real_public_host(url, allow_private_network)
+
+        with TemporaryDirectory() as d:
+            with patch("competitor_analysis_skill.browser_capture._public_host", side_effect=selective_public_host):
+                row = capture_sources(
+                    [self.source("broken-subresource", "/broken-subresource")],
+                    Path(d),
+                    allow_private_network=True,
+                )[0]
+            self.assertEqual(row["capture_status"], "captured")
+            self.assertEqual(row["page_title"], "Primary Page")
+            self.assertTrue((Path(d) / row["screenshot_path"]).is_file())
+
     def test_private_network_is_rejected_by_default(self):
         with TemporaryDirectory() as d:
             row = capture_sources([self.source("private", "/static")], Path(d))[0]
@@ -85,7 +106,6 @@ class CaptureWorkflowTests(unittest.TestCase):
         capture={"id":"cap-x","source_candidate_id":"src-x","capture_status":"failed","failure_reason":"fixture"}
         with TemporaryDirectory() as d:
             root=Path(d); source_file=root/'sources.json'; source_file.write_text(json.dumps(raw,ensure_ascii=False))
-            from unittest.mock import patch
             with patch("competitor_analysis_skill.pipeline.capture_sources", return_value=[capture]):
                 result=run_pipeline(task,root/'out',sources_file=source_file,capture_sources_flag=True)
             payload=json.loads(result["captures_json"].read_text())

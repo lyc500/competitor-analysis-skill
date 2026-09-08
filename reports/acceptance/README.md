@@ -1,6 +1,6 @@
 # Stage 5 真实验收产物规范
 
-本目录只定义 Stage 5B / 5C 后续真实运行结果的保存方式。Stage 5A 不执行真实公网采集，因此当前不创建 `task-a/`、`task-b/` 或任何空的成功产物。
+本目录定义 Stage 5B / 5C 真实运行结果的保存方式。Stage 5B Task A 已真实执行，产物位于 `task-a/`，当前为“达到自验收门槛，等待独立复验”；Stage 5C Task B 尚未执行，因此不创建 `task-b/` 或任何空的成功产物。
 
 `tests/fixtures/acceptance/task_a.json` 与 `task_b.json` 只是本次 Agent 生成的 Task Contract 验收输入，不是公网采集结果；其中的竞品清单也不属于 production catalog、planner 或 Python 固定映射。
 
@@ -57,4 +57,4 @@ reports/acceptance/
 - 浏览器截图不得自动视为 semantic accepted 或 collected；必须经过 Agent 视觉语义审核和机械质量检查。
 - Logo、OG Image、分享图、营销图和无上下文图片不得计入有效页面截图。
 - 网络或环境限制不会降低验收标准，只能形成可追溯的失败或 fallback 记录。
-- Stage 5A 只准备验收输入与规范；Stage 5B、Stage 5C 均未执行。
+- Stage 5A 只准备验收输入与规范；Stage 5B Task A 已真实执行并等待独立复验；Stage 5C Task B 尚未执行。
