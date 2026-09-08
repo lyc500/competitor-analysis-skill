@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "product_name": "起点读书",
+      "target_page": "搜索结果页",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/566060765477449935",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/480-webp/566060765477449935.webp?v1",
+      "source_title": "起点读书 App 截图 025 - UI Notes",
+      "source_context": "UI Notes 公开搜索结果分类中的起点读书 iOS 作品搜索结果 Screen。"
+    },
+    {
+      "product_name": "起点读书",
+      "target_page": "搜索结果页",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/886504874566301516",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/480-webp/886504874566301516.webp?v1",
+      "source_title": "起点读书 App 截图 028 - UI Notes",
+      "source_context": "UI Notes 公开搜索结果分类中的起点读书 iOS 漫画搜索结果 Screen。"
+    },
+    {
+      "product_name": "LinkedIn",
+      "target_page": "搜索结果页",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_url": "https://refero.design/screens/cc88bfb1-4f91-45a7-8b8f-c50eeafdf60d?query=product%20search&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/9/mobile/9f383d8f-0b54-4a1a-b3bd-8b80ea8b9f8b_thumb.jpg",
+      "source_title": "LinkedIn iOS jobs search results - Refero",
+      "source_context": "Refero 公开 product search 结果中的 LinkedIn iOS 职位搜索结果 Screen。"
+    },
+    {
+      "product_name": "WhatsApp",
+      "target_page": "搜索结果页",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_url": "https://refero.design/screens/5239ecce-ed0c-47f5-ac6c-8abc007bc590?query=video%20search&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/292/mobile/cc91eb5b-0de8-4299-9061-3c10c5b0c944_thumb.jpg",
+      "source_title": "WhatsApp iOS search results - Refero",
+      "source_context": "Refero 公开 video search 结果中的 WhatsApp iOS 联系人与通话搜索结果 Screen。"
+    }
+  ]
+}

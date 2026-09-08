@@ -109,6 +109,34 @@ class SemanticReviewTests(unittest.TestCase):
         with self.assertRaisesRegex(SemanticReviewError, "accepted"):
             self.process(captures=[self.capture()], reviews=[self.review(asset_kind="logo")])
 
+    def test_mobile_app_task_requires_agent_surface_match(self):
+        task = self.task()
+        task["target_surface"] = "mobile_app"
+        task["competitors"][0]["platform"] = "iOS / Android"
+        with TemporaryDirectory() as directory:
+            output = Path(directory) / "output"
+            with self.assertRaisesRegex(SemanticReviewError, "target_surface_match"):
+                process_semantic_reviews(task, [self.capture()], [], [self.review()], output)
+            with self.assertRaisesRegex(SemanticReviewError, "accepted"):
+                process_semantic_reviews(
+                    task,
+                    [self.capture()],
+                    [],
+                    [self.review(target_surface_match="mismatched")],
+                    output,
+                )
+            result = process_semantic_reviews(
+                task,
+                [self.capture()],
+                [],
+                [self.review(target_surface_match="matched")],
+                output,
+            )
+            material = result["materials"][0]
+            self.assertEqual(material["target_surface"], "mobile_app")
+            self.assertEqual(material["target_surface_match"], "matched")
+            self.assertEqual(material["collection_status"], "collected")
+
     def test_captured_target_requires_exactly_one_review(self):
         with self.assertRaisesRegex(SemanticReviewError, "缺少"):
             self.process(captures=[self.capture()], reviews=[])

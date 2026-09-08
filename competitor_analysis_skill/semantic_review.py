@@ -13,24 +13,29 @@ ENUMS = {
     "semantic_status": {"accepted", "rejected"},
     "product_identity": {"matched", "mismatched", "unclear"},
     "target_page_match": {"matched", "mismatched", "unclear"},
+    "target_surface_match": {"matched", "mismatched", "unclear"},
     "page_completeness": {"complete", "incomplete", "unclear"},
     "asset_kind": {"ui_page", "logo", "share_card", "marketing_image", "cover", "unrelated", "unknown"},
 }
 REVIEW_FIELDS = ("target_id", "target_kind", "semantic_status", "product_identity", "target_page_match", "page_completeness", "asset_kind", "semantic_reason", "review_source")
 
 
-def _review(raw, index):
+def _review(raw, index, target_surface="user_specified"):
     if not isinstance(raw, dict):
         raise SemanticReviewError(f"reviews[{index}] 必须是对象")
     missing = [field for field in REVIEW_FIELDS if field not in raw]
     if missing:
         raise SemanticReviewError(f"review 缺少字段: {', '.join(missing)}")
     result = dict(raw)
+    if target_surface == "mobile_app" and "target_surface_match" not in result:
+        raise SemanticReviewError("review 缺少字段: target_surface_match")
     for field in REVIEW_FIELDS:
         if not isinstance(result[field], str) or not result[field].strip():
             raise SemanticReviewError(f"review.{field} 不能为空")
         result[field] = result[field].strip()
     for field, allowed in ENUMS.items():
+        if field == "target_surface_match" and field not in result:
+            continue
         if result[field] not in allowed:
             raise SemanticReviewError(f"无效 {field}: {result[field]}")
     if result["review_source"] != "agent_visual_review":
@@ -38,6 +43,7 @@ def _review(raw, index):
     if result["semantic_status"] == "accepted" and not (
         result["product_identity"] == "matched"
         and result["target_page_match"] == "matched"
+        and (target_surface != "mobile_app" or result["target_surface_match"] == "matched")
         and result["page_completeness"] == "complete"
         and result["asset_kind"] == "ui_page"
     ):
@@ -76,7 +82,8 @@ def process_semantic_reviews(task, captures, manuals, reviews, output_dir, captu
     if collision:
         raise SemanticReviewError(f"capture/manual target ID 冲突: {sorted(collision)[0]}")
     targets = {**capture_by_id, **manual_by_id}
-    parsed_reviews = [_review(item, index) for index, item in enumerate(reviews or [])]
+    target_surface = task.get("target_surface", "user_specified")
+    parsed_reviews = [_review(item, index, target_surface) for index, item in enumerate(reviews or [])]
     review_by_id = {}
     for review in parsed_reviews:
         if review["target_id"] in review_by_id:
@@ -105,12 +112,15 @@ def process_semantic_reviews(task, captures, manuals, reviews, output_dir, captu
         if capture.get("capture_status") != "captured" or review is None:
             continue
         competitor = competitors[capture["product_name"].casefold()]
+        is_ui_database = capture.get("discovered_source_type") == "ui_database"
         materials.append({
             "id": f"mat-{capture['id']}", "product_name": competitor["product_name"], "page_name": task["target_page"],
-            "region": competitor["region"], "product_type": competitor["product_type"], "platform": competitor["platform"],
-            "image_path": str(_path(captures_base_dir or output_dir, capture["screenshot_path"])), "source_type": "browser",
+            "region": competitor["region"], "product_type": competitor["product_type"], "platform": capture.get("platform") or competitor["platform"],
+            "target_surface": target_surface, "target_surface_match": review.get("target_surface_match", "not_applicable"),
+            "image_path": str(_path(captures_base_dir or output_dir, capture["screenshot_path"])), "source_type": "ui_database" if is_ui_database else "browser",
+            "source_provider": capture.get("source_provider", ""), "source_asset_url": capture.get("source_asset_url", ""),
             "source_url": capture.get("final_url") or capture.get("requested_url", ""), "captured_at": capture.get("captured_at", ""),
-            "collection_method": "browser_screenshot", "provenance": "online", "semantic_status": review["semantic_status"],
+            "collection_method": "database_asset" if is_ui_database else "browser_screenshot", "provenance": "online", "semantic_status": review["semantic_status"],
             "semantic_reason": review["semantic_reason"], "collection_status": "pending", "quality_status": "pending", "quality_reason": "",
             "observed_structure": [], "observed_patterns": [], "notes": "", "failure_reason": "", "capture_id": capture["id"],
             "source_candidate_id": capture.get("source_candidate_id", ""), "requested_url": capture.get("requested_url", ""), "final_url": capture.get("final_url", ""),
@@ -122,7 +132,8 @@ def process_semantic_reviews(task, captures, manuals, reviews, output_dir, captu
         competitor = competitors[manual["product_name"].casefold()]
         materials.append({
             "id": f"mat-{manual['id']}", "product_name": competitor["product_name"], "page_name": task["target_page"],
-            "region": competitor["region"], "product_type": competitor["product_type"], "platform": competitor["platform"],
+            "region": competitor["region"], "product_type": competitor["product_type"], "platform": manual.get("platform") or competitor["platform"],
+            "target_surface": target_surface, "target_surface_match": review.get("target_surface_match", "not_applicable"),
             "image_path": str(_path(manuals_base_dir or output_dir, manual["image_path"])), "source_type": manual["source_type"],
             "source_url": manual.get("source_url", ""), "captured_at": manual.get("captured_at", ""),
             "collection_method": "user_provided" if manual["source_type"] == "user_upload" else "manual_device_capture",

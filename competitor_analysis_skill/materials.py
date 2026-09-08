@@ -7,6 +7,8 @@ PROVENANCES = {"online", "user_upload", "device_capture", "builtin_candidate"}
 SEMANTIC_STATUSES = {"pending", "accepted", "rejected"}
 QUALITY_STATUSES = {"pending", "accepted", "rejected", "missing"}
 COLLECTION_STATUSES = {"pending", "collected", "rejected", "needs_manual_capture", "unavailable"}
+TARGET_SURFACES = {"mobile_app", "web", "other", "user_specified"}
+SURFACE_MATCHES = {"matched", "mismatched", "unclear", "not_applicable"}
 
 REQUIRED_FIELDS = ("id", "product_name", "page_name", "region", "product_type", "platform", "source_type", "collection_method", "provenance", "semantic_status", "semantic_reason", "collection_status", "quality_status", "quality_reason", "observed_structure", "observed_patterns", "notes")
 
@@ -27,11 +29,19 @@ def standardize_material(data, output_dir=None):
     if missing:
         raise MaterialError(f"素材缺少字段: {', '.join(missing)}")
     result = deepcopy(data)
+    result.setdefault("target_surface", "user_specified")
+    result.setdefault("target_surface_match", "not_applicable")
+    result.setdefault("source_provider", "")
+    result.setdefault("source_asset_url", "")
     for field in ("id", "product_name", "page_name", "region", "product_type", "platform"):
         result[field] = _text(result[field], field)
     for field, allowed in (("source_type", SOURCE_TYPES), ("collection_method", COLLECTION_METHODS), ("provenance", PROVENANCES), ("semantic_status", SEMANTIC_STATUSES), ("quality_status", QUALITY_STATUSES), ("collection_status", COLLECTION_STATUSES)):
         if result[field] not in allowed:
             raise MaterialError(f"无效 {field}: {result[field]}")
+    if result["target_surface"] not in TARGET_SURFACES:
+        raise MaterialError(f"无效 target_surface: {result['target_surface']}")
+    if result["target_surface_match"] not in SURFACE_MATCHES:
+        raise MaterialError(f"无效 target_surface_match: {result['target_surface_match']}")
     for field in ("observed_structure", "observed_patterns"):
         if not isinstance(result[field], list) or not all(isinstance(v, str) for v in result[field]):
             raise MaterialError(f"{field} 必须是字符串数组")
@@ -44,6 +54,11 @@ def standardize_material(data, output_dir=None):
     }
     if (result["collection_method"], result["provenance"]) not in combinations[result["source_type"]]:
         raise MaterialError(f"来源字段组合不一致: {result['source_type']}/{result['collection_method']}/{result['provenance']}")
+    if result["source_type"] == "ui_database":
+        result["source_provider"] = _text(result["source_provider"], "source_provider")
+    for field in ("source_provider", "source_asset_url"):
+        if not isinstance(result[field], str):
+            raise MaterialError(f"{field} 必须是字符串")
     for field in ("semantic_reason", "quality_reason", "notes"):
         if not isinstance(result[field], str):
             raise MaterialError(f"{field} 必须是字符串")
@@ -66,7 +81,13 @@ def standardize_material(data, output_dir=None):
     return result
 
 def finalize_collection(material, mechanically_verified=False):
+    platform = material.get("platform", "").casefold()
+    mobile_platform = ("ios" in platform or "android" in platform) and "web" not in platform
     if material.get("duplicate_of"):
+        material["collection_status"] = "rejected"
+    elif material.get("target_surface") == "mobile_app" and (
+        material.get("target_surface_match") != "matched" or not mobile_platform
+    ):
         material["collection_status"] = "rejected"
     elif mechanically_verified and material.get("provenance") != "builtin_candidate" and material.get("semantic_status") == "accepted" and material.get("quality_status") == "accepted" and material.get("image_path"):
         material["collection_status"] = "collected"

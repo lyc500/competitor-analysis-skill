@@ -1,7 +1,7 @@
 # 项目当前状态
 
 更新时间：2026-09-08
-当前阶段：V0.1 第二轮 Stage 5B——真实 Task A 执行完成，等待独立复验
+当前阶段：V0.1 第二轮 Stage 5B-R1——移动端 Task A 补正执行完成，等待 GPT 独立复验
 
 ## 阶段 1 本轮已完成
 
@@ -42,14 +42,15 @@
 - 需求解析、图片机械质量筛选、Classification Plan 契约与稳定分组；Python 不根据 `product_type`、`notes` 或关键词推断页面结构。
 - 公开采集器独立边界。
 - JSON/HTML 产物生成和放大交互标记。
-- `python3 -m unittest discover -s tests -v`：83 项通过、0 失败、0 skip（含阶段 1/2/3A/3B/3C 回归、Stage 4 补正、真实 Chromium、Stage 5A Task Contract 和 Stage 5B 通用缺陷回归检查）。
+- `python3 -m unittest discover -s tests -v`：88 项通过、0 失败、0 error、0 skip（含阶段 1/2/3A/3B/3C 回归、Stage 4 补正、真实 Chromium、Stage 5A Task Contract、Stage 5B 通用缺陷与 Mobile Surface 回归检查）。
 
-### Stage 5B 已真实验证及仍受网站限制的在线采集
+### Stage 5B 首次执行的历史结论
 
 - Task A 通过 Agent 发现的 12 个真实官方公开 URL 和正式 Chromium Capture 入口执行；Amazon 与哔哩哔哩各取得 2 个真实 collected Material，CN / Global 各 2 张。
 - Agent 逐张查看全部 10 张 captured 截图；百度验证码、Google unusual traffic 和小红书 IP 风控页面均如实 semantic rejected，Perplexity 两个候选均为 HTTP 403。
 - 所有 accepted Material 均重新通过 Pillow 机械质量检查；未将 CAPTCHA、错误页、登录/风控页或 failed Capture 视为有效截图。
 - Task A 的 Stage 4 HTML 已由本地 HTTP + 真实 Chromium 打开，4 张主图成功加载，并实际点击 Amazon 截图验证 dialog 放大图成功加载。
+- 上述工程 E2E 验证有效，但产品验收不通过：四张有效素材均为 Desktop Web，且没有优先执行专业 UI / 设计数据库来源。
 - 首轮 8 个内置候选在线失败记录仍只是历史记录，不代表本次 Stage 5B 的真实结果。
 
 ### fallback / 内置候选能力
@@ -80,7 +81,7 @@
 
 ## 阶段 3C 已实现并通过独立验收
 
-- [x] Agent Semantic Review Contract：由 Agent 提供产品身份、目标页面、主体完整性和素材类型判断，Python 只校验契约一致性。
+- [x] Agent Semantic Review Contract：由 Agent 提供产品身份、目标页面、目标 Surface、主体完整性和素材类型判断，Python 只校验契约一致性。
 - [x] Browser Capture → Material：captured 截图必须逐条审核，并重新通过阶段 2 机械质量校验。
 - [x] 用户上传 handoff 与 device/manual capture handoff：两类来源均需同一套 Agent Review。
 - [x] `reviewed_materials.json`、`fallback_requests.json` 和 open/resolved 回退状态。
@@ -105,28 +106,29 @@
 - [x] 建立 Stage 5B / 5C 真实产物目录与运行记录规范，不创建空的成功产物。
 - [x] 建立 V0.1 MVP Acceptance Report 骨架并写明后续硬门槛。
 
-## Stage 5B 真实 Task A 已执行，等待独立复验
+## Stage 5B-R1 移动端 Task A 补正执行完成，等待 GPT 独立复验
 
-- [x] 使用已验收 Task A Contract，保留百度、Google、小红书、哔哩哔哩、Perplexity、Amazon 全部竞品；本次清单和查询词未写入 production 固定映射。
-- [x] Agent 发现并提交 12 个真实官方公开 URL，使用正式 Playwright Chromium Capture 入口执行。
-- [x] 对 10 张 captured 截图逐张进行真实视觉语义审核；2 个 HTTP 403 Capture 未创建伪 Review。
-- [x] Stage 3C 最终得到 4 个真实 collected Material：CN 2、Global 2，达到 Task A `>= 4` 且双地域硬门槛。
-- [x] Agent 根据实际截图生成“真实搜索结果的内容组织方式”分类计划；Python 只校验计划和稳定生成结果，没有恢复关键词 heuristic。
-- [x] Stage 4 报告主图墙只含 4 个 collected Material；本地 HTTP + 真实 Chromium 验证所有主图及点击后的 dialog 图片实际加载。
-- [x] 百度、Google、小红书、Perplexity 的真实失败原因和 open fallback 均保留；没有伪造用户上传或设备截图。
-- [x] 真实 E2E 暴露的第三方子资源路由异常和相对 captures-file 路径解析问题已做最小通用修复并增加回归测试，没有站点专用硬编码。
-- [ ] Stage 5B 尚未通过独立复验，当前不可关闭。
+- [x] 原始需求保持不变；Task Contract 显式增加 `target_surface = mobile_app`，目标平台只含 iOS/Android，不含 Web。
+- [x] Agent 按移动端研究价值规划起点读书、LinkedIn、WhatsApp，覆盖 CN + Global；清单只存在于验收 Task，不进入 production 固定映射。
+- [x] 对每个竞品先走专业 UI 数据库；真实 Chromium 已访问国内 UI Notes 和海外 Refero，数据库整页只作来源证据。
+- [x] 来源元数据与目标 UI 解耦：UI 数据库来源保留 provider/page/asset URL，Material 独立保留 mobile App Surface 与 iOS 平台。
+- [x] Agent 逐张视觉审核并确认 product/page/surface matched、complete、ui_page；Python 只校验 Review，不按尺寸、URL 或关键词推断。
+- [x] Stage 3C 得到 4 个 Mobile App collected Material：起点读书 2、LinkedIn 1、WhatsApp 1；3 个产品，CN 1 个 / Global 2 个，4 张均来自 ui_database。
+- [x] Agent 根据实际 Screen 生成“移动端搜索结果的任务与信息组织方式”Classification Plan；关键词 classification heuristic 未恢复。
+- [x] 新报告图墙只含四张 iOS App Screen，上一轮 Amazon / 哔哩哔哩 Desktop Web 没有进入；旧 `reports/acceptance/task-a/` 保持完整。
+- [x] 本地 HTTP + Chromium 148.0.7778.96 真实加载全部主图并点击起点读书 Screen；dialog 图片成功加载，资源请求失败为 0。
+- [ ] Stage 5B-R1 尚未通过 GPT 独立复验，当前不可关闭。
 
 ## 尚未实现
 
-- Stage 5B 独立复验与 Stage 5C Task B 真实端到端验收；完整 V0.1 真实公网 E2E 仍未完成。
+- Stage 5B-R1 独立复验与 Stage 5C Task B 真实端到端验收；完整 V0.1 真实公网 E2E 仍未完成。
 - iPhone 镜像自动化。
 - 复杂竞品分析、Dashboard 和轻量设计洞察。
 
 ## 当前最大问题
 
-Task A 已达到本地自验收硬门槛，但 Stage 5B 尚待独立复验；Task B / Stage 5C 尚未执行。未经 Agent Review 和机械质量双重通过的截图仍不能视为有效竞品素材。
+移动端 Task A 已达到本地产品自验收硬门槛，但 Stage 5B-R1 尚待独立复验；Task B / Stage 5C 尚未执行。未经 Agent Review、Surface 匹配和机械质量共同通过的截图仍不能视为有效移动端竞品素材。
 
 ## 下一步建议
 
-Stage 5B Task A 已真实执行并达到自验收门槛，下一步只等待独立复验；不得进入 Stage 5C，除非用户另行指示。Stage 5C 尚未执行，V0.1 MVP 尚未完成，iPhone 镜像自动化仍未实现。Task A 的完整真实产物位于 `reports/acceptance/task-a/`；正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
+Stage 5B-R1 移动端 Task A 已达到产品自验收门槛，下一步只等待 GPT 独立复验；不得进入 Stage 5C，除非用户另行指示。Stage 5C 尚未执行，V0.1 MVP 尚未完成，iPhone 镜像自动化仍未实现。首次 Web 工程 E2E 证据位于 `reports/acceptance/task-a/`，移动端补正证据位于 `reports/acceptance/task-a-mobile/`；正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。

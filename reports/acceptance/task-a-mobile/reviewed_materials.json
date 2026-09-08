@@ -1,0 +1,290 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下海内外热门产品的搜索结果页。",
+    "research_goal": "比较海内外热门产品搜索结果页的信息架构、结果组织与筛选方式，为产品设计提供真实页面参考。",
+    "target_page": "搜索结果页",
+    "target_surface": "mobile_app",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "product_scope": [
+      "数字阅读",
+      "职业服务",
+      "即时通信"
+    ],
+    "specified_products": [],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "constraints": [
+      "后续验收仅将真实页面截图计入有效素材",
+      "不得以 fixture 或内置候选替代真实公网采集"
+    ],
+    "assumptions": [
+      "将“海内外”解释为同时覆盖中国市场与全球市场",
+      "Agent 按搜索结果信息组织差异规划本次竞品，不因后续截图获取难度选择低价值竞品"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "起点读书",
+        "region": "CN",
+        "product_type": "数字阅读",
+        "platform": "iOS",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖中国头部数字阅读产品中作品、漫画、听书、对话和书单等多内容类型的搜索结果组织。"
+      },
+      {
+        "product_name": "LinkedIn",
+        "region": "Global",
+        "product_type": "职业服务",
+        "platform": "iOS",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖全球职业服务产品中职位检索、筛选和结果决策信息的组织方式。"
+      },
+      {
+        "product_name": "WhatsApp",
+        "region": "Global",
+        "product_type": "即时通信",
+        "platform": "iOS",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖全球即时通信产品中联系人、通话和消息等跨实体搜索结果的组织方式。"
+      }
+    ],
+    "request": "帮我搜集一下海内外热门产品的搜索结果页。"
+  },
+  "reviews": [
+    {
+      "target_id": "cap-ui-uinotes-qidian-works",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "Agent 逐图视觉确认：起点读书品牌与作品、漫画、听书、对话、书单标签可见；查询词、筛选入口和多条作品结果完整；画面为 iOS App 单屏，不是 UI Notes 页面、Mobile Web、营销图或设备 Mockup。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-ui-uinotes-qidian-comics",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "Agent 逐图视觉确认：同一查询词下漫画标签、筛选入口和多条漫画结果可见，属于起点读书 iOS App 搜索结果的完整单屏；不是参考网站整页、宣传海报、拼贴图或 Web UI。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-ui-refero-linkedin-jobs",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "Agent 逐图视觉确认：LinkedIn 标志性底部导航、职位搜索框、筛选、结果总数和多条职位卡片完整可见；画面为 LinkedIn iOS App Screen，不是 Refero 页面、Mobile Web 或营销素材。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-ui-refero-whatsapp-search",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "Agent 逐图视觉确认：WhatsApp 搜索框、联系人结果、通话结果和 iOS 键盘完整可见，属于 App 内跨实体搜索结果；不是 Refero 页面、Mobile Web、文章示意图或设备 Mockup。",
+      "review_source": "agent_visual_review"
+    }
+  ],
+  "materials": [
+    {
+      "id": "mat-cap-ui-uinotes-qidian-works",
+      "product_name": "起点读书",
+      "page_name": "搜索结果页",
+      "region": "CN",
+      "product_type": "数字阅读",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/000-cap-ui-uinotes-qidian-works.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/480-webp/566060765477449935.webp?v1",
+      "source_url": "https://uinotes.com/pin/566060765477449935",
+      "captured_at": "2026-09-08T04:55:19Z",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "Agent 逐图视觉确认：起点读书品牌与作品、漫画、听书、对话、书单标签可见；查询词、筛选入口和多条作品结果完整；画面为 iOS App 单屏，不是 UI Notes 页面、Mobile Web、营销图或设备 Mockup。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-ui-uinotes-qidian-works",
+      "source_candidate_id": "src-18eb753ed75bf7ea",
+      "requested_url": "https://uinotes.com/pin/566060765477449935",
+      "final_url": "https://uinotes.com/pin/566060765477449935",
+      "width": 480,
+      "height": 1039,
+      "decode_format": "WEBP",
+      "content_sha256": "ea6c841bf0c34070103ef5ab831ad457dbb1467e3f6c3f81c4c3c10c9d8172de"
+    },
+    {
+      "id": "mat-cap-ui-uinotes-qidian-comics",
+      "product_name": "起点读书",
+      "page_name": "搜索结果页",
+      "region": "CN",
+      "product_type": "数字阅读",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/001-cap-ui-uinotes-qidian-comics.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/480-webp/886504874566301516.webp?v1",
+      "source_url": "https://uinotes.com/pin/886504874566301516",
+      "captured_at": "2026-09-08T04:55:19Z",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "Agent 逐图视觉确认：同一查询词下漫画标签、筛选入口和多条漫画结果可见，属于起点读书 iOS App 搜索结果的完整单屏；不是参考网站整页、宣传海报、拼贴图或 Web UI。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-ui-uinotes-qidian-comics",
+      "source_candidate_id": "src-51acb6710345c222",
+      "requested_url": "https://uinotes.com/pin/886504874566301516",
+      "final_url": "https://uinotes.com/pin/886504874566301516",
+      "width": 480,
+      "height": 1039,
+      "decode_format": "WEBP",
+      "content_sha256": "bb3e12dcec13a8638f142e6ba3799798770fbafbe083f2ea8dcbbee758b96d04"
+    },
+    {
+      "id": "mat-cap-ui-refero-linkedin-jobs",
+      "product_name": "LinkedIn",
+      "page_name": "搜索结果页",
+      "region": "Global",
+      "product_type": "职业服务",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/002-cap-ui-refero-linkedin-jobs.jpg",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_asset_url": "https://images.refero.design/screenshots/9/mobile/9f383d8f-0b54-4a1a-b3bd-8b80ea8b9f8b_thumb.jpg",
+      "source_url": "https://refero.design/screens/cc88bfb1-4f91-45a7-8b8f-c50eeafdf60d?query=product%20search&source=search",
+      "captured_at": "2026-09-08T04:55:19Z",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "Agent 逐图视觉确认：LinkedIn 标志性底部导航、职位搜索框、筛选、结果总数和多条职位卡片完整可见；画面为 LinkedIn iOS App Screen，不是 Refero 页面、Mobile Web 或营销素材。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-ui-refero-linkedin-jobs",
+      "source_candidate_id": "src-66bea43db5999062",
+      "requested_url": "https://refero.design/screens/cc88bfb1-4f91-45a7-8b8f-c50eeafdf60d?query=product%20search&source=search",
+      "final_url": "https://refero.design/screens/cc88bfb1-4f91-45a7-8b8f-c50eeafdf60d?query=product%20search&source=search",
+      "width": 488,
+      "height": 1056,
+      "decode_format": "JPEG",
+      "content_sha256": "7602688fbf5aa66da61b4d9ffb501fcac7ad37c0b3b47672fb3d76c599ee76aa"
+    },
+    {
+      "id": "mat-cap-ui-refero-whatsapp-search",
+      "product_name": "WhatsApp",
+      "page_name": "搜索结果页",
+      "region": "Global",
+      "product_type": "即时通信",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/003-cap-ui-refero-whatsapp-search.jpg",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_asset_url": "https://images.refero.design/screenshots/292/mobile/cc91eb5b-0de8-4299-9061-3c10c5b0c944_thumb.jpg",
+      "source_url": "https://refero.design/screens/5239ecce-ed0c-47f5-ac6c-8abc007bc590?query=video%20search&source=search",
+      "captured_at": "2026-09-08T04:55:19Z",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "Agent 逐图视觉确认：WhatsApp 搜索框、联系人结果、通话结果和 iOS 键盘完整可见，属于 App 内跨实体搜索结果；不是 Refero 页面、Mobile Web、文章示意图或设备 Mockup。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-ui-refero-whatsapp-search",
+      "source_candidate_id": "src-68c4441bc71adf79",
+      "requested_url": "https://refero.design/screens/5239ecce-ed0c-47f5-ac6c-8abc007bc590?query=video%20search&source=search",
+      "final_url": "https://refero.design/screens/5239ecce-ed0c-47f5-ac6c-8abc007bc590?query=video%20search&source=search",
+      "width": 488,
+      "height": 1057,
+      "decode_format": "JPEG",
+      "content_sha256": "11098176b37b6846e719d59902f44635abc388a7c2e0afa39f8db12dfe5ffa9d"
+    }
+  ],
+  "fallback_requests": [
+    {
+      "product_name": "起点读书",
+      "target_page": "搜索结果页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "LinkedIn",
+      "target_page": "搜索结果页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "WhatsApp",
+      "target_page": "搜索结果页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    }
+  ]
+}

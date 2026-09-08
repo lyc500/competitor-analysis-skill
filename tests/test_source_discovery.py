@@ -23,6 +23,20 @@ class SourceDiscoveryTests(unittest.TestCase):
         self.assertEqual(result[0]["candidate_status"],"pending")
         self.assertTrue(result[0]["id"])
 
+    def test_ui_database_source_keeps_provider_and_mobile_target_surface_separate(self):
+        task = self.task()
+        task["target_surface"] = "mobile_app"
+        result = process_sources(task, [self.candidate(
+            source_type="ui_database",
+            source_url="https://refero.design/apps/example",
+            source_provider="Refero",
+            source_asset_url="https://cdn.example.com/screen.png",
+        )])
+        self.assertEqual(result[0]["source_type"], "ui_database")
+        self.assertEqual(result[0]["source_provider"], "Refero")
+        self.assertEqual(result[0]["source_asset_url"], "https://cdn.example.com/screen.png")
+        self.assertEqual(result[0]["target_surface"], "mobile_app")
+
     def test_rejects_invalid_urls_and_source_type(self):
         for url in ("javascript:alert(1)","data:text/plain,x","file:///tmp/a","/relative","https:///missing"):
             with self.assertRaises(SourceDiscoveryError): process_sources(self.task(), [self.candidate(source_url=url)])

@@ -3,7 +3,7 @@ from copy import deepcopy
 from urllib.parse import urlsplit, urlunsplit
 
 ALLOWED_SOURCE_TYPES = {"ui_database", "public_web"}
-ALLOWED_FIELDS = {"product_name", "target_page", "source_type", "source_url", "source_title", "source_context"}
+ALLOWED_FIELDS = {"product_name", "target_page", "source_type", "source_url", "source_title", "source_context", "source_provider", "source_asset_url"}
 
 
 class SourceDiscoveryError(ValueError):
@@ -57,17 +57,27 @@ def process_sources(task, records):
             raise SourceDiscoveryError(f"sources[{index}].target_page 与任务不一致")
         if raw["source_type"] not in ALLOWED_SOURCE_TYPES:
             raise SourceDiscoveryError(f"阶段 3A 不支持 source_type: {raw['source_type']}")
+        if raw["source_type"] == "ui_database" and (
+            not isinstance(raw.get("source_provider"), str) or not raw["source_provider"].strip()
+        ):
+            raise SourceDiscoveryError("ui_database 来源必须提供 source_provider")
         normalized = normalize_url(raw["source_url"])
-        key = (product.casefold(), normalized)
+        asset_url = raw.get("source_asset_url", "")
+        if asset_url and not isinstance(asset_url, str):
+            raise SourceDiscoveryError(f"sources[{index}].source_asset_url 必须是字符串")
+        normalized_asset = normalize_url(asset_url) if asset_url else ""
+        key = (product.casefold(), normalized, normalized_asset)
         if key in seen:
             continue
         seen.add(key)
-        stable = f"{product.casefold()}\n{task['target_page']}\n{normalized}".encode()
-        item = {"product_name": product, "target_page": task["target_page"], "source_type": raw["source_type"], "source_url": raw["source_url"].strip(), "normalized_url": normalized, "candidate_status": "pending", "id": "src-" + hashlib.sha256(stable).hexdigest()[:16]}
-        for field in ("source_title", "source_context"):
+        stable = f"{product.casefold()}\n{task['target_page']}\n{normalized}\n{normalized_asset}".encode()
+        item = {"product_name": product, "target_page": task["target_page"], "target_surface": task.get("target_surface", "user_specified"), "source_type": raw["source_type"], "source_url": raw["source_url"].strip(), "normalized_url": normalized, "candidate_status": "pending", "id": "src-" + hashlib.sha256(stable).hexdigest()[:16]}
+        if normalized_asset:
+            item["source_asset_url"] = normalized_asset
+        for field in ("source_title", "source_context", "source_provider"):
             if field in raw:
                 if not isinstance(raw[field], str):
                     raise SourceDiscoveryError(f"sources[{index}].{field} 必须是字符串")
-                item[field] = raw[field]
+                item[field] = raw[field].strip()
         results.append(item)
     return sorted(results, key=lambda item: (item["product_name"].casefold(), item["normalized_url"]))

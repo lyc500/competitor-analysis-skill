@@ -19,6 +19,8 @@ class Stage5AcceptanceTaskTests(unittest.TestCase):
 
         self.assertEqual(task["raw_request"], "帮我搜集一下海内外热门产品的搜索结果页。")
         self.assertEqual(task["target_page"], "搜索结果页")
+        self.assertEqual(task["target_surface"], "mobile_app")
+        self.assertEqual(set(task["platforms"]), {"iOS", "Android"})
         self.assertEqual(task["specified_products"], [])
         self.assertEqual(task["planning_strategy"], "agent_only")
         self.assertEqual(task["task_status"], "ready")
@@ -27,6 +29,7 @@ class Stage5AcceptanceTaskTests(unittest.TestCase):
         self.assertEqual(len({row["product_name"] for row in competitors}), len(competitors))
         self.assertTrue(all(row["planning_source"] == "agent_planned" for row in competitors))
         self.assertTrue(all(row["reason"].strip() for row in competitors))
+        self.assertTrue(all("Web" not in row["platform"] for row in competitors))
         self.assertNotIn("fixture_demo", {row["planning_source"] for row in competitors})
 
     def test_task_b_preserves_specified_products_before_agent_additions(self):

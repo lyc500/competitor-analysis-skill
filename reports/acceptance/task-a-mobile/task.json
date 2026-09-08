@@ -1,0 +1,63 @@
+{
+  "raw_request": "帮我搜集一下海内外热门产品的搜索结果页。",
+  "research_goal": "比较海内外热门产品搜索结果页的信息架构、结果组织与筛选方式，为产品设计提供真实页面参考。",
+  "target_page": "搜索结果页",
+  "target_surface": "mobile_app",
+  "regions": [
+    "CN",
+    "Global"
+  ],
+  "product_scope": [
+    "数字阅读",
+    "职业服务",
+    "即时通信"
+  ],
+  "specified_products": [],
+  "platforms": [
+    "iOS",
+    "Android"
+  ],
+  "constraints": [
+    "后续验收仅将真实页面截图计入有效素材",
+    "不得以 fixture 或内置候选替代真实公网采集"
+  ],
+  "assumptions": [
+    "将“海内外”解释为同时覆盖中国市场与全球市场",
+    "Agent 按搜索结果信息组织差异规划本次竞品，不因后续截图获取难度选择低价值竞品"
+  ],
+  "needs_clarification": false,
+  "task_status": "ready",
+  "planning_strategy": "agent_only",
+  "competitors": [
+    {
+      "product_name": "起点读书",
+      "region": "CN",
+      "product_type": "数字阅读",
+      "platform": "iOS",
+      "target_page": "搜索结果页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖中国头部数字阅读产品中作品、漫画、听书、对话和书单等多内容类型的搜索结果组织。"
+    },
+    {
+      "product_name": "LinkedIn",
+      "region": "Global",
+      "product_type": "职业服务",
+      "platform": "iOS",
+      "target_page": "搜索结果页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖全球职业服务产品中职位检索、筛选和结果决策信息的组织方式。"
+    },
+    {
+      "product_name": "WhatsApp",
+      "region": "Global",
+      "product_type": "即时通信",
+      "platform": "iOS",
+      "target_page": "搜索结果页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖全球即时通信产品中联系人、通话和消息等跨实体搜索结果的组织方式。"
+    }
+  ]
+}

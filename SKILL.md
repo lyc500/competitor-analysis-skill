@@ -5,6 +5,12 @@ description: 根据自然语言需求搜集竞品页面、筛选公开素材、�
 
 # 竞品分析 Skill
 
+## 默认产品设计语境与来源顺序
+
+当用户做产品设计竞品 UI 调研且没有明确指定 Desktop/Web 时，Agent 默认把移动端 App UI 作为主要目标，并在结构化 Task 中显式写入 `target_surface: mobile_app` 与 iOS/Android 平台。该判断来自 Agent 对任务语境的理解，不得在 Python 中按“搜索结果页”等关键词推断。
+
+每个竞品按以下顺序发现来源：专业 UI / 设计参考数据库 → 其他公开 Web / 官方公开来源 → 用户上传 → device capture / iPhone 镜像。来源网站运行在 Web 不代表素材属于 Web UI；`source_type`、`source_provider`、`source_url`/`source_asset_url` 与目标素材的 `target_surface`、`platform` 分开记录。UI 数据库中的整站页面不是竞品素材，必须提取可确认产品、页面与 Surface 的完整单张 App Screen；不得绕过登录或付费限制。
+
 ## 使用入口
 
 正式入口要求 Agent 先完成语义理解和竞品规划，输出结构化任务 JSON，再执行：
@@ -33,7 +39,7 @@ python3 -m competitor_analysis_skill --task-file <task.json> \
   --output reports/<name>
 ```
 
-Agent 必须逐项判断产品身份、目标页面匹配、页面主体完整性和图片类型，并提供 `semantic_reason`。只有 matched/matched/complete/ui_page 才能声明 `semantic_status=accepted`。Python 只校验 Review Contract，并将 browser、user_upload、device_capture 统一交给阶段 2 机械质量复验；它不通过关键词、文件名、URL、OCR 或图像规则推断语义。输出独立的 `reviewed_materials.json` 与 `fallback_requests.json`，不会提前进入分类或 HTML 报告。
+Agent 必须逐项判断产品身份、目标页面匹配、目标 Surface 匹配、页面主体完整性和图片类型，并提供 `semantic_reason`。移动端 Task 只有 matched/matched/matched/complete/ui_page 才能声明 `semantic_status=accepted`。Python 只校验 Review Contract，并将 ui_database、browser、user_upload、device_capture 统一交给阶段 2 机械质量复验；它不通过图片尺寸、关键词、文件名、URL、OCR 或图像规则推断语义。输出独立的 `reviewed_materials.json` 与 `fallback_requests.json`，不会提前进入分类或 HTML 报告。
 
 阶段 4 消费 `reviewed_materials.json` 和 Agent 生成的 `classification-plan.json`：Python 只过滤三重状态均通过的 collected Materials、校验分类计划、复制报告所需图片到独立 `assets/`，并生成 `classification.json`、`report_data.json` 和 HTML 报告。分类维度、分组、分组原因和多维 labels 全部来自 Agent；Python 不根据 `product_type`、`notes` 或关键词推断页面结构。无有效素材时输出 `unavailable` 和 fallback 清单。
 
@@ -64,4 +70,4 @@ python3 -m competitor_analysis_skill "<自然语言调研需求>" --output repor
 
 ## 扩展规则
 
-新增来源应实现独立采集器并输出统一素材字段，不修改报告消费接口。分类器根据素材差异选择地区、产品类型、页面结构或设计模式等维度，不把任何单一维度作为固定模板。
+新增来源应实现独立采集器并输出统一素材字段，不修改报告消费接口。Agent 根据 collected 素材差异选择地区、产品类型、页面结构或设计模式等维度并生成 Classification Plan；Python 只校验和稳定生成分组，不把任何单一维度作为固定模板。

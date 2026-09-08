@@ -1,0 +1,124 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下海内外热门产品的搜索结果页。",
+    "research_goal": "比较海内外热门产品搜索结果页的信息架构、结果组织与筛选方式，为产品设计提供真实页面参考。",
+    "target_page": "搜索结果页",
+    "target_surface": "mobile_app",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "product_scope": [
+      "数字阅读",
+      "职业服务",
+      "即时通信"
+    ],
+    "specified_products": [],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "constraints": [
+      "后续验收仅将真实页面截图计入有效素材",
+      "不得以 fixture 或内置候选替代真实公网采集"
+    ],
+    "assumptions": [
+      "将“海内外”解释为同时覆盖中国市场与全球市场",
+      "Agent 按搜索结果信息组织差异规划本次竞品，不因后续截图获取难度选择低价值竞品"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "起点读书",
+        "region": "CN",
+        "product_type": "数字阅读",
+        "platform": "iOS",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖中国头部数字阅读产品中作品、漫画、听书、对话和书单等多内容类型的搜索结果组织。"
+      },
+      {
+        "product_name": "LinkedIn",
+        "region": "Global",
+        "product_type": "职业服务",
+        "platform": "iOS",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖全球职业服务产品中职位检索、筛选和结果决策信息的组织方式。"
+      },
+      {
+        "product_name": "WhatsApp",
+        "region": "Global",
+        "product_type": "即时通信",
+        "platform": "iOS",
+        "target_page": "搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖全球即时通信产品中联系人、通话和消息等跨实体搜索结果的组织方式。"
+      }
+    ],
+    "request": "帮我搜集一下海内外热门产品的搜索结果页。"
+  },
+  "sources": [
+    {
+      "product_name": "LinkedIn",
+      "target_page": "搜索结果页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://refero.design/screens/cc88bfb1-4f91-45a7-8b8f-c50eeafdf60d?query=product%20search&source=search",
+      "normalized_url": "https://refero.design/screens/cc88bfb1-4f91-45a7-8b8f-c50eeafdf60d?query=product%20search&source=search",
+      "candidate_status": "pending",
+      "id": "src-66bea43db5999062",
+      "source_asset_url": "https://images.refero.design/screenshots/9/mobile/9f383d8f-0b54-4a1a-b3bd-8b80ea8b9f8b_thumb.jpg",
+      "source_title": "LinkedIn iOS jobs search results - Refero",
+      "source_context": "Refero 公开 product search 结果中的 LinkedIn iOS 职位搜索结果 Screen。",
+      "source_provider": "Refero"
+    },
+    {
+      "product_name": "WhatsApp",
+      "target_page": "搜索结果页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://refero.design/screens/5239ecce-ed0c-47f5-ac6c-8abc007bc590?query=video%20search&source=search",
+      "normalized_url": "https://refero.design/screens/5239ecce-ed0c-47f5-ac6c-8abc007bc590?query=video%20search&source=search",
+      "candidate_status": "pending",
+      "id": "src-68c4441bc71adf79",
+      "source_asset_url": "https://images.refero.design/screenshots/292/mobile/cc91eb5b-0de8-4299-9061-3c10c5b0c944_thumb.jpg",
+      "source_title": "WhatsApp iOS search results - Refero",
+      "source_context": "Refero 公开 video search 结果中的 WhatsApp iOS 联系人与通话搜索结果 Screen。",
+      "source_provider": "Refero"
+    },
+    {
+      "product_name": "起点读书",
+      "target_page": "搜索结果页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes.com/pin/566060765477449935",
+      "normalized_url": "https://uinotes.com/pin/566060765477449935",
+      "candidate_status": "pending",
+      "id": "src-18eb753ed75bf7ea",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/480-webp/566060765477449935.webp?v1",
+      "source_title": "起点读书 App 截图 025 - UI Notes",
+      "source_context": "UI Notes 公开搜索结果分类中的起点读书 iOS 作品搜索结果 Screen。",
+      "source_provider": "UI Notes"
+    },
+    {
+      "product_name": "起点读书",
+      "target_page": "搜索结果页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes.com/pin/886504874566301516",
+      "normalized_url": "https://uinotes.com/pin/886504874566301516",
+      "candidate_status": "pending",
+      "id": "src-51acb6710345c222",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/480-webp/886504874566301516.webp?v1",
+      "source_title": "起点读书 App 截图 028 - UI Notes",
+      "source_context": "UI Notes 公开搜索结果分类中的起点读书 iOS 漫画搜索结果 Screen。",
+      "source_provider": "UI Notes"
+    }
+  ]
+}

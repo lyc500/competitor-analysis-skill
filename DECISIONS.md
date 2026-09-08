@@ -301,3 +301,24 @@ iPhone 镜像在 V0.1 MVP 中作为人工 fallback，不作为核心自动化能
 ### 影响范围
 
 首轮实现范围、任务拆分、测试与验收标准。
+
+## D-014 默认移动端 Surface，并将来源与目标 UI 解耦
+
+日期：2026-09-08
+状态：已确认
+
+### 决策
+
+产品设计竞品 UI 调研在用户未明确指定 Desktop/Web 时，由 Agent 按产品设计语境把移动端 App UI 设为主要目标，并在 Task 中显式写入 `target_surface: mobile_app` 与 iOS/Android 平台。Python 不根据页面名称、请求关键词或图片尺寸推断 Surface。
+
+来源信息与目标 UI 信息分别记录：`source_type`、`source_provider`、`source_url`、`source_asset_url` 描述素材从何处取得，`target_surface`、`platform`、`product_name`、`target_page` 描述素材本身。Web 上的 UI 数据库可提供 Mobile App Screen，但数据库网站整页、Desktop/Mobile Web、营销图和 Mockup 不属于合格 App UI。
+
+来源优先级保持为：专业 UI / 设计参考数据库 → 其他公开 Web / 官方公开来源 → 用户上传 → device capture / iPhone 镜像。
+
+### 原因
+
+Stage 5B 首次真实执行证明工程 E2E 可运行，但四张有效素材全是 Desktop Web；原 Task Contract 把 Web、iOS、Android 混为平台，且实际没有优先尝试专业 UI 数据库，无法证明面向产品设计师的移动端 UI 搜集能力。
+
+### 影响范围
+
+Task Contract、来源候选、Capture/Material 元数据、Agent Semantic Review、报告过滤和真实端到端验收。

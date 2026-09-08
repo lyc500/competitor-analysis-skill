@@ -57,7 +57,41 @@ class QualityStage2Tests(unittest.TestCase):
 
     def test_source_combinations_are_strict(self):
         valid={('user_upload','user_provided','user_upload'),('device_capture','manual_device_capture','device_capture'),('browser','browser_screenshot','online'),('public_web','web_candidate','online'),('ui_database','database_asset','online')}
-        for source,method,prov in valid: standardize_material(self.material(source_type=source,collection_method=method,provenance=prov))
+        for source,method,prov in valid:
+            extra = {"source_provider": "UI Database"} if source == "ui_database" else {}
+            standardize_material(self.material(source_type=source,collection_method=method,provenance=prov,**extra))
         with self.assertRaises(MaterialError): standardize_material(self.material(source_type='user_upload',collection_method='web_candidate',provenance='online'))
+
+    def test_desktop_web_cannot_be_collected_for_mobile_app_target(self):
+        material = self.material(
+            semantic_status="accepted",
+            target_surface="mobile_app",
+            target_surface_match="matched",
+            platform="Web",
+        )
+        result = process_materials([material], Path(tempfile.mkdtemp()))[0]
+        self.assertEqual(result["quality_status"], "accepted")
+        self.assertNotEqual(result["collection_status"], "collected")
+
+    def test_ui_database_material_preserves_mobile_target_and_source_metadata(self):
+        material = self.material(
+            semantic_status="accepted",
+            target_surface="mobile_app",
+            target_surface_match="matched",
+            platform="iOS",
+            source_type="ui_database",
+            source_provider="Refero",
+            source_url="https://refero.design/apps/example",
+            source_asset_url="https://cdn.example.com/screen.png",
+            collection_method="database_asset",
+            provenance="online",
+        )
+        result = process_materials([material], Path(tempfile.mkdtemp()))[0]
+        self.assertEqual(result["collection_status"], "collected")
+        self.assertEqual(result["target_surface"], "mobile_app")
+        self.assertEqual(result["source_provider"], "Refero")
+        invalid = dict(material, source_provider="")
+        with self.assertRaisesRegex(MaterialError, "source_provider"):
+            standardize_material(invalid)
 
 if __name__ == '__main__': unittest.main()

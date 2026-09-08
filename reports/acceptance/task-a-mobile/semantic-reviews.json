@@ -1,0 +1,52 @@
+{
+  "reviews": [
+    {
+      "target_id": "cap-ui-uinotes-qidian-works",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "Agent 逐图视觉确认：起点读书品牌与作品、漫画、听书、对话、书单标签可见；查询词、筛选入口和多条作品结果完整；画面为 iOS App 单屏，不是 UI Notes 页面、Mobile Web、营销图或设备 Mockup。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-ui-uinotes-qidian-comics",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "Agent 逐图视觉确认：同一查询词下漫画标签、筛选入口和多条漫画结果可见，属于起点读书 iOS App 搜索结果的完整单屏；不是参考网站整页、宣传海报、拼贴图或 Web UI。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-ui-refero-linkedin-jobs",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "Agent 逐图视觉确认：LinkedIn 标志性底部导航、职位搜索框、筛选、结果总数和多条职位卡片完整可见；画面为 LinkedIn iOS App Screen，不是 Refero 页面、Mobile Web 或营销素材。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-ui-refero-whatsapp-search",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "Agent 逐图视觉确认：WhatsApp 搜索框、联系人结果、通话结果和 iOS 键盘完整可见，属于 App 内跨实体搜索结果；不是 Refero 页面、Mobile Web、文章示意图或设备 Mockup。",
+      "review_source": "agent_visual_review"
+    }
+  ]
+}

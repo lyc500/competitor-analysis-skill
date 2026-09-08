@@ -1,0 +1,70 @@
+{
+  "classification_dimension": "移动端搜索结果的任务与信息组织方式",
+  "classification_reason": "Agent 逐张查看本次四张 collected App Screen 后确认：数字阅读结果按内容类型分栏，职业检索以筛选和高密度职位卡片支持决策，即时通信检索则按联系人与通话实体分区。该维度只来自本次真实素材观察，不由 product_type、notes 或关键词推断。",
+  "groups": [
+    {
+      "name": "多内容类型分栏结果",
+      "reason": "起点读书 Screen 在同一查询下以作品、漫画、听书、对话和书单标签切换结果类型，并在各标签内使用封面与摘要列表。",
+      "material_ids": [
+        "mat-cap-ui-uinotes-qidian-works",
+        "mat-cap-ui-uinotes-qidian-comics"
+      ]
+    },
+    {
+      "name": "筛选驱动的职业决策列表",
+      "reason": "LinkedIn Screen 以查询与地区、筛选器、结果总数和职位卡片组成可连续评估的列表。",
+      "material_ids": [
+        "mat-cap-ui-refero-linkedin-jobs"
+      ]
+    },
+    {
+      "name": "跨通信实体分区结果",
+      "reason": "WhatsApp Screen 在单一查询下按联系人和通话两种实体分区，并保留直接发起语音或视频操作。",
+      "material_ids": [
+        "mat-cap-ui-refero-whatsapp-search"
+      ]
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cap-ui-uinotes-qidian-works",
+      "labels": {
+        "产品": "起点读书",
+        "平台": "iOS",
+        "结果类型": "作品",
+        "组织方式": "内容标签加摘要列表",
+        "可见控件": "按推荐与筛选"
+      }
+    },
+    {
+      "material_id": "mat-cap-ui-uinotes-qidian-comics",
+      "labels": {
+        "产品": "起点读书",
+        "平台": "iOS",
+        "结果类型": "漫画",
+        "组织方式": "内容标签加封面列表",
+        "可见控件": "按推荐与筛选"
+      }
+    },
+    {
+      "material_id": "mat-cap-ui-refero-linkedin-jobs",
+      "labels": {
+        "产品": "LinkedIn",
+        "平台": "iOS",
+        "结果类型": "职位",
+        "组织方式": "筛选条加职位卡片列表",
+        "主要决策信息": "职位、公司、地点、匹配与申请信息"
+      }
+    },
+    {
+      "material_id": "mat-cap-ui-refero-whatsapp-search",
+      "labels": {
+        "产品": "WhatsApp",
+        "平台": "iOS",
+        "结果类型": "联系人与通话",
+        "组织方式": "实体分区列表",
+        "快捷操作": "语音与视频通话"
+      }
+    }
+  ]
+}

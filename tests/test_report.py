@@ -12,3 +12,27 @@ class ReportStage4Tests(unittest.TestCase):
         fallback=[{"product_name":"产品A","status":"open","reason":"缺少素材","allowed_methods":["user_upload"]},{"product_name":"产品B","status":"resolved","reason":"已有","allowed_methods":[]}]
         html=render_report(self.task(),[],{"classification_status":"unavailable","classification_dimension":"","classification_reason":"当前没有有效 collected 素材","groups":[],"material_labels":[]},fallback)
         self.assertIn("unavailable",html); self.assertIn("产品A",html); self.assertNotIn("产品B",html); self.assertNotIn('class="asset-image"',html)
+
+    def test_mobile_report_excludes_collected_desktop_web_material(self):
+        task = {**self.task(), "target_surface": "mobile_app"}
+        mobile = self.material(
+            id="mobile",
+            product_name="Mobile App",
+            platform="iOS",
+            target_surface="mobile_app",
+            target_surface_match="matched",
+        )
+        desktop = self.material(
+            id="desktop",
+            product_name="Desktop Web",
+            platform="Web",
+            image_path="assets/desktop.png",
+            target_surface="mobile_app",
+            target_surface_match="matched",
+        )
+        classification = self.classification()
+        classification["groups"][0]["material_ids"] = ["mobile", "desktop"]
+        html = render_report(task, [mobile, desktop], classification)
+        self.assertIn("Mobile App", html)
+        self.assertNotIn("Desktop Web", html)
+        self.assertNotIn("assets/desktop.png", html)

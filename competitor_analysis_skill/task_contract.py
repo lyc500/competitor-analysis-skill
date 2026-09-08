@@ -15,6 +15,7 @@ REQUIRED_COMPETITOR_FIELDS = {
     "planning_source", "priority", "reason",
 }
 ALLOWED_PRIORITIES = {"high", "medium", "low"}
+TARGET_SURFACES = {"mobile_app", "web", "other", "user_specified"}
 
 
 class ContractError(ValueError):
@@ -46,6 +47,9 @@ def validate_task(task):
         raise ContractError("raw_request 不能为空")
     if not isinstance(task["target_page"], str) or not task["target_page"].strip():
         raise ContractError("target_page 不能为空")
+    target_surface = task.get("target_surface", "user_specified")
+    if target_surface not in TARGET_SURFACES:
+        raise ContractError(f"无效 target_surface: {target_surface}")
     if task["task_status"] not in TASK_STATUSES:
         raise ContractError(f"无效 task_status: {task['task_status']}")
     if task["planning_strategy"] not in PLANNING_STRATEGIES:
@@ -60,6 +64,13 @@ def validate_task(task):
         raise ContractError("needs_clarification 任务不能包含竞品计划")
     if not isinstance(task["regions"], list) or not isinstance(task["specified_products"], list):
         raise ContractError("regions 和 specified_products 必须是数组")
+    if "platforms" in task and (
+        not isinstance(task["platforms"], list)
+        or not all(isinstance(value, str) and value.strip() for value in task["platforms"])
+    ):
+        raise ContractError("platforms 必须是非空字符串数组")
+    if target_surface == "mobile_app" and any("web" in value.casefold() for value in task.get("platforms", [])):
+        raise ContractError("mobile_app 任务的 platforms 不得包含 Web")
     if not isinstance(task["assumptions"], list):
         raise ContractError("assumptions 必须是数组")
 
@@ -84,6 +95,8 @@ def validate_task(task):
             raise ContractError(f"无效 priority: {competitor['priority']}")
         if competitor["target_page"] != task["target_page"]:
             raise ContractError(f"competitors[{index}].target_page 与任务不一致")
+        if target_surface == "mobile_app" and "web" in competitor["platform"].casefold():
+            raise ContractError(f"competitors[{index}].platform 不得包含 Web")
         if name.casefold() in seen_products:
             raise ContractError(f"竞品重复: {name}")
         seen_products.add(name.casefold())
@@ -119,6 +132,7 @@ def validate_task(task):
 
 
 def make_task(**values):
+    values.setdefault("target_surface", "user_specified")
     task = StructuredTask(values)
     validate_task(task)
     return task
@@ -132,6 +146,7 @@ def load_task(data):
         task = StructuredTask(deepcopy(data))
     else:
         raise ContractError("task 必须是对象")
+    task.setdefault("target_surface", "user_specified")
     task.setdefault("request", task["raw_request"])
     validate_task(task)
     return task

@@ -1,10 +1,30 @@
 from html import escape
 
-def _collected(assets):
-    return [m for m in assets if m.get("collection_status") == "collected" and m.get("semantic_status") == "accepted" and m.get("quality_status") == "accepted" and isinstance(m.get("image_path"), str) and m["image_path"].strip()]
+def _collected(task, assets):
+    target_surface = task.get("target_surface", "user_specified")
+    result = []
+    for material in assets:
+        valid = (
+            material.get("collection_status") == "collected"
+            and material.get("semantic_status") == "accepted"
+            and material.get("quality_status") == "accepted"
+            and isinstance(material.get("image_path"), str)
+            and material["image_path"].strip()
+        )
+        if target_surface == "mobile_app":
+            platform = material.get("platform", "").casefold()
+            valid = valid and (
+                material.get("target_surface") == "mobile_app"
+                and material.get("target_surface_match") == "matched"
+                and ("ios" in platform or "android" in platform)
+                and "web" not in platform
+            )
+        if valid:
+            result.append(material)
+    return result
 
 def render_report(task, assets, classification, fallback_requests=None):
-    assets = _collected(assets); by_id = {m["id"]: m for m in assets}
+    assets = _collected(task, assets); by_id = {m["id"]: m for m in assets}
     labels = {x["material_id"]: x.get("labels", {}) for x in classification.get("material_labels", [])}
     sections = []
     for group in classification.get("groups", []):

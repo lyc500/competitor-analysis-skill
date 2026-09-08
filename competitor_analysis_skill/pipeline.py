@@ -87,6 +87,8 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
         embedded = data.get("task")
         if embedded and embedded.get("target_page") != task["target_page"]:
             raise ValueError("reviewed materials 的 target_page 与任务不一致")
+        if embedded and embedded.get("target_surface", "user_specified") != task.get("target_surface", "user_specified"):
+            raise ValueError("reviewed materials 的 target_surface 与任务不一致")
         materials = data["materials"]
         ids = [m.get("id") for m in materials]
         if any(not isinstance(i, str) for i in ids) or len(ids) != len(set(ids)): raise ValueError("reviewed materials ID 必须唯一")
@@ -94,6 +96,10 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
         for m in materials:
             if m.get("product_name", "").casefold() not in task_products or m.get("page_name") != task["target_page"]: raise ValueError("reviewed material 与任务不一致")
             if m.get("collection_status") == "collected" and not (m.get("semantic_status") == "accepted" and m.get("quality_status") == "accepted" and m.get("image_path")): raise ValueError("collected material 状态不一致")
+            if task.get("target_surface") == "mobile_app" and m.get("collection_status") == "collected":
+                platform = m.get("platform", "").casefold()
+                if not (m.get("target_surface") == "mobile_app" and m.get("target_surface_match") == "matched" and ("ios" in platform or "android" in platform) and "web" not in platform):
+                    raise ValueError("collected material 的 Mobile Surface 状态不一致")
         valid = [m for m in materials if m.get("collection_status") == "collected" and m.get("semantic_status") == "accepted" and m.get("quality_status") == "accepted"]
         fallback = data.get("fallback_requests", [])
         _validate_fallback_consistency(task, valid, fallback)
