@@ -36,3 +36,25 @@ class ReportStage4Tests(unittest.TestCase):
         self.assertIn("Mobile App", html)
         self.assertNotIn("Desktop Web", html)
         self.assertNotIn("assets/desktop.png", html)
+
+    def test_gallery_bounds_single_card_and_keeps_multi_card_tracks_bounded(self):
+        html = render_report(self.task(), [self.material()], self.classification())
+        self.assertNotIn("repeat(auto-fit,minmax(240px,1fr))", html)
+        self.assertRegex(
+            html,
+            r"\.grid\{[^}]*grid-template-columns:repeat\(auto-fit,minmax\(min\(100%,360px\),360px\)\)",
+        )
+        self.assertIn("justify-content:start", html)
+        self.assertRegex(html, r"article\{[^}]*max-width:360px")
+
+    def test_portrait_images_keep_intrinsic_ratio_and_lightbox(self):
+        html = render_report(self.task(), [self.material()], self.classification())
+        self.assertNotIn("width:100%;height:360px", html)
+        self.assertNotIn(".asset-image{height:300px}", html)
+        self.assertRegex(
+            html,
+            r"\.asset-image\{[^}]*width:auto;[^}]*max-width:100%;[^}]*height:auto;[^}]*max-height:720px;[^}]*object-fit:contain",
+        )
+        self.assertIn('onclick="showModal(this)"', html)
+        self.assertIn('<dialog id="viewer"', html)
+        self.assertIn("function showModal", html)
