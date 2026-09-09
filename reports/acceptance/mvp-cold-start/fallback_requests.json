@@ -1,0 +1,42 @@
+[
+  {
+    "product_name": "小红书",
+    "target_page": "用户个人主页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "知乎",
+    "target_page": "用户个人主页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Instagram",
+    "target_page": "用户个人主页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Medium",
+    "target_page": "用户个人主页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  }
+]

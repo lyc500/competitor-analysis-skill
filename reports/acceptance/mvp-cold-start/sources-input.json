@@ -1,0 +1,62 @@
+{
+  "sources": [
+    {
+      "product_name": "小红书",
+      "target_page": "用户个人主页",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/app/748340650660839052",
+      "source_title": "小红书 App 截图库 - UI Notes",
+      "source_context": "从公开 App 截图库发现小红书版本与可滚动的移动端 Screen 集合；再逐张检查个人主页候选。"
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "用户个人主页",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/445462243238162902",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/480-webp/445462243238162902.webp?v1",
+      "source_title": "小红书 App 截图 001 - UI Notes",
+      "source_context": "公开 App Screen 候选；实际检查为信息流/内容详情，不是用户个人主页，保留为语义拒绝候选。"
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "用户个人主页",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/281912682124983449",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/480-webp/281912682124983449.webp?v1",
+      "source_title": "小红书 App 截图 043 - UI Notes",
+      "source_context": "公开 App Screen 候选；实际检查为完整个人主页，含身份、关系统计、关注动作与笔记网格。"
+    },
+    {
+      "product_name": "知乎",
+      "target_page": "用户个人主页",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/app/269449960604370329",
+      "source_title": "知乎 App 截图库 - UI Notes",
+      "source_context": "真实 Chromium 打开公开知乎 App 预览并检查首批 60 张 Screen；主要为信息流、回答/文章与设置，未找到可确认的用户个人主页，不能降级接受错误页面。"
+    },
+    {
+      "product_name": "Instagram",
+      "target_page": "用户个人主页",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_url": "https://refero.design/screens/36a881f9-b456-47f9-b03c-f65bcde89c2a?query=Instagram%20profile&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/41/mobile/4ff8df04-fdf8-4b07-9cfa-b189a8623c34.jpg",
+      "source_title": "Instagram iOS profile - Refero",
+      "source_context": "Refero 公开 profile 搜索结果中的 Instagram iOS Screen；逐图检查为 Sony 个人主页，包含验证身份、帖子/粉丝/关注统计、Follow/Message 与内容网格。"
+    },
+    {
+      "product_name": "Medium",
+      "target_page": "用户个人主页",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_url": "https://refero.design/screens/5b472505-d300-4558-b9ce-8706d1220181?query=Medium%20profile&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/31/mobile/b9510024-65fd-4bab-be0b-91ee52052daa.jpg",
+      "source_title": "Medium iOS account/profile - Refero",
+      "source_context": "Refero 公开 profile 搜索结果中的 Medium iOS Screen；逐图检查为 Account/个人资料主页，含关注统计、View stats、Edit your profile、Stories/Lists/About 与创作内容。"
+    }
+  ]
+}

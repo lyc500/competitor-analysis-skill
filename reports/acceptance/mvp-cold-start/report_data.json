@@ -1,0 +1,296 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外热门内容社区产品的用户个人主页。",
+    "research_goal": "比较国内外热门内容社区用户个人主页的身份表达、关系数据、内容资产与导航组织方式，为产品设计提供真实移动端 UI 参考。",
+    "target_page": "用户个人主页",
+    "target_surface": "mobile_app",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "product_scope": [
+      "生活方式内容社区",
+      "知识内容社区",
+      "视觉社交内容社区",
+      "创作者写作社区"
+    ],
+    "specified_products": [],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "constraints": [
+      "优先使用真实公开的移动 App UI 单屏，不以 UI 数据库自身页面、Mobile Web、营销图、Mockup 或错误页面冒充 App 素材",
+      "产品范围由 Agent 根据需求和公开结果动态规划，不因采集难度静默替换为缺乏代表性的产品",
+      "公开环境无法取得有效页面时保留 open fallback，不降低语义或机械质量门槛",
+      "不得使用 fixture 或内置候选替代真实公开来源"
+    ],
+    "assumptions": [
+      "将“国内外”解释为同时覆盖中国市场与全球市场",
+      "用户未指定端面，依据 SKILL.md 的默认规则将目标 surface 设为 mobile_app，并优先记录 iOS/Android App UI",
+      "将“用户个人主页”解释为能同时观察身份、关系动作或统计以及内容资产/导航的个人资料或账户主页",
+      "Agent 选择不同内容社区结构作对照；无法从公开来源取得目标页的竞品不删除，而是进入 fallback"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "小红书",
+        "region": "CN",
+        "product_type": "生活方式内容社区",
+        "platform": "iOS",
+        "target_page": "用户个人主页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "中国头部生活方式内容社区，个人页将身份统计、关注关系与笔记网格并置，适合观察内容资产型个人主页。"
+      },
+      {
+        "product_name": "知乎",
+        "region": "CN",
+        "product_type": "知识内容社区",
+        "platform": "iOS",
+        "target_page": "用户个人主页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "中国知识问答社区，个人页可作为回答/文章贡献与关注关系组织方式的差异化对照。"
+      },
+      {
+        "product_name": "Instagram",
+        "region": "Global",
+        "product_type": "视觉社交内容社区",
+        "platform": "iOS",
+        "target_page": "用户个人主页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "全球主流视觉内容社区，个人页同时展示身份、关系统计、关注动作与内容网格。"
+      },
+      {
+        "product_name": "Medium",
+        "region": "Global",
+        "product_type": "创作者写作社区",
+        "platform": "iOS",
+        "target_page": "用户个人主页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "全球写作与创作者平台，账户页把关注关系、创作资产、统计与 Stories/Lists/About 导航组合，补充非图片网格的个人主页路径。"
+      }
+    ],
+    "request": "帮我搜集一下国内外热门内容社区产品的用户个人主页。"
+  },
+  "materials": [
+    {
+      "id": "mat-cap-ui-notes-xhs-profile",
+      "product_name": "小红书",
+      "page_name": "用户个人主页",
+      "region": "CN",
+      "product_type": "生活方式内容社区",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/c2855ae3cf18c532.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/480-webp/281912682124983449.webp?v1",
+      "source_url": "https://uinotes.com/pin/281912682124983449",
+      "captured_at": "2026-09-09T04:25:53Z",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "逐图检查确认这是小红书 iOS App 的完整用户个人主页：可见头像、昵称与 ID/IP、个人简介、关注/粉丝/获赞收藏统计、关注与私信动作以及笔记/收藏标签和内容网格；不是 UI Notes 页面、Mobile Web、营销图或设备 Mockup。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-ui-notes-xhs-profile",
+      "source_candidate_id": "src-87f799ab528e3b0c",
+      "requested_url": "https://uinotes.com/pin/281912682124983449",
+      "final_url": "https://uinotes.com/pin/281912682124983449",
+      "width": 480,
+      "height": 1039,
+      "decode_format": "WEBP",
+      "content_sha256": "8f60ecb360d99137af533017824ae4c40e43ff44a05f03ce5432425fb4c1cbfb"
+    },
+    {
+      "id": "mat-cap-refero-instagram-profile",
+      "product_name": "Instagram",
+      "page_name": "用户个人主页",
+      "region": "Global",
+      "product_type": "视觉社交内容社区",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/a28df5710481a9ea.jpg",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_asset_url": "https://images.refero.design/screenshots/41/mobile/4ff8df04-fdf8-4b07-9cfa-b189a8623c34.jpg",
+      "source_url": "https://refero.design/screens/36a881f9-b456-47f9-b03c-f65bcde89c2a?query=Instagram%20profile&source=search",
+      "captured_at": "2026-09-09T04:25:53Z",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "逐图检查确认这是 Instagram iOS App 的完整个人主页：可见 Sony 验证身份、头像、帖子/粉丝/关注统计、Follow/Message 动作、资料标签页与内容网格；主体是 App Screen，不是 Refero 网站页面或宣传图。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-refero-instagram-profile",
+      "source_candidate_id": "src-8811eb0fcc2f6c87",
+      "requested_url": "https://refero.design/screens/36a881f9-b456-47f9-b03c-f65bcde89c2a?query=Instagram%20profile&source=search",
+      "final_url": "https://refero.design/screens/36a881f9-b456-47f9-b03c-f65bcde89c2a?query=Instagram%20profile&source=search",
+      "width": 1125,
+      "height": 2436,
+      "decode_format": "JPEG",
+      "content_sha256": "e651b40281b275b9b0d976356494b307851591aa295d4d32b7c9b6f814d0deb2"
+    },
+    {
+      "id": "mat-cap-refero-medium-profile",
+      "product_name": "Medium",
+      "page_name": "用户个人主页",
+      "region": "Global",
+      "product_type": "创作者写作社区",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/da76933b229554be.jpg",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_asset_url": "https://images.refero.design/screenshots/31/mobile/b9510024-65fd-4bab-be0b-91ee52052daa.jpg",
+      "source_url": "https://refero.design/screens/5b472505-d300-4558-b9ce-8706d1220181?query=Medium%20profile&source=search",
+      "captured_at": "2026-09-09T04:25:53Z",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "逐图检查确认这是 Medium iOS App 的账户/个人资料主页：可见 Followers/Following、View stats、Edit your profile、Stories/Lists/About 导航和创作内容入口；页面保留完整移动端上下文，作为写作社区的用户个人主页样本。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-refero-medium-profile",
+      "source_candidate_id": "src-88bd6cf9c1439fe0",
+      "requested_url": "https://refero.design/screens/5b472505-d300-4558-b9ce-8706d1220181?query=Medium%20profile&source=search",
+      "final_url": "https://refero.design/screens/5b472505-d300-4558-b9ce-8706d1220181?query=Medium%20profile&source=search",
+      "width": 1125,
+      "height": 2436,
+      "decode_format": "JPEG",
+      "content_sha256": "0fa5e128fa5e1f1bde4cb466eaa0a437d3a03b9a5955a6546908b27bfca2cfab"
+    }
+  ],
+  "classification": {
+    "classification_status": "ready",
+    "classification_dimension": "个人主页中身份、关系与内容资产的编排方式",
+    "classification_reason": "Agent 在逐张查看本轮通过语义与机械校验的三张 collected App Screen 后，按实际可见的信息层次与导航关系分类：小红书和 Instagram 都把关系数据、关注动作与内容网格放在同一公开主页，Medium 则以账户导航、创作资产入口和统计/编辑动作组成个人页。该维度来自本轮素材观察，不由 product_type、notes 或关键词推断。",
+    "groups": [
+      {
+        "name": "关系数据与内容网格并列的公开主页",
+        "reason": "小红书和 Instagram 都在个人身份头部附近展示关注关系/统计与 Follow 或 Message 动作，并以笔记或帖子网格作为主要内容资产入口。",
+        "material_ids": [
+          "mat-cap-ui-notes-xhs-profile",
+          "mat-cap-refero-instagram-profile"
+        ],
+        "asset_ids": [
+          "mat-cap-ui-notes-xhs-profile",
+          "mat-cap-refero-instagram-profile"
+        ]
+      },
+      {
+        "name": "账户导航与创作资产并置的个人页",
+        "reason": "Medium Screen 以 Followers/Following、View stats、Edit your profile 组成账户控制区，下面通过 Stories、Lists、About 和文章入口组织创作资产，而不是以图片网格为主。",
+        "material_ids": [
+          "mat-cap-refero-medium-profile"
+        ],
+        "asset_ids": [
+          "mat-cap-refero-medium-profile"
+        ]
+      }
+    ],
+    "material_labels": [
+      {
+        "material_id": "mat-cap-ui-notes-xhs-profile",
+        "labels": {
+          "主页型": "内容资产首页",
+          "身份区": "头像、昵称、ID/IP、简介",
+          "关系信息": "关注、粉丝、获赞与收藏统计",
+          "内容资产": "笔记/收藏标签与多列网格",
+          "主要动作": "关注与私信"
+        }
+      },
+      {
+        "material_id": "mat-cap-refero-instagram-profile",
+        "labels": {
+          "主页型": "视觉作品集",
+          "身份区": "验证身份、头像与简介",
+          "关系信息": "帖子、粉丝、关注统计",
+          "内容资产": "资料标签页与图片网格",
+          "主要动作": "Follow 与 Message"
+        }
+      },
+      {
+        "material_id": "mat-cap-refero-medium-profile",
+        "labels": {
+          "主页型": "创作者账户",
+          "身份区": "Account 与个人资料控制",
+          "关系信息": "Followers、Following 与 View stats",
+          "内容资产": "Stories、Lists、About 与文章入口",
+          "主要动作": "Edit your profile 与 View stats"
+        }
+      }
+    ]
+  },
+  "fallback_requests": [
+    {
+      "product_name": "小红书",
+      "target_page": "用户个人主页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "知乎",
+      "target_page": "用户个人主页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Instagram",
+      "target_page": "用户个人主页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Medium",
+      "target_page": "用户个人主页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    }
+  ],
+  "excluded_summary": {
+    "rejected": 1,
+    "pending": 0,
+    "unavailable": 0
+  }
+}

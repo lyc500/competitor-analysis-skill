@@ -1,0 +1,52 @@
+{
+  "reviews": [
+    {
+      "target_id": "cap-ui-notes-xhs-feed",
+      "target_kind": "browser_capture",
+      "semantic_status": "rejected",
+      "product_identity": "matched",
+      "target_page_match": "mismatched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "逐图检查确认这是小红书信息流/内容详情 Screen，虽然是完整 iOS App UI，但没有个人身份头部、关系统计或用户内容资产入口，不是本任务的用户个人主页；按语义门槛拒绝。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-ui-notes-xhs-profile",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "逐图检查确认这是小红书 iOS App 的完整用户个人主页：可见头像、昵称与 ID/IP、个人简介、关注/粉丝/获赞收藏统计、关注与私信动作以及笔记/收藏标签和内容网格；不是 UI Notes 页面、Mobile Web、营销图或设备 Mockup。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-refero-instagram-profile",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "逐图检查确认这是 Instagram iOS App 的完整个人主页：可见 Sony 验证身份、头像、帖子/粉丝/关注统计、Follow/Message 动作、资料标签页与内容网格；主体是 App Screen，不是 Refero 网站页面或宣传图。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-refero-medium-profile",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "逐图检查确认这是 Medium iOS App 的账户/个人资料主页：可见 Followers/Following、View stats、Edit your profile、Stories/Lists/About 导航和创作内容入口；页面保留完整移动端上下文，作为写作社区的用户个人主页样本。",
+      "review_source": "agent_visual_review"
+    }
+  ]
+}

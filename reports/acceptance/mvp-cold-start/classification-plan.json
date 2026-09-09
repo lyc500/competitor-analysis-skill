@@ -1,0 +1,53 @@
+{
+  "classification_dimension": "个人主页中身份、关系与内容资产的编排方式",
+  "classification_reason": "Agent 在逐张查看本轮通过语义与机械校验的三张 collected App Screen 后，按实际可见的信息层次与导航关系分类：小红书和 Instagram 都把关系数据、关注动作与内容网格放在同一公开主页，Medium 则以账户导航、创作资产入口和统计/编辑动作组成个人页。该维度来自本轮素材观察，不由 product_type、notes 或关键词推断。",
+  "groups": [
+    {
+      "name": "关系数据与内容网格并列的公开主页",
+      "reason": "小红书和 Instagram 都在个人身份头部附近展示关注关系/统计与 Follow 或 Message 动作，并以笔记或帖子网格作为主要内容资产入口。",
+      "material_ids": [
+        "mat-cap-ui-notes-xhs-profile",
+        "mat-cap-refero-instagram-profile"
+      ]
+    },
+    {
+      "name": "账户导航与创作资产并置的个人页",
+      "reason": "Medium Screen 以 Followers/Following、View stats、Edit your profile 组成账户控制区，下面通过 Stories、Lists、About 和文章入口组织创作资产，而不是以图片网格为主。",
+      "material_ids": [
+        "mat-cap-refero-medium-profile"
+      ]
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cap-ui-notes-xhs-profile",
+      "labels": {
+        "主页型": "内容资产首页",
+        "身份区": "头像、昵称、ID/IP、简介",
+        "关系信息": "关注、粉丝、获赞与收藏统计",
+        "内容资产": "笔记/收藏标签与多列网格",
+        "主要动作": "关注与私信"
+      }
+    },
+    {
+      "material_id": "mat-cap-refero-instagram-profile",
+      "labels": {
+        "主页型": "视觉作品集",
+        "身份区": "验证身份、头像与简介",
+        "关系信息": "帖子、粉丝、关注统计",
+        "内容资产": "资料标签页与图片网格",
+        "主要动作": "Follow 与 Message"
+      }
+    },
+    {
+      "material_id": "mat-cap-refero-medium-profile",
+      "labels": {
+        "主页型": "创作者账户",
+        "身份区": "Account 与个人资料控制",
+        "关系信息": "Followers、Following 与 View stats",
+        "内容资产": "Stories、Lists、About 与文章入口",
+        "主要动作": "Edit your profile 与 View stats"
+      }
+    }
+  ]
+}

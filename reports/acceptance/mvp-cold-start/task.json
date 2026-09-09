@@ -1,0 +1,78 @@
+{
+  "raw_request": "帮我搜集一下国内外热门内容社区产品的用户个人主页。",
+  "research_goal": "比较国内外热门内容社区用户个人主页的身份表达、关系数据、内容资产与导航组织方式，为产品设计提供真实移动端 UI 参考。",
+  "target_page": "用户个人主页",
+  "target_surface": "mobile_app",
+  "regions": [
+    "CN",
+    "Global"
+  ],
+  "product_scope": [
+    "生活方式内容社区",
+    "知识内容社区",
+    "视觉社交内容社区",
+    "创作者写作社区"
+  ],
+  "specified_products": [],
+  "platforms": [
+    "iOS",
+    "Android"
+  ],
+  "constraints": [
+    "优先使用真实公开的移动 App UI 单屏，不以 UI 数据库自身页面、Mobile Web、营销图、Mockup 或错误页面冒充 App 素材",
+    "产品范围由 Agent 根据需求和公开结果动态规划，不因采集难度静默替换为缺乏代表性的产品",
+    "公开环境无法取得有效页面时保留 open fallback，不降低语义或机械质量门槛",
+    "不得使用 fixture 或内置候选替代真实公开来源"
+  ],
+  "assumptions": [
+    "将“国内外”解释为同时覆盖中国市场与全球市场",
+    "用户未指定端面，依据 SKILL.md 的默认规则将目标 surface 设为 mobile_app，并优先记录 iOS/Android App UI",
+    "将“用户个人主页”解释为能同时观察身份、关系动作或统计以及内容资产/导航的个人资料或账户主页",
+    "Agent 选择不同内容社区结构作对照；无法从公开来源取得目标页的竞品不删除，而是进入 fallback"
+  ],
+  "needs_clarification": false,
+  "task_status": "ready",
+  "planning_strategy": "agent_only",
+  "competitors": [
+    {
+      "product_name": "小红书",
+      "region": "CN",
+      "product_type": "生活方式内容社区",
+      "platform": "iOS",
+      "target_page": "用户个人主页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "中国头部生活方式内容社区，个人页将身份统计、关注关系与笔记网格并置，适合观察内容资产型个人主页。"
+    },
+    {
+      "product_name": "知乎",
+      "region": "CN",
+      "product_type": "知识内容社区",
+      "platform": "iOS",
+      "target_page": "用户个人主页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "中国知识问答社区，个人页可作为回答/文章贡献与关注关系组织方式的差异化对照。"
+    },
+    {
+      "product_name": "Instagram",
+      "region": "Global",
+      "product_type": "视觉社交内容社区",
+      "platform": "iOS",
+      "target_page": "用户个人主页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "全球主流视觉内容社区，个人页同时展示身份、关系统计、关注动作与内容网格。"
+    },
+    {
+      "product_name": "Medium",
+      "region": "Global",
+      "product_type": "创作者写作社区",
+      "platform": "iOS",
+      "target_page": "用户个人主页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "全球写作与创作者平台，账户页把关注关系、创作资产、统计与 Stories/Lists/About 导航组合，补充非图片网格的个人主页路径。"
+    }
+  ]
+}

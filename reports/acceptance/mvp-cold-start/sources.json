@@ -1,0 +1,165 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外热门内容社区产品的用户个人主页。",
+    "research_goal": "比较国内外热门内容社区用户个人主页的身份表达、关系数据、内容资产与导航组织方式，为产品设计提供真实移动端 UI 参考。",
+    "target_page": "用户个人主页",
+    "target_surface": "mobile_app",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "product_scope": [
+      "生活方式内容社区",
+      "知识内容社区",
+      "视觉社交内容社区",
+      "创作者写作社区"
+    ],
+    "specified_products": [],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "constraints": [
+      "优先使用真实公开的移动 App UI 单屏，不以 UI 数据库自身页面、Mobile Web、营销图、Mockup 或错误页面冒充 App 素材",
+      "产品范围由 Agent 根据需求和公开结果动态规划，不因采集难度静默替换为缺乏代表性的产品",
+      "公开环境无法取得有效页面时保留 open fallback，不降低语义或机械质量门槛",
+      "不得使用 fixture 或内置候选替代真实公开来源"
+    ],
+    "assumptions": [
+      "将“国内外”解释为同时覆盖中国市场与全球市场",
+      "用户未指定端面，依据 SKILL.md 的默认规则将目标 surface 设为 mobile_app，并优先记录 iOS/Android App UI",
+      "将“用户个人主页”解释为能同时观察身份、关系动作或统计以及内容资产/导航的个人资料或账户主页",
+      "Agent 选择不同内容社区结构作对照；无法从公开来源取得目标页的竞品不删除，而是进入 fallback"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "小红书",
+        "region": "CN",
+        "product_type": "生活方式内容社区",
+        "platform": "iOS",
+        "target_page": "用户个人主页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "中国头部生活方式内容社区，个人页将身份统计、关注关系与笔记网格并置，适合观察内容资产型个人主页。"
+      },
+      {
+        "product_name": "知乎",
+        "region": "CN",
+        "product_type": "知识内容社区",
+        "platform": "iOS",
+        "target_page": "用户个人主页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "中国知识问答社区，个人页可作为回答/文章贡献与关注关系组织方式的差异化对照。"
+      },
+      {
+        "product_name": "Instagram",
+        "region": "Global",
+        "product_type": "视觉社交内容社区",
+        "platform": "iOS",
+        "target_page": "用户个人主页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "全球主流视觉内容社区，个人页同时展示身份、关系统计、关注动作与内容网格。"
+      },
+      {
+        "product_name": "Medium",
+        "region": "Global",
+        "product_type": "创作者写作社区",
+        "platform": "iOS",
+        "target_page": "用户个人主页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "全球写作与创作者平台，账户页把关注关系、创作资产、统计与 Stories/Lists/About 导航组合，补充非图片网格的个人主页路径。"
+      }
+    ],
+    "request": "帮我搜集一下国内外热门内容社区产品的用户个人主页。"
+  },
+  "sources": [
+    {
+      "product_name": "Instagram",
+      "target_page": "用户个人主页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://refero.design/screens/36a881f9-b456-47f9-b03c-f65bcde89c2a?query=Instagram%20profile&source=search",
+      "normalized_url": "https://refero.design/screens/36a881f9-b456-47f9-b03c-f65bcde89c2a?query=Instagram%20profile&source=search",
+      "candidate_status": "pending",
+      "id": "src-8811eb0fcc2f6c87",
+      "source_asset_url": "https://images.refero.design/screenshots/41/mobile/4ff8df04-fdf8-4b07-9cfa-b189a8623c34.jpg",
+      "source_title": "Instagram iOS profile - Refero",
+      "source_context": "Refero 公开 profile 搜索结果中的 Instagram iOS Screen；逐图检查为 Sony 个人主页，包含验证身份、帖子/粉丝/关注统计、Follow/Message 与内容网格。",
+      "source_provider": "Refero"
+    },
+    {
+      "product_name": "Medium",
+      "target_page": "用户个人主页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://refero.design/screens/5b472505-d300-4558-b9ce-8706d1220181?query=Medium%20profile&source=search",
+      "normalized_url": "https://refero.design/screens/5b472505-d300-4558-b9ce-8706d1220181?query=Medium%20profile&source=search",
+      "candidate_status": "pending",
+      "id": "src-88bd6cf9c1439fe0",
+      "source_asset_url": "https://images.refero.design/screenshots/31/mobile/b9510024-65fd-4bab-be0b-91ee52052daa.jpg",
+      "source_title": "Medium iOS account/profile - Refero",
+      "source_context": "Refero 公开 profile 搜索结果中的 Medium iOS Screen；逐图检查为 Account/个人资料主页，含关注统计、View stats、Edit your profile、Stories/Lists/About 与创作内容。",
+      "source_provider": "Refero"
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "用户个人主页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes.com/app/748340650660839052",
+      "normalized_url": "https://uinotes.com/app/748340650660839052",
+      "candidate_status": "pending",
+      "id": "src-641c138c67a13db4",
+      "source_title": "小红书 App 截图库 - UI Notes",
+      "source_context": "从公开 App 截图库发现小红书版本与可滚动的移动端 Screen 集合；再逐张检查个人主页候选。",
+      "source_provider": "UI Notes"
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "用户个人主页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes.com/pin/281912682124983449",
+      "normalized_url": "https://uinotes.com/pin/281912682124983449",
+      "candidate_status": "pending",
+      "id": "src-87f799ab528e3b0c",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/480-webp/281912682124983449.webp?v1",
+      "source_title": "小红书 App 截图 043 - UI Notes",
+      "source_context": "公开 App Screen 候选；实际检查为完整个人主页，含身份、关系统计、关注动作与笔记网格。",
+      "source_provider": "UI Notes"
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "用户个人主页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes.com/pin/445462243238162902",
+      "normalized_url": "https://uinotes.com/pin/445462243238162902",
+      "candidate_status": "pending",
+      "id": "src-e0808245d26ea9e9",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/480-webp/445462243238162902.webp?v1",
+      "source_title": "小红书 App 截图 001 - UI Notes",
+      "source_context": "公开 App Screen 候选；实际检查为信息流/内容详情，不是用户个人主页，保留为语义拒绝候选。",
+      "source_provider": "UI Notes"
+    },
+    {
+      "product_name": "知乎",
+      "target_page": "用户个人主页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes.com/app/269449960604370329",
+      "normalized_url": "https://uinotes.com/app/269449960604370329",
+      "candidate_status": "pending",
+      "id": "src-fedc1625d5c3ca3a",
+      "source_title": "知乎 App 截图库 - UI Notes",
+      "source_context": "真实 Chromium 打开公开知乎 App 预览并检查首批 60 张 Screen；主要为信息流、回答/文章与设置，未找到可确认的用户个人主页，不能降级接受错误页面。",
+      "source_provider": "UI Notes"
+    }
+  ]
+}
