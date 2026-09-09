@@ -62,16 +62,18 @@ class QualityStage2Tests(unittest.TestCase):
             standardize_material(self.material(source_type=source,collection_method=method,provenance=prov,**extra))
         with self.assertRaises(MaterialError): standardize_material(self.material(source_type='user_upload',collection_method='web_candidate',provenance='online'))
 
-    def test_desktop_web_cannot_be_collected_for_mobile_app_target(self):
-        material = self.material(
-            semantic_status="accepted",
-            target_surface="mobile_app",
-            target_surface_match="matched",
-            platform="Web",
-        )
-        result = process_materials([material], Path(tempfile.mkdtemp()))[0]
-        self.assertEqual(result["quality_status"], "accepted")
-        self.assertNotEqual(result["collection_status"], "collected")
+    def test_desktop_and_mobile_web_cannot_be_collected_for_mobile_app_target(self):
+        for platform in ("Web", "Mobile Web"):
+            with self.subTest(platform=platform):
+                material = self.material(
+                    semantic_status="accepted",
+                    target_surface="mobile_app",
+                    target_surface_match="matched",
+                    platform=platform,
+                )
+                result = process_materials([material], Path(tempfile.mkdtemp()))[0]
+                self.assertEqual(result["quality_status"], "accepted")
+                self.assertNotEqual(result["collection_status"], "collected")
 
     def test_ui_database_material_preserves_mobile_target_and_source_metadata(self):
         material = self.material(

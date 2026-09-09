@@ -3,7 +3,7 @@ from pathlib import Path
 
 from competitor_analysis_skill.catalog import SEARCH_CATALOG
 from competitor_analysis_skill.planning import plan_competitors
-from competitor_analysis_skill.task_contract import load_task_file
+from competitor_analysis_skill.task_contract import ContractError, load_task_file, validate_task
 
 
 FIXTURE_DIR = Path(__file__).parent / "fixtures" / "acceptance"
@@ -19,7 +19,7 @@ class Stage5AcceptanceTaskTests(unittest.TestCase):
 
         self.assertEqual(task["raw_request"], "帮我搜集一下海内外热门产品的搜索结果页。")
         self.assertEqual(task["target_page"], "搜索结果页")
-        self.assertEqual(task["target_surface"], "mobile_app")
+        self.assertEqual(task.get("target_surface"), "mobile_app")
         self.assertEqual(set(task["platforms"]), {"iOS", "Android"})
         self.assertEqual(task["specified_products"], [])
         self.assertEqual(task["planning_strategy"], "agent_only")
@@ -42,6 +42,8 @@ class Stage5AcceptanceTaskTests(unittest.TestCase):
             "帮我搜集一下国内外热门直播产品的礼物面板，重点关注虎牙、斗鱼、抖音直播和 Twitch。",
         )
         self.assertEqual(task["target_page"], "直播产品礼物面板")
+        self.assertEqual(task["target_surface"], "mobile_app")
+        self.assertEqual(set(task["platforms"]), {"iOS", "Android"})
         self.assertEqual(task["specified_products"], specified)
         self.assertEqual(task["planning_strategy"], "mixed")
         self.assertEqual(task["task_status"], "ready")
@@ -51,7 +53,26 @@ class Stage5AcceptanceTaskTests(unittest.TestCase):
         self.assertGreater(len(competitors), len(specified))
         self.assertTrue(all(row["planning_source"] == "agent_planned" for row in competitors[4:]))
         self.assertTrue(all(row["reason"].strip() for row in competitors))
+        self.assertTrue(all("web" not in row["platform"].casefold() for row in competitors))
         self.assertNotIn("fixture_demo", {row["planning_source"] for row in competitors})
+
+    def test_task_b_rejects_deleted_specified_product(self):
+        task = self._load("task_b.json").to_dict()
+        task["competitors"] = task["competitors"][1:]
+        with self.assertRaises(ContractError):
+            validate_task(task)
+
+    def test_task_b_rejects_task_web_platform(self):
+        task = self._load("task_b.json").to_dict()
+        task["platforms"].append("Web")
+        with self.assertRaises(ContractError):
+            validate_task(task)
+
+    def test_task_b_rejects_competitor_web_platform(self):
+        task = self._load("task_b.json").to_dict()
+        task["competitors"][0]["platform"] = "Mobile Web"
+        with self.assertRaises(ContractError):
+            validate_task(task)
 
     def test_acceptance_plans_are_distinct_and_task_a_is_not_the_fixed_catalog(self):
         task_a = self._load("task_a.json")

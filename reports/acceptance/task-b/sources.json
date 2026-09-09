@@ -1,0 +1,377 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外热门直播产品的礼物面板，重点关注虎牙、斗鱼、抖音直播和 Twitch。",
+    "research_goal": "比较国内外热门直播产品礼物面板的入口、礼物组织、价格表达与赠送交互，为直播送礼体验设计提供真实页面参考。",
+    "target_page": "直播产品礼物面板",
+    "target_surface": "mobile_app",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "product_scope": [
+      "游戏直播",
+      "短视频与综合直播",
+      "社交直播"
+    ],
+    "specified_products": [
+      "虎牙",
+      "斗鱼",
+      "抖音直播",
+      "Twitch"
+    ],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "constraints": [
+      "四个用户指定产品必须优先保留，不得因后续截图获取难度删除",
+      "后续验收仅将真实操作后出现的礼物面板截图计入有效素材",
+      "不得以 fixture 或内置候选替代真实公网采集"
+    ],
+    "assumptions": [
+      "将“国内外”解释为同时覆盖中国市场与全球市场",
+      "Agent 可补充具有不同直播场景的产品，但不能取代用户指定产品"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "mixed",
+    "competitors": [
+      {
+        "product_name": "虎牙",
+        "region": "CN",
+        "product_type": "游戏直播",
+        "platform": "iOS",
+        "target_page": "直播产品礼物面板",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确指定，代表国内游戏直播场景的礼物面板。"
+      },
+      {
+        "product_name": "斗鱼",
+        "region": "CN",
+        "product_type": "游戏直播",
+        "platform": "iOS",
+        "target_page": "直播产品礼物面板",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确指定，用于对照国内游戏直播送礼交互。"
+      },
+      {
+        "product_name": "抖音直播",
+        "region": "CN",
+        "product_type": "短视频与综合直播",
+        "platform": "iOS",
+        "target_page": "直播产品礼物面板",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确指定，覆盖短视频生态中的综合直播送礼场景。"
+      },
+      {
+        "product_name": "Twitch",
+        "region": "Global",
+        "product_type": "游戏与创作者直播",
+        "platform": "iOS",
+        "target_page": "直播产品礼物面板",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确指定，覆盖全球游戏与创作者直播场景。"
+      },
+      {
+        "product_name": "快手直播",
+        "region": "CN",
+        "product_type": "短视频与综合直播",
+        "platform": "iOS",
+        "target_page": "直播产品礼物面板",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "补充国内短视频与直播融合场景，用于比较礼物推荐和赠送路径。"
+      },
+      {
+        "product_name": "BIGO LIVE",
+        "region": "Global",
+        "product_type": "社交直播",
+        "platform": "iOS",
+        "target_page": "直播产品礼物面板",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "补充全球社交直播场景，用于比较虚拟礼物的组织与互动方式。"
+      }
+    ],
+    "request": "帮我搜集一下国内外热门直播产品的礼物面板，重点关注虎牙、斗鱼、抖音直播和 Twitch。"
+  },
+  "sources": [
+    {
+      "product_name": "BIGO LIVE",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://caicalinks.com/blog/great-bigo-instructions/",
+      "normalized_url": "https://caicalinks.com/blog/great-bigo-instructions/",
+      "candidate_status": "pending",
+      "id": "src-206ff2f206b7ed39",
+      "source_asset_url": "https://caicalinks.com/blog/wp-content/uploads/2022/03/11.jpg",
+      "source_title": "BIGO LIVE 使用说明 - caicalinks",
+      "source_context": "公开教程中的礼物面板局部图；虽可见分类、价格和发送，但缺少直播上下文，按 incomplete 拒绝。"
+    },
+    {
+      "product_name": "BIGO LIVE",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://refero.design/apps/search?query=BIGO%20LIVE",
+      "normalized_url": "https://refero.design/apps/search?query=BIGO%20LIVE",
+      "candidate_status": "pending",
+      "id": "src-e83689a376003ecb",
+      "source_title": "BIGO LIVE App 搜索 - Refero",
+      "source_context": "真实 Chromium 打开 Refero App 搜索；公开结果未返回 BIGO LIVE 目标 Screen，完整结果要求登录。",
+      "source_provider": "Refero"
+    },
+    {
+      "product_name": "BIGO LIVE",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://www.bigo.tv/blog/bigo-live-virtual-gifts",
+      "normalized_url": "https://www.bigo.tv/blog/bigo-live-virtual-gifts",
+      "candidate_status": "pending",
+      "id": "src-7c2da45142fd299b",
+      "source_asset_url": "https://static-web.bigolive.tv/as/fhab-static/bigolive_official_blog/21uqoVgAjmkQp.jpg",
+      "source_title": "How to Send Gifts on Bigo Live - BIGO LIVE",
+      "source_context": "官方公开礼物教程的三屏拼图；虽展示礼物面板，但按 collage 规则拒绝。"
+    },
+    {
+      "product_name": "BIGO LIVE",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://www.techinasia.com/bigo-live-streaming-app",
+      "normalized_url": "https://www.techinasia.com/bigo-live-streaming-app",
+      "candidate_status": "pending",
+      "id": "src-ab6e30f3bc2ce63d",
+      "source_asset_url": "https://cdn.techinasia.com/wp-content/uploads/2016/08/bigo-gifts-virtual-items-screenshot.jpg",
+      "source_title": "BIGO Live streaming app - Tech in Asia",
+      "source_context": "公开文章中的 Android App 单屏；直播背景、余额、礼物网格、钻石价格和 Send 按钮完整可见。"
+    },
+    {
+      "product_name": "Twitch",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://help.twitch.tv/s/article/watching-twitch-on-android-devices?language=en_US",
+      "normalized_url": "https://help.twitch.tv/s/article/watching-twitch-on-android-devices?language=en_US",
+      "candidate_status": "pending",
+      "id": "src-b7cc29c827606c66",
+      "source_asset_url": "https://assets.help.twitch.tv/article/img/725577-11u.png",
+      "source_title": "Watching Twitch on Android Devices - Twitch Help",
+      "source_context": "Twitch 官方 Android App 帮助页公开原图；Cheermote 选择面板、Bits 余额、聊天和 Get Bits 均可见。"
+    },
+    {
+      "product_name": "Twitch",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://help.twitch.tv/s/article/watching-twitch-on-android-devices?language=en_US",
+      "normalized_url": "https://help.twitch.tv/s/article/watching-twitch-on-android-devices?language=en_US",
+      "candidate_status": "pending",
+      "id": "src-10d6a3e6df060e64",
+      "source_asset_url": "https://assets.help.twitch.tv/article/img/725577-09u.png",
+      "source_title": "Watching Twitch on Android Devices - Twitch Help（Cheermote 拼图候选）",
+      "source_context": "官方公开图为多个状态拼接，逐图检查后按 collage 规则拒绝。"
+    },
+    {
+      "product_name": "Twitch",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://help.twitch.tv/s/article/watching-twitch-on-android-devices?language=en_US",
+      "normalized_url": "https://help.twitch.tv/s/article/watching-twitch-on-android-devices?language=en_US",
+      "candidate_status": "pending",
+      "id": "src-53eacb7e1b3aa183",
+      "source_asset_url": "https://assets.help.twitch.tv/article/img/725577-10u.png",
+      "source_title": "Watching Twitch on Android Devices（直播页候选）",
+      "source_context": "官方公开 Android App Screen 仅为直播/聊天页，未打开礼物或 Cheermote 面板，拒绝。"
+    },
+    {
+      "product_name": "Twitch",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://help.twitch.tv/s/article/watching-twitch-on-android-devices?language=en_US",
+      "normalized_url": "https://help.twitch.tv/s/article/watching-twitch-on-android-devices?language=en_US",
+      "candidate_status": "pending",
+      "id": "src-20ee920f2fba3b68",
+      "source_asset_url": "https://assets.help.twitch.tv/article/img/725577-12u.png",
+      "source_title": "Watching Twitch on Android Devices（Bits 充值候选）",
+      "source_context": "官方公开 Android App Screen 为 Get Bits 充值页，不是直播礼物选择面板，拒绝。"
+    },
+    {
+      "product_name": "Twitch",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://refero.design/apps/search?query=Twitch",
+      "normalized_url": "https://refero.design/apps/search?query=Twitch",
+      "candidate_status": "pending",
+      "id": "src-27460910e99189cd",
+      "source_title": "Twitch App 搜索 - Refero",
+      "source_context": "真实 Chromium 打开 Refero App 搜索；公开结果未返回 Twitch 目标 Screen，完整结果要求登录。",
+      "source_provider": "Refero"
+    },
+    {
+      "product_name": "Twitch",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://www.androidauthority.com/twitch-donations-explained-3172301/",
+      "normalized_url": "https://www.androidauthority.com/twitch-donations-explained-3172301/",
+      "candidate_status": "pending",
+      "id": "src-9fa3cf776b536d10",
+      "source_asset_url": "https://www.androidauthority.com/wp-content/uploads/2022/06/bits-cheering-on-mobile.jpg",
+      "source_title": "How to donate on Twitch on any device - Android Authority",
+      "source_context": "公开教程中的 Twitch 移动端拼图并含红色标注框/箭头，拒绝。"
+    },
+    {
+      "product_name": "抖音直播",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://jingyan.baidu.com/article/ff42efa9d89ffb809f22026d.html",
+      "normalized_url": "https://jingyan.baidu.com/article/ff42efa9d89ffb809f22026d.html",
+      "candidate_status": "pending",
+      "id": "src-b2446a69175275dd",
+      "source_asset_url": "https://exp-picture.cdn.bcebos.com/b87bd38920c5260fd702733dd2de450789018992.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_640%2Climit_1%2Fformat%2Cf_auto%2Fquality%2Cq_80",
+      "source_title": "抖音等级设置公开截图 - 百度经验",
+      "source_context": "公开教程中的抖音礼物面板；有红框与箭头标注，拒绝。"
+    },
+    {
+      "product_name": "抖音直播",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://m.cyzone.cn/article/649976",
+      "normalized_url": "https://m.cyzone.cn/article/649976",
+      "candidate_status": "pending",
+      "id": "src-01245e9bdf67a431",
+      "source_asset_url": "https://oss.cyzone.cn/2021/0908/575206e2bbee3dffb498b883eadf69bf.jpg?x-oss-process=image%2Fresize%2Cw_1280%2Cm_mfit%2Fformat%2Cjpg%2Fquality%2Cq_95",
+      "source_title": "抖音直播礼物界面 - 创业邦",
+      "source_context": "公开文章展示的抖音直播移动端完整单屏；直播画面、礼物网格、抖币价格、分类和赠送入口均可见。"
+    },
+    {
+      "product_name": "抖音直播",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes.com/app/761924085433031155",
+      "normalized_url": "https://uinotes.com/app/761924085433031155",
+      "candidate_status": "pending",
+      "id": "src-7a8140afad72fe59",
+      "source_title": "抖音 App 截图库 - UI Notes",
+      "source_context": "真实 Chromium 打开抖音 App 公开预览；公开前 40 张中未出现目标礼物面板，OCR 筛选会要求登录。",
+      "source_provider": "UI Notes"
+    },
+    {
+      "product_name": "抖音直播",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://www.2i1i.com/39546.html",
+      "normalized_url": "https://www.2i1i.com/39546.html",
+      "candidate_status": "pending",
+      "id": "src-ca8d62f92e9385d2",
+      "source_asset_url": "https://img.2i1i.com/2023/03/2-8.jpg",
+      "source_title": "抖音加入粉丝团步骤 - 零壹电商",
+      "source_context": "公开教程中的礼物/粉丝团面板局部图；有红圈且不含完整直播上下文，拒绝。"
+    },
+    {
+      "product_name": "抖音直播",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://www.jb51.net/zimeiti/884273.html",
+      "normalized_url": "https://www.jb51.net/zimeiti/884273.html",
+      "candidate_status": "pending",
+      "id": "src-91cb0721e42fb3d4",
+      "source_asset_url": "https://img.jbzj.com/file_images/article/202306/2023060915284805.jpg",
+      "source_title": "抖音礼物价格界面 - 脚本之家",
+      "source_context": "公开页面的礼物区域截图；主体被裁切，缺少直播上下文，拒绝为 incomplete。"
+    },
+    {
+      "product_name": "抖音直播",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://www.sangongzi.net/jiaocheng/16162090.html",
+      "normalized_url": "https://www.sangongzi.net/jiaocheng/16162090.html",
+      "candidate_status": "pending",
+      "id": "src-faaba53557810e11",
+      "source_asset_url": "https://img.sangongzi.net/upload/images/022310/0842/ccc2e3e37e981b6e0a363.jpg",
+      "source_title": "抖音展馆礼物截图 - 三公子游戏网",
+      "source_context": "公开教程中的抖音礼物面板；逐图查看有明显红色箭头/标注，拒绝。"
+    },
+    {
+      "product_name": "斗鱼",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes.com/app/499685334452857431",
+      "normalized_url": "https://uinotes.com/app/499685334452857431",
+      "candidate_status": "pending",
+      "id": "src-67b8e124136b8e5a",
+      "source_title": "斗鱼 App 截图库 - UI Notes",
+      "source_context": "真实 Chromium 打开斗鱼 App 公开预览；前 60 张逐图检查，未见目标礼物选择面板，后续需登录。",
+      "source_provider": "UI Notes"
+    },
+    {
+      "product_name": "斗鱼",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://yubam.douyu.com/post/436337061586960247",
+      "normalized_url": "https://yubam.douyu.com/post/436337061586960247",
+      "candidate_status": "pending",
+      "id": "src-f408939003a88552",
+      "source_asset_url": "https://img.douyucdn.cn/data/yuba/default/2020/04/15/202004152217272793423971388.jpg?i=41080dee506de2bd22d61b78e893a22804",
+      "source_title": "斗鱼直播送礼相关公开截图 - 斗鱼鱼吧",
+      "source_context": "公开页面中的斗鱼移动端长图；含直播和礼物区域，但有红色箭头/圆圈标注，拒绝。"
+    },
+    {
+      "product_name": "虎牙",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://jingyan.baidu.com/article/6dad5075d23345e023e36e8f.html",
+      "normalized_url": "https://jingyan.baidu.com/article/6dad5075d23345e023e36e8f.html",
+      "candidate_status": "pending",
+      "id": "src-0bba9fbfd831a263",
+      "source_asset_url": "https://exp-picture.cdn.bcebos.com/c33acc828689a146c3d9024bf4bd4c7c35b334ff.jpg",
+      "source_title": "虎牙直播送礼物步骤 - 百度经验",
+      "source_context": "公开教程中的虎牙移动端步骤图；逐图检查后因红框标注、像素化和水印拒绝。"
+    },
+    {
+      "product_name": "虎牙",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "public_web",
+      "source_url": "https://mydown.yesky.com/sjsoft/725757111_image.html",
+      "normalized_url": "https://mydown.yesky.com/sjsoft/725757111_image.html",
+      "candidate_status": "pending",
+      "id": "src-1942a13c7dd95008",
+      "source_asset_url": "https://image.yesky.com/uploadImages/app/2026/131/04/QE5E42P31V0X.png",
+      "source_title": "虎牙移动端应用截图 - 天极网",
+      "source_context": "公开 App 图库候选；逐图查看均为营销/宣传图或 Mockup，无礼物面板。"
+    },
+    {
+      "product_name": "虎牙",
+      "target_page": "直播产品礼物面板",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes.com/search?wd=%E8%99%8E%E7%89%99&type=app",
+      "normalized_url": "https://uinotes.com/search?wd=%E8%99%8E%E7%89%99&type=app",
+      "candidate_status": "pending",
+      "id": "src-c8de7265ca8b3b7f",
+      "source_title": "虎牙 App 搜索结果 - UI Notes",
+      "source_context": "真实 Chromium 打开 UI Notes App 搜索；公开结果为 0，未绕过登录或将搜索页当作素材。",
+      "source_provider": "UI Notes"
+    }
+  ]
+}

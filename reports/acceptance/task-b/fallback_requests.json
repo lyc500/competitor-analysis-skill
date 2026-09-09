@@ -1,0 +1,62 @@
+[
+  {
+    "product_name": "虎牙",
+    "target_page": "直播产品礼物面板",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "斗鱼",
+    "target_page": "直播产品礼物面板",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "抖音直播",
+    "target_page": "直播产品礼物面板",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Twitch",
+    "target_page": "直播产品礼物面板",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "快手直播",
+    "target_page": "直播产品礼物面板",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "BIGO LIVE",
+    "target_page": "直播产品礼物面板",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  }
+]

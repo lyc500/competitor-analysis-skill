@@ -1,0 +1,72 @@
+{
+  "classification_status": "ready",
+  "classification_dimension": "礼物面板的组织与价值表达方式",
+  "classification_reason": "Agent 逐张查看本次三张 collected Mobile App Screen 后确认：抖音以底部多标签礼物抽屉组织内容，Twitch 将 Cheermote 选择嵌入直播聊天并用 Bits 表达价值，BIGO LIVE 以多分类网格和 Diamonds/Send 组织送礼。该维度来自实际 Screen 观察，不由 product_type、notes、URL 或关键词推断。",
+  "groups": [
+    {
+      "name": "多标签礼物抽屉",
+      "reason": "抖音直播在直播画面下方展开礼物面板，以礼物、粉丝团、等级、背包和充值标签组织不同任务；礼物项同时展示抖币价格和赠送入口。",
+      "material_ids": [
+        "mat-cap-public-douyin-cyzone"
+      ],
+      "asset_ids": [
+        "mat-cap-public-douyin-cyzone"
+      ]
+    },
+    {
+      "name": "聊天内 Cheermote 选择",
+      "reason": "Twitch 将 Cheermote 选择面板放在直播聊天输入区旁，展示 Bits 余额、Cheermote 网格和 Get Bits，送礼动作与聊天连续发生。",
+      "material_ids": [
+        "mat-cap-public-twitch-official-cheer"
+      ],
+      "asset_ids": [
+        "mat-cap-public-twitch-official-cheer"
+      ]
+    },
+    {
+      "name": "多分类钻石礼物网格",
+      "reason": "BIGO LIVE 以 Popular、Multi、Activities、VIP 等标签切换礼物，网格直接展示 Diamonds 价格，并在选中后使用 Send 完成操作。",
+      "material_ids": [
+        "mat-cap-public-bigo-techinasia"
+      ],
+      "asset_ids": [
+        "mat-cap-public-bigo-techinasia"
+      ]
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cap-public-douyin-cyzone",
+      "labels": {
+        "产品": "抖音直播",
+        "平台": "Android",
+        "面板入口": "直播画面底部礼物入口",
+        "组织方式": "礼物/粉丝团/等级/背包/充值多标签",
+        "价值单位": "抖币",
+        "动作": "选择礼物后赠送"
+      }
+    },
+    {
+      "material_id": "mat-cap-public-twitch-official-cheer",
+      "labels": {
+        "产品": "Twitch",
+        "平台": "Android",
+        "面板入口": "聊天输入框右侧 Bits 图标",
+        "组织方式": "Cheermote 网格",
+        "价值单位": "Bits",
+        "动作": "选择 Cheermote 并 Cheer"
+      }
+    },
+    {
+      "material_id": "mat-cap-public-bigo-techinasia",
+      "labels": {
+        "产品": "BIGO LIVE",
+        "平台": "Android",
+        "面板入口": "直播画面礼物面板",
+        "组织方式": "Popular/Multi/Activities/VIP 多分类网格",
+        "价值单位": "Diamonds",
+        "动作": "选择礼物后 Send"
+      }
+    }
+  ]
+}

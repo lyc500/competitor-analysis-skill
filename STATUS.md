@@ -1,13 +1,13 @@
 # 项目当前状态
 
-更新时间：2026-09-08
-当前阶段：V0.1 第二轮 Stage 5B（R1 移动端补正后）——独立验收通过 / 已关闭
+更新时间：2026-09-09
+当前阶段：V0.1 第二轮 Stage 5C——准备完成，等待独立复验
 
 Stage 5 当前状态：
 
 - Stage 5A：已关闭。
 - Stage 5B：R1 移动端补正后正式通过并关闭。
-- Stage 5C：尚未执行。
+- Stage 5C：Task B 已完成本地真实来源、语义、机械和报告浏览器验证，准备完成，等待独立复验。
 - V0.1 MVP：尚未完成。
 - iPhone 镜像自动化：尚未实现。
 
@@ -50,7 +50,7 @@ Stage 5 当前状态：
 - 需求解析、图片机械质量筛选、Classification Plan 契约与稳定分组；Python 不根据 `product_type`、`notes` 或关键词推断页面结构。
 - 公开采集器独立边界。
 - JSON/HTML 产物生成和放大交互标记。
-- `python3 -m unittest discover -s tests -v`：88 项通过、0 失败、0 error、0 skip（含阶段 1/2/3A/3B/3C 回归、Stage 4 补正、真实 Chromium、Stage 5A Task Contract、Stage 5B 通用缺陷与 Mobile Surface 回归检查）。
+- `python3 -m unittest discover -s tests -v`：91 项通过、0 失败、0 error、0 skip（含阶段 1/2/3A/3B/3C 回归、Stage 4 补正、真实 Chromium、Stage 5A Task Contract、Stage 5B 通用缺陷与 Mobile Surface 回归检查、Stage 5C Task Contract 回归）。
 
 ### Stage 5B 首次执行的历史结论
 
@@ -127,16 +127,27 @@ Stage 5 当前状态：
 - [x] 本地 HTTP + Chromium 148.0.7778.96 真实加载全部主图并点击起点读书 Screen；dialog 图片成功加载，资源请求失败为 0。
 - [x] GPT 已基于 commit `3186bd0bed112414988782636c4ffe11d751f990` 完成 GitHub、四张原始 Mobile App UI 与报告交互证据的独立视觉复验；Stage 5B-R1 通过，Task A 正式验收通过，Stage 5B 已关闭。
 
+## Stage 5C——真实 Task B 礼物面板验收准备完成，等待独立复验
+
+- [x] 保持用户原始需求与四个指定竞品顺序；虎牙、斗鱼、抖音直播、Twitch 均为 `user_specified/high`，Agent 补充快手直播和 BIGO LIVE；清单只存在于本次 Task Contract 和验收产物。
+- [x] `target_page = 直播产品礼物面板`、`target_surface = mobile_app`，Task 平台仅为 iOS/Android；未引入 Web 平台或固定产品映射。
+- [x] 真实 Chromium 访问 UI Notes / Refero 公开入口；登录、订阅和未公开结果没有被绕过，来源页与原始 App Screen 分开记录。
+- [x] 16 个公开候选逐图检查，3 张通过 semantic + mechanical 双门槛并成为 collected：抖音直播 1、Twitch 1、BIGO LIVE 1；13 张标注、拼图、裁切、充值页、营销图或错误目标候选被拒绝。
+- [x] 两个用户指定产品（抖音直播、Twitch）取得有效礼物面板；虎牙、斗鱼保留真实 `open` fallback；快手直播保留 `open` fallback。
+- [x] Agent 根据三张真实 collected Screen 生成“礼物面板的组织与价值表达方式” Classification Plan；Python 只校验计划，不根据 `product_type`、`notes`、URL 或关键词推断页面结构。
+- [x] Stage 4 报告只引用 3 张 collected Mobile App Screen；本地 HTTP + 真实 Chromium 实际加载全部主图，点击抖音 Screen 后 dialog 原图成功加载；证据位于 `reports/acceptance/task-b/evidence/`。
+- [x] Task B 真实运行记录和来源尝试位于 `reports/acceptance/task-b/RUN_RECORD.md`、`SOURCE_ATTEMPTS.md`；Task A 历史证据未删除或修改。
+
 ## 尚未实现
 
-- Stage 5C Task B 真实端到端验收；完整 V0.1 真实公网 E2E 仍未完成。
+- Stage 5C Task B 的独立验收尚未完成；完整 V0.1 真实公网 E2E 仍未完成。
 - iPhone 镜像自动化。
 - 复杂竞品分析、Dashboard 和轻量设计洞察。
 
 ## 当前最大问题
 
-Stage 5B 已在 R1 移动端补正后通过独立验收并关闭；当前未完成项是 Task B / Stage 5C。未经 Agent Review、Surface 匹配和机械质量共同通过的截图仍不能视为有效移动端竞品素材。
+Stage 5B 已在 R1 移动端补正后通过独立验收并关闭；当前未完成项是 Stage 5C 的独立验收。未经 Agent Review、Surface 匹配和机械质量共同通过的截图仍不能视为有效移动端竞品素材。
 
 ## 下一步建议
 
-Stage 5B 已正式关闭。下一阶段是尚未执行的 Stage 5C，但本轮不进入 Stage 5C；需等待用户另行指示。V0.1 MVP 尚未完成，iPhone 镜像自动化仍未实现。首次 Web 工程 E2E 证据位于 `reports/acceptance/task-a/`，移动端补正及独立验收依据位于 `reports/acceptance/task-a-mobile/`；正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
+Stage 5B 已正式关闭。Stage 5C Task B 已准备完成，等待独立复验；不得据此宣布 Stage 5C 关闭或 V0.1 MVP 完成。V0.1 MVP 尚未完成，iPhone 镜像自动化仍未实现。首次 Web 工程 E2E 证据位于 `reports/acceptance/task-a/`，移动端补正及独立验收依据位于 `reports/acceptance/task-a-mobile/`，Stage 5C 证据位于 `reports/acceptance/task-b/`；正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。

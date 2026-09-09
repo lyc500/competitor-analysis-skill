@@ -1,0 +1,348 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外热门直播产品的礼物面板，重点关注虎牙、斗鱼、抖音直播和 Twitch。",
+    "research_goal": "比较国内外热门直播产品礼物面板的入口、礼物组织、价格表达与赠送交互，为直播送礼体验设计提供真实页面参考。",
+    "target_page": "直播产品礼物面板",
+    "target_surface": "mobile_app",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "product_scope": [
+      "游戏直播",
+      "短视频与综合直播",
+      "社交直播"
+    ],
+    "specified_products": [
+      "虎牙",
+      "斗鱼",
+      "抖音直播",
+      "Twitch"
+    ],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "constraints": [
+      "四个用户指定产品必须优先保留，不得因后续截图获取难度删除",
+      "后续验收仅将真实操作后出现的礼物面板截图计入有效素材",
+      "不得以 fixture 或内置候选替代真实公网采集"
+    ],
+    "assumptions": [
+      "将“国内外”解释为同时覆盖中国市场与全球市场",
+      "Agent 可补充具有不同直播场景的产品，但不能取代用户指定产品"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "mixed",
+    "competitors": [
+      {
+        "product_name": "虎牙",
+        "region": "CN",
+        "product_type": "游戏直播",
+        "platform": "iOS",
+        "target_page": "直播产品礼物面板",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确指定，代表国内游戏直播场景的礼物面板。"
+      },
+      {
+        "product_name": "斗鱼",
+        "region": "CN",
+        "product_type": "游戏直播",
+        "platform": "iOS",
+        "target_page": "直播产品礼物面板",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确指定，用于对照国内游戏直播送礼交互。"
+      },
+      {
+        "product_name": "抖音直播",
+        "region": "CN",
+        "product_type": "短视频与综合直播",
+        "platform": "iOS",
+        "target_page": "直播产品礼物面板",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确指定，覆盖短视频生态中的综合直播送礼场景。"
+      },
+      {
+        "product_name": "Twitch",
+        "region": "Global",
+        "product_type": "游戏与创作者直播",
+        "platform": "iOS",
+        "target_page": "直播产品礼物面板",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确指定，覆盖全球游戏与创作者直播场景。"
+      },
+      {
+        "product_name": "快手直播",
+        "region": "CN",
+        "product_type": "短视频与综合直播",
+        "platform": "iOS",
+        "target_page": "直播产品礼物面板",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "补充国内短视频与直播融合场景，用于比较礼物推荐和赠送路径。"
+      },
+      {
+        "product_name": "BIGO LIVE",
+        "region": "Global",
+        "product_type": "社交直播",
+        "platform": "iOS",
+        "target_page": "直播产品礼物面板",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "补充全球社交直播场景，用于比较虚拟礼物的组织与互动方式。"
+      }
+    ],
+    "request": "帮我搜集一下国内外热门直播产品的礼物面板，重点关注虎牙、斗鱼、抖音直播和 Twitch。"
+  },
+  "materials": [
+    {
+      "id": "mat-cap-public-douyin-cyzone",
+      "product_name": "抖音直播",
+      "page_name": "直播产品礼物面板",
+      "region": "CN",
+      "product_type": "短视频与综合直播",
+      "platform": "Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/19067c66877be6f6.jpg",
+      "source_type": "browser",
+      "source_provider": "创业邦",
+      "source_asset_url": "https://oss.cyzone.cn/2021/0908/575206e2bbee3dffb498b883eadf69bf.jpg?x-oss-process=image%2Fresize%2Cw_1280%2Cm_mfit%2Fformat%2Cjpg%2Fquality%2Cq_95",
+      "source_url": "https://m.cyzone.cn/article/649976",
+      "captured_at": "2026-09-09T03:00:00Z",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "Agent 逐图视觉确认：单张完整移动端直播画面下方打开礼物面板，能看到礼物网格、抖币价格、礼物/粉丝团/等级/背包/充值分区和赠送入口；没有红框、箭头、设备 Mockup 或网页外壳。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-public-douyin-cyzone",
+      "source_candidate_id": "src-01245e9bdf67a431",
+      "requested_url": "https://m.cyzone.cn/article/649976",
+      "final_url": "https://m.cyzone.cn/article/649976",
+      "width": 1080,
+      "height": 1986,
+      "decode_format": "JPEG",
+      "content_sha256": "3101ea480e33ff2b8af2e5b6ce509e57af168b49695b4ebc3065e5c4d6fd3236"
+    },
+    {
+      "id": "mat-cap-public-twitch-official-cheer",
+      "product_name": "Twitch",
+      "page_name": "直播产品礼物面板",
+      "region": "Global",
+      "product_type": "游戏与创作者直播",
+      "platform": "Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/625fa6a43228994f.png",
+      "source_type": "browser",
+      "source_provider": "Twitch Help",
+      "source_asset_url": "https://assets.help.twitch.tv/article/img/725577-11u.png",
+      "source_url": "https://help.twitch.tv/s/article/watching-twitch-on-android-devices?language=en_US",
+      "captured_at": "2026-09-09T03:00:00Z",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "Agent 逐图视觉确认：Twitch Android App 的完整聊天/直播上下文中打开 Cheermote 选择面板，Bits 余额、Cheermote 网格、Choose a Cheermote 和 Get Bits 均可见；这是官方帮助页公开的 App Screen，不是充值页、网页或营销图。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-public-twitch-official-cheer",
+      "source_candidate_id": "src-b7cc29c827606c66",
+      "requested_url": "https://help.twitch.tv/s/article/watching-twitch-on-android-devices?language=en_US",
+      "final_url": "https://help.twitch.tv/s/article/watching-twitch-on-android-devices?language=en_US",
+      "width": 947,
+      "height": 1999,
+      "decode_format": "PNG",
+      "content_sha256": "559386eaf34f4d4898777947e481e5a33db717ee5d16f793983a4020dedb8c62"
+    },
+    {
+      "id": "mat-cap-public-bigo-techinasia",
+      "product_name": "BIGO LIVE",
+      "page_name": "直播产品礼物面板",
+      "region": "Global",
+      "product_type": "社交直播",
+      "platform": "Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/84f37d940e7b9153.jpg",
+      "source_type": "browser",
+      "source_provider": "Tech in Asia",
+      "source_asset_url": "https://cdn.techinasia.com/wp-content/uploads/2016/08/bigo-gifts-virtual-items-screenshot.jpg",
+      "source_url": "https://www.techinasia.com/bigo-live-streaming-app",
+      "captured_at": "2026-09-09T03:00:00Z",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "Agent 逐图视觉确认：BIGO LIVE Android 单屏同时呈现直播主播背景、余额、礼物网格、Flower/Beer/Teddy 等礼物的钻石价格以及 Send 控件；主体是可操作的移动 App UI，非拼图、设备 Mockup 或网页。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-public-bigo-techinasia",
+      "source_candidate_id": "src-ab6e30f3bc2ce63d",
+      "requested_url": "https://www.techinasia.com/bigo-live-streaming-app",
+      "final_url": "https://www.techinasia.com/bigo-live-streaming-app",
+      "width": 534,
+      "height": 950,
+      "decode_format": "JPEG",
+      "content_sha256": "23078ac0a754edf1d7d35e11fd65a4fb960df667da0c0606e26b1ebbbbbbca82"
+    }
+  ],
+  "classification": {
+    "classification_status": "ready",
+    "classification_dimension": "礼物面板的组织与价值表达方式",
+    "classification_reason": "Agent 逐张查看本次三张 collected Mobile App Screen 后确认：抖音以底部多标签礼物抽屉组织内容，Twitch 将 Cheermote 选择嵌入直播聊天并用 Bits 表达价值，BIGO LIVE 以多分类网格和 Diamonds/Send 组织送礼。该维度来自实际 Screen 观察，不由 product_type、notes、URL 或关键词推断。",
+    "groups": [
+      {
+        "name": "多标签礼物抽屉",
+        "reason": "抖音直播在直播画面下方展开礼物面板，以礼物、粉丝团、等级、背包和充值标签组织不同任务；礼物项同时展示抖币价格和赠送入口。",
+        "material_ids": [
+          "mat-cap-public-douyin-cyzone"
+        ],
+        "asset_ids": [
+          "mat-cap-public-douyin-cyzone"
+        ]
+      },
+      {
+        "name": "聊天内 Cheermote 选择",
+        "reason": "Twitch 将 Cheermote 选择面板放在直播聊天输入区旁，展示 Bits 余额、Cheermote 网格和 Get Bits，送礼动作与聊天连续发生。",
+        "material_ids": [
+          "mat-cap-public-twitch-official-cheer"
+        ],
+        "asset_ids": [
+          "mat-cap-public-twitch-official-cheer"
+        ]
+      },
+      {
+        "name": "多分类钻石礼物网格",
+        "reason": "BIGO LIVE 以 Popular、Multi、Activities、VIP 等标签切换礼物，网格直接展示 Diamonds 价格，并在选中后使用 Send 完成操作。",
+        "material_ids": [
+          "mat-cap-public-bigo-techinasia"
+        ],
+        "asset_ids": [
+          "mat-cap-public-bigo-techinasia"
+        ]
+      }
+    ],
+    "material_labels": [
+      {
+        "material_id": "mat-cap-public-douyin-cyzone",
+        "labels": {
+          "产品": "抖音直播",
+          "平台": "Android",
+          "面板入口": "直播画面底部礼物入口",
+          "组织方式": "礼物/粉丝团/等级/背包/充值多标签",
+          "价值单位": "抖币",
+          "动作": "选择礼物后赠送"
+        }
+      },
+      {
+        "material_id": "mat-cap-public-twitch-official-cheer",
+        "labels": {
+          "产品": "Twitch",
+          "平台": "Android",
+          "面板入口": "聊天输入框右侧 Bits 图标",
+          "组织方式": "Cheermote 网格",
+          "价值单位": "Bits",
+          "动作": "选择 Cheermote 并 Cheer"
+        }
+      },
+      {
+        "material_id": "mat-cap-public-bigo-techinasia",
+        "labels": {
+          "产品": "BIGO LIVE",
+          "平台": "Android",
+          "面板入口": "直播画面礼物面板",
+          "组织方式": "Popular/Multi/Activities/VIP 多分类网格",
+          "价值单位": "Diamonds",
+          "动作": "选择礼物后 Send"
+        }
+      }
+    ]
+  },
+  "fallback_requests": [
+    {
+      "product_name": "虎牙",
+      "target_page": "直播产品礼物面板",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "斗鱼",
+      "target_page": "直播产品礼物面板",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "抖音直播",
+      "target_page": "直播产品礼物面板",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Twitch",
+      "target_page": "直播产品礼物面板",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "快手直播",
+      "target_page": "直播产品礼物面板",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "BIGO LIVE",
+      "target_page": "直播产品礼物面板",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    }
+  ],
+  "excluded_summary": {
+    "rejected": 13,
+    "pending": 0,
+    "unavailable": 0
+  }
+}
