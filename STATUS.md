@@ -1,14 +1,14 @@
 # 项目当前状态
 
 更新时间：2026-09-09
-当前阶段：V0.1 第二轮 Stage 5C——准备完成，等待独立复验
+当前阶段：V0.1 第二轮 Stage 5C——GPT 独立视觉验收通过 / 已关闭
 
 Stage 5 当前状态：
 
 - Stage 5A：已关闭。
 - Stage 5B：R1 移动端补正后正式通过并关闭。
-- Stage 5C：Task B 已完成本地真实来源、语义、机械和报告浏览器验证，准备完成，等待独立复验。
-- V0.1 MVP：尚未完成。
+- Stage 5C：GPT 独立视觉验收通过，已关闭。
+- V0.1 MVP：尚未完成，等待最终总体验收。
 - iPhone 镜像自动化：尚未实现。
 
 ## 阶段 1 本轮已完成
@@ -127,7 +127,7 @@ Stage 5 当前状态：
 - [x] 本地 HTTP + Chromium 148.0.7778.96 真实加载全部主图并点击起点读书 Screen；dialog 图片成功加载，资源请求失败为 0。
 - [x] GPT 已基于 commit `3186bd0bed112414988782636c4ffe11d751f990` 完成 GitHub、四张原始 Mobile App UI 与报告交互证据的独立视觉复验；Stage 5B-R1 通过，Task A 正式验收通过，Stage 5B 已关闭。
 
-## Stage 5C——真实 Task B 礼物面板验收准备完成，等待独立复验
+## Stage 5C——GPT 独立视觉验收通过 / 已关闭
 
 - [x] 保持用户原始需求与四个指定竞品顺序；虎牙、斗鱼、抖音直播、Twitch 均为 `user_specified/high`，Agent 补充快手直播和 BIGO LIVE；清单只存在于本次 Task Contract 和验收产物。
 - [x] `target_page = 直播产品礼物面板`、`target_surface = mobile_app`，Task 平台仅为 iOS/Android；未引入 Web 平台或固定产品映射。
@@ -138,16 +138,22 @@ Stage 5 当前状态：
 - [x] Stage 4 报告只引用 3 张 collected Mobile App Screen；本地 HTTP + 真实 Chromium 实际加载全部主图，点击抖音 Screen 后 dialog 原图成功加载；证据位于 `reports/acceptance/task-b/evidence/`。
 - [x] Task B 真实运行记录和来源尝试位于 `reports/acceptance/task-b/RUN_RECORD.md`、`SOURCE_ATTEMPTS.md`；Task A 历史证据未删除或修改。
 
+独立视觉复验基于 commit `108c0d481823959fe5ed0fecaffa7b32510c5017` 完成：抖音直播、Twitch、BIGO LIVE 三张 accepted 原图，以及虎牙、斗鱼两张 rejected 原图均已实际查看；报告主图加载和 dialog 放大通过。虎牙、斗鱼因像素化、教程标注和水印维持 `open` fallback，结论合理。Stage 5C Task B 正式验收通过并关闭。
+
+## 待优化项
+
+- HTML 报告对竖屏 Mobile App Screen 的图墙展示利用率偏低，图片区存在较大空白；后续需优化卡片图片布局与浏览尺寸。
+
 ## 尚未实现
 
-- Stage 5C Task B 的独立验收尚未完成；完整 V0.1 真实公网 E2E 仍未完成。
+- V0.1 MVP 最终总体验收尚未完成；完整 V0.1 真实公网 E2E 仍未完成。
 - iPhone 镜像自动化。
 - 复杂竞品分析、Dashboard 和轻量设计洞察。
 
 ## 当前最大问题
 
-Stage 5B 已在 R1 移动端补正后通过独立验收并关闭；当前未完成项是 Stage 5C 的独立验收。未经 Agent Review、Surface 匹配和机械质量共同通过的截图仍不能视为有效移动端竞品素材。
+Stage 5A、Stage 5B-R1 和 Stage 5C 均已完成独立验收；当前未完成项是 V0.1 MVP 最终总体验收。竖屏 Mobile App Screen 图墙利用率偏低属于非阻塞报告体验优化项。未经 Agent Review、Surface 匹配和机械质量共同通过的截图仍不能视为有效移动端竞品素材。
 
 ## 下一步建议
 
-Stage 5B 已正式关闭。Stage 5C Task B 已准备完成，等待独立复验；不得据此宣布 Stage 5C 关闭或 V0.1 MVP 完成。V0.1 MVP 尚未完成，iPhone 镜像自动化仍未实现。首次 Web 工程 E2E 证据位于 `reports/acceptance/task-a/`，移动端补正及独立验收依据位于 `reports/acceptance/task-a-mobile/`，Stage 5C 证据位于 `reports/acceptance/task-b/`；正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
+Stage 5A、Stage 5B-R1、Stage 5C 均已关闭；下一步等待 V0.1 MVP 最终总体验收，不提前写入 MVP passed。竖屏 Mobile App Screen 图墙布局列入后续优化，iPhone 镜像自动化仍未实现。首次 Web 工程 E2E 证据位于 `reports/acceptance/task-a/`，移动端补正及独立验收依据位于 `reports/acceptance/task-a-mobile/`，Stage 5C 证据位于 `reports/acceptance/task-b/`；正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
