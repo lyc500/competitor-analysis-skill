@@ -1,15 +1,22 @@
 # 项目当前状态
 
 更新时间：2026-09-09
-当前阶段：V0.1 第二轮 Stage 5C——GPT 独立视觉验收通过 / 已关闭
+当前阶段：V0.1 MVP——最终独立验收通过 / 已完成
 
-Stage 5 当前状态：
+阶段状态总览：
 
-- Stage 5A：已关闭。
-- Stage 5B：R1 移动端补正后正式通过并关闭。
-- Stage 5C：GPT 独立视觉验收通过，已关闭。
-- V0.1 MVP：尚未完成，等待最终总体验收。
-- iPhone 镜像自动化：尚未实现。
+- Stage 1：关闭。
+- Stage 2：关闭。
+- Stage 3A：关闭。
+- Stage 3B：关闭。
+- Stage 3C：关闭。
+- Stage 4：关闭并通过独立验收。
+- Stage 5A：独立验收通过 / 已关闭。
+- Stage 5B：R1 移动端补正后独立验收通过 / 已关闭。
+- Stage 5C：独立验收通过 / 已关闭。
+- Cold-start：GPT 最终独立验收通过。
+- 报告竖屏截图布局优化：GPT 独立视觉验收通过。
+- V0.1 MVP：最终验收通过 / 已完成。
 
 ## 阶段 1 本轮已完成
 
@@ -50,7 +57,7 @@ Stage 5 当前状态：
 - 需求解析、图片机械质量筛选、Classification Plan 契约与稳定分组；Python 不根据 `product_type`、`notes` 或关键词推断页面结构。
 - 公开采集器独立边界。
 - JSON/HTML 产物生成和放大交互标记。
-- `python3 -m unittest discover -s tests -v`：91 项通过、0 失败、0 error、0 skip（含阶段 1/2/3A/3B/3C 回归、Stage 4 补正、真实 Chromium、Stage 5A Task Contract、Stage 5B 通用缺陷与 Mobile Surface 回归检查、Stage 5C Task Contract 回归）。
+- `python3 -m unittest discover -s tests -v`：93 项通过、0 失败、0 error、0 skip（含阶段 1/2/3A/3B/3C 回归、Stage 4 补正、真实 Chromium、Stage 5A Task Contract、Stage 5B 通用缺陷与 Mobile Surface 回归检查、Stage 5C Task Contract 回归、Cold-start 报告布局回归）。
 
 ### Stage 5B 首次执行的历史结论
 
@@ -140,20 +147,28 @@ Stage 5 当前状态：
 
 独立视觉复验基于 commit `108c0d481823959fe5ed0fecaffa7b32510c5017` 完成：抖音直播、Twitch、BIGO LIVE 三张 accepted 原图，以及虎牙、斗鱼两张 rejected 原图均已实际查看；报告主图加载和 dialog 放大通过。虎牙、斗鱼因像素化、教程标注和水印维持 `open` fallback，结论合理。Stage 5C Task B 正式验收通过并关闭。
 
-## 待优化项
+## Cold-start 最终独立验收
 
-- HTML 报告对竖屏 Mobile App Screen 的图墙展示利用率偏低，图片区存在较大空白；后续需优化卡片图片布局与浏览尺寸。
+- [x] 一句自然语言需求驱动 Agent 完成目标页面识别、默认 Mobile App Surface 判断、竞品规划、来源发现、App Screen 获取、Semantic Review、Mechanical Quality、fallback、动态分类、HTML 报告和浏览器交互。
+- [x] Cold-start 真实产物位于 `reports/acceptance/mvp-cold-start/`；小红书、Instagram、Medium 为有效 Mobile App UI，错误页面正确 rejected，知乎保留 open fallback。
+- [x] GPT 已完成 Cold-start 的功能与视觉独立验收；未发现 Skill specification gap 或 implementation blocker。
 
-## 尚未实现
+## 报告竖屏截图布局优化
 
-- V0.1 MVP 最终总体验收尚未完成；完整 V0.1 真实公网 E2E 仍未完成。
-- iPhone 镜像自动化。
-- 复杂竞品分析、Dashboard 和轻量设计洞察。
+- [x] 通过约束卡片轨道、取消固定图片高度并保留原始比例，解决单卡大面积留白和竖屏截图过小问题。
+- [x] GPT 已完成 Before / After 独立视觉验收；报告可直接浏览，多卡可并排，窄屏正常响应，Lightbox 保持可用。
 
-## 当前最大问题
+## V0.1 后续优化候选
 
-Stage 5A、Stage 5B-R1 和 Stage 5C 均已完成独立验收；当前未完成项是 V0.1 MVP 最终总体验收。竖屏 Mobile App Screen 图墙利用率偏低属于非阻塞报告体验优化项。未经 Agent Review、Surface 匹配和机械质量共同通过的截图仍不能视为有效移动端竞品素材。
+以下项目属于 V0.1 完成后的非阻塞优化，不影响当前 MVP 结论：
 
-## 下一步建议
+1. 竞品规划代表性继续提升：避免为了公开素材可得性降低竞品价值，提升头部竞品与代表性竞品选择质量。
+2. 更多 UI Database / 公开来源适配：提高封闭产品公开 App Screen 的获取成功率。
+3. `user_upload` / `device_capture` 流程继续完善。
+4. iPhone 镜像自动化尚未实现。
+5. 后续可增加更轻量、更高价值的设计洞察能力。
+6. HTML 报告仍可继续优化视觉细节；“竖屏截图过小、单卡大面积留白”这一阻塞问题已经解决，不再作为当前缺陷。
 
-Stage 5A、Stage 5B-R1、Stage 5C 均已关闭；下一步等待 V0.1 MVP 最终总体验收，不提前写入 MVP passed。竖屏 Mobile App Screen 图墙布局列入后续优化，iPhone 镜像自动化仍未实现。首次 Web 工程 E2E 证据位于 `reports/acceptance/task-a/`，移动端补正及独立验收依据位于 `reports/acceptance/task-a-mobile/`，Stage 5C 证据位于 `reports/acceptance/task-b/`；正式入口为 `--task-file`，自然语言 CLI 仅为 legacy/demo。
+## 当前结论
+
+V0.1 MVP 已完成最终独立验收。Stage 1、Stage 2、Stage 3A、Stage 3B、Stage 3C、Stage 4、Stage 5A、Stage 5B-R1、Stage 5C 和 Cold-start 均已完成相应验收并关闭；报告竖屏截图布局问题已关闭。首次 Desktop Web 工程 E2E、移动端补正、Stage 5C 和 Cold-start 的完整验收历史及 rejected / fallback 证据均保留在 `reports/acceptance/` 下。
