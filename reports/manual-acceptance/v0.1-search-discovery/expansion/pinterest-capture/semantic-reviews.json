@@ -1,0 +1,16 @@
+{
+  "reviews": [
+    {
+      "target_id": "clean-cap-src-37fb3f45051da588",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面显示 Pinterest 移动端搜索结果页，搜索框中有 jeans，下面有 Baggy/New/Wide leg 引导词和双列视觉结果瀑布流；产品、移动端表面、搜索后状态和目标页面均匹配。",
+      "review_source": "agent_visual_review"
+    }
+  ]
+}

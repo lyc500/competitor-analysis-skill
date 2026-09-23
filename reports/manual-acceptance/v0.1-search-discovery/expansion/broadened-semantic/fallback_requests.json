@@ -1,0 +1,132 @@
+[
+  {
+    "product_name": "抖音",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "小红书",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "哔哩哔哩",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "TikTok",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Instagram",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "微博",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Pinterest",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Reddit",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Spotify",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "微信读书",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "得物",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "豆瓣",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "网易云音乐",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  }
+]

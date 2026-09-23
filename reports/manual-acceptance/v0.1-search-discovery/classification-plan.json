@@ -1,0 +1,86 @@
+{
+  "classification_dimension": "搜索发现与结果页的内容组织模式",
+  "classification_reason": "实际 collected 素材显示，地区和产品类型不是最能解释页面差异的维度：抖音与小红书先用热榜/联想帮助用户形成搜索意图，TikTok 与小红书结果页再按内容对象分层，Instagram 则把关系对象推荐作为搜索发现的首屏任务。因此按用户从搜索意图到结果对象的组织方式分组。",
+  "groups": [
+    {
+      "name": "热榜与联想先行",
+      "reason": "搜索输入前后优先提供高热度榜单或联想词，帮助用户从模糊兴趣进入可点击的搜索意图。",
+      "material_ids": [
+        "mat-cropped-recovered-src-7f378e0cf84d27c8",
+        "mat-cropped-recovered-src-2513c5f9c6540cb2"
+      ]
+    },
+    {
+      "name": "内容类型与结果分层",
+      "reason": "用户输入明确关键词后，页面通过 Users/Videos/Sounds/Hashtags 或全部/用户/商品等类型切换，降低跨对象结果的理解成本。",
+      "material_ids": [
+        "mat-cropped-recovered-src-f558e0278767c8e4",
+        "mat-cap-src-0e4c3d07bf881d2f",
+        "mat-cap-src-bda8ca74bb6d68b9"
+      ]
+    },
+    {
+      "name": "关系对象先行",
+      "reason": "搜索发现首屏优先展示推荐用户、关注关系和可直接 Follow 的对象，把发现任务转成关系建立。",
+      "material_ids": [
+        "mat-cap-src-550e2a073c0adc8e"
+      ]
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cropped-recovered-src-7f378e0cf84d27c8",
+      "labels": {
+        "region": "CN",
+        "page_role": "搜索发现",
+        "content_model": "热榜 + 猜你想搜",
+        "result_object": "榜单/主播"
+      }
+    },
+    {
+      "material_id": "mat-cropped-recovered-src-2513c5f9c6540cb2",
+      "labels": {
+        "region": "CN",
+        "page_role": "搜索发现",
+        "content_model": "联想词列表",
+        "result_object": "笔记/话题意图"
+      }
+    },
+    {
+      "material_id": "mat-cropped-recovered-src-f558e0278767c8e4",
+      "labels": {
+        "region": "CN",
+        "page_role": "搜索结果",
+        "content_model": "类型 Tab + 瀑布流",
+        "result_object": "商品/内容"
+      }
+    },
+    {
+      "material_id": "mat-cap-src-0e4c3d07bf881d2f",
+      "labels": {
+        "region": "Global",
+        "page_role": "搜索结果",
+        "content_model": "Users/Videos/Sounds/Hashtags",
+        "result_object": "用户"
+      }
+    },
+    {
+      "material_id": "mat-cap-src-bda8ca74bb6d68b9",
+      "labels": {
+        "region": "Global",
+        "page_role": "搜索结果",
+        "content_model": "类型 Tab + 加载状态",
+        "result_object": "声音"
+      }
+    },
+    {
+      "material_id": "mat-cap-src-550e2a073c0adc8e",
+      "labels": {
+        "region": "Global",
+        "page_role": "搜索发现",
+        "content_model": "Suggested for you",
+        "result_object": "推荐用户"
+      }
+    }
+  ]
+}

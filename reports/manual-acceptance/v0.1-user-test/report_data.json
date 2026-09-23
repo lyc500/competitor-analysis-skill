@@ -1,0 +1,354 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外热门内容社区产品的发布页 / 发帖页。",
+    "research_goal": "比较国内外热门内容社区在移动端发布/发帖流程中的内容类型选择、编辑组织、发布前设置与提交动作。",
+    "target_page": "移动端发布页 / 发帖页",
+    "target_surface": "mobile_app",
+    "regions": [
+      "国内",
+      "海外"
+    ],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "用户未指定 Desktop/Web，按项目 SKILL 默认以移动端 App UI 为目标，平台覆盖 iOS/Android。",
+      "“发布页 / 发帖页”覆盖选择内容类型、编辑内容、设置话题/位置/可见性以及最终发布前的移动端界面。",
+      "竞品由 Agent 规划，优先覆盖图文、视频、问答和讨论型内容社区。"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "小红书",
+        "region": "国内",
+        "product_type": "生活方式内容社区",
+        "platform": "iOS / Android",
+        "target_page": "移动端发布页 / 发帖页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "代表以图片/短视频、标题、话题和地点共同组织内容发布的生活方式社区。"
+      },
+      {
+        "product_name": "哔哩哔哩",
+        "region": "国内",
+        "product_type": "视频内容社区",
+        "platform": "iOS / Android",
+        "target_page": "移动端发布页 / 发帖页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "代表视频投稿与动态发布并存、内容类型和创作工具较丰富的视频社区。"
+      },
+      {
+        "product_name": "知乎",
+        "region": "国内",
+        "product_type": "问答知识社区",
+        "platform": "iOS / Android",
+        "target_page": "移动端发布页 / 发帖页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "代表回答、提问、文章和想法等多种知识内容入口并存的问答社区。"
+      },
+      {
+        "product_name": "Instagram",
+        "region": "海外",
+        "product_type": "视觉内容社交社区",
+        "platform": "iOS / Android",
+        "target_page": "移动端发布页 / 发帖页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "代表以图片/视频、caption、标签、地点、音乐与跨账号分享组成的视觉内容发布流程。"
+      },
+      {
+        "product_name": "Reddit",
+        "region": "海外",
+        "product_type": "主题讨论社区",
+        "platform": "iOS / Android",
+        "target_page": "移动端发布页 / 发帖页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "代表以社区选择、标题和多种帖子类型组织讨论内容发布的社区。"
+      }
+    ],
+    "request": "帮我搜集一下国内外热门内容社区产品的发布页 / 发帖页。"
+  },
+  "materials": [
+    {
+      "id": "mat-cap-src-108e735edeb60eb3",
+      "product_name": "Instagram",
+      "page_name": "移动端发布页 / 发帖页",
+      "region": "海外",
+      "product_type": "视觉内容社交社区",
+      "platform": "iOS / Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/404bbb1fc82b8dce.png",
+      "source_type": "browser",
+      "source_provider": "Lendio",
+      "source_asset_url": "",
+      "source_url": "https://cdn.prod.website-files.com/67511c13978b4d3b8a2f0c86/69ce9b9e33b7e853e29032f7_20260402T0438-a6fa8894-9c53-41cc-bafc-444a96ec565a.webp",
+      "captured_at": "2026-09-09T05:51:26.668077+00:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "画面清晰展示 Instagram 移动端 New post 页面：包含图片预览、caption、Tag people、Tag products、Add location、Add music 与 Share；是完整单屏真实 App UI，无网页装饰或教程标注。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-src-108e735edeb60eb3",
+      "source_candidate_id": "src-108e735edeb60eb3",
+      "requested_url": "https://cdn.prod.website-files.com/67511c13978b4d3b8a2f0c86/69ce9b9e33b7e853e29032f7_20260402T0438-a6fa8894-9c53-41cc-bafc-444a96ec565a.webp",
+      "final_url": "https://cdn.prod.website-files.com/67511c13978b4d3b8a2f0c86/69ce9b9e33b7e853e29032f7_20260402T0438-a6fa8894-9c53-41cc-bafc-444a96ec565a.webp",
+      "width": 1440,
+      "height": 1200,
+      "decode_format": "PNG",
+      "content_sha256": "83d8996954c15f81958d7b1eff3b6352de7e2919a8406a1fe006cc879a1b8d62"
+    },
+    {
+      "id": "mat-cap-src-7d17a049c575c0e0",
+      "product_name": "Reddit",
+      "page_name": "移动端发布页 / 发帖页",
+      "region": "海外",
+      "product_type": "主题讨论社区",
+      "platform": "iOS / Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/fa9fad2d92813181.png",
+      "source_type": "browser",
+      "source_provider": "Filmora",
+      "source_asset_url": "",
+      "source_url": "https://images.wondershare.com/filmora/article-images/2023/01/reddit-post-title.PNG",
+      "captured_at": "2026-09-09T05:51:29.431726+00:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "画面展示 Reddit 移动端创建帖子页面：包含 Add a title 与 What Do You Want To Post? 下的 Text、Link、Image、Video、Poll、Predictions、Talk、Live Chat 类型选择；为完整单屏真实 App UI。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-src-7d17a049c575c0e0",
+      "source_candidate_id": "src-7d17a049c575c0e0",
+      "requested_url": "https://images.wondershare.com/filmora/article-images/2023/01/reddit-post-title.PNG",
+      "final_url": "https://images.wondershare.com/filmora/article-images/2023/01/reddit-post-title.PNG",
+      "width": 1440,
+      "height": 1200,
+      "decode_format": "PNG",
+      "content_sha256": "3fb97444292ced17cafc46e5ceb1f274715bc216286e6eb238a9b6742601a11c"
+    },
+    {
+      "id": "mat-cap-src-e24628db4dd2fa0a",
+      "product_name": "哔哩哔哩",
+      "page_name": "移动端发布页 / 发帖页",
+      "region": "国内",
+      "product_type": "视频内容社区",
+      "platform": "iOS / Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/4469db5bbde30d18.png",
+      "source_type": "browser",
+      "source_provider": "东快软件站",
+      "source_asset_url": "",
+      "source_url": "https://dimg.dnkb.com.cn/dnkbcn/imgfile/20260327/27155455rukb.jpeg",
+      "captured_at": "2026-09-09T05:51:38.056292+00:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "画面展示哔哩哔哩移动端发布视频页面：包含封面、标题、分区和标签、简介、更多设置、动态、社区公约确认、存草稿和发布；为完整单屏真实 App UI。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-src-e24628db4dd2fa0a",
+      "source_candidate_id": "src-e24628db4dd2fa0a",
+      "requested_url": "https://dimg.dnkb.com.cn/dnkbcn/imgfile/20260327/27155455rukb.jpeg",
+      "final_url": "https://dimg.dnkb.com.cn/dnkbcn/imgfile/20260327/27155455rukb.jpeg",
+      "width": 1440,
+      "height": 1200,
+      "decode_format": "PNG",
+      "content_sha256": "22863fd67dea4ad630b5e3f3bf66f498077cd3c2ebca695bf39e0f731745de9f"
+    },
+    {
+      "id": "mat-cap-src-1632ef8f1413520c",
+      "product_name": "小红书",
+      "page_name": "移动端发布页 / 发帖页",
+      "region": "国内",
+      "product_type": "生活方式内容社区",
+      "platform": "iOS / Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/42db46b1c9d9bd72.png",
+      "source_type": "browser",
+      "source_provider": "人人都是产品经理",
+      "source_asset_url": "",
+      "source_url": "https://image.yunyingpai.com/wp/2024/04/ghaCKxplggdb0tTTgeP1.png",
+      "captured_at": "2026-09-09T05:51:42.406816+00:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "画面展示小红书移动端发布笔记页面：包含多图预览、标题与正文、话题/用户/投票、地点、公开可见、高级选项、保存草稿和发布笔记；为完整单屏真实 App UI。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-src-1632ef8f1413520c",
+      "source_candidate_id": "src-1632ef8f1413520c",
+      "requested_url": "https://image.yunyingpai.com/wp/2024/04/ghaCKxplggdb0tTTgeP1.png",
+      "final_url": "https://image.yunyingpai.com/wp/2024/04/ghaCKxplggdb0tTTgeP1.png",
+      "width": 1440,
+      "height": 1200,
+      "decode_format": "PNG",
+      "content_sha256": "c3ebc2305236b1c6b21b3811cb171c654e50fab88310847ed582e13c3715f595"
+    }
+  ],
+  "classification": {
+    "classification_status": "ready",
+    "classification_dimension": "发布页的信息组织与内容模型",
+    "classification_reason": "本次有效素材的主要差异不在地区，而在发布动作如何组织内容：小红书和 Instagram 以已选媒体为起点并通过 caption/标签/地点等元数据完成发布；Reddit 先让用户选择帖子类型；哔哩哔哩则围绕视频封面、标题、分区标签和投稿设置构成结构化投稿表单。因此按发布页的内容模型与编辑组织方式分组最能支持横向比较。",
+    "groups": [
+      {
+        "name": "媒体先行：图文与社交元数据并列编辑",
+        "reason": "页面先承接图片或多图内容，再把 caption、人物/商品标签、话题、地点、音乐、可见性等作为连续的发布前设置。",
+        "material_ids": [
+          "mat-cap-src-1632ef8f1413520c",
+          "mat-cap-src-108e735edeb60eb3"
+        ],
+        "asset_ids": [
+          "mat-cap-src-1632ef8f1413520c",
+          "mat-cap-src-108e735edeb60eb3"
+        ]
+      },
+      {
+        "name": "类型先行：先选帖子形态再进入编辑",
+        "reason": "页面把 Text、Link、Image、Video、Poll、Predictions、Talk、Live Chat 等不同帖子形态放在同一选择面板中，先降低内容类型决策成本。",
+        "material_ids": [
+          "mat-cap-src-7d17a049c575c0e0"
+        ],
+        "asset_ids": [
+          "mat-cap-src-7d17a049c575c0e0"
+        ]
+      },
+      {
+        "name": "投稿表单：围绕视频资产完成结构化提交",
+        "reason": "页面围绕视频封面、标题、分区标签、简介、更多设置、动态和社区规则确认形成完整的投稿表单，并在底部集中放置存草稿与发布。",
+        "material_ids": [
+          "mat-cap-src-e24628db4dd2fa0a"
+        ],
+        "asset_ids": [
+          "mat-cap-src-e24628db4dd2fa0a"
+        ]
+      }
+    ],
+    "material_labels": [
+      {
+        "material_id": "mat-cap-src-1632ef8f1413520c",
+        "labels": {
+          "region": "国内",
+          "content_model": "多图笔记",
+          "editorial_focus": "标题/正文与话题",
+          "pre_publish_controls": "地点、可见性、高级选项"
+        }
+      },
+      {
+        "material_id": "mat-cap-src-108e735edeb60eb3",
+        "labels": {
+          "region": "海外",
+          "content_model": "图片帖",
+          "editorial_focus": "caption与关联信息",
+          "pre_publish_controls": "人物/商品、地点、音乐、募款"
+        }
+      },
+      {
+        "material_id": "mat-cap-src-7d17a049c575c0e0",
+        "labels": {
+          "region": "海外",
+          "content_model": "多类型帖子",
+          "editorial_focus": "帖子类型选择",
+          "pre_publish_controls": "社区语境下的类型入口"
+        }
+      },
+      {
+        "material_id": "mat-cap-src-e24628db4dd2fa0a",
+        "labels": {
+          "region": "国内",
+          "content_model": "视频投稿",
+          "editorial_focus": "封面/标题/分区标签",
+          "pre_publish_controls": "简介、更多设置、动态、规则确认"
+        }
+      }
+    ]
+  },
+  "fallback_requests": [
+    {
+      "product_name": "小红书",
+      "target_page": "移动端发布页 / 发帖页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "target_page": "移动端发布页 / 发帖页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "知乎",
+      "target_page": "移动端发布页 / 发帖页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Instagram",
+      "target_page": "移动端发布页 / 发帖页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Reddit",
+      "target_page": "移动端发布页 / 发帖页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    }
+  ],
+  "excluded_summary": {
+    "rejected": 4,
+    "pending": 0,
+    "unavailable": 0
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "raw_request": "帮我搜集一下国内外热门内容社区产品的发布页 / 发帖页。",
+  "research_goal": "比较国内外热门内容社区在移动端发布/发帖流程中的内容类型选择、编辑组织、发布前设置与提交动作。",
+  "target_page": "移动端发布页 / 发帖页",
+  "target_surface": "mobile_app",
+  "regions": ["国内", "海外"],
+  "platforms": ["iOS", "Android"],
+  "specified_products": [],
+  "assumptions": [
+    "用户未指定 Desktop/Web，按项目 SKILL 默认以移动端 App UI 为目标，平台覆盖 iOS/Android。",
+    "“发布页 / 发帖页”覆盖选择内容类型、编辑内容、设置话题/位置/可见性以及最终发布前的移动端界面。",
+    "竞品由 Agent 规划，优先覆盖图文、视频、问答和讨论型内容社区。"
+  ],
+  "needs_clarification": false,
+  "task_status": "ready",
+  "planning_strategy": "agent_only",
+  "competitors": [
+    {
+      "product_name": "小红书",
+      "region": "国内",
+      "product_type": "生活方式内容社区",
+      "platform": "iOS / Android",
+      "target_page": "移动端发布页 / 发帖页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "代表以图片/短视频、标题、话题和地点共同组织内容发布的生活方式社区。"
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "region": "国内",
+      "product_type": "视频内容社区",
+      "platform": "iOS / Android",
+      "target_page": "移动端发布页 / 发帖页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "代表视频投稿与动态发布并存、内容类型和创作工具较丰富的视频社区。"
+    },
+    {
+      "product_name": "知乎",
+      "region": "国内",
+      "product_type": "问答知识社区",
+      "platform": "iOS / Android",
+      "target_page": "移动端发布页 / 发帖页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "代表回答、提问、文章和想法等多种知识内容入口并存的问答社区。"
+    },
+    {
+      "product_name": "Instagram",
+      "region": "海外",
+      "product_type": "视觉内容社交社区",
+      "platform": "iOS / Android",
+      "target_page": "移动端发布页 / 发帖页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "代表以图片/视频、caption、标签、地点、音乐与跨账号分享组成的视觉内容发布流程。"
+    },
+    {
+      "product_name": "Reddit",
+      "region": "海外",
+      "product_type": "主题讨论社区",
+      "platform": "iOS / Android",
+      "target_page": "移动端发布页 / 发帖页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "代表以社区选择、标题和多种帖子类型组织讨论内容发布的社区。"
+    }
+  ]
+}

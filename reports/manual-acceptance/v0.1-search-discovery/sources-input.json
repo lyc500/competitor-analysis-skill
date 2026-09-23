@@ -1,0 +1,92 @@
+[
+  {
+    "product_name": "抖音",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "UI Notes",
+    "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/773329410020957557.webp",
+    "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/773329410020957557.webp",
+    "source_title": "抖音 App 截图 108 - 搜索页面",
+    "source_context": "来源页：https://uinotes.com/pin/773329410020957557；UI Notes 标注为抖音、v21.6、2022 年 7 月、搜索页面。"
+  },
+  {
+    "product_name": "小红书",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "UI Notes",
+    "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/533266064366173055.webp",
+    "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/533266064366173055.webp",
+    "source_title": "小红书 App 截图 101 - 搜索结果",
+    "source_context": "来源页：https://uinotes.com/pin/533266064366173055；UI Notes 标注为小红书、v7.57、2022 年 9 月、搜索结果。"
+  },
+  {
+    "product_name": "小红书",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "UI Notes",
+    "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/457545310283117944.webp",
+    "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/457545310283117944.webp",
+    "source_title": "小红书 App 截图 096 - 搜索页面",
+    "source_context": "来源页：https://uinotes.com/pin/457545310283117944；UI Notes 标注为小红书、v7.57、2022 年 9 月、搜索页面。"
+  },
+  {
+    "product_name": "哔哩哔哩",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "UI Notes",
+    "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/605398946594896278.webp",
+    "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/605398946594896278.webp",
+    "source_title": "哔哩哔哩 App 截图 1352 - UI Notes",
+    "source_context": "来源页：https://uinotes.com/pin/605398946594896278；UI Notes 标注为哔哩哔哩、v7.54、2023 年 11 月，待逐图确认是否为搜索目标页。"
+  },
+  {
+    "product_name": "哔哩哔哩",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "UI Notes",
+    "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/480432443490612293.webp",
+    "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/480432443490612293.webp",
+    "source_title": "哔哩哔哩 App 截图 0133 - UI Notes",
+    "source_context": "来源页：https://uinotes.com/pin/480432443490612293；UI Notes 标注为哔哩哔哩、v7.54、2023 年 11 月，待逐图确认是否为搜索目标页。"
+  },
+  {
+    "product_name": "TikTok",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "Templateshake",
+    "source_url": "https://templateshake.com/wp-content/uploads/2021/06/IMG_2422-1.png",
+    "source_asset_url": "https://templateshake.com/wp-content/uploads/2021/06/IMG_2422-1.png",
+    "source_title": "TikTok Search screen - Templateshake",
+    "source_context": "来源页：https://templateshake.com/product/tiktok/；页面将该图标注为 TikTok Search screen，iPhone，来源页面公开展示 87 个 App Screens。"
+  },
+  {
+    "product_name": "TikTok",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "Templateshake",
+    "source_url": "https://templateshake.com/wp-content/uploads/2021/06/IMG_2424-1.png",
+    "source_asset_url": "https://templateshake.com/wp-content/uploads/2021/06/IMG_2424-1.png",
+    "source_title": "TikTok Search Screen - Templateshake",
+    "source_context": "来源页：https://templateshake.com/product/tiktok/；页面将该图标注为 TikTok Search Screen，iPhone。"
+  },
+  {
+    "product_name": "Instagram",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "Pablooo.club",
+    "source_url": "https://cdn.pablooo.club/file/Pablo-club/screenshots-gpt-4o-mini-512-d462359845874679264930ab4f92a0f61108986039e2acb395c3efd6550.jpg",
+    "source_asset_url": "https://cdn.pablooo.club/file/Pablo-club/screenshots-gpt-4o-mini-512-d462359845874679264930ab4f92a0f61108986039e2acb395c3efd6550.jpg",
+    "source_title": "Instagram - Search interface for AI and recent contacts",
+    "source_context": "来源页：https://pablooo.club/screen/d462359845874679264930ab4f92a0f61108986039e2acb395c3efd6550/Instagram/search/Search%20interface%20for%20AI%20and%20recent%20contacts.；页面标注 Captured on 4/4/2025。"
+  },
+  {
+    "product_name": "Instagram",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "UILand",
+    "source_url": "https://pub-4271c874f759418fbdcd18b0e5cbe024.r2.dev/Instagram/Screenshot_20241108_112348.png",
+    "source_asset_url": "https://pub-4271c874f759418fbdcd18b0e5cbe024.r2.dev/Instagram/Screenshot_20241108_112348.png",
+    "source_title": "Instagram Search flow - UILand",
+    "source_context": "来源页：https://uiland.design/screens/instagram/screens/1cd8f3a4-8a22-4f6b-a71d-2a1ee8fce6c3/flows/search；页面标注为 Instagram Search flow。"
+  }
+]

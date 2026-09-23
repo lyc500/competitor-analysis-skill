@@ -1,0 +1,62 @@
+[
+  {
+    "product_name": "Spotify",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "Gummble",
+    "source_url": "https://storage.gummble.com/cdn-cgi/image/width%3D1920%2Cquality%3D80%2Cformat%3Dwebp%2Cfit%3Dcover/prod/content/app_screens/e46e9459-cb13-4433-afeb-db012dcc07ab.png",
+    "source_asset_url": "https://storage.gummble.com/cdn-cgi/image/width%3D1920%2Cquality%3D80%2Cformat%3Dwebp%2Cfit%3Dcover/prod/content/app_screens/e46e9459-cb13-4433-afeb-db012dcc07ab.png",
+    "source_title": "Spotify Android search entry screen",
+    "source_context": "来源页：https://gummble.com/apps/spotify-android；公开页面 Spotify Android Screens 列表中的真实 App 截图，视觉核验为搜索入口状态，包含 What do you want to listen to? 与搜索类型提示。"
+  },
+  {
+    "product_name": "小红书",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "UI Notes",
+    "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/533266064366173055.webp",
+    "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/533266064366173055.webp",
+    "source_title": "小红书 App 截图 101 - 搜索结果",
+    "source_context": "来源页：https://uinotes.com/pin/533266064366173055；UI Notes 标注为小红书 v7.57、2022 年 9 月，标签为搜索结果和商城；视觉核验为已提交关键词后的商品结果页。"
+  },
+  {
+    "product_name": "微信读书",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "UI Notes",
+    "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/661082249063114942.webp",
+    "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/661082249063114942.webp",
+    "source_title": "微信读书 App 搜索结果页",
+    "source_context": "来源页：https://uinotes.com/pin/661082249063114942；UI Notes 微信读书 v6.3 截图，视觉核验为顶部带查询词《梦华录》原著且正文展示书籍结果卡片。"
+  },
+  {
+    "product_name": "得物",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "UI Notes",
+    "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/048445896527086766.webp",
+    "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/048445896527086766.webp",
+    "source_title": "得物 App 截图 014 - 搜索入口",
+    "source_context": "来源页：https://uinotes.com/pin/048445896527086766；UI Notes 标注为得物 v5.0、2022 年 9 月与搜索入口；视觉核验为商品首页搜索入口状态。"
+  },
+  {
+    "product_name": "网易云音乐",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "UI Notes",
+    "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/709384399485743412.webp",
+    "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/709384399485743412.webp",
+    "source_title": "网易云音乐 App 截图 0044",
+    "source_context": "来源页：https://uinotes.com/pin/709384399485743412；UI Notes 标注为网易云音乐 v8.10、2023 年 10 月；视觉核验后发现这是发现首页带搜索占位，不是明确搜索发现/结果页面，作为 rejected 候选保留。"
+  },
+  {
+    "product_name": "豆瓣",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "source_type": "ui_database",
+    "source_provider": "UI Notes",
+    "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/210499727429601773.webp",
+    "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/210499727429601773.webp",
+    "source_title": "豆瓣 App 截图 010",
+    "source_context": "来源页：https://uinotes.com/pin/210499727429601773；公开截图当前展示登录页，无法验证目标搜索页面，作为 rejected 候选保留。"
+  }
+]

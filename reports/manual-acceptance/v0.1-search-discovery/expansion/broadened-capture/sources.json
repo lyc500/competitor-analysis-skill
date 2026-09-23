@@ -1,0 +1,246 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外热门短视频、社区产品的搜索发现页、搜索结果页；在修正页面状态归类后，扩大到音乐、阅读、电商等搜索产品。",
+    "research_goal": "比较国内外内容、社交、视觉灵感、音乐、阅读与电商产品在移动端搜索发现页、搜索结果页上的入口组织、内容类型分层、筛选切换和结果呈现机制，为搜索体验方向探索提供真实界面参考。",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "用户未指定 Desktop/Web，按产品设计语境以移动端 App UI 为主要目标。",
+      "平台范围限定为 iOS/Android；公开来源中无法确认平台或仅为 Mobile Web 的素材不作为有效 App UI。",
+      "以 2026-09-22 为研究日期；来源未提供版本号时不猜测版本。",
+      "用户明确要求扩大竞品范围，因此在短视频/社区之外补充音乐、阅读和电商产品；每个页面仍必须直接对应搜索发现或搜索结果状态。",
+      "搜索发现组只收录输入前或搜索入口状态；已输入关键词但尚未提交的联想列表单独视为不符合本轮分组要求，不纳入有效素材。"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "target_surface": "mobile_app",
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "competitors": [
+      {
+        "product_name": "抖音",
+        "region": "CN",
+        "product_type": "short_video",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内头部短视频产品，观察热榜与搜索入口在输入前如何承接发现。"
+      },
+      {
+        "product_name": "小红书",
+        "region": "CN",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "生活方式内容社区，观察笔记、商品和用户结果的分层。"
+      },
+      {
+        "product_name": "哔哩哔哩",
+        "region": "CN",
+        "product_type": "video_community",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "视频社区，观察视频内容、分区和社区关系如何进入搜索。"
+      },
+      {
+        "product_name": "TikTok",
+        "region": "Global",
+        "product_type": "short_video",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "全球短视频产品，观察 Users/Videos/Sounds/Hashtags 的类型切换和加载状态。"
+      },
+      {
+        "product_name": "Instagram",
+        "region": "Global",
+        "product_type": "social_content",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "社交内容产品，观察输入前 Suggested for you 与关系发现。"
+      },
+      {
+        "product_name": "微博",
+        "region": "CN",
+        "product_type": "social_content",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "公共内容社区，补充热搜、用户和话题搜索的代表性路径。"
+      },
+      {
+        "product_name": "Pinterest",
+        "region": "Global",
+        "product_type": "visual_inspiration",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "视觉灵感产品，观察关键词结果与瀑布流视觉探索。"
+      },
+      {
+        "product_name": "Reddit",
+        "region": "Global",
+        "product_type": "discussion_community",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "讨论社区，补充帖子、社区和用户搜索的结果组织。"
+      },
+      {
+        "product_name": "Spotify",
+        "region": "Global",
+        "product_type": "music_audio",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "音乐音频产品，补充跨艺术家、歌曲、播客和有声内容的搜索入口。"
+      },
+      {
+        "product_name": "微信读书",
+        "region": "CN",
+        "product_type": "reading_content",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "阅读产品，观察书籍查询与结果卡片如何结合发现与推荐。"
+      },
+      {
+        "product_name": "得物",
+        "region": "CN",
+        "product_type": "commerce",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "潮流电商产品，观察商品搜索入口、品类和视觉货架。"
+      },
+      {
+        "product_name": "豆瓣",
+        "region": "CN",
+        "product_type": "culture_community",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "文化内容社区，补充书影音内容检索的公开可得性验证。"
+      },
+      {
+        "product_name": "网易云音乐",
+        "region": "CN",
+        "product_type": "music_audio",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "low",
+        "reason": "音乐社区候选，用于验证公开素材是否能直接对应搜索页面，而不把发现首页误收为搜索结果。"
+      }
+    ],
+    "request": "帮我搜集一下国内外热门短视频、社区产品的搜索发现页、搜索结果页；在修正页面状态归类后，扩大到音乐、阅读、电商等搜索产品。"
+  },
+  "sources": [
+    {
+      "product_name": "Spotify",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://storage.gummble.com/cdn-cgi/image/width%3D1920%2Cquality%3D80%2Cformat%3Dwebp%2Cfit%3Dcover/prod/content/app_screens/e46e9459-cb13-4433-afeb-db012dcc07ab.png",
+      "normalized_url": "https://storage.gummble.com/cdn-cgi/image/width%3D1920%2Cquality%3D80%2Cformat%3Dwebp%2Cfit%3Dcover/prod/content/app_screens/e46e9459-cb13-4433-afeb-db012dcc07ab.png",
+      "candidate_status": "pending",
+      "id": "src-a1641e46f9d901c6",
+      "source_asset_url": "https://storage.gummble.com/cdn-cgi/image/width%3D1920%2Cquality%3D80%2Cformat%3Dwebp%2Cfit%3Dcover/prod/content/app_screens/e46e9459-cb13-4433-afeb-db012dcc07ab.png",
+      "source_title": "Spotify Android search entry screen",
+      "source_context": "来源页：https://gummble.com/apps/spotify-android；公开页面 Spotify Android Screens 列表中的真实 App 截图，视觉核验为搜索入口状态，包含 What do you want to listen to? 与搜索类型提示。",
+      "source_provider": "Gummble"
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/533266064366173055.webp",
+      "normalized_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/533266064366173055.webp",
+      "candidate_status": "pending",
+      "id": "src-f558e0278767c8e4",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/533266064366173055.webp",
+      "source_title": "小红书 App 截图 101 - 搜索结果",
+      "source_context": "来源页：https://uinotes.com/pin/533266064366173055；UI Notes 标注为小红书 v7.57、2022 年 9 月，标签为搜索结果和商城；视觉核验为已提交关键词后的商品结果页。",
+      "source_provider": "UI Notes"
+    },
+    {
+      "product_name": "得物",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/048445896527086766.webp",
+      "normalized_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/048445896527086766.webp",
+      "candidate_status": "pending",
+      "id": "src-61708b97f508f9af",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/048445896527086766.webp",
+      "source_title": "得物 App 截图 014 - 搜索入口",
+      "source_context": "来源页：https://uinotes.com/pin/048445896527086766；UI Notes 标注为得物 v5.0、2022 年 9 月与搜索入口；视觉核验为商品首页搜索入口状态。",
+      "source_provider": "UI Notes"
+    },
+    {
+      "product_name": "微信读书",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/661082249063114942.webp",
+      "normalized_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/661082249063114942.webp",
+      "candidate_status": "pending",
+      "id": "src-8ed33ddcf1f89af2",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/661082249063114942.webp",
+      "source_title": "微信读书 App 搜索结果页",
+      "source_context": "来源页：https://uinotes.com/pin/661082249063114942；UI Notes 微信读书 v6.3 截图，视觉核验为顶部带查询词《梦华录》原著且正文展示书籍结果卡片。",
+      "source_provider": "UI Notes"
+    },
+    {
+      "product_name": "网易云音乐",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/709384399485743412.webp",
+      "normalized_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/709384399485743412.webp",
+      "candidate_status": "pending",
+      "id": "src-1b6310e8a654c86d",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/709384399485743412.webp",
+      "source_title": "网易云音乐 App 截图 0044",
+      "source_context": "来源页：https://uinotes.com/pin/709384399485743412；UI Notes 标注为网易云音乐 v8.10、2023 年 10 月；视觉核验后发现这是发现首页带搜索占位，不是明确搜索发现/结果页面，作为 rejected 候选保留。",
+      "source_provider": "UI Notes"
+    },
+    {
+      "product_name": "豆瓣",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "target_surface": "mobile_app",
+      "source_type": "ui_database",
+      "source_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/210499727429601773.webp",
+      "normalized_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/210499727429601773.webp",
+      "candidate_status": "pending",
+      "id": "src-f9379e327ae3f1a1",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/210499727429601773.webp",
+      "source_title": "豆瓣 App 截图 010",
+      "source_context": "来源页：https://uinotes.com/pin/210499727429601773；公开截图当前展示登录页，无法验证目标搜索页面，作为 rejected 候选保留。",
+      "source_provider": "UI Notes"
+    }
+  ]
+}

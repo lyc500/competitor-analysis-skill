@@ -1,0 +1,68 @@
+{
+  "classification": {
+    "classification_dimension": "发布页的信息组织与内容模型",
+    "classification_reason": "本次有效素材的主要差异不在地区，而在发布动作如何组织内容：小红书和 Instagram 以已选媒体为起点并通过 caption/标签/地点等元数据完成发布；Reddit 先让用户选择帖子类型；哔哩哔哩则围绕视频封面、标题、分区标签和投稿设置构成结构化投稿表单。因此按发布页的内容模型与编辑组织方式分组最能支持横向比较。",
+    "groups": [
+      {
+        "name": "媒体先行：图文与社交元数据并列编辑",
+        "reason": "页面先承接图片或多图内容，再把 caption、人物/商品标签、话题、地点、音乐、可见性等作为连续的发布前设置。",
+        "material_ids": [
+          "mat-cap-src-1632ef8f1413520c",
+          "mat-cap-src-108e735edeb60eb3"
+        ]
+      },
+      {
+        "name": "类型先行：先选帖子形态再进入编辑",
+        "reason": "页面把 Text、Link、Image、Video、Poll、Predictions、Talk、Live Chat 等不同帖子形态放在同一选择面板中，先降低内容类型决策成本。",
+        "material_ids": [
+          "mat-cap-src-7d17a049c575c0e0"
+        ]
+      },
+      {
+        "name": "投稿表单：围绕视频资产完成结构化提交",
+        "reason": "页面围绕视频封面、标题、分区标签、简介、更多设置、动态和社区规则确认形成完整的投稿表单，并在底部集中放置存草稿与发布。",
+        "material_ids": [
+          "mat-cap-src-e24628db4dd2fa0a"
+        ]
+      }
+    ],
+    "material_labels": [
+      {
+        "material_id": "mat-cap-src-1632ef8f1413520c",
+        "labels": {
+          "region": "国内",
+          "content_model": "多图笔记",
+          "editorial_focus": "标题/正文与话题",
+          "pre_publish_controls": "地点、可见性、高级选项"
+        }
+      },
+      {
+        "material_id": "mat-cap-src-108e735edeb60eb3",
+        "labels": {
+          "region": "海外",
+          "content_model": "图片帖",
+          "editorial_focus": "caption与关联信息",
+          "pre_publish_controls": "人物/商品、地点、音乐、募款"
+        }
+      },
+      {
+        "material_id": "mat-cap-src-7d17a049c575c0e0",
+        "labels": {
+          "region": "海外",
+          "content_model": "多类型帖子",
+          "editorial_focus": "帖子类型选择",
+          "pre_publish_controls": "社区语境下的类型入口"
+        }
+      },
+      {
+        "material_id": "mat-cap-src-e24628db4dd2fa0a",
+        "labels": {
+          "region": "国内",
+          "content_model": "视频投稿",
+          "editorial_focus": "封面/标题/分区标签",
+          "pre_publish_controls": "简介、更多设置、动态、规则确认"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "classification_status": "ready",
+  "classification_dimension": "用户搜索路径阶段",
+  "classification_reason": "按用户是否已提交关键词划分搜索发现与搜索结果。本次只保留输入前搜索入口和已形成内容的搜索结果，不把素材质量不足的 Spotify 页面或 TikTok Sounds 加载态混入有效样本。",
+  "groups": [
+    {
+      "name": "一、搜索发现：输入前页面",
+      "reason": "用户尚未提交明确关键词时的搜索入口或发现内容，保留抖音与 Instagram 的输入前发现状态。",
+      "material_ids": [
+        "mat-cropped-recovered-src-7f378e0cf84d27c8",
+        "mat-clean-cap-src-550e2a073c0adc8e"
+      ],
+      "asset_ids": [
+        "mat-cropped-recovered-src-7f378e0cf84d27c8",
+        "mat-clean-cap-src-550e2a073c0adc8e"
+      ]
+    },
+    {
+      "name": "二、搜索结果页：提交搜索后页面",
+      "reason": "用户已提交关键词并看到实际结果内容的页面，保留小红书商品/内容结果、TikTok 用户结果和 Pinterest 视觉结果；不纳入 TikTok Sounds 加载态。",
+      "material_ids": [
+        "mat-broadened-xhs-search-results",
+        "mat-clean-cap-src-0e4c3d07bf881d2f",
+        "mat-clean-cap-src-37fb3f45051da588"
+      ],
+      "asset_ids": [
+        "mat-broadened-xhs-search-results",
+        "mat-clean-cap-src-0e4c3d07bf881d2f",
+        "mat-clean-cap-src-37fb3f45051da588"
+      ]
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cropped-recovered-src-7f378e0cf84d27c8",
+      "labels": {
+        "region": "CN",
+        "path_stage": "搜索发现",
+        "state": "输入前",
+        "page_role": "搜索发现",
+        "content_model": "热榜 + 猜你想搜",
+        "result_object": "榜单/主播"
+      }
+    },
+    {
+      "material_id": "mat-clean-cap-src-550e2a073c0adc8e",
+      "labels": {
+        "region": "Global",
+        "path_stage": "搜索发现",
+        "state": "输入前",
+        "page_role": "搜索发现",
+        "content_model": "Suggested for you",
+        "result_object": "推荐用户"
+      }
+    },
+    {
+      "material_id": "mat-broadened-xhs-search-results",
+      "labels": {
+        "region": "CN",
+        "path_stage": "搜索结果",
+        "state": "输入后·已加载",
+        "page_role": "搜索结果",
+        "content_model": "类型 Tab + 瀑布流",
+        "result_object": "商品/内容"
+      }
+    },
+    {
+      "material_id": "mat-clean-cap-src-0e4c3d07bf881d2f",
+      "labels": {
+        "region": "Global",
+        "path_stage": "搜索结果",
+        "state": "输入后·已加载",
+        "page_role": "搜索结果",
+        "content_model": "Users/Videos/Sounds/Hashtags",
+        "result_object": "用户"
+      }
+    },
+    {
+      "material_id": "mat-clean-cap-src-37fb3f45051da588",
+      "labels": {
+        "region": "Global",
+        "path_stage": "搜索结果",
+        "state": "输入后·已加载",
+        "page_role": "搜索结果",
+        "content_model": "引导词 + 双列瀑布流",
+        "result_object": "视觉内容/Pin"
+      }
+    }
+  ]
+}

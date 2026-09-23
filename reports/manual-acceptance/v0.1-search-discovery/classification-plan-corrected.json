@@ -1,0 +1,55 @@
+{
+  "classification_dimension": "用户搜索路径阶段 × 结果状态",
+  "classification_reason": "按用户是否已提交关键词划分搜索发现与搜索结果，并在结果组内用 state 标签区分已加载内容和加载中状态。搜索联想列表不等同于输入前页面；商品首页和阅读首页也不因存在搜索框就被视为目标页面。",
+  "groups": [
+    {
+      "name": "一、搜索发现：输入前页面",
+      "reason": "用户尚未提交明确关键词时的搜索入口或发现内容。抖音、Instagram 和 Spotify 展示了与搜索发现直接相关的输入前状态；得物商品首页不在本组。",
+      "material_ids": [
+        "mat-cropped-recovered-src-7f378e0cf84d27c8",
+        "mat-clean-cap-src-550e2a073c0adc8e",
+        "mat-clean-cap-src-a1641e46f9d901c6"
+      ]
+    },
+    {
+      "name": "二、搜索结果页：提交搜索后页面",
+      "reason": "用户已经提交关键词后的结果组织。小红书、TikTok 和 Pinterest 展示了商品/内容、用户、声音加载与视觉内容结果；TikTok 的 Sounds 图明确保留为加载状态，不与已加载的 Users 结果混同。微信读书阅读首页不在本组。",
+      "material_ids": [
+        "mat-broadened-xhs-search-results",
+        "mat-clean-cap-src-0e4c3d07bf881d2f",
+        "mat-clean-cap-src-bda8ca74bb6d68b9",
+        "mat-clean-cap-src-37fb3f45051da588"
+      ]
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cropped-recovered-src-7f378e0cf84d27c8",
+      "labels": {"region":"CN","path_stage":"搜索发现","state":"输入前","page_role":"搜索发现","content_model":"热榜 + 猜你想搜","result_object":"榜单/主播"}
+    },
+    {
+      "material_id": "mat-clean-cap-src-550e2a073c0adc8e",
+      "labels": {"region":"Global","path_stage":"搜索发现","state":"输入前","page_role":"搜索发现","content_model":"Suggested for you","result_object":"推荐用户"}
+    },
+    {
+      "material_id": "mat-clean-cap-src-a1641e46f9d901c6",
+      "labels": {"region":"Global","path_stage":"搜索发现","state":"输入前","page_role":"搜索发现","content_model":"多内容类型搜索入口","result_object":"艺术家/歌曲/播客/有声书"}
+    },
+    {
+      "material_id": "mat-broadened-xhs-search-results",
+      "labels": {"region":"CN","path_stage":"搜索结果","state":"输入后·已加载","page_role":"搜索结果","content_model":"类型 Tab + 瀑布流","result_object":"商品/内容"}
+    },
+    {
+      "material_id": "mat-clean-cap-src-0e4c3d07bf881d2f",
+      "labels": {"region":"Global","path_stage":"搜索结果","state":"输入后·已加载","page_role":"搜索结果","content_model":"Users/Videos/Sounds/Hashtags","result_object":"用户"}
+    },
+    {
+      "material_id": "mat-clean-cap-src-bda8ca74bb6d68b9",
+      "labels": {"region":"Global","path_stage":"搜索结果","state":"输入后·加载中","page_role":"搜索结果","content_model":"类型 Tab + 加载状态","result_object":"声音"}
+    },
+    {
+      "material_id": "mat-clean-cap-src-37fb3f45051da588",
+      "labels": {"region":"Global","path_stage":"搜索结果","state":"输入后·已加载","page_role":"搜索结果","content_model":"引导词 + 双列瀑布流","result_object":"视觉内容/Pin"}
+    }
+  ]
+}

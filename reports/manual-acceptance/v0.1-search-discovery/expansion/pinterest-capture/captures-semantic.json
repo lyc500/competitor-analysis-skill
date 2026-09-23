@@ -1,0 +1,32 @@
+{
+  "captures": [
+    {
+      "id": "clean-cap-src-37fb3f45051da588",
+      "source_candidate_id": "src-37fb3f45051da588",
+      "product_name": "Pinterest",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "target_surface": "mobile_app",
+      "discovered_source_type": "ui_database",
+      "source_provider": "Gummble",
+      "source_asset_url": "https://storage.gummble.com/cdn-cgi/image/width%3D1920%2Cquality%3D75%2Cformat%3Dauto%2Cfit%3Dcover/prod/content/app_screens/2246c079-f316-4e30-b4b9-69b0a06f3da4.png",
+      "requested_url": "https://storage.gummble.com/cdn-cgi/image/width%3D1920%2Cquality%3D75%2Cformat%3Dauto%2Cfit%3Dcover/prod/content/app_screens/2246c079-f316-4e30-b4b9-69b0a06f3da4.png",
+      "final_url": "https://storage.gummble.com/cdn-cgi/image/width%3D1920%2Cquality%3D75%2Cformat%3Dauto%2Cfit%3Dcover/prod/content/app_screens/2246c079-f316-4e30-b4b9-69b0a06f3da4.png",
+      "page_title": "Pinterest search results screen",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "browser_name": "chromium",
+      "browser_version": "148.0.7778.96",
+      "viewport_width": 1440,
+      "viewport_height": 1200,
+      "captured_at": "2026-09-22T10:22:27.760809+00:00",
+      "capture_status": "captured",
+      "screenshot_path": "captures/clean-cap-src-37fb3f45051da588.png",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；仅裁去来源页面黑色浏览器背景，保留完整移动端搜索结果单屏",
+      "width": 541,
+      "height": 1200,
+      "content_sha256": "f4d5e5906f5f4d6f28a165440f6736d6c482de31e6e7cd4875a3c84593560ae7",
+      "failure_reason": ""
+    }
+  ]
+}

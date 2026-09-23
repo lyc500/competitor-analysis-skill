@@ -1,0 +1,52 @@
+{
+  "reviews": [
+    {
+      "target_id": "clean-cap-src-a1641e46f9d901c6",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面显示 Spotify Android 搜索入口：顶部为 What do you want to listen to? 搜索栏，中部明确提示可搜索 artists、songs、podcasts 或 audiobooks，且底部 Search 导航处于选中状态；产品、移动端 Surface 与搜索发现目标匹配。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "recovered-src-f558e0278767c8e4",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面显示小红书移动端已提交关键词后的搜索结果：顶部保留查询词，包含全部/用户/商品 Tab、排序与筛选，并展示商品瀑布流；产品、移动端 Surface 与搜索结果目标匹配。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "recovered-src-8ed33ddcf1f89af2",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面显示微信读书移动端查询结果：顶部搜索框中有《梦华录》原著，页面主体展示书籍封面、书名、作者和推荐值等结果信息；产品、移动端 Surface 与搜索结果目标匹配。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "recovered-src-61708b97f508f9af",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面显示得物移动端商品首页的搜索入口：顶部有搜索框与相机入口，下方是品类导航和商品货架；来源页也将该屏标注为搜索入口，因此作为输入前搜索发现状态纳入。",
+      "review_source": "agent_visual_review"
+    }
+  ]
+}

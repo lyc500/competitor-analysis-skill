@@ -1,0 +1,262 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外热门短视频、社区产品的搜索发现页、搜索结果页。",
+    "research_goal": "比较国内外热门短视频与社区产品在移动端搜索发现页、搜索结果页上的入口组织、内容类型分层、筛选切换和结果呈现机制，为搜索体验方向探索提供真实界面参考。",
+    "target_page": "搜索发现页 / 搜索结果页",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "用户未指定 Desktop/Web，按产品设计语境以移动端 App UI 为主要目标。",
+      "平台范围限定为 iOS/Android；公开来源中无法确认平台或仅为 Mobile Web 的素材不作为有效 App UI。",
+      "以 2026-09-22 为研究日期；来源未提供版本号时不猜测版本。",
+      "竞品按国内外头部短视频、视频社区和内容社区的搜索发现机制代表性规划。"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "target_surface": "mobile_app",
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "competitors": [
+      {
+        "product_name": "抖音",
+        "region": "CN",
+        "product_type": "short_video",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内头部短视频产品，能代表以内容、话题和实时热度驱动搜索发现的路径。"
+      },
+      {
+        "product_name": "小红书",
+        "region": "CN",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内头部生活方式内容社区，搜索通常同时承载笔记、用户、话题和商品等多种意图。"
+      },
+      {
+        "product_name": "哔哩哔哩",
+        "region": "CN",
+        "product_type": "video_community",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内头部视频社区，适合观察视频内容、分区和社区关系如何进入搜索结果。"
+      },
+      {
+        "product_name": "TikTok",
+        "region": "Global",
+        "product_type": "short_video",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "全球头部短视频产品，代表以趋势、话题、创作者和视频结果为核心的搜索发现模式。"
+      },
+      {
+        "product_name": "Instagram",
+        "region": "Global",
+        "product_type": "social_content",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "全球头部社交内容产品，搜索与 Explore、账号、标签和 Reels 内容发现紧密关联。"
+      },
+      {
+        "product_name": "微博",
+        "region": "CN",
+        "product_type": "social_content",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内头部公共内容社区，适合补充热搜、用户、话题与内容结果之间的搜索组织。"
+      },
+      {
+        "product_name": "YouTube",
+        "region": "Global",
+        "product_type": "video_community",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "全球头部视频社区，补充以视频、频道、筛选和音频发现为核心的搜索结果组织。"
+      },
+      {
+        "product_name": "Pinterest",
+        "region": "Global",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "全球头部视觉内容社区，补充以视觉搜索、引导词和瀑布流结果为核心的搜索组织。"
+      },
+      {
+        "product_name": "Reddit",
+        "region": "Global",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "搜索发现页 / 搜索结果页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "全球大型讨论社区，补充帖子、社区、用户与评论搜索的内容优先级和结果简化路径。"
+      }
+    ],
+    "request": "帮我搜集一下国内外热门短视频、社区产品的搜索发现页、搜索结果页。"
+  },
+  "reviews": [
+    {
+      "target_id": "clean-cap-src-37fb3f45051da588",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面显示 Pinterest 移动端搜索结果页，搜索框中有 jeans，下面有 Baggy/New/Wide leg 引导词和双列视觉结果瀑布流；产品、移动端表面、搜索后状态和目标页面均匹配。",
+      "review_source": "agent_visual_review"
+    }
+  ],
+  "materials": [
+    {
+      "id": "mat-clean-cap-src-37fb3f45051da588",
+      "product_name": "Pinterest",
+      "page_name": "搜索发现页 / 搜索结果页",
+      "region": "Global",
+      "product_type": "content_community",
+      "platform": "iOS/Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/000-clean-cap-src-37fb3f45051da588.png",
+      "source_type": "ui_database",
+      "source_provider": "Gummble",
+      "source_asset_url": "https://storage.gummble.com/cdn-cgi/image/width%3D1920%2Cquality%3D75%2Cformat%3Dauto%2Cfit%3Dcover/prod/content/app_screens/2246c079-f316-4e30-b4b9-69b0a06f3da4.png",
+      "source_url": "https://storage.gummble.com/cdn-cgi/image/width%3D1920%2Cquality%3D75%2Cformat%3Dauto%2Cfit%3Dcover/prod/content/app_screens/2246c079-f316-4e30-b4b9-69b0a06f3da4.png",
+      "captured_at": "2026-09-22T10:22:27.760809+00:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "画面显示 Pinterest 移动端搜索结果页，搜索框中有 jeans，下面有 Baggy/New/Wide leg 引导词和双列视觉结果瀑布流；产品、移动端表面、搜索后状态和目标页面均匹配。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "clean-cap-src-37fb3f45051da588",
+      "source_candidate_id": "src-37fb3f45051da588",
+      "requested_url": "https://storage.gummble.com/cdn-cgi/image/width%3D1920%2Cquality%3D75%2Cformat%3Dauto%2Cfit%3Dcover/prod/content/app_screens/2246c079-f316-4e30-b4b9-69b0a06f3da4.png",
+      "final_url": "https://storage.gummble.com/cdn-cgi/image/width%3D1920%2Cquality%3D75%2Cformat%3Dauto%2Cfit%3Dcover/prod/content/app_screens/2246c079-f316-4e30-b4b9-69b0a06f3da4.png",
+      "width": 541,
+      "height": 1200,
+      "decode_format": "PNG",
+      "content_sha256": "f4d5e5906f5f4d6f28a165440f6736d6c482de31e6e7cd4875a3c84593560ae7"
+    }
+  ],
+  "fallback_requests": [
+    {
+      "product_name": "抖音",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "TikTok",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Instagram",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "微博",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "YouTube",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Pinterest",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Reddit",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    }
+  ]
+}

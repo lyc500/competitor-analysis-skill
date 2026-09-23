@@ -1,0 +1,100 @@
+{
+  "reviews": [
+    {
+      "target_id": "cap-src-108e735edeb60eb3",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面清晰展示 Instagram 移动端 New post 页面：包含图片预览、caption、Tag people、Tag products、Add location、Add music 与 Share；是完整单屏真实 App UI，无网页装饰或教程标注。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-7d17a049c575c0e0",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面展示 Reddit 移动端创建帖子页面：包含 Add a title 与 What Do You Want To Post? 下的 Text、Link、Image、Video、Poll、Predictions、Talk、Live Chat 类型选择；为完整单屏真实 App UI。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-e24628db4dd2fa0a",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面展示哔哩哔哩移动端发布视频页面：包含封面、标题、分区和标签、简介、更多设置、动态、社区公约确认、存草稿和发布；为完整单屏真实 App UI。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-72b4b94b5293f271",
+      "target_kind": "browser_capture",
+      "semantic_status": "rejected",
+      "product_identity": "matched",
+      "target_page_match": "mismatched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "虽然可识别为哔哩哔哩 App，但画面是“我的”页的发布入口，并非发布/发帖编辑页；同时带有明显红色教程箭头和框选标注，不符合真实单屏主证据准入标准。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-1632ef8f1413520c",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面展示小红书移动端发布笔记页面：包含多图预览、标题与正文、话题/用户/投票、地点、公开可见、高级选项、保存草稿和发布笔记；为完整单屏真实 App UI。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-83cd9662ab26f1ee",
+      "target_kind": "browser_capture",
+      "semantic_status": "rejected",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "mismatched",
+      "page_completeness": "incomplete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "UI Notes 页面中嵌有小红书发布页，但浏览器截图包含 UI Notes 导航、收藏、产品元数据和外层网页布局，且 App Screen 被截断，不能作为完整单张 App Screen 进入报告。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-919497aae3dd9bf4",
+      "target_kind": "browser_capture",
+      "semantic_status": "rejected",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面确实是知乎移动端回答编辑页，但截图带有明显紫色教程箭头和教程水印，并显示键盘与被模糊处理的题目，不满足无干扰、可直接复用的主截图准入标准。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-src-e6414cf0ab9df983",
+      "target_kind": "browser_capture",
+      "semantic_status": "rejected",
+      "product_identity": "matched",
+      "target_page_match": "mismatched",
+      "target_surface_match": "mismatched",
+      "page_completeness": "incomplete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "这是 UI Notes 的网页详情页，主体为知乎推荐流与弹窗内容，不是移动端发布/发帖编辑页；截图还包含 UI Notes 外层导航和产品元数据，不能作为目标 App Screen。",
+      "review_source": "agent_visual_review"
+    }
+  ]
+}

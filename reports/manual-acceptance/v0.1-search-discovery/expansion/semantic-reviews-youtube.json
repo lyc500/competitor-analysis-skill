@@ -1,0 +1,28 @@
+{
+  "reviews": [
+    {
+      "target_id": "clean-cap-src-11d196913960f6dc",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面显示 YouTube 移动端搜索流程的 Song 状态，含 Voice/Song 切换和“Play, sing or hum a song”搜索入口；产品、移动端表面和搜索发现目标匹配。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "clean-cap-src-61a5a50f7b6b3182",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "semantic_reason": "画面显示 YouTube 移动端搜索流程的 Song 加载状态，含 Voice/Song 切换、“Almost there”和完整加载控件；产品、移动端表面和搜索结果流程目标匹配，并单独标注为加载状态。",
+      "review_source": "agent_visual_review"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "raw_request": "帮我搜集一下国内外热门短视频、社区产品的搜索发现页、搜索结果页。",
+  "research_goal": "比较国内外热门短视频与社区产品在移动端搜索发现页、搜索结果页上的入口组织、内容类型分层、筛选切换和结果呈现机制，为搜索体验方向探索提供真实界面参考。",
+  "target_page": "搜索发现页 / 搜索结果页",
+  "regions": ["CN", "Global"],
+  "specified_products": [],
+  "assumptions": [
+    "用户未指定 Desktop/Web，按产品设计语境以移动端 App UI 为主要目标。",
+    "平台范围限定为 iOS/Android；公开来源中无法确认平台或仅为 Mobile Web 的素材不作为有效 App UI。",
+    "以 2026-09-22 为研究日期；来源未提供版本号时不猜测版本。",
+    "竞品按国内外头部短视频、视频社区和内容社区的搜索发现机制代表性规划。"
+  ],
+  "needs_clarification": false,
+  "task_status": "ready",
+  "planning_strategy": "agent_only",
+  "target_surface": "mobile_app",
+  "platforms": ["iOS", "Android"],
+  "competitors": [
+    {
+      "product_name": "抖音",
+      "region": "CN",
+      "product_type": "short_video",
+      "platform": "iOS/Android",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "国内头部短视频产品，能代表以内容、话题和实时热度驱动搜索发现的路径。"
+    },
+    {
+      "product_name": "小红书",
+      "region": "CN",
+      "product_type": "content_community",
+      "platform": "iOS/Android",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "国内头部生活方式内容社区，搜索通常同时承载笔记、用户、话题和商品等多种意图。"
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "region": "CN",
+      "product_type": "video_community",
+      "platform": "iOS/Android",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "国内头部视频社区，适合观察视频内容、分区和社区关系如何进入搜索结果。"
+    },
+    {
+      "product_name": "TikTok",
+      "region": "Global",
+      "product_type": "short_video",
+      "platform": "iOS/Android",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "全球头部短视频产品，代表以趋势、话题、创作者和视频结果为核心的搜索发现模式。"
+    },
+    {
+      "product_name": "Instagram",
+      "region": "Global",
+      "product_type": "social_content",
+      "platform": "iOS/Android",
+      "target_page": "搜索发现页 / 搜索结果页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "全球头部社交内容产品，搜索与 Explore、账号、标签和 Reels 内容发现紧密关联。"
+    }
+  ]
+}
