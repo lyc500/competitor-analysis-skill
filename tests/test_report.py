@@ -37,15 +37,48 @@ class ReportStage4Tests(unittest.TestCase):
         self.assertNotIn("Desktop Web", html)
         self.assertNotIn("assets/desktop.png", html)
 
-    def test_gallery_bounds_single_card_and_keeps_multi_card_tracks_bounded(self):
+    def test_gallery_uses_five_columns_on_desktop(self):
         html = render_report(self.task(), [self.material()], self.classification())
         self.assertNotIn("repeat(auto-fit,minmax(240px,1fr))", html)
         self.assertRegex(
             html,
-            r"\.grid\{[^}]*grid-template-columns:repeat\(auto-fit,minmax\(min\(100%,360px\),360px\)\)",
+            r"\.grid\{[^}]*grid-template-columns:repeat\(5,minmax\(0,1fr\)\)",
         )
         self.assertIn("justify-content:start", html)
-        self.assertRegex(html, r"article\{[^}]*max-width:360px")
+
+    def test_large_group_uses_progressive_more_button(self):
+        materials = [
+            self.material(
+                id=f"a{i}",
+                product_name=f"产品{i}",
+                image_path=f"assets/{i}.png",
+            )
+            for i in range(25)
+        ]
+        classification = self.classification()
+        classification["groups"][0]["material_ids"] = [m["id"] for m in materials]
+        html = render_report(self.task(), materials, classification)
+        self.assertIn('data-page-size="20"', html)
+        self.assertIn('data-index="19"', html)
+        self.assertIn('data-index="20" hidden', html)
+        self.assertIn('class="more-button"', html)
+        self.assertIn(">更多<", html)
+        self.assertIn("function initGalleries", html)
+        self.assertIn("visible+PAGE_SIZE", html)
+
+    def test_group_with_at_most_twenty_cards_has_no_more_button(self):
+        materials = [
+            self.material(
+                id=f"a{i}",
+                product_name=f"产品{i}",
+                image_path=f"assets/{i}.png",
+            )
+            for i in range(20)
+        ]
+        classification = self.classification()
+        classification["groups"][0]["material_ids"] = [m["id"] for m in materials]
+        html = render_report(self.task(), materials, classification)
+        self.assertNotIn('class="more-button"', html)
 
     def test_portrait_images_keep_intrinsic_ratio_and_lightbox(self):
         html = render_report(self.task(), [self.material()], self.classification())

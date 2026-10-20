@@ -1,0 +1,1433 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外热门直播、短视频、内容社区产品、电商产品、社交产品的“我的”页。加上快手、斗鱼、YY。继续补充腾讯视频、芒果TV、央视频、爱奇艺、优酷、咪咕视频等长视频产品。",
+    "research_goal": "横向观察国内外直播、短视频、内容社区、电商、社交与长视频产品的“我的”页，比较个人身份信息、内容/创作管理、交易服务、会员权益与设置入口的组织方式。",
+    "target_page": "我的页",
+    "target_surface": "mobile_app",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "specified_products": [
+      "快手",
+      "斗鱼",
+      "YY",
+      "腾讯视频",
+      "芒果TV",
+      "央视频",
+      "爱奇艺",
+      "优酷",
+      "咪咕视频"
+    ],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "assumptions": [
+      "“我的”页指当前用户的个人中心或 Account/Profile Hub，不包含他人公开主页、首页推荐、设置子页、单独的会员/订单详情页。",
+      "优先保留已加载完成、可识别产品身份、能够看清主要结构的单屏移动端界面；加载中、空白、错误、登录拦截、首页推荐和只有搜索框的页面不作为有效素材。",
+      "公开教程截图的水印或操作箭头可以保留，但必须不影响页面路径、状态和主要控件判断。",
+      "若公开素材无法证明目标页面，则不猜测、不用历史 fixture 代替，保留为 open fallback。"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "mixed",
+    "competitors": [
+      {
+        "product_name": "快手",
+        "region": "CN",
+        "product_type": "short_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表国内短视频与直播融合产品。"
+      },
+      {
+        "product_name": "斗鱼",
+        "region": "CN",
+        "product_type": "live_streaming",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表游戏与泛娱乐直播平台。"
+      },
+      {
+        "product_name": "YY",
+        "region": "CN",
+        "product_type": "live_streaming",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表直播、社交与创作服务并置的个人中心。"
+      },
+      {
+        "product_name": "腾讯视频",
+        "region": "CN",
+        "product_type": "long_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表国内综合长视频与会员内容服务。"
+      },
+      {
+        "product_name": "芒果TV",
+        "region": "CN",
+        "product_type": "long_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表国内综艺与长视频内容服务。"
+      },
+      {
+        "product_name": "央视频",
+        "region": "CN",
+        "product_type": "long_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表电视媒体、直播与长视频内容服务。"
+      },
+      {
+        "product_name": "爱奇艺",
+        "region": "CN",
+        "product_type": "long_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表国内综合长视频与会员内容服务。"
+      },
+      {
+        "product_name": "优酷",
+        "region": "CN",
+        "product_type": "long_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表国内综合长视频与内容创作服务。"
+      },
+      {
+        "product_name": "咪咕视频",
+        "region": "CN",
+        "product_type": "long_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表体育赛事、直播与长视频内容服务。"
+      },
+      {
+        "product_name": "虎牙",
+        "region": "CN",
+        "product_type": "live_streaming",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内热门直播产品，与斗鱼、YY形成直播类对照。"
+      },
+      {
+        "product_name": "Twitch",
+        "region": "Global",
+        "product_type": "live_streaming",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "国际直播产品，用于补充全球直播个人中心样本。"
+      },
+      {
+        "product_name": "抖音",
+        "region": "CN",
+        "product_type": "short_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内热门短视频产品，关注创作、内容资产与账号管理。"
+      },
+      {
+        "product_name": "TikTok",
+        "region": "Global",
+        "product_type": "short_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国际热门短视频产品，与抖音、快手形成全球对照。"
+      },
+      {
+        "product_name": "小红书",
+        "region": "CN",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内内容社区代表，关注个人内容资产、收藏与关系管理。"
+      },
+      {
+        "product_name": "Reddit",
+        "region": "Global",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "国际内容社区代表，用于比较社区身份与内容管理入口。"
+      },
+      {
+        "product_name": "淘宝",
+        "region": "CN",
+        "product_type": "e_commerce",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内电商代表，关注订单、权益、会员与交易服务聚合。"
+      },
+      {
+        "product_name": "Amazon",
+        "region": "Global",
+        "product_type": "e_commerce",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "国际电商代表，用于比较账户、订单、会员和服务入口。"
+      },
+      {
+        "product_name": "微信",
+        "region": "CN",
+        "product_type": "social",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内社交产品代表，关注服务入口、支付与个人资产聚合。"
+      },
+      {
+        "product_name": "Instagram",
+        "region": "Global",
+        "product_type": "social",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国际社交与内容产品代表，关注身份、关系与内容管理。"
+      },
+      {
+        "product_name": "Behance",
+        "region": "Global",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "补充创作者型内容社区样本，观察作品、项目和个人资料的组合。"
+      },
+      {
+        "product_name": "Zalando",
+        "region": "Global",
+        "product_type": "e_commerce",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "补充国际电商样本，观察账户、订单、退货和会员权益的层级。"
+      },
+      {
+        "product_name": "Vimeo",
+        "region": "Global",
+        "product_type": "video_content",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "补充国际视频内容与创作工具样本，观察 Account Hub 的内容与设置组织。"
+      },
+      {
+        "product_name": "抖音商城",
+        "region": "CN",
+        "product_type": "e_commerce",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "补充内容平台内的电商个人中心样本，单独标明其不是抖音主 App 的“我的”页。"
+      },
+      {
+        "product_name": "酷狗畅听版",
+        "region": "CN",
+        "product_type": "music_audio",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "UI Notes 权限更新后发现的音乐产品个人中心样本，补充账号资料与个人设置的组织方式。"
+      },
+      {
+        "product_name": "拼多多",
+        "region": "CN",
+        "product_type": "e_commerce",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "UI Notes 权限更新后发现的国内电商个人中心样本，补充订单、钱包、售后与运营入口的聚合方式。"
+      },
+      {
+        "product_name": "微信读书",
+        "region": "CN",
+        "product_type": "reading_content",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "UI Notes 权限更新后发现的阅读内容个人主页样本，观察阅读数据、勋章与书架内容的组合。"
+      },
+      {
+        "product_name": "95分",
+        "region": "CN",
+        "product_type": "e_commerce",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "UI Notes 权限更新后发现的二手交易个人中心样本，观察想要/足迹、购买与出售双向资产管理。"
+      },
+      {
+        "product_name": "岛读",
+        "region": "CN",
+        "product_type": "reading_content",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "UI Notes 权限更新后发现的阅读社区个人主页样本，观察阅读时长、徽章与书架的层级。"
+      },
+      {
+        "product_name": "网易LOFTER",
+        "region": "CN",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "UI Notes 权限更新后发现的内容社区个人中心样本，观察身份、关注关系、收藏与内容/交易入口的混合组织。"
+      },
+      {
+        "product_name": "哔哩哔哩",
+        "region": "CN",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "UI Notes 权限更新后发现的用户中心变体，补充视频社区中关注、历史、仓库、消费与直播服务的集中入口。"
+      }
+    ],
+    "request": "帮我搜集一下国内外热门直播、短视频、内容社区产品、电商产品、社交产品的“我的”页。加上快手、斗鱼、YY。继续补充腾讯视频、芒果TV、央视频、爱奇艺、优酷、咪咕视频等长视频产品。"
+  },
+  "materials": [
+    {
+      "id": "mat-cap-huya-my",
+      "product_name": "虎牙",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "live_streaming",
+      "platform": "Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/9c72680d6e16b370.png",
+      "source_type": "browser",
+      "source_provider": "PHP中文网",
+      "source_asset_url": "https://img.php.cn/upload/article/001/246/273/178382083091258.jpg",
+      "source_url": "https://www.php.cn/faq/2812568.html",
+      "captured_at": "2026-10-14T16:20:00+08:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "可见虎牙用户信息、钱包、任务、关注/收藏/订单、游戏服务与底部导航，属于完整移动端“我的”页；截图有教程箭头和水印但不遮挡核心结构。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-huya-my",
+      "source_candidate_id": "src-huya-public-tutorial",
+      "requested_url": "https://www.php.cn/faq/2812568.html",
+      "final_url": "https://www.php.cn/faq/2812568.html",
+      "width": 534,
+      "height": 950,
+      "decode_format": "PNG",
+      "content_sha256": "e420f129985364b33dbad38766378c7a2341859f75b39898a65c1a0602f35806"
+    },
+    {
+      "id": "mat-cap-douyu-my",
+      "product_name": "斗鱼",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "live_streaming",
+      "platform": "Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/9231d3caa97790b9.png",
+      "source_type": "browser",
+      "source_provider": "PHP中文网",
+      "source_asset_url": "https://img.php.cn/upload/article/001/246/273/178686791573830.jpg",
+      "source_url": "https://www.php.cn/faq/3002487.html",
+      "captured_at": "2026-10-14T16:20:00+08:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "可见斗鱼个人中心中的创作服务、游戏服务、更多服务、帮助反馈与设置，底部个人中心入口明确；教程箭头和水印不影响判断。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-douyu-my",
+      "source_candidate_id": "src-douyu-public-tutorial",
+      "requested_url": "https://www.php.cn/faq/3002487.html",
+      "final_url": "https://www.php.cn/faq/3002487.html",
+      "width": 534,
+      "height": 950,
+      "decode_format": "PNG",
+      "content_sha256": "37af209ebf86ef46aaae9e7be4b1d0c3a4537ed3c5482f43e78f8cb10a1d75e7"
+    },
+    {
+      "id": "mat-cap-yy-my",
+      "product_name": "YY",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "live_streaming",
+      "platform": "Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/3c976f781867fcf0.png",
+      "source_type": "browser",
+      "source_provider": "PHP中文网",
+      "source_asset_url": "https://img.php.cn/upload/article/001/246/273/178685405140312.jpg",
+      "source_url": "https://www.php.cn/faq/3000862.html",
+      "captured_at": "2026-10-14T16:20:00+08:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "可见 YY 个人中心的聊天、访问、频道、动态、任务、身份特权、创作中心和更多功能，底部个人中心选中；截图有教程箭头和水印但页面状态完整。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-yy-my",
+      "source_candidate_id": "src-yy-public-tutorial",
+      "requested_url": "https://www.php.cn/faq/3000862.html",
+      "final_url": "https://www.php.cn/faq/3000862.html",
+      "width": 534,
+      "height": 950,
+      "decode_format": "PNG",
+      "content_sha256": "bfe6395771acf0a128427b268658e8f798dc385f3891ccee0c6e5ef315edc29c"
+    },
+    {
+      "id": "mat-cap-behance-my",
+      "product_name": "Behance",
+      "page_name": "我的页",
+      "region": "Global",
+      "product_type": "content_community",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/5809777239a31b38.png",
+      "source_type": "ui_database",
+      "source_provider": "Uiland",
+      "source_asset_url": "https://images.uiland.design/Behance/Screenshot_20240905_180240.png",
+      "source_url": "https://uiland.design/screens/behance/screens/310e753b-37a3-4d33-8699-533402b8d524/flows/my-profile",
+      "captured_at": "2026-10-14T16:22:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "完整 Behance 移动端个人资料/作品页，显示用户身份、统计、编辑可用性、作品/项目区和底部导航，属于 My profile。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-behance-my",
+      "source_candidate_id": "src-behance-uiland",
+      "requested_url": "https://uiland.design/screens/behance/screens/310e753b-37a3-4d33-8699-533402b8d524/flows/my-profile",
+      "final_url": "https://uiland.design/screens/behance/screens/310e753b-37a3-4d33-8699-533402b8d524/flows/my-profile",
+      "width": 720,
+      "height": 1507,
+      "decode_format": "PNG",
+      "content_sha256": "38a4190ad5947b8278c0e187391c91527c341d0b12497b6c4d304eda98f5ca27"
+    },
+    {
+      "id": "mat-cap-zalando-my",
+      "product_name": "Zalando",
+      "page_name": "我的页",
+      "region": "Global",
+      "product_type": "e_commerce",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/815b9f15e6e38bfb.png",
+      "source_type": "ui_database",
+      "source_provider": "Uiland",
+      "source_asset_url": "https://images.uiland.design/Zalando/Screenshot_20240925_003346.png",
+      "source_url": "https://uiland.design/screens/zalando/screens/95ec2379-2474-4388-af3b-30a0ad8b15d5/flows/my-profile",
+      "captured_at": "2026-10-14T16:22:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "完整 Zalando Your Account 页，显示订单、退货、订阅、会员计划和个人详情等账户服务入口，属于电商“我的”页。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-zalando-my",
+      "source_candidate_id": "src-zalando-uiland",
+      "requested_url": "https://uiland.design/screens/zalando/screens/95ec2379-2474-4388-af3b-30a0ad8b15d5/flows/my-profile",
+      "final_url": "https://uiland.design/screens/zalando/screens/95ec2379-2474-4388-af3b-30a0ad8b15d5/flows/my-profile",
+      "width": 720,
+      "height": 1507,
+      "decode_format": "PNG",
+      "content_sha256": "6a2f7cf3e186f8beeba4f7b94825de316cf88a2666d0799afc0d94345133fb61"
+    },
+    {
+      "id": "mat-cap-vimeo-my",
+      "product_name": "Vimeo",
+      "page_name": "我的页",
+      "region": "Global",
+      "product_type": "video_content",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/290277195e203164.png",
+      "source_type": "ui_database",
+      "source_provider": "Uiland",
+      "source_asset_url": "https://images.uiland.design/Vimeo/Screenshot_20240912_182550.png",
+      "source_url": "https://uiland.design/screens/vimeo/screens/484b9753-b279-4f1c-9cf7-f0c95a26f35f/flows/my-profile",
+      "captured_at": "2026-10-14T16:22:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "完整 Vimeo Account Hub，显示当前用户、Vimeo Plus、View profile、Account/Data usage 与 Purchases 等账户和内容服务入口。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-vimeo-my",
+      "source_candidate_id": "src-vimeo-uiland",
+      "requested_url": "https://uiland.design/screens/vimeo/screens/484b9753-b279-4f1c-9cf7-f0c95a26f35f/flows/my-profile",
+      "final_url": "https://uiland.design/screens/vimeo/screens/484b9753-b279-4f1c-9cf7-f0c95a26f35f/flows/my-profile",
+      "width": 720,
+      "height": 1507,
+      "decode_format": "PNG",
+      "content_sha256": "61f8d3b0dd97f9c787d3e561635e2f400d9bbb884e5e93775a72631e1f7cbb8a"
+    },
+    {
+      "id": "mat-cap-douyin-mall-my",
+      "product_name": "抖音商城",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "e_commerce",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/c81371104e4d5257.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/121451334733393008.webp?v1",
+      "source_url": "https://uinotes.com/pin/121451334733393008",
+      "captured_at": "2026-10-14T16:22:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "完整抖音商城个人中心，显示当前用户、我的主页、购物车/收藏/关注的店/足迹/评价中心、订单与权益，并有“我”底部导航选中；明确标注为抖音商城而非抖音主 App。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-douyin-mall-my",
+      "source_candidate_id": "src-douyin-mall-uinotes",
+      "requested_url": "https://uinotes.com/pin/121451334733393008",
+      "final_url": "https://uinotes.com/pin/121451334733393008",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "4cc458f6f4ed37d1bbc13d0f61f3e01a34b2a35a17dbbe6590429ea688be7267"
+    },
+    {
+      "id": "mat-cap-cctv-my",
+      "product_name": "央视频",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "long_video",
+      "platform": "Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/7a223e1a9cb405b7.jpg",
+      "source_type": "browser",
+      "source_provider": "逗游网",
+      "source_asset_url": "https://s1.doyo.cn/imgfile/bgame/202606/12/1781233538_1.jpg",
+      "source_url": "https://www.doyo.cn/app/445482.html",
+      "captured_at": "2026-10-14T18:05:00+08:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "截图展示央视频完整移动端个人中心：登录/账号卡片、关注/粉丝/积分/商城、会员入口、首页/缓存/评论/征集、观看历史、收藏和订单等个人服务，并保留底部导航；属于已加载的“我的”页。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-cctv-my",
+      "source_candidate_id": "src-35b7fe800b8501d2",
+      "requested_url": "https://www.doyo.cn/app/445482.html",
+      "final_url": "https://www.doyo.cn/app/445482.html",
+      "width": 500,
+      "height": 890,
+      "decode_format": "JPEG",
+      "content_sha256": "1adf3e9ed70700adb81e1b0c8aa18a0a14f322468e6bb750fbbc1286f5acab7a"
+    },
+    {
+      "id": "mat-cap-youku-my",
+      "product_name": "优酷",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "long_video",
+      "platform": "Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/4d8a4fd1c040bf25.png",
+      "source_type": "browser",
+      "source_provider": "逗游网",
+      "source_asset_url": "https://s1.doyo.cn/imgfile/bdgame/202310/08/1696749063_3.png",
+      "source_url": "https://www.doyo.cn/app/121.html",
+      "captured_at": "2026-10-14T18:08:00+08:00",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "截图展示优酷完整移动端个人中心：登录/注册、会员方案、下载、历史记录、收藏、购买、商城、创作/作品、客服、设置和底部“我的”导航均可见；教程箭头不遮挡主要结构。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-youku-my",
+      "source_candidate_id": "src-fdea9eb6e22fd914",
+      "requested_url": "https://www.doyo.cn/app/121.html",
+      "final_url": "https://www.doyo.cn/app/121.html",
+      "width": 480,
+      "height": 832,
+      "decode_format": "PNG",
+      "content_sha256": "9c5d75f892b559292683e7659944187f05412c5d5816f2d3d80b18f931233066"
+    },
+    {
+      "id": "mat-cap-kugou-personal-center",
+      "product_name": "酷狗畅听版",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "music_audio",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/aa1e8435e17bcb01.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/672805490324733689.webp?v1",
+      "source_url": "https://uinotes.com/pin/672805490324733689",
+      "captured_at": "2026-10-20T14:00:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "页面标题为“个人中心”，完整展示酷狗畅听版账号绑定、头像、昵称、酷狗ID、性别、地区和退出登录；虽然偏个人资料管理，但不是弹窗、加载态或局部设置项，作为个人中心变体纳入。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-kugou-personal-center",
+      "source_candidate_id": "src-f165a732a572c4b1",
+      "requested_url": "https://uinotes.com/pin/672805490324733689",
+      "final_url": "https://uinotes.com/pin/672805490324733689",
+      "width": 480,
+      "height": 1039,
+      "decode_format": "WEBP",
+      "content_sha256": "7b20b03a1e028b07822d77f89e6699ef16fd36b3430182e1e63a7c91a6726cd6"
+    },
+    {
+      "id": "mat-cap-pinduoduo-my",
+      "product_name": "拼多多",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "e_commerce",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/ff9be41d72afef58.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/658360019995979356.webp?v1",
+      "source_url": "https://uinotes.com/pin/658360019995979356",
+      "captured_at": "2026-10-20T14:01:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "页面完整展示拼多多个人中心：订单、多多钱包、优惠券、商品收藏、店铺关注、历史浏览、退款售后、收货地址、客服、设置和底部“个人中心”选中；不是首页或单一功能子页。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-pinduoduo-my",
+      "source_candidate_id": "src-31dd27234e3b7ce1",
+      "requested_url": "https://uinotes.com/pin/658360019995979356",
+      "final_url": "https://uinotes.com/pin/658360019995979356",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "9f51e0537930faf00cca2cb79e6d5c7a69a80a4b7147855cab38c0b7102dc696"
+    },
+    {
+      "id": "mat-cap-weread-my-home",
+      "product_name": "微信读书",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "reading_content",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/3a601f63671f694e.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/154043805281072828.webp?v1",
+      "source_url": "https://uinotes.com/pin/154043805281072828",
+      "captured_at": "2026-10-20T14:02:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "页面标题为“我的主页”，展示用户身份、阅读时长、获赞、关注、勋章和书架内容，属于已加载的阅读个人主页；无弹窗、加载中或营销拼图。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-weread-my-home",
+      "source_candidate_id": "src-116d761e616e095b",
+      "requested_url": "https://uinotes.com/pin/154043805281072828",
+      "final_url": "https://uinotes.com/pin/154043805281072828",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "a50c7b8ab8adf9c33348a85258c32608e2fc24a3ddb45b9bcfbcced20b52e2b0"
+    },
+    {
+      "id": "mat-cap-95fen-my",
+      "product_name": "95分",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "e_commerce",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/15ff7942e7ddb670.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/064649999994131341.webp?v1",
+      "source_url": "https://uinotes.com/pin/064649999994131341",
+      "captured_at": "2026-10-20T14:03:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "页面完整展示95分“我的”页：用户身份、想要/足迹/我有/品牌、购买订单、卖家中心、估价回收、推荐交易内容及底部“我的”选中，符合二手交易个人中心。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-95fen-my",
+      "source_candidate_id": "src-f5ca136459a48c18",
+      "requested_url": "https://uinotes.com/pin/064649999994131341",
+      "final_url": "https://uinotes.com/pin/064649999994131341",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "8a02d4b60837e3c5b24362e11159551756a6302d3c09943ce97003bd66fb72a0"
+    },
+    {
+      "id": "mat-cap-daodu-my-home",
+      "product_name": "岛读",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "reading_content",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/7eca532dccdfc9a0.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/349751511966334833.webp?v1",
+      "source_url": "https://uinotes.com/pin/349751511966334833",
+      "captured_at": "2026-10-20T14:04:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "页面完整展示岛读个人中心：用户名、加入天数、获赞、阅读打卡、读友会、我的主页、喜欢的想法、阅读日历、提醒和设置，底部“我”选中。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-daodu-my-home",
+      "source_candidate_id": "src-db01ddb001bfdc39",
+      "requested_url": "https://uinotes.com/pin/349751511966334833",
+      "final_url": "https://uinotes.com/pin/349751511966334833",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "baeeb7b867b4990267b37e3dd6ec4935fe7a848d3f086cb02fe1b1ef086fb6be"
+    },
+    {
+      "id": "mat-cap-lofter-my",
+      "product_name": "网易LOFTER",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "content_community",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/4d4ff60feb3c8982.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/025802985569229833.webp?v1",
+      "source_url": "https://uinotes.com/pin/025802985569229833",
+      "captured_at": "2026-10-20T14:05:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "页面显示网易LOFTER用户身份、“我的主页”、喜欢的想法、阅读日历、每日提醒与设置，底部“我”选中；是完整个人中心而非内容流或单一设置页。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-lofter-my",
+      "source_candidate_id": "src-4b6b0abae7fcd6b5",
+      "requested_url": "https://uinotes.com/pin/025802985569229833",
+      "final_url": "https://uinotes.com/pin/025802985569229833",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "123c468442bff39e7fd82d0dc6996f8ecb28f4617bc2eb9ac58fad82e61d71e0"
+    },
+    {
+      "id": "mat-cap-bilibili-user-center",
+      "product_name": "哔哩哔哩",
+      "page_name": "我的页",
+      "region": "CN",
+      "product_type": "content_community",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/214117626762eba1.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/520611280278114151.webp?v1",
+      "source_url": "https://uinotes.com/pin/520611280278114151",
+      "captured_at": "2026-10-20T14:06:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "页面标题为“直播中心”，完整展示当前用户、经验/银瓜子、关注、观看历史、直播活动、装扮中心、获奖记录、我的仓库、聊天室主播和消费中心，是视频社区的用户中心变体；不是直播内容流或加载态。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-bilibili-user-center",
+      "source_candidate_id": "src-ad4045bfeabddaeb",
+      "requested_url": "https://uinotes.com/pin/520611280278114151",
+      "final_url": "https://uinotes.com/pin/520611280278114151",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "731e8a15e8b29de1b70d33917fe263c49c2d1c70895eb6cda95a001b24bca79d"
+    }
+  ],
+  "classification": {
+    "classification_status": "ready",
+    "classification_dimension": "按“我的”页的核心任务与信息架构聚类：直播/视频用户服务、创作者内容资产、交易账户服务、长视频会员服务、阅读个人主页、音乐个人中心、内容社区个人中心",
+    "classification_reason": "仅基于本轮通过产品身份、移动端页面匹配、完整度、质量和来源可追溯性校验的有效素材动态归纳；不按预设产品类型强行分组。每张有效截图只进入一个最能解释其结构重心的组；明确标注个人中心或用户中心变体，避免把资料编辑、弹窗、首页和单一设置子页当作同类页面。",
+    "groups": [
+      {
+        "name": "直播与视频用户服务",
+        "reason": "个人中心把关注/观看关系、等级任务、直播互动、创作或消费服务集中在同一层，强调平台内活跃与用户服务。",
+        "material_ids": [
+          "mat-cap-huya-my",
+          "mat-cap-douyu-my",
+          "mat-cap-yy-my",
+          "mat-cap-bilibili-user-center"
+        ],
+        "asset_ids": [
+          "mat-cap-huya-my",
+          "mat-cap-douyu-my",
+          "mat-cap-yy-my",
+          "mat-cap-bilibili-user-center"
+        ]
+      },
+      {
+        "name": "创作者与内容资产管理",
+        "reason": "页面核心是当前用户身份、作品/项目、个人资料或视频账户管理，内容资产和创作关系比交易服务更突出。",
+        "material_ids": [
+          "mat-cap-behance-my",
+          "mat-cap-vimeo-my"
+        ],
+        "asset_ids": [
+          "mat-cap-behance-my",
+          "mat-cap-vimeo-my"
+        ]
+      },
+      {
+        "name": "交易与账户服务",
+        "reason": "页面围绕订单、钱包、购物车、退换售后、想要/足迹、出售和会员权益组织，是以交易履约与资产管理为中心的个人中心。",
+        "material_ids": [
+          "mat-cap-zalando-my",
+          "mat-cap-douyin-mall-my",
+          "mat-cap-pinduoduo-my",
+          "mat-cap-95fen-my"
+        ],
+        "asset_ids": [
+          "mat-cap-zalando-my",
+          "mat-cap-douyin-mall-my",
+          "mat-cap-pinduoduo-my",
+          "mat-cap-95fen-my"
+        ]
+      },
+      {
+        "name": "长视频内容与会员服务",
+        "reason": "个人中心把观看历史、缓存/评论、会员、商城、购买或内容服务入口集中在同一层，核心任务是继续观看与管理视频权益。",
+        "material_ids": [
+          "mat-cap-cctv-my",
+          "mat-cap-youku-my"
+        ],
+        "asset_ids": [
+          "mat-cap-cctv-my",
+          "mat-cap-youku-my"
+        ]
+      },
+      {
+        "name": "阅读与知识个人主页",
+        "reason": "页面以阅读时长、阅读关系、勋章、想法、书架或阅读日历为核心，把个人成就与内容消费历史放在同一层。",
+        "material_ids": [
+          "mat-cap-weread-my-home",
+          "mat-cap-daodu-my-home"
+        ],
+        "asset_ids": [
+          "mat-cap-weread-my-home",
+          "mat-cap-daodu-my-home"
+        ]
+      },
+      {
+        "name": "音乐个人资料中心",
+        "reason": "页面聚焦音乐产品账号绑定、头像、昵称、身份资料和退出登录等个人资料管理，是轻量型个人中心。",
+        "material_ids": [
+          "mat-cap-kugou-personal-center"
+        ],
+        "asset_ids": [
+          "mat-cap-kugou-personal-center"
+        ]
+      },
+      {
+        "name": "内容社区个人中心",
+        "reason": "页面把用户身份、个人主页、内容关系、提醒和设置组织在同一层，突出社区关系与个人内容管理。",
+        "material_ids": [
+          "mat-cap-lofter-my"
+        ],
+        "asset_ids": [
+          "mat-cap-lofter-my"
+        ]
+      }
+    ],
+    "material_labels": [
+      {
+        "material_id": "mat-cap-huya-my",
+        "labels": {
+          "identity": "用户信息 + 等级",
+          "service": "钱包/任务/关注/订单",
+          "navigation": "底部 Tab"
+        }
+      },
+      {
+        "material_id": "mat-cap-douyu-my",
+        "labels": {
+          "identity": "登录状态/个人中心",
+          "service": "游戏/创作/直播服务",
+          "navigation": "底部 Tab + 顶部设置"
+        }
+      },
+      {
+        "material_id": "mat-cap-yy-my",
+        "labels": {
+          "identity": "个人中心",
+          "service": "身份特权/创作中心/任务",
+          "navigation": "底部 Tab"
+        }
+      },
+      {
+        "material_id": "mat-cap-bilibili-user-center",
+        "labels": {
+          "identity": "头像/等级/经验",
+          "content": "关注/观看历史/我的仓库",
+          "service": "直播活动/消费中心"
+        }
+      },
+      {
+        "material_id": "mat-cap-behance-my",
+        "labels": {
+          "identity": "头像/名称/数据",
+          "content": "作品/项目",
+          "action": "编辑可用性"
+        }
+      },
+      {
+        "material_id": "mat-cap-vimeo-my",
+        "labels": {
+          "identity": "Account/头像",
+          "content": "View profile/内容库",
+          "service": "设置/购买"
+        }
+      },
+      {
+        "material_id": "mat-cap-zalando-my",
+        "labels": {
+          "identity": "Your Account",
+          "service": "订单/退货/订阅",
+          "membership": "Zalando Plus"
+        }
+      },
+      {
+        "material_id": "mat-cap-douyin-mall-my",
+        "labels": {
+          "identity": "当前用户/我的主页",
+          "transaction": "购物车/订单/售后",
+          "membership": "优惠券/购物红包/品牌会员"
+        }
+      },
+      {
+        "material_id": "mat-cap-pinduoduo-my",
+        "labels": {
+          "identity": "微信登录/账号区",
+          "transaction": "订单/钱包/退款售后",
+          "service": "收藏/关注/地址/客服/设置"
+        }
+      },
+      {
+        "material_id": "mat-cap-95fen-my",
+        "labels": {
+          "identity": "用户名/我的主页",
+          "asset": "想要/我有/品牌/足迹",
+          "transaction": "购买/出售/回收"
+        }
+      },
+      {
+        "material_id": "mat-cap-cctv-my",
+        "labels": {
+          "identity": "登录/关注/粉丝",
+          "content": "缓存/评论/观看历史/收藏",
+          "membership": "会员/商城/订单"
+        }
+      },
+      {
+        "material_id": "mat-cap-youku-my",
+        "labels": {
+          "identity": "登录/注册/会员方案",
+          "content": "下载/历史记录/收藏/作品",
+          "service": "商城/购买/客服/设置"
+        }
+      },
+      {
+        "material_id": "mat-cap-weread-my-home",
+        "labels": {
+          "identity": "头像/昵称/性别",
+          "reading": "阅读时长/书架/读完",
+          "achievement": "获赞/关注/勋章"
+        }
+      },
+      {
+        "material_id": "mat-cap-daodu-my-home",
+        "labels": {
+          "identity": "用户名/加入天数",
+          "reading": "我的主页/阅读日历",
+          "community": "获赞/读友会/喜欢的想法"
+        }
+      },
+      {
+        "material_id": "mat-cap-kugou-personal-center",
+        "labels": {
+          "identity": "头像/昵称/酷狗ID",
+          "profile": "性别/地区/账号绑定",
+          "action": "退出登录"
+        }
+      },
+      {
+        "material_id": "mat-cap-lofter-my",
+        "labels": {
+          "identity": "用户身份/我的主页",
+          "content": "喜欢的想法",
+          "service": "阅读日历/提醒/设置"
+        }
+      }
+    ]
+  },
+  "fallback_requests": [
+    {
+      "product_name": "快手",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "现有公开素材是隐私设置侧页/功能入口，不是当前用户“我的”页；本轮未取得可确认的完整正常个人中心截图。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "斗鱼",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "YY",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "腾讯视频",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "App Store 截图主要是首页/内容推荐状态；UI Notes、Refero、Appshots 本轮未确认腾讯视频完整移动端“我的”页，不能用首页或其他产品页面替代。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "芒果TV",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "App Store 截图为节目或播放详情状态，Appshots 本轮未确认芒果TV完整移动端“我的”页；未纳入非目标页面。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "央视频",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "爱奇艺",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "Refero 本轮未确认爱奇艺完整移动端“我的”页，官方隐私中心只能证明路径存在，未提供可验收的完整移动端截图。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "优酷",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "咪咕视频",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "公开教程能定位到“我的”相关操作，但现有素材是设置局部、局部隐私选项或带强标注的步骤图，未取得完整正常个人中心页。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "虎牙",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Twitch",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "抖音",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "TikTok",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "小红书",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Reddit",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "淘宝",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Amazon",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "微信",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Instagram",
+      "target_page": "我的页",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Behance",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Zalando",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Vimeo",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "抖音商城",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "酷狗畅听版",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "拼多多",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "微信读书",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "95分",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "岛读",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "网易LOFTER",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "target_page": "我的页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    }
+  ],
+  "excluded_summary": {
+    "rejected": 1,
+    "pending": 0,
+    "unavailable": 0
+  }
+}

@@ -1,0 +1,302 @@
+[
+  {
+    "product_name": "快手",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "现有公开素材是隐私设置侧页/功能入口，不是当前用户“我的”页；本轮未取得可确认的完整正常个人中心截图。",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "斗鱼",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "YY",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "腾讯视频",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "App Store 截图主要是首页/内容推荐状态；UI Notes、Refero、Appshots 本轮未确认腾讯视频完整移动端“我的”页，不能用首页或其他产品页面替代。",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "芒果TV",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "App Store 截图为节目或播放详情状态，Appshots 本轮未确认芒果TV完整移动端“我的”页；未纳入非目标页面。",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "央视频",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "爱奇艺",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "Refero 本轮未确认爱奇艺完整移动端“我的”页，官方隐私中心只能证明路径存在，未提供可验收的完整移动端截图。",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "优酷",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "咪咕视频",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "公开教程能定位到“我的”相关操作，但现有素材是设置局部、局部隐私选项或带强标注的步骤图，未取得完整正常个人中心页。",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "虎牙",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Twitch",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "抖音",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "TikTok",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "小红书",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Reddit",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "淘宝",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Amazon",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "微信",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Instagram",
+    "target_page": "我的页",
+    "status": "open",
+    "reason": "公开截图失败或未通过语义审核",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Behance",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Zalando",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Vimeo",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "抖音商城",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "酷狗畅听版",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "拼多多",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "微信读书",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "95分",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "岛读",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "网易LOFTER",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "哔哩哔哩",
+    "target_page": "我的页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  }
+]

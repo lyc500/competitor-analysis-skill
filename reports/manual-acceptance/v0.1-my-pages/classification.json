@@ -1,0 +1,225 @@
+{
+  "classification_status": "ready",
+  "classification_dimension": "按“我的”页的核心任务与信息架构聚类：直播/视频用户服务、创作者内容资产、交易账户服务、长视频会员服务、阅读个人主页、音乐个人中心、内容社区个人中心",
+  "classification_reason": "仅基于本轮通过产品身份、移动端页面匹配、完整度、质量和来源可追溯性校验的有效素材动态归纳；不按预设产品类型强行分组。每张有效截图只进入一个最能解释其结构重心的组；明确标注个人中心或用户中心变体，避免把资料编辑、弹窗、首页和单一设置子页当作同类页面。",
+  "groups": [
+    {
+      "name": "直播与视频用户服务",
+      "reason": "个人中心把关注/观看关系、等级任务、直播互动、创作或消费服务集中在同一层，强调平台内活跃与用户服务。",
+      "material_ids": [
+        "mat-cap-huya-my",
+        "mat-cap-douyu-my",
+        "mat-cap-yy-my",
+        "mat-cap-bilibili-user-center"
+      ],
+      "asset_ids": [
+        "mat-cap-huya-my",
+        "mat-cap-douyu-my",
+        "mat-cap-yy-my",
+        "mat-cap-bilibili-user-center"
+      ]
+    },
+    {
+      "name": "创作者与内容资产管理",
+      "reason": "页面核心是当前用户身份、作品/项目、个人资料或视频账户管理，内容资产和创作关系比交易服务更突出。",
+      "material_ids": [
+        "mat-cap-behance-my",
+        "mat-cap-vimeo-my"
+      ],
+      "asset_ids": [
+        "mat-cap-behance-my",
+        "mat-cap-vimeo-my"
+      ]
+    },
+    {
+      "name": "交易与账户服务",
+      "reason": "页面围绕订单、钱包、购物车、退换售后、想要/足迹、出售和会员权益组织，是以交易履约与资产管理为中心的个人中心。",
+      "material_ids": [
+        "mat-cap-zalando-my",
+        "mat-cap-douyin-mall-my",
+        "mat-cap-pinduoduo-my",
+        "mat-cap-95fen-my"
+      ],
+      "asset_ids": [
+        "mat-cap-zalando-my",
+        "mat-cap-douyin-mall-my",
+        "mat-cap-pinduoduo-my",
+        "mat-cap-95fen-my"
+      ]
+    },
+    {
+      "name": "长视频内容与会员服务",
+      "reason": "个人中心把观看历史、缓存/评论、会员、商城、购买或内容服务入口集中在同一层，核心任务是继续观看与管理视频权益。",
+      "material_ids": [
+        "mat-cap-cctv-my",
+        "mat-cap-youku-my"
+      ],
+      "asset_ids": [
+        "mat-cap-cctv-my",
+        "mat-cap-youku-my"
+      ]
+    },
+    {
+      "name": "阅读与知识个人主页",
+      "reason": "页面以阅读时长、阅读关系、勋章、想法、书架或阅读日历为核心，把个人成就与内容消费历史放在同一层。",
+      "material_ids": [
+        "mat-cap-weread-my-home",
+        "mat-cap-daodu-my-home"
+      ],
+      "asset_ids": [
+        "mat-cap-weread-my-home",
+        "mat-cap-daodu-my-home"
+      ]
+    },
+    {
+      "name": "音乐个人资料中心",
+      "reason": "页面聚焦音乐产品账号绑定、头像、昵称、身份资料和退出登录等个人资料管理，是轻量型个人中心。",
+      "material_ids": [
+        "mat-cap-kugou-personal-center"
+      ],
+      "asset_ids": [
+        "mat-cap-kugou-personal-center"
+      ]
+    },
+    {
+      "name": "内容社区个人中心",
+      "reason": "页面把用户身份、个人主页、内容关系、提醒和设置组织在同一层，突出社区关系与个人内容管理。",
+      "material_ids": [
+        "mat-cap-lofter-my"
+      ],
+      "asset_ids": [
+        "mat-cap-lofter-my"
+      ]
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cap-huya-my",
+      "labels": {
+        "identity": "用户信息 + 等级",
+        "service": "钱包/任务/关注/订单",
+        "navigation": "底部 Tab"
+      }
+    },
+    {
+      "material_id": "mat-cap-douyu-my",
+      "labels": {
+        "identity": "登录状态/个人中心",
+        "service": "游戏/创作/直播服务",
+        "navigation": "底部 Tab + 顶部设置"
+      }
+    },
+    {
+      "material_id": "mat-cap-yy-my",
+      "labels": {
+        "identity": "个人中心",
+        "service": "身份特权/创作中心/任务",
+        "navigation": "底部 Tab"
+      }
+    },
+    {
+      "material_id": "mat-cap-bilibili-user-center",
+      "labels": {
+        "identity": "头像/等级/经验",
+        "content": "关注/观看历史/我的仓库",
+        "service": "直播活动/消费中心"
+      }
+    },
+    {
+      "material_id": "mat-cap-behance-my",
+      "labels": {
+        "identity": "头像/名称/数据",
+        "content": "作品/项目",
+        "action": "编辑可用性"
+      }
+    },
+    {
+      "material_id": "mat-cap-vimeo-my",
+      "labels": {
+        "identity": "Account/头像",
+        "content": "View profile/内容库",
+        "service": "设置/购买"
+      }
+    },
+    {
+      "material_id": "mat-cap-zalando-my",
+      "labels": {
+        "identity": "Your Account",
+        "service": "订单/退货/订阅",
+        "membership": "Zalando Plus"
+      }
+    },
+    {
+      "material_id": "mat-cap-douyin-mall-my",
+      "labels": {
+        "identity": "当前用户/我的主页",
+        "transaction": "购物车/订单/售后",
+        "membership": "优惠券/购物红包/品牌会员"
+      }
+    },
+    {
+      "material_id": "mat-cap-pinduoduo-my",
+      "labels": {
+        "identity": "微信登录/账号区",
+        "transaction": "订单/钱包/退款售后",
+        "service": "收藏/关注/地址/客服/设置"
+      }
+    },
+    {
+      "material_id": "mat-cap-95fen-my",
+      "labels": {
+        "identity": "用户名/我的主页",
+        "asset": "想要/我有/品牌/足迹",
+        "transaction": "购买/出售/回收"
+      }
+    },
+    {
+      "material_id": "mat-cap-cctv-my",
+      "labels": {
+        "identity": "登录/关注/粉丝",
+        "content": "缓存/评论/观看历史/收藏",
+        "membership": "会员/商城/订单"
+      }
+    },
+    {
+      "material_id": "mat-cap-youku-my",
+      "labels": {
+        "identity": "登录/注册/会员方案",
+        "content": "下载/历史记录/收藏/作品",
+        "service": "商城/购买/客服/设置"
+      }
+    },
+    {
+      "material_id": "mat-cap-weread-my-home",
+      "labels": {
+        "identity": "头像/昵称/性别",
+        "reading": "阅读时长/书架/读完",
+        "achievement": "获赞/关注/勋章"
+      }
+    },
+    {
+      "material_id": "mat-cap-daodu-my-home",
+      "labels": {
+        "identity": "用户名/加入天数",
+        "reading": "我的主页/阅读日历",
+        "community": "获赞/读友会/喜欢的想法"
+      }
+    },
+    {
+      "material_id": "mat-cap-kugou-personal-center",
+      "labels": {
+        "identity": "头像/昵称/酷狗ID",
+        "profile": "性别/地区/账号绑定",
+        "action": "退出登录"
+      }
+    },
+    {
+      "material_id": "mat-cap-lofter-my",
+      "labels": {
+        "identity": "用户身份/我的主页",
+        "content": "喜欢的想法",
+        "service": "阅读日历/提醒/设置"
+      }
+    }
+  ]
+}

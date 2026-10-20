@@ -1,0 +1,649 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外热门直播、短视频、内容社区产品、电商产品、社交产品的“我的”页。加上快手、斗鱼、YY。继续补充腾讯视频、芒果TV、央视频、爱奇艺、优酷、咪咕视频等长视频产品。",
+    "research_goal": "横向观察国内外直播、短视频、内容社区、电商、社交与长视频产品的“我的”页，比较个人身份信息、内容/创作管理、交易服务、会员权益与设置入口的组织方式。",
+    "target_page": "我的页",
+    "target_surface": "mobile_app",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "specified_products": [
+      "快手",
+      "斗鱼",
+      "YY",
+      "腾讯视频",
+      "芒果TV",
+      "央视频",
+      "爱奇艺",
+      "优酷",
+      "咪咕视频"
+    ],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "assumptions": [
+      "“我的”页指当前用户的个人中心或 Account/Profile Hub，不包含他人公开主页、首页推荐、设置子页、单独的会员/订单详情页。",
+      "优先保留已加载完成、可识别产品身份、能够看清主要结构的单屏移动端界面；加载中、空白、错误、登录拦截、首页推荐和只有搜索框的页面不作为有效素材。",
+      "公开教程截图的水印或操作箭头可以保留，但必须不影响页面路径、状态和主要控件判断。",
+      "若公开素材无法证明目标页面，则不猜测、不用历史 fixture 代替，保留为 open fallback。"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "mixed",
+    "competitors": [
+      {
+        "product_name": "快手",
+        "region": "CN",
+        "product_type": "short_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表国内短视频与直播融合产品。"
+      },
+      {
+        "product_name": "斗鱼",
+        "region": "CN",
+        "product_type": "live_streaming",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表游戏与泛娱乐直播平台。"
+      },
+      {
+        "product_name": "YY",
+        "region": "CN",
+        "product_type": "live_streaming",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表直播、社交与创作服务并置的个人中心。"
+      },
+      {
+        "product_name": "腾讯视频",
+        "region": "CN",
+        "product_type": "long_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表国内综合长视频与会员内容服务。"
+      },
+      {
+        "product_name": "芒果TV",
+        "region": "CN",
+        "product_type": "long_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表国内综艺与长视频内容服务。"
+      },
+      {
+        "product_name": "央视频",
+        "region": "CN",
+        "product_type": "long_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表电视媒体、直播与长视频内容服务。"
+      },
+      {
+        "product_name": "爱奇艺",
+        "region": "CN",
+        "product_type": "long_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表国内综合长视频与会员内容服务。"
+      },
+      {
+        "product_name": "优酷",
+        "region": "CN",
+        "product_type": "long_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表国内综合长视频与内容创作服务。"
+      },
+      {
+        "product_name": "咪咕视频",
+        "region": "CN",
+        "product_type": "long_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "user_specified",
+        "priority": "high",
+        "reason": "用户明确要求补充；代表体育赛事、直播与长视频内容服务。"
+      },
+      {
+        "product_name": "虎牙",
+        "region": "CN",
+        "product_type": "live_streaming",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内热门直播产品，与斗鱼、YY形成直播类对照。"
+      },
+      {
+        "product_name": "Twitch",
+        "region": "Global",
+        "product_type": "live_streaming",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "国际直播产品，用于补充全球直播个人中心样本。"
+      },
+      {
+        "product_name": "抖音",
+        "region": "CN",
+        "product_type": "short_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内热门短视频产品，关注创作、内容资产与账号管理。"
+      },
+      {
+        "product_name": "TikTok",
+        "region": "Global",
+        "product_type": "short_video",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国际热门短视频产品，与抖音、快手形成全球对照。"
+      },
+      {
+        "product_name": "小红书",
+        "region": "CN",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内内容社区代表，关注个人内容资产、收藏与关系管理。"
+      },
+      {
+        "product_name": "Reddit",
+        "region": "Global",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "国际内容社区代表，用于比较社区身份与内容管理入口。"
+      },
+      {
+        "product_name": "淘宝",
+        "region": "CN",
+        "product_type": "e_commerce",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内电商代表，关注订单、权益、会员与交易服务聚合。"
+      },
+      {
+        "product_name": "Amazon",
+        "region": "Global",
+        "product_type": "e_commerce",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "国际电商代表，用于比较账户、订单、会员和服务入口。"
+      },
+      {
+        "product_name": "微信",
+        "region": "CN",
+        "product_type": "social",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国内社交产品代表，关注服务入口、支付与个人资产聚合。"
+      },
+      {
+        "product_name": "Instagram",
+        "region": "Global",
+        "product_type": "social",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "国际社交与内容产品代表，关注身份、关系与内容管理。"
+      },
+      {
+        "product_name": "Behance",
+        "region": "Global",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "补充创作者型内容社区样本，观察作品、项目和个人资料的组合。"
+      },
+      {
+        "product_name": "Zalando",
+        "region": "Global",
+        "product_type": "e_commerce",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "补充国际电商样本，观察账户、订单、退货和会员权益的层级。"
+      },
+      {
+        "product_name": "Vimeo",
+        "region": "Global",
+        "product_type": "video_content",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "补充国际视频内容与创作工具样本，观察 Account Hub 的内容与设置组织。"
+      },
+      {
+        "product_name": "抖音商城",
+        "region": "CN",
+        "product_type": "e_commerce",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "补充内容平台内的电商个人中心样本，单独标明其不是抖音主 App 的“我的”页。"
+      },
+      {
+        "product_name": "酷狗畅听版",
+        "region": "CN",
+        "product_type": "music_audio",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "UI Notes 权限更新后发现的音乐产品个人中心样本，补充账号资料与个人设置的组织方式。"
+      },
+      {
+        "product_name": "拼多多",
+        "region": "CN",
+        "product_type": "e_commerce",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "UI Notes 权限更新后发现的国内电商个人中心样本，补充订单、钱包、售后与运营入口的聚合方式。"
+      },
+      {
+        "product_name": "微信读书",
+        "region": "CN",
+        "product_type": "reading_content",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "UI Notes 权限更新后发现的阅读内容个人主页样本，观察阅读数据、勋章与书架内容的组合。"
+      },
+      {
+        "product_name": "95分",
+        "region": "CN",
+        "product_type": "e_commerce",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "UI Notes 权限更新后发现的二手交易个人中心样本，观察想要/足迹、购买与出售双向资产管理。"
+      },
+      {
+        "product_name": "岛读",
+        "region": "CN",
+        "product_type": "reading_content",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "UI Notes 权限更新后发现的阅读社区个人主页样本，观察阅读时长、徽章与书架的层级。"
+      },
+      {
+        "product_name": "网易LOFTER",
+        "region": "CN",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "UI Notes 权限更新后发现的内容社区个人中心样本，观察身份、关注关系、收藏与内容/交易入口的混合组织。"
+      },
+      {
+        "product_name": "哔哩哔哩",
+        "region": "CN",
+        "product_type": "content_community",
+        "platform": "iOS/Android",
+        "target_page": "我的页",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "UI Notes 权限更新后发现的用户中心变体，补充视频社区中关注、历史、仓库、消费与直播服务的集中入口。"
+      }
+    ],
+    "request": "帮我搜集一下国内外热门直播、短视频、内容社区产品、电商产品、社交产品的“我的”页。加上快手、斗鱼、YY。继续补充腾讯视频、芒果TV、央视频、爱奇艺、优酷、咪咕视频等长视频产品。"
+  },
+  "competitors": [
+    {
+      "product_name": "快手",
+      "region": "CN",
+      "product_type": "short_video",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确要求补充；代表国内短视频与直播融合产品。"
+    },
+    {
+      "product_name": "斗鱼",
+      "region": "CN",
+      "product_type": "live_streaming",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确要求补充；代表游戏与泛娱乐直播平台。"
+    },
+    {
+      "product_name": "YY",
+      "region": "CN",
+      "product_type": "live_streaming",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确要求补充；代表直播、社交与创作服务并置的个人中心。"
+    },
+    {
+      "product_name": "腾讯视频",
+      "region": "CN",
+      "product_type": "long_video",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确要求补充；代表国内综合长视频与会员内容服务。"
+    },
+    {
+      "product_name": "芒果TV",
+      "region": "CN",
+      "product_type": "long_video",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确要求补充；代表国内综艺与长视频内容服务。"
+    },
+    {
+      "product_name": "央视频",
+      "region": "CN",
+      "product_type": "long_video",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确要求补充；代表电视媒体、直播与长视频内容服务。"
+    },
+    {
+      "product_name": "爱奇艺",
+      "region": "CN",
+      "product_type": "long_video",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确要求补充；代表国内综合长视频与会员内容服务。"
+    },
+    {
+      "product_name": "优酷",
+      "region": "CN",
+      "product_type": "long_video",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确要求补充；代表国内综合长视频与内容创作服务。"
+    },
+    {
+      "product_name": "咪咕视频",
+      "region": "CN",
+      "product_type": "long_video",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "user_specified",
+      "priority": "high",
+      "reason": "用户明确要求补充；代表体育赛事、直播与长视频内容服务。"
+    },
+    {
+      "product_name": "虎牙",
+      "region": "CN",
+      "product_type": "live_streaming",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "国内热门直播产品，与斗鱼、YY形成直播类对照。"
+    },
+    {
+      "product_name": "抖音",
+      "region": "CN",
+      "product_type": "short_video",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "国内热门短视频产品，关注创作、内容资产与账号管理。"
+    },
+    {
+      "product_name": "TikTok",
+      "region": "Global",
+      "product_type": "short_video",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "国际热门短视频产品，与抖音、快手形成全球对照。"
+    },
+    {
+      "product_name": "小红书",
+      "region": "CN",
+      "product_type": "content_community",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "国内内容社区代表，关注个人内容资产、收藏与关系管理。"
+    },
+    {
+      "product_name": "淘宝",
+      "region": "CN",
+      "product_type": "e_commerce",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "国内电商代表，关注订单、权益、会员与交易服务聚合。"
+    },
+    {
+      "product_name": "微信",
+      "region": "CN",
+      "product_type": "social",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "国内社交产品代表，关注服务入口、支付与个人资产聚合。"
+    },
+    {
+      "product_name": "Instagram",
+      "region": "Global",
+      "product_type": "social",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "国际社交与内容产品代表，关注身份、关系与内容管理。"
+    },
+    {
+      "product_name": "拼多多",
+      "region": "CN",
+      "product_type": "e_commerce",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "UI Notes 权限更新后发现的国内电商个人中心样本，补充订单、钱包、售后与运营入口的聚合方式。"
+    },
+    {
+      "product_name": "Twitch",
+      "region": "Global",
+      "product_type": "live_streaming",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "国际直播产品，用于补充全球直播个人中心样本。"
+    },
+    {
+      "product_name": "Reddit",
+      "region": "Global",
+      "product_type": "content_community",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "国际内容社区代表，用于比较社区身份与内容管理入口。"
+    },
+    {
+      "product_name": "Amazon",
+      "region": "Global",
+      "product_type": "e_commerce",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "国际电商代表，用于比较账户、订单、会员和服务入口。"
+    },
+    {
+      "product_name": "Behance",
+      "region": "Global",
+      "product_type": "content_community",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "补充创作者型内容社区样本，观察作品、项目和个人资料的组合。"
+    },
+    {
+      "product_name": "Zalando",
+      "region": "Global",
+      "product_type": "e_commerce",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "补充国际电商样本，观察账户、订单、退货和会员权益的层级。"
+    },
+    {
+      "product_name": "Vimeo",
+      "region": "Global",
+      "product_type": "video_content",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "补充国际视频内容与创作工具样本，观察 Account Hub 的内容与设置组织。"
+    },
+    {
+      "product_name": "抖音商城",
+      "region": "CN",
+      "product_type": "e_commerce",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "补充内容平台内的电商个人中心样本，单独标明其不是抖音主 App 的“我的”页。"
+    },
+    {
+      "product_name": "酷狗畅听版",
+      "region": "CN",
+      "product_type": "music_audio",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "UI Notes 权限更新后发现的音乐产品个人中心样本，补充账号资料与个人设置的组织方式。"
+    },
+    {
+      "product_name": "微信读书",
+      "region": "CN",
+      "product_type": "reading_content",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "UI Notes 权限更新后发现的阅读内容个人主页样本，观察阅读数据、勋章与书架内容的组合。"
+    },
+    {
+      "product_name": "95分",
+      "region": "CN",
+      "product_type": "e_commerce",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "UI Notes 权限更新后发现的二手交易个人中心样本，观察想要/足迹、购买与出售双向资产管理。"
+    },
+    {
+      "product_name": "岛读",
+      "region": "CN",
+      "product_type": "reading_content",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "UI Notes 权限更新后发现的阅读社区个人主页样本，观察阅读时长、徽章与书架的层级。"
+    },
+    {
+      "product_name": "网易LOFTER",
+      "region": "CN",
+      "product_type": "content_community",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "UI Notes 权限更新后发现的内容社区个人中心样本，观察身份、关注关系、收藏与内容/交易入口的混合组织。"
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "region": "CN",
+      "product_type": "content_community",
+      "platform": "iOS/Android",
+      "target_page": "我的页",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "UI Notes 权限更新后发现的用户中心变体，补充视频社区中关注、历史、仓库、消费与直播服务的集中入口。"
+    }
+  ],
+  "assets": [],
+  "classification": {
+    "classification_status": "unavailable",
+    "classification_dimension": "",
+    "classification_reason": "正式动态分类仅在 Stage 4 Agent Classification Plan 流程执行",
+    "groups": [],
+    "material_labels": []
+  }
+}
