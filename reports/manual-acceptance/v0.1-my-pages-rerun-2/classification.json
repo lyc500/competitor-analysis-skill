@@ -1,0 +1,145 @@
+{
+  "classification_status": "ready",
+  "classification_dimension": "地区优先级与我的页首屏主任务",
+  "classification_reason": "按用户最新要求先将国内竞品作为主参考单独置前，海外竞品单独成组，不混排；组内仍保留首屏主任务与登录状态标签，避免把地区分组误读为页面结构结论。",
+  "groups": [
+    {
+      "name": "国内竞品｜主参考",
+      "reason": "国内样本优先展示；首屏主任务标签继续区分学习、音乐与交易服务等组织方式。",
+      "material_ids": [
+        "mat-cap-pinduoduo",
+        "mat-cap-doubao-logged-out",
+        "mat-cap-doubao-logged-in",
+        "mat-cap-kugou"
+      ],
+      "asset_ids": [
+        "mat-cap-pinduoduo",
+        "mat-cap-doubao-logged-out",
+        "mat-cap-doubao-logged-in",
+        "mat-cap-kugou"
+      ]
+    },
+    {
+      "name": "海外竞品｜单独参考",
+      "reason": "海外样本单独展示；首屏主任务标签继续区分身份关系、内容消费与账户服务。当前海外样本超过 5 张，遵循每行 5 张的报告网格规则自动换行。",
+      "material_ids": [
+        "mat-cap-wise",
+        "mat-cap-kickstarter",
+        "mat-cap-nyt",
+        "mat-cap-airbuds",
+        "mat-cap-badoo",
+        "mat-cap-airbnb",
+        "mat-cap-zomato",
+        "mat-cap-yubo"
+      ],
+      "asset_ids": [
+        "mat-cap-wise",
+        "mat-cap-kickstarter",
+        "mat-cap-nyt",
+        "mat-cap-airbuds",
+        "mat-cap-badoo",
+        "mat-cap-airbnb",
+        "mat-cap-zomato",
+        "mat-cap-yubo"
+      ]
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cap-pinduoduo",
+      "labels": {
+        "state": "guest_or_logged_out",
+        "primary_task": "订单、钱包与服务入口",
+        "region": "CN"
+      }
+    },
+    {
+      "material_id": "mat-cap-doubao-logged-out",
+      "labels": {
+        "state": "logged_out",
+        "primary_task": "登录与学习入口",
+        "region": "CN"
+      }
+    },
+    {
+      "material_id": "mat-cap-doubao-logged-in",
+      "labels": {
+        "state": "logged_in",
+        "primary_task": "学习进度与任务中心",
+        "region": "CN"
+      }
+    },
+    {
+      "material_id": "mat-cap-kugou",
+      "labels": {
+        "state": "logged_out",
+        "primary_task": "会员权益与播放资产",
+        "region": "CN"
+      }
+    },
+    {
+      "material_id": "mat-cap-wise",
+      "labels": {
+        "state": "account",
+        "primary_task": "账户设置与身份管理",
+        "region": "Global"
+      }
+    },
+    {
+      "material_id": "mat-cap-kickstarter",
+      "labels": {
+        "state": "profile",
+        "primary_task": "个人身份与项目关系",
+        "region": "Global"
+      }
+    },
+    {
+      "material_id": "mat-cap-nyt",
+      "labels": {
+        "state": "signed_in",
+        "primary_task": "订阅与内容资产",
+        "region": "Global"
+      }
+    },
+    {
+      "material_id": "mat-cap-airbuds",
+      "labels": {
+        "state": "profile",
+        "primary_task": "播放历史与社交身份",
+        "region": "Global"
+      }
+    },
+    {
+      "material_id": "mat-cap-badoo",
+      "labels": {
+        "state": "profile",
+        "primary_task": "资料完成度与会员转化",
+        "region": "Global"
+      }
+    },
+    {
+      "material_id": "mat-cap-airbnb",
+      "labels": {
+        "state": "profile",
+        "primary_task": "个人资料与服务设置",
+        "region": "Global"
+      }
+    },
+    {
+      "material_id": "mat-cap-zomato",
+      "labels": {
+        "state": "profile",
+        "primary_task": "订单、余额与收藏",
+        "region": "Global"
+      }
+    },
+    {
+      "material_id": "mat-cap-yubo",
+      "labels": {
+        "state": "profile",
+        "primary_task": "资料完成度与社交资产",
+        "region": "Global"
+      }
+    }
+  ]
+}

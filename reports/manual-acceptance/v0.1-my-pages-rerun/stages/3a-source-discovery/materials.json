@@ -1,0 +1,339 @@
+{
+  "task": {
+    "raw_request": "重新验收，帮我搜集一下知名app“我的”页的竞品截图",
+    "research_goal": "重新验收：搜集知名移动端 App 的“我的”页 / 个人中心主页面，用于横向比较账号信息、内容资产、订单资产与服务入口的组织方式。",
+    "target_page": "我的页 / 个人中心",
+    "target_surface": "mobile_app",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "未指定 Web 或 Desktop，本次默认目标为 iOS/Android App Screen。",
+      "“我的”指用户进入个人中心后的主页面；设置、订单、钱包等子页不单独作为目标页。",
+      "优先纳入已加载、主体完整、可横向比较的单屏；完整但未登录的主页面可保留并标记 logged_out_complete，登录墙或无法查看主体内容的页面排除。",
+      "本轮候选只来自本次重新执行的 UI Notes 标签搜图、OCR 搜图和“个人中心”同义词检索，不复用旧验收报告、历史结果或固定 catalog。"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "豆包爱学",
+        "region": "CN",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本轮“我的”标签首批发现；个人中心包含登录状态、学习记录、消息、设置等核心入口。"
+      },
+      {
+        "product_name": "多邻国",
+        "region": "Global",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本轮候选中具有海外覆盖；个人资料、学习进度、社交关系和连续学习数据集中在个人页。"
+      },
+      {
+        "product_name": "酷狗畅听版",
+        "region": "CN",
+        "product_type": "音乐音频",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本轮“我的”与“个人中心”检索均命中；页面完整呈现登录、收藏、下载、最近播放与播放栏。"
+      },
+      {
+        "product_name": "喜茶GO",
+        "region": "CN",
+        "product_type": "本地生活/餐饮",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖服务型产品；个人页以会员权益、订单、客服、兑换和评价为主体。"
+      },
+      {
+        "product_name": "拼多多",
+        "region": "CN",
+        "product_type": "电商",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "知名电商代表；个人页集中订单、钱包、优惠券、收藏、地址与客服。"
+      },
+      {
+        "product_name": "智谱清言",
+        "region": "CN",
+        "product_type": "AI 工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖 AI 工具；个人页以作品、智能体、消息、积分与设置为主。"
+      },
+      {
+        "product_name": "壹心理",
+        "region": "CN",
+        "product_type": "心理服务",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖专业服务型社区；个人页组织咨询、课程、测评、订单和服务入口。"
+      },
+      {
+        "product_name": "淘宝特价版",
+        "region": "CN",
+        "product_type": "电商",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖低价电商；页面把订单、资产、营销权益和商品推荐组合在个人中心。"
+      },
+      {
+        "product_name": "阿里巴巴",
+        "region": "CN",
+        "product_type": "B2B 电商",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖企业采购/批发电商；个人页包含账户、订单、采购车和比价等工作入口。"
+      },
+      {
+        "product_name": "一淘",
+        "region": "CN",
+        "product_type": "导购电商",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖导购比价产品；个人页以登录、订单、优惠权益、推荐和购物车为核心。"
+      },
+      {
+        "product_name": "盒马",
+        "region": "CN",
+        "product_type": "商超零售",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖即时零售；个人页将会员、钱包、订单、活动与门店服务聚合。"
+      },
+      {
+        "product_name": "得物",
+        "region": "CN",
+        "product_type": "潮流电商/内容",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖内容+交易型电商；个人页同时承载创作、收藏、订单、钱包和卖家入口。"
+      },
+      {
+        "product_name": "懂车帝",
+        "region": "CN",
+        "product_type": "汽车内容/服务",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖垂直内容与服务产品；个人页包含创作、订阅、收藏、优惠券、订单和车主服务。"
+      },
+      {
+        "product_name": "转转",
+        "region": "CN",
+        "product_type": "二手交易",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖二手交易；个人页区分购买、出售、资产、钱包、回收和客服等路径。"
+      },
+      {
+        "product_name": "不背单词",
+        "region": "CN",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖学习工具的个人中心；页面聚合学习货币、装备、外观和学习设置。"
+      }
+    ],
+    "request": "重新验收，帮我搜集一下知名app“我的”页的竞品截图"
+  },
+  "competitors": [
+    {
+      "product_name": "豆包爱学",
+      "region": "CN",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "本轮“我的”标签首批发现；个人中心包含登录状态、学习记录、消息、设置等核心入口。"
+    },
+    {
+      "product_name": "多邻国",
+      "region": "Global",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "本轮候选中具有海外覆盖；个人资料、学习进度、社交关系和连续学习数据集中在个人页。"
+    },
+    {
+      "product_name": "酷狗畅听版",
+      "region": "CN",
+      "product_type": "音乐音频",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "本轮“我的”与“个人中心”检索均命中；页面完整呈现登录、收藏、下载、最近播放与播放栏。"
+    },
+    {
+      "product_name": "喜茶GO",
+      "region": "CN",
+      "product_type": "本地生活/餐饮",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖服务型产品；个人页以会员权益、订单、客服、兑换和评价为主体。"
+    },
+    {
+      "product_name": "拼多多",
+      "region": "CN",
+      "product_type": "电商",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "知名电商代表；个人页集中订单、钱包、优惠券、收藏、地址与客服。"
+    },
+    {
+      "product_name": "智谱清言",
+      "region": "CN",
+      "product_type": "AI 工具",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖 AI 工具；个人页以作品、智能体、消息、积分与设置为主。"
+    },
+    {
+      "product_name": "壹心理",
+      "region": "CN",
+      "product_type": "心理服务",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖专业服务型社区；个人页组织咨询、课程、测评、订单和服务入口。"
+    },
+    {
+      "product_name": "淘宝特价版",
+      "region": "CN",
+      "product_type": "电商",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖低价电商；页面把订单、资产、营销权益和商品推荐组合在个人中心。"
+    },
+    {
+      "product_name": "阿里巴巴",
+      "region": "CN",
+      "product_type": "B2B 电商",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖企业采购/批发电商；个人页包含账户、订单、采购车和比价等工作入口。"
+    },
+    {
+      "product_name": "一淘",
+      "region": "CN",
+      "product_type": "导购电商",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖导购比价产品；个人页以登录、订单、优惠权益、推荐和购物车为核心。"
+    },
+    {
+      "product_name": "盒马",
+      "region": "CN",
+      "product_type": "商超零售",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖即时零售；个人页将会员、钱包、订单、活动与门店服务聚合。"
+    },
+    {
+      "product_name": "得物",
+      "region": "CN",
+      "product_type": "潮流电商/内容",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖内容+交易型电商；个人页同时承载创作、收藏、订单、钱包和卖家入口。"
+    },
+    {
+      "product_name": "懂车帝",
+      "region": "CN",
+      "product_type": "汽车内容/服务",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖垂直内容与服务产品；个人页包含创作、订阅、收藏、优惠券、订单和车主服务。"
+    },
+    {
+      "product_name": "转转",
+      "region": "CN",
+      "product_type": "二手交易",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖二手交易；个人页区分购买、出售、资产、钱包、回收和客服等路径。"
+    },
+    {
+      "product_name": "不背单词",
+      "region": "CN",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "覆盖学习工具的个人中心；页面聚合学习货币、装备、外观和学习设置。"
+    }
+  ],
+  "assets": [],
+  "classification": {
+    "classification_status": "unavailable",
+    "classification_dimension": "",
+    "classification_reason": "正式动态分类仅在 Stage 4 Agent Classification Plan 流程执行",
+    "groups": [],
+    "material_labels": []
+  }
+}

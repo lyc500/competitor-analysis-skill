@@ -180,3 +180,47 @@
 ## 当前结论
 
 V0.1 MVP 已完成最终独立验收。Stage 1、Stage 2、Stage 3A、Stage 3B、Stage 3C、Stage 4、Stage 5A、Stage 5B-R1、Stage 5C 和 Cold-start 均已完成相应验收并关闭；报告竖屏截图布局问题已关闭。首次 Desktop Web 工程 E2E、移动端补正、Stage 5C 和 Cold-start 的完整验收历史及 rejected / fallback 证据均保留在 `reports/acceptance/` 下。
+
+## 2026-10-20 手工重新验收：知名 App“我的”页
+
+- [x] 按当前 `SKILL.md` 重新执行开放式候选发现：UI Notes 标签搜图、OCR 搜图、“个人中心”同义词检索，并持续下滑至连续两批无新增。
+- [x] 本轮独立候选登记 35 个：15 个通过语义与机械质量双门槛并进入报告，1 个因产品身份/页面主体不确定且为空态被拒绝，19 个保留 `not_reviewed` 及原因。
+- [x] 新报告位于 `reports/manual-acceptance/v0.1-my-pages-rerun/report.html`；未读取或复用旧验收报告中的竞品、素材或结论。
+- [x] 最终按“个人中心的核心组织方式”动态分为“成长与内容资产中心”“会员与服务聚合中心”“订单与交易资产中心”三组；本轮没有触发超过 20 张的渐进展开。
+- [x] 本次未修改 production Python、Skill 或测试；仅新增本轮验收产物，并记录本状态结论。
+
+## 2026-10-20 海外来源页面命名映射能力
+
+- [x] 将海外来源检索抽象为通用的“页面意图 → 海外常用命名词族”步骤，不再把中文页面名称当作唯一英文查询词；规则覆盖“我的”、账户、发布、搜索和详情等页面类型。
+- [x] 为“我的”/“个人中心”补充 `Profile`、`You`、`Me`、`Account`、`My Account`、`My Page` 词族，并接入 PTTRNS `Profile & Account`、Refero page type 15、Mobbin `My Account & Profile` 三类来源入口说明。
+- [x] 明确记录原始名称、映射词族、实际查询词、来源入口、访问状态、可见范围、分页/滚动批次和候选处置；命中来源 taxonomy 不替代页面角色、交互阶段、渲染状态和视觉质量审核。
+- [x] 明确海外来源的权限/空结果/错误/付费限制 fallback，不绕过登录或付费，不使用固定 catalog、fixture、历史报告补齐正式候选。
+- [x] 新增 Skill 契约测试 `test_foreign_sources_translate_page_intent_to_local_naming_vocabulary`；定向测试通过。
+- [x] 本轮仅验证三个海外入口的可发现性：PTTRNS 与 Mobbin 在当前 Web 工具中不可直接访问，Refero 可打开但未返回可解析的页面正文；没有把这些入口的可访问性误记为已采集素材。
+
+## 2026-10-20 动态 UI 数据库访问状态修正
+
+- [x] 将“文本工具可解析”和“真实浏览器可访问/可交互”拆为独立状态，新增 `web_text_accessible`、`browser_accessible`、`browser_interactive`、`content_available` 和 `access_status` 记录要求。
+- [x] 对依赖 JavaScript、会话、滚动加载或筛选交互的 UI 数据库改为浏览器优先；文本抓取失败不再直接触发来源 fallback。
+- [x] 明确浏览器可用时仍需提取单屏 App UI，并通过产品身份、页面角色、状态、Surface/平台和视觉质量审核；来源整页不能直接作为竞品素材。
+- [x] 新增 Skill 契约测试 `test_dynamic_ui_databases_use_browser_access_as_separate_source_status`；定向测试通过。
+
+## 2026-10-20 手工重新验收：国内外知名 App“我的”页（fresh rerun-2）
+
+- [x] 以全新候选发现运行重新执行当前 `SKILL.md`：UI Notes 使用“我的”与“个人中心”检索并连续下滑；海外来源将“我的”映射为 `Profile / You / Me / Account / My Account / My Page`，分别访问 Refero、Mobbin、PTTRNS。
+- [x] 本轮未读取或复用 `reports/acceptance/`、旧 `v0.1-my-pages/`、旧 `v0.1-my-pages-rerun/` 中的竞品、URL、截图或分类结论；未使用 fixture_demo、固定 catalog 或历史测试结果作为样本来源。
+- [x] 11 个规划产品取得 12 张有效移动端截图：国内拼多多、豆包爱学（未登录/已登录两种状态）、酷狗畅听版；海外 Wise、Kickstarter、The New York Times、Airbuds、Badoo、Airbnb、Zomato、Yubo。
+- [x] Refero 的 Duolingo 设置子页、Revolut 账户详情子页、Mobbin 的 Ahead 测评/进度页均被拒绝；PTTRNS 目标路径跳转首页，保留 fallback；Refero/Mobbin 的隐藏或付费边界未绕过。
+- [x] Stage 2 来源发现、Stage 3C 语义与机械质量审核、Stage 4 动态分类均通过；报告按“我的页首屏主任务与个人资产组织方式”分为“身份资料与关系资产”“内容消费与成长资产”“交易服务与账户资产”三组。
+- [x] 报告位于 `reports/manual-acceptance/v0.1-my-pages-rerun-2/report.html`，HTML 含 12 张卡片与 12 个本地资产；当前样本不超过 20 张，未触发“更多”按钮。
+- [x] 全量自动化测试：`python3 -m unittest discover -s tests -p 'test_*.py' -q`，102 项通过；复跑需要本机 localhost 端口权限，沙箱首次运行的 3 个端口错误不代表代码失败。
+- [x] 本轮未 commit、未 push，等待用户明确反馈“验证通过”。
+- [x] 根据用户反馈调整报告展示：国内竞品置前并单独分组为“国内竞品｜主参考”，海外竞品单独分组为“海外竞品｜单独参考”，不再混排；海外 8 张素材遵循每行 5 张的网格规则在同一组内换行。
+- [x] 已核对上一版差异：上一版规划 15 个国内产品并全部进入报告；本版规划为 3 个国内产品 + 8 个海外产品，豆包爱学有两个状态，因此国内从 15 张降为 4 张，主因是规划范围改变，不是审核大量拒绝。
+
+## 2026-10-20 开放式竞品数量上限调整
+
+- [x] 根据用户最新要求，将 Skill 的开放式候选池规则从“取消 3–5 个上限”明确为“最多 50 个”；50 个是容量上限，不是必须凑足的目标数量。
+- [x] 超过 50 个时按目标相关性、地区/产品类型覆盖、页面匹配度、素材质量和来源可追溯性排序截断，并要求记录被截断候选及原因；页面语义和质量准入不因数量上限放宽。
+- [x] 更新 `tests/test_skill_contract.py` 契约测试，并先观察旧 Skill 在新测试下失败，再修改 Skill 后定向测试通过。
+- [x] 本次报告继续保持国内竞品组在前、海外竞品组最后；未执行 commit 或 push。

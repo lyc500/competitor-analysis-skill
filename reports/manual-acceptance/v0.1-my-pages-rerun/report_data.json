@@ -1,0 +1,971 @@
+{
+  "task": {
+    "raw_request": "重新验收，帮我搜集一下知名app“我的”页的竞品截图",
+    "research_goal": "重新验收：搜集知名移动端 App 的“我的”页 / 个人中心主页面，用于横向比较账号信息、内容资产、订单资产与服务入口的组织方式。",
+    "target_page": "我的页 / 个人中心",
+    "target_surface": "mobile_app",
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "未指定 Web 或 Desktop，本次默认目标为 iOS/Android App Screen。",
+      "“我的”指用户进入个人中心后的主页面；设置、订单、钱包等子页不单独作为目标页。",
+      "优先纳入已加载、主体完整、可横向比较的单屏；完整但未登录的主页面可保留并标记 logged_out_complete，登录墙或无法查看主体内容的页面排除。",
+      "本轮候选只来自本次重新执行的 UI Notes 标签搜图、OCR 搜图和“个人中心”同义词检索，不复用旧验收报告、历史结果或固定 catalog。"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "豆包爱学",
+        "region": "CN",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本轮“我的”标签首批发现；个人中心包含登录状态、学习记录、消息、设置等核心入口。"
+      },
+      {
+        "product_name": "多邻国",
+        "region": "Global",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本轮候选中具有海外覆盖；个人资料、学习进度、社交关系和连续学习数据集中在个人页。"
+      },
+      {
+        "product_name": "酷狗畅听版",
+        "region": "CN",
+        "product_type": "音乐音频",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本轮“我的”与“个人中心”检索均命中；页面完整呈现登录、收藏、下载、最近播放与播放栏。"
+      },
+      {
+        "product_name": "喜茶GO",
+        "region": "CN",
+        "product_type": "本地生活/餐饮",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖服务型产品；个人页以会员权益、订单、客服、兑换和评价为主体。"
+      },
+      {
+        "product_name": "拼多多",
+        "region": "CN",
+        "product_type": "电商",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "知名电商代表；个人页集中订单、钱包、优惠券、收藏、地址与客服。"
+      },
+      {
+        "product_name": "智谱清言",
+        "region": "CN",
+        "product_type": "AI 工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖 AI 工具；个人页以作品、智能体、消息、积分与设置为主。"
+      },
+      {
+        "product_name": "壹心理",
+        "region": "CN",
+        "product_type": "心理服务",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖专业服务型社区；个人页组织咨询、课程、测评、订单和服务入口。"
+      },
+      {
+        "product_name": "淘宝特价版",
+        "region": "CN",
+        "product_type": "电商",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖低价电商；页面把订单、资产、营销权益和商品推荐组合在个人中心。"
+      },
+      {
+        "product_name": "阿里巴巴",
+        "region": "CN",
+        "product_type": "B2B 电商",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖企业采购/批发电商；个人页包含账户、订单、采购车和比价等工作入口。"
+      },
+      {
+        "product_name": "一淘",
+        "region": "CN",
+        "product_type": "导购电商",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖导购比价产品；个人页以登录、订单、优惠权益、推荐和购物车为核心。"
+      },
+      {
+        "product_name": "盒马",
+        "region": "CN",
+        "product_type": "商超零售",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖即时零售；个人页将会员、钱包、订单、活动与门店服务聚合。"
+      },
+      {
+        "product_name": "得物",
+        "region": "CN",
+        "product_type": "潮流电商/内容",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖内容+交易型电商；个人页同时承载创作、收藏、订单、钱包和卖家入口。"
+      },
+      {
+        "product_name": "懂车帝",
+        "region": "CN",
+        "product_type": "汽车内容/服务",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖垂直内容与服务产品；个人页包含创作、订阅、收藏、优惠券、订单和车主服务。"
+      },
+      {
+        "product_name": "转转",
+        "region": "CN",
+        "product_type": "二手交易",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖二手交易；个人页区分购买、出售、资产、钱包、回收和客服等路径。"
+      },
+      {
+        "product_name": "不背单词",
+        "region": "CN",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "覆盖学习工具的个人中心；页面聚合学习货币、装备、外观和学习设置。"
+      }
+    ],
+    "request": "重新验收，帮我搜集一下知名app“我的”页的竞品截图"
+  },
+  "materials": [
+    {
+      "id": "my-ui-001",
+      "product_name": "豆包爱学",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_out_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/133323406851668822",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/133323406851668822.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/a122694cdf8f7b02.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图主体是豆包爱学底部导航选中的“我的”，展示登录入口、金币商城、任务中心、学习记录、消息、帮助与设置；处于已加载的完整未登录状态，未出现登录墙遮挡主体；目标为 iOS App 单屏，主体完整、文字和图标清晰，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "登录状态区",
+        "学习/任务快捷入口",
+        "功能列表",
+        "底部我的导航"
+      ],
+      "observed_patterns": [
+        "未登录也保留功能骨架",
+        "列表式功能聚合"
+      ],
+      "notes": "登录提示保留为状态标签，不作为排除理由。"
+    },
+    {
+      "id": "my-ui-002",
+      "product_name": "多邻国",
+      "page_name": "我的页 / 个人中心",
+      "region": "Global",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_in_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/004403109497668392",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/004403109497668392.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/0b751e3d57ce61a2.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图主体是多邻国用户个人页，展示用户名、课程、关注/关注者、学习天数、经验和社交关系槽位；处于已加载完成状态，目标为 iOS App 单屏，主体完整且视觉清晰，属于个人中心/个人资料型 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "用户资料头部",
+        "学习进度统计",
+        "社交关系",
+        "底部功能导航"
+      ],
+      "observed_patterns": [
+        "成长数据前置",
+        "个人资料与社交关系融合"
+      ],
+      "notes": "按“我的/个人中心”语义纳入个人资料型主页面。"
+    },
+    {
+      "id": "my-ui-003",
+      "product_name": "酷狗畅听版",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "音乐音频",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_out_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/438158835260733576",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/438158835260733576.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/b6c1a219f21d6a2c.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图为酷狗畅听版底部导航选中的“我的”，展示登录入口、我喜欢、已下载、最近播放、歌曲列表和播放栏；处于已加载完整未登录状态，目标为 iOS App 单屏，主体完整且文字可读，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "音乐账户区",
+        "内容资产卡片",
+        "最近播放列表",
+        "底部我的导航"
+      ],
+      "observed_patterns": [
+        "内容资产与播放历史并列",
+        "未登录状态下仍保留内容容器"
+      ],
+      "notes": "登录提示不遮挡页面主结构。"
+    },
+    {
+      "id": "my-ui-004",
+      "product_name": "喜茶GO",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "本地生活/餐饮",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_out_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/667567417512043064",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/667567417512043064.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/a18a467d3ce55498.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图底部导航明确选中“我的”，主体展示登录领取权益、喜茶券/喜卡/喜钱袋/积分商城、我的订单、客服、团餐预定和兑换中心；虽然用户数据以未登录占位呈现，但页面主体完整加载，目标为 iOS App 单屏，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "会员权益",
+        "订单与服务",
+        "兑换/积分入口",
+        "底部我的导航"
+      ],
+      "observed_patterns": [
+        "权益驱动型个人中心",
+        "服务清单纵向组织"
+      ],
+      "notes": "标记 logged_out_complete；未把登录按钮误判为 login_intercept。"
+    },
+    {
+      "id": "my-ui-005",
+      "product_name": "拼多多",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "电商",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_out_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/658360019995979356",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/658360019995979356.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/dc2a5050c31a0fd2.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图主体为拼多多个人中心，展示微信登录、订单状态、多多钱包、优惠券、商品收藏、店铺关注、历史浏览、退款售后、地址和客服；页面主体完整已加载，登录入口未遮挡内容，目标为 iOS App 单屏，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "订单状态",
+        "钱包/优惠",
+        "收藏与浏览",
+        "服务工具",
+        "商品推荐"
+      ],
+      "observed_patterns": [
+        "电商工具矩阵",
+        "订单与营销权益分层"
+      ],
+      "notes": "标记 logged_out_complete。"
+    },
+    {
+      "id": "my-ui-006",
+      "product_name": "智谱清言",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "AI 工具",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_in_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/025429166561164948",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/025429166561164948.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/242d1492cfecfc94.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图主体为智谱清言个人页，展示头像账户、我的作品、智能体中心、消息中心、积分、订单和设置；处于已加载完成状态，目标为 iOS App 单屏，主体完整、文本和图标清晰，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "账户头部",
+        "作品/智能体入口",
+        "消息与积分",
+        "订单与设置"
+      ],
+      "observed_patterns": [
+        "AI 资产入口前置",
+        "账户与服务设置合并"
+      ],
+      "notes": "以个人中心主页面纳入，未把设置子页单独拆出。"
+    },
+    {
+      "id": "my-ui-007",
+      "product_name": "壹心理",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "心理服务",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_out_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/000518954600278122",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/000518954600278122.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/03c6aea8ff89e365.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图底部导航选中“我的”，主体展示注册权益、咨询室、我的服务、订单、测评报告、课程和心理咨询推荐；页面结构完整加载，注册提示不遮挡主体，目标为 iOS App 单屏，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "注册/权益提示",
+        "咨询与服务",
+        "订单矩阵",
+        "服务推荐"
+      ],
+      "observed_patterns": [
+        "专业服务订单化",
+        "服务入口与营销权益结合"
+      ],
+      "notes": "标记 logged_out_complete。"
+    },
+    {
+      "id": "my-ui-008",
+      "product_name": "淘宝特价版",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "电商",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_in_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/132747344250734274",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/132747344250734274.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/d47be018b072bab1.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图底部导航选中“我的”，主体展示订单、红包/优惠券/购物金、活动 Banner、商品推荐和购物车；页面已加载完成，目标为 iOS App 单屏，主体完整且可读，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "订单/资产",
+        "营销活动",
+        "商品推荐",
+        "底部导航"
+      ],
+      "observed_patterns": [
+        "电商个人中心与推荐流融合",
+        "资产卡片前置"
+      ],
+      "notes": "保留完整页面，不把推荐内容误归为首页。"
+    },
+    {
+      "id": "my-ui-009",
+      "product_name": "阿里巴巴",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "B2B 电商",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_out_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/018621050003319015",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/018621050003319015.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/a03fc94c77b1a512.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图底部导航选中“我的”，主体展示支付宝登录、订单状态、补贴、推荐、收藏/足迹、比价与采购车；页面主体完整加载，登录入口不遮挡核心内容，目标为 iOS App 单屏，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "登录与订单",
+        "优惠权益",
+        "采购/比价工具",
+        "商品推荐"
+      ],
+      "observed_patterns": [
+        "B2B 采购工具聚合",
+        "订单与采购流程并列"
+      ],
+      "notes": "标记 logged_out_complete。"
+    },
+    {
+      "id": "my-ui-010",
+      "product_name": "一淘",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "导购电商",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_in_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/061169721493993576",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/061169721493993576.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/07f098b2bf8b38b3.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图底部导航选中“我的”，主体展示账户、会员权益、订单、优惠券、推荐商品、购物车和服务入口；页面已加载完整，目标为 iOS App 单屏，主体清晰且未出现加载/错误/空态主导，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "账户与会员",
+        "订单状态",
+        "推荐与优惠",
+        "购物车/服务"
+      ],
+      "observed_patterns": [
+        "导购权益前置",
+        "推荐商品嵌入个人中心"
+      ],
+      "notes": "保留页面中可见商品推荐，因为其属于个人中心内部模块。"
+    },
+    {
+      "id": "my-ui-011",
+      "product_name": "盒马",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "商超零售",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_in_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/327553016242661235",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/327553016242661235.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/e5bf35ce375a65b9.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图底部导航选中“我的”，主体展示会员、钱包、订单、通知、活动日历、优惠券、门店服务和购物车；页面已加载完整，目标为 iOS App 单屏，主体完整且清晰，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "会员与钱包",
+        "订单状态",
+        "促销活动",
+        "门店/售后服务"
+      ],
+      "observed_patterns": [
+        "即时零售服务聚合",
+        "会员权益与履约工具并列"
+      ],
+      "notes": "将页面整体作为个人中心，不拆成订单或钱包子页。"
+    },
+    {
+      "id": "my-ui-012",
+      "product_name": "得物",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "潮流电商/内容",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_out_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/508614918845893842",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/508614918845893842.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/4e60579395ef9ebe.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图底部导航选中“我”，主体展示登录注册、创作中心、想要、足迹、关注、我有、订单、钱包、卖家/品牌入驻和省钱工具；页面主体完整加载，登录提示不遮挡核心结构，目标为 iOS App 单屏，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "账户与创作",
+        "交易订单",
+        "钱包/资产",
+        "卖家服务"
+      ],
+      "observed_patterns": [
+        "内容与交易双入口",
+        "创作者和消费者身份并置"
+      ],
+      "notes": "标记 logged_out_complete。"
+    },
+    {
+      "id": "my-ui-013",
+      "product_name": "懂车帝",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "汽车内容/服务",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_out_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/612887545133740724",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/612887545133740724.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/5e8dbc487485ec54.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图底部导航进入未登录/个人中心，主体展示创作中心、关注订阅、收藏、优惠券、我的订单、车主服务与汽车活动；页面主体完整加载，登录入口不遮挡内容，目标为 iOS App 单屏，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "账户状态",
+        "内容订阅",
+        "订单与车主服务",
+        "汽车活动"
+      ],
+      "observed_patterns": [
+        "垂直内容与服务融合",
+        "创作与车主工具并列"
+      ],
+      "notes": "标记 logged_out_complete。"
+    },
+    {
+      "id": "my-ui-014",
+      "product_name": "转转",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "二手交易",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_out_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/026234696324700781",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/026234696324700781.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/6731391f5230d555.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图底部导航选中“我的”，主体展示登录、红包/收藏/足迹/购物车/订阅、购买与出售、资产、钱包、回收、客服和安全中心；页面主体完整加载，登录提示不遮挡核心结构，目标为 iOS App 单屏，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "账户资产",
+        "购买与出售",
+        "钱包/回收",
+        "客服与安全"
+      ],
+      "observed_patterns": [
+        "交易双向路径并列",
+        "资产与服务分区"
+      ],
+      "notes": "标记 logged_out_complete。"
+    },
+    {
+      "id": "my-ui-015",
+      "product_name": "不背单词",
+      "page_name": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "page_role": "我的页 / 个人中心",
+      "interaction_stage": "进入后",
+      "render_state": "logged_in_complete",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/168392972276229080",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/168392972276229080.webp?v1",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "captured_at": "2026-10-20",
+      "image_path": "assets/a841e918be6ecc97.webp",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份由 UI Notes 产品标识确认；截图主体为不背单词个人中心，展示头像、酷币、装备、外观与沉浸场景、学习设置和更多设置；页面已加载完成，目标为 iOS App 单屏，主体完整、图标与文字清晰，属于 ui_page。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、1170x2532 单屏、主体清晰且无严重裁切。",
+      "collection_status": "collected",
+      "observed_structure": [
+        "用户账户",
+        "学习资产",
+        "个性化外观",
+        "学习设置"
+      ],
+      "observed_patterns": [
+        "学习资产游戏化",
+        "设置入口与成长资产并列"
+      ],
+      "notes": "按学习工具的个人中心主页面纳入。"
+    }
+  ],
+  "classification": {
+    "classification_status": "ready",
+    "classification_dimension": "个人中心的核心组织方式",
+    "classification_reason": "本轮素材都属于已加载的“我的/个人中心”主页面，因此不再按检索来源或产品大类硬分，而是根据页面首屏最主要的任务组织方式动态分组：学习/内容资产、会员/专业服务、订单/交易资产。登录状态作为独立标签保留，避免把未登录和已登录混成同一状态。",
+    "groups": [
+      {
+        "name": "成长与内容资产中心",
+        "reason": "首屏优先展示学习进度、用户内容资产、作品/智能体或播放历史，功能入口围绕个人成长与内容消费组织。",
+        "material_ids": [
+          "my-ui-001",
+          "my-ui-002",
+          "my-ui-003",
+          "my-ui-006",
+          "my-ui-015"
+        ],
+        "asset_ids": [
+          "my-ui-001",
+          "my-ui-002",
+          "my-ui-003",
+          "my-ui-006",
+          "my-ui-015"
+        ]
+      },
+      {
+        "name": "会员与服务聚合中心",
+        "reason": "首屏以会员权益、专业服务、门店/车主服务、订单服务或权益兑换为主，个人页承担服务履约和权益管理。",
+        "material_ids": [
+          "my-ui-004",
+          "my-ui-007",
+          "my-ui-011",
+          "my-ui-013"
+        ],
+        "asset_ids": [
+          "my-ui-004",
+          "my-ui-007",
+          "my-ui-011",
+          "my-ui-013"
+        ]
+      },
+      {
+        "name": "订单与交易资产中心",
+        "reason": "首屏以订单状态、钱包/优惠、购物或出售路径、交易资产和售后工具为主，个人页是交易关系的集中管理入口。",
+        "material_ids": [
+          "my-ui-005",
+          "my-ui-008",
+          "my-ui-009",
+          "my-ui-010",
+          "my-ui-012",
+          "my-ui-014"
+        ],
+        "asset_ids": [
+          "my-ui-005",
+          "my-ui-008",
+          "my-ui-009",
+          "my-ui-010",
+          "my-ui-012",
+          "my-ui-014"
+        ]
+      }
+    ],
+    "material_labels": [
+      {
+        "material_id": "my-ui-001",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/未登录",
+          "page_role": "我的页",
+          "result_object": "学习记录与账户功能",
+          "layout": "列表式功能聚合"
+        }
+      },
+      {
+        "material_id": "my-ui-002",
+        "labels": {
+          "region": "Global",
+          "path_stage": "进入个人中心",
+          "state": "已加载/已登录",
+          "page_role": "个人资料页",
+          "result_object": "学习进度与社交关系",
+          "layout": "资料头部+成长统计"
+        }
+      },
+      {
+        "material_id": "my-ui-003",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/未登录",
+          "page_role": "我的页",
+          "result_object": "音乐资产与播放历史",
+          "layout": "资产卡片+内容列表"
+        }
+      },
+      {
+        "material_id": "my-ui-004",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/未登录",
+          "page_role": "我的页",
+          "result_object": "会员权益与服务订单",
+          "layout": "权益卡片+服务清单"
+        }
+      },
+      {
+        "material_id": "my-ui-005",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/未登录",
+          "page_role": "个人中心",
+          "result_object": "订单、钱包与电商工具",
+          "layout": "订单横向入口+功能矩阵"
+        }
+      },
+      {
+        "material_id": "my-ui-006",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/已登录",
+          "page_role": "个人中心",
+          "result_object": "作品、智能体与账户服务",
+          "layout": "账户头部+功能分组"
+        }
+      },
+      {
+        "material_id": "my-ui-007",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/未登录",
+          "page_role": "我的页",
+          "result_object": "咨询、课程与测评服务",
+          "layout": "服务宫格+推荐卡片"
+        }
+      },
+      {
+        "material_id": "my-ui-008",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/已登录",
+          "page_role": "我的页",
+          "result_object": "订单、资产与商品推荐",
+          "layout": "资产区+推荐流"
+        }
+      },
+      {
+        "material_id": "my-ui-009",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/未登录",
+          "page_role": "我的页",
+          "result_object": "采购订单与采购工具",
+          "layout": "订单区+采购工具"
+        }
+      },
+      {
+        "material_id": "my-ui-010",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/已登录",
+          "page_role": "我的页",
+          "result_object": "会员、订单与优惠",
+          "layout": "会员权益+推荐商品"
+        }
+      },
+      {
+        "material_id": "my-ui-011",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/已登录",
+          "page_role": "我的页",
+          "result_object": "零售会员、订单与门店服务",
+          "layout": "会员卡+服务矩阵"
+        }
+      },
+      {
+        "material_id": "my-ui-012",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/未登录",
+          "page_role": "我/个人中心",
+          "result_object": "创作、交易与卖家服务",
+          "layout": "身份入口+交易工具"
+        }
+      },
+      {
+        "material_id": "my-ui-013",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/未登录",
+          "page_role": "未登录个人中心",
+          "result_object": "汽车内容、创作与车主服务",
+          "layout": "内容订阅+服务宫格"
+        }
+      },
+      {
+        "material_id": "my-ui-014",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/未登录",
+          "page_role": "我的页",
+          "result_object": "购买、出售与回收资产",
+          "layout": "交易双向入口+资产区"
+        }
+      },
+      {
+        "material_id": "my-ui-015",
+        "labels": {
+          "region": "CN",
+          "path_stage": "进入个人中心",
+          "state": "已加载/已登录",
+          "page_role": "个人中心",
+          "result_object": "学习资产与个性化设置",
+          "layout": "账户头部+资产卡片+设置列表"
+        }
+      }
+    ]
+  },
+  "fallback_requests": [],
+  "excluded_summary": {
+    "rejected": 0,
+    "pending": 0,
+    "unavailable": 0
+  }
+}

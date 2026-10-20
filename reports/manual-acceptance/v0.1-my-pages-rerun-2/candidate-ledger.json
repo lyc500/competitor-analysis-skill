@@ -1,0 +1,45 @@
+{
+  "run_id": "manual-acceptance-v0.1-my-pages-rerun-2",
+  "run_date": "2026-10-20",
+  "target_page": "我的页 / 个人中心主页面",
+  "fresh_run": true,
+  "discovery_scope": {
+    "source_providers": ["UI Notes", "Refero", "Mobbin", "PTTRNS"],
+    "foreign_query_mapping": ["Profile", "You", "Me", "Account", "My Account", "My Page"],
+    "queries": [
+      {"provider": "UI Notes", "query": "我的", "mode": "tag_pin", "observation": "新打开检索页首批候选，并连续下滑两批确认没有新的目标产品进入当前加载批次"},
+      {"provider": "UI Notes", "query": "个人中心", "mode": "tag_pin_or_ocr", "observation": "作为中文同义词补充检索"},
+      {"provider": "Refero", "query": "page type 15 / Profile & Account", "mode": "browser_search", "observation": "页面显示 8 个可见结果，另有 2174 个隐藏或需权限结果"},
+      {"provider": "Mobbin", "query": "My Account & Profile", "mode": "browser_filter", "observation": "页面显示 2295 个 screens，当前可见首批 5 个结果，后续受权限边界限制"},
+      {"provider": "PTTRNS", "query": "Profile & Account", "mode": "browser_navigation", "observation": "目标路径跳转到 PTTRNS 首页，未取得可核验目标页"}
+    ],
+    "observed_candidates": "UI Notes 首轮与同义词检索观察到至少 35 个产品候选；Refero 可见 8 个卡片；Mobbin 首批可见 5 个卡片。站点总数未直接当作已审核样本数量。"
+  },
+  "accepted": [
+    {"candidate_id": "cap-pinduoduo", "product_name": "拼多多", "source_provider": "UI Notes", "source_url": "https://uinotes.com/pin/658360019995979356", "query": "我的", "state": "guest_or_logged_out", "reason": "个人中心主页面完整可见，含订单、钱包、收藏、地址、客服与底部个人中心。"},
+    {"candidate_id": "cap-doubao-logged-out", "product_name": "豆包爱学", "source_provider": "UI Notes", "source_url": "https://uinotes.com/pin/133323406851668822", "query": "我的", "state": "logged_out", "reason": "未登录状态的个人中心主页面完整可见。"},
+    {"candidate_id": "cap-doubao-logged-in", "product_name": "豆包爱学", "source_provider": "UI Notes", "source_url": "https://uinotes.com/pin/096876602836684120", "query": "我的", "state": "logged_in", "reason": "已登录状态的个人中心主页面完整可见。"},
+    {"candidate_id": "cap-kugou", "product_name": "酷狗畅听版", "source_provider": "UI Notes", "source_url": "https://uinotes.com/pin/438158835260733576", "query": "我的", "state": "logged_out", "reason": "音乐产品个人中心主页面完整可见，含会员、喜欢、下载和最近播放。"},
+    {"candidate_id": "cap-wise", "product_name": "Wise", "source_provider": "Refero", "source_url": "https://refero.design/screens/199c7406-cf97-46b2-8da0-0d80ab603631?page_types%5Bid%5D%5B%5D=15&source=search", "query": "Profile & Account", "state": "account", "reason": "Your account 主页面完整可见。"},
+    {"candidate_id": "cap-kickstarter", "product_name": "Kickstarter", "source_provider": "Refero", "source_url": "https://refero.design/screens/01bf2c7b-fbf6-4c25-8986-49d846699fef?page_types%5Bid%5D%5B%5D=15&source=search", "query": "Profile & Account", "state": "profile", "reason": "Profile 主页面完整可见。"},
+    {"candidate_id": "cap-nyt", "product_name": "The New York Times", "source_provider": "Refero", "source_url": "https://refero.design/screens/bfcdc685-196c-4248-9161-0f2523082dae?page_types%5Bid%5D%5B%5D=15&source=search", "query": "Profile & Account", "state": "signed_in", "reason": "You 主页面完整可见，含订阅和内容入口。"},
+    {"candidate_id": "cap-airbuds", "product_name": "Airbuds", "source_provider": "Refero", "source_url": "https://refero.design/screens/cdb87543-4d9a-4f5e-9a95-035361942d3c?page_types%5Bid%5D%5B%5D=15&source=search", "query": "Profile & Account", "state": "profile", "reason": "个人资料主页面完整可见，含播放历史、收藏与社交信息。"},
+    {"candidate_id": "cap-badoo", "product_name": "Badoo", "source_provider": "Mobbin", "source_url": "https://mobbin.com/screens/5bbf18f3-5f00-41d9-a922-fce9b0e470d3", "query": "My Account & Profile", "state": "profile", "reason": "Profile 主页面完整可见。"},
+    {"candidate_id": "cap-airbnb", "product_name": "Airbnb", "source_provider": "Mobbin", "source_url": "https://mobbin.com/screens/8eaec6d9-bb74-448f-b9a1-dc40fb4b60f6", "query": "My Account & Profile", "state": "profile", "reason": "Profile 主页面完整可见。"},
+    {"candidate_id": "cap-zomato", "product_name": "Zomato", "source_provider": "Mobbin", "source_url": "https://mobbin.com/screens/1acec541-41e4-46e8-b46d-ce8c82448990", "query": "My Account & Profile", "state": "profile", "reason": "个人中心主页面完整可见，含订单、余额、收藏和资料入口。"},
+    {"candidate_id": "cap-yubo", "product_name": "Yubo", "source_provider": "Mobbin", "source_url": "https://mobbin.com/screens/c59c7d5d-867b-4609-b1ef-5941f50ab971", "query": "My Account & Profile", "state": "profile", "reason": "个人中心主页面完整可见。"}
+  ],
+  "rejected_or_fallback": [
+    {"candidate_id": "cand-refero-duolingo", "product_name": "Duolingo", "source_provider": "Refero", "status": "rejected", "source_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types%5Bid%5D%5B%5D=15&source=search", "reason": "实际截图是设置子页，不是个人中心主页面。"},
+    {"candidate_id": "cand-refero-revolut", "product_name": "Revolut", "source_provider": "Refero", "status": "rejected", "source_url": "https://refero.design/screens/8adec783-5f17-478d-ba28-f063eeebd7b8?page_types%5Bid%5D%5B%5D=15&source=search", "reason": "实际截图是账户详情/交易子页，不是个人中心主页面。"},
+    {"candidate_id": "cand-mobbin-ahead", "product_name": "Ahead", "source_provider": "Mobbin", "status": "rejected", "source_url": "https://mobbin.com/screens/00ffcbcb-378c-42e7-ad98-456b16b2c6a5", "reason": "实际截图是心理测评/进度页，不是个人中心主页面。"},
+    {"candidate_id": "cand-pttrns-profile-account", "product_name": "PTTRNS Profile & Account", "source_provider": "PTTRNS", "status": "fallback", "source_url": "https://app.pttrns.com/patterns?categories=profile-account", "reason": "目标路径跳转到 PTTRNS 首页，未获得可核验的 Profile & Account 结果；未绕过登录或付费边界。"},
+    {"candidate_id": "cand-refero-md-vinyl", "product_name": "MD Vinyl", "source_provider": "Refero", "status": "not_reviewed", "source_url": "https://refero.design/screens/0bf7f2db-473e-4f8e-a293-4a20657d66bd?page_types%5Bid%5D%5B%5D=15&source=search", "reason": "本轮可见候选未完成目标页语义确认，因此不进入有效样本。"},
+    {"candidate_id": "cand-refero-tidal", "product_name": "TIDAL", "source_provider": "Refero", "status": "not_reviewed", "source_url": "https://refero.design/screens/7a4d4c3f-687d-4501-b747-2dc1233f1928?page_types%5Bid%5D%5B%5D=15&source=search", "reason": "本轮可见候选未完成目标页语义确认，因此不进入有效样本。"}
+  ],
+  "access_boundaries": [
+    {"provider": "Refero", "boundary": "页面显示 2174 个隐藏或需权限结果", "handling": "保留可见且完成语义核验的结果，不绕过权限"},
+    {"provider": "Mobbin", "boundary": "可见首批结果后出现权限/付费边界", "handling": "保留首批可核验结果，不绕过权限"},
+    {"provider": "PTTRNS", "boundary": "目标分类路径跳转首页", "handling": "记录 fallback，不把首页内容误当目标页"}
+  ]
+}

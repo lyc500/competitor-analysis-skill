@@ -1,0 +1,28 @@
+{
+  "classification": {
+    "classification_dimension": "个人中心的核心组织方式",
+    "classification_reason": "本轮素材都属于已加载的“我的/个人中心”主页面，因此不再按检索来源或产品大类硬分，而是根据页面首屏最主要的任务组织方式动态分组：学习/内容资产、会员/专业服务、订单/交易资产。登录状态作为独立标签保留，避免把未登录和已登录混成同一状态。",
+    "groups": [
+      {"name":"成长与内容资产中心","reason":"首屏优先展示学习进度、用户内容资产、作品/智能体或播放历史，功能入口围绕个人成长与内容消费组织。","material_ids":["my-ui-001","my-ui-002","my-ui-003","my-ui-006","my-ui-015"]},
+      {"name":"会员与服务聚合中心","reason":"首屏以会员权益、专业服务、门店/车主服务、订单服务或权益兑换为主，个人页承担服务履约和权益管理。","material_ids":["my-ui-004","my-ui-007","my-ui-011","my-ui-013"]},
+      {"name":"订单与交易资产中心","reason":"首屏以订单状态、钱包/优惠、购物或出售路径、交易资产和售后工具为主，个人页是交易关系的集中管理入口。","material_ids":["my-ui-005","my-ui-008","my-ui-009","my-ui-010","my-ui-012","my-ui-014"]}
+    ],
+    "material_labels": [
+      {"material_id":"my-ui-001","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/未登录","page_role":"我的页","result_object":"学习记录与账户功能","layout":"列表式功能聚合"}},
+      {"material_id":"my-ui-002","labels":{"region":"Global","path_stage":"进入个人中心","state":"已加载/已登录","page_role":"个人资料页","result_object":"学习进度与社交关系","layout":"资料头部+成长统计"}},
+      {"material_id":"my-ui-003","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/未登录","page_role":"我的页","result_object":"音乐资产与播放历史","layout":"资产卡片+内容列表"}},
+      {"material_id":"my-ui-004","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/未登录","page_role":"我的页","result_object":"会员权益与服务订单","layout":"权益卡片+服务清单"}},
+      {"material_id":"my-ui-005","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/未登录","page_role":"个人中心","result_object":"订单、钱包与电商工具","layout":"订单横向入口+功能矩阵"}},
+      {"material_id":"my-ui-006","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/已登录","page_role":"个人中心","result_object":"作品、智能体与账户服务","layout":"账户头部+功能分组"}},
+      {"material_id":"my-ui-007","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/未登录","page_role":"我的页","result_object":"咨询、课程与测评服务","layout":"服务宫格+推荐卡片"}},
+      {"material_id":"my-ui-008","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/已登录","page_role":"我的页","result_object":"订单、资产与商品推荐","layout":"资产区+推荐流"}},
+      {"material_id":"my-ui-009","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/未登录","page_role":"我的页","result_object":"采购订单与采购工具","layout":"订单区+采购工具"}},
+      {"material_id":"my-ui-010","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/已登录","page_role":"我的页","result_object":"会员、订单与优惠","layout":"会员权益+推荐商品"}},
+      {"material_id":"my-ui-011","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/已登录","page_role":"我的页","result_object":"零售会员、订单与门店服务","layout":"会员卡+服务矩阵"}},
+      {"material_id":"my-ui-012","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/未登录","page_role":"我/个人中心","result_object":"创作、交易与卖家服务","layout":"身份入口+交易工具"}},
+      {"material_id":"my-ui-013","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/未登录","page_role":"未登录个人中心","result_object":"汽车内容、创作与车主服务","layout":"内容订阅+服务宫格"}},
+      {"material_id":"my-ui-014","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/未登录","page_role":"我的页","result_object":"购买、出售与回收资产","layout":"交易双向入口+资产区"}},
+      {"material_id":"my-ui-015","labels":{"region":"CN","path_stage":"进入个人中心","state":"已加载/已登录","page_role":"个人中心","result_object":"学习资产与个性化设置","layout":"账户头部+资产卡片+设置列表"}}
+    ]
+  }
+}

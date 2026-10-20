@@ -1,0 +1,112 @@
+[
+  {
+    "product_name": "拼多多",
+    "target_page": "我的页 / 个人中心",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "豆包爱学",
+    "target_page": "我的页 / 个人中心",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "酷狗畅听版",
+    "target_page": "我的页 / 个人中心",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Wise",
+    "target_page": "我的页 / 个人中心",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Kickstarter",
+    "target_page": "我的页 / 个人中心",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "The New York Times",
+    "target_page": "我的页 / 个人中心",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Airbuds",
+    "target_page": "我的页 / 个人中心",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Badoo",
+    "target_page": "我的页 / 个人中心",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Airbnb",
+    "target_page": "我的页 / 个人中心",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Zomato",
+    "target_page": "我的页 / 个人中心",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  },
+  {
+    "product_name": "Yubo",
+    "target_page": "我的页 / 个人中心",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  }
+]

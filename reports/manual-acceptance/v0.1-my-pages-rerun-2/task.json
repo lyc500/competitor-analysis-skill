@@ -1,0 +1,32 @@
+{
+  "raw_request": "重新验收，帮我搜集一下国内外知名app“我的”页的竞品截图",
+  "research_goal": "重新验收：搜集国内外知名移动端 App 的“我的”页 / 个人中心主页面，用于横向比较身份资料、内容资产、订单资产与服务入口的组织方式。",
+  "target_page": "我的页 / 个人中心",
+  "target_surface": "mobile_app",
+  "regions": ["CN", "Global"],
+  "platforms": ["iOS", "Android"],
+  "specified_products": [],
+  "assumptions": [
+    "未指定 Web 或 Desktop，本次默认目标为 iOS/Android App Screen。",
+    "“我的”指用户进入个人中心后的主页面；设置、订单、钱包、账户详情等子页不单独作为目标页。",
+    "完整但未登录的主页面可以保留，并标记 logged_out；加载中、空态、错误态、仅有登录入口或相邻设置/详情页不作为有效主样本。",
+    "本轮候选只来自本次重新打开的 UI Notes、Refero、Mobbin 与 PTTRNS 访问结果，不复用旧验收报告、历史候选、固定 catalog 或旧截图。",
+    "海外来源按 Profile / You / Me / Account / My Account / My Page 词义映射检索“我的”。"
+  ],
+  "needs_clarification": false,
+  "task_status": "ready",
+  "planning_strategy": "agent_only",
+  "competitors": [
+    {"product_name":"拼多多","region":"CN","product_type":"电商","platform":"iOS","target_page":"我的页 / 个人中心","planning_source":"agent_planned","priority":"high","reason":"国内高频电商个人中心，首屏以订单、钱包、优惠、售后与服务入口组织。"},
+    {"product_name":"豆包爱学","region":"CN","product_type":"学习工具","platform":"iOS","target_page":"我的页 / 个人中心","planning_source":"agent_planned","priority":"high","reason":"UI Notes“我的”检索首批结果，覆盖未登录与已登录两种主页面状态。"},
+    {"product_name":"酷狗畅听版","region":"CN","product_type":"音乐","platform":"iOS","target_page":"我的页 / 个人中心","planning_source":"agent_planned","priority":"high","reason":"国内音乐产品个人中心，首屏把会员权益、喜欢/下载与最近播放结合。"},
+    {"product_name":"Wise","region":"Global","product_type":"金融服务","platform":"iOS","target_page":"我的页 / 个人中心","planning_source":"agent_planned","priority":"high","reason":"Refero Profile & Account 结果，观察账户资产与设置的聚合方式。"},
+    {"product_name":"Kickstarter","region":"Global","product_type":"众筹社区","platform":"iOS","target_page":"我的页 / 个人中心","planning_source":"agent_planned","priority":"high","reason":"Refero Profile & Account 结果，观察个人资料与项目关系入口。"},
+    {"product_name":"The New York Times","region":"Global","product_type":"新闻内容","platform":"iOS","target_page":"我的页 / 个人中心","planning_source":"agent_planned","priority":"high","reason":"Refero Profile & Account 结果，观察内容订阅与个人内容资产组织。"},
+    {"product_name":"Airbuds","region":"Global","product_type":"社交音乐","platform":"iOS","target_page":"我的页 / 个人中心","planning_source":"agent_planned","priority":"high","reason":"Refero Profile & Account 结果，观察个人播放历史、收藏与社交关系组织。"},
+    {"product_name":"Badoo","region":"Global","product_type":"社交约会","platform":"iOS","target_page":"我的页 / 个人中心","planning_source":"agent_planned","priority":"high","reason":"Mobbin My Account & Profile 结果，观察关系产品的资料完成度与会员转化。"},
+    {"product_name":"Airbnb","region":"Global","product_type":"旅行服务","platform":"iOS","target_page":"我的页 / 个人中心","planning_source":"agent_planned","priority":"high","reason":"Mobbin My Account & Profile 结果，观察个人资料、服务设置与供给侧入口。"},
+    {"product_name":"Zomato","region":"Global","product_type":"本地生活","platform":"iOS","target_page":"我的页 / 个人中心","planning_source":"agent_planned","priority":"high","reason":"Mobbin My Account & Profile 结果，观察订单、收藏、钱包与个人设置的分层。"},
+    {"product_name":"Yubo","region":"Global","product_type":"社交","platform":"iOS","target_page":"我的页 / 个人中心","planning_source":"agent_planned","priority":"high","reason":"Mobbin My Account & Profile 结果，观察资料完善、好友、余额和成长任务的组合。"}
+  ]
+}
