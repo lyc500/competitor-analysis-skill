@@ -1,0 +1,264 @@
+{
+  "task": {
+    "raw_request": "根据虎牙我的页现状，搜集简化布局、突出常用功能、强化会员和任务中心、收起其他功能的竞品参考页面。",
+    "research_goal": "收集真实移动 App 个人中心单屏，比较常用功能、会员权益、任务激励、低频服务的视觉层级和收纳方式，形成带来源、版本边界和借鉴建议的图墙。",
+    "target_page": "我的／个人中心",
+    "target_surface": "mobile_app",
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "regions": [
+      "中国",
+      "海外"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "page_role=personal_center/account_hub；路径=底部我的或账户入口；排除他人公开主页、个人资料编辑、设置详情、独立支付页。",
+      "interaction_stage=browse_before_action；render_state=loaded_complete；完整未登录页单独标记，不接收登录拦截、加载、错误或空白页。",
+      "优先整体个人中心布局；独立会员/任务页只作补充来源线索，不混入主图墙。",
+      "用户截图为现状基线，不计入竞品数量。会员具体业务定义尚未提供，先研究权益聚合模块，不假定守护与贵族可直接合并。",
+      "英文映射：Profile（规范词）；You、Me、Account、My Account、My Page（常用别名）；Profile & Account / My Account & Profile（站点 taxonomy）。Settings 仅为扩展线索。",
+      "优先专业 UI 数据库；仅提取公开可见素材，不绕过登录或付费限制。版本按来源标注，采集日期不代表产品截图版本日期。",
+      "为研究“其他功能收起来”，补充纳入 personal_center → services_drawer 路径；interaction_stage=drawer_open，render_state=loaded_complete。必须独立分组，不当作个人中心首屏。",
+      "抽屉允许滚动后的完整单视口，但不接收手工局部裁切或拼图。",
+      "UI Notes 先出现登录限制，随后当前浏览器会话显示会员状态且正常开放筛选；使用正常 UI 访问，不处理或保存任何凭据。"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "腾讯视频",
+        "region": "中国",
+        "product_type": "长视频",
+        "platform": "Android",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "哔哩哔哩",
+        "region": "中国",
+        "product_type": "视频社区",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "酷狗畅听版",
+        "region": "中国",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "Gooh旅记",
+        "region": "中国",
+        "product_type": "旅行工具",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "CalJimi",
+        "region": "中国",
+        "product_type": "健康工具",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "豆包爱学",
+        "region": "中国",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "Headway",
+        "region": "海外",
+        "product_type": "阅读学习",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "Target",
+        "region": "海外",
+        "product_type": "零售会员",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "斗鱼",
+        "region": "中国",
+        "product_type": "直播",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "StressWatch",
+        "region": "中国",
+        "product_type": "健康工具",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "多邻国",
+        "region": "海外",
+        "product_type": "语言学习",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      }
+    ],
+    "request": "根据虎牙我的页现状，搜集简化布局、突出常用功能、强化会员和任务中心、收起其他功能的竞品参考页面。"
+  },
+  "competitors": [
+    {
+      "product_name": "腾讯视频",
+      "region": "中国",
+      "product_type": "长视频",
+      "platform": "Android",
+      "target_page": "我的／个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "region": "中国",
+      "product_type": "视频社区",
+      "platform": "iOS",
+      "target_page": "我的／个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+    },
+    {
+      "product_name": "豆包爱学",
+      "region": "中国",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_page": "我的／个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+    },
+    {
+      "product_name": "Headway",
+      "region": "海外",
+      "product_type": "阅读学习",
+      "platform": "iOS",
+      "target_page": "我的／个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+    },
+    {
+      "product_name": "斗鱼",
+      "region": "中国",
+      "product_type": "直播",
+      "platform": "iOS",
+      "target_page": "我的／个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+    },
+    {
+      "product_name": "酷狗畅听版",
+      "region": "中国",
+      "product_type": "音乐",
+      "platform": "iOS",
+      "target_page": "我的／个人中心",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+    },
+    {
+      "product_name": "Gooh旅记",
+      "region": "中国",
+      "product_type": "旅行工具",
+      "platform": "iOS",
+      "target_page": "我的／个人中心",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+    },
+    {
+      "product_name": "CalJimi",
+      "region": "中国",
+      "product_type": "健康工具",
+      "platform": "iOS",
+      "target_page": "我的／个人中心",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+    },
+    {
+      "product_name": "Target",
+      "region": "海外",
+      "product_type": "零售会员",
+      "platform": "iOS",
+      "target_page": "我的／个人中心",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+    },
+    {
+      "product_name": "StressWatch",
+      "region": "中国",
+      "product_type": "健康工具",
+      "platform": "iOS",
+      "target_page": "我的／个人中心",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+    },
+    {
+      "product_name": "多邻国",
+      "region": "海外",
+      "product_type": "语言学习",
+      "platform": "iOS",
+      "target_page": "我的／个人中心",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+    }
+  ],
+  "assets": [],
+  "classification": {
+    "classification_status": "unavailable",
+    "classification_dimension": "",
+    "classification_reason": "正式动态分类仅在 Stage 4 Agent Classification Plan 流程执行",
+    "groups": [],
+    "material_labels": []
+  }
+}

@@ -55,6 +55,21 @@ UI 数据库的“文本可抓取”和“浏览器可用”是两个独立维�
 
 若检索来源受权限、分页或结果可见性限制，记录实际看到的范围并继续使用下一优先级来源、用户上传或 device capture；不得把固定 catalog、fixture、历史验收结果或旧报告中的产品当作本次开放式发现的替代。发现阶段与最终竞品选择阶段分开，最终数量由任务覆盖度、页面匹配度、素材质量和来源可追溯性共同决定。
 
+## 发现证据登记与跨阶段关联
+
+正式发现记录必须把“来源尝试”和“候选登记”拆成两个独立契约，不把来源访问状态混入 `Source Candidate`。`sources.json` 至少包含以下四部分：
+
+- `source_attempts`：一次来源入口/查询/筛选/分页尝试一条记录，含 `id`、`entry_url`、`query_mapping`、`actual_query`、`search_mode`、`discovery_batch`、`web_text_accessible`、`browser_accessible`、`browser_interactive`、`content_available`、`access_status`、`observed_scope`、`attempt_status` 和 `failure_reason`。
+- `candidates`：每个发现结果一条记录，含 `id`、`source_attempt_id`、产品与目标页、`source_entry_url`、`source_detail_url`、`source_asset_url`、候选排名、`candidate_status` 和 `disposition_reason`。
+- `candidate_pool`：本轮实际进入截图/后续审核的候选 ID 列表。
+- `candidate_limit`：明确 `max: 50`、计数单位 `candidate_records`、适用范围 `candidate_pool`、排序依据和 `truncated_candidate_ids`。
+
+来源入口 URL、单屏详情 URL、图片资源 URL 可以不同，但必须分别使用 `source_entry_url`、`source_detail_url`、`source_asset_url`，并通过 `source_attempt_id` / `source_candidate_id` 关联。浏览器截图必须同时保留 `source_attempt_id`、`source_candidate_id`、`requested_url` 及三类来源 URL；语义审核和素材记录继续保留 `capture_id`、`source_candidate_id` 与 `source_attempt_id`。
+
+跨阶段必须按以下链路校验：`source_attempts.id → candidates.source_attempt_id → captures.source_candidate_id → semantic_reviews.target_id → materials.capture_id → classification.material_ids → report`。缺失或错误引用必须明确报错；历史产物无法可靠还原时记录“历史证据缺口”，不编造 ID、浏览器操作、截图审核或运行记录。旧的仅含 `sources` 或仅含 `captures` 的产物只能作为兼容诊断输入，不能宣称满足正式证据契约。
+
+候选状态只能是 `accepted`、`rejected` 或 `not_reviewed`，每条都必须有处置原因。超过 50 个时，50 个只限制 `candidate_pool` 的候选记录数；所有超出记录仍保留在 `candidates` 中，并写入 `not_reviewed`/`rejected` 与截断原因，不能静默丢弃。Python 只检查 ID、字段、URL 角色、状态和上限，不决定候选的页面相关性。
+
 ## 目标页面、交互阶段与状态先验
 
 开始找素材前，Agent 必须把需求拆成三个互相独立的轴，并在结构化 Task 的假设或研究说明中写清楚本次纳入与排除的范围：
@@ -128,19 +143,22 @@ python3 -m competitor_analysis_skill --task-file <task.json> --sources-file <sou
 
 阶段 3B 浏览器工作流在显式 `--capture-sources` 下消费 `sources.json` 并输出独立 `captures.json`。Browser Capture 只证明候选 URL 被真实浏览器加载并截图；截图仍待阶段 3C 语义审核，不会自动成为 `semantic accepted` 或 `collected Material`。
 
-阶段 3C 消费已有截图和 Agent 的结构化视觉审核：
+阶段 3C 消费已有截图、来源登记和 Agent 的结构化视觉审核：
 
 ```bash
 python3 -m competitor_analysis_skill --task-file <task.json> \
+  --sources-file <sources.json> \
   --captures-file <captures.json> \
   --manual-captures-file <manual-captures.json> \
   --semantic-reviews-file <semantic-reviews.json> \
   --output reports/<name>
 ```
 
-Agent 必须逐项判断产品身份、目标页面匹配、页面状态、目标 Surface 匹配、页面主体完整性、图片类型和视觉可读性，并提供 `semantic_reason`。移动端 Task 只有 matched/matched/matched/complete/ui_page 才能声明 `semantic_status=accepted`；页面状态纳入范围和视觉质量结论也必须在 `semantic_reason` 中明确说明。Python 只校验 Review Contract，并将 ui_database、browser、user_upload、device_capture 统一交给阶段 2 机械质量复验；它不通过图片尺寸、关键词、文件名、URL、OCR 或图像规则推断语义。输出独立的 `reviewed_materials.json` 与 `fallback_requests.json`，不会提前进入分类或 HTML 报告。
+Agent 必须逐项判断产品身份、页面角色、交互阶段、渲染状态、登录状态、目标页面匹配、目标 Surface 匹配、页面主体完整性、图片类型和视觉可读性，并提供非空 `semantic_reason` 与 `review_reason_codes`。Review Contract 只要求 Python 校验这些字段的结构和允许值；不得由 Python 根据图片尺寸、关键词、文件名、URL、OCR 或图像规则推断截图语义。移动端 Task 只有 matched/matched/matched/complete/ui_page 才能声明 `semantic_status=accepted`。输出独立的 `reviewed_materials.json` 与 `fallback_requests.json`，不会提前进入分类或 HTML 报告。
 
 阶段 4 消费 `reviewed_materials.json` 和 Agent 生成的 `classification-plan.json`：Python 只过滤三重状态均通过的 collected Materials、校验分类计划、复制报告所需图片到独立 `assets/`，并生成 `classification.json`、`report_data.json` 和 HTML 报告。分类维度、分组、分组原因和多维 labels 全部来自 Agent；Python 不根据 `product_type`、`notes` 或关键词推断页面结构。无有效素材时输出 `unavailable` 和 fallback 清单。
+
+正式报告必须分别展示来源访问统计、候选 `accepted/rejected/not_reviewed`、素材审核（语义审核）、素材流水线状态和产品 fallback；“素材流水线排除数为 0”不能被解释为“候选没有排除”。报告还要显示有效产品覆盖数、无有效素材产品数、待审核候选数和来源访问未知边界，并能回溯到登记记录。`report.html` 是最终交付；`sources.json`、`captures.json`、`reviewed_materials.json`、`fallback_requests.json`、`classification.json` 和 `report_data.json` 是阶段中间产物，不应单独冒充最终报告；`--offline`、fixture 和静态测试只属于离线演示/自动化验证。
 
 安装浏览器依赖：
 
@@ -149,7 +167,7 @@ python3 -m pip install -r requirements.txt
 python3 -m playwright install chromium
 ```
 
-Python 只读取、校验、排序和持久化 Agent 提供的任务，不负责通过关键词或固定名单生成语义判断。自然语言位置参数仅保留为 `legacy/demo` 兼容入口，不代表通用自然语言理解能力。
+Python 只读取、校验、排序和持久化 Agent 提供的任务，不负责通过关键词或固定名单生成语义判断。自然语言位置参数仅保留为 `legacy/demo` 兼容入口，不代表通用自然语言理解能力；正式验收和生产使用不得用它替代结构化 Task、来源登记和截图审核。
 
 legacy/demo 兼容入口（不承担通用语义理解）：
 
@@ -158,6 +176,8 @@ python3 -m competitor_analysis_skill "<自然语言调研需求>" --output repor
 ```
 
 输出 `report.html` 和 `materials.json`。HTML 可直接打开，截图可点击放大；无法验证的页面显示 `needs_manual_capture`，不使用替代图片凑数。
+
+历史产物若缺少来源尝试、候选处置或跨阶段 ID，只能在验收记录中标记为“历史证据缺口”；不能通过补写猜测字段把旧报告改标为正式验证通过。
 
 ## 执行边界
 

@@ -15,9 +15,13 @@ ENUMS = {
     "target_page_match": {"matched", "mismatched", "unclear"},
     "target_surface_match": {"matched", "mismatched", "unclear"},
     "page_completeness": {"complete", "incomplete", "unclear"},
+    "interaction_stage": {"before_action", "in_progress", "after_submission", "completed", "unknown"},
+    "render_state": {"loaded", "loading", "empty", "error", "login_intercept", "placeholder", "unknown"},
+    "login_state": {"logged_in", "logged_out_complete", "login_intercept", "unknown"},
     "asset_kind": {"ui_page", "logo", "share_card", "marketing_image", "cover", "unrelated", "unknown"},
 }
-REVIEW_FIELDS = ("target_id", "target_kind", "semantic_status", "product_identity", "target_page_match", "page_completeness", "asset_kind", "semantic_reason", "review_source")
+REVIEW_FIELDS = ("target_id", "target_kind", "semantic_status", "product_identity", "target_page_match", "page_role", "interaction_stage", "render_state", "login_state", "page_completeness", "asset_kind", "review_reason_codes", "semantic_reason", "review_source")
+REVIEW_REASON_CODES = {"product_identity", "target_page", "interaction_stage", "render_state", "login_state", "surface", "completeness", "asset_kind", "visual_quality", "source_context"}
 
 
 def _review(raw, index, target_surface="user_specified"):
@@ -30,9 +34,17 @@ def _review(raw, index, target_surface="user_specified"):
     if target_surface == "mobile_app" and "target_surface_match" not in result:
         raise SemanticReviewError("review 缺少字段: target_surface_match")
     for field in REVIEW_FIELDS:
+        if field == "review_reason_codes":
+            continue
         if not isinstance(result[field], str) or not result[field].strip():
             raise SemanticReviewError(f"review.{field} 不能为空")
         result[field] = result[field].strip()
+    codes = result["review_reason_codes"]
+    if not isinstance(codes, list) or not codes or not all(isinstance(code, str) and code.strip() for code in codes):
+        raise SemanticReviewError("review_reason_codes 必须是非空字符串数组")
+    result["review_reason_codes"] = [code.strip() for code in codes]
+    if any(code not in REVIEW_REASON_CODES for code in result["review_reason_codes"]):
+        raise SemanticReviewError("review_reason_codes 包含未知理由代码")
     for field, allowed in ENUMS.items():
         if field == "target_surface_match" and field not in result:
             continue
@@ -122,8 +134,11 @@ def process_semantic_reviews(task, captures, manuals, reviews, output_dir, captu
             "source_url": capture.get("final_url") or capture.get("requested_url", ""), "captured_at": capture.get("captured_at", ""),
             "collection_method": "database_asset" if is_ui_database else "browser_screenshot", "provenance": "online", "semantic_status": review["semantic_status"],
             "semantic_reason": review["semantic_reason"], "collection_status": "pending", "quality_status": "pending", "quality_reason": "",
+            "page_role": review["page_role"], "interaction_stage": review["interaction_stage"], "render_state": review["render_state"], "login_state": review["login_state"], "review_reason_codes": review["review_reason_codes"],
             "observed_structure": [], "observed_patterns": [], "notes": "", "failure_reason": "", "capture_id": capture["id"],
-            "source_candidate_id": capture.get("source_candidate_id", ""), "requested_url": capture.get("requested_url", ""), "final_url": capture.get("final_url", ""),
+            "source_attempt_id": capture.get("source_attempt_id", ""), "source_candidate_id": capture.get("source_candidate_id", ""),
+            "source_entry_url": capture.get("source_entry_url", ""), "source_detail_url": capture.get("source_detail_url", ""),
+            "requested_url": capture.get("requested_url", ""), "final_url": capture.get("final_url", ""),
         })
     for manual in manuals:
         review = review_by_id.get(manual["id"])
@@ -139,6 +154,7 @@ def process_semantic_reviews(task, captures, manuals, reviews, output_dir, captu
             "collection_method": "user_provided" if manual["source_type"] == "user_upload" else "manual_device_capture",
             "provenance": "user_upload" if manual["source_type"] == "user_upload" else "device_capture", "semantic_status": review["semantic_status"],
             "semantic_reason": review["semantic_reason"], "collection_status": "pending", "quality_status": "pending", "quality_reason": "",
+            "page_role": review["page_role"], "interaction_stage": review["interaction_stage"], "render_state": review["render_state"], "login_state": review["login_state"], "review_reason_codes": review["review_reason_codes"],
             "observed_structure": [], "observed_patterns": [], "notes": manual.get("notes", ""), "failure_reason": "", "manual_capture_id": manual["id"],
         })
     output_dir = Path(output_dir); output_dir.mkdir(parents=True, exist_ok=True)

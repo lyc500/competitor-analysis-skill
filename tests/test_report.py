@@ -91,3 +91,33 @@ class ReportStage4Tests(unittest.TestCase):
         self.assertIn('onclick="showModal(this)"', html)
         self.assertIn('<dialog id="viewer"', html)
         self.assertIn("function showModal", html)
+
+    def test_report_exposes_evidence_statistics_and_coverage_boundary(self):
+        html = render_report(
+            self.task(),
+            [self.material()],
+            self.classification(),
+            evidence_statistics={
+                "sources": {"attempted": 2, "unknown_access": 1, "access_status": {"accessible": 1, "blocked": 1}},
+                "candidates": {"accepted": 1, "rejected": 3, "not_reviewed": 2},
+                "semantic_reviews": {"accepted": 1, "rejected": 0, "not_reviewed": 1},
+                "fallback": {"open": 1, "resolved": 0},
+                "coverage": {"products_without_collected_material": 1, "pending_candidate_count": 2},
+            },
+        )
+        self.assertIn("来源访问", html)
+        self.assertIn("候选处置", html)
+        self.assertIn("待审核候选", html)
+        self.assertIn("unknown_access", html)
+        self.assertIn("blocked 1", html)
+        self.assertIn("产品覆盖缺口", html)
+
+    def test_report_exposes_evidence_ids_for_traceability(self):
+        html = render_report(self.task(), [self.material(
+            capture_id="cap-a", source_candidate_id="cand-a", source_attempt_id="att-a",
+        )], self.classification())
+        self.assertIn('data-material-id="a"', html)
+        self.assertIn('data-capture-id="cap-a"', html)
+        self.assertIn('data-source-candidate-id="cand-a"', html)
+        self.assertIn('data-source-attempt-id="att-a"', html)
+        self.assertIn("证据链：material: a · capture: cap-a · candidate: cand-a · attempt: att-a", html)

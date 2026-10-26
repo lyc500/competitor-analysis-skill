@@ -1,0 +1,18 @@
+{
+  "candidate_pool": 50,
+  "candidate_pool_by_status": {
+    "accepted": 10,
+    "rejected": 11,
+    "not_reviewed": 29
+  },
+  "registered_discovery_links": 96,
+  "outside_pool": 46,
+  "final_materials": 10,
+  "final_products": 9,
+  "full_pipeline_reviews": 14,
+  "full_pipeline_rejections": 4,
+  "source_fallback_requests": 11,
+  "resolved_fallback_requests": 9,
+  "open_optional_fallback_requests": 2,
+  "unexpanded_ocr_result_cards": 32
+}

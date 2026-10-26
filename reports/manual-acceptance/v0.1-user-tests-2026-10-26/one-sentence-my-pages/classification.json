@@ -1,0 +1,473 @@
+{
+  "classification_status": "ready",
+  "classification_dimension": "地区 × 个人中心主任务 × 登录状态",
+  "classification_reason": "先按国内外使用语境区分，再按页面主体是内容成长、订单服务或账户服务归组；未登录但主体完整、以及账户页下段分别隔离，避免状态混组。",
+  "groups": [
+    {
+      "name": "国内｜内容与成长",
+      "reason": "以学习、阅读、创作或个人内容资产为主体，均为已加载的自己的个人中心。",
+      "material_ids": [
+        "mat-096876602836684120",
+        "mat-025429166561164948",
+        "mat-168392972276229080",
+        "mat-248305763204570159",
+        "mat-406465221275907801",
+        "mat-261238806478543829"
+      ],
+      "asset_ids": [
+        "mat-096876602836684120",
+        "mat-025429166561164948",
+        "mat-168392972276229080",
+        "mat-248305763204570159",
+        "mat-406465221275907801",
+        "mat-261238806478543829"
+      ]
+    },
+    {
+      "name": "国内｜订单与服务",
+      "reason": "以会员、订单、钱包、文件或交易服务为主体，均为已登录完整状态。",
+      "material_ids": [
+        "mat-792439682643464941",
+        "mat-551540436152132377",
+        "mat-327553016242661235",
+        "mat-392538942926681954"
+      ],
+      "asset_ids": [
+        "mat-792439682643464941",
+        "mat-551540436152132377",
+        "mat-327553016242661235",
+        "mat-392538942926681954"
+      ]
+    },
+    {
+      "name": "国内｜未登录的完整个人中心",
+      "reason": "页面显示登录入口，但核心服务和内容主体仍完整可浏览；与登录拦截分开处理。",
+      "material_ids": [
+        "mat-133323406851668822",
+        "mat-438158835260733576",
+        "mat-667567417512043064",
+        "mat-658360019995979356",
+        "mat-018621050003319015",
+        "mat-176174415809164424",
+        "mat-612887545133740724",
+        "mat-026234696324700781",
+        "mat-227130207557343885",
+        "mat-508614918845893842",
+        "mat-176567570728999594"
+      ],
+      "asset_ids": [
+        "mat-133323406851668822",
+        "mat-438158835260733576",
+        "mat-667567417512043064",
+        "mat-658360019995979356",
+        "mat-018621050003319015",
+        "mat-176174415809164424",
+        "mat-612887545133740724",
+        "mat-026234696324700781",
+        "mat-227130207557343885",
+        "mat-508614918845893842",
+        "mat-176567570728999594"
+      ]
+    },
+    {
+      "name": "海外｜内容与成长",
+      "reason": "海外内容产品通过 You 页组织订阅身份、兴趣、历史与收藏。",
+      "material_ids": [
+        "mat-004403109497668392",
+        "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00"
+      ],
+      "asset_ids": [
+        "mat-004403109497668392",
+        "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00"
+      ]
+    },
+    {
+      "name": "海外｜账户与交易服务",
+      "reason": "海外账户根页围绕安全、购买、奖励或交易服务组织信息。",
+      "material_ids": [
+        "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+        "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+      ],
+      "asset_ids": [
+        "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+        "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+      ]
+    },
+    {
+      "name": "海外｜账户页下段参考",
+      "reason": "明确记录为账户页向下滚动后的服务区，只用于观察地址、支付和偏好等下段结构。",
+      "material_ids": [
+        "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+      ],
+      "asset_ids": [
+        "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+      ]
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-096876602836684120",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "学习资产",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v5.5",
+        "source_date": "2026 年 10 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-133323406851668822",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "logged_out_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "学习服务",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v5.5",
+        "source_date": "2026 年 10 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-004403109497668392",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "学习与关系资产",
+        "region": "海外",
+        "theme": "浅色或品牌主题",
+        "version": "v7.144",
+        "source_date": "2026 年 10 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-438158835260733576",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "logged_out_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "音乐资产",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v3.1",
+        "source_date": "2026 年 9 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-667567417512043064",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "logged_out_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "订单与会员服务",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v4.5",
+        "source_date": "2026 年 8 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-792439682643464941",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "订单与会员资产",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v4.5",
+        "source_date": "2026 年 8 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-658360019995979356",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "logged_out_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "订单与购物服务",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v8.25",
+        "source_date": "2026 年 9 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-551540436152132377",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "订单与购物资产",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v8.25",
+        "source_date": "2026 年 9 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-025429166561164948",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "创作与积分资产",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v3.7",
+        "source_date": "2026 年 9 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-018621050003319015",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "logged_out_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "采购服务",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v12.16",
+        "source_date": "2026 年 8 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-327553016242661235",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "会员与生鲜购物资产",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v8.7",
+        "source_date": "2026 年 8 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-176174415809164424",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "logged_out_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "生鲜购物服务",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v7.25",
+        "source_date": "2026 年 8 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-612887545133740724",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "logged_out_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "汽车内容与服务",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v9.1",
+        "source_date": "2026 年 8 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-168392972276229080",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "学习权益",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v5.11",
+        "source_date": "2026 年 7 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-248305763204570159",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "学习权益",
+        "region": "国内",
+        "theme": "深色",
+        "version": "v5.11",
+        "source_date": "2026 年 7 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-026234696324700781",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "logged_out_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "买卖与估价服务",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v12.13",
+        "source_date": "2026 年 7 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-227130207557343885",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "logged_out_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "阅读服务",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v10.2",
+        "source_date": "2026 年 7 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-406465221275907801",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "阅读资产",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v10.2",
+        "source_date": "2026 年 7 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-508614918845893842",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "logged_out_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "社区与交易服务",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v5.96",
+        "source_date": "2026 年 7 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-392538942926681954",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "文件与会员资产",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v25.1",
+        "source_date": "2026 年 7 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-176567570728999594",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "logged_out_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "翻译学习服务",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v12.4",
+        "source_date": "2026 年 5 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-261238806478543829",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "翻译学习资产",
+        "region": "国内",
+        "theme": "浅色或品牌主题",
+        "version": "v12.4",
+        "source_date": "2026 年 5 月",
+        "source": "UI Notes"
+      }
+    },
+    {
+      "material_id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "账户服务",
+        "region": "海外",
+        "theme": "浅色或品牌主题",
+        "version": "来源未标注",
+        "source_date": "来源未标注",
+        "source": "Refero"
+      }
+    },
+    {
+      "material_id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+      "labels": {
+        "path_stage": "账户页 / 已进入 / 下段",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "购物账户服务",
+        "region": "海外",
+        "theme": "浅色或品牌主题",
+        "version": "来源未标注",
+        "source_date": "来源未标注",
+        "source": "Refero"
+      }
+    },
+    {
+      "material_id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "购物与会员资产",
+        "region": "海外",
+        "theme": "浅色或品牌主题",
+        "version": "来源未标注",
+        "source_date": "来源未标注",
+        "source": "Refero"
+      }
+    },
+    {
+      "material_id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+      "labels": {
+        "path_stage": "个人中心根页 / 已进入",
+        "state": "loaded_complete",
+        "page_role": "我的 / Profile / Account",
+        "result_object": "订阅与收藏资产",
+        "region": "海外",
+        "theme": "浅色或品牌主题",
+        "version": "来源未标注",
+        "source_date": "来源未标注",
+        "source": "Refero"
+      }
+    }
+  ]
+}

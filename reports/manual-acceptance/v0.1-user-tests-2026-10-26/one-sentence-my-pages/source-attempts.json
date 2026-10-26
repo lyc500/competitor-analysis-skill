@@ -1,0 +1,111 @@
+{
+  "page_name_mapping": {
+    "original": "我的",
+    "canonical": "Profile",
+    "query_family": [
+      "Profile",
+      "You",
+      "Me",
+      "Account",
+      "My Account",
+      "My Page"
+    ],
+    "adjacent_terms": [
+      "Settings",
+      "Activity"
+    ]
+  },
+  "attempts": [
+    {
+      "source": "UI Notes",
+      "entry_url": "https://uinotes.com/pin?functions=71",
+      "query_or_taxonomy": "个人中心功能标签",
+      "search_mode": "标签筛选 + 连续滚动",
+      "web_text_accessible": true,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": true,
+      "access_status": "accessible",
+      "observed_range": "连续滚动登记 280 张，另以产品复核补充 2 张，共 282 张、50+ 个产品；详情页公开原图和版本元数据可读取，进一步 App 级筛选出现登录要求。",
+      "disposition": "选取 40 张进入逐图审核，22 张最终纳入。"
+    },
+    {
+      "source": "UI Notes",
+      "entry_url": "https://uinotes.com/",
+      "query_or_taxonomy": "个人中心 / 我的",
+      "search_mode": "OCR / 站内关键词复核",
+      "web_text_accessible": true,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": true,
+      "access_status": "accessible",
+      "observed_range": "用于复核标签结果和页面文案，新增结果以重复或子业务页面为主。",
+      "disposition": "未因关键词命中自动接收，仍逐图做页面角色与状态审核。"
+    },
+    {
+      "source": "Refero",
+      "entry_url": "https://refero.design/apps/search?page_types%5Bid%5D%5B%5D=15",
+      "query_or_taxonomy": "Profile & Account / page type 15；Account、Profile、My Account、You、Me、My Page、Airbnb",
+      "search_mode": "页面类型筛选 + 多关键词搜索",
+      "web_text_accessible": true,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": true,
+      "access_status": "login_required",
+      "observed_range": "每个查询可见约 6 条公开结果，继续浏览触发登录；共登记并逐图审核 25 张。",
+      "disposition": "4 张纳入，21 张因他人主页、编辑/确认态、弹层、WebView 或错页等拒绝。"
+    },
+    {
+      "source": "Mobbin",
+      "entry_url": "https://mobbin.com/search/apps/ios?content_type=screens&sort=popularity&filter=screenPatterns.My+Account+%26+Profile",
+      "query_or_taxonomy": "My Account & Profile",
+      "search_mode": "预设 Screen Pattern",
+      "web_text_accessible": false,
+      "browser_accessible": true,
+      "browser_interactive": false,
+      "content_available": false,
+      "access_status": "login_required",
+      "observed_range": "入口跳转到首页，检索内容需登录。",
+      "disposition": "未绕过登录，转下一公开来源。"
+    },
+    {
+      "source": "PTTRNS",
+      "entry_url": "https://app.pttrns.com/patterns?categories=profile-account",
+      "query_or_taxonomy": "Profile & Account",
+      "search_mode": "分类入口",
+      "web_text_accessible": false,
+      "browser_accessible": true,
+      "browser_interactive": false,
+      "content_available": false,
+      "access_status": "login_required",
+      "observed_range": "入口回到站点首页并提示账户登录。",
+      "disposition": "未绕过登录，转 Refero/UI Notes。"
+    },
+    {
+      "source": "Uiland",
+      "entry_url": "https://uiland.design/",
+      "query_or_taxonomy": "Airbnb profile/account 候选",
+      "search_mode": "公开详情页复核",
+      "web_text_accessible": true,
+      "browser_accessible": true,
+      "browser_interactive": false,
+      "content_available": false,
+      "access_status": "login_required",
+      "observed_range": "候选元数据可见，但完整截图受登录限制。",
+      "disposition": "未下载或绕过限制。"
+    },
+    {
+      "source": "Pablooo",
+      "entry_url": "https://pablooo.com/",
+      "query_or_taxonomy": "Profile / Account",
+      "search_mode": "公开站点访问",
+      "web_text_accessible": false,
+      "browser_accessible": false,
+      "browser_interactive": false,
+      "content_available": false,
+      "access_status": "blocked",
+      "observed_range": "触发 Cloudflare security verification。",
+      "disposition": "未绕过安全验证。"
+    }
+  ]
+}

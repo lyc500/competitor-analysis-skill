@@ -1,0 +1,248 @@
+{
+  "raw_request": "帮我搜集一下国内外知名app‘我的’页的竞品截图",
+  "research_goal": "搜集国内外知名移动 App 自己的个人中心完整单屏截图，供信息架构和视觉设计横向参考；素材真实、可放大、可追溯。",
+  "target_page": "我的 / Profile / Account",
+  "target_surface": "mobile_app",
+  "platforms": [
+    "iOS"
+  ],
+  "regions": [
+    "国内",
+    "海外"
+  ],
+  "specified_products": [],
+  "assumptions": [
+    "page_role/path：底部‘我的/我/Me/You/Profile’或头像进入的个人中心根页；纳入自己的身份、内容、成长、订单、会员和服务资产。",
+    "interaction_stage：已进入个人中心，未处于编辑、提交、确认或账户切换过程。",
+    "render_state：纳入 loaded_complete 与 logged_out_complete；排除加载、空态、错误、权限/登录拦截和新手引导。",
+    "排除他人公开主页、编辑资料预览、账户安全子页、纯设置子页、子业务个人页、WebView 和被弹层遮挡的页面。",
+    "公开 UI 数据库中的可见版本不等于产品最新版；报告按来源明确标注版本和更新日期，来源未提供时不做推断。",
+    "正式候选池上限 50；超出部分按页面匹配、品牌代表性、地区/品类覆盖、图片质量与来源可追溯性截断，并保留登记。"
+  ],
+  "page_name_mapping": {
+    "original": "我的",
+    "canonical": "Profile",
+    "aliases": [
+      "You",
+      "Me",
+      "Account",
+      "My Account",
+      "My Page"
+    ],
+    "taxonomy": [
+      "UI Notes: 个人中心功能筛选 / OCR 关键词",
+      "Refero: Profile & Account / page type 15",
+      "PTTRNS: Profile & Account",
+      "Mobbin: My Account & Profile"
+    ],
+    "adjacent_discovery_only": [
+      "Settings",
+      "Activity"
+    ]
+  },
+  "needs_clarification": false,
+  "task_status": "ready",
+  "planning_strategy": "agent_only",
+  "competitors": [
+    {
+      "product_name": "豆包爱学",
+      "region": "国内",
+      "product_type": "教育 / AI 学习",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "展示学习资产、任务和服务型个人中心，并提供登录前后对照。"
+    },
+    {
+      "product_name": "多邻国",
+      "region": "海外",
+      "product_type": "教育 / 语言学习",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "海外知名学习产品，个人身份、关系和学习数据组织清晰。"
+    },
+    {
+      "product_name": "酷狗畅听版",
+      "region": "国内",
+      "product_type": "音乐",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "音乐产品在未登录状态下仍保留完整内容资产入口。"
+    },
+    {
+      "product_name": "喜茶GO",
+      "region": "国内",
+      "product_type": "餐饮零售",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "餐饮会员、钱包和订单服务集中呈现，并有登录前后对照。"
+    },
+    {
+      "product_name": "拼多多",
+      "region": "国内",
+      "product_type": "电商",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "头部电商个人中心，覆盖订单、资产、收藏和推荐。"
+    },
+    {
+      "product_name": "智谱清言",
+      "region": "国内",
+      "product_type": "AI 助手",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "AI 助手产品把作品、智能体、会员和任务汇入个人中心。"
+    },
+    {
+      "product_name": "阿里巴巴",
+      "region": "国内",
+      "product_type": "B2B 电商",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "B2B 采购场景的未登录个人中心，含订单、权益和商品资产。"
+    },
+    {
+      "product_name": "盒马",
+      "region": "国内",
+      "product_type": "生鲜零售",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "生鲜零售会员、余额、订单和服务宫格的典型组合。"
+    },
+    {
+      "product_name": "小象超市",
+      "region": "国内",
+      "product_type": "即时零售",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "即时零售未登录个人中心，服务入口仍完整可用。"
+    },
+    {
+      "product_name": "懂车帝",
+      "region": "国内",
+      "product_type": "汽车内容与服务",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "汽车内容、创作和车主服务合并在个人中心。"
+    },
+    {
+      "product_name": "不背单词",
+      "region": "国内",
+      "product_type": "教育 / 词汇学习",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "学习权益与个性化设置型个人中心，并覆盖明暗主题。"
+    },
+    {
+      "product_name": "转转",
+      "region": "国内",
+      "product_type": "二手交易",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "同时处理购买、出售、估价和个人资产的交易型个人中心。"
+    },
+    {
+      "product_name": "微信读书",
+      "region": "国内",
+      "product_type": "数字阅读",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "阅读数据、书架资产、会员与社交排行并列，含登录前后对照。"
+    },
+    {
+      "product_name": "得物",
+      "region": "国内",
+      "product_type": "社区电商",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "社区创作、收藏、交易、钱包和商家入口的复合个人中心。"
+    },
+    {
+      "product_name": "迅雷",
+      "region": "国内",
+      "product_type": "云盘与下载",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "文件资产、会员和工具服务聚合型个人中心。"
+    },
+    {
+      "product_name": "百度翻译",
+      "region": "国内",
+      "product_type": "翻译工具",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "medium",
+      "reason": "翻译学习资产、课程和会员服务，含登录前后对照。"
+    },
+    {
+      "product_name": "Wise",
+      "region": "海外",
+      "product_type": "金融科技",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "海外金融产品的根账户服务清单，强调安全与帮助。"
+    },
+    {
+      "product_name": "ASOS",
+      "region": "海外",
+      "product_type": "时尚电商",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "海外电商账户管理下段，覆盖地址、支付、偏好和帮助。"
+    },
+    {
+      "product_name": "Target",
+      "region": "海外",
+      "product_type": "综合零售",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "海外零售会员首页，突出购买历史、节省额和奖励。"
+    },
+    {
+      "product_name": "The New York Times",
+      "region": "海外",
+      "product_type": "新闻与内容订阅",
+      "platform": "iOS",
+      "target_page": "我的 / Profile / Account",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "内容订阅产品的 You 页，组织兴趣、历史和收藏资产。"
+    }
+  ]
+}

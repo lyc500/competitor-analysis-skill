@@ -42,14 +42,39 @@ class SemanticReviewTests(unittest.TestCase):
         return {
             "id": capture_id,
             "source_candidate_id": "src-a",
+            "source_attempt_id": "att-a",
             "product_name": product,
             "target_page": "搜索结果页",
+            "source_entry_url": "https://example.com/search",
+            "source_detail_url": "https://example.com/results",
+            "source_asset_url": "https://cdn.example.com/results.png",
             "requested_url": "https://example.com/search",
             "final_url": "https://example.com/results",
             "captured_at": "2026-09-07T00:00:00Z",
             "capture_status": status,
             "screenshot_path": str(self.FIXTURES / image) if status == "captured" else "",
             "failure_reason": "capture failed" if status != "captured" else "",
+        }
+
+    def discovery(self):
+        return {
+            "source_attempts": [{
+                "id": "att-a", "source_type": "public_web", "source_provider": "Example",
+                "entry_url": "https://example.com/search",
+                "query_mapping": {"raw_page_intent": "搜索结果页", "mapped_terms": ["Search"], "source_taxonomy_terms": []},
+                "actual_query": "Search", "search_mode": "site_search", "discovery_batch": 1,
+                "web_text_accessible": True, "browser_accessible": True, "browser_interactive": True,
+                "content_available": True, "access_status": "accessible", "observed_scope": "结果页",
+                "attempt_status": "completed", "failure_reason": "",
+            }],
+            "candidates": [{
+                "id": "src-a", "source_attempt_id": "att-a", "product_name": "产品A", "target_page": "搜索结果页",
+                "source_entry_url": "https://example.com/search", "source_detail_url": "https://example.com/results",
+                "source_asset_url": "https://cdn.example.com/results.png", "candidate_rank": 1,
+                "candidate_status": "accepted", "disposition_reason": "进入截图审核",
+            }],
+            "candidate_pool": ["src-a"],
+            "candidate_limit": {"max": 50, "unit": "candidate_records", "applies_to": "candidate_pool", "ordering_basis": "相关性", "truncated_candidate_ids": []},
         }
 
     def manual(self, capture_id="manual-a", source_type="user_upload", product="产品A", image="valid.png"):
@@ -70,8 +95,13 @@ class SemanticReviewTests(unittest.TestCase):
             "semantic_status": semantic_status,
             "product_identity": "matched",
             "target_page_match": "matched",
+            "page_role": "搜索结果页",
+            "interaction_stage": "after_submission",
+            "render_state": "loaded",
+            "login_state": "logged_in",
             "page_completeness": "complete",
             "asset_kind": "ui_page",
+            "review_reason_codes": ["product_identity", "target_page", "render_state", "completeness"],
             "semantic_reason": "Agent 已确认产品、页面与主体完整性",
             "review_source": "agent_visual_review",
         }
@@ -108,6 +138,15 @@ class SemanticReviewTests(unittest.TestCase):
     def test_contradictory_accepted_review_is_rejected(self):
         with self.assertRaisesRegex(SemanticReviewError, "accepted"):
             self.process(captures=[self.capture()], reviews=[self.review(asset_kind="logo")])
+
+    def test_review_requires_page_stage_state_login_and_structured_reason_codes(self):
+        review = self.review()
+        review.pop("render_state")
+        with self.assertRaisesRegex(SemanticReviewError, "render_state"):
+            self.process(captures=[self.capture()], reviews=[review])
+        review = self.review(semantic_status="rejected", review_reason_codes=[])
+        with self.assertRaisesRegex(SemanticReviewError, "review_reason_codes"):
+            self.process(captures=[self.capture()], reviews=[review])
 
     def test_mobile_app_task_requires_agent_surface_match(self):
         task = self.task()
@@ -217,7 +256,7 @@ class SemanticReviewTests(unittest.TestCase):
             capture = self.capture()
             capture["screenshot_path"] = "captures/valid.png"
             task_path.write_text(json.dumps(self.task(), ensure_ascii=False), encoding="utf-8")
-            captures_path.write_text(json.dumps({"captures": [capture]}, ensure_ascii=False), encoding="utf-8")
+            captures_path.write_text(json.dumps({**self.discovery(), "captures": [capture]}, ensure_ascii=False), encoding="utf-8")
             reviews_path.write_text(json.dumps({"reviews": [self.review()]}, ensure_ascii=False), encoding="utf-8")
             completed = subprocess.run([
                 sys.executable, "-m", "competitor_analysis_skill",
@@ -244,7 +283,7 @@ class SemanticReviewTests(unittest.TestCase):
             capture = self.capture()
             capture["screenshot_path"] = "captures/valid.png"
             task_path.write_text(json.dumps(self.task(), ensure_ascii=False), encoding="utf-8")
-            captures_path.write_text(json.dumps({"captures": [capture]}, ensure_ascii=False), encoding="utf-8")
+            captures_path.write_text(json.dumps({**self.discovery(), "captures": [capture]}, ensure_ascii=False), encoding="utf-8")
             reviews_path.write_text(json.dumps({"reviews": [self.review()]}, ensure_ascii=False), encoding="utf-8")
             project_root = Path(__file__).parents[1]
             relative_captures = os.path.relpath(captures_path, project_root)

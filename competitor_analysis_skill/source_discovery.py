@@ -81,3 +81,15 @@ def process_sources(task, records):
                 item[field] = raw[field].strip()
         results.append(item)
     return sorted(results, key=lambda item: (item["product_name"].casefold(), item["normalized_url"]))
+
+
+def process_discovery_payload(task, payload):
+    """Validate the formal source-attempt and candidate registries.
+
+    Kept separate from ``process_sources`` so the old list-shaped adapter can
+    remain readable as a compatibility path without pretending it is a full
+    discovery ledger.
+    """
+    from .evidence import validate_discovery_payload
+
+    return validate_discovery_payload(task, payload)

@@ -1,0 +1,24 @@
+[
+  {
+    "product": "StressWatch",
+    "pipeline_status": "open",
+    "research_disposition": "closed_optional_exclusion",
+    "reason": "页面角色不符；未指定必须收录，主目标已由其他产品覆盖，不要求用户补图。"
+  },
+  {
+    "product": "多邻国",
+    "pipeline_status": "open",
+    "research_disposition": "closed_optional_exclusion",
+    "reason": "社交档案不符本次账户功能总览；不强行加入，不要求用户补图。"
+  },
+  {
+    "product": "斗鱼",
+    "pipeline_status": "resolved",
+    "reason": "百度旧图 403 后改用 UI Notes 已审核抽屉。"
+  },
+  {
+    "product": "哔哩哔哩",
+    "pipeline_status": "resolved",
+    "reason": "排除被修改的公开帖图及创作中心，采用 UI Notes 完整我的页。"
+  }
+]

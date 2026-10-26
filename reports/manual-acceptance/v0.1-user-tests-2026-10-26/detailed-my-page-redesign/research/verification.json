@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-21",
+  "assets_loaded_in_browser": 10,
+  "gallery_groups": [
+    5,
+    3,
+    2
+  ],
+  "desktop_viewport_width": 1280,
+  "desktop_grid_columns": 5,
+  "horizontal_overflow": false,
+  "image_modal": "passed",
+  "image_zoom_to_800px": "passed",
+  "escape_close": "passed",
+  "local_links_exist": true,
+  "one_group_per_material": true,
+  "note": "All 10 source images visually reviewed; current-page user image is not counted as a competitor. Source links were checked during research; access may depend on the viewer session."
+}

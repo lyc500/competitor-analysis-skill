@@ -1,0 +1,146 @@
+{
+  "classification_dimension": "页面路径与设计模式；交互状态隔离",
+  "classification_reason": "先验证产品、角色、阶段、加载状态和单屏质量，再按本次改版目标分组。",
+  "groups": [
+    {
+      "name": "01 · 会员与常用入口的主页面层级",
+      "reason": "完整个人中心主视口，按权益、常用、辅助功能形成层级；5 张均为浏览状态。",
+      "material_ids": [
+        "mat-cap-tencent",
+        "mat-cap-bilibili",
+        "mat-cap-kugou",
+        "mat-cap-gooh",
+        "mat-cap-caljimi"
+      ]
+    },
+    {
+      "name": "02 · 任务进度与奖励价值前置",
+      "reason": "同为完整个人中心，但将任务动作、目标进度或奖励资产作为主信息；功能不同，不将奖励余额等同于任务中心。",
+      "material_ids": [
+        "mat-cap-doubao",
+        "mat-cap-headway",
+        "mat-cap-target"
+      ]
+    },
+    {
+      "name": "03 · 补充路径：低频服务抽屉",
+      "reason": "已打开的抽屉单独比较；上段与滚动下段分别标记，不混作首屏。",
+      "material_ids": [
+        "mat-cap-douyu-top",
+        "mat-cap-douyu-bottom"
+      ]
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cap-tencent",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "我的／浏览前",
+        "state": "loaded_complete",
+        "result_object": "账户功能入口",
+        "version": "页面更新 2026-07；截图版本未核实",
+        "参考重点": "会员身份与权益入口合并"
+      }
+    },
+    {
+      "material_id": "mat-cap-bilibili",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "我的／浏览前",
+        "state": "loaded_complete",
+        "result_object": "账户功能入口",
+        "version": "v7.54 · 2023-11",
+        "参考重点": "会员条＋四个常用入口"
+      }
+    },
+    {
+      "material_id": "mat-cap-kugou",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "我的／浏览前",
+        "state": "loaded_complete",
+        "result_object": "账户功能入口",
+        "version": "v3.1 · 2026-09",
+        "参考重点": "让常用内容成为主角"
+      }
+    },
+    {
+      "material_id": "mat-cap-gooh",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "我的／浏览前",
+        "state": "loaded_complete",
+        "result_object": "账户功能入口",
+        "version": "v1.5 · 2026-09",
+        "参考重点": "一条会员带＋一排常用＋服务列表"
+      }
+    },
+    {
+      "material_id": "mat-cap-caljimi",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "我的／浏览前",
+        "state": "loaded_complete",
+        "result_object": "账户功能入口",
+        "version": "v3.0 · 2026-09",
+        "参考重点": "会员突出，辅助功能按任务分组"
+      }
+    },
+    {
+      "material_id": "mat-cap-doubao",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "我的／浏览前",
+        "state": "loaded_complete",
+        "result_object": "任务与奖励",
+        "version": "v5.5 · 2026-10",
+        "参考重点": "任务与奖励并排，动作明确"
+      }
+    },
+    {
+      "material_id": "mat-cap-headway",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "我的／浏览前",
+        "state": "loaded_complete",
+        "result_object": "任务与奖励",
+        "version": "版本／截图日期未标注",
+        "参考重点": "把任务进度直接放在 Profile"
+      }
+    },
+    {
+      "material_id": "mat-cap-target",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "我的／浏览前",
+        "state": "loaded_complete",
+        "result_object": "任务与奖励",
+        "version": "版本／截图日期未标注",
+        "参考重点": "会员价值用已获收益表达"
+      }
+    },
+    {
+      "material_id": "mat-cap-douyu-top",
+      "labels": {
+        "page_role": "services_drawer",
+        "path_stage": "我的→菜单／已打开",
+        "state": "loaded_complete",
+        "result_object": "辅助服务",
+        "version": "v7.690 · 2024-02",
+        "参考重点": "低频服务放入个人页抽屉"
+      }
+    },
+    {
+      "material_id": "mat-cap-douyu-bottom",
+      "labels": {
+        "page_role": "services_drawer",
+        "path_stage": "我的→菜单／已滚动",
+        "state": "loaded_complete",
+        "result_object": "辅助服务",
+        "version": "v7.690 · 2024-02",
+        "参考重点": "抽屉下段：服务与设置分层"
+      }
+    }
+  ]
+}

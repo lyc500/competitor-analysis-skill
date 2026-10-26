@@ -57,6 +57,42 @@ class SkillContractTests(unittest.TestCase):
         ):
             self.assertIn(phrase, self.skill)
 
+    def test_formal_entry_is_structured_and_legacy_is_bounded(self):
+        for phrase in (
+            "结构化 Task",
+            "legacy/demo",
+            "阶段中间产物",
+            "正式报告",
+            "离线演示",
+            "--task-file",
+            "--sources-file",
+        ):
+            self.assertIn(phrase, self.skill)
+
+    def test_evidence_registry_and_cross_stage_links_are_explicit(self):
+        for phrase in (
+            "source_attempts",
+            "source_candidate_id",
+            "source_attempt_id",
+            "source_entry_url",
+            "source_detail_url",
+            "source_asset_url",
+            "缺失或错误引用",
+            "不编造 ID",
+        ):
+            self.assertIn(phrase, self.skill)
+
+    def test_report_statistics_and_historical_gap_are_explicit(self):
+        for phrase in (
+            "来源访问",
+            "候选处置",
+            "素材审核",
+            "产品 fallback",
+            "覆盖边界",
+            "历史证据缺口",
+        ):
+            self.assertIn(phrase, self.skill)
+
 
 if __name__ == "__main__":
     unittest.main()

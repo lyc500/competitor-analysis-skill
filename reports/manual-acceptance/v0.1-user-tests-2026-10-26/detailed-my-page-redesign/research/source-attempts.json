@@ -1,0 +1,148 @@
+[
+  {
+    "provider": "UI Notes",
+    "entry": "https://uinotes.com/pin?functions=71",
+    "query": "个人中心",
+    "mode": "category / tag / OCR / App",
+    "web_text_accessible": null,
+    "browser_accessible": true,
+    "browser_interactive": true,
+    "content_available": true,
+    "access_status": "accessible",
+    "batches": [
+      {
+        "name": "category",
+        "visible": 20,
+        "reported_total": 1877,
+        "stop": "初始未登录，下滑后显示登录限制"
+      },
+      {
+        "name": "tag_search",
+        "query": "个人中心",
+        "visible": 20,
+        "reported_total": 4341,
+        "stop": "初始未登录，超过可见范围需要登录"
+      },
+      {
+        "name": "ocr_search",
+        "query": "个人中心",
+        "visible": 40,
+        "reported_total": 613,
+        "stop": "首批多为相邻场景；候选容量已足够，未扩展下一批",
+        "identity_note": "保留 8 个已展开识别的链接；其余 32 个结果只计批次可见范围，没有声称已逐图审核"
+      },
+      {
+        "name": "腾讯视频 App + 个人中心",
+        "visible": 10,
+        "stop": "滚动到列表底部，明确无更多"
+      },
+      {
+        "name": "斗鱼 App + 个人中心",
+        "visible": 7,
+        "stop": "滚动到列表底部，明确无更多"
+      },
+      {
+        "name": "哔哩哔哩 App + 个人中心",
+        "visible": 17,
+        "stop": "滚动到列表底部，明确无更多"
+      }
+    ],
+    "note": "后续当前浏览器会话正常开放筛选，使用现有访问权限。未处理、存储凭据。文本可访问性未测试。"
+  },
+  {
+    "provider": "PTTRNS",
+    "entry": "https://app.pttrns.com/patterns?categories=profile-account",
+    "query": "Profile & Account",
+    "mode": "UX Patterns filter",
+    "web_text_accessible": null,
+    "browser_accessible": true,
+    "browser_interactive": true,
+    "content_available": true,
+    "access_status": "accessible",
+    "batches": [
+      {
+        "name": "initial",
+        "visible": 0,
+        "stop": "初始跳转营销首页／登录入口"
+      },
+      {
+        "name": "session_revisit",
+        "visible": 12,
+        "reported_total": 419,
+        "scroll_batches": 3,
+        "stop": "正式候选池达到容量，选中 Headway 继续详情审核"
+      }
+    ],
+    "note": "现有会话选择 Profile & Account 分类可见结果；从列表点击详情有效。另一新标签直达仍跳转登录，故不把访问状态泛化为所有标签。"
+  },
+  {
+    "provider": "Refero",
+    "entry": "https://refero.design/apps/search?page_types%5Bid%5D%5B%5D=15",
+    "query": "page type 15 / My Account / Profile",
+    "mode": "page_type + keyword_search",
+    "web_text_accessible": null,
+    "browser_accessible": true,
+    "browser_interactive": true,
+    "content_available": true,
+    "access_status": "login_required",
+    "batches": [
+      {
+        "query": "page type 15",
+        "visible": 6,
+        "hidden": 2174
+      },
+      {
+        "query": "My Account",
+        "visible": 6,
+        "hidden": 1702
+      },
+      {
+        "query": "Profile",
+        "visible": 6,
+        "hidden": 9988
+      }
+    ],
+    "note": "每种入口仅 6 张公开可见；其余受登录限制。Target 详情可读，截取的是产品原图，不是数据库页面。"
+  },
+  {
+    "provider": "Mobbin",
+    "entry": "https://mobbin.com/search/apps/ios?content_type=screens&sort=popularity&filter=screenPatterns.My+Account+%26+Profile",
+    "query": "My Account & Profile",
+    "mode": "screen_pattern",
+    "web_text_accessible": null,
+    "browser_accessible": true,
+    "browser_interactive": true,
+    "content_available": false,
+    "access_status": "login_required",
+    "batches": [
+      {
+        "name": "direct_pattern",
+        "visible": 0,
+        "stop": "重定向营销首页，只有登录入口，无可审核 App Screen"
+      }
+    ],
+    "note": "只确认营销页可交互，不能称素材内容可访问。未绕过登录。"
+  },
+  {
+    "provider": "公开网页与图片检索",
+    "entry": "public web search",
+    "query": "腾讯视频 我的 页面 / 斗鱼 我的 页面 任务 / 哔哩哔哩 我的 页面 个人中心",
+    "mode": "web_search + image_search",
+    "web_text_accessible": true,
+    "browser_accessible": true,
+    "browser_interactive": true,
+    "content_available": true,
+    "access_status": "accessible",
+    "batches": [
+      {
+        "name": "public-fallback",
+        "selected_sources": [
+          "天极下载",
+          "百度经验",
+          "LINUX DO"
+        ]
+      }
+    ],
+    "note": "腾讯视频采用完整公开教程图并保留红框；斗鱼旧教程图片 403；B站改版截图来源明确说明经过修改，已排除。"
+  }
+]

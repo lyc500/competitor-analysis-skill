@@ -59,3 +59,38 @@ class BrowserReportTests(unittest.TestCase):
                 self.assertEqual(page.locator('.grid').evaluate("element => getComputedStyle(element).gridTemplateColumns.split(' ').length"), 5)
                 more = page.locator('.more-button'); self.assertTrue(more.is_visible()); more.click()
                 self.assertEqual(page.locator('.gallery-card:not([hidden])').count(), 25); self.assertFalse(more.is_visible()); browser.close()
+
+    def test_multiple_groups_each_expand_in_independent_twenty_card_steps(self):
+        with TemporaryDirectory() as d:
+            root = Path(d); src = root / 'stage3c'; assets = src / 'assets'; assets.mkdir(parents=True)
+            fixture = Path(__file__).parent / 'fixtures/materials/valid.png'
+            materials = []
+            groups = []
+            competitors = []
+            for group_index, size in enumerate((45, 21)):
+                ids = []
+                for index in range(size):
+                    material_id = f'mat-{group_index}-{index}'; filename = f'{material_id}.png'
+                    (assets / filename).write_bytes(fixture.read_bytes())
+                    ids.append(material_id)
+                    product = f'产品{group_index}-{index}'
+                    competitors.append({"product_name": product, "region": "CN", "product_type": "社区", "platform": "Web", "target_page": "搜索结果页", "planning_source": "user_specified", "priority": "high", "reason": "指定"})
+                    materials.append({"id": material_id, "product_name": product, "page_name": "搜索结果页", "region": "CN", "product_type": "社区", "platform": "Web", "image_path": f'assets/{filename}', "source_type": "user_upload", "collection_method": "user_provided", "provenance": "user_upload", "semantic_status": "accepted", "quality_status": "accepted", "collection_status": "collected"})
+                groups.append({"name": f"组{group_index}", "reason": "独立展开测试", "material_ids": ids})
+            task = {"raw_request":"x","research_goal":"参考","target_page":"搜索结果页","regions":["CN"],"specified_products":[c["product_name"] for c in competitors],"assumptions":[],"needs_clarification":False,"task_status":"ready","planning_strategy":"user_only","competitors":competitors}
+            reviewed_path = src / 'reviewed_materials.json'; reviewed_path.write_text(json.dumps({"task": task, "materials": materials, "fallback_requests": []}, ensure_ascii=False)); plan_path = root / 'plan.json'; plan_path.write_text(json.dumps({"classification_dimension":"布局","classification_reason":"Agent 观察","groups":groups,"material_labels":[]}, ensure_ascii=False))
+            out = root / 'out'; run_pipeline(task, out, reviewed_materials_file=reviewed_path, classification_plan_file=plan_path)
+            class S(ThreadingHTTPServer): pass
+            S.root = out; server = S(('127.0.0.1', 0), Handler); thread = threading.Thread(target=server.serve_forever, daemon=True); thread.start(); self.addCleanup(server.shutdown)
+            with sync_playwright() as p:
+                browser = p.chromium.launch(headless=True); page = browser.new_page(viewport={"width":390,"height":844}); page.goto(f'http://127.0.0.1:{server.server_port}/report.html')
+                galleries = page.locator('[data-gallery]')
+                self.assertEqual(galleries.count(), 2)
+                self.assertEqual(galleries.nth(0).locator('.gallery-card:not([hidden])').count(), 20)
+                self.assertEqual(galleries.nth(1).locator('.gallery-card:not([hidden])').count(), 20)
+                buttons = page.locator('.more-button'); self.assertEqual(buttons.count(), 2)
+                buttons.nth(0).click(); self.assertEqual(galleries.nth(0).locator('.gallery-card:not([hidden])').count(), 40); self.assertTrue(buttons.nth(0).is_visible())
+                buttons.nth(0).click(); self.assertEqual(galleries.nth(0).locator('.gallery-card:not([hidden])').count(), 45); self.assertFalse(buttons.nth(0).is_visible())
+                buttons.nth(1).click(); self.assertEqual(galleries.nth(1).locator('.gallery-card:not([hidden])').count(), 21); self.assertFalse(buttons.nth(1).is_visible())
+                self.assertLessEqual(page.evaluate('document.documentElement.scrollWidth'), page.evaluate('window.innerWidth') + 2)
+                browser.close()

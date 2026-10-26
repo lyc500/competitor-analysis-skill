@@ -1,0 +1,2435 @@
+{
+  "mapping": {
+    "original_page": "我的／个人中心",
+    "canonical": "Profile",
+    "aliases": [
+      "You",
+      "Me",
+      "Account",
+      "My Account",
+      "My Page"
+    ],
+    "taxonomy": [
+      "Profile & Account",
+      "My Account & Profile"
+    ],
+    "adjacent_terms": [
+      "Settings"
+    ],
+    "note": "相邻术语仅作发现线索，不能自动接收。"
+  },
+  "source_attempts": [
+    {
+      "provider": "UI Notes",
+      "entry": "https://uinotes.com/pin?functions=71",
+      "query": "个人中心",
+      "mode": "category / tag / OCR / App",
+      "web_text_accessible": null,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": true,
+      "access_status": "accessible",
+      "batches": [
+        {
+          "name": "category",
+          "visible": 20,
+          "reported_total": 1877,
+          "stop": "初始未登录，下滑后显示登录限制"
+        },
+        {
+          "name": "tag_search",
+          "query": "个人中心",
+          "visible": 20,
+          "reported_total": 4341,
+          "stop": "初始未登录，超过可见范围需要登录"
+        },
+        {
+          "name": "ocr_search",
+          "query": "个人中心",
+          "visible": 40,
+          "reported_total": 613,
+          "stop": "首批多为相邻场景；候选容量已足够，未扩展下一批",
+          "identity_note": "保留 8 个已展开识别的链接；其余 32 个结果只计批次可见范围，没有声称已逐图审核"
+        },
+        {
+          "name": "腾讯视频 App + 个人中心",
+          "visible": 10,
+          "stop": "滚动到列表底部，明确无更多"
+        },
+        {
+          "name": "斗鱼 App + 个人中心",
+          "visible": 7,
+          "stop": "滚动到列表底部，明确无更多"
+        },
+        {
+          "name": "哔哩哔哩 App + 个人中心",
+          "visible": 17,
+          "stop": "滚动到列表底部，明确无更多"
+        }
+      ],
+      "note": "后续当前浏览器会话正常开放筛选，使用现有访问权限。未处理、存储凭据。文本可访问性未测试。"
+    },
+    {
+      "provider": "PTTRNS",
+      "entry": "https://app.pttrns.com/patterns?categories=profile-account",
+      "query": "Profile & Account",
+      "mode": "UX Patterns filter",
+      "web_text_accessible": null,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": true,
+      "access_status": "accessible",
+      "batches": [
+        {
+          "name": "initial",
+          "visible": 0,
+          "stop": "初始跳转营销首页／登录入口"
+        },
+        {
+          "name": "session_revisit",
+          "visible": 12,
+          "reported_total": 419,
+          "scroll_batches": 3,
+          "stop": "正式候选池达到容量，选中 Headway 继续详情审核"
+        }
+      ],
+      "note": "现有会话选择 Profile & Account 分类可见结果；从列表点击详情有效。另一新标签直达仍跳转登录，故不把访问状态泛化为所有标签。"
+    },
+    {
+      "provider": "Refero",
+      "entry": "https://refero.design/apps/search?page_types%5Bid%5D%5B%5D=15",
+      "query": "page type 15 / My Account / Profile",
+      "mode": "page_type + keyword_search",
+      "web_text_accessible": null,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": true,
+      "access_status": "login_required",
+      "batches": [
+        {
+          "query": "page type 15",
+          "visible": 6,
+          "hidden": 2174
+        },
+        {
+          "query": "My Account",
+          "visible": 6,
+          "hidden": 1702
+        },
+        {
+          "query": "Profile",
+          "visible": 6,
+          "hidden": 9988
+        }
+      ],
+      "note": "每种入口仅 6 张公开可见；其余受登录限制。Target 详情可读，截取的是产品原图，不是数据库页面。"
+    },
+    {
+      "provider": "Mobbin",
+      "entry": "https://mobbin.com/search/apps/ios?content_type=screens&sort=popularity&filter=screenPatterns.My+Account+%26+Profile",
+      "query": "My Account & Profile",
+      "mode": "screen_pattern",
+      "web_text_accessible": null,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": false,
+      "access_status": "login_required",
+      "batches": [
+        {
+          "name": "direct_pattern",
+          "visible": 0,
+          "stop": "重定向营销首页，只有登录入口，无可审核 App Screen"
+        }
+      ],
+      "note": "只确认营销页可交互，不能称素材内容可访问。未绕过登录。"
+    },
+    {
+      "provider": "公开网页与图片检索",
+      "entry": "public web search",
+      "query": "腾讯视频 我的 页面 / 斗鱼 我的 页面 任务 / 哔哩哔哩 我的 页面 个人中心",
+      "mode": "web_search + image_search",
+      "web_text_accessible": true,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": true,
+      "access_status": "accessible",
+      "batches": [
+        {
+          "name": "public-fallback",
+          "selected_sources": [
+            "天极下载",
+            "百度经验",
+            "LINUX DO"
+          ]
+        }
+      ],
+      "note": "腾讯视频采用完整公开教程图并保留红框；斗鱼旧教程图片 403；B站改版截图来源明确说明经过修改，已排除。"
+    }
+  ],
+  "registered_links": [
+    {
+      "candidate_id": "tencent",
+      "product": "腾讯视频",
+      "source_url": "https://mydown.yesky.com/sjsoft/725757004.html",
+      "source_provider": "天极下载",
+      "discoveries": [
+        {
+          "mode": "selected_detail",
+          "query": "个人中心 / Profile / My Account",
+          "batch": "detail",
+          "rank": null
+        }
+      ],
+      "page_role_initial": "personal_center",
+      "interaction_stage_initial": "browse_before_action",
+      "render_state_initial": "loaded_complete",
+      "candidate_status": "accepted",
+      "disposition_reason": "黑金身份卡内同时出现 SVIP3、积分、钻石、视频 VIP、体育 VIP；下方独立一排预约／下载／收藏等入口，再展示观看历史。",
+      "material_id": "mat-cap-tencent",
+      "final_review": true,
+      "shortlist_rank": 1,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "653270661085471375",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/653270661085471375",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "selected_detail",
+          "query": "个人中心 / Profile / My Account",
+          "batch": "detail",
+          "rank": null
+        },
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-2",
+          "rank": 10
+        }
+      ],
+      "page_role_initial": "personal_center",
+      "interaction_stage_initial": "browse_before_action",
+      "render_state_initial": "loaded_complete",
+      "candidate_status": "accepted",
+      "disposition_reason": "底部“我的”选中；身份区下是粉色大会员条，再是一排离线缓存、历史记录、我的收藏、稍后再看。创作与推荐服务另起分组。",
+      "material_id": "mat-cap-bilibili",
+      "final_review": true,
+      "shortlist_rank": 2,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "341464133306831189",
+      "product": "酷狗畅听版",
+      "source_url": "https://uinotes.com/pin/341464133306831189",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "selected_detail",
+          "query": "个人中心 / Profile / My Account",
+          "batch": "detail",
+          "rank": null
+        },
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 7
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 7
+        }
+      ],
+      "page_role_initial": "personal_center",
+      "interaction_stage_initial": "browse_before_action",
+      "render_state_initial": "loaded_complete",
+      "candidate_status": "accepted",
+      "disposition_reason": "“我的”选中；头像带 SVIP 标识，免费畅听剩余时间与领取入口集中展示；“我喜欢”“已下载”占据两个大入口，下面直接是最近播放。",
+      "material_id": "mat-cap-kugou",
+      "final_review": true,
+      "shortlist_rank": 3,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "653349205654581772",
+      "product": "Gooh旅记",
+      "source_url": "https://uinotes.com/pin/653349205654581772",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "selected_detail",
+          "query": "个人中心 / Profile / My Account",
+          "batch": "detail",
+          "rank": null
+        },
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 20
+        }
+      ],
+      "page_role_initial": "personal_center",
+      "interaction_stage_initial": "browse_before_action",
+      "render_state_initial": "loaded_complete",
+      "candidate_status": "accepted",
+      "disposition_reason": "“我的”选中；用户数据下是一条 Gooh Pro 权益推广带，随后是旅行盲盒／旅行足迹／收藏地点三入口，下方辅助功能改用列表。",
+      "material_id": "mat-cap-gooh",
+      "final_review": true,
+      "shortlist_rank": 4,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "488948447893600531",
+      "product": "CalJimi",
+      "source_url": "https://uinotes.com/pin/488948447893600531",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "selected_detail",
+          "query": "个人中心 / Profile / My Account",
+          "batch": "detail",
+          "rank": null
+        },
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 17
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 17
+        }
+      ],
+      "page_role_initial": "personal_center",
+      "interaction_stage_initial": "browse_before_action",
+      "render_state_initial": "loaded_complete",
+      "candidate_status": "accepted",
+      "disposition_reason": "底部“我的”选中，头像下是永久会员促销卡，随后按 Apple Watch、实用功能分组排列服务，右上保留奖章入口。",
+      "material_id": "mat-cap-caljimi",
+      "final_review": true,
+      "shortlist_rank": 5,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "096876602836684120",
+      "product": "豆包爱学",
+      "source_url": "https://uinotes.com/pin/096876602836684120",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "selected_detail",
+          "query": "个人中心 / Profile / My Account",
+          "batch": "detail",
+          "rank": null
+        },
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 2
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 2
+        }
+      ],
+      "page_role_initial": "personal_center",
+      "interaction_stage_initial": "browse_before_action",
+      "render_state_initial": "loaded_complete",
+      "candidate_status": "accepted",
+      "disposition_reason": "底部“我的”选中；金币商城卡展示“3 金币”，任务中心卡直接写“立刻签到领金币”；下方仅保留学习记录、消息、帮助与反馈、设置。",
+      "material_id": "mat-cap-doubao",
+      "final_review": true,
+      "shortlist_rank": 6,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "headway",
+      "product": "Headway",
+      "source_url": "https://app.pttrns.com/patterns/10141",
+      "source_provider": "PTTRNS",
+      "discoveries": [
+        {
+          "mode": "selected_detail",
+          "query": "个人中心 / Profile / My Account",
+          "batch": "detail",
+          "rank": null
+        },
+        {
+          "mode": "ux_pattern_filter",
+          "query": "Profile & Account",
+          "batch": "PT-scroll-1",
+          "rank": 3
+        }
+      ],
+      "page_role_initial": "personal_center",
+      "interaction_stage_initial": "browse_before_action",
+      "render_state_initial": "loaded_complete",
+      "candidate_status": "accepted",
+      "disposition_reason": "页面标题和底部选中项均为 Profile；Daily goal 卡显示 0/20 min、调整目标按钮、一周记录及连续天数。页面已完整加载，0 是有效进度而非加载或空白。",
+      "material_id": "mat-cap-headway",
+      "final_review": true,
+      "shortlist_rank": 7,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "target",
+      "product": "Target",
+      "source_url": "https://refero.design/screens/08723dab-7694-4c3b-a061-6dd9393de0db?query=My%20Account&source=search",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "selected_detail",
+          "query": "个人中心 / Profile / My Account",
+          "batch": "detail",
+          "rank": null
+        },
+        {
+          "mode": "keyword_search",
+          "query": "My Account",
+          "batch": "RF-My Account-visible6",
+          "rank": 6
+        }
+      ],
+      "page_role_initial": "personal_center",
+      "interaction_stage_initial": "browse_before_action",
+      "render_state_initial": "loaded_complete",
+      "candidate_status": "accepted",
+      "disposition_reason": "My Target 底部标签选中；购买记录之后展示本年节省金额、Target Circle 奖励余额和社区投票；不同权益分成独立卡片。",
+      "material_id": "mat-cap-target",
+      "final_review": true,
+      "shortlist_rank": 8,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "276511827925182237",
+      "product": "斗鱼",
+      "source_url": "https://uinotes.com/pin/276511827925182237",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "selected_detail",
+          "query": "个人中心 / Profile / My Account",
+          "batch": "detail",
+          "rank": null
+        },
+        {
+          "mode": "app_search_and_category",
+          "query": "斗鱼 / 个人中心",
+          "batch": "UN-斗鱼-scroll-1",
+          "rank": 4
+        }
+      ],
+      "page_role_initial": "services_drawer",
+      "interaction_stage_initial": "drawer_open",
+      "render_state_initial": "loaded_complete",
+      "candidate_status": "accepted",
+      "disposition_reason": "个人主页背景被遮罩覆盖，右侧抽屉完整打开；身份权益、内容管理、开播上传、其他服务分组排列，底部固定设置／私信／换皮肤。",
+      "material_id": "mat-cap-douyu-top",
+      "final_review": true,
+      "shortlist_rank": 9,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "201516640318744950",
+      "product": "斗鱼",
+      "source_url": "https://uinotes.com/pin/201516640318744950",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "selected_detail",
+          "query": "个人中心 / Profile / My Account",
+          "batch": "detail",
+          "rank": null
+        },
+        {
+          "mode": "app_search_and_category",
+          "query": "斗鱼 / 个人中心",
+          "batch": "UN-斗鱼-scroll-1",
+          "rank": 5
+        }
+      ],
+      "page_role_initial": "services_drawer",
+      "interaction_stage_initial": "drawer_open_scrolled",
+      "render_state_initial": "loaded_complete",
+      "candidate_status": "accepted",
+      "disposition_reason": "同一抽屉已滚动到下段；道具商城、任务中心、游戏账号绑定、礼包、钱包等是图标组；个人信息收集清单等是列表，底部固定操作仍可见。",
+      "material_id": "mat-cap-douyu-bottom",
+      "final_review": true,
+      "shortlist_rank": 10,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "137742239221819001",
+      "product": "StressWatch",
+      "source_url": "https://uinotes.com/pin/137742239221819001",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 12
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 12
+        }
+      ],
+      "page_role_initial": "settings",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "rejected",
+      "disposition_reason": "完整审核：主体是设置与授权，不是本次个人中心；会员横幅不能替代页面角色。",
+      "final_review": true,
+      "shortlist_rank": 11,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "004403109497668392",
+      "product": "多邻国",
+      "source_url": "https://uinotes.com/pin/004403109497668392",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 3
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 3
+        }
+      ],
+      "page_role_initial": "social_profile",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "rejected",
+      "disposition_reason": "完整审核：社交资料、好友连胜，缺少本次账户功能总览。",
+      "final_review": true,
+      "shortlist_rank": 12,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "605398946594896278",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/605398946594896278",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-3",
+          "rank": 13
+        }
+      ],
+      "page_role_initial": "creator_dashboard",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "rejected",
+      "disposition_reason": "完整审核：独立创作中心，不是普通观众的我的页。",
+      "final_review": true,
+      "shortlist_rank": 13,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "bili-modified",
+      "product": "哔哩哔哩",
+      "source_url": "https://linux.do/t/topic/767354?page=2",
+      "source_provider": "LINUX DO",
+      "discoveries": [
+        {
+          "mode": "public_image_search",
+          "query": "哔哩哔哩 我的 页面 个人中心",
+          "batch": "web-image",
+          "rank": null
+        }
+      ],
+      "page_role_initial": "modified_ui",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "rejected",
+      "disposition_reason": "完整审核：来源声明使用 Surge 重写隐藏导航，不作为原版 App 页面。",
+      "final_review": true,
+      "shortlist_rank": 14,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "douyu-baidu",
+      "product": "斗鱼",
+      "source_url": "https://jingyan.baidu.com/article/cb5d6105e8f282415d2fe074.html",
+      "source_provider": "百度经验",
+      "discoveries": [
+        {
+          "mode": "public_image_search",
+          "query": "斗鱼 我的 页面 任务",
+          "batch": "web-image",
+          "rank": null
+        }
+      ],
+      "page_role_initial": "personal_center",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "rejected",
+      "disposition_reason": "公开教程 2021 年旧样本；原图请求返回 403；已用 UI Notes 的斗鱼抽屉样本覆盖。",
+      "shortlist_rank": 15,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "604122555311463924",
+      "product": "腾讯视频",
+      "source_url": "https://uinotes.com/pin/604122555311463924",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "腾讯视频 / 个人中心",
+          "batch": "UN-腾讯视频-scroll-2",
+          "rank": 6
+        }
+      ],
+      "page_role_initial": "personal_center",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "rejected",
+      "disposition_reason": "已看大图，2023-06 / v8.8 旧样本；与已入选腾讯视频结构重叠，控制重复。",
+      "shortlist_rank": 16,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "133323406851668822",
+      "product": "豆包爱学",
+      "source_url": "https://uinotes.com/pin/133323406851668822",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 1
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 1
+        }
+      ],
+      "page_role_initial": "personal_center",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "rejected",
+      "disposition_reason": "完整未登录我的页，已看大图；选择同产品已登录版本以比较真实资产与任务状态。",
+      "shortlist_rank": 17,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "438158835260733576",
+      "product": "酷狗畅听版",
+      "source_url": "https://uinotes.com/pin/438158835260733576",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 5
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 5
+        }
+      ],
+      "page_role_initial": "personal_center",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "rejected",
+      "disposition_reason": "完整未登录我的页，已看大图；选择同产品已登录版本以减少重复。",
+      "shortlist_rank": 18,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "pt-10143",
+      "product": "Headway",
+      "source_url": "https://app.pttrns.com/patterns/10143",
+      "source_provider": "PTTRNS",
+      "discoveries": [
+        {
+          "mode": "ux_pattern_filter",
+          "query": "Profile & Account",
+          "batch": "PT-scroll-1",
+          "rank": 2
+        }
+      ],
+      "page_role_initial": "settings",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "rejected",
+      "disposition_reason": "列表缩略图即可识别为 Settings，角色不符，不进入完整素材审核。",
+      "shortlist_rank": 19,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "pt-10144",
+      "product": "Headway",
+      "source_url": "https://app.pttrns.com/patterns/10144",
+      "source_provider": "PTTRNS",
+      "discoveries": [
+        {
+          "mode": "ux_pattern_filter",
+          "query": "Profile & Account",
+          "batch": "PT-scroll-1",
+          "rank": 1
+        }
+      ],
+      "page_role_initial": "goal_edit_sheet",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "rejected",
+      "disposition_reason": "列表显示目标调整弹层，交互阶段不是个人中心浏览态。",
+      "shortlist_rank": 20,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "607108083863825233",
+      "product": "斗鱼",
+      "source_url": "https://uinotes.com/pin/607108083863825233",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "斗鱼 / 个人中心",
+          "batch": "UN-斗鱼-scroll-1",
+          "rank": 1
+        }
+      ],
+      "page_role_initial": "login_intercept",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "rejected",
+      "disposition_reason": "列表可见未登录拦截；不采用为完整个人中心。",
+      "shortlist_rank": 21,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "pt-10037",
+      "product": "未确认",
+      "source_url": "https://app.pttrns.com/patterns/10037",
+      "source_provider": "PTTRNS",
+      "discoveries": [
+        {
+          "mode": "ux_pattern_filter",
+          "query": "Profile & Account",
+          "batch": "PT-scroll-1",
+          "rank": 4
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 22,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "pt-10041",
+      "product": "未确认",
+      "source_url": "https://app.pttrns.com/patterns/10041",
+      "source_provider": "PTTRNS",
+      "discoveries": [
+        {
+          "mode": "ux_pattern_filter",
+          "query": "Profile & Account",
+          "batch": "PT-scroll-2",
+          "rank": 5
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 23,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "pt-10035",
+      "product": "未确认",
+      "source_url": "https://app.pttrns.com/patterns/10035",
+      "source_provider": "PTTRNS",
+      "discoveries": [
+        {
+          "mode": "ux_pattern_filter",
+          "query": "Profile & Account",
+          "batch": "PT-scroll-2",
+          "rank": 6
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 24,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "pt-10024",
+      "product": "Duolingo",
+      "source_url": "https://app.pttrns.com/patterns/10024",
+      "source_provider": "PTTRNS",
+      "discoveries": [
+        {
+          "mode": "ux_pattern_filter",
+          "query": "Profile & Account",
+          "batch": "PT-scroll-2",
+          "rank": 7
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 25,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "pt-9152",
+      "product": "Duolingo",
+      "source_url": "https://app.pttrns.com/patterns/9152",
+      "source_provider": "PTTRNS",
+      "discoveries": [
+        {
+          "mode": "ux_pattern_filter",
+          "query": "Profile & Account",
+          "batch": "PT-scroll-2",
+          "rank": 8
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 26,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "pt-9145",
+      "product": "Duolingo",
+      "source_url": "https://app.pttrns.com/patterns/9145",
+      "source_provider": "PTTRNS",
+      "discoveries": [
+        {
+          "mode": "ux_pattern_filter",
+          "query": "Profile & Account",
+          "batch": "PT-scroll-3",
+          "rank": 9
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 27,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "pt-9144",
+      "product": "Duolingo",
+      "source_url": "https://app.pttrns.com/patterns/9144",
+      "source_provider": "PTTRNS",
+      "discoveries": [
+        {
+          "mode": "ux_pattern_filter",
+          "query": "Profile & Account",
+          "batch": "PT-scroll-3",
+          "rank": 10
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 28,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "pt-9143",
+      "product": "Duolingo",
+      "source_url": "https://app.pttrns.com/patterns/9143",
+      "source_provider": "PTTRNS",
+      "discoveries": [
+        {
+          "mode": "ux_pattern_filter",
+          "query": "Profile & Account",
+          "batch": "PT-scroll-3",
+          "rank": 11
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 29,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "pt-9062",
+      "product": "未确认",
+      "source_url": "https://app.pttrns.com/patterns/9062",
+      "source_provider": "PTTRNS",
+      "discoveries": [
+        {
+          "mode": "ux_pattern_filter",
+          "query": "Profile & Account",
+          "batch": "PT-scroll-3",
+          "rank": 12
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 30,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-7801e80d-07ec-45a0-8a62-bca0151fadac",
+      "product": "Telegram",
+      "source_url": "https://refero.design/screens/7801e80d-07ec-45a0-8a62-bca0151fadac",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "page_type",
+          "query": "page_type_15",
+          "batch": "RF-page_type_15-visible6",
+          "rank": 1
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 31,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-81878116-1635-48d2-839c-4d5d9f442d87",
+      "product": "Bump",
+      "source_url": "https://refero.design/screens/81878116-1635-48d2-839c-4d5d9f442d87",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "page_type",
+          "query": "page_type_15",
+          "batch": "RF-page_type_15-visible6",
+          "rank": 2
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 32,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-0b449727-fc5c-48c2-9e09-70144f2247a3",
+      "product": "Tinder",
+      "source_url": "https://refero.design/screens/0b449727-fc5c-48c2-9e09-70144f2247a3",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "page_type",
+          "query": "page_type_15",
+          "batch": "RF-page_type_15-visible6",
+          "rank": 3
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 33,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-77ce4226-fb95-4a5f-82e8-8215d57ec2fc",
+      "product": "Tinder",
+      "source_url": "https://refero.design/screens/77ce4226-fb95-4a5f-82e8-8215d57ec2fc",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "page_type",
+          "query": "page_type_15",
+          "batch": "RF-page_type_15-visible6",
+          "rank": 4
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 34,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-2b839b6b-b1e1-432d-95fb-6b4f1575b816",
+      "product": "UNHINGED",
+      "source_url": "https://refero.design/screens/2b839b6b-b1e1-432d-95fb-6b4f1575b816",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "page_type",
+          "query": "page_type_15",
+          "batch": "RF-page_type_15-visible6",
+          "rank": 5
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 35,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-d13d31bd-93d2-4bf0-b587-5a406b9502b0",
+      "product": "Train Fitness",
+      "source_url": "https://refero.design/screens/d13d31bd-93d2-4bf0-b587-5a406b9502b0",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "page_type",
+          "query": "page_type_15",
+          "batch": "RF-page_type_15-visible6",
+          "rank": 6
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 36,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-a01693ef-b577-493e-bec8-54743a24cd0e",
+      "product": "Uber Eats",
+      "source_url": "https://refero.design/screens/a01693ef-b577-493e-bec8-54743a24cd0e",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "keyword_search",
+          "query": "My Account",
+          "batch": "RF-My Account-visible6",
+          "rank": 1
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 37,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-08ff5ee3-9b4a-4053-b8cc-7c81c9317e50",
+      "product": "Stemz",
+      "source_url": "https://refero.design/screens/08ff5ee3-9b4a-4053-b8cc-7c81c9317e50",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "keyword_search",
+          "query": "My Account",
+          "batch": "RF-My Account-visible6",
+          "rank": 2
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 38,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-be242561-a999-42d4-9f71-b9047a1a30c7",
+      "product": "HBO Max",
+      "source_url": "https://refero.design/screens/be242561-a999-42d4-9f71-b9047a1a30c7",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "keyword_search",
+          "query": "My Account",
+          "batch": "RF-My Account-visible6",
+          "rank": 3
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 39,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-fd627f4a-612e-4887-b743-b1e94c8fb9de",
+      "product": "HBO Max",
+      "source_url": "https://refero.design/screens/fd627f4a-612e-4887-b743-b1e94c8fb9de",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "keyword_search",
+          "query": "My Account",
+          "batch": "RF-My Account-visible6",
+          "rank": 4
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 40,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-c7e66b35-1e2e-4a7b-b6c4-48394076c61f",
+      "product": "HBO Max",
+      "source_url": "https://refero.design/screens/c7e66b35-1e2e-4a7b-b6c4-48394076c61f",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "keyword_search",
+          "query": "My Account",
+          "batch": "RF-My Account-visible6",
+          "rank": 5
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 41,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-4022359c-26cd-4b1b-a47d-202c371094f7",
+      "product": "Threads",
+      "source_url": "https://refero.design/screens/4022359c-26cd-4b1b-a47d-202c371094f7",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "keyword_search",
+          "query": "Profile",
+          "batch": "RF-Profile-visible6",
+          "rank": 1
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 42,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-850c0dec-84b8-401b-b5fe-80b2669f69e5",
+      "product": "Uber",
+      "source_url": "https://refero.design/screens/850c0dec-84b8-401b-b5fe-80b2669f69e5",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "keyword_search",
+          "query": "Profile",
+          "batch": "RF-Profile-visible6",
+          "rank": 2
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 43,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-d71d9b00-bbdd-4684-840e-0f97d0380eaf",
+      "product": "REKKI",
+      "source_url": "https://refero.design/screens/d71d9b00-bbdd-4684-840e-0f97d0380eaf",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "keyword_search",
+          "query": "Profile",
+          "batch": "RF-Profile-visible6",
+          "rank": 3
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 44,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-eea5b00b-82e5-4f30-bc1e-3e04a2741e50",
+      "product": "Dropset",
+      "source_url": "https://refero.design/screens/eea5b00b-82e5-4f30-bc1e-3e04a2741e50",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "keyword_search",
+          "query": "Profile",
+          "batch": "RF-Profile-visible6",
+          "rank": 4
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 45,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-cf0bd17f-0a03-49b0-b872-2c6222e25718",
+      "product": "Dropset",
+      "source_url": "https://refero.design/screens/cf0bd17f-0a03-49b0-b872-2c6222e25718",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "keyword_search",
+          "query": "Profile",
+          "batch": "RF-Profile-visible6",
+          "rank": 5
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 46,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "rf-e1252459-0aef-4785-82cb-37727720f32f",
+      "product": "LinkedIn",
+      "source_url": "https://refero.design/screens/e1252459-0aef-4785-82cb-37727720f32f",
+      "source_provider": "Refero",
+      "discoveries": [
+        {
+          "mode": "keyword_search",
+          "query": "Profile",
+          "batch": "RF-Profile-visible6",
+          "rank": 6
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 47,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "151668032700061464",
+      "product": "多邻国",
+      "source_url": "https://uinotes.com/pin/151668032700061464",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 4
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 4
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 48,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "221394461036911797",
+      "product": "酷狗畅听版",
+      "source_url": "https://uinotes.com/pin/221394461036911797",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 6
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 6
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 49,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "923031631817144190",
+      "product": "酷狗畅听版",
+      "source_url": "https://uinotes.com/pin/923031631817144190",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 8
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 8
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 50,
+      "in_candidate_pool": true
+    },
+    {
+      "candidate_id": "136199305433265970",
+      "product": "酷狗畅听版",
+      "source_url": "https://uinotes.com/pin/136199305433265970",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 9
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 9
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 51,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "030127248466976019",
+      "product": "酷狗畅听版",
+      "source_url": "https://uinotes.com/pin/030127248466976019",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 10
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 10
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 52,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "195620617790677381",
+      "product": "酷狗畅听版",
+      "source_url": "https://uinotes.com/pin/195620617790677381",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 11
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 11
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 53,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "804397130127240275",
+      "product": "StressWatch",
+      "source_url": "https://uinotes.com/pin/804397130127240275",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 13
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 13
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 54,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "940240814297534068",
+      "product": "StressWatch",
+      "source_url": "https://uinotes.com/pin/940240814297534068",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 14
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 14
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 55,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "179595787260148031",
+      "product": "StressWatch",
+      "source_url": "https://uinotes.com/pin/179595787260148031",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 15
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 15
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 56,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "423564243118355005",
+      "product": "StressWatch",
+      "source_url": "https://uinotes.com/pin/423564243118355005",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 16
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 16
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 57,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "722015924696485696",
+      "product": "CalJimi",
+      "source_url": "https://uinotes.com/pin/722015924696485696",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 18
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 18
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 58,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "839295447558686571",
+      "product": "CalJimi",
+      "source_url": "https://uinotes.com/pin/839295447558686571",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "category",
+          "query": "个人中心 / functions=71",
+          "batch": "UN-category-visible20",
+          "rank": 19
+        },
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 19
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 59,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "864722708128996627",
+      "product": "酷狗畅听版",
+      "source_url": "https://uinotes.com/pin/864722708128996627",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "tag_search",
+          "query": "个人中心",
+          "batch": "UN-tag-visible20",
+          "rank": 20
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 60,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "043541695605820520",
+      "product": "腾讯视频",
+      "source_url": "https://uinotes.com/pin/043541695605820520",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "腾讯视频 / 个人中心",
+          "batch": "UN-腾讯视频-scroll-1",
+          "rank": 1
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 61,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "164804855910376038",
+      "product": "腾讯视频",
+      "source_url": "https://uinotes.com/pin/164804855910376038",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "腾讯视频 / 个人中心",
+          "batch": "UN-腾讯视频-scroll-1",
+          "rank": 2
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 62,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "762868833604107969",
+      "product": "腾讯视频",
+      "source_url": "https://uinotes.com/pin/762868833604107969",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "腾讯视频 / 个人中心",
+          "batch": "UN-腾讯视频-scroll-1",
+          "rank": 3
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 63,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "266163216371118139",
+      "product": "腾讯视频",
+      "source_url": "https://uinotes.com/pin/266163216371118139",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "腾讯视频 / 个人中心",
+          "batch": "UN-腾讯视频-scroll-1",
+          "rank": 4
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 64,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "718771186903857229",
+      "product": "腾讯视频",
+      "source_url": "https://uinotes.com/pin/718771186903857229",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "腾讯视频 / 个人中心",
+          "batch": "UN-腾讯视频-scroll-1",
+          "rank": 5
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 65,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "456794261646602752",
+      "product": "腾讯视频",
+      "source_url": "https://uinotes.com/pin/456794261646602752",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "腾讯视频 / 个人中心",
+          "batch": "UN-腾讯视频-scroll-2",
+          "rank": 7
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 66,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "901447456284919957",
+      "product": "腾讯视频",
+      "source_url": "https://uinotes.com/pin/901447456284919957",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "腾讯视频 / 个人中心",
+          "batch": "UN-腾讯视频-scroll-2",
+          "rank": 8
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 67,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "617468837349676967",
+      "product": "腾讯视频",
+      "source_url": "https://uinotes.com/pin/617468837349676967",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "腾讯视频 / 个人中心",
+          "batch": "UN-腾讯视频-scroll-2",
+          "rank": 9
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 68,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "068987197037371597",
+      "product": "腾讯视频",
+      "source_url": "https://uinotes.com/pin/068987197037371597",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "腾讯视频 / 个人中心",
+          "batch": "UN-腾讯视频-scroll-2",
+          "rank": 10
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 69,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "624413925985762454",
+      "product": "斗鱼",
+      "source_url": "https://uinotes.com/pin/624413925985762454",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "斗鱼 / 个人中心",
+          "batch": "UN-斗鱼-scroll-1",
+          "rank": 2
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 70,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "609763999110807693",
+      "product": "斗鱼",
+      "source_url": "https://uinotes.com/pin/609763999110807693",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "斗鱼 / 个人中心",
+          "batch": "UN-斗鱼-scroll-1",
+          "rank": 3
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 71,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "554427010356269600",
+      "product": "斗鱼",
+      "source_url": "https://uinotes.com/pin/554427010356269600",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "斗鱼 / 个人中心",
+          "batch": "UN-斗鱼-scroll-2",
+          "rank": 6
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 72,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "181005977400582737",
+      "product": "斗鱼",
+      "source_url": "https://uinotes.com/pin/181005977400582737",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "斗鱼 / 个人中心",
+          "batch": "UN-斗鱼-scroll-2",
+          "rank": 7
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 73,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "920317903521669739",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/920317903521669739",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-1",
+          "rank": 1
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 74,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "156504905247073238",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/156504905247073238",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-1",
+          "rank": 2
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 75,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "661288845204837480",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/661288845204837480",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-1",
+          "rank": 3
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 76,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "142564356133882279",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/142564356133882279",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-1",
+          "rank": 4
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 77,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "121474310494022934",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/121474310494022934",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-1",
+          "rank": 5
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 78,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "908700332589876048",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/908700332589876048",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-2",
+          "rank": 6
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 79,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "059771636424155426",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/059771636424155426",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-2",
+          "rank": 7
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 80,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "517979473108753915",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/517979473108753915",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-2",
+          "rank": 8
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 81,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "548733404571813739",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/548733404571813739",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-2",
+          "rank": 9
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 82,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "888400687002294394",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/888400687002294394",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-3",
+          "rank": 11
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 83,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "614761335257855784",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/614761335257855784",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-3",
+          "rank": 12
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 84,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "007869183251131935",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/007869183251131935",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-3",
+          "rank": 14
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 85,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "876774881038823412",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/876774881038823412",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-3",
+          "rank": 15
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 86,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "520611280278114151",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/520611280278114151",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-4",
+          "rank": 16
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 87,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "571995992305015777",
+      "product": "哔哩哔哩",
+      "source_url": "https://uinotes.com/pin/571995992305015777",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "app_search_and_category",
+          "query": "哔哩哔哩 / 个人中心",
+          "batch": "UN-哔哩哔哩-scroll-4",
+          "rank": 17
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 88,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "338136439161193590",
+      "product": "拼多多",
+      "source_url": "https://uinotes.com/pin/338136439161193590",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "ocr_search",
+          "query": "个人中心",
+          "batch": "UN-OCR-first40",
+          "rank": null
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 89,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "134429273860941076",
+      "product": "拼多多",
+      "source_url": "https://uinotes.com/pin/134429273860941076",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "ocr_search",
+          "query": "个人中心",
+          "batch": "UN-OCR-first40",
+          "rank": null
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 90,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "890601775338602254",
+      "product": "拼多多",
+      "source_url": "https://uinotes.com/pin/890601775338602254",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "ocr_search",
+          "query": "个人中心",
+          "batch": "UN-OCR-first40",
+          "rank": null
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 91,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "672805490324733689",
+      "product": "酷狗畅听版",
+      "source_url": "https://uinotes.com/pin/672805490324733689",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "ocr_search",
+          "query": "个人中心",
+          "batch": "UN-OCR-first40",
+          "rank": null
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 92,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "533901261475892997",
+      "product": "酷狗畅听版",
+      "source_url": "https://uinotes.com/pin/533901261475892997",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "ocr_search",
+          "query": "个人中心",
+          "batch": "UN-OCR-first40",
+          "rank": null
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 93,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "683917707074836221",
+      "product": "酷狗畅听版",
+      "source_url": "https://uinotes.com/pin/683917707074836221",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "ocr_search",
+          "query": "个人中心",
+          "batch": "UN-OCR-first40",
+          "rank": null
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 94,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "418592156884465818",
+      "product": "酷狗畅听版",
+      "source_url": "https://uinotes.com/pin/418592156884465818",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "ocr_search",
+          "query": "个人中心",
+          "batch": "UN-OCR-first40",
+          "rank": null
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 95,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    },
+    {
+      "candidate_id": "999999821178187885",
+      "product": "Gooh旅记",
+      "source_url": "https://uinotes.com/pin/999999821178187885",
+      "source_provider": "UI Notes",
+      "discoveries": [
+        {
+          "mode": "ocr_search",
+          "query": "个人中心",
+          "batch": "UN-OCR-first40",
+          "rank": null
+        }
+      ],
+      "page_role_initial": "needs_visual_review",
+      "interaction_stage_initial": "unknown",
+      "render_state_initial": "unknown",
+      "candidate_status": "not_reviewed",
+      "disposition_reason": "仅作发现线索，未完成完整单屏审核；优先选择目标更明确且有代表性的样本。",
+      "shortlist_rank": 96,
+      "in_candidate_pool": false,
+      "pool_exclusion_reason": "正式候选池上限 50；优先已核实目标页、跨产品覆盖与误匹配反例。保留原始发现记录，不计入正式候选数。"
+    }
+  ],
+  "unexpanded_batches": [
+    {
+      "provider": "UI Notes",
+      "mode": "OCR",
+      "query": "个人中心",
+      "count": 32,
+      "candidate_status": "not_reviewed",
+      "reason": "仅记录批次结果范围，未逐项展开确认身份；不计入正式候选池及有效素材。"
+    }
+  ]
+}
