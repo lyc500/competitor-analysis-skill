@@ -1,0 +1,210 @@
+{
+  "browser": "Playwright Chromium",
+  "evidence_type": "local_report_browser_acceptance",
+  "cases": {
+    "scenario-a-my-pages": {
+      "report": "scenario-a-my-pages/report/report.html",
+      "asset_images": 9,
+      "group_sizes": [
+        2,
+        3,
+        2,
+        1,
+        1
+      ],
+      "current_state_present": false,
+      "details_default_closed": true,
+      "methodology_default_closed": true,
+      "synthesis_is_last_module": true,
+      "keyboard_lightbox_open_close": true,
+      "desktop": {
+        "viewport": [
+          1440,
+          1000
+        ],
+        "scroll_width": 1440,
+        "group_boxes_before_mobile": [
+          {
+            "x": 104,
+            "y": 619.5,
+            "width": 483.1875,
+            "height": 820.953125
+          },
+          {
+            "x": 603.1875,
+            "y": 619.5,
+            "width": 732.8125,
+            "height": 798.484375
+          },
+          {
+            "x": 104,
+            "y": 1476.453125,
+            "width": 483.1875,
+            "height": 820.984375
+          },
+          {
+            "x": 603.1875,
+            "y": 1476.453125,
+            "width": 233.609375,
+            "height": 843.609375
+          },
+          {
+            "x": 852.796875,
+            "y": 1476.453125,
+            "width": 233.59375,
+            "height": 820.953125
+          }
+        ]
+      },
+      "mobile": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll_width": 390,
+        "group_boxes": [
+          {
+            "x": 14,
+            "y": 962.5,
+            "width": 362,
+            "height": 2027.546875
+          },
+          {
+            "x": 14,
+            "y": 3020.046875,
+            "width": 362,
+            "height": 2995.0625
+          },
+          {
+            "x": 14,
+            "y": 6045.109375,
+            "width": 362,
+            "height": 2027.421875
+          },
+          {
+            "x": 14,
+            "y": 8102.53125,
+            "width": 362,
+            "height": 1060.03125
+          },
+          {
+            "x": 14,
+            "y": 9192.5625,
+            "width": 362,
+            "height": 1059.8125
+          }
+        ]
+      }
+    },
+    "scenario-b-redesign": {
+      "report": "scenario-b-redesign/report/report.html",
+      "asset_images": 6,
+      "group_sizes": [
+        2,
+        2,
+        2
+      ],
+      "current_state_present": true,
+      "details_default_closed": true,
+      "methodology_default_closed": true,
+      "synthesis_is_last_module": true,
+      "keyboard_lightbox_open_close": true,
+      "desktop": {
+        "viewport": [
+          1440,
+          1000
+        ],
+        "scroll_width": 1440,
+        "group_boxes_before_mobile": [
+          {
+            "x": 104,
+            "y": 728.5,
+            "width": 483.1875,
+            "height": 801.578125
+          },
+          {
+            "x": 603.1875,
+            "y": 728.5,
+            "width": 483.203125,
+            "height": 801.578125
+          },
+          {
+            "x": 104,
+            "y": 1566.078125,
+            "width": 483.1875,
+            "height": 820.984375
+          }
+        ]
+      },
+      "mobile": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll_width": 390,
+        "group_boxes": [
+          {
+            "x": 14,
+            "y": 1050.5,
+            "width": 362,
+            "height": 2027.59375
+          },
+          {
+            "x": 14,
+            "y": 3108.09375,
+            "width": 362,
+            "height": 2027.546875
+          },
+          {
+            "x": 14,
+            "y": 5165.640625,
+            "width": 362,
+            "height": 2027.421875
+          }
+        ]
+      }
+    },
+    "generic-settings-validation": {
+      "report": "generic-settings-validation/report/report.html",
+      "asset_images": 1,
+      "group_sizes": [
+        1
+      ],
+      "current_state_present": false,
+      "details_default_closed": true,
+      "methodology_default_closed": true,
+      "synthesis_is_last_module": true,
+      "keyboard_lightbox_open_close": true,
+      "desktop": {
+        "viewport": [
+          1440,
+          1000
+        ],
+        "scroll_width": 1440,
+        "group_boxes_before_mobile": [
+          {
+            "x": 104,
+            "y": 424.5,
+            "width": 233.59375,
+            "height": 823.953125
+          }
+        ]
+      },
+      "mobile": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll_width": 390,
+        "group_boxes": [
+          {
+            "x": 14,
+            "y": 453.5,
+            "width": 362,
+            "height": 1059.8125
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1248 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外知名 App‘我的’页的竞品截图。",
+    "research_goal": "比较国内外知名 App 的我的页主任务、组织模式和适用场景",
+    "target_page": "我的页 / 个人中心",
+    "target_surface": "mobile_app",
+    "platforms": [
+      "iOS"
+    ],
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "只使用公开可访问且可追溯的单屏 UI 素材"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "哔哩哔哩",
+        "region": "CN",
+        "product_type": "视频社区",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "拼多多",
+        "region": "CN",
+        "product_type": "电商",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "豆包爱学",
+        "region": "CN",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "酷狗畅听版",
+        "region": "CN",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Duolingo",
+        "region": "Global",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "斗鱼",
+        "region": "CN",
+        "product_type": "直播社区",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Wise",
+        "region": "Global",
+        "product_type": "金融工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Kickstarter",
+        "region": "Global",
+        "product_type": "众筹平台",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "MD Vinyl",
+        "region": "Global",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "TIDAL",
+        "region": "Global",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Revolut",
+        "region": "Global",
+        "product_type": "金融工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "The New York Times",
+        "region": "Global",
+        "product_type": "新闻内容",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Airbuds",
+        "region": "Global",
+        "product_type": "社交音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      }
+    ],
+    "request": "帮我搜集一下国内外知名 App‘我的’页的竞品截图。"
+  },
+  "source_attempts": [
+    {
+      "id": "att-uinotes-profile",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "entry_url": "https://uinotes.com/pin?functions=71",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "web_text_accessible": true,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": true,
+      "access_status": "paywall",
+      "observed_scope": "当前会话为非会员；1877 条中首批 20 张可见，详情与原图可打开，后续结果需会员",
+      "attempt_status": "completed",
+      "failure_reason": ""
+    },
+    {
+      "id": "att-refero-profile",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "web_text_accessible": true,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": true,
+      "access_status": "paywall",
+      "observed_scope": "当前账号会话可见首批 8 张，详情与图像可打开；其余 2174 张受 Pro 订阅限制",
+      "attempt_status": "completed",
+      "failure_reason": ""
+    },
+    {
+      "id": "att-mobbin-profile",
+      "source_type": "ui_database",
+      "source_provider": "Mobbin",
+      "entry_url": "https://mobbin.com/browse/ios/screens?sort=popularity&filter=screenPatterns.My+Account+%26+Profile",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "My Account",
+          "Profile"
+        ],
+        "source_taxonomy_terms": [
+          "My Account & Profile"
+        ]
+      },
+      "actual_query": "Screen pattern: My Account & Profile",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "web_text_accessible": true,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": true,
+      "access_status": "paywall",
+      "observed_scope": "当前账号会话可见 2298 条中的首批 5 张；详情可开，下载与后续结果需 Pro",
+      "attempt_status": "completed",
+      "failure_reason": ""
+    },
+    {
+      "id": "att-pttrns-profile",
+      "source_type": "ui_database",
+      "source_provider": "PTTRNS",
+      "entry_url": "https://app.pttrns.com/",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": []
+      },
+      "actual_query": "Profile / Account",
+      "search_mode": "site_filter",
+      "discovery_batch": 1,
+      "web_text_accessible": true,
+      "browser_accessible": true,
+      "browser_interactive": false,
+      "content_available": false,
+      "access_status": "login_required",
+      "observed_scope": "旧标签残留 419 条列表，但详情与新标签均跳回首页登录入口，未纳入候选",
+      "attempt_status": "blocked",
+      "failure_reason": "免费账号登录后才可稳定搜索和打开详情"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "cand-uinotes-bilibili",
+      "source_attempt_id": "att-uinotes-profile",
+      "product_name": "哔哩哔哩",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/653270661085471375",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/653270661085471375.webp?v1",
+      "candidate_rank": 1,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-uinotes-pinduoduo",
+      "source_attempt_id": "att-uinotes-profile",
+      "product_name": "拼多多",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/658360019995979356",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/658360019995979356.webp?v1",
+      "candidate_rank": 2,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-uinotes-doubao",
+      "source_attempt_id": "att-uinotes-profile",
+      "product_name": "豆包爱学",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/133323406851668822",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/133323406851668822.webp?v1",
+      "candidate_rank": 3,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-uinotes-kugou",
+      "source_attempt_id": "att-uinotes-profile",
+      "product_name": "酷狗畅听版",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/438158835260733576",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/438158835260733576.webp?v1",
+      "candidate_rank": 4,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-uinotes-duolingo",
+      "source_attempt_id": "att-uinotes-profile",
+      "product_name": "Duolingo",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/004403109497668392",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/004403109497668392.webp?v1",
+      "candidate_rank": 5,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-uinotes-douyu",
+      "source_attempt_id": "att-uinotes-profile",
+      "product_name": "斗鱼",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/276511827925182237",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/276511827925182237.webp?v1",
+      "candidate_rank": 6,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-wise",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Wise",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/199c7406-cf97-46b2-8da0-0d80ab603631?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/39/mobile/778adba6-19c0-4c90-8da3-e795d19ee5d5_thumb.jpg",
+      "candidate_rank": 7,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-kickstarter",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Kickstarter",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/01bf2c7b-fbf6-4c25-8986-49d846699fef?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/171/mobile/4c96b3b6-7411-4e6a-aea4-8e8f6368df0f_thumb.jpg",
+      "candidate_rank": 8,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-md-vinyl",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "MD Vinyl",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/0bf7f2db-473e-4f8e-a293-4a20657d66bd?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/291/mobile/80ede065-91b6-4dea-85c1-fa0679cee52b_thumb.jpg",
+      "candidate_rank": 9,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-tidal",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "TIDAL",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/7a4d4c3f-687d-4501-b747-2dc1233f1928?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/298/mobile/8e239981-6954-45a7-ba30-7626a9c56b46_thumb.jpg",
+      "candidate_rank": 10,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-duolingo-settings",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Duolingo",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/5/mobile/a0378378-a44b-4e50-a909-32dd83776a40_thumb.jpg",
+      "candidate_rank": 11,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-revolut",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Revolut",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/8adec783-5f17-478d-ba28-f063eeebd7b8?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/74/mobile/5fdac796-2bb6-45cb-93e3-d436232e72eb_thumb.jpg",
+      "candidate_rank": 12,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-nyt",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "The New York Times",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/bfcdc685-196c-4248-9161-0f2523082dae?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/117/mobile/be5e6584-1045-4be2-8945-c53101553734_thumb.jpg",
+      "candidate_rank": 13,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-airbuds",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Airbuds",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/cdb87543-4d9a-4f5e-9a95-035361942d3c?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/150/mobile/c5435be1-12d5-45fb-9630-41a3fcbd2fb5_thumb.jpg",
+      "candidate_rank": 14,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    }
+  ],
+  "candidate_pool": [
+    "cand-uinotes-bilibili",
+    "cand-uinotes-pinduoduo",
+    "cand-uinotes-doubao",
+    "cand-uinotes-kugou",
+    "cand-uinotes-duolingo",
+    "cand-uinotes-douyu",
+    "cand-refero-wise",
+    "cand-refero-kickstarter",
+    "cand-refero-md-vinyl",
+    "cand-refero-tidal",
+    "cand-refero-duolingo-settings",
+    "cand-refero-revolut",
+    "cand-refero-nyt",
+    "cand-refero-airbuds"
+  ],
+  "candidate_limit": {
+    "max": 50,
+    "unit": "candidate_records",
+    "applies_to": "candidate_pool",
+    "ordering_basis": "页面主任务匹配度、来源可追溯性和区域覆盖",
+    "truncated_candidate_ids": []
+  },
+  "access_preparation": {
+    "schema_version": 1,
+    "id": "access-我的页---个人中心",
+    "research_scope": "我的页 / 个人中心相关来源的采集能力与当前可见范围",
+    "started_at": "2026-10-27T21:30:00+08:00",
+    "completed_at": "2026-10-27T22:05:00+08:00",
+    "relevant_source_attempt_ids": [
+      "att-uinotes-profile",
+      "att-refero-profile",
+      "att-mobbin-profile",
+      "att-pttrns-profile"
+    ],
+    "checks": [
+      {
+        "id": "check-uinotes-preflight",
+        "source_attempt_id": "att-uinotes-profile",
+        "phase": "preflight",
+        "checked_at": "2026-10-27T21:35:00+08:00",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser",
+        "browser_tab_id": "339184316",
+        "page_open": true,
+        "search_usable": true,
+        "filter_usable": true,
+        "detail_usable": true,
+        "original_asset_usable": true,
+        "pagination_usable": false,
+        "authentication_state": "authenticated",
+        "access_barrier": "paywall",
+        "visible_scope": "个人中心 1877 条中的首批 20 张",
+        "coverage_impact": "minor",
+        "notes": "账号显示非会员；原图可获取，继续浏览需订阅"
+      },
+      {
+        "id": "check-refero-preflight",
+        "source_attempt_id": "att-refero-profile",
+        "phase": "preflight",
+        "checked_at": "2026-10-27T21:43:00+08:00",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser",
+        "browser_tab_id": "339183758",
+        "page_open": true,
+        "search_usable": true,
+        "filter_usable": true,
+        "detail_usable": true,
+        "original_asset_usable": true,
+        "pagination_usable": false,
+        "authentication_state": "authenticated",
+        "access_barrier": "paywall",
+        "visible_scope": "Profile & Account 首批 8 张可见",
+        "coverage_impact": "minor",
+        "notes": "账号页与历史记录可见；后续 2174 张需 Pro"
+      },
+      {
+        "id": "check-mobbin-preflight",
+        "source_attempt_id": "att-mobbin-profile",
+        "phase": "preflight",
+        "checked_at": "2026-10-27T21:51:00+08:00",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser",
+        "browser_tab_id": "339183919",
+        "page_open": true,
+        "search_usable": true,
+        "filter_usable": true,
+        "detail_usable": true,
+        "original_asset_usable": false,
+        "pagination_usable": false,
+        "authentication_state": "authenticated",
+        "access_barrier": "paywall",
+        "visible_scope": "2298 条中的首批 5 张可见",
+        "coverage_impact": "minor",
+        "notes": "Badoo 详情可开，但下载与更多结果需 Pro；未把压缩预览纳入素材"
+      },
+      {
+        "id": "check-pttrns-preflight",
+        "source_attempt_id": "att-pttrns-profile",
+        "phase": "preflight",
+        "checked_at": "2026-10-27T21:58:00+08:00",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser",
+        "browser_tab_id": "339184309",
+        "page_open": true,
+        "search_usable": false,
+        "filter_usable": false,
+        "detail_usable": false,
+        "original_asset_usable": false,
+        "pagination_usable": false,
+        "authentication_state": "anonymous",
+        "access_barrier": "login_required",
+        "visible_scope": "新标签只显示首页登录入口；旧标签列表不可稳定复用",
+        "coverage_impact": "minor",
+        "notes": "其他已验证来源已提供足够候选，因此本批不因该登录限制阻塞"
+      }
+    ],
+    "decision": {
+      "status": "not_required",
+      "prompted_at": "",
+      "decided_at": "2026-10-27T22:05:00+08:00",
+      "restricted_source_attempt_ids": [],
+      "summary": "登录或订阅限制未实质阻断本批覆盖：继续使用当前会话可见范围，不购买订阅；PTTRNS 不纳入候选。",
+      "choice_is_final_for_batch": false
+    },
+    "resume": {
+      "status": "not_needed",
+      "checkpoint_candidate_ids": [],
+      "completed_candidate_ids": [],
+      "remaining_candidate_ids": [],
+      "recheck_ids": [],
+      "resumed_at": ""
+    },
+    "current_checks_by_source": {
+      "att-uinotes-profile": "check-uinotes-preflight",
+      "att-refero-profile": "check-refero-preflight",
+      "att-mobbin-profile": "check-mobbin-preflight",
+      "att-pttrns-profile": "check-pttrns-preflight"
+    }
+  },
+  "access_preparation_status": "validated",
+  "sources": [
+    {
+      "id": "cand-uinotes-bilibili",
+      "source_attempt_id": "att-uinotes-profile",
+      "product_name": "哔哩哔哩",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/653270661085471375",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/653270661085471375.webp?v1",
+      "candidate_rank": 1,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-uinotes-pinduoduo",
+      "source_attempt_id": "att-uinotes-profile",
+      "product_name": "拼多多",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/658360019995979356",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/658360019995979356.webp?v1",
+      "candidate_rank": 2,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-uinotes-doubao",
+      "source_attempt_id": "att-uinotes-profile",
+      "product_name": "豆包爱学",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/133323406851668822",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/133323406851668822.webp?v1",
+      "candidate_rank": 3,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-uinotes-kugou",
+      "source_attempt_id": "att-uinotes-profile",
+      "product_name": "酷狗畅听版",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/438158835260733576",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/438158835260733576.webp?v1",
+      "candidate_rank": 4,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-uinotes-duolingo",
+      "source_attempt_id": "att-uinotes-profile",
+      "product_name": "Duolingo",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/004403109497668392",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/004403109497668392.webp?v1",
+      "candidate_rank": 5,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-uinotes-douyu",
+      "source_attempt_id": "att-uinotes-profile",
+      "product_name": "斗鱼",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/276511827925182237",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/276511827925182237.webp?v1",
+      "candidate_rank": 6,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "我的",
+          "个人中心"
+        ],
+        "source_taxonomy_terms": [
+          "个人中心"
+        ]
+      },
+      "actual_query": "功能：个人中心",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-wise",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Wise",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/199c7406-cf97-46b2-8da0-0d80ab603631?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/39/mobile/778adba6-19c0-4c90-8da3-e795d19ee5d5_thumb.jpg",
+      "candidate_rank": 7,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-kickstarter",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Kickstarter",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/01bf2c7b-fbf6-4c25-8986-49d846699fef?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/171/mobile/4c96b3b6-7411-4e6a-aea4-8e8f6368df0f_thumb.jpg",
+      "candidate_rank": 8,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-md-vinyl",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "MD Vinyl",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/0bf7f2db-473e-4f8e-a293-4a20657d66bd?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/291/mobile/80ede065-91b6-4dea-85c1-fa0679cee52b_thumb.jpg",
+      "candidate_rank": 9,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-tidal",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "TIDAL",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/7a4d4c3f-687d-4501-b747-2dc1233f1928?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/298/mobile/8e239981-6954-45a7-ba30-7626a9c56b46_thumb.jpg",
+      "candidate_rank": 10,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-duolingo-settings",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Duolingo",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/5/mobile/a0378378-a44b-4e50-a909-32dd83776a40_thumb.jpg",
+      "candidate_rank": 11,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-revolut",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Revolut",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/8adec783-5f17-478d-ba28-f063eeebd7b8?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/74/mobile/5fdac796-2bb6-45cb-93e3-d436232e72eb_thumb.jpg",
+      "candidate_rank": 12,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-nyt",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "The New York Times",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/bfcdc685-196c-4248-9161-0f2523082dae?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/117/mobile/be5e6584-1045-4be2-8945-c53101553734_thumb.jpg",
+      "candidate_rank": 13,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    },
+    {
+      "id": "cand-refero-airbuds",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Airbuds",
+      "target_page": "我的页 / 个人中心",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/cdb87543-4d9a-4f5e-9a95-035361942d3c?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/150/mobile/c5435be1-12d5-45fb-9630-41a3fcbd2fb5_thumb.jpg",
+      "candidate_rank": 14,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "我的页 / 个人中心",
+        "mapped_terms": [
+          "Profile",
+          "Account"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Page type: Profile & Account",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    }
+  ]
+}

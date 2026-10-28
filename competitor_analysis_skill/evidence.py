@@ -104,7 +104,7 @@ def _validate_attempt(raw, index):
     return item
 
 
-def _validate_candidate(raw, index, attempts, competitors, target_page):
+def _validate_candidate(raw, index, attempts, competitors, target_page, target_surface="user_specified"):
     if not isinstance(raw, dict):
         raise DiscoveryContractError(f"candidates[{index}] 必须是对象")
     required = (
@@ -146,6 +146,9 @@ def _validate_candidate(raw, index, attempts, competitors, target_page):
     item["actual_query"] = attempt["actual_query"]
     item["search_mode"] = attempt["search_mode"]
     item["discovery_batch"] = attempt["discovery_batch"]
+    item["source_type"] = attempt["source_type"]
+    item["source_provider"] = attempt["source_provider"]
+    item["target_surface"] = target_surface
     return item
 
 
@@ -171,7 +174,7 @@ def validate_discovery_payload(task, payload):
     candidates = []
     candidate_by_id = {}
     for index, raw in enumerate(candidates_raw):
-        item = _validate_candidate(raw, index, attempt_by_id, competitors, task.get("target_page"))
+        item = _validate_candidate(raw, index, attempt_by_id, competitors, task.get("target_page"), task.get("target_surface", "user_specified"))
         if item["id"] in candidate_by_id:
             raise DiscoveryContractError(f"候选 ID 重复: {item['id']}")
         candidate_by_id[item["id"]] = item
@@ -211,7 +214,7 @@ def validate_discovery_payload(task, payload):
         raise DiscoveryContractError("发现候选超过 50 个时必须记录截断候选")
     if len(candidates) <= MAX_CANDIDATE_POOL and truncated:
         raise DiscoveryContractError("候选未超过 50 个时不应填写截断候选")
-    return {
+    result = {
         "source_attempts": attempts,
         "candidates": candidates,
         "candidate_pool": list(pool),
@@ -223,6 +226,22 @@ def validate_discovery_payload(task, payload):
             "truncated_candidate_ids": list(truncated),
         },
     }
+    if "access_preparation" in payload:
+        from .source_access import validate_source_access
+        preparation = validate_source_access(payload["access_preparation"], attempts, candidates)
+        result["access_preparation"] = preparation
+        current = preparation["current_checks_by_source"]
+        checks = {check["id"]: check for check in preparation["checks"]}
+        for candidate in result["candidates"]:
+            check_id = current.get(candidate["source_attempt_id"])
+            if check_id:
+                check = checks[check_id]
+                candidate["browser_session_id"] = check["browser_session_id"]
+                candidate["browser_session_kind"] = check["browser_session_kind"]
+        result["access_preparation_status"] = "validated"
+    else:
+        result["access_preparation_status"] = "missing_legacy"
+    return result
 
 
 def validate_capture_links(registry, captures):

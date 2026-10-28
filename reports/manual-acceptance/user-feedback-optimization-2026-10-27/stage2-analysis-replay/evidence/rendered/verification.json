@@ -1,0 +1,32 @@
+{
+  "historical_replay": true,
+  "new_source_collection": false,
+  "reports": {
+    "one-sentence-my-pages": {
+      "report": "one-sentence-my-pages/generated/report.html",
+      "asset_images": 26,
+      "groups": 7,
+      "sample_count": "20 个竞品 · 26 张竞品截图",
+      "current_state_present": false,
+      "current_state_default_closed": true,
+      "methodology_default_closed": true,
+      "card_details_default_closed": true,
+      "last_main_module": "synthesis",
+      "desktop_no_horizontal_overflow": true,
+      "mobile_no_horizontal_overflow": true
+    },
+    "detailed-my-page-redesign": {
+      "report": "detailed-my-page-redesign/generated/report.html",
+      "asset_images": 10,
+      "groups": 4,
+      "sample_count": "9 个竞品 · 10 张竞品截图",
+      "current_state_present": true,
+      "current_state_default_closed": true,
+      "methodology_default_closed": true,
+      "card_details_default_closed": true,
+      "last_main_module": "synthesis",
+      "desktop_no_horizontal_overflow": true,
+      "mobile_no_horizontal_overflow": true
+    }
+  }
+}

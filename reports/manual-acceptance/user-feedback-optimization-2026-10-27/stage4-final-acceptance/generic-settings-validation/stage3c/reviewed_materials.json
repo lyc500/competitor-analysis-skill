@@ -1,0 +1,272 @@
+{
+  "task": {
+    "raw_request": "小范围验证：搜集一个移动 App 设置页，确认流程没有写死为个人中心或虎牙。",
+    "research_goal": "验证通用任务、分类、分析与报告入口",
+    "target_page": "设置页",
+    "target_surface": "mobile_app",
+    "platforms": [
+      "iOS"
+    ],
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "只使用公开可访问且可追溯的单屏 UI 素材"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "Duolingo",
+        "region": "Global",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "设置页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      }
+    ],
+    "request": "小范围验证：搜集一个移动 App 设置页，确认流程没有写死为个人中心或虎牙。"
+  },
+  "source_attempts": [
+    {
+      "id": "att-refero-profile",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "query_mapping": {
+        "raw_page_intent": "设置页",
+        "mapped_terms": [
+          "Settings"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Profile & Account results, visually reviewed for Settings",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "web_text_accessible": true,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": true,
+      "access_status": "paywall",
+      "observed_scope": "当前账号会话可见首批 8 张，详情与图像可打开；其余 2174 张受 Pro 订阅限制",
+      "attempt_status": "completed",
+      "failure_reason": ""
+    }
+  ],
+  "candidates": [
+    {
+      "id": "cand-refero-duolingo-settings",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Duolingo",
+      "target_page": "设置页",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/5/mobile/a0378378-a44b-4e50-a909-32dd83776a40_thumb.jpg",
+      "candidate_rank": 1,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "设置页",
+        "mapped_terms": [
+          "Settings"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Profile & Account results, visually reviewed for Settings",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    }
+  ],
+  "candidate_pool": [
+    "cand-refero-duolingo-settings"
+  ],
+  "candidate_limit": {
+    "max": 50,
+    "unit": "candidate_records",
+    "applies_to": "candidate_pool",
+    "ordering_basis": "页面主任务匹配度、来源可追溯性和区域覆盖",
+    "truncated_candidate_ids": []
+  },
+  "access_preparation": {
+    "schema_version": 1,
+    "id": "access-设置页",
+    "research_scope": "设置页相关来源的采集能力与当前可见范围",
+    "started_at": "2026-10-27T21:30:00+08:00",
+    "completed_at": "2026-10-27T22:05:00+08:00",
+    "relevant_source_attempt_ids": [
+      "att-refero-profile"
+    ],
+    "checks": [
+      {
+        "id": "check-refero-preflight",
+        "source_attempt_id": "att-refero-profile",
+        "phase": "preflight",
+        "checked_at": "2026-10-27T21:43:00+08:00",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser",
+        "browser_tab_id": "339183758",
+        "page_open": true,
+        "search_usable": true,
+        "filter_usable": true,
+        "detail_usable": true,
+        "original_asset_usable": true,
+        "pagination_usable": false,
+        "authentication_state": "authenticated",
+        "access_barrier": "paywall",
+        "visible_scope": "Profile & Account 首批 8 张可见",
+        "coverage_impact": "minor",
+        "notes": "账号页与历史记录可见；后续 2174 张需 Pro"
+      }
+    ],
+    "decision": {
+      "status": "not_required",
+      "prompted_at": "",
+      "decided_at": "2026-10-27T22:05:00+08:00",
+      "restricted_source_attempt_ids": [],
+      "summary": "登录或订阅限制未实质阻断本批覆盖：继续使用当前会话可见范围，不购买订阅；PTTRNS 不纳入候选。",
+      "choice_is_final_for_batch": false
+    },
+    "resume": {
+      "status": "not_needed",
+      "checkpoint_candidate_ids": [],
+      "completed_candidate_ids": [],
+      "remaining_candidate_ids": [],
+      "recheck_ids": [],
+      "resumed_at": ""
+    },
+    "current_checks_by_source": {
+      "att-refero-profile": "check-refero-preflight"
+    }
+  },
+  "access_preparation_status": "validated",
+  "capture_targets": [
+    {
+      "id": "cap-refero-duolingo-settings",
+      "source_candidate_id": "cand-refero-duolingo-settings",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Duolingo",
+      "target_page": "设置页",
+      "target_surface": "mobile_app",
+      "platform": "iOS",
+      "discovered_source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/5/mobile/a0378378-a44b-4e50-a909-32dd83776a40_thumb.jpg",
+      "requested_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "final_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "capture_status": "captured",
+      "screenshot_path": "../../raw-assets/refero/duolingo.jpg",
+      "failure_reason": "",
+      "browser_name": "Chrome",
+      "browser_session_id": "chrome-user1",
+      "capture_method": "original_image_asset_from_rendered_source"
+    }
+  ],
+  "reviews": [
+    {
+      "target_id": "cap-refero-duolingo-settings",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_role": "settings_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "semantic_reason": "页面标题和条目共同表明这是设置根页；与本次目标页面和移动端表面匹配。",
+      "review_source": "agent_visual_review"
+    }
+  ],
+  "materials": [
+    {
+      "id": "mat-cap-refero-duolingo-settings",
+      "product_name": "Duolingo",
+      "page_name": "设置页",
+      "target_page": "设置页",
+      "region": "Global",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/000-duolingo.jpg",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_asset_url": "https://images.refero.design/screenshots/5/mobile/a0378378-a44b-4e50-a909-32dd83776a40_thumb.jpg",
+      "source_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "页面标题和条目共同表明这是设置根页；与本次目标页面和移动端表面匹配。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "page_role": "settings_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-refero-duolingo-settings",
+      "source_attempt_id": "att-refero-profile",
+      "source_candidate_id": "cand-refero-duolingo-settings",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "requested_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "final_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "width": 488,
+      "height": 1056,
+      "decode_format": "JPEG",
+      "content_sha256": "9bb62f47feccd31fd276c5de4854017bedd9e793c257717b90cbf5703b098cc5"
+    }
+  ],
+  "fallback_requests": [
+    {
+      "product_name": "Duolingo",
+      "target_page": "设置页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    }
+  ]
+}

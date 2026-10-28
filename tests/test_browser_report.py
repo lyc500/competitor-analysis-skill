@@ -26,7 +26,7 @@ class BrowserReportTests(unittest.TestCase):
             class S(ThreadingHTTPServer): pass
             S.root=moved; server=S(('127.0.0.1',0),Handler); thread=threading.Thread(target=server.serve_forever,daemon=True); thread.start(); self.addCleanup(server.shutdown)
             with sync_playwright() as p:
-                browser=p.chromium.launch(headless=True); page=browser.new_page(viewport={"width":390,"height":844}); page.goto(f'http://127.0.0.1:{server.server_port}/report.html'); self.assertEqual(page.locator('.asset-image').count(),1); self.assertTrue(page.locator('.asset-image').evaluate('image => image.complete && image.naturalWidth > 0')); page.locator('.asset-image').click(); self.assertTrue(page.locator('dialog[open]').count()==1); self.assertTrue(page.locator('#viewer-image').get_attribute('src').endswith('/'+asset_path)); page.wait_for_function("document.getElementById('viewer-image').complete && document.getElementById('viewer-image').naturalWidth > 0"); self.assertGreater(page.locator('#viewer-image').evaluate('image => image.naturalWidth'),0); page.locator('button').click(); self.assertEqual(page.locator('dialog[open]').count(),0); self.assertLessEqual(page.evaluate('document.documentElement.scrollWidth'), page.evaluate('window.innerWidth')+2); browser.close()
+                browser=p.chromium.launch(headless=True); page=browser.new_page(viewport={"width":390,"height":844}); page.goto(f'http://127.0.0.1:{server.server_port}/report.html'); self.assertEqual(page.locator('.asset-image').count(),1); self.assertTrue(page.locator('.asset-image').evaluate('image => image.complete && image.naturalWidth > 0')); page.locator('.asset-image').click(); self.assertTrue(page.locator('dialog[open]').count()==1); self.assertTrue(page.locator('#viewer-image').get_attribute('src').endswith('/'+asset_path)); page.wait_for_function("document.getElementById('viewer-image').complete && document.getElementById('viewer-image').naturalWidth > 0"); self.assertGreater(page.locator('#viewer-image').evaluate('image => image.naturalWidth'),0); page.locator('button[aria-label="关闭"]').click(); self.assertEqual(page.locator('dialog[open]').count(),0); self.assertLessEqual(page.evaluate('document.documentElement.scrollWidth'), page.evaluate('window.innerWidth')+2); browser.close()
 
     def test_more_button_reveals_next_twenty_cards_in_chromium(self):
         with TemporaryDirectory() as d:
@@ -90,7 +90,15 @@ class BrowserReportTests(unittest.TestCase):
                 self.assertEqual(galleries.nth(1).locator('.gallery-card:not([hidden])').count(), 20)
                 buttons = page.locator('.more-button'); self.assertEqual(buttons.count(), 2)
                 buttons.nth(0).click(); self.assertEqual(galleries.nth(0).locator('.gallery-card:not([hidden])').count(), 40); self.assertTrue(buttons.nth(0).is_visible())
+                page.set_viewport_size({"width": 1440, "height": 900})
+                self.assertEqual(galleries.nth(0).locator('.gallery-card:not([hidden])').count(), 40)
+                page.set_viewport_size({"width": 390, "height": 844})
+                self.assertEqual(galleries.nth(0).locator('.gallery-card:not([hidden])').count(), 40)
                 buttons.nth(0).click(); self.assertEqual(galleries.nth(0).locator('.gallery-card:not([hidden])').count(), 45); self.assertFalse(buttons.nth(0).is_visible())
                 buttons.nth(1).click(); self.assertEqual(galleries.nth(1).locator('.gallery-card:not([hidden])').count(), 21); self.assertFalse(buttons.nth(1).is_visible())
+                first_ids = galleries.nth(0).locator('.gallery-card:not([hidden])').evaluate_all("cards => cards.map(c => c.dataset.materialId)")
+                second_ids = galleries.nth(1).locator('.gallery-card:not([hidden])').evaluate_all("cards => cards.map(c => c.dataset.materialId)")
+                self.assertEqual(first_ids, [f'mat-0-{index}' for index in range(45)])
+                self.assertEqual(second_ids, [f'mat-1-{index}' for index in range(21)])
                 self.assertLessEqual(page.evaluate('document.documentElement.scrollWidth'), page.evaluate('window.innerWidth') + 2)
                 browser.close()

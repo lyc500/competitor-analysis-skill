@@ -1,0 +1,44 @@
+[
+  {
+    "scenario": "scenario-a-my-pages",
+    "command": "python3 -B -m competitor_analysis_skill --task-file scenario-a-my-pages/input/task.json --reviewed-materials-file scenario-a-my-pages/stage3c/reviewed_materials.json --classification-plan-file scenario-a-my-pages/input/classification-plan.json --analysis-file scenario-a-my-pages/input/analysis.json --output <temporary-output>/scenario-a-my-pages",
+    "returncode": 0,
+    "stderr": "",
+    "expected_file_count": 12,
+    "actual_file_count": 12,
+    "expected_manifest_sha256": "0cba1b678cfe7d84791edb566a8cd7f16c9cee9d3c8508ff59e64a5fe6c78130",
+    "actual_manifest_sha256": "0cba1b678cfe7d84791edb566a8cd7f16c9cee9d3c8508ff59e64a5fe6c78130",
+    "missing_files": [],
+    "unexpected_files": [],
+    "changed_files": [],
+    "exact_match": true
+  },
+  {
+    "scenario": "scenario-b-redesign",
+    "command": "python3 -B -m competitor_analysis_skill --task-file scenario-b-redesign/input/task.json --reviewed-materials-file scenario-b-redesign/stage3c/reviewed_materials.json --classification-plan-file scenario-b-redesign/input/classification-plan.json --analysis-file scenario-b-redesign/input/analysis.json --output <temporary-output>/scenario-b-redesign",
+    "returncode": 0,
+    "stderr": "",
+    "expected_file_count": 10,
+    "actual_file_count": 10,
+    "expected_manifest_sha256": "1fe723168f73b691b9c989935f5fc8e6f49b10d656dd78e857f96dd00f239d4c",
+    "actual_manifest_sha256": "1fe723168f73b691b9c989935f5fc8e6f49b10d656dd78e857f96dd00f239d4c",
+    "missing_files": [],
+    "unexpected_files": [],
+    "changed_files": [],
+    "exact_match": true
+  },
+  {
+    "scenario": "generic-settings-validation",
+    "command": "python3 -B -m competitor_analysis_skill --task-file generic-settings-validation/input/task.json --reviewed-materials-file generic-settings-validation/stage3c/reviewed_materials.json --classification-plan-file generic-settings-validation/input/classification-plan.json --analysis-file generic-settings-validation/input/analysis.json --output <temporary-output>/generic-settings-validation",
+    "returncode": 0,
+    "stderr": "",
+    "expected_file_count": 4,
+    "actual_file_count": 4,
+    "expected_manifest_sha256": "547c36536d1a9f748dc43b44629120794645fc6d8a47736929c3c8fecb9a9b63",
+    "actual_manifest_sha256": "547c36536d1a9f748dc43b44629120794645fc6d8a47736929c3c8fecb9a9b63",
+    "missing_files": [],
+    "unexpected_files": [],
+    "changed_files": [],
+    "exact_match": true
+  }
+]

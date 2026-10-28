@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-28T14:11:54+08:00",
+  "method": "formal task-file entry regenerated into independent /tmp directories; SHA-256 compared for report.html, report_data.json, classification.json and all assets",
+  "scenarios": {
+    "scenario-a-my-pages": {
+      "delivered_file_count": 12,
+      "regenerated_file_count": 12,
+      "identical": true,
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "scenario-b-redesign": {
+      "delivered_file_count": 10,
+      "regenerated_file_count": 10,
+      "identical": true,
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  }
+}

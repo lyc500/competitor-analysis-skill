@@ -1,0 +1,62 @@
+{
+  "kind": "historical_replay_browser_acceptance",
+  "new_source_collection": false,
+  "cases": {
+    "one-sentence-my-pages": {
+      "expected": {
+        "competitors": 20,
+        "screens": 26,
+        "current": false
+      },
+      "rendered_competitor_screens": 26,
+      "rendered_current_images": 0,
+      "module_order": [
+        "overview",
+        "navigation",
+        "gallery",
+        "gallery",
+        "gallery",
+        "gallery",
+        "gallery",
+        "gallery",
+        "methodology",
+        "synthesis"
+      ],
+      "synthesis_is_last": true,
+      "methodology_default_closed": true,
+      "card_details_default_closed": true,
+      "current_default_closed": true,
+      "zoom_verified": true,
+      "desktop_horizontal_overflow_px": 0,
+      "mobile_horizontal_overflow_px": 0,
+      "all_content_images_loaded": true
+    },
+    "detailed-my-page-redesign": {
+      "expected": {
+        "competitors": 9,
+        "screens": 10,
+        "current": true
+      },
+      "rendered_competitor_screens": 10,
+      "rendered_current_images": 1,
+      "module_order": [
+        "overview",
+        "navigation",
+        "current-state",
+        "gallery",
+        "gallery",
+        "gallery",
+        "methodology",
+        "synthesis"
+      ],
+      "synthesis_is_last": true,
+      "methodology_default_closed": true,
+      "card_details_default_closed": true,
+      "current_default_closed": true,
+      "zoom_verified": true,
+      "desktop_horizontal_overflow_px": 0,
+      "mobile_horizontal_overflow_px": 0,
+      "all_content_images_loaded": true
+    }
+  }
+}

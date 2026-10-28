@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "title": "设置页通用能力小范围验证",
+  "research": {
+    "question": "正式流程能否处理非个人中心目标页？",
+    "scope": "1 张 Duolingo 设置页，只验证通用契约与渲染",
+    "goals": [
+      "检查规则未写死为个人中心"
+    ],
+    "constraints": [
+      "单张样本不输出横向规律"
+    ]
+  },
+  "analysis_process": {
+    "material_observations": [
+      {
+        "id": "obs-refero-duolingo-settings",
+        "material_id": "mat-cap-refero-duolingo-settings",
+        "visible_facts": [
+          "设置标题可见",
+          "账户和偏好条目使用分区列表"
+        ],
+        "evidence_boundaries": [
+          "单张样本不能形成横向规律"
+        ]
+      }
+    ],
+    "comparisons": []
+  },
+  "overall": {
+    "id": "overall",
+    "kind": "inference",
+    "statement": "同一正式入口可以把 Refero 候选在‘我的页’研究中拒绝、在‘设置页’研究中接受，说明语义判断跟随研究目标。",
+    "evidence_refs": [
+      {
+        "kind": "material",
+        "id": "mat-cap-refero-duolingo-settings"
+      }
+    ],
+    "analysis_refs": [
+      "obs-refero-duolingo-settings"
+    ],
+    "recommendation": "每次按目标页重新审核候选",
+    "applicability": "研究目标变化时",
+    "limitations": "单张截图只能验证当前可见结构"
+  },
+  "key_findings": [],
+  "groups": [
+    {
+      "group_id": "group-settings",
+      "takeaway": {
+        "id": "takeaway-group-settings",
+        "kind": "inference",
+        "statement": "设置页的参考重点是管理任务的分区与命名，而不是身份或内容模块。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-settings"
+          }
+        ],
+        "analysis_refs": [
+          "obs-refero-duolingo-settings"
+        ],
+        "recommendation": "按账户、通知和偏好等任务分区",
+        "applicability": "设置项数量较多时",
+        "limitations": "单张截图只能验证当前可见结构"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "mat-cap-refero-duolingo-settings",
+      "insight": {
+        "id": "insight-refero-duolingo-settings",
+        "kind": "inference",
+        "statement": "分区列表让账户与偏好保持可扫描，适合作为设置根层的基础结构。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-refero-duolingo-settings"
+          }
+        ],
+        "analysis_refs": [
+          "obs-refero-duolingo-settings"
+        ],
+        "recommendation": "先建立设置任务分区",
+        "applicability": "存在多类设置项时",
+        "limitations": "单张截图只能验证当前可见结构"
+      }
+    }
+  ],
+  "synthesis": {
+    "findings": [
+      {
+        "id": "synthesis-1",
+        "kind": "inference",
+        "statement": "本次只证明设置页可进入通用结构；若要形成设计建议，需要增加其他设置页做横向比较。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-refero-duolingo-settings"
+          }
+        ],
+        "analysis_refs": [
+          "obs-refero-duolingo-settings"
+        ],
+        "recommendation": "补充不同设置结构后再总结模式",
+        "applicability": "后续开展设置页专项研究时",
+        "limitations": "单张截图只能验证当前可见结构"
+      }
+    ],
+    "validation_questions": [
+      {
+        "id": "validation-1",
+        "kind": "question",
+        "statement": "其他设置页采用列表、搜索或二级导航时有何差异？",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-refero-duolingo-settings"
+          }
+        ],
+        "analysis_refs": [
+          "obs-refero-duolingo-settings"
+        ]
+      }
+    ]
+  },
+  "information_gaps": [
+    {
+      "section": "样本规模",
+      "status": "not_applicable",
+      "reason": "这是通用能力小范围验证，不承担完整竞品研究结论。"
+    }
+  ],
+  "methodology": [
+    {
+      "title": "证据边界",
+      "text": "结论来自静态截图的可见结构；不推断使用频率、转化率或留存效果。"
+    }
+  ],
+  "quality_review": {
+    "review_type": "agent_self_review",
+    "independent": false,
+    "reviewed_claim_ids": [
+      "overall",
+      "synthesis-1",
+      "validation-1",
+      "takeaway-group-settings",
+      "insight-refero-duolingo-settings"
+    ],
+    "checks": {
+      "evidence_supported": true,
+      "reference_value_clear": true,
+      "research_relevant": true,
+      "exceptions_considered": true,
+      "duplicates_resolved": true,
+      "generic_claims_removed": true
+    },
+    "edits": [
+      {
+        "candidate_id": "generic-claim",
+        "action": "removed",
+        "before": "突出重点可以提升体验",
+        "reason": "没有说明具体做法、条件或截图依据"
+      }
+    ],
+    "notes": [
+      "逐图事实、横向比较和最终结论已由 Agent 人工复核；该记录不是独立验证。"
+    ]
+  }
+}

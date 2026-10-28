@@ -1,0 +1,187 @@
+{
+  "task": {
+    "raw_request": "小范围验证：搜集一个移动 App 设置页，确认流程没有写死为个人中心或虎牙。",
+    "research_goal": "验证通用任务、分类、分析与报告入口",
+    "target_page": "设置页",
+    "target_surface": "mobile_app",
+    "platforms": [
+      "iOS"
+    ],
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "只使用公开可访问且可追溯的单屏 UI 素材"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "Duolingo",
+        "region": "Global",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "设置页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      }
+    ],
+    "request": "小范围验证：搜集一个移动 App 设置页，确认流程没有写死为个人中心或虎牙。"
+  },
+  "source_attempts": [
+    {
+      "id": "att-refero-profile",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "query_mapping": {
+        "raw_page_intent": "设置页",
+        "mapped_terms": [
+          "Settings"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Profile & Account results, visually reviewed for Settings",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "web_text_accessible": true,
+      "browser_accessible": true,
+      "browser_interactive": true,
+      "content_available": true,
+      "access_status": "paywall",
+      "observed_scope": "当前账号会话可见首批 8 张，详情与图像可打开；其余 2174 张受 Pro 订阅限制",
+      "attempt_status": "completed",
+      "failure_reason": ""
+    }
+  ],
+  "candidates": [
+    {
+      "id": "cand-refero-duolingo-settings",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Duolingo",
+      "target_page": "设置页",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/5/mobile/a0378378-a44b-4e50-a909-32dd83776a40_thumb.jpg",
+      "candidate_rank": 1,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "设置页",
+        "mapped_terms": [
+          "Settings"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Profile & Account results, visually reviewed for Settings",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    }
+  ],
+  "candidate_pool": [
+    "cand-refero-duolingo-settings"
+  ],
+  "candidate_limit": {
+    "max": 50,
+    "unit": "candidate_records",
+    "applies_to": "candidate_pool",
+    "ordering_basis": "页面主任务匹配度、来源可追溯性和区域覆盖",
+    "truncated_candidate_ids": []
+  },
+  "access_preparation": {
+    "schema_version": 1,
+    "id": "access-设置页",
+    "research_scope": "设置页相关来源的采集能力与当前可见范围",
+    "started_at": "2026-10-27T21:30:00+08:00",
+    "completed_at": "2026-10-27T22:05:00+08:00",
+    "relevant_source_attempt_ids": [
+      "att-refero-profile"
+    ],
+    "checks": [
+      {
+        "id": "check-refero-preflight",
+        "source_attempt_id": "att-refero-profile",
+        "phase": "preflight",
+        "checked_at": "2026-10-27T21:43:00+08:00",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser",
+        "browser_tab_id": "339183758",
+        "page_open": true,
+        "search_usable": true,
+        "filter_usable": true,
+        "detail_usable": true,
+        "original_asset_usable": true,
+        "pagination_usable": false,
+        "authentication_state": "authenticated",
+        "access_barrier": "paywall",
+        "visible_scope": "Profile & Account 首批 8 张可见",
+        "coverage_impact": "minor",
+        "notes": "账号页与历史记录可见；后续 2174 张需 Pro"
+      }
+    ],
+    "decision": {
+      "status": "not_required",
+      "prompted_at": "",
+      "decided_at": "2026-10-27T22:05:00+08:00",
+      "restricted_source_attempt_ids": [],
+      "summary": "登录或订阅限制未实质阻断本批覆盖：继续使用当前会话可见范围，不购买订阅；PTTRNS 不纳入候选。",
+      "choice_is_final_for_batch": false
+    },
+    "resume": {
+      "status": "not_needed",
+      "checkpoint_candidate_ids": [],
+      "completed_candidate_ids": [],
+      "remaining_candidate_ids": [],
+      "recheck_ids": [],
+      "resumed_at": ""
+    },
+    "current_checks_by_source": {
+      "att-refero-profile": "check-refero-preflight"
+    }
+  },
+  "access_preparation_status": "validated",
+  "sources": [
+    {
+      "id": "cand-refero-duolingo-settings",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Duolingo",
+      "target_page": "设置页",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/5/mobile/a0378378-a44b-4e50-a909-32dd83776a40_thumb.jpg",
+      "candidate_rank": 1,
+      "candidate_status": "accepted",
+      "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+      "query_mapping": {
+        "raw_page_intent": "设置页",
+        "mapped_terms": [
+          "Settings"
+        ],
+        "source_taxonomy_terms": [
+          "Profile & Account"
+        ]
+      },
+      "actual_query": "Profile & Account results, visually reviewed for Settings",
+      "search_mode": "taxonomy_filter",
+      "discovery_batch": 1,
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "target_surface": "mobile_app",
+      "browser_session_id": "chrome-user1",
+      "browser_session_kind": "agent_browser"
+    }
+  ]
+}

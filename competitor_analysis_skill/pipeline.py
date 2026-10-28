@@ -1,7 +1,7 @@
-import hashlib
 import json
-import shutil
 from pathlib import Path
+
+from PIL import Image, UnidentifiedImageError
 
 from .classification import classify_assets
 from .collector import collect_candidate
@@ -11,7 +11,8 @@ from .browser_capture import capture_sources
 from .evidence import build_evidence_statistics, validate_capture_links, validate_reviewed_material_links
 from .planning import plan_competitors
 from .report import render_report
-from .requirements import parse_request
+from .report_bundle import write_report_bundle
+from .legacy_demo import parse_legacy_demo_request
 from .task_contract import load_task
 
 
@@ -69,7 +70,135 @@ def _formal_discovery_from_file(task, path):
     return process_discovery_payload(task, data)
 
 
-def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=None, sources_file=None, capture_sources_flag=False, captures_file=None, semantic_reviews_file=None, manual_captures_file=None, reviewed_materials_file=None, classification_plan_file=None):
+def _current_access_checks(discovery):
+    preparation = discovery["access_preparation"]
+    checks = {check["id"]: check for check in preparation["checks"]}
+    return {
+        source_id: checks[check_id]
+        for source_id, check_id in preparation["current_checks_by_source"].items()
+    }
+
+
+def _candidate_accessible(candidate, check):
+    if candidate.get("source_detail_url"):
+        field = "detail_usable"
+    elif candidate.get("source_asset_url"):
+        field = "original_asset_usable"
+    else:
+        field = "page_open"
+    if check.get(field) is True:
+        return True, ""
+    return False, f"当前来源检查未确认 {field}=true（{check.get('access_barrier', 'unknown')}）"
+
+
+def _load_completed_captures(output_dir, discovery, completed_ids):
+    if not completed_ids:
+        return []
+    path = output_dir / "captures.json"
+    if not path.exists():
+        raise ValueError(
+            "已完成候选缺少 captures.json 有效截图产物: "
+            + ", ".join(completed_ids)
+            + "；请保留候选 ID，并将受影响项移回 remaining 后重试"
+        )
+    data = _read_json(path)
+    records = data.get("captures", data) if isinstance(data, dict) else data
+    if not isinstance(records, list):
+        raise ValueError("已完成候选的 captures.json 必须包含 captures 数组")
+    completed = set(completed_ids)
+    selected = [record for record in records if record.get("source_candidate_id") in completed]
+    by_candidate = {}
+    for record in selected:
+        candidate_id = record.get("source_candidate_id")
+        if candidate_id in by_candidate:
+            raise ValueError(f"已完成候选存在重复截图记录: {candidate_id}")
+        by_candidate[candidate_id] = record
+    missing = [candidate_id for candidate_id in completed_ids if candidate_id not in by_candidate]
+    invalid = []
+    root = output_dir.resolve()
+    for candidate_id in completed_ids:
+        record = by_candidate.get(candidate_id)
+        if record is None:
+            continue
+        relative = record.get("screenshot_path")
+        if record.get("capture_status") != "captured" or record.get("quality_status") != "accepted" or not relative:
+            invalid.append(candidate_id)
+            continue
+        artifact = (output_dir / relative).resolve()
+        if root != artifact and root not in artifact.parents:
+            invalid.append(candidate_id)
+            continue
+        try:
+            with Image.open(artifact) as image:
+                image.verify()
+        except (FileNotFoundError, OSError, UnidentifiedImageError):
+            invalid.append(candidate_id)
+    if missing or invalid:
+        affected = sorted(set(missing + invalid))
+        raise ValueError(
+            "已完成候选缺少有效截图产物: " + ", ".join(affected) +
+            "；请保留候选 ID，并将受影响项移回 remaining 后重试"
+        )
+    validate_capture_links(discovery, selected)
+    return [by_candidate[candidate_id] for candidate_id in completed_ids]
+
+
+def _capture_execution_plan(discovery, sources, output_dir):
+    preparation = discovery["access_preparation"]
+    decision = preparation["decision"]
+    resume = preparation["resume"]
+    if decision["status"] == "pending_user_choice":
+        raise ValueError("来源登录限制影响覆盖，必须先取得用户的一次性选择")
+    if resume["status"] == "waiting_for_login":
+        raise ValueError("等待用户完成登录及实际复查后才能恢复截图")
+
+    source_by_id = {source["id"]: source for source in sources}
+    if resume["status"] in {"resumed", "partial", "blocked"}:
+        completed_ids = list(resume["completed_candidate_ids"])
+        intended_ids = list(resume["remaining_candidate_ids"])
+    else:
+        completed_ids = []
+        intended_ids = list(discovery["candidate_pool"])
+    preserved = _load_completed_captures(output_dir, discovery, completed_ids)
+
+    current_checks = _current_access_checks(discovery)
+    executable = []
+    skipped_ids = []
+    skip_reasons = {}
+    for candidate_id in intended_ids:
+        source = source_by_id[candidate_id]
+        if resume["status"] == "blocked":
+            skipped_ids.append(candidate_id)
+            skip_reasons[candidate_id] = "登录或认证条件复查后仍未解除"
+            continue
+        check = current_checks[source["source_attempt_id"]]
+        allowed, reason = _candidate_accessible(source, check)
+        if not allowed:
+            skipped_ids.append(candidate_id)
+            skip_reasons[candidate_id] = reason
+            continue
+        capture_source = dict(source)
+        if (
+            decision["status"] == "login_then_continue"
+            and source["source_attempt_id"] in decision["restricted_source_attempt_ids"]
+            and check.get("authentication_state") == "authenticated"
+        ):
+            capture_source["requires_authenticated_session"] = True
+        executable.append(capture_source)
+    execution = {
+        "resume_status": resume["status"],
+        "planned_candidate_ids": intended_ids,
+        "completed_candidate_ids": completed_ids,
+        "executed_candidate_ids": [source["id"] for source in executable],
+        "skipped_candidate_ids": skipped_ids,
+        "skip_reasons": skip_reasons,
+    }
+    return preserved, executable, execution
+
+
+def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=None, sources_file=None, capture_sources_flag=False, captures_file=None, semantic_reviews_file=None, manual_captures_file=None, reviewed_materials_file=None, classification_plan_file=None, analysis_file=None):
+    if analysis_file and not reviewed_materials_file:
+        raise ValueError("--analysis-file 必须搭配 --reviewed-materials-file 或 --report-data-file")
     if sources_file and isinstance(request, str):
         raise ValueError("--sources-file 必须与结构化 --task-file 一起使用")
     if semantic_reviews_file and isinstance(request, str):
@@ -78,7 +207,7 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
         raise ValueError("--captures-file/--manual-captures-file 必须搭配 --semantic-reviews-file")
     output_dir.mkdir(parents=True, exist_ok=True)
     if isinstance(request, str):
-        task = parse_request(request)
+        task = parse_legacy_demo_request(request)
         # Legacy CLI compatibility only: fixed fixtures are never used by task-file flow.
         if task["task_status"] == "planned":
             task["planning_strategy"] = "fixture_demo"
@@ -151,29 +280,13 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
             plan_data = json.loads(Path(classification_plan_file).read_text(encoding="utf-8")); plan = plan_data.get("classification", plan_data) if isinstance(plan_data, dict) else plan_data
         if valid and plan is None: raise ValueError("存在有效素材时必须提供 --classification-plan-file")
         classification = classify_assets(materials, plan)
-        assets_dir = output_dir / "assets"; assets_dir.mkdir(parents=True, exist_ok=True)
-        source_root = reviewed_path.parent.resolve()
-        copied = []
-        for material in valid:
-            source = Path(material["image_path"]); source = source if source.is_absolute() else source_root / source
-            source = source.resolve()
-            try: source.relative_to(source_root)
-            except ValueError: raise ValueError("reviewed material image_path 不得逃逸输入目录")
-            if not source.is_file(): raise ValueError(f"collected 图片不存在: {material['id']}")
-            suffix = source.suffix.lower() or ".png"
-            digest = hashlib.sha256(material["id"].encode("utf-8")).hexdigest()[:16]
-            target = assets_dir / f"{digest}{suffix}"
-            try:
-                target.resolve().relative_to(assets_dir.resolve())
-            except ValueError as exc:
-                raise ValueError("Stage 4 资产目标路径不得逃逸 assets 目录") from exc
-            shutil.copyfile(source, target)
-            item = dict(material); item["image_path"] = target.relative_to(output_dir).as_posix(); copied.append(item)
-        report_data = {"task": task.to_dict(), "materials": copied, "classification": classification, "fallback_requests": fallback, "evidence_statistics": evidence_statistics, "coverage_boundary": evidence_statistics["coverage"], "excluded_summary": {status: sum(1 for m in materials if m.get("collection_status") == status) for status in ("rejected", "pending", "unavailable")}}
-        (output_dir / "classification.json").write_text(json.dumps(classification, ensure_ascii=False, indent=2), encoding="utf-8")
-        (output_dir / "report_data.json").write_text(json.dumps(report_data, ensure_ascii=False, indent=2), encoding="utf-8")
-        (output_dir / "report.html").write_text(render_report(task.to_dict(), copied, classification, fallback, evidence_statistics=evidence_statistics), encoding="utf-8")
-        return {"classification_json": output_dir / "classification.json", "report_data_json": output_dir / "report_data.json", "report_html": output_dir / "report.html", "payload": report_data}
+        report_data = {"task": task.to_dict(), "materials": valid, "classification": classification, "fallback_requests": fallback, "evidence_statistics": evidence_statistics, "coverage_boundary": evidence_statistics["coverage"], "excluded_summary": {status: sum(1 for m in materials if m.get("collection_status") == status) for status in ("rejected", "pending", "unavailable")}}
+        if discovery:
+            report_data["source_evidence"] = discovery
+        if analysis_file:
+            report_data["analysis"] = _read_json(analysis_file)
+        return write_report_bundle(report_data, output_dir, reviewed_path.parent,
+                                   Path(analysis_file).parent if analysis_file else None)
     if semantic_reviews_file:
         if not captures_file and not manual_captures_file:
             raise ValueError("--semantic-reviews-file 必须搭配 --captures-file 或 --manual-captures-file")
@@ -213,9 +326,22 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
     if sources_file:
         source_path = Path(sources_file)
         source_data = _read_json(source_path)
-        if isinstance(source_data, dict) and "source_attempts" in source_data and "candidates" in source_data:
+        formal_discovery = (
+            isinstance(source_data, dict)
+            and "source_attempts" in source_data
+            and "candidates" in source_data
+        )
+        if capture_sources_flag and not formal_discovery:
+            raise ValueError(
+                "正式 --capture-sources 不接受旧 sources 格式；请迁移为包含 "
+                "source_attempts、candidates、candidate_pool、candidate_limit 和 "
+                "access_preparation 的结构化来源输入"
+            )
+        if formal_discovery:
             discovery = process_discovery_payload(task, source_data)
             sources = [item for item in discovery["candidates"] if item["id"] in discovery["candidate_pool"]]
+            for source in sources:
+                source["target_surface"] = task.get("target_surface", "user_specified")
         else:
             source_records = source_data.get("sources", source_data) if isinstance(source_data, dict) else source_data
             legacy_sources = process_sources(task, source_records)
@@ -229,13 +355,21 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
             source_payload.update({"sources": legacy_sources, "compatibility": {"status": "legacy_incomplete", "gaps": ["缺少 source_attempts、source_candidate_id 关联和候选处置登记；不可作为正式证据"]}})
         sources_json.write_text(json.dumps(source_payload, ensure_ascii=False, indent=2), encoding="utf-8")
         if capture_sources_flag:
-            captures = capture_sources(sources, output_dir)
+            if discovery.get("access_preparation_status") != "validated":
+                raise ValueError("正式浏览器截图前必须提供并通过 access_preparation 来源访问预检")
+            preserved, executable, capture_execution = _capture_execution_plan(discovery, sources, output_dir)
+            new_captures = capture_sources(executable, output_dir) if executable else []
+            captures = preserved + new_captures
+            candidate_ids = [capture.get("source_candidate_id") for capture in captures]
+            if len(candidate_ids) != len(set(candidate_ids)):
+                raise ValueError("恢复后的截图记录不得重复候选 ID")
+            validate_capture_links(discovery, captures)
             captures_json = output_dir / "captures.json"
-            capture_payload = {"task": task.to_dict(), "captures": captures}
-            if discovery:
-                capture_payload.update(discovery)
-            else:
-                capture_payload.update({"sources": sources, "compatibility": {"status": "legacy_incomplete", "gaps": ["captures 未与正式来源登记关联"]}})
+            capture_payload = {
+                "task": task.to_dict(), "captures": captures,
+                "capture_execution": capture_execution,
+            }
+            capture_payload.update(discovery)
             captures_json.write_text(json.dumps(capture_payload, ensure_ascii=False, indent=2), encoding="utf-8")
         else:
             captures_json = None
@@ -248,6 +382,15 @@ def run_pipeline(request, output_dir: Path, fetch: bool = True, materials_file=N
         assets = [] if not isinstance(request, str) else [collect_candidate(item, output_dir, fetch=fetch) for item in competitors]
     classification = _non_stage4_classification()
     payload = {"task": task.to_dict(), "competitors": competitors, "assets": assets, "classification": classification}
+    if isinstance(request, str):
+        payload["compatibility"] = {
+            "status": "legacy_demo_only",
+            "formal_entry": False,
+            "limitations": [
+                "固定示例映射不承担通用自然语言理解",
+                "不得用于正式竞品选择、语义分类或验收",
+            ],
+        }
     assets_json = output_dir / "materials.json"
     report_html = output_dir / "report.html"
     assets_json.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")

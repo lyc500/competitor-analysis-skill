@@ -1,0 +1,1466 @@
+{
+  "schema_version": 2,
+  "title": "国内外 App「我的」页：按主任务比较信息组织",
+  "research": {
+    "question": "不同 App 的‘我的’页分别围绕什么主任务组织，哪些结构可在相近任务中参考？",
+    "scope": "历史归档的 20 个产品、26 张移动端截图；本轮只重做分析与分类，不执行新的来源搜集。",
+    "goals": [],
+    "constraints": [
+      "没有用户产品现状或明确业务目标，只总结样本模式、差异和适用场景。",
+      "历史截图不代表当前最新版。"
+    ]
+  },
+  "analysis_process": {
+    "material_observations": [
+      {
+        "id": "obs-mat-096876602836684120",
+        "material_id": "mat-096876602836684120",
+        "visible_facts": [
+          "头像下方并排放置金币商城与任务中心，学习记录位于其后。"
+        ],
+        "evidence_boundaries": [
+          "截图只能证明首屏层级，不能证明两个入口的访问频率。"
+        ]
+      },
+      {
+        "id": "obs-mat-133323406851668822",
+        "material_id": "mat-133323406851668822",
+        "visible_facts": [
+          "未登录时仍展示金币商城、任务中心、学习记录和设置，顶部提供登录入口。"
+        ],
+        "evidence_boundaries": [
+          "未登录画面不提供登录后的真实资产与个性化内容。"
+        ]
+      },
+      {
+        "id": "obs-mat-004403109497668392",
+        "material_id": "mat-004403109497668392",
+        "visible_facts": [
+          "自己的头像、账号 ID、加入年份、课程、关注关系、添加好友和学习概览出现在同一页面。"
+        ],
+        "evidence_boundaries": [
+          "这是自己的个人页，不能当作浏览他人公开主页的证据。"
+        ]
+      },
+      {
+        "id": "obs-mat-168392972276229080",
+        "material_id": "mat-168392972276229080",
+        "visible_facts": [
+          "昵称、会员标识、酷币与装备后接外观、沉浸场景和学习设置，画面为浅色主题。"
+        ],
+        "evidence_boundaries": [
+          "酷币和装备是产品特有资产，不能直接迁移到其他业务。"
+        ]
+      },
+      {
+        "id": "obs-mat-248305763204570159",
+        "material_id": "mat-248305763204570159",
+        "visible_facts": [
+          "与浅色样本保持同一信息结构，仅切换为深色主题。"
+        ],
+        "evidence_boundaries": [
+          "它是视觉主题变体，不是新的信息架构样本。"
+        ]
+      },
+      {
+        "id": "obs-mat-227130207557343885",
+        "material_id": "mat-227130207557343885",
+        "visible_facts": [
+          "游客身份下仍显示会员、充值币、读书排行、阅读时长、在读、读完、笔记与书单入口。"
+        ],
+        "evidence_boundaries": [
+          "部分数值可能是游客占位，不能视为真实个人记录。"
+        ]
+      },
+      {
+        "id": "obs-mat-406465221275907801",
+        "material_id": "mat-406465221275907801",
+        "visible_facts": [
+          "身份区后集中显示会员、排行、82 小时 23 分钟阅读时长、在读、读完、笔记、订阅与书单。"
+        ],
+        "evidence_boundaries": [
+          "静态累计值不能说明近期活跃或入口使用频率。"
+        ]
+      },
+      {
+        "id": "obs-mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+        "material_id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+        "visible_facts": [
+          "You 页显示订阅身份，并用 Your interests、History、Saved 分段；当前选中 Saved 并展示文章列表。"
+        ],
+        "evidence_boundaries": [
+          "这是 Saved 子页的已加载状态，不代表账户根页默认内容。"
+        ]
+      },
+      {
+        "id": "obs-mat-176567570728999594",
+        "material_id": "mat-176567570728999594",
+        "visible_facts": [
+          "未登录身份区之后先展示超级 VIP，再展示订单、课程、生词、配音及更多服务。"
+        ],
+        "evidence_boundaries": [
+          "未登录状态不能说明用户自己的学习记录和订单如何呈现。"
+        ]
+      },
+      {
+        "id": "obs-mat-261238806478543829",
+        "material_id": "mat-261238806478543829",
+        "visible_facts": [
+          "登录身份与关注、收藏、评论、笔记在上方，VIP 与订单、课程、生词、配音及更多服务在下方。"
+        ],
+        "evidence_boundaries": [
+          "页面同时容纳内容关系、学习与交易入口，截图不能给出它们的真实优先级。"
+        ]
+      },
+      {
+        "id": "obs-mat-025429166561164948",
+        "material_id": "mat-025429166561164948",
+        "visible_facts": [
+          "头像与编辑资料后依次出现我的作品、智能体中心、消息、会员积分、订单和任务中心。"
+        ],
+        "evidence_boundaries": [
+          "截图不能说明作品与智能体入口的实际使用频率。"
+        ]
+      },
+      {
+        "id": "obs-mat-612887545133740724",
+        "material_id": "mat-612887545133740724",
+        "visible_facts": [
+          "登录入口下展示动态、关注、粉丝与创作中心，其后才是订阅收藏、订单和车主服务。"
+        ],
+        "evidence_boundaries": [
+          "这是自己的账户入口，不是他人的公开主页；未登录数值不代表真实资产。"
+        ]
+      },
+      {
+        "id": "obs-mat-438158835260733576",
+        "material_id": "mat-438158835260733576",
+        "visible_facts": [
+          "未登录入口下仍显示我喜欢、已下载、最近播放列表，并保留底部播放器。"
+        ],
+        "evidence_boundaries": [
+          "未登录列表可能来自本地记录，不能等同于云端个人资产。"
+        ]
+      },
+      {
+        "id": "obs-mat-392538942926681954",
+        "material_id": "mat-392538942926681954",
+        "visible_facts": [
+          "身份区后展示收藏历史、下载文件、云盘文件等统计，随后是云盘空间、文件工具与推荐服务。"
+        ],
+        "evidence_boundaries": [
+          "游戏中心和推荐服务存在，但不改变文件管理是画面主要信息。"
+        ]
+      },
+      {
+        "id": "obs-mat-667567417512043064",
+        "material_id": "mat-667567417512043064",
+        "visible_facts": [
+          "登录入口与余额占位后，依次提供订单、客服、团餐预定、兑换中心、发票与评价。"
+        ],
+        "evidence_boundaries": [
+          "未登录余额占位不能代表真实账户资产。"
+        ]
+      },
+      {
+        "id": "obs-mat-792439682643464941",
+        "material_id": "mat-792439682643464941",
+        "visible_facts": [
+          "登录身份下先显示喜茶券、喜卡与喜钱包，再提供订单、客服、兑换和积分商城。"
+        ],
+        "evidence_boundaries": [
+          "截图不能说明券、卡、钱包的使用频率或价值高低。"
+        ]
+      },
+      {
+        "id": "obs-mat-658360019995979356",
+        "material_id": "mat-658360019995979356",
+        "visible_facts": [
+          "微信登录入口下显示订单状态、钱包、优惠券、收藏、店铺关注、历史浏览与商品推荐。"
+        ],
+        "evidence_boundaries": [
+          "未登录页只证明服务骨架可见，不能证明真实资产层级。"
+        ]
+      },
+      {
+        "id": "obs-mat-551540436152132377",
+        "material_id": "mat-551540436152132377",
+        "visible_facts": [
+          "昵称与收货地址后展示订单状态、钱包、收藏、优惠券和购物推荐。"
+        ],
+        "evidence_boundaries": [
+          "头像提示不遮挡主体，但截图不能说明提示是否影响操作。"
+        ]
+      },
+      {
+        "id": "obs-mat-018621050003319015",
+        "material_id": "mat-018621050003319015",
+        "visible_facts": [
+          "支付宝快捷登录之后是订单状态、优惠权益及推荐、上新、收藏和足迹商品。"
+        ],
+        "evidence_boundaries": [
+          "未登录页面不能展示真实采购账户和订单资产。"
+        ]
+      },
+      {
+        "id": "obs-mat-327553016242661235",
+        "material_id": "mat-327553016242661235",
+        "visible_facts": [
+          "会员身份与权益卡片后展示红包、余额、省钱额，再接订单状态和服务宫格。"
+        ],
+        "evidence_boundaries": [
+          "省钱额是展示值，不能证明权益对消费决策的影响。"
+        ]
+      },
+      {
+        "id": "obs-mat-176174415809164424",
+        "material_id": "mat-176174415809164424",
+        "visible_facts": [
+          "登录入口后提供券卡、订单状态、售后、客服、企业采购、扫码与地址。"
+        ],
+        "evidence_boundaries": [
+          "未登录状态不能说明真实订单和资产如何呈现。"
+        ]
+      },
+      {
+        "id": "obs-mat-026234696324700781",
+        "material_id": "mat-026234696324700781",
+        "visible_facts": [
+          "登录入口下先放收藏与足迹，再分购买订单、出售订单、资产估价与交易工具。"
+        ],
+        "evidence_boundaries": [
+          "未登录画面不含真实买卖记录。"
+        ]
+      },
+      {
+        "id": "obs-mat-508614918845893842",
+        "material_id": "mat-508614918845893842",
+        "visible_facts": [
+          "未登录入口下同时提供创作中心、收藏、想要、足迹、关注、我有、订单、钱包和商家入驻。"
+        ],
+        "evidence_boundaries": [
+          "页面横跨内容关系、交易和商家角色，截图不能给出各角色的真实权重。"
+        ]
+      },
+      {
+        "id": "obs-mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+        "material_id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+        "visible_facts": [
+          "My Target 首屏依次显示购买历史、年度节省、Circle 奖励余额和社区支持票数。"
+        ],
+        "evidence_boundaries": [
+          "奖励余额和节省额是结果状态，不是任务列表或任务进度。"
+        ]
+      },
+      {
+        "id": "obs-mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+        "material_id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+        "visible_facts": [
+          "Your account 页面列出商业账户、设置、帮助、隐私安全、退出和会员编号。"
+        ],
+        "evidence_boundaries": [
+          "截图是账户服务根页，没有交易流水或资产概览。"
+        ]
+      },
+      {
+        "id": "obs-mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+        "material_id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+        "visible_facts": [
+          "MY ACCOUNT 下段可见地址、支付方式、通知、联系偏好、社交账户、礼卡、帮助和反馈，并有滚动条。"
+        ],
+        "evidence_boundaries": [
+          "这是滚动后的下段视口，不能代表首屏内容与优先级。"
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "id": "cmp-learning",
+        "material_ids": [
+          "mat-096876602836684120",
+          "mat-133323406851668822",
+          "mat-004403109497668392",
+          "mat-227130207557343885",
+          "mat-406465221275907801",
+          "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+          "mat-176567570728999594",
+          "mat-261238806478543829"
+        ],
+        "comparison_findings": [
+          "样本都把学习、阅读或收藏记录放进个人中心，但有的强调下一步任务，有的强调累计记录或内容集合。",
+          "游客或未登录页面仍可能展示结构，但真实个人资产只有登录样本可见。"
+        ],
+        "design_judgment": "记录只有能帮助回顾或继续内容时才值得占据首屏，不能因为都是教育或内容产品就统一成同一种宫格。",
+        "recommendation": "先确定用户回来要继续的对象，再从任务、进度或内容集合中选择主要表达。",
+        "applicability": "个人中心承担持续学习、阅读或收藏管理。",
+        "tradeoffs": [
+          "累计指标便于回顾，但可能挤压下一步动作。",
+          "子导航便于管理大量内容，但增加一次选择。"
+        ],
+        "evidence_boundaries": [
+          "静态截图不提供近期使用频率、留存或转化数据。"
+        ]
+      },
+      {
+        "id": "cmp-learning-settings",
+        "material_ids": [
+          "mat-168392972276229080",
+          "mat-248305763204570159"
+        ],
+        "comparison_findings": [
+          "两张不背单词截图的信息结构相同，均围绕会员、酷币、装备、外观和学习设置，仅主题明暗不同。"
+        ],
+        "design_judgment": "这组支持比较学习资产与个性化环境的组织，不支持进度、记录或继续学习模式。",
+        "recommendation": "只在学习资产能解释环境或设置动作时保留该层，并把深浅主题视为视觉状态而非两种结构。",
+        "applicability": "产品具有虚拟学习资产、装备或可配置学习环境。",
+        "tradeoffs": [
+          "资产和设置靠前会压缩学习进度或继续内容的空间。"
+        ],
+        "evidence_boundaries": [
+          "截图没有学习进度、记录、收藏或继续内容，不能把它们归入进度组。"
+        ]
+      },
+      {
+        "id": "cmp-creator",
+        "material_ids": [
+          "mat-025429166561164948",
+          "mat-612887545133740724"
+        ],
+        "comparison_findings": [
+          "两页都在身份区后安排作品、创作或关系入口，再承接订单等次要业务。"
+        ],
+        "design_judgment": "身份主线能约束多业务入口，但自己的创作中心不能被误读为他人的公开主页。",
+        "recommendation": "当创作与关系确实是回访任务时，把作品和创作入口放在身份信息之后。",
+        "applicability": "内容社区或创作者工具。",
+        "tradeoffs": [
+          "强化创作会压缩交易与账户服务的首屏空间。"
+        ],
+        "evidence_boundaries": [
+          "未登录样本不能证明真实作品与关系资产的呈现密度。"
+        ]
+      },
+      {
+        "id": "cmp-library",
+        "material_ids": [
+          "mat-438158835260733576",
+          "mat-392538942926681954"
+        ],
+        "comparison_findings": [
+          "酷狗围绕喜欢、下载和最近播放，迅雷围绕下载、云盘、文件统计与容量；共同对象是可继续处理的媒体或文件。"
+        ],
+        "design_judgment": "出现会员、游戏或推荐服务不改变库管理主任务，分类应以主要对象而不是附带入口决定。",
+        "recommendation": "用最近、下载、收藏或容量状态连接继续处理动作，并把推荐服务降到其后。",
+        "applicability": "媒体播放、下载或云盘文件管理。",
+        "tradeoffs": [
+          "状态概览有助于定位内容，但过多统计会挤压直接操作。"
+        ],
+        "evidence_boundaries": [
+          "截图不能证明本地与云端内容是否同步，也不能说明工具使用频率。"
+        ]
+      },
+      {
+        "id": "cmp-commerce",
+        "material_ids": [
+          "mat-667567417512043064",
+          "mat-792439682643464941",
+          "mat-658360019995979356",
+          "mat-551540436152132377",
+          "mat-018621050003319015",
+          "mat-327553016242661235",
+          "mat-176174415809164424",
+          "mat-026234696324700781",
+          "mat-508614918845893842",
+          "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+        ],
+        "comparison_findings": [
+          "样本普遍用订单阶段、购买记录或售后入口组织交易后任务，部分再加入券卡、钱包或累计收益。",
+          "Target 只展示购买历史和权益结果，没有任务列表、目标或下一步动作。"
+        ],
+        "design_judgment": "订单与权益可以相邻，但权益结果不能被当作任务中心；推荐商品面积也不能证明更高转化。",
+        "recommendation": "先按订单生命周期安排处理入口，再决定哪些可消费权益能帮助下一次交易。",
+        "applicability": "零售、交易或生活服务的个人中心。",
+        "tradeoffs": [
+          "权益前置便于确认余额，但会减少订单处理空间。",
+          "推荐内容支持再次购买，但可能遮蔽售后任务。"
+        ],
+        "evidence_boundaries": [
+          "静态截图不提供转化、复购或功能使用数据。"
+        ]
+      },
+      {
+        "id": "cmp-account-path",
+        "material_ids": [
+          "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+          "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+        ],
+        "comparison_findings": [
+          "Wise 是账户服务根页，ASOS 是带滚动条的账户页下段；两者都收纳维护动作，但不能直接比较首屏优先级。"
+        ],
+        "design_judgment": "页面路径与视口阶段必须先对齐；下段适合说明分区方式，不代表功能天然低频。",
+        "recommendation": "用根页承接身份、安全与账户切换，用下段或二级页收纳地址、支付、通知和帮助。",
+        "applicability": "账户维护项多于首屏可容纳范围。",
+        "tradeoffs": [
+          "收纳减少首屏噪音，但会增加查找路径。"
+        ],
+        "evidence_boundaries": [
+          "ASOS 截图不包含首屏，无法判断首屏已有内容。"
+        ]
+      }
+    ]
+  },
+  "overall": {
+    "id": "overall-main-task",
+    "kind": "inference",
+    "statement": "‘我的’页应先按用户要继续管理的对象选择参照：内容记录、学习环境、创作身份、媒体文件、交易订单和账户治理需要不同的首屏结构。",
+    "evidence_refs": [
+      {
+        "kind": "group",
+        "id": "group-learning-progress"
+      },
+      {
+        "kind": "group",
+        "id": "group-learning-settings"
+      },
+      {
+        "kind": "group",
+        "id": "group-creator-identity"
+      },
+      {
+        "kind": "group",
+        "id": "group-media-file-library"
+      },
+      {
+        "kind": "group",
+        "id": "group-order-benefits"
+      },
+      {
+        "kind": "group",
+        "id": "group-account-settings"
+      }
+    ],
+    "analysis_refs": [
+      "cmp-learning",
+      "cmp-learning-settings",
+      "cmp-creator",
+      "cmp-library",
+      "cmp-commerce",
+      "cmp-account-path"
+    ],
+    "recommendation": "先写清目标页面的主任务，再从对应组比较入口层级；把登录态与路径阶段作为筛选标签。",
+    "applicability": "适用于尚未给出现状与改版目标的宽泛竞品搜集。",
+    "limitations": "这些样本只能支持可见结构判断，不能证明实际频率、转化或留存。"
+  },
+  "key_findings": [
+    {
+      "id": "finding-login-overlay",
+      "kind": "inference",
+      "statement": "登录态会改变可见资产，却不应把主任务不同的页面合成一个业务组。",
+      "evidence_refs": [
+        {
+          "kind": "material",
+          "id": "mat-133323406851668822"
+        },
+        {
+          "kind": "material",
+          "id": "mat-438158835260733576"
+        },
+        {
+          "kind": "material",
+          "id": "mat-018621050003319015"
+        }
+      ],
+      "analysis_refs": [
+        "cmp-learning",
+        "cmp-library",
+        "cmp-commerce"
+      ],
+      "recommendation": "在分类内标注 logged_out 或 guest，并只比较登录前确实可见的结构。",
+      "applicability": "同一业务任务需要比较登录前后的信息暴露。",
+      "limitations": "未登录截图不能代表登录后的真实资产。"
+    },
+    {
+      "id": "finding-xunlei-boundary",
+      "kind": "inference",
+      "statement": "迅雷的主要对象是下载、云盘和文件状态，与酷狗的媒体库更接近，不因会员和推荐服务进入订单组。",
+      "evidence_refs": [
+        {
+          "kind": "material",
+          "id": "mat-392538942926681954"
+        },
+        {
+          "kind": "material",
+          "id": "mat-438158835260733576"
+        }
+      ],
+      "analysis_refs": [
+        "cmp-library"
+      ],
+      "recommendation": "分类时以页面主要对象和连续任务为准，再记录附带业务。",
+      "applicability": "比较媒体、下载或文件个人中心。",
+      "limitations": "只基于当前可见页面，不能概括整个产品业务。"
+    },
+    {
+      "id": "finding-target-boundary",
+      "kind": "inference",
+      "statement": "Target 的年度节省与奖励余额解释消费权益结果，没有目标、进度或下一步动作，不能作为任务中心样本。",
+      "evidence_refs": [
+        {
+          "kind": "material",
+          "id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+        }
+      ],
+      "analysis_refs": [
+        "cmp-commerce"
+      ],
+      "recommendation": "把它用于比较会员价值或消费权益表达，不用于推导任务卡。",
+      "applicability": "研究零售账户的权益价值呈现。",
+      "limitations": "余额为零不能说明功能无效，也不能推断转化。"
+    },
+    {
+      "id": "finding-path-boundary",
+      "kind": "inference",
+      "statement": "账户根页、滚动下段和已选中子页只能比较各自阶段的组织方式，不能直接排名首屏优先级。",
+      "evidence_refs": [
+        {
+          "kind": "material",
+          "id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b"
+        },
+        {
+          "kind": "material",
+          "id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+        },
+        {
+          "kind": "material",
+          "id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00"
+        }
+      ],
+      "analysis_refs": [
+        "cmp-learning",
+        "cmp-account-path"
+      ],
+      "recommendation": "比较前先对齐 path_stage 与 interaction_stage。",
+      "applicability": "同一研究包含根页、子页或滚动状态。",
+      "limitations": "单张静态截图不能还原完整路径。"
+    }
+  ],
+  "groups": [
+    {
+      "group_id": "group-learning-progress",
+      "takeaway": {
+        "id": "group-takeaway-learning",
+        "kind": "inference",
+        "statement": "重点比较记录如何帮助用户回顾或继续内容；适合持续学习与阅读，前提是先明确回来要继续什么。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-learning-progress"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-learning"
+        ],
+        "recommendation": "按任务、进度或内容集合选择一种主表达。",
+        "applicability": "个人中心承担持续内容行为。",
+        "limitations": "截图不能证明哪个入口最高频。"
+      }
+    },
+    {
+      "group_id": "group-learning-settings",
+      "takeaway": {
+        "id": "group-takeaway-learning-settings",
+        "kind": "inference",
+        "statement": "重点比较会员、学习资产和个性化设置如何形成环境配置入口；不含进度或继续内容证据。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-learning-settings"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-learning-settings"
+        ],
+        "recommendation": "只保留能连接到学习环境或设置动作的资产。",
+        "applicability": "产品具有可配置学习环境与虚拟资产。",
+        "limitations": "深浅主题是视觉状态，不增加结构样本权重。"
+      }
+    },
+    {
+      "group_id": "group-creator-identity",
+      "takeaway": {
+        "id": "group-takeaway-creator",
+        "kind": "inference",
+        "statement": "重点比较作品、关系与创作入口如何围绕身份聚合；适合创作者账户，不宜套到只管理订单的页面。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-creator-identity"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-creator"
+        ],
+        "recommendation": "把作品与创作工具紧跟身份区。",
+        "applicability": "创作是账户的主要回访任务。",
+        "limitations": "自己的创作中心不等于他人的公开主页。"
+      }
+    },
+    {
+      "group_id": "group-media-file-library",
+      "takeaway": {
+        "id": "group-takeaway-library",
+        "kind": "inference",
+        "statement": "重点比较最近、下载、收藏和容量如何支持继续处理内容；会员或推荐入口不能改变文件与媒体主任务。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-media-file-library"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-library"
+        ],
+        "recommendation": "先呈现库状态和继续操作，再放推荐服务。",
+        "applicability": "媒体或文件是个人中心的主要对象。",
+        "limitations": "截图不能证明同步能力或工具频率。"
+      }
+    },
+    {
+      "group_id": "group-order-benefits",
+      "takeaway": {
+        "id": "group-takeaway-commerce",
+        "kind": "inference",
+        "statement": "重点比较订单阶段、权益与售后如何围绕交易链组织；奖励结果不能当作任务中心。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-order-benefits"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-commerce"
+        ],
+        "recommendation": "先按交易阶段组织，再选择能支持下一次消费的权益。",
+        "applicability": "个人中心承接购买、履约或售后。",
+        "limitations": "不能从面积和位置推断转化效果。"
+      }
+    },
+    {
+      "group_id": "group-account-settings",
+      "takeaway": {
+        "id": "group-takeaway-settings",
+        "kind": "inference",
+        "statement": "重点比较安全、隐私与账户切换如何形成治理根页；适合账户维护，不承担内容或交易概览。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-account-settings"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-account-path"
+        ],
+        "recommendation": "保持账户治理入口稳定分区。",
+        "applicability": "进入页面的主要目的为维护账户。",
+        "limitations": "金融产品身份不代表当前页面是资产页。"
+      }
+    },
+    {
+      "group_id": "group-account-lower",
+      "takeaway": {
+        "id": "group-takeaway-settings-lower",
+        "kind": "inference",
+        "statement": "重点比较地址、支付、通知和帮助如何在下段收纳；可借鉴分区，不能据此判断首屏优先级。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-account-lower"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-account-path"
+        ],
+        "recommendation": "把维护项放入清楚的下段或二级分区。",
+        "applicability": "首屏已有更核心的账户任务。",
+        "limitations": "滚动位置不能代表功能低频。"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "mat-096876602836684120",
+      "insight": {
+        "id": "insight-mat-096876602836684120",
+        "kind": "inference",
+        "statement": "用成对卡片把可行动的任务与资产放在身份区之后，可让学习目标直接进入下一步。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-096876602836684120"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-096876602836684120",
+          "cmp-learning"
+        ],
+        "recommendation": "只有当任务与金币共同服务学习闭环时再并排；否则应拆开表达。",
+        "applicability": "有明确每日任务或学习激励的产品。",
+        "limitations": "当前画面没有任务进度，不能据此判断任务卡是否足够。"
+      }
+    },
+    {
+      "material_id": "mat-133323406851668822",
+      "insight": {
+        "id": "insight-mat-133323406851668822",
+        "kind": "inference",
+        "statement": "未登录页保留功能骨架，可用于预告登录后能做什么，而不必把全部页面替换成登录拦截。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-133323406851668822"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-133323406851668822",
+          "cmp-learning"
+        ],
+        "recommendation": "只展示可理解且登录后确实可用的入口，并清楚处理需要登录的动作。",
+        "applicability": "希望在登录前解释产品价值的个人中心。",
+        "limitations": "不能用这张图判断登录后资产的视觉权重。"
+      }
+    },
+    {
+      "material_id": "mat-004403109497668392",
+      "insight": {
+        "id": "insight-mat-004403109497668392",
+        "kind": "inference",
+        "statement": "把学习概览与社交身份放在同一页，适合让成长记录同时承担自我回顾和关系建立。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-004403109497668392"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-004403109497668392",
+          "cmp-learning"
+        ],
+        "recommendation": "先确认产品是否真的需要可见的学习身份与好友关系。",
+        "applicability": "学习行为具有社交或展示价值的产品。",
+        "limitations": "截图不能说明用户是否常用添加好友或装扮入口。"
+      }
+    },
+    {
+      "material_id": "mat-168392972276229080",
+      "insight": {
+        "id": "insight-mat-168392972276229080",
+        "kind": "inference",
+        "statement": "把学习资产与个性化设置相邻，可让用户从成果状态进入学习环境调整。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-168392972276229080"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-168392972276229080",
+          "cmp-learning-settings"
+        ],
+        "recommendation": "资产必须能解释后续设置或学习行为，否则会增加首屏噪音。",
+        "applicability": "有学习资产和个性化环境的产品。",
+        "limitations": "主题和资产并列不证明它们具有相同优先级。"
+      }
+    },
+    {
+      "material_id": "mat-248305763204570159",
+      "insight": {
+        "id": "insight-mat-248305763204570159",
+        "kind": "inference",
+        "statement": "同构的深浅主题适合检查卡片层级与状态色在不同背景下是否仍可辨认。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-248305763204570159"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-248305763204570159",
+          "cmp-learning-settings"
+        ],
+        "recommendation": "只把它用于主题可读性对照，不重复计算结构模式。",
+        "applicability": "需要同时支持深浅主题的既有个人中心。",
+        "limitations": "不能据此增加某种布局的样本权重。"
+      }
+    },
+    {
+      "material_id": "mat-227130207557343885",
+      "insight": {
+        "id": "insight-mat-227130207557343885",
+        "kind": "inference",
+        "statement": "游客页保留完整内容管理框架，可用于解释登录后会沉淀哪些阅读记录。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-227130207557343885"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-227130207557343885",
+          "cmp-learning"
+        ],
+        "recommendation": "占位状态要与真实记录区分，并给出清楚的登录价值。",
+        "applicability": "内容记录是登录主要收益的产品。",
+        "limitations": "不能用零值或空值判断功能是否被使用。"
+      }
+    },
+    {
+      "material_id": "mat-406465221275907801",
+      "insight": {
+        "id": "insight-mat-406465221275907801",
+        "kind": "inference",
+        "statement": "把累计进度与内容集合并列，可让个人中心同时回答读了多少和接下来读什么。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-406465221275907801"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-406465221275907801",
+          "cmp-learning"
+        ],
+        "recommendation": "优先选择能支持回顾或继续阅读的指标，避免堆放与行动无关的数字。",
+        "applicability": "有长期内容记录与继续消费任务的产品。",
+        "limitations": "无法从截图判断这些指标是否提升阅读留存。"
+      }
+    },
+    {
+      "material_id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+      "insight": {
+        "id": "insight-mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+        "kind": "inference",
+        "statement": "当个人内容足够多时，用子导航分开兴趣、历史和收藏，比把三类列表连续堆在首屏更易定位。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+          "cmp-learning"
+        ],
+        "recommendation": "子导航只有在每类内容都值得独立浏览时才成立。",
+        "applicability": "收藏和历史构成主要回访任务的内容产品。",
+        "limitations": "单张已选中子页不能说明三个分段的使用优先级。"
+      }
+    },
+    {
+      "material_id": "mat-176567570728999594",
+      "insight": {
+        "id": "insight-mat-176567570728999594",
+        "kind": "inference",
+        "statement": "登录前展示课程、生词等能力入口，可让用户预览个人中心覆盖的学习任务。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-176567570728999594"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-176567570728999594",
+          "cmp-learning"
+        ],
+        "recommendation": "必须区分可直接使用、需要登录和仅作权益说明的入口。",
+        "applicability": "工具产品希望在账户页承接学习服务时。",
+        "limitations": "会员卡在前不等于会员是用户进入页面的高频目的。"
+      }
+    },
+    {
+      "material_id": "mat-261238806478543829",
+      "insight": {
+        "id": "insight-mat-261238806478543829",
+        "kind": "inference",
+        "statement": "先聚合个人内容关系，再承接学习与交易服务，可避免把所有入口混成一个宫格。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-261238806478543829"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-261238806478543829",
+          "cmp-learning"
+        ],
+        "recommendation": "需要先确定内容关系是否比订单和会员更接近页面主任务。",
+        "applicability": "同时沉淀内容互动与学习资料的工具产品。",
+        "limitations": "仍需访问数据决定哪些入口应留在首屏。"
+      }
+    },
+    {
+      "material_id": "mat-025429166561164948",
+      "insight": {
+        "id": "insight-mat-025429166561164948",
+        "kind": "inference",
+        "statement": "把作品和创作工具放在身份区之后，可让个人中心承担创作管理，而不是只做账户设置。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-025429166561164948"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-025429166561164948",
+          "cmp-creator"
+        ],
+        "recommendation": "创作资产必须是用户回访个人中心的真实任务。",
+        "applicability": "用户会持续创建、发布或管理作品的产品。",
+        "limitations": "会员、订单和任务仍需与创作入口区分层级。"
+      }
+    },
+    {
+      "material_id": "mat-612887545133740724",
+      "insight": {
+        "id": "insight-mat-612887545133740724",
+        "kind": "inference",
+        "statement": "先呈现关系与创作身份，再放交易和车主服务，适合用身份主线约束多业务入口。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-612887545133740724"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-612887545133740724",
+          "cmp-creator"
+        ],
+        "recommendation": "只有当创作与关系是账户核心任务时才采用这一顺序。",
+        "applicability": "内容社区叠加交易或服务业务的产品。",
+        "limitations": "登录状态下的真实内容密度仍需复核。"
+      }
+    },
+    {
+      "material_id": "mat-438158835260733576",
+      "insight": {
+        "id": "insight-mat-438158835260733576",
+        "kind": "inference",
+        "statement": "把收藏、下载和最近播放放在同一区域，可直接支持继续听与离线管理。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-438158835260733576"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-438158835260733576",
+          "cmp-library"
+        ],
+        "recommendation": "需要区分本地记录与登录后同步内容。",
+        "applicability": "个人中心的主任务是返回媒体内容的产品。",
+        "limitations": "不能用登录前可见性推断跨设备同步能力。"
+      }
+    },
+    {
+      "material_id": "mat-392538942926681954",
+      "insight": {
+        "id": "insight-mat-392538942926681954",
+        "kind": "inference",
+        "statement": "用文件数量与容量状态连接下载、云盘和工具入口，适合支持继续处理文件。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-392538942926681954"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-392538942926681954",
+          "cmp-library"
+        ],
+        "recommendation": "把文件状态作为核心时，应把推荐服务降到其后，避免与文件任务同权。",
+        "applicability": "下载或云盘管理是个人中心主要任务的产品。",
+        "limitations": "会员身份不能成为把它归入订单或电商页面的依据。"
+      }
+    },
+    {
+      "material_id": "mat-667567417512043064",
+      "insight": {
+        "id": "insight-mat-667567417512043064",
+        "kind": "inference",
+        "statement": "即使未登录也保留完整交易服务目录，可让用户先找到订单、客服或发票再触发登录。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-667567417512043064"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-667567417512043064",
+          "cmp-commerce"
+        ],
+        "recommendation": "登录拦截应发生在需要身份的动作上，而不是遮住整个服务结构。",
+        "applicability": "用户可能带着明确售后或交易任务进入个人中心。",
+        "limitations": "无法从截图判断哪些服务最常用。"
+      }
+    },
+    {
+      "material_id": "mat-792439682643464941",
+      "insight": {
+        "id": "insight-mat-792439682643464941",
+        "kind": "inference",
+        "statement": "把可消费资产放在订单服务之前，适合让用户先确认权益余额再进入交易处理。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-792439682643464941"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-792439682643464941",
+          "cmp-commerce"
+        ],
+        "recommendation": "资产必须能直接用于本产品消费，否则不应占据首屏。",
+        "applicability": "券卡余额与点单形成闭环的消费产品。",
+        "limitations": "三类资产并列会增加认知成本，仍需按业务定义取舍。"
+      }
+    },
+    {
+      "material_id": "mat-658360019995979356",
+      "insight": {
+        "id": "insight-mat-658360019995979356",
+        "kind": "inference",
+        "statement": "按订单阶段提供直接入口，并把收藏和浏览记录接到推荐内容，可支持交易前后两类回访。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-658360019995979356"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-658360019995979356",
+          "cmp-commerce"
+        ],
+        "recommendation": "需要明确订单处理和继续购物哪一个是当前页面的主任务。",
+        "applicability": "个人中心同时承担订单处理与再次购买的电商。",
+        "limitations": "商品推荐占比大不等于更有效。"
+      }
+    },
+    {
+      "material_id": "mat-551540436152132377",
+      "insight": {
+        "id": "insight-mat-551540436152132377",
+        "kind": "inference",
+        "statement": "把地址与订单状态放在身份区附近，可让用户快速确认交易身份和履约进度。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-551540436152132377"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-551540436152132377",
+          "cmp-commerce"
+        ],
+        "recommendation": "只有地址会频繁影响交易任务时才应靠前。",
+        "applicability": "履约状态与收货信息紧密相关的电商。",
+        "limitations": "推荐内容的面积不能作为转化效果证据。"
+      }
+    },
+    {
+      "material_id": "mat-018621050003319015",
+      "insight": {
+        "id": "insight-mat-018621050003319015",
+        "kind": "inference",
+        "statement": "快捷登录后直接预览订单与采购发现入口，适合降低企业采购用户寻找交易状态的路径。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-018621050003319015"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-018621050003319015",
+          "cmp-commerce"
+        ],
+        "recommendation": "采购身份和个人消费身份不同，入口文案需匹配实际账户关系。",
+        "applicability": "采购交易是个人中心主任务的 B2B 平台。",
+        "limitations": "不能把推荐商品出现理解为账户页的唯一重点。"
+      }
+    },
+    {
+      "material_id": "mat-327553016242661235",
+      "insight": {
+        "id": "insight-mat-327553016242661235",
+        "kind": "inference",
+        "statement": "把可用权益与订单状态分成相邻层，可同时支持下单前确认资产和下单后处理履约。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-327553016242661235"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-327553016242661235",
+          "cmp-commerce"
+        ],
+        "recommendation": "需要限制权益指标数量，并保证每项都能进入明确动作。",
+        "applicability": "会员权益与即时零售交易紧密相连的产品。",
+        "limitations": "会员卡更大不等于对用户更有效。"
+      }
+    },
+    {
+      "material_id": "mat-176174415809164424",
+      "insight": {
+        "id": "insight-mat-176174415809164424",
+        "kind": "inference",
+        "statement": "把售后、客服和地址与订单阶段放在同一服务区，可覆盖即时零售的交易后任务。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-176174415809164424"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-176174415809164424",
+          "cmp-commerce"
+        ],
+        "recommendation": "辅助入口应围绕真实交易路径分组，避免仅按图标数量排布。",
+        "applicability": "配送、售后和地址都是订单链路组成部分的零售产品。",
+        "limitations": "不能由画面位置推断企业采购属于高频。"
+      }
+    },
+    {
+      "material_id": "mat-026234696324700781",
+      "insight": {
+        "id": "insight-mat-026234696324700781",
+        "kind": "inference",
+        "statement": "按买入和卖出两条角色路径拆分订单，可减少双边交易用户在同一列表中辨认任务的成本。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-026234696324700781"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-026234696324700781",
+          "cmp-commerce"
+        ],
+        "recommendation": "只有用户确实会在两种交易角色间切换时才值得双路径。",
+        "applicability": "同时支持买卖双方任务的交易平台。",
+        "limitations": "无法从截图判断两条路径的使用比例。"
+      }
+    },
+    {
+      "material_id": "mat-508614918845893842",
+      "insight": {
+        "id": "insight-mat-508614918845893842",
+        "kind": "inference",
+        "statement": "将想要、我有与订单相邻，可围绕商品关系连接交易前收藏和交易后资产。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-508614918845893842"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-508614918845893842",
+          "cmp-commerce"
+        ],
+        "recommendation": "需要明确普通买家与商家入口是否应共享同一首屏。",
+        "applicability": "商品社区与交易关系同时存在的平台。",
+        "limitations": "入口齐全不等于层级合理；仍需按目标角色删减。"
+      }
+    },
+    {
+      "material_id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+      "insight": {
+        "id": "insight-mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+        "kind": "inference",
+        "statement": "把购买记录与已获权益放在同一账户首屏，可解释会员关系带来的可见价值。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+          "cmp-commerce"
+        ],
+        "recommendation": "只有收益口径清楚且可核对时才展示累计价值。",
+        "applicability": "零售账户需要同时承接购买记录与会员权益时。",
+        "limitations": "0 金额不能说明页面未加载，也不能证明权益展示提升转化。"
+      }
+    },
+    {
+      "material_id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+      "insight": {
+        "id": "insight-mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+        "kind": "inference",
+        "statement": "将安全、帮助和账户切换集中成稳定列表，适合承担账户治理而非内容或交易概览。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+          "cmp-account-path"
+        ],
+        "recommendation": "需要把高风险账户动作与普通帮助入口保持清楚分区。",
+        "applicability": "用户进入页面主要是维护身份、安全和账户类型时。",
+        "limitations": "不能因产品是金融服务就假定该页承担资产管理。"
+      }
+    },
+    {
+      "material_id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+      "insight": {
+        "id": "insight-mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+        "kind": "inference",
+        "statement": "把地址、支付、通知和帮助按账户维护主题连续收纳，可作为二级管理区的组织参考。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+          }
+        ],
+        "analysis_refs": [
+          "obs-mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+          "cmp-account-path"
+        ],
+        "recommendation": "应在首屏已有核心任务入口的前提下，把这些管理项放入下段或二级页。",
+        "applicability": "账户维护项较多且不需要同时曝光的产品。",
+        "limitations": "不能用下段位置推断这些功能低频。"
+      }
+    }
+  ],
+  "synthesis": {
+    "findings": [
+      {
+        "id": "summary-select-pattern",
+        "kind": "inference",
+        "statement": "先按继续内容、学习环境配置、创作管理、文件处理、交易服务或账户治理选择结构，再在同一主任务内比较入口层级。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-learning-progress"
+          },
+          {
+            "kind": "group",
+            "id": "group-learning-settings"
+          },
+          {
+            "kind": "group",
+            "id": "group-creator-identity"
+          },
+          {
+            "kind": "group",
+            "id": "group-media-file-library"
+          },
+          {
+            "kind": "group",
+            "id": "group-order-benefits"
+          },
+          {
+            "kind": "group",
+            "id": "group-account-settings"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-learning",
+          "cmp-learning-settings",
+          "cmp-creator",
+          "cmp-library",
+          "cmp-commerce",
+          "cmp-account-path"
+        ],
+        "recommendation": "把页面主任务写成一个可完成的动作，并排除只有行业相同或都含会员的样本。",
+        "applicability": "尚未确定具体改版目标的模式调研。",
+        "limitations": "跨行业比较只能迁移共同机制，不能直接迁移业务模块。"
+      },
+      {
+        "id": "summary-keep-state",
+        "kind": "inference",
+        "statement": "登录态、自己的账户、子页和滚动下段应作为比较条件持续保留，否则结构差异会被错误解释为设计优先级。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-133323406851668822"
+          },
+          {
+            "kind": "material",
+            "id": "mat-004403109497668392"
+          },
+          {
+            "kind": "material",
+            "id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-learning",
+          "cmp-creator",
+          "cmp-account-path"
+        ],
+        "recommendation": "筛选样本时同时对齐主任务、页面角色和路径阶段。",
+        "applicability": "需要跨状态或跨路径复用历史截图。",
+        "limitations": "标签能避免误读，但不能替代完整交互路径验证。"
+      }
+    ],
+    "validation_questions": [
+      {
+        "id": "verify-primary-task",
+        "kind": "question",
+        "statement": "目标产品的用户进入‘我的’页后最需要继续完成哪一件事？",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-learning-progress"
+          },
+          {
+            "kind": "group",
+            "id": "group-order-benefits"
+          },
+          {
+            "kind": "group",
+            "id": "group-account-settings"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-learning",
+          "cmp-commerce",
+          "cmp-account-path"
+        ]
+      },
+      {
+        "id": "verify-login-visibility",
+        "kind": "question",
+        "statement": "未登录时哪些功能只需预览，哪些动作必须在入口处触发登录？",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-133323406851668822"
+          },
+          {
+            "kind": "material",
+            "id": "mat-667567417512043064"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-learning",
+          "cmp-commerce"
+        ]
+      },
+      {
+        "id": "verify-current-version",
+        "kind": "question",
+        "statement": "进入设计决策前，哪些历史样本需要重新确认当前版本和完整路径？",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+          },
+          {
+            "kind": "material",
+            "id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-learning",
+          "cmp-account-path"
+        ]
+      }
+    ]
+  },
+  "information_gaps": [
+    {
+      "section": "current_state",
+      "status": "not_provided",
+      "reason": "用户没有提供产品现状或改版目标，本报告不生成针对某个产品的方案。"
+    }
+  ],
+  "methodology": [
+    {
+      "title": "历史素材分析重放",
+      "text": "沿用既有证据与图片，仅重做逐图观察、分类和分析；没有执行新的来源搜集或登录检查，不视为当前版本验收。"
+    },
+    {
+      "title": "分析边界",
+      "text": "结论来自静态截图的可见结构；不把位置、面积或数值直接解释为高频、有效、转化或留存。"
+    }
+  ],
+  "quality_review": {
+    "review_type": "agent_self_review",
+    "independent": false,
+    "reviewed_claim_ids": [
+      "overall-main-task",
+      "finding-login-overlay",
+      "finding-xunlei-boundary",
+      "finding-target-boundary",
+      "finding-path-boundary",
+      "group-takeaway-learning",
+      "group-takeaway-learning-settings",
+      "group-takeaway-creator",
+      "group-takeaway-library",
+      "group-takeaway-commerce",
+      "group-takeaway-settings",
+      "group-takeaway-settings-lower",
+      "insight-mat-096876602836684120",
+      "insight-mat-133323406851668822",
+      "insight-mat-004403109497668392",
+      "insight-mat-168392972276229080",
+      "insight-mat-248305763204570159",
+      "insight-mat-227130207557343885",
+      "insight-mat-406465221275907801",
+      "insight-mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+      "insight-mat-176567570728999594",
+      "insight-mat-261238806478543829",
+      "insight-mat-025429166561164948",
+      "insight-mat-612887545133740724",
+      "insight-mat-438158835260733576",
+      "insight-mat-392538942926681954",
+      "insight-mat-667567417512043064",
+      "insight-mat-792439682643464941",
+      "insight-mat-658360019995979356",
+      "insight-mat-551540436152132377",
+      "insight-mat-018621050003319015",
+      "insight-mat-327553016242661235",
+      "insight-mat-176174415809164424",
+      "insight-mat-026234696324700781",
+      "insight-mat-508614918845893842",
+      "insight-mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+      "insight-mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+      "insight-mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+      "summary-select-pattern",
+      "summary-keep-state",
+      "verify-primary-task",
+      "verify-login-visibility",
+      "verify-current-version"
+    ],
+    "checks": {
+      "evidence_supported": true,
+      "reference_value_clear": true,
+      "research_relevant": true,
+      "exceptions_considered": true,
+      "duplicates_resolved": true,
+      "generic_claims_removed": true
+    },
+    "edits": [
+      {
+        "candidate_id": "old-order-service-xunlei",
+        "action": "rewritten",
+        "before": "交易与文件类页面需先确认共同的入口组织机制。",
+        "after": "迅雷按下载、云盘和文件管理归入媒体与文件库，不再与订单页合组。",
+        "reason": "旧分类把不同主任务放进同一层级，宽泛提醒不能修复比较基础。"
+      },
+      {
+        "candidate_id": "old-logged-out-catch-all",
+        "action": "removed",
+        "before": "国内｜未登录的完整个人中心。",
+        "reason": "登录态只是证据条件，不能充当容纳内容、交易、文件和创作页面的业务分类。"
+      }
+    ],
+    "notes": [
+      "逐图检查可见事实后再写比较、判断与建议；删除了仅复述控件或执行流程的候选结论。",
+      "这是同一 Agent 的交付前人工自查，只辅助暴露遗漏与过度推断，不是独立质量验证。"
+    ]
+  }
+}

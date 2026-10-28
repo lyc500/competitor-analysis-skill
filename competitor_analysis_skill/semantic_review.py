@@ -127,6 +127,7 @@ def process_semantic_reviews(task, captures, manuals, reviews, output_dir, captu
         is_ui_database = capture.get("discovered_source_type") == "ui_database"
         materials.append({
             "id": f"mat-{capture['id']}", "product_name": competitor["product_name"], "page_name": task["target_page"],
+            "target_page": task["target_page"],
             "region": competitor["region"], "product_type": competitor["product_type"], "platform": capture.get("platform") or competitor["platform"],
             "target_surface": target_surface, "target_surface_match": review.get("target_surface_match", "not_applicable"),
             "image_path": str(_path(captures_base_dir or output_dir, capture["screenshot_path"])), "source_type": "ui_database" if is_ui_database else "browser",
@@ -147,6 +148,7 @@ def process_semantic_reviews(task, captures, manuals, reviews, output_dir, captu
         competitor = competitors[manual["product_name"].casefold()]
         materials.append({
             "id": f"mat-{manual['id']}", "product_name": competitor["product_name"], "page_name": task["target_page"],
+            "target_page": task["target_page"],
             "region": competitor["region"], "product_type": competitor["product_type"], "platform": manual.get("platform") or competitor["platform"],
             "target_surface": target_surface, "target_surface_match": review.get("target_surface_match", "not_applicable"),
             "image_path": str(_path(manuals_base_dir or output_dir, manual["image_path"])), "source_type": manual["source_type"],

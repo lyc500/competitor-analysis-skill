@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-28T10:25:43+08:00",
+  "evidence_type": "real_browser_read_only_revalidation",
+  "browser": {
+    "name": "Chrome",
+    "profile_label": "用户1",
+    "session_continuity": "同一已打开 Chrome 配置中复用来源详情标签，并在同一配置打开来源列表入口复查",
+    "credentials_recorded": false
+  },
+  "scope": "对场景 A/B 使用过的四个 UI 来源复查列表、详情和图像可见范围；不进行新候选采集",
+  "sources": [
+    {
+      "provider": "UI Notes",
+      "authentication_state": "authenticated",
+      "access_barrier": "paywall",
+      "coverage_impact": "minor",
+      "entry_url": "https://uinotes.com/pin?functions=71",
+      "detail_url": "https://uinotes.com/pin/276511827925182237",
+      "observations": [
+        "列表页显示功能筛选‘个人中心’和 1880 张截图，并加载 80 张图像资源",
+        "详情页显示斗鱼版本、日期与标签，1170×2532 原图资源加载成功",
+        "页面显示当前账号菜单与退出登录；继续浏览全部结果仍要求升级会员"
+      ],
+      "capabilities": {
+        "page_open": true,
+        "search_or_filter_usable": true,
+        "detail_usable": true,
+        "original_asset_usable": true,
+        "continued_browsing_usable": false
+      }
+    },
+    {
+      "provider": "Refero",
+      "authentication_state": "authenticated",
+      "access_barrier": "paywall",
+      "coverage_impact": "minor",
+      "entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "detail_url": "https://refero.design/screens/cdb87543-4d9a-4f5e-9a95-035361942d3c?page_types[id][]=15&source=search",
+      "observations": [
+        "列表页保留 Profile & Account 筛选，显示 2174 条结果受 Pro 限制，并可见首批产品",
+        "Airbuds 详情页可打开，1125×2436 主图加载成功",
+        "Bookmarks 与 History 菜单可见；更多页面和完整库仍要求 Refero Pro"
+      ],
+      "capabilities": {
+        "page_open": true,
+        "search_or_filter_usable": true,
+        "detail_usable": true,
+        "original_asset_usable": true,
+        "continued_browsing_usable": false
+      }
+    },
+    {
+      "provider": "Mobbin",
+      "authentication_state": "authenticated",
+      "access_barrier": "paywall",
+      "coverage_impact": "minor",
+      "entry_url": "https://mobbin.com/browse/ios/screens?sort=popularity&filter=screenPatterns.My+Account+%26+Profile",
+      "detail_url": "https://mobbin.com/screens/5bbf18f3-5f00-41d9-a922-fce9b0e470d3?content_type=screens&sort=popularity&filter=screenPatterns.My+Account+%26+Profile",
+      "observations": [
+        "入口重定向到 Discover iOS apps，页面显示 Pro 仅开放最近 4 个 App 的边界",
+        "Badoo 详情标签仍可打开，页面截图与相似产品列表加载成功",
+        "原图下载与更多列表仍受 Pro 订阅限制"
+      ],
+      "capabilities": {
+        "page_open": true,
+        "search_or_filter_usable": "partial",
+        "detail_usable": true,
+        "original_asset_usable": false,
+        "continued_browsing_usable": false
+      }
+    },
+    {
+      "provider": "PTTRNS",
+      "authentication_state": "anonymous",
+      "access_barrier": "login_required",
+      "coverage_impact": "minor",
+      "entry_url": "https://app.pttrns.com/",
+      "observations": [
+        "页面显示 Sign up free 与 Log in，未出现可用搜索或截图详情",
+        "站点说明免费账号可访问完整库，但本轮没有代用户注册或登录",
+        "其他三个来源仍能复查已用详情与图像，因此该限制未达到本批 material 覆盖影响"
+      ],
+      "capabilities": {
+        "page_open": true,
+        "search_or_filter_usable": false,
+        "detail_usable": false,
+        "original_asset_usable": false,
+        "continued_browsing_usable": false
+      }
+    }
+  ],
+  "decision": {
+    "status": "not_required",
+    "reason": "本轮只复核已归档素材和生成结果；PTTRNS 的匿名限制为 minor，未实质阻断当前报告证据，未触发用户登录或公开继续选择。"
+  },
+  "real_login_flow": {
+    "user_choice_prompted": false,
+    "login_performed": false,
+    "same_session_post_login_recheck": false,
+    "resume_after_login": false,
+    "status": "not_triggered",
+    "remaining_validation": "未来任务遇到 material 级认证限制时，需真实完成一次用户选择；若选择登录，需在采集所用同一会话复查并恢复。"
+  },
+  "boundaries": [
+    "该文件记录真实网站只读复查，不是新来源搜集或新素材发现。",
+    "订阅限制与登录限制分别记录；没有将 PTTRNS 的匿名状态写入竞品截图登录状态。",
+    "没有记录密码、验证码、Cookie、令牌或浏览器存储。"
+  ]
+}

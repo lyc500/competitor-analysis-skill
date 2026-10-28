@@ -1,0 +1,543 @@
+{
+  "classification_status": "ready",
+  "classification_dimension": "页面主任务与实际设计机制",
+  "classification_reason": "一句话宽泛搜集先按用户进入个人中心后要继续处理的对象归组；登录态、主题与路径阶段保留为标签，不再充当业务兜底分类。",
+  "groups": [
+    {
+      "id": "group-learning-progress",
+      "name": "学习与内容进度",
+      "reason": "持续内容行为与进度管理",
+      "material_ids": [
+        "mat-096876602836684120",
+        "mat-133323406851668822",
+        "mat-004403109497668392",
+        "mat-227130207557343885",
+        "mat-406465221275907801",
+        "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+        "mat-176567570728999594",
+        "mat-261238806478543829"
+      ],
+      "asset_ids": [
+        "mat-096876602836684120",
+        "mat-133323406851668822",
+        "mat-004403109497668392",
+        "mat-227130207557343885",
+        "mat-406465221275907801",
+        "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+        "mat-176567570728999594",
+        "mat-261238806478543829"
+      ],
+      "audit": {
+        "inclusion_criteria": "页面围绕学习进度、阅读记录、收藏或继续内容组织主要信息。",
+        "shared_mechanism": "通过记录、内容集合或进度状态帮助用户回顾并继续任务。",
+        "adjacent_difference": "与创作身份组相比，本组重点是自己的学习或内容消费记录；与媒体文件库相比，本组含进度、课程或内容关系。",
+        "member_reasons": [
+          {
+            "material_id": "mat-096876602836684120",
+            "reason": "头像下方并排放置金币商城与任务中心，学习记录位于其后。"
+          },
+          {
+            "material_id": "mat-133323406851668822",
+            "reason": "未登录时仍展示金币商城、任务中心、学习记录和设置，顶部提供登录入口。"
+          },
+          {
+            "material_id": "mat-004403109497668392",
+            "reason": "自己的头像、账号 ID、加入年份、课程、关注关系、添加好友和学习概览出现在同一页面。"
+          },
+          {
+            "material_id": "mat-227130207557343885",
+            "reason": "游客身份下仍显示会员、充值币、读书排行、阅读时长、在读、读完、笔记与书单入口。"
+          },
+          {
+            "material_id": "mat-406465221275907801",
+            "reason": "身份区后集中显示会员、排行、82 小时 23 分钟阅读时长、在读、读完、笔记、订阅与书单。"
+          },
+          {
+            "material_id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+            "reason": "You 页显示订阅身份，并用 Your interests、History、Saved 分段；当前选中 Saved 并展示文章列表。"
+          },
+          {
+            "material_id": "mat-176567570728999594",
+            "reason": "未登录身份区之后先展示超级 VIP，再展示订单、课程、生词、配音及更多服务。"
+          },
+          {
+            "material_id": "mat-261238806478543829",
+            "reason": "登录身份与关注、收藏、评论、笔记在上方，VIP 与订单、课程、生词、配音及更多服务在下方。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "group-learning-settings",
+      "name": "学习资产与个性化设置",
+      "reason": "学习资产和环境配置",
+      "material_ids": [
+        "mat-168392972276229080",
+        "mat-248305763204570159"
+      ],
+      "asset_ids": [
+        "mat-168392972276229080",
+        "mat-248305763204570159"
+      ],
+      "audit": {
+        "inclusion_criteria": "页面主要呈现会员、虚拟资产、装备、外观、沉浸场景或学习设置，没有可见学习进度与内容记录。",
+        "shared_mechanism": "用学习资产连接个性化环境与设置，而不是承担继续内容或进度回顾。",
+        "adjacent_difference": "与学习进度组的差异是没有进度、记录、收藏或继续内容；不能只因同属教育产品合组。",
+        "member_reasons": [
+          {
+            "material_id": "mat-168392972276229080",
+            "reason": "昵称、会员标识、酷币与装备后接外观、沉浸场景和学习设置，画面为浅色主题。"
+          },
+          {
+            "material_id": "mat-248305763204570159",
+            "reason": "与浅色样本保持同一信息结构，仅切换为深色主题。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "group-creator-identity",
+      "name": "创作身份与关系资产",
+      "reason": "创作身份、作品和关系管理",
+      "material_ids": [
+        "mat-025429166561164948",
+        "mat-612887545133740724"
+      ],
+      "asset_ids": [
+        "mat-025429166561164948",
+        "mat-612887545133740724"
+      ],
+      "audit": {
+        "inclusion_criteria": "页面把作品、创作入口、动态或关注关系放在身份区附近。",
+        "shared_mechanism": "以身份与关系为主线承接创作管理，再放订单或其他服务。",
+        "adjacent_difference": "不把只有账户头像的页面纳入；自己的创作中心也不等同于浏览他人的公开主页。",
+        "member_reasons": [
+          {
+            "material_id": "mat-025429166561164948",
+            "reason": "头像与编辑资料后依次出现我的作品、智能体中心、消息、会员积分、订单和任务中心。"
+          },
+          {
+            "material_id": "mat-612887545133740724",
+            "reason": "登录入口下展示动态、关注、粉丝与创作中心，其后才是订阅收藏、订单和车主服务。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "group-media-file-library",
+      "name": "媒体与文件库",
+      "reason": "继续媒体或文件处理",
+      "material_ids": [
+        "mat-438158835260733576",
+        "mat-392538942926681954"
+      ],
+      "asset_ids": [
+        "mat-438158835260733576",
+        "mat-392538942926681954"
+      ],
+      "audit": {
+        "inclusion_criteria": "页面主要呈现收藏、最近、下载、文件、容量或继续播放入口。",
+        "shared_mechanism": "用库状态连接继续消费、下载和文件管理。",
+        "adjacent_difference": "与订单组的差异是主对象为媒体或文件；出现会员、游戏或推荐入口不改变这一主任务。",
+        "member_reasons": [
+          {
+            "material_id": "mat-438158835260733576",
+            "reason": "未登录入口下仍显示我喜欢、已下载、最近播放列表，并保留底部播放器。"
+          },
+          {
+            "material_id": "mat-392538942926681954",
+            "reason": "身份区后展示收藏历史、下载文件、云盘文件等统计，随后是云盘空间、文件工具与推荐服务。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "group-order-benefits",
+      "name": "订单生命周期与消费权益",
+      "reason": "围绕交易前后组织订单、权益与服务",
+      "material_ids": [
+        "mat-667567417512043064",
+        "mat-792439682643464941",
+        "mat-658360019995979356",
+        "mat-551540436152132377",
+        "mat-018621050003319015",
+        "mat-327553016242661235",
+        "mat-176174415809164424",
+        "mat-026234696324700781",
+        "mat-508614918845893842",
+        "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+      ],
+      "asset_ids": [
+        "mat-667567417512043064",
+        "mat-792439682643464941",
+        "mat-658360019995979356",
+        "mat-551540436152132377",
+        "mat-018621050003319015",
+        "mat-327553016242661235",
+        "mat-176174415809164424",
+        "mat-026234696324700781",
+        "mat-508614918845893842",
+        "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+      ],
+      "audit": {
+        "inclusion_criteria": "页面至少以订单状态、购买记录、售后或可消费权益为主要区域。",
+        "shared_mechanism": "用订单阶段和可用权益连接再次购买、履约与售后。",
+        "adjacent_difference": "不包含文件管理或纯账户设置；Target 的奖励是消费权益结果，不作为任务中心证据。",
+        "member_reasons": [
+          {
+            "material_id": "mat-667567417512043064",
+            "reason": "登录入口与余额占位后，依次提供订单、客服、团餐预定、兑换中心、发票与评价。"
+          },
+          {
+            "material_id": "mat-792439682643464941",
+            "reason": "登录身份下先显示喜茶券、喜卡与喜钱包，再提供订单、客服、兑换和积分商城。"
+          },
+          {
+            "material_id": "mat-658360019995979356",
+            "reason": "微信登录入口下显示订单状态、钱包、优惠券、收藏、店铺关注、历史浏览与商品推荐。"
+          },
+          {
+            "material_id": "mat-551540436152132377",
+            "reason": "昵称与收货地址后展示订单状态、钱包、收藏、优惠券和购物推荐。"
+          },
+          {
+            "material_id": "mat-018621050003319015",
+            "reason": "支付宝快捷登录之后是订单状态、优惠权益及推荐、上新、收藏和足迹商品。"
+          },
+          {
+            "material_id": "mat-327553016242661235",
+            "reason": "会员身份与权益卡片后展示红包、余额、省钱额，再接订单状态和服务宫格。"
+          },
+          {
+            "material_id": "mat-176174415809164424",
+            "reason": "登录入口后提供券卡、订单状态、售后、客服、企业采购、扫码与地址。"
+          },
+          {
+            "material_id": "mat-026234696324700781",
+            "reason": "登录入口下先放收藏与足迹，再分购买订单、出售订单、资产估价与交易工具。"
+          },
+          {
+            "material_id": "mat-508614918845893842",
+            "reason": "未登录入口下同时提供创作中心、收藏、想要、足迹、关注、我有、订单、钱包和商家入驻。"
+          },
+          {
+            "material_id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+            "reason": "My Target 首屏依次显示购买历史、年度节省、Circle 奖励余额和社区支持票数。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "group-account-settings",
+      "name": "账户设置根页",
+      "reason": "身份、安全和账户治理",
+      "material_ids": [
+        "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b"
+      ],
+      "asset_ids": [
+        "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b"
+      ],
+      "audit": {
+        "inclusion_criteria": "页面以设置、隐私、安全、帮助、账户切换或退出为主要内容。",
+        "shared_mechanism": "把账户治理动作放在稳定的根页列表中。",
+        "adjacent_difference": "与消费组的差异是没有订单或购物权益主线；与下段组的差异是当前视口属于根页服务区。",
+        "member_reasons": [
+          {
+            "material_id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+            "reason": "Your account 页面列出商业账户、设置、帮助、隐私安全、退出和会员编号。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "group-account-lower",
+      "name": "账户管理下段",
+      "reason": "滚动下段的账户维护收纳",
+      "material_ids": [
+        "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+      ],
+      "asset_ids": [
+        "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+      ],
+      "audit": {
+        "inclusion_criteria": "截图明确为账户页下段，并集中地址、支付、通知或帮助等维护项。",
+        "shared_mechanism": "在首屏之后用分区列表收纳账户维护动作。",
+        "adjacent_difference": "不能与首屏样本直接比较优先级，也不把下段位置解释为低频。",
+        "member_reasons": [
+          {
+            "material_id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+            "reason": "MY ACCOUNT 下段可见地址、支付方式、通知、联系偏好、社交账户、礼卡、帮助和反馈，并有滚动条。"
+          }
+        ]
+      }
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-096876602836684120",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-133323406851668822",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-004403109497668392",
+      "labels": {
+        "page_role": "own_profile",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-168392972276229080",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-248305763204570159",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-227130207557343885",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "guest"
+      }
+    },
+    {
+      "material_id": "mat-406465221275907801",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+      "labels": {
+        "page_role": "content_library",
+        "path_stage": "personal_center_saved_tab",
+        "interaction_stage": "subtab_selected",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-176567570728999594",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-261238806478543829",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-025429166561164948",
+      "labels": {
+        "page_role": "creator_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-612887545133740724",
+      "labels": {
+        "page_role": "creator_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-438158835260733576",
+      "labels": {
+        "page_role": "media_library",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-392538942926681954",
+      "labels": {
+        "page_role": "file_library",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-667567417512043064",
+      "labels": {
+        "page_role": "order_service_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-792439682643464941",
+      "labels": {
+        "page_role": "order_service_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-658360019995979356",
+      "labels": {
+        "page_role": "order_service_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-551540436152132377",
+      "labels": {
+        "page_role": "order_service_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-018621050003319015",
+      "labels": {
+        "page_role": "order_service_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-327553016242661235",
+      "labels": {
+        "page_role": "order_service_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-176174415809164424",
+      "labels": {
+        "page_role": "order_service_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-026234696324700781",
+      "labels": {
+        "page_role": "order_service_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-508614918845893842",
+      "labels": {
+        "page_role": "order_service_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+      "labels": {
+        "page_role": "order_service_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+      "labels": {
+        "page_role": "account_settings_root",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+      "labels": {
+        "page_role": "account_management_lower",
+        "path_stage": "account_root_scrolled_lower",
+        "interaction_stage": "browse_after_scroll",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    }
+  ],
+  "schema_version": 2,
+  "comparison_basis": {
+    "primary_dimension": "个人中心承担的首要用户任务及其信息组织机制",
+    "rationale": "只有主任务和设计机制相近的样本才便于横向比较；行业可以不同，但共同机制必须可见。",
+    "scope": "历史归档的 26 张已审核截图；区分登录态、自己的账户与公开主页、首屏与滚动下段，不视为当前最新版。"
+  }
+}

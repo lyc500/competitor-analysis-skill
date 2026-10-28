@@ -1,0 +1,680 @@
+{
+  "schema_version": 2,
+  "title": "国内外 App 我的页：按回访任务选择结构",
+  "research": {
+    "question": "知名 App 的我的页用哪些结构承接不同回访任务？",
+    "scope": "9 张通过审核的中外移动 App 页面；另有 5 张候选因页面角色不匹配被拒绝",
+    "goals": [
+      "识别可比较的页面主任务",
+      "总结结构差异与适用场景"
+    ],
+    "constraints": [
+      "不虚构用户产品或业务目标",
+      "不从静态截图推断行为效果"
+    ]
+  },
+  "analysis_process": {
+    "material_observations": [
+      {
+        "id": "obs-uinotes-bilibili",
+        "material_id": "mat-cap-uinotes-bilibili",
+        "visible_facts": [
+          "会员横条位于身份区之后",
+          "离线缓存、历史、收藏独立成一排",
+          "创作中心与推荐服务分区"
+        ],
+        "evidence_boundaries": [
+          "素材为历史版本，不能代表当前线上结构",
+          "位置不能证明使用频率"
+        ]
+      },
+      {
+        "id": "obs-uinotes-pinduoduo",
+        "material_id": "mat-cap-uinotes-pinduoduo",
+        "visible_facts": [
+          "订单、钱包/优惠、服务工具和推荐内容连续排列",
+          "页面处于未登录完整状态"
+        ],
+        "evidence_boundaries": [
+          "只能观察信息密度和分区，不能判断转化效果"
+        ]
+      },
+      {
+        "id": "obs-uinotes-doubao",
+        "material_id": "mat-cap-uinotes-doubao",
+        "visible_facts": [
+          "登录入口之后是金币商城与任务中心卡片",
+          "学习记录、消息、帮助和设置使用列表"
+        ],
+        "evidence_boundaries": [
+          "未登录骨架不代表登录后的个性化内容"
+        ]
+      },
+      {
+        "id": "obs-uinotes-kugou",
+        "material_id": "mat-cap-uinotes-kugou",
+        "visible_facts": [
+          "收藏、下载和最近播放同屏",
+          "底部播放条与我的导航可见"
+        ],
+        "evidence_boundaries": [
+          "未登录状态不能证明真实内容丰富度"
+        ]
+      },
+      {
+        "id": "obs-uinotes-duolingo",
+        "material_id": "mat-cap-uinotes-duolingo",
+        "visible_facts": [
+          "身份、学习语言、关系数据和添加好友同屏"
+        ],
+        "evidence_boundaries": [
+          "关系数字不能推断活跃程度"
+        ]
+      },
+      {
+        "id": "obs-refero-wise",
+        "material_id": "mat-cap-refero-wise",
+        "visible_facts": [
+          "账户切换、Settings 和 Help 为主要条目"
+        ],
+        "evidence_boundaries": [
+          "仅能说明账户管理结构"
+        ]
+      },
+      {
+        "id": "obs-refero-kickstarter",
+        "material_id": "mat-cap-refero-kickstarter",
+        "visible_facts": [
+          "Profile 标签呈现 backed/saved 项目",
+          "项目卡展示状态和进度"
+        ],
+        "evidence_boundaries": [
+          "静态进度不能证明回访频率"
+        ]
+      },
+      {
+        "id": "obs-refero-nyt",
+        "material_id": "mat-cap-refero-nyt",
+        "visible_facts": [
+          "You 标签选中",
+          "内容卡片占据页面主体"
+        ],
+        "evidence_boundaries": [
+          "当前截图可能是标签下段，不能视为完整根层首屏"
+        ]
+      },
+      {
+        "id": "obs-refero-airbuds",
+        "material_id": "mat-cap-refero-airbuds",
+        "visible_facts": [
+          "身份信息、最近播放和收藏内容连续排列"
+        ],
+        "evidence_boundaries": [
+          "不能从卡片顺序推断内容重要性"
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "id": "cmp-return-task",
+        "material_ids": [
+          "mat-cap-uinotes-duolingo",
+          "mat-cap-refero-airbuds",
+          "mat-cap-uinotes-kugou",
+          "mat-cap-refero-kickstarter",
+          "mat-cap-refero-nyt"
+        ],
+        "comparison_findings": [
+          "身份型资料页以身份为锚点，可分别承接好友关系或个人内容；内容续接页围绕最近内容或项目状态组织"
+        ],
+        "design_judgment": "个人中心根层应先回答用户回来要做什么，再选择身份或内容作为主体",
+        "recommendation": "将回访任务相同的样本放在一起比较",
+        "applicability": "适合内容、学习和社交产品的个人入口",
+        "tradeoffs": [
+          "内容主体会压缩通用设置的首屏空间"
+        ],
+        "evidence_boundaries": [
+          "不能从截图判断回访频率"
+        ]
+      },
+      {
+        "id": "cmp-hub-density",
+        "material_ids": [
+          "mat-cap-uinotes-bilibili",
+          "mat-cap-uinotes-pinduoduo",
+          "mat-cap-uinotes-doubao",
+          "mat-cap-refero-wise"
+        ],
+        "comparison_findings": [
+          "多业务总览依赖分区，单任务页用少量卡片或列表即可完成层级"
+        ],
+        "design_judgment": "入口数量应由主任务数量决定，高密度总览不应成为默认模板",
+        "recommendation": "先确定首层任务，再决定使用横排、卡片或列表",
+        "applicability": "适合需要在资产、任务和设置之间取舍的个人中心",
+        "tradeoffs": [
+          "增加服务广度会削弱单一任务焦点"
+        ],
+        "evidence_boundaries": [
+          "页面密度不等于使用效率"
+        ]
+      }
+    ]
+  },
+  "overall": {
+    "id": "overall",
+    "kind": "inference",
+    "statement": "本批样本未呈现单一适用的‘我的’页结构：身份关系、内容续接、多业务总览、任务入口和账户管理采用不同主体；应先确定回访任务，再选择参照。",
+    "evidence_refs": [
+      {
+        "kind": "material",
+        "id": "mat-cap-uinotes-duolingo"
+      },
+      {
+        "kind": "material",
+        "id": "mat-cap-uinotes-kugou"
+      },
+      {
+        "kind": "material",
+        "id": "mat-cap-uinotes-bilibili"
+      },
+      {
+        "kind": "material",
+        "id": "mat-cap-refero-wise"
+      }
+    ],
+    "analysis_refs": [
+      "cmp-return-task",
+      "cmp-hub-density"
+    ],
+    "recommendation": "先写清页面首要回访任务，再选择同任务样本",
+    "applicability": "宽泛个人中心研究",
+    "limitations": "静态截图不能证明使用频率或业务效果"
+  },
+  "key_findings": [
+    {
+      "id": "finding-1",
+      "kind": "inference",
+      "statement": "酷狗与 Kickstarter 把最近内容或项目状态直接放进个人入口；设置仍可见，但以紧凑图标降低视觉权重。",
+      "evidence_refs": [
+        {
+          "kind": "material",
+          "id": "mat-cap-uinotes-kugou"
+        },
+        {
+          "kind": "material",
+          "id": "mat-cap-refero-kickstarter"
+        }
+      ],
+      "analysis_refs": [
+        "cmp-return-task"
+      ],
+      "recommendation": "把可继续对象作为主要内容，并把设置保留为紧凑辅助入口",
+      "applicability": "个人入口承担内容回访时",
+      "limitations": "静态截图不能证明使用频率或业务效果"
+    },
+    {
+      "id": "finding-2",
+      "kind": "inference",
+      "statement": "多业务总览的关键是按任务分区，而不是把会员、钱包和服务等宽泛名词当成共同分类依据。",
+      "evidence_refs": [
+        {
+          "kind": "material",
+          "id": "mat-cap-uinotes-bilibili"
+        },
+        {
+          "kind": "material",
+          "id": "mat-cap-uinotes-pinduoduo"
+        }
+      ],
+      "analysis_refs": [
+        "cmp-hub-density"
+      ],
+      "recommendation": "按订单、创作、资产等可解释任务划分",
+      "applicability": "确需汇总多种业务时",
+      "limitations": "静态截图不能证明使用频率或业务效果"
+    }
+  ],
+  "groups": [
+    {
+      "group_id": "group-profile",
+      "takeaway": {
+        "id": "takeaway-group-profile",
+        "kind": "inference",
+        "statement": "先比较身份信息是否服务于后续关系或内容动作，而不是只看头像区样式。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-profile"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-return-task"
+        ],
+        "recommendation": "保留能引出关系或个人内容的身份字段",
+        "applicability": "产品存在公开关系或个人内容时",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      }
+    },
+    {
+      "group_id": "group-return",
+      "takeaway": {
+        "id": "takeaway-group-return",
+        "kind": "inference",
+        "statement": "值得比较的是当前可见区域如何呈现最近内容或项目状态；根层关系未确认的样本只作局部内容参考。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-return"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-return-task"
+        ],
+        "recommendation": "优先展示可继续的内容对象",
+        "applicability": "个人中心承担内容续接任务时",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      }
+    },
+    {
+      "group_id": "group-service",
+      "takeaway": {
+        "id": "takeaway-group-service",
+        "kind": "inference",
+        "statement": "多业务入口需要按订单、资产、创作等任务分区；只共享‘服务’一词不足以合组。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-service"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-hub-density"
+        ],
+        "recommendation": "用业务任务划分区域并控制首屏组数",
+        "applicability": "确有多种独立业务需要汇总时",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      }
+    },
+    {
+      "group_id": "group-task",
+      "takeaway": {
+        "id": "takeaway-group-task",
+        "kind": "inference",
+        "statement": "未登录页仍保留任务中心入口，能证明任务可发现；具体任务内容与收益需登录后再验证。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-task"
+          }
+        ],
+        "analysis_refs": [
+          "obs-uinotes-doubao"
+        ],
+        "recommendation": "让任务入口保持可发现，登录后再展示真实任务状态或收益",
+        "applicability": "任务是明确回访目标时",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      }
+    },
+    {
+      "group_id": "group-account",
+      "takeaway": {
+        "id": "takeaway-group-account",
+        "kind": "inference",
+        "statement": "轻量账户管理页可以用短列表完成，不必借用内容卡或服务宫格。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-account"
+          }
+        ],
+        "analysis_refs": [
+          "obs-refero-wise"
+        ],
+        "recommendation": "把账户切换、设置与帮助按动作排序",
+        "applicability": "页面主任务就是账户管理时",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "mat-cap-uinotes-bilibili",
+      "insight": {
+        "id": "insight-uinotes-bilibili",
+        "kind": "inference",
+        "statement": "会员条带与常用内容动作、创作入口分区，可参考多角色任务的层级拆分。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-bilibili"
+          }
+        ],
+        "analysis_refs": [
+          "obs-uinotes-bilibili"
+        ],
+        "recommendation": "先按会员权益、内容动作和创作管理拆区，再决定哪些区域需要进入首屏",
+        "applicability": "个人入口确实需要汇总多种独立业务时",
+        "limitations": "素材为历史版本，不能代表当前线上结构"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-pinduoduo",
+      "insight": {
+        "id": "insight-uinotes-pinduoduo",
+        "kind": "inference",
+        "statement": "订单、资产和服务分区提供高密度总览对照，也暴露首屏焦点被推荐内容稀释的取舍。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-pinduoduo"
+          }
+        ],
+        "analysis_refs": [
+          "obs-uinotes-pinduoduo"
+        ],
+        "recommendation": "把订单、资产、服务和推荐列成密度清单，逐项检查哪些不应与主任务同级",
+        "applicability": "需要评审多业务总览的首屏密度时",
+        "limitations": "只能观察信息密度和分区，不能判断转化效果"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-doubao",
+      "insight": {
+        "id": "insight-uinotes-doubao",
+        "kind": "inference",
+        "statement": "金币商城与任务中心两个入口卡先于通用列表，其中任务中心被单独强调，适合验证任务入口是否需要成为独立一级对象。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-doubao"
+          }
+        ],
+        "analysis_refs": [
+          "obs-uinotes-doubao"
+        ],
+        "recommendation": "用独立任务中心卡与通用列表拉开层级，但不要把未登录占位当成任务内容",
+        "applicability": "希望用户登录前也能发现任务入口时",
+        "limitations": "未登录骨架不代表登录后的个性化内容"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-kugou",
+      "insight": {
+        "id": "insight-uinotes-kugou",
+        "kind": "inference",
+        "statement": "收藏、下载与最近播放共同承接内容续接，适合内容型个人入口。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-kugou"
+          }
+        ],
+        "analysis_refs": [
+          "obs-uinotes-kugou"
+        ],
+        "recommendation": "用最近播放对象承接续听，收藏与下载作为辅助捷径",
+        "applicability": "产品有可靠的本地或账号最近内容时",
+        "limitations": "未登录状态不能证明真实内容丰富度"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-duolingo",
+      "insight": {
+        "id": "insight-uinotes-duolingo",
+        "kind": "inference",
+        "statement": "学习身份与好友关系同屏，适合资料页需要引出关系动作的场景。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-duolingo"
+          }
+        ],
+        "analysis_refs": [
+          "obs-uinotes-duolingo"
+        ],
+        "recommendation": "身份区只保留能引出好友或学习关系的字段和动作",
+        "applicability": "资料页需要承接真实关系任务时",
+        "limitations": "关系数字不能推断活跃程度"
+      }
+    },
+    {
+      "material_id": "mat-cap-refero-wise",
+      "insight": {
+        "id": "insight-refero-wise",
+        "kind": "inference",
+        "statement": "短列表把账户切换、设置和帮助收束为管理任务，适合作为减法参照。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-refero-wise"
+          }
+        ],
+        "analysis_refs": [
+          "obs-refero-wise"
+        ],
+        "recommendation": "用账户切换、设置与帮助的短列表作为个人入口减法基线",
+        "applicability": "页面主任务是账户管理而非内容或服务总览时",
+        "limitations": "仅能说明账户管理结构"
+      }
+    },
+    {
+      "material_id": "mat-cap-refero-kickstarter",
+      "insight": {
+        "id": "insight-refero-kickstarter",
+        "kind": "inference",
+        "statement": "项目状态直接出现在 Profile 标签中，适合需要持续跟踪对象的个人入口。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-refero-kickstarter"
+          }
+        ],
+        "analysis_refs": [
+          "obs-refero-kickstarter"
+        ],
+        "recommendation": "让项目卡直接展示阶段或截止状态，减少返回项目详情前的查找",
+        "applicability": "个人入口需要持续跟踪明确对象时",
+        "limitations": "静态进度不能证明回访频率"
+      }
+    },
+    {
+      "material_id": "mat-cap-refero-nyt",
+      "insight": {
+        "id": "insight-refero-nyt",
+        "kind": "inference",
+        "statement": "You 标签把个人入口变成内容续接面，但该图可能是标签下段，根层结构仍需验证。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-refero-nyt"
+          }
+        ],
+        "analysis_refs": [
+          "obs-refero-nyt"
+        ],
+        "recommendation": "先补验 You 标签根层与当前下段的关系，再决定是否借鉴内容卡结构",
+        "applicability": "目标产品也用个人内容列表承接回访时",
+        "limitations": "当前截图可能是标签下段，不能视为完整根层首屏"
+      }
+    },
+    {
+      "material_id": "mat-cap-refero-airbuds",
+      "insight": {
+        "id": "insight-refero-airbuds",
+        "kind": "inference",
+        "statement": "身份区后直接出现最近播放与收藏，适合以个人内容表达身份的产品。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-refero-airbuds"
+          }
+        ],
+        "analysis_refs": [
+          "obs-refero-airbuds"
+        ],
+        "recommendation": "把最近播放与收藏紧邻身份区，用个人内容补充身份表达",
+        "applicability": "个人内容能够表达用户身份时",
+        "limitations": "不能从卡片顺序推断内容重要性"
+      }
+    }
+  ],
+  "synthesis": {
+    "findings": [
+      {
+        "id": "synthesis-1",
+        "kind": "inference",
+        "statement": "先以主任务选择参考组：内容续接可看酷狗和 Kickstarter，NYT 只补充当前可见下段的内容卡；Duolingo 可看身份与好友关系，Airbuds 可看身份与个人内容表达；多业务层级可看哔哩哔哩与拼多多。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-return"
+          },
+          {
+            "kind": "group",
+            "id": "group-profile"
+          },
+          {
+            "kind": "group",
+            "id": "group-service"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-return-task",
+          "cmp-hub-density"
+        ],
+        "recommendation": "按目标任务缩小参考范围",
+        "applicability": "进入具体改版前",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      },
+      {
+        "id": "synthesis-2",
+        "kind": "inference",
+        "statement": "将 Wise 作为减法基线，可以检验某个模块是否属于账户管理；将拼多多作为密度上界，可以检验服务广度是否挤压主任务。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-refero-wise"
+          },
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-pinduoduo"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-hub-density"
+        ],
+        "recommendation": "同时保留轻量和高密度对照",
+        "applicability": "方案需要在简洁与业务覆盖之间取舍时",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      }
+    ],
+    "validation_questions": [
+      {
+        "id": "validation-1",
+        "kind": "question",
+        "statement": "不同产品的个人入口真实回访任务和使用频率是什么？",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-bilibili"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-hub-density"
+        ]
+      },
+      {
+        "id": "validation-2",
+        "kind": "question",
+        "statement": "NYT 的 You 标签根层首屏是否与当前截图下段保持同一内容结构？",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-refero-nyt"
+          }
+        ],
+        "analysis_refs": [
+          "obs-refero-nyt"
+        ]
+      }
+    ]
+  },
+  "information_gaps": [
+    {
+      "section": "版本",
+      "status": "unknown",
+      "reason": "来源截图未统一提供 App 版本与日期，不能描述为当前最新版。"
+    },
+    {
+      "section": "来源覆盖",
+      "status": "unknown",
+      "reason": "三个数据库后续结果受订阅限制，本报告只代表当前可见范围。"
+    }
+  ],
+  "methodology": [
+    {
+      "title": "证据边界",
+      "text": "结论来自静态截图的可见结构；不推断使用频率、转化率或留存效果。"
+    }
+  ],
+  "quality_review": {
+    "review_type": "agent_self_review",
+    "independent": false,
+    "reviewed_claim_ids": [
+      "overall",
+      "finding-1",
+      "finding-2",
+      "synthesis-1",
+      "synthesis-2",
+      "validation-1",
+      "validation-2",
+      "takeaway-group-profile",
+      "takeaway-group-return",
+      "takeaway-group-service",
+      "takeaway-group-task",
+      "takeaway-group-account",
+      "insight-uinotes-bilibili",
+      "insight-uinotes-pinduoduo",
+      "insight-uinotes-doubao",
+      "insight-uinotes-kugou",
+      "insight-uinotes-duolingo",
+      "insight-refero-wise",
+      "insight-refero-kickstarter",
+      "insight-refero-nyt",
+      "insight-refero-airbuds"
+    ],
+    "checks": {
+      "evidence_supported": true,
+      "reference_value_clear": true,
+      "research_relevant": true,
+      "exceptions_considered": true,
+      "duplicates_resolved": true,
+      "generic_claims_removed": true
+    },
+    "edits": [
+      {
+        "candidate_id": "generic-claim",
+        "action": "removed",
+        "before": "突出重点可以提升体验",
+        "reason": "没有说明具体做法、条件或截图依据"
+      },
+      {
+        "candidate_id": "independent-audit-scope-and-card-advice",
+        "action": "rewritten",
+        "before": "‘我的’页没有通用模板；九张卡片共用泛化借鉴文案",
+        "after": "本批样本未呈现单一适用结构；逐图建议按内容续接、任务入口、关系表达或账户减法等可见机制分别给出",
+        "reason": "收窄为本批样本结论，并按每张截图的可见机制分别说明借鉴动作与条件"
+      },
+      {
+        "candidate_id": "second-independent-review-material-consistency",
+        "action": "rewritten",
+        "before": "Wise 含安全与退出；NYT 作为确定根层；Duolingo 与 Airbuds 均作为关系资料",
+        "after": "Wise 只记录可见的账户切换、Settings 与 Help；NYT 只作下段内容卡局部参考；好友关系只由 Duolingo 支持，Airbuds 用于身份与个人内容表达",
+        "reason": "逐图复核可见事实，并同步修正分类理由、卡片建议与综合结论"
+      }
+    ],
+    "notes": [
+      "逐图事实、横向比较和最终结论已由 Agent 人工复核；该记录不是独立验证。"
+    ]
+  }
+}

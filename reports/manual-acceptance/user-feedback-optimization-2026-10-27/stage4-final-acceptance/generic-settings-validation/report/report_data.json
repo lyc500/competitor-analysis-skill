@@ -1,0 +1,504 @@
+{
+  "task": {
+    "raw_request": "小范围验证：搜集一个移动 App 设置页，确认流程没有写死为个人中心或虎牙。",
+    "research_goal": "验证通用任务、分类、分析与报告入口",
+    "target_page": "设置页",
+    "target_surface": "mobile_app",
+    "platforms": [
+      "iOS"
+    ],
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "只使用公开可访问且可追溯的单屏 UI 素材"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "Duolingo",
+        "region": "Global",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "设置页",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      }
+    ],
+    "request": "小范围验证：搜集一个移动 App 设置页，确认流程没有写死为个人中心或虎牙。"
+  },
+  "materials": [
+    {
+      "id": "mat-cap-refero-duolingo-settings",
+      "product_name": "Duolingo",
+      "page_name": "设置页",
+      "target_page": "设置页",
+      "region": "Global",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/89012d0d4ba9f4df.jpg",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_asset_url": "https://images.refero.design/screenshots/5/mobile/a0378378-a44b-4e50-a909-32dd83776a40_thumb.jpg",
+      "source_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "页面标题和条目共同表明这是设置根页；与本次目标页面和移动端表面匹配。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "page_role": "settings_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-refero-duolingo-settings",
+      "source_attempt_id": "att-refero-profile",
+      "source_candidate_id": "cand-refero-duolingo-settings",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "requested_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "final_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "width": 488,
+      "height": 1056,
+      "decode_format": "JPEG",
+      "content_sha256": "9bb62f47feccd31fd276c5de4854017bedd9e793c257717b90cbf5703b098cc5"
+    }
+  ],
+  "classification": {
+    "classification_status": "ready",
+    "classification_dimension": "设置任务的分区方式",
+    "classification_reason": "按设置页的主要管理任务组织，不复用个人中心分类。",
+    "groups": [
+      {
+        "id": "group-settings",
+        "name": "账户设置根层",
+        "reason": "检查设置页如何组织账户与偏好入口",
+        "material_ids": [
+          "mat-cap-refero-duolingo-settings"
+        ],
+        "asset_ids": [
+          "mat-cap-refero-duolingo-settings"
+        ],
+        "audit": {
+          "inclusion_criteria": "页面标题与条目均指向设置根层",
+          "shared_mechanism": "用分区列表组织账户与偏好",
+          "adjacent_difference": "不与本人资料页或公开主页混淆",
+          "member_reasons": [
+            {
+              "material_id": "mat-cap-refero-duolingo-settings",
+              "reason": "标题与列表共同确认设置页角色"
+            }
+          ]
+        }
+      }
+    ],
+    "material_labels": [
+      {
+        "material_id": "mat-cap-refero-duolingo-settings",
+        "labels": {
+          "page_role": "settings_root",
+          "path_stage": "root",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      }
+    ],
+    "schema_version": 2,
+    "comparison_basis": {
+      "primary_dimension": "设置任务的分区方式",
+      "rationale": "按设置页的主要管理任务组织，不复用个人中心分类。",
+      "scope": "单张设置页小范围通用性验证。"
+    }
+  },
+  "fallback_requests": [
+    {
+      "product_name": "Duolingo",
+      "target_page": "设置页",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    }
+  ],
+  "evidence_statistics": {
+    "sources": {
+      "attempted": 1,
+      "access_status": {
+        "accessible": 0,
+        "blocked": 0,
+        "empty": 0,
+        "error": 0,
+        "login_required": 0,
+        "paywall": 1,
+        "unknown": 0
+      },
+      "unknown_access": 0
+    },
+    "candidates": {
+      "accepted": 1,
+      "rejected": 0,
+      "not_reviewed": 0
+    },
+    "semantic_reviews": {
+      "accepted": 1,
+      "rejected": 0,
+      "not_reviewed": 0
+    },
+    "materials": {
+      "collected": 1,
+      "rejected": 0,
+      "pending": 0,
+      "needs_manual_capture": 0,
+      "unavailable": 0
+    },
+    "fallback": {
+      "resolved": 1,
+      "open": 0
+    },
+    "coverage": {
+      "planned_product_count": 1,
+      "products_with_collected_material": 1,
+      "products_without_collected_material": 0,
+      "pending_candidate_count": 0,
+      "source_access_boundary_count": 0
+    }
+  },
+  "coverage_boundary": {
+    "planned_product_count": 1,
+    "products_with_collected_material": 1,
+    "products_without_collected_material": 0,
+    "pending_candidate_count": 0,
+    "source_access_boundary_count": 0
+  },
+  "excluded_summary": {
+    "rejected": 0,
+    "pending": 0,
+    "unavailable": 0
+  },
+  "source_evidence": {
+    "source_attempts": [
+      {
+        "id": "att-refero-profile",
+        "source_type": "ui_database",
+        "source_provider": "Refero",
+        "entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+        "query_mapping": {
+          "raw_page_intent": "设置页",
+          "mapped_terms": [
+            "Settings"
+          ],
+          "source_taxonomy_terms": [
+            "Profile & Account"
+          ]
+        },
+        "actual_query": "Profile & Account results, visually reviewed for Settings",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "web_text_accessible": true,
+        "browser_accessible": true,
+        "browser_interactive": true,
+        "content_available": true,
+        "access_status": "paywall",
+        "observed_scope": "当前账号会话可见首批 8 张，详情与图像可打开；其余 2174 张受 Pro 订阅限制",
+        "attempt_status": "completed",
+        "failure_reason": ""
+      }
+    ],
+    "candidates": [
+      {
+        "id": "cand-refero-duolingo-settings",
+        "source_attempt_id": "att-refero-profile",
+        "product_name": "Duolingo",
+        "target_page": "设置页",
+        "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+        "source_detail_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+        "source_asset_url": "https://images.refero.design/screenshots/5/mobile/a0378378-a44b-4e50-a909-32dd83776a40_thumb.jpg",
+        "candidate_rank": 1,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "设置页",
+          "mapped_terms": [
+            "Settings"
+          ],
+          "source_taxonomy_terms": [
+            "Profile & Account"
+          ]
+        },
+        "actual_query": "Profile & Account results, visually reviewed for Settings",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "Refero",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      }
+    ],
+    "candidate_pool": [
+      "cand-refero-duolingo-settings"
+    ],
+    "candidate_limit": {
+      "max": 50,
+      "unit": "candidate_records",
+      "applies_to": "candidate_pool",
+      "ordering_basis": "页面主任务匹配度、来源可追溯性和区域覆盖",
+      "truncated_candidate_ids": []
+    },
+    "access_preparation": {
+      "schema_version": 1,
+      "id": "access-设置页",
+      "research_scope": "设置页相关来源的采集能力与当前可见范围",
+      "started_at": "2026-10-27T21:30:00+08:00",
+      "completed_at": "2026-10-27T22:05:00+08:00",
+      "relevant_source_attempt_ids": [
+        "att-refero-profile"
+      ],
+      "checks": [
+        {
+          "id": "check-refero-preflight",
+          "source_attempt_id": "att-refero-profile",
+          "phase": "preflight",
+          "checked_at": "2026-10-27T21:43:00+08:00",
+          "browser_session_id": "chrome-user1",
+          "browser_session_kind": "agent_browser",
+          "browser_tab_id": "339183758",
+          "page_open": true,
+          "search_usable": true,
+          "filter_usable": true,
+          "detail_usable": true,
+          "original_asset_usable": true,
+          "pagination_usable": false,
+          "authentication_state": "authenticated",
+          "access_barrier": "paywall",
+          "visible_scope": "Profile & Account 首批 8 张可见",
+          "coverage_impact": "minor",
+          "notes": "账号页与历史记录可见；后续 2174 张需 Pro"
+        }
+      ],
+      "decision": {
+        "status": "not_required",
+        "prompted_at": "",
+        "decided_at": "2026-10-27T22:05:00+08:00",
+        "restricted_source_attempt_ids": [],
+        "summary": "登录或订阅限制未实质阻断本批覆盖：继续使用当前会话可见范围，不购买订阅；PTTRNS 不纳入候选。",
+        "choice_is_final_for_batch": false
+      },
+      "resume": {
+        "status": "not_needed",
+        "checkpoint_candidate_ids": [],
+        "completed_candidate_ids": [],
+        "remaining_candidate_ids": [],
+        "recheck_ids": [],
+        "resumed_at": ""
+      },
+      "current_checks_by_source": {
+        "att-refero-profile": "check-refero-preflight"
+      }
+    },
+    "access_preparation_status": "validated"
+  },
+  "analysis": {
+    "schema_version": 2,
+    "title": "设置页通用能力小范围验证",
+    "research": {
+      "question": "正式流程能否处理非个人中心目标页？",
+      "scope": "1 张 Duolingo 设置页，只验证通用契约与渲染",
+      "goals": [
+        "检查规则未写死为个人中心"
+      ],
+      "constraints": [
+        "单张样本不输出横向规律"
+      ]
+    },
+    "analysis_process": {
+      "material_observations": [
+        {
+          "id": "obs-refero-duolingo-settings",
+          "material_id": "mat-cap-refero-duolingo-settings",
+          "visible_facts": [
+            "设置标题可见",
+            "账户和偏好条目使用分区列表"
+          ],
+          "evidence_boundaries": [
+            "单张样本不能形成横向规律"
+          ]
+        }
+      ],
+      "comparisons": []
+    },
+    "overall": {
+      "id": "overall",
+      "kind": "inference",
+      "statement": "同一正式入口可以把 Refero 候选在‘我的页’研究中拒绝、在‘设置页’研究中接受，说明语义判断跟随研究目标。",
+      "evidence_refs": [
+        {
+          "kind": "material",
+          "id": "mat-cap-refero-duolingo-settings"
+        }
+      ],
+      "analysis_refs": [
+        "obs-refero-duolingo-settings"
+      ],
+      "recommendation": "每次按目标页重新审核候选",
+      "applicability": "研究目标变化时",
+      "limitations": "单张截图只能验证当前可见结构"
+    },
+    "key_findings": [],
+    "groups": [
+      {
+        "group_id": "group-settings",
+        "takeaway": {
+          "id": "takeaway-group-settings",
+          "kind": "inference",
+          "statement": "设置页的参考重点是管理任务的分区与命名，而不是身份或内容模块。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-settings"
+            }
+          ],
+          "analysis_refs": [
+            "obs-refero-duolingo-settings"
+          ],
+          "recommendation": "按账户、通知和偏好等任务分区",
+          "applicability": "设置项数量较多时",
+          "limitations": "单张截图只能验证当前可见结构"
+        }
+      }
+    ],
+    "materials": [
+      {
+        "material_id": "mat-cap-refero-duolingo-settings",
+        "insight": {
+          "id": "insight-refero-duolingo-settings",
+          "kind": "inference",
+          "statement": "分区列表让账户与偏好保持可扫描，适合作为设置根层的基础结构。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-refero-duolingo-settings"
+            }
+          ],
+          "analysis_refs": [
+            "obs-refero-duolingo-settings"
+          ],
+          "recommendation": "先建立设置任务分区",
+          "applicability": "存在多类设置项时",
+          "limitations": "单张截图只能验证当前可见结构"
+        }
+      }
+    ],
+    "synthesis": {
+      "findings": [
+        {
+          "id": "synthesis-1",
+          "kind": "inference",
+          "statement": "本次只证明设置页可进入通用结构；若要形成设计建议，需要增加其他设置页做横向比较。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-refero-duolingo-settings"
+            }
+          ],
+          "analysis_refs": [
+            "obs-refero-duolingo-settings"
+          ],
+          "recommendation": "补充不同设置结构后再总结模式",
+          "applicability": "后续开展设置页专项研究时",
+          "limitations": "单张截图只能验证当前可见结构"
+        }
+      ],
+      "validation_questions": [
+        {
+          "id": "validation-1",
+          "kind": "question",
+          "statement": "其他设置页采用列表、搜索或二级导航时有何差异？",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-refero-duolingo-settings"
+            }
+          ],
+          "analysis_refs": [
+            "obs-refero-duolingo-settings"
+          ]
+        }
+      ]
+    },
+    "information_gaps": [
+      {
+        "section": "样本规模",
+        "status": "not_applicable",
+        "reason": "这是通用能力小范围验证，不承担完整竞品研究结论。"
+      }
+    ],
+    "methodology": [
+      {
+        "title": "证据边界",
+        "text": "结论来自静态截图的可见结构；不推断使用频率、转化率或留存效果。"
+      }
+    ],
+    "quality_review": {
+      "review_type": "agent_self_review",
+      "independent": false,
+      "reviewed_claim_ids": [
+        "overall",
+        "synthesis-1",
+        "validation-1",
+        "takeaway-group-settings",
+        "insight-refero-duolingo-settings"
+      ],
+      "checks": {
+        "evidence_supported": true,
+        "reference_value_clear": true,
+        "research_relevant": true,
+        "exceptions_considered": true,
+        "duplicates_resolved": true,
+        "generic_claims_removed": true
+      },
+      "edits": [
+        {
+          "candidate_id": "generic-claim",
+          "action": "removed",
+          "before": "突出重点可以提升体验",
+          "reason": "没有说明具体做法、条件或截图依据"
+        }
+      ],
+      "notes": [
+        "逐图事实、横向比较和最终结论已由 Agent 人工复核；该记录不是独立验证。"
+      ]
+    }
+  },
+  "report_schema_version": 1,
+  "generation": {
+    "mode": "formal",
+    "analysis_status": "provided",
+    "analysis_standard": "v2_agent_self_review",
+    "standard_acceptance": "not_assessed"
+  }
+}

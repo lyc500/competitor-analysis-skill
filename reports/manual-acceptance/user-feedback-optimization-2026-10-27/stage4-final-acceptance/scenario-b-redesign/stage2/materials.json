@@ -1,0 +1,155 @@
+{
+  "task": {
+    "raw_request": "这是我们现在的‘我的’页现状，我需要做一个改版，优化方向是简化布局，突出常用功能，并且强化会员、任务中心模块，其他功能收起来。根据这个目标帮我搜集可以参考的竞品页面。",
+    "research_goal": "结合虎牙现状，比较首屏减法、会员与任务呈现、次要入口收纳方式",
+    "target_page": "我的页 / 个人中心",
+    "target_surface": "mobile_app",
+    "platforms": [
+      "iOS"
+    ],
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "只使用公开可访问且可追溯的单屏 UI 素材"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "哔哩哔哩",
+        "region": "CN",
+        "product_type": "视频社区",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "豆包爱学",
+        "region": "CN",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "酷狗畅听版",
+        "region": "CN",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "斗鱼",
+        "region": "CN",
+        "product_type": "直播社区",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "拼多多",
+        "region": "CN",
+        "product_type": "电商",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Airbuds",
+        "region": "Global",
+        "product_type": "社交音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      }
+    ],
+    "request": "这是我们现在的‘我的’页现状，我需要做一个改版，优化方向是简化布局，突出常用功能，并且强化会员、任务中心模块，其他功能收起来。根据这个目标帮我搜集可以参考的竞品页面。"
+  },
+  "competitors": [
+    {
+      "product_name": "哔哩哔哩",
+      "region": "CN",
+      "product_type": "视频社区",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "豆包爱学",
+      "region": "CN",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "酷狗畅听版",
+      "region": "CN",
+      "product_type": "音乐",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "斗鱼",
+      "region": "CN",
+      "product_type": "直播社区",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "拼多多",
+      "region": "CN",
+      "product_type": "电商",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "Airbuds",
+      "region": "Global",
+      "product_type": "社交音乐",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    }
+  ],
+  "assets": [],
+  "classification": {
+    "classification_status": "unavailable",
+    "classification_dimension": "",
+    "classification_reason": "正式动态分类仅在 Stage 4 Agent Classification Plan 流程执行",
+    "groups": [],
+    "material_labels": []
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "generated_at": "2026-10-27T22:15:00+08:00",
+  "assets": [
+    {
+      "path": "raw-assets/refero/airbuds.jpg",
+      "width": 488,
+      "height": 1056,
+      "format": "JPEG",
+      "sha256": "7b10f0981313ecbe42e8c7c64f0be711de25aa3fcdc3f059c8b03919147c5e32",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/refero/duolingo.jpg",
+      "width": 488,
+      "height": 1056,
+      "format": "JPEG",
+      "sha256": "9bb62f47feccd31fd276c5de4854017bedd9e793c257717b90cbf5703b098cc5",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/refero/kickstarter.jpg",
+      "width": 488,
+      "height": 1056,
+      "format": "JPEG",
+      "sha256": "2666781716bd80b5a4ced7df2e63930cafc935eb8a8f7db1df1f7aaa5895fd00",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/refero/md-vinyl.jpg",
+      "width": 488,
+      "height": 1057,
+      "format": "JPEG",
+      "sha256": "d90c4a2d489921a45439f3e6e85cffd8de18e019314aa753ac23fcbb3d798679",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/refero/nyt.jpg",
+      "width": 488,
+      "height": 1056,
+      "format": "JPEG",
+      "sha256": "9b028f6751535d662a94f8987aed09eaa73bb971555bc96e661d3206151aaa3f",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/refero/revolut.jpg",
+      "width": 488,
+      "height": 1056,
+      "format": "JPEG",
+      "sha256": "b646c45b4ddf4e475737ad58ea4bfd263e725da0831862bb3e9fd3c82775bba7",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/refero/tidal.jpg",
+      "width": 488,
+      "height": 1057,
+      "format": "JPEG",
+      "sha256": "080627e42302c86335ad1a61642ea1b84d7461cfad868984c40a6831bbe4717b",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/refero/wise.jpg",
+      "width": 488,
+      "height": 1056,
+      "format": "JPEG",
+      "sha256": "fb5f505560070f046d77d9d63eef0ab8cd69bcd46345838216583d3eb18b2f20",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/uinotes/bilibili.webp",
+      "width": 1170,
+      "height": 2532,
+      "format": "WEBP",
+      "sha256": "89b04aead5bc9e9b24d7d3814b863354a90c1746cde65492ff03c9326cb25f42",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/uinotes/doubao-aixue.webp",
+      "width": 480,
+      "height": 1039,
+      "format": "WEBP",
+      "sha256": "5780593b340fd94b0237ca40914abff81171aaf96e1479ef98a5037146330037",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/uinotes/douyu-drawer.webp",
+      "width": 1170,
+      "height": 2532,
+      "format": "WEBP",
+      "sha256": "da6f180f800124c2de377cc8228a4964a8d7fd483b9ee279d36f7a16ca3dfb8f",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/uinotes/duolingo.webp",
+      "width": 480,
+      "height": 1039,
+      "format": "WEBP",
+      "sha256": "17c20dfb4ad6d7a9d5488ba083eebbe8478da22bd2ac792bde21d53af38c777b",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/uinotes/kugou-lite.webp",
+      "width": 480,
+      "height": 1039,
+      "format": "WEBP",
+      "sha256": "d42771b6abf9a6abc655c2d0bf1e92162412bbede15c64423965bb774d66f007",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    },
+    {
+      "path": "raw-assets/uinotes/pinduoduo.webp",
+      "width": 1170,
+      "height": 2532,
+      "format": "WEBP",
+      "sha256": "71f9ac661b83316fb07681bb38c3f242dfa60868fe6dd5dbd11be464cc451f4c",
+      "evidence_type": "real_source_asset_downloaded_from_rendered_detail"
+    }
+  ]
+}

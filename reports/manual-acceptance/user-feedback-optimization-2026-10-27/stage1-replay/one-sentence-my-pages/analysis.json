@@ -1,0 +1,573 @@
+{
+  "schema_version": 1,
+  "title": "国内外 App「我的」页：信息组织与状态比较",
+  "research": {
+    "question": "个人中心如何安排身份、个人内容和操作入口？",
+    "scope": "归档的 20 个产品、26 张移动端截图；区分完整未登录页与账户下段，不视为当前最新版。",
+    "goals": [],
+    "constraints": [
+      "没有用户产品现状或指定业务目标；本报告仅做样本模式比较。"
+    ]
+  },
+  "overall": {
+    "id": "overall",
+    "kind": "inference",
+    "statement": "同叫“我的”页，首屏承担的任务并不相同；比较时先确定要突出的是个人内容、任务动作还是账户操作。",
+    "evidence_refs": [
+      {
+        "kind": "material",
+        "id": "mat-096876602836684120"
+      },
+      {
+        "kind": "material",
+        "id": "mat-658360019995979356"
+      },
+      {
+        "kind": "material",
+        "id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b"
+      }
+    ]
+  },
+  "key_findings": [
+    {
+      "id": "finding-state",
+      "kind": "inference",
+      "statement": "完整未登录页仍可能展示服务结构，适合比较入口可见性，不能用它判断登录后资产信息的层级。",
+      "evidence_refs": [
+        {
+          "kind": "material",
+          "id": "mat-096876602836684120"
+        },
+        {
+          "kind": "material",
+          "id": "mat-133323406851668822"
+        }
+      ],
+      "limitations": "不能把完整未登录页与登录拦截混为一类。"
+    },
+    {
+      "id": "finding-viewport",
+      "kind": "inference",
+      "statement": "账户页下段能说明辅助服务的组织方式，但不能代表首屏优先级。",
+      "evidence_refs": [
+        {
+          "kind": "material",
+          "id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+        }
+      ],
+      "limitations": "滚动位置不同的页面不能直接比较首屏密度。"
+    }
+  ],
+  "groups": [
+    {
+      "group_id": "group-0899b801eca0d65d",
+      "takeaway": {
+        "id": "group-0",
+        "kind": "inference",
+        "statement": "学习类样本可对照记录、权益与任务入口的层级，而不宜只比较图标数量。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-0899b801eca0d65d"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "group-7cadcd9586b34f74",
+      "takeaway": {
+        "id": "group-1",
+        "kind": "inference",
+        "statement": "交易与文件类页面需先确认共同的入口组织机制，不能仅凭出现会员或钱包就照搬。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-7cadcd9586b34f74"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "group-2eddb6132093733e",
+      "takeaway": {
+        "id": "group-2",
+        "kind": "inference",
+        "statement": "未登录仍可见的入口适合比较服务预览，不能代替登录后的资产展示。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-2eddb6132093733e"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "group-27d4bce21aa8ec4f",
+      "takeaway": {
+        "id": "group-3",
+        "kind": "inference",
+        "statement": "学习关系与订阅收藏面向不同内容任务，迁移前需要明确用户要管理什么。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-27d4bce21aa8ec4f"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "group-512286bb357f8be4",
+      "takeaway": {
+        "id": "group-4",
+        "kind": "inference",
+        "statement": "账户安全与购物奖励的主任务不同，适合对照组织方式而不是直接合并业务模块。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-512286bb357f8be4"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "group-8de7003d4454fc73",
+      "takeaway": {
+        "id": "group-5",
+        "kind": "inference",
+        "statement": "账户下段展示辅助服务分区，可作为二级收纳的补充参照。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-8de7003d4454fc73"
+          }
+        ]
+      }
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "mat-096876602836684120",
+      "insight": {
+        "id": "screen-0",
+        "kind": "observation",
+        "statement": "头像、年级、金币商城、任务中心和学习记录完整呈现，底部‘我的’选中，属于豆包爱学个人中心首屏。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-096876602836684120"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-133323406851668822",
+      "insight": {
+        "id": "screen-1",
+        "kind": "observation",
+        "statement": "顶部立即登录，金币商城、任务中心、学习记录、消息、反馈和设置仍完整可见；底部我的选中，无登录遮罩。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-133323406851668822"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-004403109497668392",
+      "insight": {
+        "id": "screen-2",
+        "kind": "observation",
+        "statement": "多邻国自己的头像旁有装扮与设置；个人ID、加入年份、课程和关注数、添加好友、学习概览完整呈现。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-004403109497668392"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-438158835260733576",
+      "insight": {
+        "id": "screen-3",
+        "kind": "observation",
+        "statement": "酷狗畅听版底部我的选中；登录入口下仍有我喜欢、已下载、最近播放列表及播放器，主体内容完整。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-438158835260733576"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-667567417512043064",
+      "insight": {
+        "id": "screen-4",
+        "kind": "observation",
+        "statement": "喜茶GO我的页显示登录入口，余额占位值之外，订单、客服、团餐预定、兑换中心、发票和评价等服务完整可见。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-667567417512043064"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-792439682643464941",
+      "insight": {
+        "id": "screen-5",
+        "kind": "observation",
+        "statement": "喜茶GO昵称茶茶、喜茶券/喜卡/喜钱包及订单、客服、兑换、积分商城完整呈现，底部我的选中。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-792439682643464941"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-658360019995979356",
+      "insight": {
+        "id": "screen-6",
+        "kind": "observation",
+        "statement": "拼多多个人中心Tab选中，微信登录入口下有订单状态、钱包、优惠券、收藏、店铺关注、历史浏览与推荐商品；无登录阻断。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-658360019995979356"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-551540436152132377",
+      "insight": {
+        "id": "screen-7",
+        "kind": "observation",
+        "statement": "拼多多顶部昵称和收货地址、订单状态、钱包收藏优惠券、购物推荐完整显示；头像上有小型提示但不遮挡核心任务，属于已加载个人中心。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-551540436152132377"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-025429166561164948",
+      "insight": {
+        "id": "screen-8",
+        "kind": "observation",
+        "statement": "智谱清言个人头像与编辑资料入口、我的作品、智能体中心、消息、会员积分、订单和任务中心完整可读，底部个人Tab选中。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-025429166561164948"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-018621050003319015",
+      "insight": {
+        "id": "screen-9",
+        "kind": "observation",
+        "statement": "阿里巴巴App底部我的选中；支付宝快捷登录下方是订单状态、优惠权益及推荐/上新/收藏/足迹商品，个人采购主体完整。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-018621050003319015"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-327553016242661235",
+      "insight": {
+        "id": "screen-10",
+        "kind": "observation",
+        "statement": "盒马昵称、会员身份、权益卡片、红包/余额/省钱额、订单状态和服务宫格完整呈现，底部我的选中。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-327553016242661235"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-176174415809164424",
+      "insight": {
+        "id": "screen-11",
+        "kind": "observation",
+        "statement": "小象超市顶部登录/注册，券卡入口、订单状态、售后、客服、企业采购、扫码及地址均完整显示，底部我的选中。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-176174415809164424"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-612887545133740724",
+      "insight": {
+        "id": "screen-12",
+        "kind": "observation",
+        "statement": "懂车帝顶部立即登录，下方动态/关注/粉丝、创作中心、订阅收藏、订单和车主服务完整可读，无登录遮罩。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-612887545133740724"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-168392972276229080",
+      "insight": {
+        "id": "screen-13",
+        "kind": "observation",
+        "statement": "不背单词自己的昵称和会员标识、酷币、装备、外观与沉浸场景、学习设置构成完整个人中心，浅色模式。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-168392972276229080"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-248305763204570159",
+      "insight": {
+        "id": "screen-14",
+        "kind": "observation",
+        "statement": "不背单词同一个人中心的深色模式，昵称会员、酷币装备、外观与学习设置完整呈现，作为主题差异参考单独标明。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-248305763204570159"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-026234696324700781",
+      "insight": {
+        "id": "screen-15",
+        "kind": "observation",
+        "statement": "转转登录入口下有收藏/足迹、购买和出售两组订单、个人资产估价与工具入口及推荐，底部我的选中。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-026234696324700781"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-227130207557343885",
+      "insight": {
+        "id": "screen-16",
+        "kind": "observation",
+        "statement": "微信读书游客身份，会员、充值币、福利、读书排行、阅读时长、在读/读完、笔记/订阅/书单完整显示，属于完整游客我的页。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-227130207557343885"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-406465221275907801",
+      "insight": {
+        "id": "screen-17",
+        "kind": "observation",
+        "statement": "微信读书头像昵称、付费会员、读书排行、82小时23分钟阅读时长、在读/读完、笔记订阅和书单完整呈现，底部我选中。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-406465221275907801"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-508614918845893842",
+      "insight": {
+        "id": "screen-18",
+        "kind": "observation",
+        "statement": "得物底部我选中，登录/注册之外有创作中心、收藏、想要/足迹/关注/我有、订单、钱包和商家入驻；主体可用且完整。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-508614918845893842"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-392538942926681954",
+      "insight": {
+        "id": "screen-19",
+        "kind": "observation",
+        "statement": "迅雷昵称和会员身份、收藏历史/下载文件/云盘文件等统计、云盘空间、文件工具、游戏中心与推荐服务完整显示，底部我的选中。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-392538942926681954"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-176567570728999594",
+      "insight": {
+        "id": "screen-20",
+        "kind": "observation",
+        "statement": "百度翻译顶部登录百度账号，会员权益、订单/课程/生词/配音和更多服务宫格可完整浏览，底部我选中。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-176567570728999594"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-261238806478543829",
+      "insight": {
+        "id": "screen-21",
+        "kind": "observation",
+        "statement": "百度翻译昵称、关注收藏评论笔记、超级VIP、订单课程生词配音和更多服务完整呈现，底部我选中。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-261238806478543829"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+      "insight": {
+        "id": "screen-22",
+        "kind": "observation",
+        "statement": "Wise标题Your account，商业账户、设置、帮助、隐私安全、退出及会员编号等根账户服务完整呈现；截图为账户页服务区域，无弹窗或输入状态。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+      "insight": {
+        "id": "screen-23",
+        "kind": "observation",
+        "statement": "ASOS标题MY ACCOUNT与底部个人Tab选中；地址、支付方式、通知、联系偏好、礼卡、帮助反馈完整可读。可见滚动条，明确标为账户页下段，不充当首屏。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+      "insight": {
+        "id": "screen-24",
+        "kind": "observation",
+        "statement": "Target底部My Target选中，Hello Robert、购买历史、年度节省、Circle奖励与社区支持卡片完整显示，是个人账户首屏的已加载状态。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+          }
+        ]
+      }
+    },
+    {
+      "material_id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+      "insight": {
+        "id": "screen-25",
+        "kind": "observation",
+        "statement": "纽约时报底部You选中，账户订阅身份、Your interests/History/Saved分段与已保存文章列表完整显示，Saved已加载。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00"
+          }
+        ]
+      }
+    }
+  ],
+  "synthesis": {
+    "findings": [
+      {
+        "id": "summary-pattern",
+        "kind": "inference",
+        "statement": "先按页面主任务与当前状态选参照，再比较主入口、个人资产和辅助服务的层级。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-096876602836684120"
+          },
+          {
+            "kind": "material",
+            "id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b"
+          },
+          {
+            "kind": "material",
+            "id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+          }
+        ],
+        "recommendation": "选择和待研究任务相符的样本后，再决定要比较的入口或信息模块。",
+        "applicability": "适合尚未确定改版目标的初步调研。",
+        "limitations": "这些截图不提供实际使用频率、转化或留存证据。"
+      }
+    ],
+    "validation_questions": [
+      {
+        "id": "verify-state",
+        "kind": "question",
+        "statement": "设计时还需确认：目标页面需要对未登录用户开放哪些操作？",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-096876602836684120"
+          },
+          {
+            "kind": "material",
+            "id": "mat-133323406851668822"
+          }
+        ]
+      }
+    ]
+  },
+  "information_gaps": [
+    {
+      "section": "current_state",
+      "status": "not_provided",
+      "reason": "用户没有提供产品现状；这里不推导针对某个产品的改版方案。"
+    }
+  ],
+  "methodology": [
+    {
+      "title": "重放与版本范围",
+      "text": "使用既有真实任务归档验证报告生成，没有执行新的来源搜集或登录检查。版本与来源日期沿用原素材，不能视为当前线上版本。"
+    },
+    {
+      "title": "分类边界",
+      "text": "分组沿用原报告。跨行业样本仅供结构对照，不能由“服务”或“资产”等组名推定业务目标一致；分类语义仍需后续复核。"
+    }
+  ]
+}

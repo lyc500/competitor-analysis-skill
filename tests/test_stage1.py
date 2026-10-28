@@ -87,6 +87,27 @@ class Stage1ContractTests(unittest.TestCase):
         task = load_task(self._task("商品详情页", ["淘宝"]))
         with patch("competitor_analysis_skill.catalog.builtin_search_candidates", side_effect=AssertionError("fixture catalog called")):
             self.assertEqual([r["product_name"] for r in plan_competitors(task)], ["淘宝"])
+
+    def test_formal_pipeline_does_not_invoke_legacy_demo_parser(self):
+        task = load_task(self._task("商品详情页", ["淘宝"]))
+        with tempfile.TemporaryDirectory() as directory:
+            with patch(
+                "competitor_analysis_skill.pipeline.parse_legacy_demo_request",
+                side_effect=AssertionError("legacy demo parser called"),
+            ):
+                result = run_pipeline(task, Path(directory) / "report", fetch=False)
+        self.assertNotIn("compatibility", result["payload"])
+
+    def test_legacy_natural_language_output_is_marked_demo_only(self):
+        with tempfile.TemporaryDirectory() as directory:
+            result = run_pipeline(
+                "帮我搜集一下海内外热门产品的搜索结果页",
+                Path(directory) / "report",
+                fetch=False,
+            )
+        self.assertEqual(result["payload"]["compatibility"]["status"], "legacy_demo_only")
+        self.assertFalse(result["payload"]["compatibility"]["formal_entry"])
+
     def test_search_task_has_structured_target_and_agent_plan(self):
         task = parse_request("帮我搜集一下海内外热门产品的搜索结果页")
         self.assertEqual(task["raw_request"], "帮我搜集一下海内外热门产品的搜索结果页")

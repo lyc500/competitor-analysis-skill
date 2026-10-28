@@ -1,0 +1,219 @@
+{
+  "schema_version": 2,
+  "classification_dimension": "页面主任务与信息组织机制",
+  "classification_reason": "宽泛搜集先按页面主任务归组；跨行业样本只有在承担相同回访机制时才比较。",
+  "comparison_basis": {
+    "primary_dimension": "页面主任务与信息组织机制",
+    "rationale": "宽泛搜集先按页面主任务归组；跨行业样本只有在承担相同回访机制时才比较。",
+    "scope": "只比较通过语义与机械质量审核的移动 App 单屏；状态、路径和登录情况另行标记。"
+  },
+  "groups": [
+    {
+      "id": "group-profile",
+      "name": "身份与关系资料",
+      "reason": "比较身份、关系与内容如何组成可回访的本人资料页",
+      "material_ids": [
+        "mat-cap-uinotes-duolingo",
+        "mat-cap-refero-airbuds"
+      ],
+      "audit": {
+        "inclusion_criteria": "本人资料是页面主任务，身份与关系信息均在根层可见",
+        "shared_mechanism": "以身份为锚点，再承接关系或个人内容",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-uinotes-duolingo",
+            "reason": "以学习身份、语言和好友关系组织本人资料"
+          },
+          {
+            "material_id": "mat-cap-refero-airbuds",
+            "reason": "以音乐身份、最近播放和收藏组织本人资料"
+          }
+        ],
+        "adjacent_difference": "不包含他人公开主页，也不把账户设置页并入资料页"
+      }
+    },
+    {
+      "id": "group-return",
+      "name": "回到内容与进度",
+      "reason": "重点看页面如何让用户继续上次内容、收藏或项目进度",
+      "material_ids": [
+        "mat-cap-uinotes-kugou",
+        "mat-cap-refero-kickstarter",
+        "mat-cap-refero-nyt"
+      ],
+      "audit": {
+        "inclusion_criteria": "页面根层以继续内容或查看进度为主要回访任务",
+        "shared_mechanism": "把个人页作为内容续接点，而非入口大全",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-uinotes-kugou",
+            "reason": "最近播放与收藏/下载在首屏形成音乐续接"
+          },
+          {
+            "material_id": "mat-cap-refero-kickstarter",
+            "reason": "backed/saved 项目状态承接项目回访"
+          },
+          {
+            "material_id": "mat-cap-refero-nyt",
+            "reason": "You 标签用内容卡片承接保存与阅读"
+          }
+        ],
+        "adjacent_difference": "与身份资料组的差异是页面首要对象为内容或项目，而非关系资料"
+      }
+    },
+    {
+      "id": "group-service",
+      "name": "服务与资产总览",
+      "reason": "比较订单、权益和常用动作如何在高密度页面里划分层级",
+      "material_ids": [
+        "mat-cap-uinotes-bilibili",
+        "mat-cap-uinotes-pinduoduo"
+      ],
+      "audit": {
+        "inclusion_criteria": "根层同时承担资产、服务与常用动作总览",
+        "shared_mechanism": "用条带、横排和分区组织多种服务",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-uinotes-bilibili",
+            "reason": "会员、内容动作和创作入口分成不同区域"
+          },
+          {
+            "material_id": "mat-cap-uinotes-pinduoduo",
+            "reason": "订单、资产、服务与推荐形成连续高密度分区"
+          }
+        ],
+        "adjacent_difference": "不因都含会员或钱包就与文件管理、公开主页等不同主任务合组"
+      }
+    },
+    {
+      "id": "group-task",
+      "name": "任务与学习入口",
+      "reason": "看明确任务入口怎样在未登录骨架中仍保持可发现",
+      "material_ids": [
+        "mat-cap-uinotes-doubao"
+      ],
+      "audit": {
+        "inclusion_criteria": "任务中心与学习相关入口在个人中心根层明确可见",
+        "shared_mechanism": "用少量卡片把任务对象与通用设置区分",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-uinotes-doubao",
+            "reason": "金币商城与任务中心位于通用功能列表之前"
+          }
+        ],
+        "adjacent_difference": "与服务总览组的差异是核心对象为学习任务，而非多业务资产集合"
+      }
+    },
+    {
+      "id": "group-account",
+      "name": "账户管理根层",
+      "reason": "把它作为轻量账户管理参照，避免把设置动作误当内容或服务入口",
+      "material_ids": [
+        "mat-cap-refero-wise"
+      ],
+      "audit": {
+        "inclusion_criteria": "页面主任务是账户切换、安全设置与帮助",
+        "shared_mechanism": "以简短列表完成账户管理，不承载内容浏览",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-refero-wise",
+            "reason": "账户切换、设置、帮助和退出构成完整管理根层"
+          }
+        ],
+        "adjacent_difference": "不与任务中心或他人资料页合组"
+      }
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cap-uinotes-duolingo",
+      "labels": {
+        "page_role": "own_profile",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-refero-airbuds",
+      "labels": {
+        "page_role": "own_profile",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-kugou",
+      "labels": {
+        "page_role": "personal_center_root",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-cap-refero-kickstarter",
+      "labels": {
+        "page_role": "own_profile",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-refero-nyt",
+      "labels": {
+        "page_role": "you_tab_content",
+        "path_stage": "you_tab_content",
+        "interaction_stage": "tab_selected",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-bilibili",
+      "labels": {
+        "page_role": "personal_center_root",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-pinduoduo",
+      "labels": {
+        "page_role": "personal_center_root",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-doubao",
+      "labels": {
+        "page_role": "personal_center_root",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-cap-refero-wise",
+      "labels": {
+        "page_role": "account_management_root",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "captures": [
+    {
+      "id": "cap-refero-duolingo-settings",
+      "source_candidate_id": "cand-refero-duolingo-settings",
+      "source_attempt_id": "att-refero-profile",
+      "product_name": "Duolingo",
+      "target_page": "设置页",
+      "target_surface": "mobile_app",
+      "platform": "iOS",
+      "discovered_source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "source_asset_url": "https://images.refero.design/screenshots/5/mobile/a0378378-a44b-4e50-a909-32dd83776a40_thumb.jpg",
+      "requested_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "final_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "capture_status": "captured",
+      "screenshot_path": "../../raw-assets/refero/duolingo.jpg",
+      "failure_reason": "",
+      "browser_name": "Chrome",
+      "browser_session_id": "chrome-user1",
+      "capture_method": "original_image_asset_from_rendered_source"
+    }
+  ]
+}

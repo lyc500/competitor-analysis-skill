@@ -1,0 +1,148 @@
+{
+  "reviews": [
+    {
+      "target_id": "cap-uinotes-bilibili",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_role": "personal_center_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "semantic_reason": "本人资料、会员横条、离线缓存/历史/收藏和创作中心同时可见；与本次目标页面和移动端表面匹配。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-uinotes-doubao",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_role": "personal_center_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_out_complete",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "semantic_reason": "登录入口之后直接给出金币商城、任务中心，再接学习记录与设置列表；与本次目标页面和移动端表面匹配。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-uinotes-kugou",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_role": "personal_center_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_out_complete",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "semantic_reason": "免登录提示、收藏/下载快捷入口与最近播放内容同屏；与本次目标页面和移动端表面匹配。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-uinotes-douyu",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_role": "services_drawer",
+      "interaction_stage": "in_progress",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "semantic_reason": "服务抽屉覆盖在个人页上方，展示创作与推荐服务；不是个人中心根层首屏；与本次目标页面和移动端表面匹配。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-uinotes-pinduoduo",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_role": "personal_center_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_out_complete",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "semantic_reason": "登录入口、订单状态、钱包/优惠、服务矩阵与商品推荐连续出现；与本次目标页面和移动端表面匹配。",
+      "review_source": "agent_visual_review"
+    },
+    {
+      "target_id": "cap-refero-airbuds",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_role": "own_profile",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "semantic_reason": "本人身份、最近播放和收藏内容在同一资料页中；与本次目标页面和移动端表面匹配。",
+      "review_source": "agent_visual_review"
+    }
+  ]
+}

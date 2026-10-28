@@ -1,0 +1,28 @@
+{
+  "reviews": [
+    {
+      "target_id": "cap-refero-duolingo-settings",
+      "target_kind": "browser_capture",
+      "semantic_status": "accepted",
+      "product_identity": "matched",
+      "target_page_match": "matched",
+      "target_surface_match": "matched",
+      "page_role": "settings_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "page_completeness": "complete",
+      "asset_kind": "ui_page",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "semantic_reason": "页面标题和条目共同表明这是设置根页；与本次目标页面和移动端表面匹配。",
+      "review_source": "agent_visual_review"
+    }
+  ]
+}

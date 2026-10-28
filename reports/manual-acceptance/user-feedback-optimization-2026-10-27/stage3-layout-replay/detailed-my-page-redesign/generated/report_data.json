@@ -1,0 +1,1810 @@
+{
+  "task": {
+    "raw_request": "根据虎牙我的页现状，搜集简化布局、突出常用功能、强化会员和任务中心、收起其他功能的竞品参考页面。",
+    "research_goal": "收集真实移动 App 个人中心单屏，比较常用功能、会员权益、任务激励、低频服务的视觉层级和收纳方式，形成带来源、版本边界和借鉴建议的图墙。",
+    "target_page": "我的／个人中心",
+    "target_surface": "mobile_app",
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "regions": [
+      "中国",
+      "海外"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "page_role=personal_center/account_hub；路径=底部我的或账户入口；排除他人公开主页、个人资料编辑、设置详情、独立支付页。",
+      "interaction_stage=browse_before_action；render_state=loaded_complete；完整未登录页单独标记，不接收登录拦截、加载、错误或空白页。",
+      "优先整体个人中心布局；独立会员/任务页只作补充来源线索，不混入主图墙。",
+      "用户截图为现状基线，不计入竞品数量。会员具体业务定义尚未提供，先研究权益聚合模块，不假定守护与贵族可直接合并。",
+      "英文映射：Profile（规范词）；You、Me、Account、My Account、My Page（常用别名）；Profile & Account / My Account & Profile（站点 taxonomy）。Settings 仅为扩展线索。",
+      "优先专业 UI 数据库；仅提取公开可见素材，不绕过登录或付费限制。版本按来源标注，采集日期不代表产品截图版本日期。",
+      "为研究“其他功能收起来”，补充纳入 personal_center → services_drawer 路径；interaction_stage=drawer_open，render_state=loaded_complete。必须独立分组，不当作个人中心首屏。",
+      "抽屉允许滚动后的完整单视口，但不接收手工局部裁切或拼图。",
+      "UI Notes 先出现登录限制，随后当前浏览器会话显示会员状态且正常开放筛选；使用正常 UI 访问，不处理或保存任何凭据。"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "腾讯视频",
+        "region": "中国",
+        "product_type": "长视频",
+        "platform": "Android",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "哔哩哔哩",
+        "region": "中国",
+        "product_type": "视频社区",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "酷狗畅听版",
+        "region": "中国",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "Gooh旅记",
+        "region": "中国",
+        "product_type": "旅行工具",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "CalJimi",
+        "region": "中国",
+        "product_type": "健康工具",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "豆包爱学",
+        "region": "中国",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "Headway",
+        "region": "海外",
+        "product_type": "阅读学习",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "Target",
+        "region": "海外",
+        "product_type": "零售会员",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "斗鱼",
+        "region": "中国",
+        "product_type": "直播",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "StressWatch",
+        "region": "中国",
+        "product_type": "健康工具",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      },
+      {
+        "product_name": "多邻国",
+        "region": "海外",
+        "product_type": "语言学习",
+        "platform": "iOS",
+        "target_page": "我的／个人中心",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "本次在线发现的真实单屏；按与简化布局、会员、任务和服务收纳的关系审核。"
+      }
+    ],
+    "request": "根据虎牙我的页现状，搜集简化布局、突出常用功能、强化会员和任务中心、收起其他功能的竞品参考页面。"
+  },
+  "materials": [
+    {
+      "id": "mat-cap-tencent",
+      "product_name": "腾讯视频",
+      "page_name": "我的／个人中心",
+      "region": "中国",
+      "product_type": "长视频",
+      "platform": "Android",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/cc4e6711518697a9.png",
+      "source_type": "browser",
+      "source_provider": "天极下载",
+      "source_asset_url": "https://dynamic-image.yesky.com/1200x-/uploadImages/2026/019/53/T2W5Z4QJ9LL2.png",
+      "source_url": "https://mydown.yesky.com/sjsoft/725757004.html",
+      "captured_at": "2026-10-21",
+      "collection_method": "browser_screenshot",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份：腾讯视频，来源详情与可见品牌／导航对应。页面角色：personal_center；交互阶段：browse_before_action；渲染状态：loaded_complete。目标为 Android 移动 App，状态栏／底部导航或抽屉形态匹配；主体为完整单视口，图片类型 ui_page；大图与缩略卡均可辨认核心文字。证据：黑金身份卡内同时出现 SVIP3、积分、钻石、视频 VIP、体育 VIP；下方独立一排预约／下载／收藏等入口，再展示观看历史。 限制：原图有教程红框，未作修图。设备提示和广告仍占据较多空间，不建议照搬；网页更新日期不能代替截图版本。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-tencent",
+      "source_candidate_id": "",
+      "requested_url": "https://mydown.yesky.com/sjsoft/725757004.html",
+      "final_url": "https://mydown.yesky.com/sjsoft/725757004.html",
+      "width": 1200,
+      "height": 2640,
+      "decode_format": "PNG",
+      "content_sha256": "3dbf55b9af7f5bfcdbb23d5d11ca7b2666fa8f2136ca371f9733458111218995"
+    },
+    {
+      "id": "mat-cap-bilibili",
+      "product_name": "哔哩哔哩",
+      "page_name": "我的／个人中心",
+      "region": "中国",
+      "product_type": "视频社区",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/cca7bfd001529dce.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/653270661085471375.webp?v1",
+      "source_url": "https://uinotes.com/pin/653270661085471375",
+      "captured_at": "2026-10-21",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份：哔哩哔哩，来源详情与可见品牌／导航对应。页面角色：personal_center；交互阶段：browse_before_action；渲染状态：loaded_complete。目标为 iOS 移动 App，状态栏／底部导航或抽屉形态匹配；主体为完整单视口，图片类型 ui_page；大图与缩略卡均可辨认核心文字。证据：底部“我的”选中；身份区下是粉色大会员条，再是一排离线缓存、历史记录、我的收藏、稍后再看。创作与推荐服务另起分组。 限制：这是历史版本；下方仍有较多宫格，借鉴上半屏层级即可。创作者任务不是普通观众任务。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-bilibili",
+      "source_candidate_id": "",
+      "requested_url": "https://uinotes.com/pin/653270661085471375",
+      "final_url": "https://uinotes.com/pin/653270661085471375",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "89b04aead5bc9e9b24d7d3814b863354a90c1746cde65492ff03c9326cb25f42"
+    },
+    {
+      "id": "mat-cap-kugou",
+      "product_name": "酷狗畅听版",
+      "page_name": "我的／个人中心",
+      "region": "中国",
+      "product_type": "音乐",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/cd5f4ce3a7e38348.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/341464133306831189.webp?v1",
+      "source_url": "https://uinotes.com/pin/341464133306831189",
+      "captured_at": "2026-10-21",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份：酷狗畅听版，来源详情与可见品牌／导航对应。页面角色：personal_center；交互阶段：browse_before_action；渲染状态：loaded_complete。目标为 iOS 移动 App，状态栏／底部导航或抽屉形态匹配；主体为完整单视口，图片类型 ui_page；大图与缩略卡均可辨认核心文字。证据：“我的”选中；头像带 SVIP 标识，免费畅听剩余时间与领取入口集中展示；“我喜欢”“已下载”占据两个大入口，下面直接是最近播放。 限制：没有独立任务进度，不能据此声称它已解决任务中心曝光问题；大卡比例也需按虎牙的使用频率验证。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-kugou",
+      "source_candidate_id": "",
+      "requested_url": "https://uinotes.com/pin/341464133306831189",
+      "final_url": "https://uinotes.com/pin/341464133306831189",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "ada35551dd03f3e46466f670a827c84b8e9bd585716ef17985170399fd64a4c5"
+    },
+    {
+      "id": "mat-cap-gooh",
+      "product_name": "Gooh旅记",
+      "page_name": "我的／个人中心",
+      "region": "中国",
+      "product_type": "旅行工具",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/fe4033a500fbf4f3.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/653349205654581772.webp?v1",
+      "source_url": "https://uinotes.com/pin/653349205654581772",
+      "captured_at": "2026-10-21",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份：Gooh旅记，来源详情与可见品牌／导航对应。页面角色：personal_center；交互阶段：browse_before_action；渲染状态：loaded_complete。目标为 iOS 移动 App，状态栏／底部导航或抽屉形态匹配；主体为完整单视口，图片类型 ui_page；大图与缩略卡均可辨认核心文字。证据：“我的”选中；用户数据下是一条 Gooh Pro 权益推广带，随后是旅行盲盒／旅行足迹／收藏地点三入口，下方辅助功能改用列表。 限制：列表化只降低视觉噪音，并不等于低频功能已经折叠；虎牙仍需单独的“全部服务”入口。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-gooh",
+      "source_candidate_id": "",
+      "requested_url": "https://uinotes.com/pin/653349205654581772",
+      "final_url": "https://uinotes.com/pin/653349205654581772",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "c04ca6d63ce2f70023bf6073902c58a6d595733c8645323e216ce8e191934b5a"
+    },
+    {
+      "id": "mat-cap-caljimi",
+      "product_name": "CalJimi",
+      "page_name": "我的／个人中心",
+      "region": "中国",
+      "product_type": "健康工具",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/b003c8aaf46d10bc.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/488948447893600531.webp?v1",
+      "source_url": "https://uinotes.com/pin/488948447893600531",
+      "captured_at": "2026-10-21",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份：CalJimi，来源详情与可见品牌／导航对应。页面角色：personal_center；交互阶段：browse_before_action；渲染状态：loaded_complete。目标为 iOS 移动 App，状态栏／底部导航或抽屉形态匹配；主体为完整单视口，图片类型 ui_page；大图与缩略卡均可辨认核心文字。证据：底部“我的”选中，头像下是永久会员促销卡，随后按 Apple Watch、实用功能分组排列服务，右上保留奖章入口。 限制：连续两条运营卡会分散注意力；这里只参考分组与会员层级，不推荐复制两条横幅。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-caljimi",
+      "source_candidate_id": "",
+      "requested_url": "https://uinotes.com/pin/488948447893600531",
+      "final_url": "https://uinotes.com/pin/488948447893600531",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "2aa9235a15e622f76fed95e00b239af69ba559e575359729adcdfa54b088640b"
+    },
+    {
+      "id": "mat-cap-doubao",
+      "product_name": "豆包爱学",
+      "page_name": "我的／个人中心",
+      "region": "中国",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/f5f7e9166c3b9995.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/096876602836684120.webp?v1",
+      "source_url": "https://uinotes.com/pin/096876602836684120",
+      "captured_at": "2026-10-21",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份：豆包爱学，来源详情与可见品牌／导航对应。页面角色：personal_center；交互阶段：browse_before_action；渲染状态：loaded_complete。目标为 iOS 移动 App，状态栏／底部导航或抽屉形态匹配；主体为完整单视口，图片类型 ui_page；大图与缩略卡均可辨认核心文字。证据：底部“我的”选中；金币商城卡展示“3 金币”，任务中心卡直接写“立刻签到领金币”；下方仅保留学习记录、消息、帮助与反馈、设置。 限制：头像区留白很大，虎牙有更多高频操作，不宜照搬头部高度；此处未展示任务完成进度。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-doubao",
+      "source_candidate_id": "",
+      "requested_url": "https://uinotes.com/pin/096876602836684120",
+      "final_url": "https://uinotes.com/pin/096876602836684120",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "1fd58e1f72c88d768696fc36522e360f4683b9909f5ce7955d95a95e68026c07"
+    },
+    {
+      "id": "mat-cap-headway",
+      "product_name": "Headway",
+      "page_name": "我的／个人中心",
+      "region": "海外",
+      "product_type": "阅读学习",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/8a78ad55223fcc29.jpeg",
+      "source_type": "ui_database",
+      "source_provider": "PTTRNS",
+      "source_asset_url": "https://cdn.prod.website-files.com/5fce901e31083441743f027a/620bcd761704a8414cf24220_IMG_5643.jpeg",
+      "source_url": "https://app.pttrns.com/patterns/10141",
+      "captured_at": "2026-10-21",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份：Headway，来源详情与可见品牌／导航对应。页面角色：personal_center；交互阶段：browse_before_action；渲染状态：loaded_complete。目标为 iOS 移动 App，状态栏／底部导航或抽屉形态匹配；主体为完整单视口，图片类型 ui_page；大图与缩略卡均可辨认核心文字。证据：页面标题和底部选中项均为 Profile；Daily goal 卡显示 0/20 min、调整目标按钮、一周记录及连续天数。页面已完整加载，0 是有效进度而非加载或空白。 限制：不建议照搬占据大半屏的圆环；可把同样信息压成虎牙的一张紧凑任务卡。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-headway",
+      "source_candidate_id": "",
+      "requested_url": "https://app.pttrns.com/patterns/10141",
+      "final_url": "https://app.pttrns.com/patterns/10141",
+      "width": 1125,
+      "height": 2436,
+      "decode_format": "JPEG",
+      "content_sha256": "2db4756627c2371d077f275cfe25c0bc876fbcbf6a8725f5ae2e5eb997840429"
+    },
+    {
+      "id": "mat-cap-target",
+      "product_name": "Target",
+      "page_name": "我的／个人中心",
+      "region": "海外",
+      "product_type": "零售会员",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/cac73a46fd9dc8ad.jpg",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_asset_url": "https://images.refero.design/screenshots/144/mobile/627ed8bd-65de-4c51-97f7-ab3fd245afe8.jpg",
+      "source_url": "https://refero.design/screens/08723dab-7694-4c3b-a061-6dd9393de0db?query=My%20Account&source=search",
+      "captured_at": "2026-10-21",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份：Target，来源详情与可见品牌／导航对应。页面角色：personal_center；交互阶段：browse_before_action；渲染状态：loaded_complete。目标为 iOS 移动 App，状态栏／底部导航或抽屉形态匹配；主体为完整单视口，图片类型 ui_page；大图与缩略卡均可辨认核心文字。证据：My Target 底部标签选中；购买记录之后展示本年节省金额、Target Circle 奖励余额和社区投票；不同权益分成独立卡片。 限制：0 金额不代表页面未加载；该样本没有任务列表，也不能证明把收益前置一定提升付费转化。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-target",
+      "source_candidate_id": "",
+      "requested_url": "https://refero.design/screens/08723dab-7694-4c3b-a061-6dd9393de0db?query=My%20Account&source=search",
+      "final_url": "https://refero.design/screens/08723dab-7694-4c3b-a061-6dd9393de0db?query=My%20Account&source=search",
+      "width": 1125,
+      "height": 2436,
+      "decode_format": "JPEG",
+      "content_sha256": "32ae79dcae2f0a0ffb180636f76943f26200c20b6058f405495096bdbbd721c6"
+    },
+    {
+      "id": "mat-cap-douyu-top",
+      "product_name": "斗鱼",
+      "page_name": "我的／个人中心",
+      "region": "中国",
+      "product_type": "直播",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/84e49eb2b0d7173d.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/276511827925182237.webp?v1",
+      "source_url": "https://uinotes.com/pin/276511827925182237",
+      "captured_at": "2026-10-21",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份：斗鱼，来源详情与可见品牌／导航对应。页面角色：services_drawer；交互阶段：drawer_open；渲染状态：loaded_complete。目标为 iOS 移动 App，状态栏／底部导航或抽屉形态匹配；主体为完整单视口，图片类型 ui_page；大图与缩略卡均可辨认核心文字。证据：个人主页背景被遮罩覆盖，右侧抽屉完整打开；身份权益、内容管理、开播上传、其他服务分组排列，底部固定设置／私信／换皮肤。 限制：这张图中贵族、浏览记录、任务中心也在抽屉内；虎牙这次应把会员、常用和任务留在主页面。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-douyu-top",
+      "source_candidate_id": "",
+      "requested_url": "https://uinotes.com/pin/276511827925182237",
+      "final_url": "https://uinotes.com/pin/276511827925182237",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "da6f180f800124c2de377cc8228a4964a8d7fd483b9ee279d36f7a16ca3dfb8f"
+    },
+    {
+      "id": "mat-cap-douyu-bottom",
+      "product_name": "斗鱼",
+      "page_name": "我的／个人中心",
+      "region": "中国",
+      "product_type": "直播",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/e18d66c176694f39.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/201516640318744950.webp?v1",
+      "source_url": "https://uinotes.com/pin/201516640318744950",
+      "captured_at": "2026-10-21",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "产品身份：斗鱼，来源详情与可见品牌／导航对应。页面角色：services_drawer；交互阶段：drawer_open_scrolled；渲染状态：loaded_complete。目标为 iOS 移动 App，状态栏／底部导航或抽屉形态匹配；主体为完整单视口，图片类型 ui_page；大图与缩略卡均可辨认核心文字。证据：同一抽屉已滚动到下段；道具商城、任务中心、游戏账号绑定、礼包、钱包等是图标组；个人信息收集清单等是列表，底部固定操作仍可见。 限制：这是已打开抽屉的滚动视口，不是首页首屏，也不是与上一张拼接的长图；服务过多仍需二级分类。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-douyu-bottom",
+      "source_candidate_id": "",
+      "requested_url": "https://uinotes.com/pin/201516640318744950",
+      "final_url": "https://uinotes.com/pin/201516640318744950",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "4aab47ddf074102452aed730f6f963873e0dcbeb840375ad494eecfb646128af"
+    }
+  ],
+  "classification": {
+    "classification_status": "ready",
+    "classification_dimension": "虎牙改版要解决的设计问题",
+    "classification_reason": "围绕会员层级、任务表达、收益结果和辅助服务收纳分组；业务行业只作背景，不以出现会员、奖励或服务入口强行合组。",
+    "groups": [
+      {
+        "id": "group-membership-actions",
+        "name": "会员身份、权益与常用操作",
+        "reason": "改版目标中的会员层级",
+        "material_ids": [
+          "mat-cap-tencent",
+          "mat-cap-bilibili",
+          "mat-cap-kugou",
+          "mat-cap-gooh",
+          "mat-cap-caljimi"
+        ],
+        "asset_ids": [
+          "mat-cap-tencent",
+          "mat-cap-bilibili",
+          "mat-cap-kugou",
+          "mat-cap-gooh",
+          "mat-cap-caljimi"
+        ],
+        "audit": {
+          "inclusion_criteria": "主页面同时展示会员身份或权益，以及一组可直接执行的常用操作。",
+          "shared_mechanism": "将会员状态、权益入口与常用动作分层，而不是简单放大会员卡。",
+          "adjacent_difference": "与任务组的差异是这里不要求目标、进度或下一步；与抽屉组的差异是样本都属于主页面。",
+          "member_reasons": [
+            {
+              "material_id": "mat-cap-tencent",
+              "reason": "身份区把视频 VIP、体育 VIP 和其他套餐并列，下一行是预约、下载、收藏与周边等操作。"
+            },
+            {
+              "material_id": "mat-cap-bilibili",
+              "reason": "头像下方先出现大会员横条，随后是离线缓存、历史记录、我的收藏和稍后再看四个常用入口。"
+            },
+            {
+              "material_id": "mat-cap-kugou",
+              "reason": "身份与会员条之后突出我喜欢、已下载和最近内容，播放器持续可见。"
+            },
+            {
+              "material_id": "mat-cap-gooh",
+              "reason": "会员横条后是一排旅行宫盒、旅行足迹和收藏地点，再接加入行程、提醒等列表。"
+            },
+            {
+              "material_id": "mat-cap-caljimi",
+              "reason": "会员横幅和运营卡之后，把设备连接单列，并以实用功能分组展示便签、闹钟等入口。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-task-progress",
+        "name": "任务动作与进度",
+        "reason": "改版目标中的任务中心表达",
+        "material_ids": [
+          "mat-cap-doubao",
+          "mat-cap-headway"
+        ],
+        "asset_ids": [
+          "mat-cap-doubao",
+          "mat-cap-headway"
+        ],
+        "audit": {
+          "inclusion_criteria": "页面用卡片明确展示任务动作、目标或进度。",
+          "shared_mechanism": "让用户在首屏理解当前状态与下一步。",
+          "adjacent_difference": "不包含只展示奖励余额的 Target；奖励结果不能代替任务结构。",
+          "member_reasons": [
+            {
+              "material_id": "mat-cap-doubao",
+              "reason": "身份区后把金币商城与任务中心并排成卡片，任务中心写有立即签到领金币。"
+            },
+            {
+              "material_id": "mat-cap-headway",
+              "reason": "Profile 首屏用圆环展示每日 20 分钟目标、当前 0 分钟、连续天数和 Adjust goal。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-reward-value",
+        "name": "会员收益与奖励结果",
+        "reason": "区分会员价值和任务中心",
+        "material_ids": [
+          "mat-cap-target"
+        ],
+        "asset_ids": [
+          "mat-cap-target"
+        ],
+        "audit": {
+          "inclusion_criteria": "页面展示已节省、已获奖励或可用权益等结果状态，但没有任务目标或进度。",
+          "shared_mechanism": "用可核对的收益解释会员价值。",
+          "adjacent_difference": "与任务组的差异是没有待完成动作；与订单组的共同点是收益来自消费关系。",
+          "member_reasons": [
+            {
+              "material_id": "mat-cap-target",
+              "reason": "账户首屏显示购买历史、年度节省、Circle 奖励余额和社区支持票数。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-auxiliary-drawer",
+        "name": "辅助服务抽屉",
+        "reason": "改版目标中的其他功能收纳",
+        "material_ids": [
+          "mat-cap-douyu-top",
+          "mat-cap-douyu-bottom"
+        ],
+        "asset_ids": [
+          "mat-cap-douyu-top",
+          "mat-cap-douyu-bottom"
+        ],
+        "audit": {
+          "inclusion_criteria": "截图是已打开的服务抽屉，并展示其上段或滚动下段。",
+          "shared_mechanism": "主页面保留核心模块，抽屉按任务分区承接辅助服务。",
+          "adjacent_difference": "不能把抽屉视口当作首屏，也不能因收纳位置推断功能低频。",
+          "member_reasons": [
+            {
+              "material_id": "mat-cap-douyu-top",
+              "reason": "个人页右侧抽屉打开后，上段以分组宫格承接贵族、浏览记录、任务中心、礼包等服务。"
+            },
+            {
+              "material_id": "mat-cap-douyu-bottom",
+              "reason": "同一抽屉滚动下段继续展示全部服务、账户维护项以及底部设置、反馈和装扮。"
+            }
+          ]
+        }
+      }
+    ],
+    "material_labels": [
+      {
+        "material_id": "mat-cap-tencent",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in",
+          "annotation_status": "original_annotated"
+        }
+      },
+      {
+        "material_id": "mat-cap-bilibili",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in",
+          "version_status": "historical_version"
+        }
+      },
+      {
+        "material_id": "mat-cap-kugou",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-cap-gooh",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-cap-caljimi",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-cap-doubao",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-cap-headway",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-cap-target",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-cap-douyu-top",
+        "labels": {
+          "page_role": "services_drawer",
+          "path_stage": "personal_center_drawer_top",
+          "interaction_stage": "drawer_open",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-cap-douyu-bottom",
+        "labels": {
+          "page_role": "services_drawer",
+          "path_stage": "personal_center_drawer_lower",
+          "interaction_stage": "drawer_open_scrolled",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      }
+    ],
+    "schema_version": 2,
+    "comparison_basis": {
+      "primary_dimension": "对本次改版问题可提供的共同设计机制",
+      "rationale": "明确改版目标时，应按要解决的问题选参照，并保留页面角色和交互阶段差异。",
+      "scope": "历史归档的 9 个竞品、10 张 App 截图；8 张个人中心主视口与 2 张已打开服务抽屉视口，现状图另计。"
+    }
+  },
+  "fallback_requests": [
+    {
+      "product_name": "腾讯视频",
+      "target_page": "我的／个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "哔哩哔哩",
+      "target_page": "我的／个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "酷狗畅听版",
+      "target_page": "我的／个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Gooh旅记",
+      "target_page": "我的／个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "CalJimi",
+      "target_page": "我的／个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "豆包爱学",
+      "target_page": "我的／个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Headway",
+      "target_page": "我的／个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Target",
+      "target_page": "我的／个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "斗鱼",
+      "target_page": "我的／个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "StressWatch",
+      "target_page": "我的／个人中心",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "多邻国",
+      "target_page": "我的／个人中心",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    }
+  ],
+  "excluded_summary": {
+    "rejected": 4,
+    "pending": 0,
+    "unavailable": 0
+  },
+  "analysis": {
+    "schema_version": 2,
+    "title": "虎牙「我的」页：围绕会员、任务与辅助服务重建层级",
+    "research": {
+      "question": "怎样简化虎牙‘我的’页，同时让会员与任务更易理解，并收纳其他功能？",
+      "scope": "历史归档的 9 个竞品、10 张截图，加 1 张用户提供的虎牙现状长图；现状图不计入竞品。",
+      "goals": [
+        "简化布局并突出常用功能。",
+        "强化会员与任务模块。",
+        "将其他功能收起。"
+      ],
+      "constraints": [
+        "未提供访问频率，不能由现有位置决定常用入口。",
+        "会员业务关系未确认，不假定贵族、守护与平台会员可合并。",
+        "历史截图不代表当前最新版。"
+      ]
+    },
+    "analysis_process": {
+      "material_observations": [
+        {
+          "id": "obs-mat-cap-tencent",
+          "material_id": "mat-cap-tencent",
+          "visible_facts": [
+            "身份区把视频 VIP、体育 VIP 和其他套餐并列，下一行是预约、下载、收藏与周边等操作。"
+          ],
+          "evidence_boundaries": [
+            "原图含教程红框；套餐关系与更新版本不能由截图确认。"
+          ]
+        },
+        {
+          "id": "obs-mat-cap-bilibili",
+          "material_id": "mat-cap-bilibili",
+          "visible_facts": [
+            "头像下方先出现大会员横条，随后是离线缓存、历史记录、我的收藏和稍后再看四个常用入口。"
+          ],
+          "evidence_boundaries": [
+            "这是历史版本；创作中心与观众常用入口属于不同任务。"
+          ]
+        },
+        {
+          "id": "obs-mat-cap-kugou",
+          "material_id": "mat-cap-kugou",
+          "visible_facts": [
+            "身份与会员条之后突出我喜欢、已下载和最近内容，播放器持续可见。"
+          ],
+          "evidence_boundaries": [
+            "画面没有独立任务进度，不能作为任务中心证据。"
+          ]
+        },
+        {
+          "id": "obs-mat-cap-gooh",
+          "material_id": "mat-cap-gooh",
+          "visible_facts": [
+            "会员横条后是一排旅行宫盒、旅行足迹和收藏地点，再接加入行程、提醒等列表。"
+          ],
+          "evidence_boundaries": [
+            "列表化降低视觉密度，但不等于功能已经折叠。"
+          ]
+        },
+        {
+          "id": "obs-mat-cap-caljimi",
+          "material_id": "mat-cap-caljimi",
+          "visible_facts": [
+            "会员横幅和运营卡之后，把设备连接单列，并以实用功能分组展示便签、闹钟等入口。"
+          ],
+          "evidence_boundaries": [
+            "连续两条运营卡可能分散注意，截图不能证明分组更易用。"
+          ]
+        },
+        {
+          "id": "obs-mat-cap-doubao",
+          "material_id": "mat-cap-doubao",
+          "visible_facts": [
+            "身份区后把金币商城与任务中心并排成卡片，任务中心写有立即签到领金币。"
+          ],
+          "evidence_boundaries": [
+            "画面展示下一步动作，但没有任务完成进度。"
+          ]
+        },
+        {
+          "id": "obs-mat-cap-headway",
+          "material_id": "mat-cap-headway",
+          "visible_facts": [
+            "Profile 首屏用圆环展示每日 20 分钟目标、当前 0 分钟、连续天数和 Adjust goal。"
+          ],
+          "evidence_boundaries": [
+            "学习目标模型不能直接迁移到直播产品；大圆环占据较多空间。"
+          ]
+        },
+        {
+          "id": "obs-mat-cap-target",
+          "material_id": "mat-cap-target",
+          "visible_facts": [
+            "账户首屏显示购买历史、年度节省、Circle 奖励余额和社区支持票数。"
+          ],
+          "evidence_boundaries": [
+            "这些是消费权益结果，没有任务目标、进度或下一步动作。"
+          ]
+        },
+        {
+          "id": "obs-mat-cap-douyu-top",
+          "material_id": "mat-cap-douyu-top",
+          "visible_facts": [
+            "个人页右侧抽屉打开后，上段以分组宫格承接贵族、浏览记录、任务中心、礼包等服务。"
+          ],
+          "evidence_boundaries": [
+            "这是已打开抽屉，不是个人中心首屏；部分本次目标模块也被收在抽屉里。"
+          ]
+        },
+        {
+          "id": "obs-mat-cap-douyu-bottom",
+          "material_id": "mat-cap-douyu-bottom",
+          "visible_facts": [
+            "同一抽屉滚动下段继续展示全部服务、账户维护项以及底部设置、反馈和装扮。"
+          ],
+          "evidence_boundaries": [
+            "这是抽屉滚动视口，不是与上图拼接的首页长图。"
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "id": "cmp-membership",
+          "material_ids": [
+            "mat-cap-tencent",
+            "mat-cap-bilibili",
+            "mat-cap-kugou",
+            "mat-cap-gooh",
+            "mat-cap-caljimi"
+          ],
+          "comparison_findings": [
+            "样本都把会员或权益与常用操作分开，但腾讯与 B 站更强调身份和权益，酷狗强调继续内容，Gooh 与 CalJimi 再把辅助服务列表化。"
+          ],
+          "design_judgment": "可借鉴的是身份权益、常用操作和辅助服务的分层关系，而不是把会员卡做得更大。",
+          "recommendation": "先确认会员业务边界，再用紧凑身份权益区承接会员状态，并保留一排由数据确认的常用操作。",
+          "applicability": "会员与常用操作都需要留在主页面。",
+          "tradeoffs": [
+            "会员区过大会挤压任务和内容。",
+            "常用入口过多会重新退化成同权宫格。"
+          ],
+          "evidence_boundaries": [
+            "静态截图不能说明入口使用频率，历史版本不能视为当前实现。"
+          ]
+        },
+        {
+          "id": "cmp-task",
+          "material_ids": [
+            "mat-cap-doubao",
+            "mat-cap-headway"
+          ],
+          "comparison_findings": [
+            "豆包给出下一步签到与奖励，Headway 给出目标、当前进度和调整动作；两者分别补足动作与状态。"
+          ],
+          "design_judgment": "有效任务卡需要回答现在是什么状态、下一步做什么；奖励只能辅助解释，不能替代任务。",
+          "recommendation": "把虎牙的一行活动文案改成紧凑任务卡，优先显示一项进度或状态和一个下一步动作。",
+          "applicability": "任务有明确目标、状态或可执行动作。",
+          "tradeoffs": [
+            "信息过全会占据首屏；只写奖励会弱化任务目标。"
+          ],
+          "evidence_boundaries": [
+            "两项能力来自不同样本，合并为一张卡是设计判断，需要原型验证。"
+          ]
+        },
+        {
+          "id": "cmp-reward-boundary",
+          "material_ids": [
+            "mat-cap-target",
+            "mat-cap-doubao",
+            "mat-cap-tencent"
+          ],
+          "comparison_findings": [
+            "Target 展示消费收益结果，豆包展示待执行任务，腾讯展示会员身份和权益入口；三者解决的问题不同。"
+          ],
+          "design_judgment": "已获收益可增强会员价值解释，但不构成任务中心；会员身份、收益和任务需要不同字段。",
+          "recommendation": "如果虎牙能提供可核对的会员收益，可放在会员区；任务区仍保留独立状态和动作。",
+          "applicability": "业务同时存在会员权益结果与任务中心。",
+          "tradeoffs": [
+            "收益口径复杂时会增加解释成本。"
+          ],
+          "evidence_boundaries": [
+            "截图不支持任何转化、付费或留存结论。"
+          ]
+        },
+        {
+          "id": "cmp-drawer",
+          "material_ids": [
+            "mat-cap-douyu-top",
+            "mat-cap-douyu-bottom"
+          ],
+          "comparison_findings": [
+            "同一服务抽屉的上段展示服务宫格，下段继续展示更多服务与设置，说明收纳后仍需二级分区。"
+          ],
+          "design_judgment": "抽屉适合承接辅助服务，但把会员和任务也藏入其中会违背本次强化目标。",
+          "recommendation": "主页面保留会员、任务和经验证的常用操作，其余入口进入有分区的全部服务抽屉。",
+          "applicability": "辅助入口较多，且用户可以接受一次额外打开操作。",
+          "tradeoffs": [
+            "收纳降低首屏密度，也增加发现和到达成本。"
+          ],
+          "evidence_boundaries": [
+            "当前只有打开和滚动后的静态视口，没有抽屉触发与返回路径证据。"
+          ]
+        }
+      ],
+      "current_state": {
+        "id": "current-analysis",
+        "user_provided_facts": [
+          "用户希望简化布局、突出常用功能、强化会员与任务中心，并收起其他功能。"
+        ],
+        "goal_relationship": "现状中会员入口与普通图标同级，任务只有一行活动文案，游戏及更多服务连续展开；这些区域正对应本次层级与收纳目标。",
+        "inferences": [
+          "可先把会员身份权益、任务状态动作和经验证的常用入口分别成层。",
+          "游戏、游戏服务和更多服务可进入有分区的全部服务，但不能仅凭截图认定它们低频。"
+        ],
+        "reference_claim_ids": [
+          "finding-membership",
+          "finding-task",
+          "finding-drawer"
+        ],
+        "evidence_boundaries": [
+          "没有访问频率、点击、转化或留存数据。",
+          "仅凭截图不能决定贵族、守护与平台会员是否应合并。"
+        ]
+      }
+    },
+    "overall": {
+      "id": "overall-redesign",
+      "kind": "inference",
+      "statement": "先把会员身份与权益、任务状态与动作、经验证的常用入口分成三层，再让‘全部服务’承接其余功能。",
+      "evidence_refs": [
+        {
+          "kind": "group",
+          "id": "group-membership-actions"
+        },
+        {
+          "kind": "group",
+          "id": "group-task-progress"
+        },
+        {
+          "kind": "group",
+          "id": "group-auxiliary-drawer"
+        }
+      ],
+      "analysis_refs": [
+        "cmp-membership",
+        "cmp-task",
+        "cmp-drawer"
+      ],
+      "recommendation": "先做信息层级原型：紧凑会员区、可执行任务卡、一排常用入口和分区全部服务。",
+      "applicability": "会员与任务确属本次主目标，且常用入口能用数据或研究确认。",
+      "limitations": "会员业务能否合并、常用入口排序和抽屉发现成本仍需验证。"
+    },
+    "key_findings": [
+      {
+        "id": "finding-membership",
+        "kind": "inference",
+        "statement": "会员区应同时解释身份、可用权益或续费动作，并与常用操作分层；放大卡片本身不能解决会员价值不清。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-tencent"
+          },
+          {
+            "kind": "material",
+            "id": "mat-cap-bilibili"
+          },
+          {
+            "kind": "material",
+            "id": "mat-cap-gooh"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-membership"
+        ],
+        "recommendation": "用一块紧凑区域回答用户拥有什么、能做什么，再把内容操作放到下一层。",
+        "applicability": "会员业务关系和权益口径能够被清楚说明。",
+        "limitations": "贵族、守护和平台会员是否能聚合必须由业务定义确认。"
+      },
+      {
+        "id": "finding-task",
+        "kind": "inference",
+        "statement": "任务卡至少应给出一项状态或进度和一个下一步动作；奖励可以辅助，但不能替代任务目标。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-doubao"
+          },
+          {
+            "kind": "material",
+            "id": "mat-cap-headway"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-task"
+        ],
+        "recommendation": "把现状的一行活动文案改成紧凑任务卡，并避免照搬占半屏的目标圆环。",
+        "applicability": "任务有可解释的目标、状态和动作。",
+        "limitations": "动作与进度来自两个样本，组合方案需要原型和任务规则验证。"
+      },
+      {
+        "id": "finding-reward",
+        "kind": "inference",
+        "statement": "Target 的年度节省与奖励余额适合解释会员收益，不提供任务目标或动作，不能用来设计任务中心。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-target"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-reward-boundary"
+        ],
+        "recommendation": "若虎牙有可核对的会员收益，将它放在会员层而不是任务层。",
+        "applicability": "存在用户可理解的累计或待领取权益。",
+        "limitations": "截图不支持收益展示提升付费转化的判断。"
+      },
+      {
+        "id": "finding-drawer",
+        "kind": "inference",
+        "statement": "服务抽屉可以收纳游戏、礼包、免流和设置等辅助入口，但本次要强化的会员与任务应留在主页面。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-douyu-top"
+          },
+          {
+            "kind": "material",
+            "id": "mat-cap-douyu-bottom"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-drawer"
+        ],
+        "recommendation": "主页面只保留目标模块和经验证常用入口，抽屉内部继续按任务分区。",
+        "applicability": "辅助入口数量较多且允许一次额外操作。",
+        "limitations": "抽屉是已打开和滚动后的视口，不能当作首页首屏。"
+      }
+    ],
+    "current_state": {
+      "id": "huya-current",
+      "description": "用户提供的虎牙现状长图用于区域级对照，不计入竞品数量。",
+      "images": [
+        {
+          "id": "huya-current-image",
+          "image_path": "assets/current-860cf304bc2fa79e.png",
+          "caption": "用户提供的现状长图，仅用于对照"
+        }
+      ],
+      "regions": [
+        {
+          "id": "current-membership-row",
+          "image_id": "huya-current-image",
+          "label": "会员与功能入口区",
+          "visible_fact": "成为守护、成为贵族与其他图标使用相近尺寸和同一行列体系。"
+        },
+        {
+          "id": "current-task-row",
+          "image_id": "huya-current-image",
+          "label": "任务中心区",
+          "visible_fact": "任务中心位于身份资产下方，只显示一行活动文案，没有可见进度或下一步按钮。"
+        },
+        {
+          "id": "current-service-blocks",
+          "image_id": "huya-current-image",
+          "label": "游戏与更多服务区",
+          "visible_fact": "核心入口之后继续展开我的游戏、游戏服务和更多服务三个区域。"
+        }
+      ],
+      "findings": [
+        {
+          "id": "current-membership",
+          "kind": "inference",
+          "statement": "现状没有用层级区分会员身份权益和普通快捷入口，用户难以从这一排直接理解会员价值。",
+          "evidence_refs": [
+            {
+              "kind": "current_state",
+              "id": "current-membership-row"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-tencent"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-bilibili"
+            }
+          ],
+          "analysis_refs": [
+            "current-analysis",
+            "cmp-membership"
+          ],
+          "recommendation": "先核对贵族、守护与平台会员的业务关系，再设计紧凑的身份权益区。",
+          "applicability": "相关会员能共享至少一种身份、权益或续费关系。",
+          "limitations": "相同图标尺寸只能证明视觉同级，不能证明用户认知或使用效果。"
+        },
+        {
+          "id": "current-task",
+          "kind": "inference",
+          "statement": "任务中心虽在上方，却只有活动文案，未回答当前状态和下一步动作；可参考任务卡补足这两类信息。",
+          "evidence_refs": [
+            {
+              "kind": "current_state",
+              "id": "current-task-row"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-doubao"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-headway"
+            }
+          ],
+          "analysis_refs": [
+            "current-analysis",
+            "cmp-task"
+          ],
+          "recommendation": "把一行文案改为一项状态或进度加一个明确动作的紧凑卡片。",
+          "applicability": "虎牙任务有稳定状态与可执行下一步。",
+          "limitations": "位置靠前不等于高频，卡片高度仍需原型验证。"
+        },
+        {
+          "id": "current-services",
+          "kind": "inference",
+          "statement": "游戏、游戏服务和更多服务连续展开，占用主页面长度；可将非目标入口收入分区服务抽屉。",
+          "evidence_refs": [
+            {
+              "kind": "current_state",
+              "id": "current-service-blocks"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-douyu-top"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-douyu-bottom"
+            }
+          ],
+          "analysis_refs": [
+            "current-analysis",
+            "cmp-drawer"
+          ],
+          "recommendation": "保留经数据确认的常用入口，其余按游戏、权益、工具和设置等任务分区收纳。",
+          "applicability": "用户能通过明确入口找到全部服务。",
+          "limitations": "没有访问数据，不能直接判定画面中的游戏或服务属于低频。"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "group-membership-actions",
+        "takeaway": {
+          "id": "group-takeaway-membership",
+          "kind": "inference",
+          "statement": "重点比较会员身份、权益与常用操作能否形成三层；适合会员是主任务之一时，仍需解释权益而非只放大卡片。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-membership-actions"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-membership"
+          ],
+          "recommendation": "用紧凑会员区连接身份、权益和动作。",
+          "applicability": "会员与内容操作都需留在主页面。",
+          "limitations": "业务关系未确认时不能合并不同会员。"
+        }
+      },
+      {
+        "group_id": "group-task-progress",
+        "takeaway": {
+          "id": "group-takeaway-task",
+          "kind": "inference",
+          "statement": "重点比较下一步动作和进度如何组成可执行任务卡；适合目标明确的连续任务，卡片高度仍需验证。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-task-progress"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-task"
+          ],
+          "recommendation": "用一项状态或进度加一个动作替代纯活动文案。",
+          "applicability": "任务规则能提供稳定状态和下一步。",
+          "limitations": "位置与面积不能替代行为数据。"
+        }
+      },
+      {
+        "group_id": "group-reward-value",
+        "takeaway": {
+          "id": "group-takeaway-reward",
+          "kind": "inference",
+          "statement": "已获收益可解释会员价值，但没有目标和动作，不能作为任务中心结构。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-reward-value"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-reward-boundary"
+          ],
+          "recommendation": "将可核对收益放在会员层。",
+          "applicability": "业务存在清楚的权益收益口径。",
+          "limitations": "不能推断转化效果。"
+        }
+      },
+      {
+        "group_id": "group-auxiliary-drawer",
+        "takeaway": {
+          "id": "group-takeaway-drawer",
+          "kind": "inference",
+          "statement": "抽屉适合承接辅助服务并保留分区；本次要强化的会员与任务仍应留在主页面。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-auxiliary-drawer"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-drawer"
+          ],
+          "recommendation": "用全部服务入口承接分区抽屉。",
+          "applicability": "辅助入口多且可接受额外一步。",
+          "limitations": "抽屉视口不能当作首屏。"
+        }
+      }
+    ],
+    "materials": [
+      {
+        "material_id": "mat-cap-tencent",
+        "insight": {
+          "id": "insight-mat-cap-tencent",
+          "kind": "inference",
+          "statement": "把会员身份与权益入口合在一区、常用操作独立成行，可避免会员与所有服务图标同权。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-tencent"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-cap-tencent",
+            "cmp-membership"
+          ],
+          "recommendation": "先确认各会员是否共享身份、权益或续费动作，再决定是否聚合。",
+          "applicability": "会员确实是本次主任务且业务关系可解释。",
+          "limitations": "不能因为都叫会员就合并贵族、守护或平台会员。"
+        }
+      },
+      {
+        "material_id": "mat-cap-bilibili",
+        "insight": {
+          "id": "insight-mat-cap-bilibili",
+          "kind": "inference",
+          "statement": "会员横条与四个内容操作形成两层，适合在有限高度内同时表达身份权益和继续观看。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-bilibili"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-cap-bilibili",
+            "cmp-membership"
+          ],
+          "recommendation": "常用入口必须由本产品任务和访问数据确认。",
+          "applicability": "会员与内容消费都需要在个人中心首屏出现。",
+          "limitations": "下方仍有较多服务宫格，不宜整页照搬。"
+        }
+      },
+      {
+        "material_id": "mat-cap-kugou",
+        "insight": {
+          "id": "insight-mat-cap-kugou",
+          "kind": "inference",
+          "statement": "让最近与收藏内容成为主角，可把个人中心从服务目录转成继续消费入口。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-kugou"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-cap-kugou",
+            "cmp-membership"
+          ],
+          "recommendation": "仅保留 2—4 个能直接继续核心任务的入口。",
+          "applicability": "内容回访比账户管理更接近用户主任务。",
+          "limitations": "大面积内容列表会压缩会员与任务空间，仍需取舍。"
+        }
+      },
+      {
+        "material_id": "mat-cap-gooh",
+        "insight": {
+          "id": "insight-mat-cap-gooh",
+          "kind": "inference",
+          "statement": "用会员横条、常用操作和服务列表形成三层，可在主页面保留核心动作并压低辅助服务。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-gooh"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-cap-gooh",
+            "cmp-membership"
+          ],
+          "recommendation": "辅助列表仍需有全部服务或二级收纳策略。",
+          "applicability": "身份权益、常用动作和辅助服务可被清楚拆开。",
+          "limitations": "不能把列表位置解释为低频。"
+        }
+      },
+      {
+        "material_id": "mat-cap-caljimi",
+        "insight": {
+          "id": "insight-mat-cap-caljimi",
+          "kind": "inference",
+          "statement": "按任务命名辅助功能组，比把所有图标铺成同权宫格更便于理解入口用途。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-caljimi"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-cap-caljimi",
+            "cmp-membership"
+          ],
+          "recommendation": "减少运营卡数量，并保证分组名称对应用户任务。",
+          "applicability": "辅助功能较多且可以按用途稳定分组。",
+          "limitations": "不建议复制连续横幅或产品特有功能。"
+        }
+      },
+      {
+        "material_id": "mat-cap-doubao",
+        "insight": {
+          "id": "insight-mat-cap-doubao",
+          "kind": "inference",
+          "statement": "把任务从一行通知提升为可行动卡片，可让用户在首屏直接看到下一步和奖励。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-doubao"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-cap-doubao",
+            "cmp-task"
+          ],
+          "recommendation": "卡片只保留一个明确动作，并避免用奖励替代任务目标。",
+          "applicability": "任务有清楚的下一步和可解释奖励。",
+          "limitations": "并排资产与任务可能削弱主次，需根据本次目标调整。"
+        }
+      },
+      {
+        "material_id": "mat-cap-headway",
+        "insight": {
+          "id": "insight-mat-cap-headway",
+          "kind": "inference",
+          "statement": "把目标、当前进度和调整动作放在同一任务卡，可让用户不进二级页就理解状态。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-headway"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-cap-headway",
+            "cmp-task"
+          ],
+          "recommendation": "把信息压缩为适合本产品的紧凑任务卡，并保留下一步动作。",
+          "applicability": "任务可以量化进度或连续完成状态。",
+          "limitations": "没有行为数据时不能决定卡片高度或每日目标形式。"
+        }
+      },
+      {
+        "material_id": "mat-cap-target",
+        "insight": {
+          "id": "insight-mat-cap-target",
+          "kind": "inference",
+          "statement": "用已获收益说明会员价值，可补充身份信息，但不应被当作任务中心结构。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-target"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-cap-target",
+            "cmp-reward-boundary"
+          ],
+          "recommendation": "仅在收益口径清楚、与会员权益直接相关时展示。",
+          "applicability": "需要解释用户已获得的消费权益价值。",
+          "limitations": "0 金额不能说明未加载，也不能证明收益前置会提升付费转化。"
+        }
+      },
+      {
+        "material_id": "mat-cap-douyu-top",
+        "insight": {
+          "id": "insight-mat-cap-douyu-top",
+          "kind": "inference",
+          "statement": "抽屉能集中承接辅助服务，但本次要强化的会员与任务不应随其一起隐藏。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-douyu-top"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-cap-douyu-top",
+            "cmp-drawer"
+          ],
+          "recommendation": "主页面先保留会员、常用与任务，再把其余服务按任务分组收纳。",
+          "applicability": "辅助服务数量超过首屏可容纳范围。",
+          "limitations": "抽屉增加一次操作，分组过多仍会难找。"
+        }
+      },
+      {
+        "material_id": "mat-cap-douyu-bottom",
+        "insight": {
+          "id": "insight-mat-cap-douyu-bottom",
+          "kind": "inference",
+          "statement": "抽屉下段把服务与设置分开，可用于收纳游戏绑定、礼包、免流和装扮等辅助入口。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-douyu-bottom"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-cap-douyu-bottom",
+            "cmp-drawer"
+          ],
+          "recommendation": "二级服务仍需分区，并给设置与帮助稳定位置。",
+          "applicability": "主页面已经明确保留核心任务。",
+          "limitations": "不能由下段位置判断功能低频。"
+        }
+      }
+    ],
+    "synthesis": {
+      "findings": [
+        {
+          "id": "summary-sequence",
+          "kind": "inference",
+          "statement": "建议先确认会员业务关系，再定义任务卡字段，随后用数据选出一排常用入口，最后把其余服务分区收纳。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-membership-actions"
+            },
+            {
+              "kind": "group",
+              "id": "group-task-progress"
+            },
+            {
+              "kind": "group",
+              "id": "group-auxiliary-drawer"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-membership",
+            "cmp-task",
+            "cmp-drawer"
+          ],
+          "recommendation": "按业务定义、任务规则、入口证据和收纳结构的顺序推进原型。",
+          "applicability": "本次目标确实是强化会员与任务并减少主页面入口。",
+          "limitations": "任何一步缺少依据时都应缩小方案范围，而不是用更大的卡片或更多图标补齐。"
+        },
+        {
+          "id": "summary-boundaries",
+          "kind": "inference",
+          "statement": "Target 可补充会员收益表达，斗鱼可补充服务收纳；两者分别不能替代任务卡和主页面层级。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-target"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-douyu-top"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-douyu-bottom"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-reward-boundary",
+            "cmp-drawer"
+          ],
+          "recommendation": "把每个样本只用于它能证明的机制，并在原型中保持模块职责分开。",
+          "applicability": "需要组合多个样本解决不同设计问题。",
+          "limitations": "组合后的整体方案尚未经过可用性和行为验证。"
+        }
+      ],
+      "validation_questions": [
+        {
+          "id": "verify-membership-definition",
+          "kind": "question",
+          "statement": "贵族、守护与平台会员是否共享身份、权益或续费动作，哪些内容可以聚合？",
+          "evidence_refs": [
+            {
+              "kind": "current_state",
+              "id": "current-membership-row"
+            }
+          ],
+          "analysis_refs": [
+            "current-analysis",
+            "cmp-membership"
+          ]
+        },
+        {
+          "id": "verify-task-fields",
+          "kind": "question",
+          "statement": "任务中心能稳定提供哪项状态、进度和下一步动作？",
+          "evidence_refs": [
+            {
+              "kind": "current_state",
+              "id": "current-task-row"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-doubao"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-headway"
+            }
+          ],
+          "analysis_refs": [
+            "current-analysis",
+            "cmp-task"
+          ]
+        },
+        {
+          "id": "verify-common-actions",
+          "kind": "question",
+          "statement": "哪些入口有足够的访问或任务证据留在一排常用功能中？",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-bilibili"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-kugou"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-membership"
+          ]
+        },
+        {
+          "id": "verify-drawer-path",
+          "kind": "question",
+          "statement": "用户能否发现并返回全部服务抽屉，收纳后关键辅助任务是否仍可完成？",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-douyu-top"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-douyu-bottom"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-drawer"
+          ]
+        }
+      ]
+    },
+    "information_gaps": [],
+    "methodology": [
+      {
+        "title": "历史素材分析重放",
+        "text": "沿用既有证据和图片，仅重做分析、分类与现状关联；没有执行新的来源搜集、登录检查或当前版本确认。"
+      },
+      {
+        "title": "事实与推断边界",
+        "text": "现状图用于确认可见区域；用户目标来自需求；会员聚合、常用排序和任务卡组合属于待验证设计判断。"
+      }
+    ],
+    "quality_review": {
+      "review_type": "agent_self_review",
+      "independent": false,
+      "reviewed_claim_ids": [
+        "overall-redesign",
+        "finding-membership",
+        "finding-task",
+        "finding-reward",
+        "finding-drawer",
+        "group-takeaway-membership",
+        "group-takeaway-task",
+        "group-takeaway-reward",
+        "group-takeaway-drawer",
+        "insight-mat-cap-tencent",
+        "insight-mat-cap-bilibili",
+        "insight-mat-cap-kugou",
+        "insight-mat-cap-gooh",
+        "insight-mat-cap-caljimi",
+        "insight-mat-cap-doubao",
+        "insight-mat-cap-headway",
+        "insight-mat-cap-target",
+        "insight-mat-cap-douyu-top",
+        "insight-mat-cap-douyu-bottom",
+        "summary-sequence",
+        "summary-boundaries",
+        "verify-membership-definition",
+        "verify-task-fields",
+        "verify-common-actions",
+        "verify-drawer-path",
+        "current-membership",
+        "current-task",
+        "current-services"
+      ],
+      "checks": {
+        "evidence_supported": true,
+        "reference_value_clear": true,
+        "research_relevant": true,
+        "exceptions_considered": true,
+        "duplicates_resolved": true,
+        "generic_claims_removed": true
+      },
+      "edits": [
+        {
+          "candidate_id": "old-task-reward-group",
+          "action": "rewritten",
+          "before": "任务动作、目标进度与已获收益可分别表达。",
+          "after": "Target 单列为会员收益结果，只用于权益价值表达；豆包与 Headway 才用于任务动作与进度。",
+          "reason": "旧分组仍把奖励余额与任务中心放在同一层级，容易制造错误等价。"
+        },
+        {
+          "candidate_id": "old-membership-general",
+          "action": "rewritten",
+          "before": "会员权益与常用操作分层后，可把辅助服务放到次要位置。",
+          "after": "会员区需解释身份、权益或动作；是否聚合贵族、守护与平台会员取决于业务关系。",
+          "reason": "旧结论过于通用，也可能被误解为只需放大会员卡。"
+        }
+      ],
+      "notes": [
+        "逐图检查可见事实后再写比较、判断与建议；删除了仅复述控件或执行流程的候选结论。",
+        "这是同一 Agent 的交付前人工自查，只辅助暴露遗漏与过度推断，不是独立质量验证。"
+      ]
+    }
+  },
+  "report_schema_version": 1,
+  "generation": {
+    "mode": "replay",
+    "analysis_status": "provided",
+    "analysis_standard": "v2_agent_self_review",
+    "standard_acceptance": "not_assessed"
+  }
+}

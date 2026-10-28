@@ -1,0 +1,5 @@
+{
+  "executor_calls": 0,
+  "error": "正式 --capture-sources 不接受旧 sources 格式；请迁移为包含 source_attempts、candidates、candidate_pool、candidate_limit 和 access_preparation 的结构化来源输入",
+  "captures_exists": false
+}

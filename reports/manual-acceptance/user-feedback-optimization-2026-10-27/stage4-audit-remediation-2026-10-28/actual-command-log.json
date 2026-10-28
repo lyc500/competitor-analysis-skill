@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-28",
+  "commands": [
+    {
+      "purpose": "source access and checkpoint regression",
+      "command": "python3 -B -m unittest tests.test_source_access -v",
+      "result": "22 passed"
+    },
+    {
+      "purpose": "legacy capture compatibility regression",
+      "command": "python3 -B -m unittest discover -s tests -p 'test_capture_workflow.py' -q",
+      "result": "12 passed"
+    },
+    {
+      "purpose": "analysis contract regression",
+      "command": "python3 -B -m unittest discover -s tests -p 'test_analysis.py' -v",
+      "result": "16 passed"
+    },
+    {
+      "purpose": "formal report content pipeline regression",
+      "command": "python3 -B -m unittest discover -s tests -p 'test_report_content_pipeline.py' -v",
+      "result": "12 passed"
+    },
+    {
+      "purpose": "full suite",
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py' -q",
+      "result": "186 passed; 0 failures; 0 errors; 0 skipped; 28.433 seconds (final non-sandbox rerun)"
+    },
+    {
+      "purpose": "formal scenario A generation",
+      "command": "python3 -B -m competitor_analysis_skill --task-file .../scenario-a-my-pages/input/task.json --reviewed-materials-file .../scenario-a-my-pages/stage3c/reviewed_materials.json --classification-plan-file .../scenario-a-my-pages/input/classification-plan.json --analysis-file .../scenario-a-my-pages/input/analysis.json --output .../scenario-a-my-pages/report",
+      "result": "passed"
+    },
+    {
+      "purpose": "formal scenario B generation",
+      "command": "python3 -B -m competitor_analysis_skill --task-file .../scenario-b-redesign/input/task.json --reviewed-materials-file .../scenario-b-redesign/stage3c/reviewed_materials.json --classification-plan-file .../scenario-b-redesign/input/classification-plan.json --analysis-file .../scenario-b-redesign/input/analysis.json --output .../scenario-b-redesign/report",
+      "result": "passed"
+    },
+    {
+      "purpose": "local report browser acceptance",
+      "command": "python3 -B reports/manual-acceptance/user-feedback-optimization-2026-10-27/stage4-audit-remediation-2026-10-28/browser_acceptance.py",
+      "result": "2 browser cases passed after final analysis regeneration"
+    },
+    {
+      "purpose": "formal independent regeneration comparison",
+      "command": "formal task-file generation to independent /tmp directories followed by SHA-256 comparison",
+      "result": "scenario A 12/12 files identical; scenario B 10/10 files identical"
+    },
+    {
+      "purpose": "compile check",
+      "command": "PYTHONPYCACHEPREFIX=/tmp/competitor-analysis-pycache-final python3 -m compileall -q competitor_analysis_skill tests",
+      "result": "passed"
+    },
+    {
+      "purpose": "diff whitespace check",
+      "command": "git diff --check",
+      "result": "passed"
+    },
+    {
+      "purpose": "skill quick validator",
+      "command": "/tmp/competitor-analysis-quick-validator-venv/bin/python /Users/yuchunli/.codex/skills/.system/skill-creator/scripts/quick_validate.py /Users/yuchunli/competitor-analysis-skill",
+      "result": "Skill is valid!"
+    }
+  ],
+  "known_non_failure_output": [
+    "The final suite cannot bind localhost or launch Chromium inside the managed sandbox; that attempt ran 174 tests and ended with 9 environment permission errors. The identical command was rerun outside the sandbox and all 186 tests passed.",
+    "The final passing suite emitted 3 existing unclosed localhost socket ResourceWarning messages; no assertion failed.",
+    "The first full suite after implementation exposed one legacy-source compatibility regression; it was fixed before the final 186-test pass."
+  ]
+}

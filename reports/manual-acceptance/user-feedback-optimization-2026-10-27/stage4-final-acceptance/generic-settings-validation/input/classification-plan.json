@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "classification_dimension": "设置任务的分区方式",
+  "classification_reason": "按设置页的主要管理任务组织，不复用个人中心分类。",
+  "comparison_basis": {
+    "primary_dimension": "设置任务的分区方式",
+    "rationale": "按设置页的主要管理任务组织，不复用个人中心分类。",
+    "scope": "单张设置页小范围通用性验证。"
+  },
+  "groups": [
+    {
+      "id": "group-settings",
+      "name": "账户设置根层",
+      "reason": "检查设置页如何组织账户与偏好入口",
+      "material_ids": [
+        "mat-cap-refero-duolingo-settings"
+      ],
+      "audit": {
+        "inclusion_criteria": "页面标题与条目均指向设置根层",
+        "shared_mechanism": "用分区列表组织账户与偏好",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-refero-duolingo-settings",
+            "reason": "标题与列表共同确认设置页角色"
+          }
+        ],
+        "adjacent_difference": "不与本人资料页或公开主页混淆"
+      }
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cap-refero-duolingo-settings",
+      "labels": {
+        "page_role": "settings_root",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "product_name": "Duolingo",
+    "target_page": "设置页",
+    "status": "resolved",
+    "reason": "已有有效素材",
+    "allowed_methods": [
+      "user_upload",
+      "device_capture"
+    ]
+  }
+]

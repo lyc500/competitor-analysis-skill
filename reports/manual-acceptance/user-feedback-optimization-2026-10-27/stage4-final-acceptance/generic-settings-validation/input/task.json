@@ -1,0 +1,32 @@
+{
+  "raw_request": "小范围验证：搜集一个移动 App 设置页，确认流程没有写死为个人中心或虎牙。",
+  "research_goal": "验证通用任务、分类、分析与报告入口",
+  "target_page": "设置页",
+  "target_surface": "mobile_app",
+  "platforms": [
+    "iOS"
+  ],
+  "regions": [
+    "CN",
+    "Global"
+  ],
+  "specified_products": [],
+  "assumptions": [
+    "只使用公开可访问且可追溯的单屏 UI 素材"
+  ],
+  "needs_clarification": false,
+  "task_status": "ready",
+  "planning_strategy": "agent_only",
+  "competitors": [
+    {
+      "product_name": "Duolingo",
+      "region": "Global",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_page": "设置页",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    }
+  ]
+}

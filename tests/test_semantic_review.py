@@ -122,6 +122,7 @@ class SemanticReviewTests(unittest.TestCase):
         self.assertEqual((material["semantic_status"], material["quality_status"], material["collection_status"]), ("accepted", "accepted", "collected"))
         self.assertEqual((material["source_type"], material["collection_method"], material["provenance"]), ("browser", "browser_screenshot", "online"))
         self.assertEqual(material["capture_id"], "cap-a")
+        self.assertEqual(material["target_page"], "搜索结果页")
 
     def test_logo_marketing_and_wrong_target_reviews_stay_rejected(self):
         cases = [

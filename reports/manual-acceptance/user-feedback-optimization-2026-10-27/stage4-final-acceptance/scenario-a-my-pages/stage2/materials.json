@@ -1,0 +1,295 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外知名 App‘我的’页的竞品截图。",
+    "research_goal": "比较国内外知名 App 的我的页主任务、组织模式和适用场景",
+    "target_page": "我的页 / 个人中心",
+    "target_surface": "mobile_app",
+    "platforms": [
+      "iOS"
+    ],
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "只使用公开可访问且可追溯的单屏 UI 素材"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "哔哩哔哩",
+        "region": "CN",
+        "product_type": "视频社区",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "拼多多",
+        "region": "CN",
+        "product_type": "电商",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "豆包爱学",
+        "region": "CN",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "酷狗畅听版",
+        "region": "CN",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Duolingo",
+        "region": "Global",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "斗鱼",
+        "region": "CN",
+        "product_type": "直播社区",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Wise",
+        "region": "Global",
+        "product_type": "金融工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Kickstarter",
+        "region": "Global",
+        "product_type": "众筹平台",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "MD Vinyl",
+        "region": "Global",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "TIDAL",
+        "region": "Global",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Revolut",
+        "region": "Global",
+        "product_type": "金融工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "The New York Times",
+        "region": "Global",
+        "product_type": "新闻内容",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Airbuds",
+        "region": "Global",
+        "product_type": "社交音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      }
+    ],
+    "request": "帮我搜集一下国内外知名 App‘我的’页的竞品截图。"
+  },
+  "competitors": [
+    {
+      "product_name": "哔哩哔哩",
+      "region": "CN",
+      "product_type": "视频社区",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "拼多多",
+      "region": "CN",
+      "product_type": "电商",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "豆包爱学",
+      "region": "CN",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "酷狗畅听版",
+      "region": "CN",
+      "product_type": "音乐",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "Duolingo",
+      "region": "Global",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "斗鱼",
+      "region": "CN",
+      "product_type": "直播社区",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "Wise",
+      "region": "Global",
+      "product_type": "金融工具",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "Kickstarter",
+      "region": "Global",
+      "product_type": "众筹平台",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "MD Vinyl",
+      "region": "Global",
+      "product_type": "音乐",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "TIDAL",
+      "region": "Global",
+      "product_type": "音乐",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "Revolut",
+      "region": "Global",
+      "product_type": "金融工具",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "The New York Times",
+      "region": "Global",
+      "product_type": "新闻内容",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    },
+    {
+      "product_name": "Airbuds",
+      "region": "Global",
+      "product_type": "社交音乐",
+      "platform": "iOS",
+      "target_page": "我的页 / 个人中心",
+      "planning_source": "agent_planned",
+      "priority": "high",
+      "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+    }
+  ],
+  "assets": [],
+  "classification": {
+    "classification_status": "unavailable",
+    "classification_dimension": "",
+    "classification_reason": "正式动态分类仅在 Stage 4 Agent Classification Plan 流程执行",
+    "groups": [],
+    "material_labels": []
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "classification_status": "ready",
+  "classification_dimension": "虎牙改版要解决的设计问题",
+  "classification_reason": "围绕会员层级、任务表达、收益结果和辅助服务收纳分组；业务行业只作背景，不以出现会员、奖励或服务入口强行合组。",
+  "groups": [
+    {
+      "id": "group-membership-actions",
+      "name": "会员身份、权益与常用操作",
+      "reason": "改版目标中的会员层级",
+      "material_ids": [
+        "mat-cap-tencent",
+        "mat-cap-bilibili",
+        "mat-cap-kugou",
+        "mat-cap-gooh",
+        "mat-cap-caljimi"
+      ],
+      "asset_ids": [
+        "mat-cap-tencent",
+        "mat-cap-bilibili",
+        "mat-cap-kugou",
+        "mat-cap-gooh",
+        "mat-cap-caljimi"
+      ],
+      "audit": {
+        "inclusion_criteria": "主页面同时展示会员身份或权益，以及一组可直接执行的常用操作。",
+        "shared_mechanism": "将会员状态、权益入口与常用动作分层，而不是简单放大会员卡。",
+        "adjacent_difference": "与任务组的差异是这里不要求目标、进度或下一步；与抽屉组的差异是样本都属于主页面。",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-tencent",
+            "reason": "身份区把视频 VIP、体育 VIP 和其他套餐并列，下一行是预约、下载、收藏与周边等操作。"
+          },
+          {
+            "material_id": "mat-cap-bilibili",
+            "reason": "头像下方先出现大会员横条，随后是离线缓存、历史记录、我的收藏和稍后再看四个常用入口。"
+          },
+          {
+            "material_id": "mat-cap-kugou",
+            "reason": "身份与会员条之后突出我喜欢、已下载和最近内容，播放器持续可见。"
+          },
+          {
+            "material_id": "mat-cap-gooh",
+            "reason": "会员横条后是一排旅行宫盒、旅行足迹和收藏地点，再接加入行程、提醒等列表。"
+          },
+          {
+            "material_id": "mat-cap-caljimi",
+            "reason": "会员横幅和运营卡之后，把设备连接单列，并以实用功能分组展示便签、闹钟等入口。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "group-task-progress",
+      "name": "任务动作与进度",
+      "reason": "改版目标中的任务中心表达",
+      "material_ids": [
+        "mat-cap-doubao",
+        "mat-cap-headway"
+      ],
+      "asset_ids": [
+        "mat-cap-doubao",
+        "mat-cap-headway"
+      ],
+      "audit": {
+        "inclusion_criteria": "页面用卡片明确展示任务动作、目标或进度。",
+        "shared_mechanism": "让用户在首屏理解当前状态与下一步。",
+        "adjacent_difference": "不包含只展示奖励余额的 Target；奖励结果不能代替任务结构。",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-doubao",
+            "reason": "身份区后把金币商城与任务中心并排成卡片，任务中心写有立即签到领金币。"
+          },
+          {
+            "material_id": "mat-cap-headway",
+            "reason": "Profile 首屏用圆环展示每日 20 分钟目标、当前 0 分钟、连续天数和 Adjust goal。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "group-reward-value",
+      "name": "会员收益与奖励结果",
+      "reason": "区分会员价值和任务中心",
+      "material_ids": [
+        "mat-cap-target"
+      ],
+      "asset_ids": [
+        "mat-cap-target"
+      ],
+      "audit": {
+        "inclusion_criteria": "页面展示已节省、已获奖励或可用权益等结果状态，但没有任务目标或进度。",
+        "shared_mechanism": "用可核对的收益解释会员价值。",
+        "adjacent_difference": "与任务组的差异是没有待完成动作；与订单组的共同点是收益来自消费关系。",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-target",
+            "reason": "账户首屏显示购买历史、年度节省、Circle 奖励余额和社区支持票数。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "group-auxiliary-drawer",
+      "name": "辅助服务抽屉",
+      "reason": "改版目标中的其他功能收纳",
+      "material_ids": [
+        "mat-cap-douyu-top",
+        "mat-cap-douyu-bottom"
+      ],
+      "asset_ids": [
+        "mat-cap-douyu-top",
+        "mat-cap-douyu-bottom"
+      ],
+      "audit": {
+        "inclusion_criteria": "截图是已打开的服务抽屉，并展示其上段或滚动下段。",
+        "shared_mechanism": "主页面保留核心模块，抽屉按任务分区承接辅助服务。",
+        "adjacent_difference": "不能把抽屉视口当作首屏，也不能因收纳位置推断功能低频。",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-douyu-top",
+            "reason": "个人页右侧抽屉打开后，上段以分组宫格承接贵族、浏览记录、任务中心、礼包等服务。"
+          },
+          {
+            "material_id": "mat-cap-douyu-bottom",
+            "reason": "同一抽屉滚动下段继续展示全部服务、账户维护项以及底部设置、反馈和装扮。"
+          }
+        ]
+      }
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cap-tencent",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in",
+        "annotation_status": "original_annotated"
+      }
+    },
+    {
+      "material_id": "mat-cap-bilibili",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in",
+        "version_status": "historical_version"
+      }
+    },
+    {
+      "material_id": "mat-cap-kugou",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-gooh",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-caljimi",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-doubao",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-headway",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-target",
+      "labels": {
+        "page_role": "personal_center",
+        "path_stage": "personal_center_root_first_view",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-douyu-top",
+      "labels": {
+        "page_role": "services_drawer",
+        "path_stage": "personal_center_drawer_top",
+        "interaction_stage": "drawer_open",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-douyu-bottom",
+      "labels": {
+        "page_role": "services_drawer",
+        "path_stage": "personal_center_drawer_lower",
+        "interaction_stage": "drawer_open_scrolled",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    }
+  ],
+  "schema_version": 2,
+  "comparison_basis": {
+    "primary_dimension": "对本次改版问题可提供的共同设计机制",
+    "rationale": "明确改版目标时，应按要解决的问题选参照，并保留页面角色和交互阶段差异。",
+    "scope": "历史归档的 9 个竞品、10 张 App 截图；8 张个人中心主视口与 2 张已打开服务抽屉视口，现状图另计。"
+  }
+}

@@ -30,7 +30,11 @@ class SkillContractTests(unittest.TestCase):
             self.assertIn(phrase, self.skill)
 
     def test_report_uses_progressive_twenty_card_expansion(self):
-        for phrase in ("一行 5 张", "初始展示 20 张", "更多", "每次展开 20 张"):
+        for phrase in ("约 5 张", "整体并排", "初始展示 20 张", "更多", "每次点击“更多”再展开 20 张"):
+            self.assertIn(phrase, self.skill)
+
+    def test_report_cards_fold_process_fields_and_keep_critical_state_visible(self):
+        for phrase in ("页面详情", "来源 URL", "证据 ID", "未登录", "原图带标注", "键盘操作"):
             self.assertIn(phrase, self.skill)
 
     def test_foreign_sources_translate_page_intent_to_local_naming_vocabulary(self):
@@ -90,6 +94,17 @@ class SkillContractTests(unittest.TestCase):
             "产品 fallback",
             "覆盖边界",
             "历史证据缺口",
+        ):
+            self.assertIn(phrase, self.skill)
+
+    def test_material_analysis_layers_are_reviewed_together(self):
+        for phrase in (
+            "同一素材",
+            "可见事实",
+            "分类理由",
+            "takeaway",
+            "综合结论",
+            "一起复核",
         ):
             self.assertIn(phrase, self.skill)
 

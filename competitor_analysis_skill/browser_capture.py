@@ -41,32 +41,43 @@ def capture_sources(sources, output_dir, timeout_ms=15000, settle_ms=750, viewpo
             browser = playwright.chromium.launch(headless=True)
         except Exception as exc:
             raise RuntimeError(f"Chromium 启动失败: {exc}") from exc
+        contexts = {}
         try:
             version = browser.version
             for source in sources:
-                results.append(_capture_one(browser, source, capture_dir, output_dir, timeout_ms, settle_ms, viewport_width, viewport_height, allow_private_network, version))
+                session_id = source.get("browser_session_id") or "playwright-default"
+                session_kind = source.get("browser_session_kind") or "playwright_batch"
+                if session_kind == "agent_browser" and source.get("requires_authenticated_session"):
+                    raise ValueError("Agent 浏览器登录会话不能由独立 Playwright 伪装复用；请使用同会话截图交接")
+                key = (session_kind, session_id)
+                if key not in contexts:
+                    context = browser.new_context(viewport={"width": viewport_width, "height": viewport_height})
+                    def guard(route):
+                        from urllib.parse import urlsplit
+                        target = route.request.url
+                        if urlsplit(target).scheme in {"http", "https"}:
+                            try:
+                                _public_host(target, allow_private_network)
+                            except ValueError:
+                                route.abort()
+                                return
+                        route.continue_()
+                    context.route("**/*", guard)
+                    contexts[key] = context
+                results.append(_capture_one(contexts[key], source, capture_dir, output_dir, timeout_ms, settle_ms, viewport_width, viewport_height, allow_private_network, version, session_id, session_kind))
         finally:
+            for context in contexts.values():
+                try: context.close()
+                except Exception: pass
             browser.close()
     return results
 
 
-def _capture_one(browser, source, capture_dir, output_dir, timeout_ms, settle_ms, width, height, allow_private, browser_version):
+def _capture_one(context, source, capture_dir, output_dir, timeout_ms, settle_ms, width, height, allow_private, browser_version, session_id="playwright-default", session_kind="playwright_batch"):
     requested = source.get("source_detail_url") or source.get("source_asset_url") or source.get("normalized_url") or source.get("source_entry_url") or source.get("source_url", "")
-    base = {"id": f"cap-{source['id']}", "source_candidate_id": source["id"], "source_attempt_id": source.get("source_attempt_id", ""), "product_name": source["product_name"], "target_page": source["target_page"], "target_surface": source.get("target_surface", "user_specified"), "discovered_source_type": source["source_type"], "source_provider": source.get("source_provider", ""), "source_entry_url": source.get("source_entry_url", ""), "source_detail_url": source.get("source_detail_url", ""), "source_asset_url": source.get("source_asset_url", ""), "requested_url": requested, "final_url": "", "page_title": "", "http_status": None, "content_type": "", "browser_name": "chromium", "browser_version": browser_version, "viewport_width": width, "viewport_height": height, "captured_at": datetime.now(timezone.utc).isoformat(), "capture_status": "failed", "screenshot_path": "", "quality_status": "missing", "quality_reason": "", "width": 0, "height": 0, "content_sha256": "", "failure_reason": ""}
+    base = {"id": f"cap-{source['id']}", "source_candidate_id": source["id"], "source_attempt_id": source.get("source_attempt_id", ""), "product_name": source["product_name"], "target_page": source["target_page"], "target_surface": source.get("target_surface", "user_specified"), "discovered_source_type": source["source_type"], "source_provider": source.get("source_provider", ""), "source_entry_url": source.get("source_entry_url", ""), "source_detail_url": source.get("source_detail_url", ""), "source_asset_url": source.get("source_asset_url", ""), "requested_url": requested, "final_url": "", "page_title": "", "http_status": None, "content_type": "", "browser_name": "chromium", "browser_version": browser_version, "browser_session_id": session_id, "browser_session_kind": session_kind, "viewport_width": width, "viewport_height": height, "captured_at": datetime.now(timezone.utc).isoformat(), "capture_status": "failed", "screenshot_path": "", "quality_status": "missing", "quality_reason": "", "width": 0, "height": 0, "content_sha256": "", "failure_reason": ""}
     try:
         _public_host(requested, allow_private)
-        context = browser.new_context(viewport={"width": width, "height": height})
-        def guard(route):
-            from urllib.parse import urlsplit
-            target = route.request.url
-            if urlsplit(target).scheme in {"http", "https"}:
-                try:
-                    _public_host(target, allow_private)
-                except ValueError:
-                    route.abort()
-                    return
-            route.continue_()
-        context.route("**/*", guard)
         page = context.new_page()
         page.set_default_timeout(timeout_ms)
         response = page.goto(requested, wait_until="domcontentloaded", timeout=timeout_ms)
@@ -95,6 +106,6 @@ def _capture_one(browser, source, capture_dir, output_dir, timeout_ms, settle_ms
     except (PlaywrightError, ValueError, OSError) as exc:
         base["failure_reason"] = str(exc)
     finally:
-        try: context.close()
+        try: page.close()
         except Exception: pass
     return base

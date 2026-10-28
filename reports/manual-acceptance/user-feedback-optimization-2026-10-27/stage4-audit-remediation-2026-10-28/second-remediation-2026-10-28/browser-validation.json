@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-28T15:03:51+08:00",
+  "browser": "Playwright Chromium",
+  "evidence_type": "second_remediation_local_report_browser_check",
+  "cases": {
+    "scenario-a-my-pages": {
+      "report": "scenario-a-my-pages/report/report.html",
+      "asset_images": 9,
+      "group_sizes": [
+        2,
+        3,
+        2,
+        1,
+        1
+      ],
+      "details_default_closed": true,
+      "methodology_default_closed": true,
+      "current_state_present": false,
+      "synthesis_is_last_module": true,
+      "keyboard_lightbox": true,
+      "corrected_content_in_body_and_folded_audit": true,
+      "desktop_scroll_width": 1440,
+      "mobile_scroll_width": 390
+    },
+    "scenario-b-redesign": {
+      "report": "scenario-b-redesign/report/report.html",
+      "asset_images": 6,
+      "group_sizes": [
+        2,
+        2,
+        2
+      ],
+      "details_default_closed": true,
+      "methodology_default_closed": true,
+      "current_state_present": true,
+      "synthesis_is_last_module": true,
+      "keyboard_lightbox": true,
+      "corrected_content_in_body_and_folded_audit": true,
+      "desktop_scroll_width": 1440,
+      "mobile_scroll_width": 390
+    }
+  }
+}

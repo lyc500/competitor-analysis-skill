@@ -1,0 +1,3438 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外知名app‘我的’页的竞品截图",
+    "research_goal": "搜集国内外知名移动 App 自己的个人中心完整单屏截图，供信息架构和视觉设计横向参考；素材真实、可放大、可追溯。",
+    "target_page": "我的 / Profile / Account",
+    "target_surface": "mobile_app",
+    "platforms": [
+      "iOS"
+    ],
+    "regions": [
+      "国内",
+      "海外"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "page_role/path：底部‘我的/我/Me/You/Profile’或头像进入的个人中心根页；纳入自己的身份、内容、成长、订单、会员和服务资产。",
+      "interaction_stage：已进入个人中心，未处于编辑、提交、确认或账户切换过程。",
+      "render_state：纳入 loaded_complete 与 logged_out_complete；排除加载、空态、错误、权限/登录拦截和新手引导。",
+      "排除他人公开主页、编辑资料预览、账户安全子页、纯设置子页、子业务个人页、WebView 和被弹层遮挡的页面。",
+      "公开 UI 数据库中的可见版本不等于产品最新版；报告按来源明确标注版本和更新日期，来源未提供时不做推断。",
+      "正式候选池上限 50；超出部分按页面匹配、品牌代表性、地区/品类覆盖、图片质量与来源可追溯性截断，并保留登记。"
+    ],
+    "page_name_mapping": {
+      "original": "我的",
+      "canonical": "Profile",
+      "aliases": [
+        "You",
+        "Me",
+        "Account",
+        "My Account",
+        "My Page"
+      ],
+      "taxonomy": [
+        "UI Notes: 个人中心功能筛选 / OCR 关键词",
+        "Refero: Profile & Account / page type 15",
+        "PTTRNS: Profile & Account",
+        "Mobbin: My Account & Profile"
+      ],
+      "adjacent_discovery_only": [
+        "Settings",
+        "Activity"
+      ]
+    },
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "豆包爱学",
+        "region": "国内",
+        "product_type": "教育 / AI 学习",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "展示学习资产、任务和服务型个人中心，并提供登录前后对照。"
+      },
+      {
+        "product_name": "多邻国",
+        "region": "海外",
+        "product_type": "教育 / 语言学习",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "海外知名学习产品，个人身份、关系和学习数据组织清晰。"
+      },
+      {
+        "product_name": "酷狗畅听版",
+        "region": "国内",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "音乐产品在未登录状态下仍保留完整内容资产入口。"
+      },
+      {
+        "product_name": "喜茶GO",
+        "region": "国内",
+        "product_type": "餐饮零售",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "餐饮会员、钱包和订单服务集中呈现，并有登录前后对照。"
+      },
+      {
+        "product_name": "拼多多",
+        "region": "国内",
+        "product_type": "电商",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "头部电商个人中心，覆盖订单、资产、收藏和推荐。"
+      },
+      {
+        "product_name": "智谱清言",
+        "region": "国内",
+        "product_type": "AI 助手",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "AI 助手产品把作品、智能体、会员和任务汇入个人中心。"
+      },
+      {
+        "product_name": "阿里巴巴",
+        "region": "国内",
+        "product_type": "B2B 电商",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "B2B 采购场景的未登录个人中心，含订单、权益和商品资产。"
+      },
+      {
+        "product_name": "盒马",
+        "region": "国内",
+        "product_type": "生鲜零售",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "生鲜零售会员、余额、订单和服务宫格的典型组合。"
+      },
+      {
+        "product_name": "小象超市",
+        "region": "国内",
+        "product_type": "即时零售",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "即时零售未登录个人中心，服务入口仍完整可用。"
+      },
+      {
+        "product_name": "懂车帝",
+        "region": "国内",
+        "product_type": "汽车内容与服务",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "汽车内容、创作和车主服务合并在个人中心。"
+      },
+      {
+        "product_name": "不背单词",
+        "region": "国内",
+        "product_type": "教育 / 词汇学习",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "学习权益与个性化设置型个人中心，并覆盖明暗主题。"
+      },
+      {
+        "product_name": "转转",
+        "region": "国内",
+        "product_type": "二手交易",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "同时处理购买、出售、估价和个人资产的交易型个人中心。"
+      },
+      {
+        "product_name": "微信读书",
+        "region": "国内",
+        "product_type": "数字阅读",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "阅读数据、书架资产、会员与社交排行并列，含登录前后对照。"
+      },
+      {
+        "product_name": "得物",
+        "region": "国内",
+        "product_type": "社区电商",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "社区创作、收藏、交易、钱包和商家入口的复合个人中心。"
+      },
+      {
+        "product_name": "迅雷",
+        "region": "国内",
+        "product_type": "云盘与下载",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "文件资产、会员和工具服务聚合型个人中心。"
+      },
+      {
+        "product_name": "百度翻译",
+        "region": "国内",
+        "product_type": "翻译工具",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "medium",
+        "reason": "翻译学习资产、课程和会员服务，含登录前后对照。"
+      },
+      {
+        "product_name": "Wise",
+        "region": "海外",
+        "product_type": "金融科技",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "海外金融产品的根账户服务清单，强调安全与帮助。"
+      },
+      {
+        "product_name": "ASOS",
+        "region": "海外",
+        "product_type": "时尚电商",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "海外电商账户管理下段，覆盖地址、支付、偏好和帮助。"
+      },
+      {
+        "product_name": "Target",
+        "region": "海外",
+        "product_type": "综合零售",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "海外零售会员首页，突出购买历史、节省额和奖励。"
+      },
+      {
+        "product_name": "The New York Times",
+        "region": "海外",
+        "product_type": "新闻与内容订阅",
+        "platform": "iOS",
+        "target_page": "我的 / Profile / Account",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "内容订阅产品的 You 页，组织兴趣、历史和收藏资产。"
+      }
+    ],
+    "request": "帮我搜集一下国内外知名app‘我的’页的竞品截图"
+  },
+  "materials": [
+    {
+      "id": "mat-096876602836684120",
+      "product_name": "豆包爱学",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "教育 / AI 学习",
+      "platform": "iOS",
+      "image_path": "assets/fa69967ab9d8f2a0.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/096876602836684120",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/096876602836684120.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "头像、年级、金币商城、任务中心和学习记录完整呈现，底部‘我的’选中，属于豆包爱学个人中心首屏。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "学习资产",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v5.5；来源更新：2026 年 10 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "1fd58e1f72c88d768696fc36522e360f4683b9909f5ce7955d95a95e68026c07"
+    },
+    {
+      "id": "mat-133323406851668822",
+      "product_name": "豆包爱学",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "教育 / AI 学习",
+      "platform": "iOS",
+      "image_path": "assets/3a223b89d37c51ad.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/133323406851668822",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/133323406851668822.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "顶部立即登录，金币商城、任务中心、学习记录、消息、反馈和设置仍完整可见；底部我的选中，无登录遮罩。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "学习服务",
+        "logged_out_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v5.5；来源更新：2026 年 10 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "59f54e46957df426ddcfd6e8f1b21ad80bf6f1cdf70e3ff17478e3680050f1cb"
+    },
+    {
+      "id": "mat-004403109497668392",
+      "product_name": "多邻国",
+      "page_name": "我的 / Profile / Account",
+      "region": "海外",
+      "product_type": "教育 / 语言学习",
+      "platform": "iOS",
+      "image_path": "assets/335cb1a5d6f797f8.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/004403109497668392",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/004403109497668392.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "多邻国自己的头像旁有装扮与设置；个人ID、加入年份、课程和关注数、添加好友、学习概览完整呈现。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "学习与关系资产",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v7.144；来源更新：2026 年 10 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "592c3d4ccd30e8ee275c2163e47536b229c58e09ff5a459dc23c8c41f22418d6"
+    },
+    {
+      "id": "mat-438158835260733576",
+      "product_name": "酷狗畅听版",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "音乐",
+      "platform": "iOS",
+      "image_path": "assets/7fc3b17dc64afd68.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/438158835260733576",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/438158835260733576.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "酷狗畅听版底部我的选中；登录入口下仍有我喜欢、已下载、最近播放列表及播放器，主体内容完整。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "音乐资产",
+        "logged_out_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v3.1；来源更新：2026 年 9 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "42b4ee48fea3c3259cb5847cc809f07e9dd40cdd62e5de1c7c1f8d60dc7ea71a"
+    },
+    {
+      "id": "mat-667567417512043064",
+      "product_name": "喜茶GO",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "餐饮零售",
+      "platform": "iOS",
+      "image_path": "assets/4c57546895fee738.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/667567417512043064",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/667567417512043064.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "喜茶GO我的页显示登录入口，余额占位值之外，订单、客服、团餐预定、兑换中心、发票和评价等服务完整可见。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "订单与会员服务",
+        "logged_out_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v4.5；来源更新：2026 年 8 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "cefef2ed82e03b2098d72523aaa0ce4c89190638b0e4f675c299a2961d9b7e51"
+    },
+    {
+      "id": "mat-792439682643464941",
+      "product_name": "喜茶GO",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "餐饮零售",
+      "platform": "iOS",
+      "image_path": "assets/c81c4b36d4ce99de.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/792439682643464941",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/792439682643464941.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "喜茶GO昵称茶茶、喜茶券/喜卡/喜钱包及订单、客服、兑换、积分商城完整呈现，底部我的选中。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "订单与会员资产",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v4.5；来源更新：2026 年 8 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "052d26905206e5507a82eacc32592910d7c5b9bab9403f408c8a1d43df44e811"
+    },
+    {
+      "id": "mat-658360019995979356",
+      "product_name": "拼多多",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "电商",
+      "platform": "iOS",
+      "image_path": "assets/4c3e93cedbdcb44d.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/658360019995979356",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/658360019995979356.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "拼多多个人中心Tab选中，微信登录入口下有订单状态、钱包、优惠券、收藏、店铺关注、历史浏览与推荐商品；无登录阻断。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "订单与购物服务",
+        "logged_out_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v8.25；来源更新：2026 年 9 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "9f51e0537930faf00cca2cb79e6d5c7a69a80a4b7147855cab38c0b7102dc696"
+    },
+    {
+      "id": "mat-551540436152132377",
+      "product_name": "拼多多",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "电商",
+      "platform": "iOS",
+      "image_path": "assets/89066bd35c200bf1.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/551540436152132377",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/551540436152132377.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "拼多多顶部昵称和收货地址、订单状态、钱包收藏优惠券、购物推荐完整显示；头像上有小型提示但不遮挡核心任务，属于已加载个人中心。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "订单与购物资产",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v8.25；来源更新：2026 年 9 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "71f9ac661b83316fb07681bb38c3f242dfa60868fe6dd5dbd11be464cc451f4c"
+    },
+    {
+      "id": "mat-025429166561164948",
+      "product_name": "智谱清言",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "AI 助手",
+      "platform": "iOS",
+      "image_path": "assets/7d779c0bf156df39.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/025429166561164948",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/025429166561164948.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "智谱清言个人头像与编辑资料入口、我的作品、智能体中心、消息、会员积分、订单和任务中心完整可读，底部个人Tab选中。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "创作与积分资产",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v3.7；来源更新：2026 年 9 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "b304b72dc491b449bd3e1d11be2b66f6aa3889b7979b8b64d927aeb06b0f34e2"
+    },
+    {
+      "id": "mat-018621050003319015",
+      "product_name": "阿里巴巴",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "B2B 电商",
+      "platform": "iOS",
+      "image_path": "assets/5223c76a63b18a97.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/018621050003319015",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/018621050003319015.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "阿里巴巴App底部我的选中；支付宝快捷登录下方是订单状态、优惠权益及推荐/上新/收藏/足迹商品，个人采购主体完整。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "采购服务",
+        "logged_out_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v12.16；来源更新：2026 年 8 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "55b1c26ba3da6c7799acaadafc6bcbb66e7c08469189134c7415f796a2220b74"
+    },
+    {
+      "id": "mat-327553016242661235",
+      "product_name": "盒马",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "生鲜零售",
+      "platform": "iOS",
+      "image_path": "assets/f285e2fb68d18591.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/327553016242661235",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/327553016242661235.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "盒马昵称、会员身份、权益卡片、红包/余额/省钱额、订单状态和服务宫格完整呈现，底部我的选中。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "会员与生鲜购物资产",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v8.7；来源更新：2026 年 8 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "64761d92441fe1de4fd1c323f2c97706a102181e4cec467cfd2994a768fda0bd"
+    },
+    {
+      "id": "mat-176174415809164424",
+      "product_name": "小象超市",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "即时零售",
+      "platform": "iOS",
+      "image_path": "assets/9fb0e5cd2ef8d67b.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/176174415809164424",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/176174415809164424.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "小象超市顶部登录/注册，券卡入口、订单状态、售后、客服、企业采购、扫码及地址均完整显示，底部我的选中。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "生鲜购物服务",
+        "logged_out_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v7.25；来源更新：2026 年 8 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "7cececa5a5ca7e44380eaaf8d7b4409ee3067b91e81ebb33dbaf4333a7838f78"
+    },
+    {
+      "id": "mat-612887545133740724",
+      "product_name": "懂车帝",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "汽车内容与服务",
+      "platform": "iOS",
+      "image_path": "assets/243cfea1a174fc01.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/612887545133740724",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/612887545133740724.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "懂车帝顶部立即登录，下方动态/关注/粉丝、创作中心、订阅收藏、订单和车主服务完整可读，无登录遮罩。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "汽车内容与服务",
+        "logged_out_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v9.1；来源更新：2026 年 8 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "dc55910006cdf72227fae75bc44c846d5c34702af0af29d96d351112782dcce1"
+    },
+    {
+      "id": "mat-168392972276229080",
+      "product_name": "不背单词",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "教育 / 词汇学习",
+      "platform": "iOS",
+      "image_path": "assets/8b337d34a5d5e529.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/168392972276229080",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/168392972276229080.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "不背单词自己的昵称和会员标识、酷币、装备、外观与沉浸场景、学习设置构成完整个人中心，浅色模式。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "学习权益",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v5.11；来源更新：2026 年 7 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "dc99de864b4df29db6a90a00eb4b195c7c309555f44c351b032bc30f6b179b69"
+    },
+    {
+      "id": "mat-248305763204570159",
+      "product_name": "不背单词",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "教育 / 词汇学习",
+      "platform": "iOS",
+      "image_path": "assets/4b6af752b9051a2d.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/248305763204570159",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/248305763204570159.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "不背单词同一个人中心的深色模式，昵称会员、酷币装备、外观与学习设置完整呈现，作为主题差异参考单独标明。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "学习权益",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v5.11；来源更新：2026 年 7 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "fe3c4fa29395f771338feda9dc5ce9cb9722095cebc120c1d26a373d96cc51ec"
+    },
+    {
+      "id": "mat-026234696324700781",
+      "product_name": "转转",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "二手交易",
+      "platform": "iOS",
+      "image_path": "assets/c8de5d3ecb423d30.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/026234696324700781",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/026234696324700781.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "转转登录入口下有收藏/足迹、购买和出售两组订单、个人资产估价与工具入口及推荐，底部我的选中。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "买卖与估价服务",
+        "logged_out_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v12.13；来源更新：2026 年 7 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "04a0c123198b42e893ad2f2aa9a9676950ccbc1e56ac3d731aa6e81035b9b63a"
+    },
+    {
+      "id": "mat-227130207557343885",
+      "product_name": "微信读书",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "数字阅读",
+      "platform": "iOS",
+      "image_path": "assets/82694d11e0c7ea07.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/227130207557343885",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/227130207557343885.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "微信读书游客身份，会员、充值币、福利、读书排行、阅读时长、在读/读完、笔记/订阅/书单完整显示，属于完整游客我的页。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "阅读服务",
+        "logged_out_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v10.2；来源更新：2026 年 7 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "aa65b17bb4f4845124e914de3dec68640897287d5ecf59f62355dd0afc65355d"
+    },
+    {
+      "id": "mat-406465221275907801",
+      "product_name": "微信读书",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "数字阅读",
+      "platform": "iOS",
+      "image_path": "assets/5efa95525030c6cf.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/406465221275907801",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/406465221275907801.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "微信读书头像昵称、付费会员、读书排行、82小时23分钟阅读时长、在读/读完、笔记订阅和书单完整呈现，底部我选中。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "阅读资产",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v10.2；来源更新：2026 年 7 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "1406e4c8b6c12e5150b0c66ca29a11649bcd5cf4f54e7aa5da86469f95c7f6f0"
+    },
+    {
+      "id": "mat-508614918845893842",
+      "product_name": "得物",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "社区电商",
+      "platform": "iOS",
+      "image_path": "assets/0fff30bd8be99fec.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/508614918845893842",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/508614918845893842.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "得物底部我选中，登录/注册之外有创作中心、收藏、想要/足迹/关注/我有、订单、钱包和商家入驻；主体可用且完整。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "社区与交易服务",
+        "logged_out_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v5.96；来源更新：2026 年 7 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "674eca22d2eebd5a5e8744fa17569ce7e22ac5a4fb10f88593dce08157aaa8db"
+    },
+    {
+      "id": "mat-392538942926681954",
+      "product_name": "迅雷",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "云盘与下载",
+      "platform": "iOS",
+      "image_path": "assets/4d819a4fdbc74a1c.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/392538942926681954",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/392538942926681954.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "迅雷昵称和会员身份、收藏历史/下载文件/云盘文件等统计、云盘空间、文件工具、游戏中心与推荐服务完整显示，底部我的选中。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "文件与会员资产",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v25.1；来源更新：2026 年 7 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "c904ccd15edbd0c4b8ee081ffe1df932d5f5f60006049814849157c8b9966ce3"
+    },
+    {
+      "id": "mat-176567570728999594",
+      "product_name": "百度翻译",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "翻译工具",
+      "platform": "iOS",
+      "image_path": "assets/a90216f618a62cc1.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/176567570728999594",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/176567570728999594.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "百度翻译顶部登录百度账号，会员权益、订单/课程/生词/配音和更多服务宫格可完整浏览，底部我选中。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "翻译学习服务",
+        "logged_out_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v12.4；来源更新：2026 年 5 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "348cc2408bb85d814110733b6087423bcf666224120c9723735aaec3741ff148"
+    },
+    {
+      "id": "mat-261238806478543829",
+      "product_name": "百度翻译",
+      "page_name": "我的 / Profile / Account",
+      "region": "国内",
+      "product_type": "翻译工具",
+      "platform": "iOS",
+      "image_path": "assets/ba89f08b6a0a62bb.webp",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "UI Notes",
+      "source_url": "https://uinotes.com/pin/261238806478543829",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/261238806478543829.webp?v1",
+      "semantic_status": "accepted",
+      "semantic_reason": "百度翻译昵称、关注收藏评论笔记、超级VIP、订单课程生词配音和更多服务完整呈现，底部我选中。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "翻译学习资产",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：UI Notes；版本：v12.4；来源更新：2026 年 5 月。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "86a2ff95d084153f8de6ea75f97c50cae92ed1d9aca8b4a6e6eb0f2b2a2aa3e0"
+    },
+    {
+      "id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+      "product_name": "Wise",
+      "page_name": "我的 / Profile / Account",
+      "region": "海外",
+      "product_type": "金融科技",
+      "platform": "iOS",
+      "image_path": "assets/6ac7b8ba6fcba1e5.jpg",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "Refero",
+      "source_url": "https://refero.design/screens/fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+      "source_asset_url": "https://images.refero.design/screenshots/39/mobile/36057d2e-a5c3-438d-a70c-a678257b69d1_thumb.jpg",
+      "semantic_status": "accepted",
+      "semantic_reason": "Wise标题Your account，商业账户、设置、帮助、隐私安全、退出及会员编号等根账户服务完整呈现；截图为账户页服务区域，无弹窗或输入状态。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "账户服务",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：Refero；版本：来源未标注；来源更新：来源未标注。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 488,
+      "height": 1056,
+      "decode_format": "JPEG",
+      "content_sha256": "8b670abda5eb2738b1cdf1c03ad5b0316bfee69a848e1f8d5a8029e9102aff55"
+    },
+    {
+      "id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+      "product_name": "ASOS",
+      "page_name": "我的 / Profile / Account",
+      "region": "海外",
+      "product_type": "时尚电商",
+      "platform": "iOS",
+      "image_path": "assets/294d8647def50242.jpg",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "Refero",
+      "source_url": "https://refero.design/screens/533a310b-0a57-4b92-9f6f-205fb07cadf2",
+      "source_asset_url": "https://images.refero.design/screenshots/6/mobile/f4afc847-140c-44f8-b366-aa1dfeb46ca7_thumb.jpg",
+      "semantic_status": "accepted",
+      "semantic_reason": "ASOS标题MY ACCOUNT与底部个人Tab选中；地址、支付方式、通知、联系偏好、礼卡、帮助反馈完整可读。可见滚动条，明确标为账户页下段，不充当首屏。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "购物账户服务",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：Refero；版本：来源未标注；来源更新：来源未标注。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 488,
+      "height": 1056,
+      "decode_format": "JPEG",
+      "content_sha256": "1bdcf84342cfc04462a9f9a81ec39cf3009cbf570f0ea422b980938a8d488abe"
+    },
+    {
+      "id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+      "product_name": "Target",
+      "page_name": "我的 / Profile / Account",
+      "region": "海外",
+      "product_type": "综合零售",
+      "platform": "iOS",
+      "image_path": "assets/c8a593a6c9b361ff.jpg",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "Refero",
+      "source_url": "https://refero.design/screens/08723dab-7694-4c3b-a061-6dd9393de0db",
+      "source_asset_url": "https://images.refero.design/screenshots/144/mobile/627ed8bd-65de-4c51-97f7-ab3fd245afe8_thumb.jpg",
+      "semantic_status": "accepted",
+      "semantic_reason": "Target底部My Target选中，Hello Robert、购买历史、年度节省、Circle奖励与社区支持卡片完整显示，是个人账户首屏的已加载状态。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "购物与会员资产",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：Refero；版本：来源未标注；来源更新：来源未标注。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 488,
+      "height": 1056,
+      "decode_format": "JPEG",
+      "content_sha256": "edea3ac39fad8358eb5ae28830713ed0b2761deb14233b8a743f6d84e9c3a079"
+    },
+    {
+      "id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+      "product_name": "The New York Times",
+      "page_name": "我的 / Profile / Account",
+      "region": "海外",
+      "product_type": "新闻与内容订阅",
+      "platform": "iOS",
+      "image_path": "assets/f8c6d92793238fe2.jpg",
+      "source_type": "ui_database",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "source_provider": "Refero",
+      "source_url": "https://refero.design/screens/8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+      "source_asset_url": "https://images.refero.design/screenshots/117/mobile/66a9ad54-e607-4db8-9842-db412b77ee13_thumb.jpg",
+      "semantic_status": "accepted",
+      "semantic_reason": "纽约时报底部You选中，账户订阅身份、Your interests/History/Saved分段与已保存文章列表完整显示，Saved已加载。",
+      "collection_status": "collected",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "observed_structure": [
+        "身份或登录区",
+        "核心个人资产/服务",
+        "个人中心导航证据"
+      ],
+      "observed_patterns": [
+        "订阅与收藏资产",
+        "loaded_complete",
+        "单张完整 App Screen"
+      ],
+      "notes": "来源：Refero；版本：来源未标注；来源更新：来源未标注。",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过；并已在报告卡片尺寸与放大尺寸复核核心文字和导航可读。",
+      "width": 488,
+      "height": 1056,
+      "decode_format": "JPEG",
+      "content_sha256": "fce5b0d6694cbbb5100ecb0adc88a4ba872c81e2683476f1f26fa429acfb5816"
+    }
+  ],
+  "classification": {
+    "classification_status": "ready",
+    "classification_dimension": "页面主任务与实际设计机制",
+    "classification_reason": "一句话宽泛搜集先按用户进入个人中心后要继续处理的对象归组；登录态、主题与路径阶段保留为标签，不再充当业务兜底分类。",
+    "groups": [
+      {
+        "id": "group-learning-progress",
+        "name": "学习与内容进度",
+        "reason": "持续内容行为与进度管理",
+        "material_ids": [
+          "mat-096876602836684120",
+          "mat-133323406851668822",
+          "mat-004403109497668392",
+          "mat-227130207557343885",
+          "mat-406465221275907801",
+          "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+          "mat-176567570728999594",
+          "mat-261238806478543829"
+        ],
+        "asset_ids": [
+          "mat-096876602836684120",
+          "mat-133323406851668822",
+          "mat-004403109497668392",
+          "mat-227130207557343885",
+          "mat-406465221275907801",
+          "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+          "mat-176567570728999594",
+          "mat-261238806478543829"
+        ],
+        "audit": {
+          "inclusion_criteria": "页面围绕学习进度、阅读记录、收藏或继续内容组织主要信息。",
+          "shared_mechanism": "通过记录、内容集合或进度状态帮助用户回顾并继续任务。",
+          "adjacent_difference": "与创作身份组相比，本组重点是自己的学习或内容消费记录；与媒体文件库相比，本组含进度、课程或内容关系。",
+          "member_reasons": [
+            {
+              "material_id": "mat-096876602836684120",
+              "reason": "头像下方并排放置金币商城与任务中心，学习记录位于其后。"
+            },
+            {
+              "material_id": "mat-133323406851668822",
+              "reason": "未登录时仍展示金币商城、任务中心、学习记录和设置，顶部提供登录入口。"
+            },
+            {
+              "material_id": "mat-004403109497668392",
+              "reason": "自己的头像、账号 ID、加入年份、课程、关注关系、添加好友和学习概览出现在同一页面。"
+            },
+            {
+              "material_id": "mat-227130207557343885",
+              "reason": "游客身份下仍显示会员、充值币、读书排行、阅读时长、在读、读完、笔记与书单入口。"
+            },
+            {
+              "material_id": "mat-406465221275907801",
+              "reason": "身份区后集中显示会员、排行、82 小时 23 分钟阅读时长、在读、读完、笔记、订阅与书单。"
+            },
+            {
+              "material_id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+              "reason": "You 页显示订阅身份，并用 Your interests、History、Saved 分段；当前选中 Saved 并展示文章列表。"
+            },
+            {
+              "material_id": "mat-176567570728999594",
+              "reason": "未登录身份区之后先展示超级 VIP，再展示订单、课程、生词、配音及更多服务。"
+            },
+            {
+              "material_id": "mat-261238806478543829",
+              "reason": "登录身份与关注、收藏、评论、笔记在上方，VIP 与订单、课程、生词、配音及更多服务在下方。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-learning-settings",
+        "name": "学习资产与个性化设置",
+        "reason": "学习资产和环境配置",
+        "material_ids": [
+          "mat-168392972276229080",
+          "mat-248305763204570159"
+        ],
+        "asset_ids": [
+          "mat-168392972276229080",
+          "mat-248305763204570159"
+        ],
+        "audit": {
+          "inclusion_criteria": "页面主要呈现会员、虚拟资产、装备、外观、沉浸场景或学习设置，没有可见学习进度与内容记录。",
+          "shared_mechanism": "用学习资产连接个性化环境与设置，而不是承担继续内容或进度回顾。",
+          "adjacent_difference": "与学习进度组的差异是没有进度、记录、收藏或继续内容；不能只因同属教育产品合组。",
+          "member_reasons": [
+            {
+              "material_id": "mat-168392972276229080",
+              "reason": "昵称、会员标识、酷币与装备后接外观、沉浸场景和学习设置，画面为浅色主题。"
+            },
+            {
+              "material_id": "mat-248305763204570159",
+              "reason": "与浅色样本保持同一信息结构，仅切换为深色主题。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-creator-identity",
+        "name": "创作身份与关系资产",
+        "reason": "创作身份、作品和关系管理",
+        "material_ids": [
+          "mat-025429166561164948",
+          "mat-612887545133740724"
+        ],
+        "asset_ids": [
+          "mat-025429166561164948",
+          "mat-612887545133740724"
+        ],
+        "audit": {
+          "inclusion_criteria": "页面把作品、创作入口、动态或关注关系放在身份区附近。",
+          "shared_mechanism": "以身份与关系为主线承接创作管理，再放订单或其他服务。",
+          "adjacent_difference": "不把只有账户头像的页面纳入；自己的创作中心也不等同于浏览他人的公开主页。",
+          "member_reasons": [
+            {
+              "material_id": "mat-025429166561164948",
+              "reason": "头像与编辑资料后依次出现我的作品、智能体中心、消息、会员积分、订单和任务中心。"
+            },
+            {
+              "material_id": "mat-612887545133740724",
+              "reason": "登录入口下展示动态、关注、粉丝与创作中心，其后才是订阅收藏、订单和车主服务。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-media-file-library",
+        "name": "媒体与文件库",
+        "reason": "继续媒体或文件处理",
+        "material_ids": [
+          "mat-438158835260733576",
+          "mat-392538942926681954"
+        ],
+        "asset_ids": [
+          "mat-438158835260733576",
+          "mat-392538942926681954"
+        ],
+        "audit": {
+          "inclusion_criteria": "页面主要呈现收藏、最近、下载、文件、容量或继续播放入口。",
+          "shared_mechanism": "用库状态连接继续消费、下载和文件管理。",
+          "adjacent_difference": "与订单组的差异是主对象为媒体或文件；出现会员、游戏或推荐入口不改变这一主任务。",
+          "member_reasons": [
+            {
+              "material_id": "mat-438158835260733576",
+              "reason": "未登录入口下仍显示我喜欢、已下载、最近播放列表，并保留底部播放器。"
+            },
+            {
+              "material_id": "mat-392538942926681954",
+              "reason": "身份区后展示收藏历史、下载文件、云盘文件等统计，随后是云盘空间、文件工具与推荐服务。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-order-benefits",
+        "name": "订单生命周期与消费权益",
+        "reason": "围绕交易前后组织订单、权益与服务",
+        "material_ids": [
+          "mat-667567417512043064",
+          "mat-792439682643464941",
+          "mat-658360019995979356",
+          "mat-551540436152132377",
+          "mat-018621050003319015",
+          "mat-327553016242661235",
+          "mat-176174415809164424",
+          "mat-026234696324700781",
+          "mat-508614918845893842",
+          "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+        ],
+        "asset_ids": [
+          "mat-667567417512043064",
+          "mat-792439682643464941",
+          "mat-658360019995979356",
+          "mat-551540436152132377",
+          "mat-018621050003319015",
+          "mat-327553016242661235",
+          "mat-176174415809164424",
+          "mat-026234696324700781",
+          "mat-508614918845893842",
+          "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+        ],
+        "audit": {
+          "inclusion_criteria": "页面至少以订单状态、购买记录、售后或可消费权益为主要区域。",
+          "shared_mechanism": "用订单阶段和可用权益连接再次购买、履约与售后。",
+          "adjacent_difference": "不包含文件管理或纯账户设置；Target 的奖励是消费权益结果，不作为任务中心证据。",
+          "member_reasons": [
+            {
+              "material_id": "mat-667567417512043064",
+              "reason": "登录入口与余额占位后，依次提供订单、客服、团餐预定、兑换中心、发票与评价。"
+            },
+            {
+              "material_id": "mat-792439682643464941",
+              "reason": "登录身份下先显示喜茶券、喜卡与喜钱包，再提供订单、客服、兑换和积分商城。"
+            },
+            {
+              "material_id": "mat-658360019995979356",
+              "reason": "微信登录入口下显示订单状态、钱包、优惠券、收藏、店铺关注、历史浏览与商品推荐。"
+            },
+            {
+              "material_id": "mat-551540436152132377",
+              "reason": "昵称与收货地址后展示订单状态、钱包、收藏、优惠券和购物推荐。"
+            },
+            {
+              "material_id": "mat-018621050003319015",
+              "reason": "支付宝快捷登录之后是订单状态、优惠权益及推荐、上新、收藏和足迹商品。"
+            },
+            {
+              "material_id": "mat-327553016242661235",
+              "reason": "会员身份与权益卡片后展示红包、余额、省钱额，再接订单状态和服务宫格。"
+            },
+            {
+              "material_id": "mat-176174415809164424",
+              "reason": "登录入口后提供券卡、订单状态、售后、客服、企业采购、扫码与地址。"
+            },
+            {
+              "material_id": "mat-026234696324700781",
+              "reason": "登录入口下先放收藏与足迹，再分购买订单、出售订单、资产估价与交易工具。"
+            },
+            {
+              "material_id": "mat-508614918845893842",
+              "reason": "未登录入口下同时提供创作中心、收藏、想要、足迹、关注、我有、订单、钱包和商家入驻。"
+            },
+            {
+              "material_id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+              "reason": "My Target 首屏依次显示购买历史、年度节省、Circle 奖励余额和社区支持票数。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-account-settings",
+        "name": "账户设置根页",
+        "reason": "身份、安全和账户治理",
+        "material_ids": [
+          "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b"
+        ],
+        "asset_ids": [
+          "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b"
+        ],
+        "audit": {
+          "inclusion_criteria": "页面以设置、隐私、安全、帮助、账户切换或退出为主要内容。",
+          "shared_mechanism": "把账户治理动作放在稳定的根页列表中。",
+          "adjacent_difference": "与消费组的差异是没有订单或购物权益主线；与下段组的差异是当前视口属于根页服务区。",
+          "member_reasons": [
+            {
+              "material_id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+              "reason": "Your account 页面列出商业账户、设置、帮助、隐私安全、退出和会员编号。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-account-lower",
+        "name": "账户管理下段",
+        "reason": "滚动下段的账户维护收纳",
+        "material_ids": [
+          "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+        ],
+        "asset_ids": [
+          "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+        ],
+        "audit": {
+          "inclusion_criteria": "截图明确为账户页下段，并集中地址、支付、通知或帮助等维护项。",
+          "shared_mechanism": "在首屏之后用分区列表收纳账户维护动作。",
+          "adjacent_difference": "不能与首屏样本直接比较优先级，也不把下段位置解释为低频。",
+          "member_reasons": [
+            {
+              "material_id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+              "reason": "MY ACCOUNT 下段可见地址、支付方式、通知、联系偏好、社交账户、礼卡、帮助和反馈，并有滚动条。"
+            }
+          ]
+        }
+      }
+    ],
+    "material_labels": [
+      {
+        "material_id": "mat-096876602836684120",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-133323406851668822",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-004403109497668392",
+        "labels": {
+          "page_role": "own_profile",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-168392972276229080",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-248305763204570159",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-227130207557343885",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "guest"
+        }
+      },
+      {
+        "material_id": "mat-406465221275907801",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+        "labels": {
+          "page_role": "content_library",
+          "path_stage": "personal_center_saved_tab",
+          "interaction_stage": "subtab_selected",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-176567570728999594",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-261238806478543829",
+        "labels": {
+          "page_role": "personal_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-025429166561164948",
+        "labels": {
+          "page_role": "creator_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-612887545133740724",
+        "labels": {
+          "page_role": "creator_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-438158835260733576",
+        "labels": {
+          "page_role": "media_library",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-392538942926681954",
+        "labels": {
+          "page_role": "file_library",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-667567417512043064",
+        "labels": {
+          "page_role": "order_service_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-792439682643464941",
+        "labels": {
+          "page_role": "order_service_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-658360019995979356",
+        "labels": {
+          "page_role": "order_service_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-551540436152132377",
+        "labels": {
+          "page_role": "order_service_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-018621050003319015",
+        "labels": {
+          "page_role": "order_service_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-327553016242661235",
+        "labels": {
+          "page_role": "order_service_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-176174415809164424",
+        "labels": {
+          "page_role": "order_service_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-026234696324700781",
+        "labels": {
+          "page_role": "order_service_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-508614918845893842",
+        "labels": {
+          "page_role": "order_service_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+        "labels": {
+          "page_role": "order_service_center",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+        "labels": {
+          "page_role": "account_settings_root",
+          "path_stage": "personal_center_root_first_view",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+        "labels": {
+          "page_role": "account_management_lower",
+          "path_stage": "account_root_scrolled_lower",
+          "interaction_stage": "browse_after_scroll",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      }
+    ],
+    "schema_version": 2,
+    "comparison_basis": {
+      "primary_dimension": "个人中心承担的首要用户任务及其信息组织机制",
+      "rationale": "只有主任务和设计机制相近的样本才便于横向比较；行业可以不同，但共同机制必须可见。",
+      "scope": "历史归档的 26 张已审核截图；区分登录态、自己的账户与公开主页、首屏与滚动下段，不视为当前最新版。"
+    }
+  },
+  "fallback_requests": [
+    {
+      "product_name": "豆包爱学",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "多邻国",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "酷狗畅听版",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "喜茶GO",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "拼多多",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "智谱清言",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "阿里巴巴",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "盒马",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "小象超市",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "懂车帝",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "不背单词",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "转转",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "微信读书",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "得物",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "迅雷",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "百度翻译",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Wise",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "ASOS",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Target",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "The New York Times",
+      "target_page": "我的 / Profile / Account",
+      "status": "resolved",
+      "reason": "已有至少一张通过语义审核与质量审核的有效素材。",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    }
+  ],
+  "excluded_summary": {
+    "rejected": 0,
+    "pending": 0,
+    "unavailable": 0
+  },
+  "analysis": {
+    "schema_version": 2,
+    "title": "国内外 App「我的」页：按主任务比较信息组织",
+    "research": {
+      "question": "不同 App 的‘我的’页分别围绕什么主任务组织，哪些结构可在相近任务中参考？",
+      "scope": "历史归档的 20 个产品、26 张移动端截图；本轮只重做分析与分类，不执行新的来源搜集。",
+      "goals": [],
+      "constraints": [
+        "没有用户产品现状或明确业务目标，只总结样本模式、差异和适用场景。",
+        "历史截图不代表当前最新版。"
+      ]
+    },
+    "analysis_process": {
+      "material_observations": [
+        {
+          "id": "obs-mat-096876602836684120",
+          "material_id": "mat-096876602836684120",
+          "visible_facts": [
+            "头像下方并排放置金币商城与任务中心，学习记录位于其后。"
+          ],
+          "evidence_boundaries": [
+            "截图只能证明首屏层级，不能证明两个入口的访问频率。"
+          ]
+        },
+        {
+          "id": "obs-mat-133323406851668822",
+          "material_id": "mat-133323406851668822",
+          "visible_facts": [
+            "未登录时仍展示金币商城、任务中心、学习记录和设置，顶部提供登录入口。"
+          ],
+          "evidence_boundaries": [
+            "未登录画面不提供登录后的真实资产与个性化内容。"
+          ]
+        },
+        {
+          "id": "obs-mat-004403109497668392",
+          "material_id": "mat-004403109497668392",
+          "visible_facts": [
+            "自己的头像、账号 ID、加入年份、课程、关注关系、添加好友和学习概览出现在同一页面。"
+          ],
+          "evidence_boundaries": [
+            "这是自己的个人页，不能当作浏览他人公开主页的证据。"
+          ]
+        },
+        {
+          "id": "obs-mat-168392972276229080",
+          "material_id": "mat-168392972276229080",
+          "visible_facts": [
+            "昵称、会员标识、酷币与装备后接外观、沉浸场景和学习设置，画面为浅色主题。"
+          ],
+          "evidence_boundaries": [
+            "酷币和装备是产品特有资产，不能直接迁移到其他业务。"
+          ]
+        },
+        {
+          "id": "obs-mat-248305763204570159",
+          "material_id": "mat-248305763204570159",
+          "visible_facts": [
+            "与浅色样本保持同一信息结构，仅切换为深色主题。"
+          ],
+          "evidence_boundaries": [
+            "它是视觉主题变体，不是新的信息架构样本。"
+          ]
+        },
+        {
+          "id": "obs-mat-227130207557343885",
+          "material_id": "mat-227130207557343885",
+          "visible_facts": [
+            "游客身份下仍显示会员、充值币、读书排行、阅读时长、在读、读完、笔记与书单入口。"
+          ],
+          "evidence_boundaries": [
+            "部分数值可能是游客占位，不能视为真实个人记录。"
+          ]
+        },
+        {
+          "id": "obs-mat-406465221275907801",
+          "material_id": "mat-406465221275907801",
+          "visible_facts": [
+            "身份区后集中显示会员、排行、82 小时 23 分钟阅读时长、在读、读完、笔记、订阅与书单。"
+          ],
+          "evidence_boundaries": [
+            "静态累计值不能说明近期活跃或入口使用频率。"
+          ]
+        },
+        {
+          "id": "obs-mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+          "material_id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+          "visible_facts": [
+            "You 页显示订阅身份，并用 Your interests、History、Saved 分段；当前选中 Saved 并展示文章列表。"
+          ],
+          "evidence_boundaries": [
+            "这是 Saved 子页的已加载状态，不代表账户根页默认内容。"
+          ]
+        },
+        {
+          "id": "obs-mat-176567570728999594",
+          "material_id": "mat-176567570728999594",
+          "visible_facts": [
+            "未登录身份区之后先展示超级 VIP，再展示订单、课程、生词、配音及更多服务。"
+          ],
+          "evidence_boundaries": [
+            "未登录状态不能说明用户自己的学习记录和订单如何呈现。"
+          ]
+        },
+        {
+          "id": "obs-mat-261238806478543829",
+          "material_id": "mat-261238806478543829",
+          "visible_facts": [
+            "登录身份与关注、收藏、评论、笔记在上方，VIP 与订单、课程、生词、配音及更多服务在下方。"
+          ],
+          "evidence_boundaries": [
+            "页面同时容纳内容关系、学习与交易入口，截图不能给出它们的真实优先级。"
+          ]
+        },
+        {
+          "id": "obs-mat-025429166561164948",
+          "material_id": "mat-025429166561164948",
+          "visible_facts": [
+            "头像与编辑资料后依次出现我的作品、智能体中心、消息、会员积分、订单和任务中心。"
+          ],
+          "evidence_boundaries": [
+            "截图不能说明作品与智能体入口的实际使用频率。"
+          ]
+        },
+        {
+          "id": "obs-mat-612887545133740724",
+          "material_id": "mat-612887545133740724",
+          "visible_facts": [
+            "登录入口下展示动态、关注、粉丝与创作中心，其后才是订阅收藏、订单和车主服务。"
+          ],
+          "evidence_boundaries": [
+            "这是自己的账户入口，不是他人的公开主页；未登录数值不代表真实资产。"
+          ]
+        },
+        {
+          "id": "obs-mat-438158835260733576",
+          "material_id": "mat-438158835260733576",
+          "visible_facts": [
+            "未登录入口下仍显示我喜欢、已下载、最近播放列表，并保留底部播放器。"
+          ],
+          "evidence_boundaries": [
+            "未登录列表可能来自本地记录，不能等同于云端个人资产。"
+          ]
+        },
+        {
+          "id": "obs-mat-392538942926681954",
+          "material_id": "mat-392538942926681954",
+          "visible_facts": [
+            "身份区后展示收藏历史、下载文件、云盘文件等统计，随后是云盘空间、文件工具与推荐服务。"
+          ],
+          "evidence_boundaries": [
+            "游戏中心和推荐服务存在，但不改变文件管理是画面主要信息。"
+          ]
+        },
+        {
+          "id": "obs-mat-667567417512043064",
+          "material_id": "mat-667567417512043064",
+          "visible_facts": [
+            "登录入口与余额占位后，依次提供订单、客服、团餐预定、兑换中心、发票与评价。"
+          ],
+          "evidence_boundaries": [
+            "未登录余额占位不能代表真实账户资产。"
+          ]
+        },
+        {
+          "id": "obs-mat-792439682643464941",
+          "material_id": "mat-792439682643464941",
+          "visible_facts": [
+            "登录身份下先显示喜茶券、喜卡与喜钱包，再提供订单、客服、兑换和积分商城。"
+          ],
+          "evidence_boundaries": [
+            "截图不能说明券、卡、钱包的使用频率或价值高低。"
+          ]
+        },
+        {
+          "id": "obs-mat-658360019995979356",
+          "material_id": "mat-658360019995979356",
+          "visible_facts": [
+            "微信登录入口下显示订单状态、钱包、优惠券、收藏、店铺关注、历史浏览与商品推荐。"
+          ],
+          "evidence_boundaries": [
+            "未登录页只证明服务骨架可见，不能证明真实资产层级。"
+          ]
+        },
+        {
+          "id": "obs-mat-551540436152132377",
+          "material_id": "mat-551540436152132377",
+          "visible_facts": [
+            "昵称与收货地址后展示订单状态、钱包、收藏、优惠券和购物推荐。"
+          ],
+          "evidence_boundaries": [
+            "头像提示不遮挡主体，但截图不能说明提示是否影响操作。"
+          ]
+        },
+        {
+          "id": "obs-mat-018621050003319015",
+          "material_id": "mat-018621050003319015",
+          "visible_facts": [
+            "支付宝快捷登录之后是订单状态、优惠权益及推荐、上新、收藏和足迹商品。"
+          ],
+          "evidence_boundaries": [
+            "未登录页面不能展示真实采购账户和订单资产。"
+          ]
+        },
+        {
+          "id": "obs-mat-327553016242661235",
+          "material_id": "mat-327553016242661235",
+          "visible_facts": [
+            "会员身份与权益卡片后展示红包、余额、省钱额，再接订单状态和服务宫格。"
+          ],
+          "evidence_boundaries": [
+            "省钱额是展示值，不能证明权益对消费决策的影响。"
+          ]
+        },
+        {
+          "id": "obs-mat-176174415809164424",
+          "material_id": "mat-176174415809164424",
+          "visible_facts": [
+            "登录入口后提供券卡、订单状态、售后、客服、企业采购、扫码与地址。"
+          ],
+          "evidence_boundaries": [
+            "未登录状态不能说明真实订单和资产如何呈现。"
+          ]
+        },
+        {
+          "id": "obs-mat-026234696324700781",
+          "material_id": "mat-026234696324700781",
+          "visible_facts": [
+            "登录入口下先放收藏与足迹，再分购买订单、出售订单、资产估价与交易工具。"
+          ],
+          "evidence_boundaries": [
+            "未登录画面不含真实买卖记录。"
+          ]
+        },
+        {
+          "id": "obs-mat-508614918845893842",
+          "material_id": "mat-508614918845893842",
+          "visible_facts": [
+            "未登录入口下同时提供创作中心、收藏、想要、足迹、关注、我有、订单、钱包和商家入驻。"
+          ],
+          "evidence_boundaries": [
+            "页面横跨内容关系、交易和商家角色，截图不能给出各角色的真实权重。"
+          ]
+        },
+        {
+          "id": "obs-mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+          "material_id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+          "visible_facts": [
+            "My Target 首屏依次显示购买历史、年度节省、Circle 奖励余额和社区支持票数。"
+          ],
+          "evidence_boundaries": [
+            "奖励余额和节省额是结果状态，不是任务列表或任务进度。"
+          ]
+        },
+        {
+          "id": "obs-mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+          "material_id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+          "visible_facts": [
+            "Your account 页面列出商业账户、设置、帮助、隐私安全、退出和会员编号。"
+          ],
+          "evidence_boundaries": [
+            "截图是账户服务根页，没有交易流水或资产概览。"
+          ]
+        },
+        {
+          "id": "obs-mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+          "material_id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+          "visible_facts": [
+            "MY ACCOUNT 下段可见地址、支付方式、通知、联系偏好、社交账户、礼卡、帮助和反馈，并有滚动条。"
+          ],
+          "evidence_boundaries": [
+            "这是滚动后的下段视口，不能代表首屏内容与优先级。"
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "id": "cmp-learning",
+          "material_ids": [
+            "mat-096876602836684120",
+            "mat-133323406851668822",
+            "mat-004403109497668392",
+            "mat-227130207557343885",
+            "mat-406465221275907801",
+            "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+            "mat-176567570728999594",
+            "mat-261238806478543829"
+          ],
+          "comparison_findings": [
+            "样本都把学习、阅读或收藏记录放进个人中心，但有的强调下一步任务，有的强调累计记录或内容集合。",
+            "游客或未登录页面仍可能展示结构，但真实个人资产只有登录样本可见。"
+          ],
+          "design_judgment": "记录只有能帮助回顾或继续内容时才值得占据首屏，不能因为都是教育或内容产品就统一成同一种宫格。",
+          "recommendation": "先确定用户回来要继续的对象，再从任务、进度或内容集合中选择主要表达。",
+          "applicability": "个人中心承担持续学习、阅读或收藏管理。",
+          "tradeoffs": [
+            "累计指标便于回顾，但可能挤压下一步动作。",
+            "子导航便于管理大量内容，但增加一次选择。"
+          ],
+          "evidence_boundaries": [
+            "静态截图不提供近期使用频率、留存或转化数据。"
+          ]
+        },
+        {
+          "id": "cmp-learning-settings",
+          "material_ids": [
+            "mat-168392972276229080",
+            "mat-248305763204570159"
+          ],
+          "comparison_findings": [
+            "两张不背单词截图的信息结构相同，均围绕会员、酷币、装备、外观和学习设置，仅主题明暗不同。"
+          ],
+          "design_judgment": "这组支持比较学习资产与个性化环境的组织，不支持进度、记录或继续学习模式。",
+          "recommendation": "只在学习资产能解释环境或设置动作时保留该层，并把深浅主题视为视觉状态而非两种结构。",
+          "applicability": "产品具有虚拟学习资产、装备或可配置学习环境。",
+          "tradeoffs": [
+            "资产和设置靠前会压缩学习进度或继续内容的空间。"
+          ],
+          "evidence_boundaries": [
+            "截图没有学习进度、记录、收藏或继续内容，不能把它们归入进度组。"
+          ]
+        },
+        {
+          "id": "cmp-creator",
+          "material_ids": [
+            "mat-025429166561164948",
+            "mat-612887545133740724"
+          ],
+          "comparison_findings": [
+            "两页都在身份区后安排作品、创作或关系入口，再承接订单等次要业务。"
+          ],
+          "design_judgment": "身份主线能约束多业务入口，但自己的创作中心不能被误读为他人的公开主页。",
+          "recommendation": "当创作与关系确实是回访任务时，把作品和创作入口放在身份信息之后。",
+          "applicability": "内容社区或创作者工具。",
+          "tradeoffs": [
+            "强化创作会压缩交易与账户服务的首屏空间。"
+          ],
+          "evidence_boundaries": [
+            "未登录样本不能证明真实作品与关系资产的呈现密度。"
+          ]
+        },
+        {
+          "id": "cmp-library",
+          "material_ids": [
+            "mat-438158835260733576",
+            "mat-392538942926681954"
+          ],
+          "comparison_findings": [
+            "酷狗围绕喜欢、下载和最近播放，迅雷围绕下载、云盘、文件统计与容量；共同对象是可继续处理的媒体或文件。"
+          ],
+          "design_judgment": "出现会员、游戏或推荐服务不改变库管理主任务，分类应以主要对象而不是附带入口决定。",
+          "recommendation": "用最近、下载、收藏或容量状态连接继续处理动作，并把推荐服务降到其后。",
+          "applicability": "媒体播放、下载或云盘文件管理。",
+          "tradeoffs": [
+            "状态概览有助于定位内容，但过多统计会挤压直接操作。"
+          ],
+          "evidence_boundaries": [
+            "截图不能证明本地与云端内容是否同步，也不能说明工具使用频率。"
+          ]
+        },
+        {
+          "id": "cmp-commerce",
+          "material_ids": [
+            "mat-667567417512043064",
+            "mat-792439682643464941",
+            "mat-658360019995979356",
+            "mat-551540436152132377",
+            "mat-018621050003319015",
+            "mat-327553016242661235",
+            "mat-176174415809164424",
+            "mat-026234696324700781",
+            "mat-508614918845893842",
+            "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+          ],
+          "comparison_findings": [
+            "样本普遍用订单阶段、购买记录或售后入口组织交易后任务，部分再加入券卡、钱包或累计收益。",
+            "Target 只展示购买历史和权益结果，没有任务列表、目标或下一步动作。"
+          ],
+          "design_judgment": "订单与权益可以相邻，但权益结果不能被当作任务中心；推荐商品面积也不能证明更高转化。",
+          "recommendation": "先按订单生命周期安排处理入口，再决定哪些可消费权益能帮助下一次交易。",
+          "applicability": "零售、交易或生活服务的个人中心。",
+          "tradeoffs": [
+            "权益前置便于确认余额，但会减少订单处理空间。",
+            "推荐内容支持再次购买，但可能遮蔽售后任务。"
+          ],
+          "evidence_boundaries": [
+            "静态截图不提供转化、复购或功能使用数据。"
+          ]
+        },
+        {
+          "id": "cmp-account-path",
+          "material_ids": [
+            "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+            "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+          ],
+          "comparison_findings": [
+            "Wise 是账户服务根页，ASOS 是带滚动条的账户页下段；两者都收纳维护动作，但不能直接比较首屏优先级。"
+          ],
+          "design_judgment": "页面路径与视口阶段必须先对齐；下段适合说明分区方式，不代表功能天然低频。",
+          "recommendation": "用根页承接身份、安全与账户切换，用下段或二级页收纳地址、支付、通知和帮助。",
+          "applicability": "账户维护项多于首屏可容纳范围。",
+          "tradeoffs": [
+            "收纳减少首屏噪音，但会增加查找路径。"
+          ],
+          "evidence_boundaries": [
+            "ASOS 截图不包含首屏，无法判断首屏已有内容。"
+          ]
+        }
+      ]
+    },
+    "overall": {
+      "id": "overall-main-task",
+      "kind": "inference",
+      "statement": "‘我的’页应先按用户要继续管理的对象选择参照：内容记录、学习环境、创作身份、媒体文件、交易订单和账户治理需要不同的首屏结构。",
+      "evidence_refs": [
+        {
+          "kind": "group",
+          "id": "group-learning-progress"
+        },
+        {
+          "kind": "group",
+          "id": "group-learning-settings"
+        },
+        {
+          "kind": "group",
+          "id": "group-creator-identity"
+        },
+        {
+          "kind": "group",
+          "id": "group-media-file-library"
+        },
+        {
+          "kind": "group",
+          "id": "group-order-benefits"
+        },
+        {
+          "kind": "group",
+          "id": "group-account-settings"
+        }
+      ],
+      "analysis_refs": [
+        "cmp-learning",
+        "cmp-learning-settings",
+        "cmp-creator",
+        "cmp-library",
+        "cmp-commerce",
+        "cmp-account-path"
+      ],
+      "recommendation": "先写清目标页面的主任务，再从对应组比较入口层级；把登录态与路径阶段作为筛选标签。",
+      "applicability": "适用于尚未给出现状与改版目标的宽泛竞品搜集。",
+      "limitations": "这些样本只能支持可见结构判断，不能证明实际频率、转化或留存。"
+    },
+    "key_findings": [
+      {
+        "id": "finding-login-overlay",
+        "kind": "inference",
+        "statement": "登录态会改变可见资产，却不应把主任务不同的页面合成一个业务组。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-133323406851668822"
+          },
+          {
+            "kind": "material",
+            "id": "mat-438158835260733576"
+          },
+          {
+            "kind": "material",
+            "id": "mat-018621050003319015"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-learning",
+          "cmp-library",
+          "cmp-commerce"
+        ],
+        "recommendation": "在分类内标注 logged_out 或 guest，并只比较登录前确实可见的结构。",
+        "applicability": "同一业务任务需要比较登录前后的信息暴露。",
+        "limitations": "未登录截图不能代表登录后的真实资产。"
+      },
+      {
+        "id": "finding-xunlei-boundary",
+        "kind": "inference",
+        "statement": "迅雷的主要对象是下载、云盘和文件状态，与酷狗的媒体库更接近，不因会员和推荐服务进入订单组。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-392538942926681954"
+          },
+          {
+            "kind": "material",
+            "id": "mat-438158835260733576"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-library"
+        ],
+        "recommendation": "分类时以页面主要对象和连续任务为准，再记录附带业务。",
+        "applicability": "比较媒体、下载或文件个人中心。",
+        "limitations": "只基于当前可见页面，不能概括整个产品业务。"
+      },
+      {
+        "id": "finding-target-boundary",
+        "kind": "inference",
+        "statement": "Target 的年度节省与奖励余额解释消费权益结果，没有目标、进度或下一步动作，不能作为任务中心样本。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-commerce"
+        ],
+        "recommendation": "把它用于比较会员价值或消费权益表达，不用于推导任务卡。",
+        "applicability": "研究零售账户的权益价值呈现。",
+        "limitations": "余额为零不能说明功能无效，也不能推断转化。"
+      },
+      {
+        "id": "finding-path-boundary",
+        "kind": "inference",
+        "statement": "账户根页、滚动下段和已选中子页只能比较各自阶段的组织方式，不能直接排名首屏优先级。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b"
+          },
+          {
+            "kind": "material",
+            "id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+          },
+          {
+            "kind": "material",
+            "id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-learning",
+          "cmp-account-path"
+        ],
+        "recommendation": "比较前先对齐 path_stage 与 interaction_stage。",
+        "applicability": "同一研究包含根页、子页或滚动状态。",
+        "limitations": "单张静态截图不能还原完整路径。"
+      }
+    ],
+    "groups": [
+      {
+        "group_id": "group-learning-progress",
+        "takeaway": {
+          "id": "group-takeaway-learning",
+          "kind": "inference",
+          "statement": "重点比较记录如何帮助用户回顾或继续内容；适合持续学习与阅读，前提是先明确回来要继续什么。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-learning-progress"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-learning"
+          ],
+          "recommendation": "按任务、进度或内容集合选择一种主表达。",
+          "applicability": "个人中心承担持续内容行为。",
+          "limitations": "截图不能证明哪个入口最高频。"
+        }
+      },
+      {
+        "group_id": "group-learning-settings",
+        "takeaway": {
+          "id": "group-takeaway-learning-settings",
+          "kind": "inference",
+          "statement": "重点比较会员、学习资产和个性化设置如何形成环境配置入口；不含进度或继续内容证据。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-learning-settings"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-learning-settings"
+          ],
+          "recommendation": "只保留能连接到学习环境或设置动作的资产。",
+          "applicability": "产品具有可配置学习环境与虚拟资产。",
+          "limitations": "深浅主题是视觉状态，不增加结构样本权重。"
+        }
+      },
+      {
+        "group_id": "group-creator-identity",
+        "takeaway": {
+          "id": "group-takeaway-creator",
+          "kind": "inference",
+          "statement": "重点比较作品、关系与创作入口如何围绕身份聚合；适合创作者账户，不宜套到只管理订单的页面。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-creator-identity"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-creator"
+          ],
+          "recommendation": "把作品与创作工具紧跟身份区。",
+          "applicability": "创作是账户的主要回访任务。",
+          "limitations": "自己的创作中心不等于他人的公开主页。"
+        }
+      },
+      {
+        "group_id": "group-media-file-library",
+        "takeaway": {
+          "id": "group-takeaway-library",
+          "kind": "inference",
+          "statement": "重点比较最近、下载、收藏和容量如何支持继续处理内容；会员或推荐入口不能改变文件与媒体主任务。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-media-file-library"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-library"
+          ],
+          "recommendation": "先呈现库状态和继续操作，再放推荐服务。",
+          "applicability": "媒体或文件是个人中心的主要对象。",
+          "limitations": "截图不能证明同步能力或工具频率。"
+        }
+      },
+      {
+        "group_id": "group-order-benefits",
+        "takeaway": {
+          "id": "group-takeaway-commerce",
+          "kind": "inference",
+          "statement": "重点比较订单阶段、权益与售后如何围绕交易链组织；奖励结果不能当作任务中心。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-order-benefits"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-commerce"
+          ],
+          "recommendation": "先按交易阶段组织，再选择能支持下一次消费的权益。",
+          "applicability": "个人中心承接购买、履约或售后。",
+          "limitations": "不能从面积和位置推断转化效果。"
+        }
+      },
+      {
+        "group_id": "group-account-settings",
+        "takeaway": {
+          "id": "group-takeaway-settings",
+          "kind": "inference",
+          "statement": "重点比较安全、隐私与账户切换如何形成治理根页；适合账户维护，不承担内容或交易概览。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-account-settings"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-account-path"
+          ],
+          "recommendation": "保持账户治理入口稳定分区。",
+          "applicability": "进入页面的主要目的为维护账户。",
+          "limitations": "金融产品身份不代表当前页面是资产页。"
+        }
+      },
+      {
+        "group_id": "group-account-lower",
+        "takeaway": {
+          "id": "group-takeaway-settings-lower",
+          "kind": "inference",
+          "statement": "重点比较地址、支付、通知和帮助如何在下段收纳；可借鉴分区，不能据此判断首屏优先级。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-account-lower"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-account-path"
+          ],
+          "recommendation": "把维护项放入清楚的下段或二级分区。",
+          "applicability": "首屏已有更核心的账户任务。",
+          "limitations": "滚动位置不能代表功能低频。"
+        }
+      }
+    ],
+    "materials": [
+      {
+        "material_id": "mat-096876602836684120",
+        "insight": {
+          "id": "insight-mat-096876602836684120",
+          "kind": "inference",
+          "statement": "用成对卡片把可行动的任务与资产放在身份区之后，可让学习目标直接进入下一步。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-096876602836684120"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-096876602836684120",
+            "cmp-learning"
+          ],
+          "recommendation": "只有当任务与金币共同服务学习闭环时再并排；否则应拆开表达。",
+          "applicability": "有明确每日任务或学习激励的产品。",
+          "limitations": "当前画面没有任务进度，不能据此判断任务卡是否足够。"
+        }
+      },
+      {
+        "material_id": "mat-133323406851668822",
+        "insight": {
+          "id": "insight-mat-133323406851668822",
+          "kind": "inference",
+          "statement": "未登录页保留功能骨架，可用于预告登录后能做什么，而不必把全部页面替换成登录拦截。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-133323406851668822"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-133323406851668822",
+            "cmp-learning"
+          ],
+          "recommendation": "只展示可理解且登录后确实可用的入口，并清楚处理需要登录的动作。",
+          "applicability": "希望在登录前解释产品价值的个人中心。",
+          "limitations": "不能用这张图判断登录后资产的视觉权重。"
+        }
+      },
+      {
+        "material_id": "mat-004403109497668392",
+        "insight": {
+          "id": "insight-mat-004403109497668392",
+          "kind": "inference",
+          "statement": "把学习概览与社交身份放在同一页，适合让成长记录同时承担自我回顾和关系建立。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-004403109497668392"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-004403109497668392",
+            "cmp-learning"
+          ],
+          "recommendation": "先确认产品是否真的需要可见的学习身份与好友关系。",
+          "applicability": "学习行为具有社交或展示价值的产品。",
+          "limitations": "截图不能说明用户是否常用添加好友或装扮入口。"
+        }
+      },
+      {
+        "material_id": "mat-168392972276229080",
+        "insight": {
+          "id": "insight-mat-168392972276229080",
+          "kind": "inference",
+          "statement": "把学习资产与个性化设置相邻，可让用户从成果状态进入学习环境调整。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-168392972276229080"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-168392972276229080",
+            "cmp-learning-settings"
+          ],
+          "recommendation": "资产必须能解释后续设置或学习行为，否则会增加首屏噪音。",
+          "applicability": "有学习资产和个性化环境的产品。",
+          "limitations": "主题和资产并列不证明它们具有相同优先级。"
+        }
+      },
+      {
+        "material_id": "mat-248305763204570159",
+        "insight": {
+          "id": "insight-mat-248305763204570159",
+          "kind": "inference",
+          "statement": "同构的深浅主题适合检查卡片层级与状态色在不同背景下是否仍可辨认。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-248305763204570159"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-248305763204570159",
+            "cmp-learning-settings"
+          ],
+          "recommendation": "只把它用于主题可读性对照，不重复计算结构模式。",
+          "applicability": "需要同时支持深浅主题的既有个人中心。",
+          "limitations": "不能据此增加某种布局的样本权重。"
+        }
+      },
+      {
+        "material_id": "mat-227130207557343885",
+        "insight": {
+          "id": "insight-mat-227130207557343885",
+          "kind": "inference",
+          "statement": "游客页保留完整内容管理框架，可用于解释登录后会沉淀哪些阅读记录。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-227130207557343885"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-227130207557343885",
+            "cmp-learning"
+          ],
+          "recommendation": "占位状态要与真实记录区分，并给出清楚的登录价值。",
+          "applicability": "内容记录是登录主要收益的产品。",
+          "limitations": "不能用零值或空值判断功能是否被使用。"
+        }
+      },
+      {
+        "material_id": "mat-406465221275907801",
+        "insight": {
+          "id": "insight-mat-406465221275907801",
+          "kind": "inference",
+          "statement": "把累计进度与内容集合并列，可让个人中心同时回答读了多少和接下来读什么。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-406465221275907801"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-406465221275907801",
+            "cmp-learning"
+          ],
+          "recommendation": "优先选择能支持回顾或继续阅读的指标，避免堆放与行动无关的数字。",
+          "applicability": "有长期内容记录与继续消费任务的产品。",
+          "limitations": "无法从截图判断这些指标是否提升阅读留存。"
+        }
+      },
+      {
+        "material_id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+        "insight": {
+          "id": "insight-mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+          "kind": "inference",
+          "statement": "当个人内容足够多时，用子导航分开兴趣、历史和收藏，比把三类列表连续堆在首屏更易定位。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+            "cmp-learning"
+          ],
+          "recommendation": "子导航只有在每类内容都值得独立浏览时才成立。",
+          "applicability": "收藏和历史构成主要回访任务的内容产品。",
+          "limitations": "单张已选中子页不能说明三个分段的使用优先级。"
+        }
+      },
+      {
+        "material_id": "mat-176567570728999594",
+        "insight": {
+          "id": "insight-mat-176567570728999594",
+          "kind": "inference",
+          "statement": "登录前展示课程、生词等能力入口，可让用户预览个人中心覆盖的学习任务。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-176567570728999594"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-176567570728999594",
+            "cmp-learning"
+          ],
+          "recommendation": "必须区分可直接使用、需要登录和仅作权益说明的入口。",
+          "applicability": "工具产品希望在账户页承接学习服务时。",
+          "limitations": "会员卡在前不等于会员是用户进入页面的高频目的。"
+        }
+      },
+      {
+        "material_id": "mat-261238806478543829",
+        "insight": {
+          "id": "insight-mat-261238806478543829",
+          "kind": "inference",
+          "statement": "先聚合个人内容关系，再承接学习与交易服务，可避免把所有入口混成一个宫格。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-261238806478543829"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-261238806478543829",
+            "cmp-learning"
+          ],
+          "recommendation": "需要先确定内容关系是否比订单和会员更接近页面主任务。",
+          "applicability": "同时沉淀内容互动与学习资料的工具产品。",
+          "limitations": "仍需访问数据决定哪些入口应留在首屏。"
+        }
+      },
+      {
+        "material_id": "mat-025429166561164948",
+        "insight": {
+          "id": "insight-mat-025429166561164948",
+          "kind": "inference",
+          "statement": "把作品和创作工具放在身份区之后，可让个人中心承担创作管理，而不是只做账户设置。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-025429166561164948"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-025429166561164948",
+            "cmp-creator"
+          ],
+          "recommendation": "创作资产必须是用户回访个人中心的真实任务。",
+          "applicability": "用户会持续创建、发布或管理作品的产品。",
+          "limitations": "会员、订单和任务仍需与创作入口区分层级。"
+        }
+      },
+      {
+        "material_id": "mat-612887545133740724",
+        "insight": {
+          "id": "insight-mat-612887545133740724",
+          "kind": "inference",
+          "statement": "先呈现关系与创作身份，再放交易和车主服务，适合用身份主线约束多业务入口。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-612887545133740724"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-612887545133740724",
+            "cmp-creator"
+          ],
+          "recommendation": "只有当创作与关系是账户核心任务时才采用这一顺序。",
+          "applicability": "内容社区叠加交易或服务业务的产品。",
+          "limitations": "登录状态下的真实内容密度仍需复核。"
+        }
+      },
+      {
+        "material_id": "mat-438158835260733576",
+        "insight": {
+          "id": "insight-mat-438158835260733576",
+          "kind": "inference",
+          "statement": "把收藏、下载和最近播放放在同一区域，可直接支持继续听与离线管理。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-438158835260733576"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-438158835260733576",
+            "cmp-library"
+          ],
+          "recommendation": "需要区分本地记录与登录后同步内容。",
+          "applicability": "个人中心的主任务是返回媒体内容的产品。",
+          "limitations": "不能用登录前可见性推断跨设备同步能力。"
+        }
+      },
+      {
+        "material_id": "mat-392538942926681954",
+        "insight": {
+          "id": "insight-mat-392538942926681954",
+          "kind": "inference",
+          "statement": "用文件数量与容量状态连接下载、云盘和工具入口，适合支持继续处理文件。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-392538942926681954"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-392538942926681954",
+            "cmp-library"
+          ],
+          "recommendation": "把文件状态作为核心时，应把推荐服务降到其后，避免与文件任务同权。",
+          "applicability": "下载或云盘管理是个人中心主要任务的产品。",
+          "limitations": "会员身份不能成为把它归入订单或电商页面的依据。"
+        }
+      },
+      {
+        "material_id": "mat-667567417512043064",
+        "insight": {
+          "id": "insight-mat-667567417512043064",
+          "kind": "inference",
+          "statement": "即使未登录也保留完整交易服务目录，可让用户先找到订单、客服或发票再触发登录。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-667567417512043064"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-667567417512043064",
+            "cmp-commerce"
+          ],
+          "recommendation": "登录拦截应发生在需要身份的动作上，而不是遮住整个服务结构。",
+          "applicability": "用户可能带着明确售后或交易任务进入个人中心。",
+          "limitations": "无法从截图判断哪些服务最常用。"
+        }
+      },
+      {
+        "material_id": "mat-792439682643464941",
+        "insight": {
+          "id": "insight-mat-792439682643464941",
+          "kind": "inference",
+          "statement": "把可消费资产放在订单服务之前，适合让用户先确认权益余额再进入交易处理。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-792439682643464941"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-792439682643464941",
+            "cmp-commerce"
+          ],
+          "recommendation": "资产必须能直接用于本产品消费，否则不应占据首屏。",
+          "applicability": "券卡余额与点单形成闭环的消费产品。",
+          "limitations": "三类资产并列会增加认知成本，仍需按业务定义取舍。"
+        }
+      },
+      {
+        "material_id": "mat-658360019995979356",
+        "insight": {
+          "id": "insight-mat-658360019995979356",
+          "kind": "inference",
+          "statement": "按订单阶段提供直接入口，并把收藏和浏览记录接到推荐内容，可支持交易前后两类回访。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-658360019995979356"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-658360019995979356",
+            "cmp-commerce"
+          ],
+          "recommendation": "需要明确订单处理和继续购物哪一个是当前页面的主任务。",
+          "applicability": "个人中心同时承担订单处理与再次购买的电商。",
+          "limitations": "商品推荐占比大不等于更有效。"
+        }
+      },
+      {
+        "material_id": "mat-551540436152132377",
+        "insight": {
+          "id": "insight-mat-551540436152132377",
+          "kind": "inference",
+          "statement": "把地址与订单状态放在身份区附近，可让用户快速确认交易身份和履约进度。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-551540436152132377"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-551540436152132377",
+            "cmp-commerce"
+          ],
+          "recommendation": "只有地址会频繁影响交易任务时才应靠前。",
+          "applicability": "履约状态与收货信息紧密相关的电商。",
+          "limitations": "推荐内容的面积不能作为转化效果证据。"
+        }
+      },
+      {
+        "material_id": "mat-018621050003319015",
+        "insight": {
+          "id": "insight-mat-018621050003319015",
+          "kind": "inference",
+          "statement": "快捷登录后直接预览订单与采购发现入口，适合降低企业采购用户寻找交易状态的路径。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-018621050003319015"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-018621050003319015",
+            "cmp-commerce"
+          ],
+          "recommendation": "采购身份和个人消费身份不同，入口文案需匹配实际账户关系。",
+          "applicability": "采购交易是个人中心主任务的 B2B 平台。",
+          "limitations": "不能把推荐商品出现理解为账户页的唯一重点。"
+        }
+      },
+      {
+        "material_id": "mat-327553016242661235",
+        "insight": {
+          "id": "insight-mat-327553016242661235",
+          "kind": "inference",
+          "statement": "把可用权益与订单状态分成相邻层，可同时支持下单前确认资产和下单后处理履约。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-327553016242661235"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-327553016242661235",
+            "cmp-commerce"
+          ],
+          "recommendation": "需要限制权益指标数量，并保证每项都能进入明确动作。",
+          "applicability": "会员权益与即时零售交易紧密相连的产品。",
+          "limitations": "会员卡更大不等于对用户更有效。"
+        }
+      },
+      {
+        "material_id": "mat-176174415809164424",
+        "insight": {
+          "id": "insight-mat-176174415809164424",
+          "kind": "inference",
+          "statement": "把售后、客服和地址与订单阶段放在同一服务区，可覆盖即时零售的交易后任务。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-176174415809164424"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-176174415809164424",
+            "cmp-commerce"
+          ],
+          "recommendation": "辅助入口应围绕真实交易路径分组，避免仅按图标数量排布。",
+          "applicability": "配送、售后和地址都是订单链路组成部分的零售产品。",
+          "limitations": "不能由画面位置推断企业采购属于高频。"
+        }
+      },
+      {
+        "material_id": "mat-026234696324700781",
+        "insight": {
+          "id": "insight-mat-026234696324700781",
+          "kind": "inference",
+          "statement": "按买入和卖出两条角色路径拆分订单，可减少双边交易用户在同一列表中辨认任务的成本。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-026234696324700781"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-026234696324700781",
+            "cmp-commerce"
+          ],
+          "recommendation": "只有用户确实会在两种交易角色间切换时才值得双路径。",
+          "applicability": "同时支持买卖双方任务的交易平台。",
+          "limitations": "无法从截图判断两条路径的使用比例。"
+        }
+      },
+      {
+        "material_id": "mat-508614918845893842",
+        "insight": {
+          "id": "insight-mat-508614918845893842",
+          "kind": "inference",
+          "statement": "将想要、我有与订单相邻，可围绕商品关系连接交易前收藏和交易后资产。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-508614918845893842"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-508614918845893842",
+            "cmp-commerce"
+          ],
+          "recommendation": "需要明确普通买家与商家入口是否应共享同一首屏。",
+          "applicability": "商品社区与交易关系同时存在的平台。",
+          "limitations": "入口齐全不等于层级合理；仍需按目标角色删减。"
+        }
+      },
+      {
+        "material_id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+        "insight": {
+          "id": "insight-mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+          "kind": "inference",
+          "statement": "把购买记录与已获权益放在同一账户首屏，可解释会员关系带来的可见价值。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-08723dab-7694-4c3b-a061-6dd9393de0db"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+            "cmp-commerce"
+          ],
+          "recommendation": "只有收益口径清楚且可核对时才展示累计价值。",
+          "applicability": "零售账户需要同时承接购买记录与会员权益时。",
+          "limitations": "0 金额不能说明页面未加载，也不能证明权益展示提升转化。"
+        }
+      },
+      {
+        "material_id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+        "insight": {
+          "id": "insight-mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+          "kind": "inference",
+          "statement": "将安全、帮助和账户切换集中成稳定列表，适合承担账户治理而非内容或交易概览。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+            "cmp-account-path"
+          ],
+          "recommendation": "需要把高风险账户动作与普通帮助入口保持清楚分区。",
+          "applicability": "用户进入页面主要是维护身份、安全和账户类型时。",
+          "limitations": "不能因产品是金融服务就假定该页承担资产管理。"
+        }
+      },
+      {
+        "material_id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+        "insight": {
+          "id": "insight-mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+          "kind": "inference",
+          "statement": "把地址、支付、通知和帮助按账户维护主题连续收纳，可作为二级管理区的组织参考。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+            }
+          ],
+          "analysis_refs": [
+            "obs-mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+            "cmp-account-path"
+          ],
+          "recommendation": "应在首屏已有核心任务入口的前提下，把这些管理项放入下段或二级页。",
+          "applicability": "账户维护项较多且不需要同时曝光的产品。",
+          "limitations": "不能用下段位置推断这些功能低频。"
+        }
+      }
+    ],
+    "synthesis": {
+      "findings": [
+        {
+          "id": "summary-select-pattern",
+          "kind": "inference",
+          "statement": "先按继续内容、学习环境配置、创作管理、文件处理、交易服务或账户治理选择结构，再在同一主任务内比较入口层级。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-learning-progress"
+            },
+            {
+              "kind": "group",
+              "id": "group-learning-settings"
+            },
+            {
+              "kind": "group",
+              "id": "group-creator-identity"
+            },
+            {
+              "kind": "group",
+              "id": "group-media-file-library"
+            },
+            {
+              "kind": "group",
+              "id": "group-order-benefits"
+            },
+            {
+              "kind": "group",
+              "id": "group-account-settings"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-learning",
+            "cmp-learning-settings",
+            "cmp-creator",
+            "cmp-library",
+            "cmp-commerce",
+            "cmp-account-path"
+          ],
+          "recommendation": "把页面主任务写成一个可完成的动作，并排除只有行业相同或都含会员的样本。",
+          "applicability": "尚未确定具体改版目标的模式调研。",
+          "limitations": "跨行业比较只能迁移共同机制，不能直接迁移业务模块。"
+        },
+        {
+          "id": "summary-keep-state",
+          "kind": "inference",
+          "statement": "登录态、自己的账户、子页和滚动下段应作为比较条件持续保留，否则结构差异会被错误解释为设计优先级。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-133323406851668822"
+            },
+            {
+              "kind": "material",
+              "id": "mat-004403109497668392"
+            },
+            {
+              "kind": "material",
+              "id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-learning",
+            "cmp-creator",
+            "cmp-account-path"
+          ],
+          "recommendation": "筛选样本时同时对齐主任务、页面角色和路径阶段。",
+          "applicability": "需要跨状态或跨路径复用历史截图。",
+          "limitations": "标签能避免误读，但不能替代完整交互路径验证。"
+        }
+      ],
+      "validation_questions": [
+        {
+          "id": "verify-primary-task",
+          "kind": "question",
+          "statement": "目标产品的用户进入‘我的’页后最需要继续完成哪一件事？",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-learning-progress"
+            },
+            {
+              "kind": "group",
+              "id": "group-order-benefits"
+            },
+            {
+              "kind": "group",
+              "id": "group-account-settings"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-learning",
+            "cmp-commerce",
+            "cmp-account-path"
+          ]
+        },
+        {
+          "id": "verify-login-visibility",
+          "kind": "question",
+          "statement": "未登录时哪些功能只需预览，哪些动作必须在入口处触发登录？",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-133323406851668822"
+            },
+            {
+              "kind": "material",
+              "id": "mat-667567417512043064"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-learning",
+            "cmp-commerce"
+          ]
+        },
+        {
+          "id": "verify-current-version",
+          "kind": "question",
+          "statement": "进入设计决策前，哪些历史样本需要重新确认当前版本和完整路径？",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-533a310b-0a57-4b92-9f6f-205fb07cadf2"
+            },
+            {
+              "kind": "material",
+              "id": "mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-learning",
+            "cmp-account-path"
+          ]
+        }
+      ]
+    },
+    "information_gaps": [
+      {
+        "section": "current_state",
+        "status": "not_provided",
+        "reason": "用户没有提供产品现状或改版目标，本报告不生成针对某个产品的方案。"
+      }
+    ],
+    "methodology": [
+      {
+        "title": "历史素材分析重放",
+        "text": "沿用既有证据与图片，仅重做逐图观察、分类和分析；没有执行新的来源搜集或登录检查，不视为当前版本验收。"
+      },
+      {
+        "title": "分析边界",
+        "text": "结论来自静态截图的可见结构；不把位置、面积或数值直接解释为高频、有效、转化或留存。"
+      }
+    ],
+    "quality_review": {
+      "review_type": "agent_self_review",
+      "independent": false,
+      "reviewed_claim_ids": [
+        "overall-main-task",
+        "finding-login-overlay",
+        "finding-xunlei-boundary",
+        "finding-target-boundary",
+        "finding-path-boundary",
+        "group-takeaway-learning",
+        "group-takeaway-learning-settings",
+        "group-takeaway-creator",
+        "group-takeaway-library",
+        "group-takeaway-commerce",
+        "group-takeaway-settings",
+        "group-takeaway-settings-lower",
+        "insight-mat-096876602836684120",
+        "insight-mat-133323406851668822",
+        "insight-mat-004403109497668392",
+        "insight-mat-168392972276229080",
+        "insight-mat-248305763204570159",
+        "insight-mat-227130207557343885",
+        "insight-mat-406465221275907801",
+        "insight-mat-8b8ed53b-f284-46c6-97c8-45aeeed50a00",
+        "insight-mat-176567570728999594",
+        "insight-mat-261238806478543829",
+        "insight-mat-025429166561164948",
+        "insight-mat-612887545133740724",
+        "insight-mat-438158835260733576",
+        "insight-mat-392538942926681954",
+        "insight-mat-667567417512043064",
+        "insight-mat-792439682643464941",
+        "insight-mat-658360019995979356",
+        "insight-mat-551540436152132377",
+        "insight-mat-018621050003319015",
+        "insight-mat-327553016242661235",
+        "insight-mat-176174415809164424",
+        "insight-mat-026234696324700781",
+        "insight-mat-508614918845893842",
+        "insight-mat-08723dab-7694-4c3b-a061-6dd9393de0db",
+        "insight-mat-fac3a0c7-d886-41dd-b9d5-12b86df97f1b",
+        "insight-mat-533a310b-0a57-4b92-9f6f-205fb07cadf2",
+        "summary-select-pattern",
+        "summary-keep-state",
+        "verify-primary-task",
+        "verify-login-visibility",
+        "verify-current-version"
+      ],
+      "checks": {
+        "evidence_supported": true,
+        "reference_value_clear": true,
+        "research_relevant": true,
+        "exceptions_considered": true,
+        "duplicates_resolved": true,
+        "generic_claims_removed": true
+      },
+      "edits": [
+        {
+          "candidate_id": "old-order-service-xunlei",
+          "action": "rewritten",
+          "before": "交易与文件类页面需先确认共同的入口组织机制。",
+          "after": "迅雷按下载、云盘和文件管理归入媒体与文件库，不再与订单页合组。",
+          "reason": "旧分类把不同主任务放进同一层级，宽泛提醒不能修复比较基础。"
+        },
+        {
+          "candidate_id": "old-logged-out-catch-all",
+          "action": "removed",
+          "before": "国内｜未登录的完整个人中心。",
+          "reason": "登录态只是证据条件，不能充当容纳内容、交易、文件和创作页面的业务分类。"
+        }
+      ],
+      "notes": [
+        "逐图检查可见事实后再写比较、判断与建议；删除了仅复述控件或执行流程的候选结论。",
+        "这是同一 Agent 的交付前人工自查，只辅助暴露遗漏与过度推断，不是独立质量验证。"
+      ]
+    }
+  },
+  "report_schema_version": 1,
+  "generation": {
+    "mode": "replay",
+    "analysis_status": "provided",
+    "analysis_standard": "v2_agent_self_review",
+    "standard_acceptance": "not_assessed"
+  }
+}

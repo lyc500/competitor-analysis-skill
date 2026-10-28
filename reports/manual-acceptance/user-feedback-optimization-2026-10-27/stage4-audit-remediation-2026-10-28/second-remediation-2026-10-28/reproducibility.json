@@ -1,0 +1,20 @@
+{
+  "temporary_output_root": "/private/tmp/competitor-second-remediation-repro.axmJMg",
+  "evidence_type": "formal_entry_independent_temporary_regeneration",
+  "cases": {
+    "a": {
+      "delivered_count": 12,
+      "regenerated_count": 12,
+      "same_file_set": true,
+      "all_hashes_equal": true,
+      "mismatches": []
+    },
+    "b": {
+      "delivered_count": 10,
+      "regenerated_count": 10,
+      "same_file_set": true,
+      "all_hashes_equal": true,
+      "mismatches": []
+    }
+  }
+}
