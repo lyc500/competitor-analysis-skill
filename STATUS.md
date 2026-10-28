@@ -1,7 +1,7 @@
 # 项目当前状态
 
 更新时间：2026-10-28
-当前阶段：正式 GitHub 交付与本地 Skill 更新已完成；新会话加载与真实来源预检已验证，两类新报告受外部工具审批阻塞；R8 真实登录链路仍待触发
+当前阶段：正式 GitHub 交付与本地 Skill 更新已完成；新会话加载与真实来源预检已验证，场景 A 已生成新报告，场景 B 受外部工具审批阻塞；R8 真实登录链路仍待触发
 
 ## 2026-10-28 正式交付与生效验证
 
@@ -9,7 +9,8 @@
 - [x] 实际 Codex Skill 位于 `/Users/yuchunli/.codex/skills/competitor-analysis`。更新前版本 `4d889ab` 已保留为本地回退分支 `rollback/pre-user-feedback-optimization-20261028`；安装仓库以 fast-forward 更新到交付提交。
 - [x] 安装目录关键文件哈希与交付仓库一致，Python 实际导入路径指向安装目录；quick validator 通过，安装目录全量 190 项测试通过，保留 3 条 socket `ResourceWarning`。
 - [x] 两个新 Codex 会话从自然语言请求触发安装 Skill，独立确认加载路径/提交并复用 Chrome 会话预检 UI Notes、Refero、Mobbin、PTTRNS；场景 B 正确把虎牙现状图标为历史输入且不计竞品。
-- [ ] 两会话均因各自外部工具审批等待，尚未完成新的素材保存、结构化分析和正式 HTML 报告；审批解除后应在原会话续跑，不把当前状态记为两类真实任务全面通过。
+- [x] 场景 A 已取得并审核 4 张新原图，通过正式入口生成结构化分析、证据链、本地资产和 HTML 报告；浏览器安全策略阻止该会话打开 `file://`，因此只记录静态结构与资源检查，不把该次实机交互记为通过。
+- [ ] 场景 B 已完成来源预检和部分逐图审核，但再次进入外部工具审批等待；审批解除后应在原会话续跑，不把当前状态记为两类真实任务全面通过。
 - [x] 完整交付记录见 [正式交付与生效验证](reports/manual-acceptance/user-feedback-optimization-2026-10-27/stage4-audit-remediation-2026-10-28/second-remediation-2026-10-28/delivery-2026-10-28.md)。
 
 ## 2026-10-28 第二轮修正独立复验
