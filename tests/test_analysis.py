@@ -110,6 +110,66 @@ class AnalysisV2WorkflowTests(unittest.TestCase):
         self.assertEqual(self.validate(data), data)
         self.assertFalse(data["quality_review"]["independent"])
 
+    def test_v2_coverage_assessment_requires_explicit_choice_when_insufficient(self):
+        data = analysis_v2()
+        data["coverage_assessment"] = {
+            "status": "insufficient", "summary": "任务模块只有一个可用案例",
+            "covered_questions": ["会员入口"], "gaps": ["任务模块缺少第二个可比较案例"],
+            "user_decision": "pending",
+        }
+        with self.assertRaisesRegex(ValueError, "样本不足"):
+            self.validate(data)
+        data["coverage_assessment"]["user_decision"] = "continue_limited"
+        self.assertEqual(self.validate(data)["coverage_assessment"]["status"], "insufficient")
+
+    def test_detailed_coverage_requires_independent_cases_and_task_bound_choice(self):
+        from competitor_analysis_skill.analysis import validate_analysis
+        data = analysis_v2()
+        question = data["research"]["question"]
+        data["coverage_assessment"] = {
+            "status": "limited", "summary": "单个产品只能支持案例观察", "research_question": question,
+            "questions": [{"id": "q1", "question": "入口如何分层", "material_ids": ["mat-a"],
+                           "comparison_ids": [], "strategies": ["主入口独立成行"], "status": "single_case"}],
+            "gaps": [{"reason": "discovery_insufficient", "detail": "缺少第二个独立产品",
+                      "question_ids": ["q1"], "source_attempt_ids": []}],
+            "user_decision": {"status": "not_required", "research_question": question,
+                              "provenance": "not_required"},
+        }
+        materials = [{"id": "mat-a", "product_name": "产品A", "collection_status": "collected",
+                      "semantic_status": "accepted", "quality_status": "accepted", "image_path": "a.png"}]
+        classification = classify_assets(materials, classification_v2())
+        self.assertEqual(validate_analysis(data, materials, classification, True)["coverage_assessment"]["status"], "limited")
+        data["coverage_assessment"]["research_question"] = "另一项研究"
+        with self.assertRaisesRegex(ValueError, "研究问题"):
+            validate_analysis(data, materials, classification, True)
+
+    def test_detailed_coverage_does_not_count_duplicate_screens_as_independent_cases(self):
+        from competitor_analysis_skill.analysis import validate_analysis
+        materials = [{"id": mid, "product_name": "同一产品", "collection_status": "collected",
+                      "semantic_status": "accepted", "quality_status": "accepted", "image_path": mid+".png"}
+                     for mid in ("mat-a", "mat-b")]
+        classification = classify_assets(materials, classification_v2(("mat-a", "mat-b")))
+        data = analysis_v2()
+        data["analysis_process"]["material_observations"].append({
+            "id": "obs-b", "material_id": "mat-b", "visible_facts": ["同一产品另一张截图"],
+            "evidence_boundaries": ["不能冒充独立案例"]})
+        data["analysis_process"]["comparisons"] = [{
+            "id": "cmp", "material_ids": ["mat-a", "mat-b"], "comparison_findings": ["同一产品两个状态"],
+            "design_judgment": "只能比较状态", "recommendation": "补充其他产品", "applicability": "当前任务",
+            "tradeoffs": ["缺少独立案例"], "evidence_boundaries": ["不支持普遍结论"]}]
+        data["materials"].append({"material_id": "mat-b", "insight": {
+            "id": "material-b", "kind": "inference", "statement": "补充同产品另一状态",
+            "evidence_refs": [{"kind": "material", "id": "mat-b"}], "analysis_refs": ["obs-b"],
+            "recommendation": "仅作状态对照", "applicability": "同产品比较", "limitations": "不是独立案例"}})
+        data["quality_review"]["reviewed_claim_ids"].append("material-b")
+        q=data["research"]["question"]
+        data["coverage_assessment"]={"status":"sufficient","summary":"两张截图","research_question":q,
+            "questions":[{"id":"q1","question":"入口如何分层","material_ids":["mat-a","mat-b"],
+                          "comparison_ids":["cmp"],"strategies":["独立成行"],"status":"comparable"}],"gaps":[],
+            "user_decision":{"status":"not_required","research_question":q,"provenance":"not_required"}}
+        with self.assertRaisesRegex(ValueError, "独立产品"):
+            validate_analysis(data, materials, classification, True)
+
     def test_v2_rejects_missing_observation_and_unknown_analysis_reference(self):
         missing = analysis_v2(); missing["analysis_process"]["material_observations"] = []
         with self.assertRaisesRegex(ValueError, "逐图观察"):

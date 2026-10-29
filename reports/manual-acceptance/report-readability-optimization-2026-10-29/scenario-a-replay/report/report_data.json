@@ -1,0 +1,2474 @@
+{
+  "task": {
+    "raw_request": "帮我搜集一下国内外知名 App‘我的’页的竞品截图。",
+    "research_goal": "比较国内外知名 App 的我的页主任务、组织模式和适用场景",
+    "target_page": "我的页 / 个人中心",
+    "target_surface": "mobile_app",
+    "platforms": [
+      "iOS"
+    ],
+    "regions": [
+      "CN",
+      "Global"
+    ],
+    "specified_products": [],
+    "assumptions": [
+      "只使用公开可访问且可追溯的单屏 UI 素材"
+    ],
+    "needs_clarification": false,
+    "task_status": "ready",
+    "planning_strategy": "agent_only",
+    "competitors": [
+      {
+        "product_name": "哔哩哔哩",
+        "region": "CN",
+        "product_type": "视频社区",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "拼多多",
+        "region": "CN",
+        "product_type": "电商",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "豆包爱学",
+        "region": "CN",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "酷狗畅听版",
+        "region": "CN",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Duolingo",
+        "region": "Global",
+        "product_type": "学习工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "斗鱼",
+        "region": "CN",
+        "product_type": "直播社区",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Wise",
+        "region": "Global",
+        "product_type": "金融工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Kickstarter",
+        "region": "Global",
+        "product_type": "众筹平台",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "MD Vinyl",
+        "region": "Global",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "TIDAL",
+        "region": "Global",
+        "product_type": "音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Revolut",
+        "region": "Global",
+        "product_type": "金融工具",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "The New York Times",
+        "region": "Global",
+        "product_type": "新闻内容",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      },
+      {
+        "product_name": "Airbuds",
+        "region": "Global",
+        "product_type": "社交音乐",
+        "platform": "iOS",
+        "target_page": "我的页 / 个人中心",
+        "planning_source": "agent_planned",
+        "priority": "high",
+        "reason": "当前相关来源中可追溯的候选；最终是否纳入由逐图语义审核决定"
+      }
+    ],
+    "request": "帮我搜集一下国内外知名 App‘我的’页的竞品截图。"
+  },
+  "materials": [
+    {
+      "id": "mat-cap-uinotes-bilibili",
+      "product_name": "哔哩哔哩",
+      "page_name": "我的页 / 个人中心",
+      "target_page": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "视频社区",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/05576bbd2dd3fb4f.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/653270661085471375.webp?v1",
+      "source_url": "https://uinotes.com/pin/653270661085471375",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "本人资料、会员横条、离线缓存/历史/收藏和创作中心同时可见；与本次目标页面和移动端表面匹配。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "page_role": "personal_center_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-uinotes-bilibili",
+      "source_attempt_id": "att-uinotes-profile",
+      "source_candidate_id": "cand-uinotes-bilibili",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/653270661085471375",
+      "requested_url": "https://uinotes.com/pin/653270661085471375",
+      "final_url": "https://uinotes.com/pin/653270661085471375",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "89b04aead5bc9e9b24d7d3814b863354a90c1746cde65492ff03c9326cb25f42"
+    },
+    {
+      "id": "mat-cap-uinotes-pinduoduo",
+      "product_name": "拼多多",
+      "page_name": "我的页 / 个人中心",
+      "target_page": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "电商",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/322e2f9dbe65dbb6.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/658360019995979356.webp?v1",
+      "source_url": "https://uinotes.com/pin/658360019995979356",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "登录入口、订单状态、钱包/优惠、服务矩阵与商品推荐连续出现；与本次目标页面和移动端表面匹配。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "page_role": "personal_center_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_out_complete",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-uinotes-pinduoduo",
+      "source_attempt_id": "att-uinotes-profile",
+      "source_candidate_id": "cand-uinotes-pinduoduo",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/658360019995979356",
+      "requested_url": "https://uinotes.com/pin/658360019995979356",
+      "final_url": "https://uinotes.com/pin/658360019995979356",
+      "width": 1170,
+      "height": 2532,
+      "decode_format": "WEBP",
+      "content_sha256": "71f9ac661b83316fb07681bb38c3f242dfa60868fe6dd5dbd11be464cc451f4c"
+    },
+    {
+      "id": "mat-cap-uinotes-doubao",
+      "product_name": "豆包爱学",
+      "page_name": "我的页 / 个人中心",
+      "target_page": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/5547041d23f78673.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/133323406851668822.webp?v1",
+      "source_url": "https://uinotes.com/pin/133323406851668822",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "登录入口之后直接给出金币商城、任务中心，再接学习记录与设置列表；与本次目标页面和移动端表面匹配。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "page_role": "personal_center_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_out_complete",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-uinotes-doubao",
+      "source_attempt_id": "att-uinotes-profile",
+      "source_candidate_id": "cand-uinotes-doubao",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/133323406851668822",
+      "requested_url": "https://uinotes.com/pin/133323406851668822",
+      "final_url": "https://uinotes.com/pin/133323406851668822",
+      "width": 480,
+      "height": 1039,
+      "decode_format": "WEBP",
+      "content_sha256": "5780593b340fd94b0237ca40914abff81171aaf96e1479ef98a5037146330037"
+    },
+    {
+      "id": "mat-cap-uinotes-kugou",
+      "product_name": "酷狗畅听版",
+      "page_name": "我的页 / 个人中心",
+      "target_page": "我的页 / 个人中心",
+      "region": "CN",
+      "product_type": "音乐",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/9821f2074515ccba.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/438158835260733576.webp?v1",
+      "source_url": "https://uinotes.com/pin/438158835260733576",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "免登录提示、收藏/下载快捷入口与最近播放内容同屏；与本次目标页面和移动端表面匹配。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "page_role": "personal_center_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_out_complete",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-uinotes-kugou",
+      "source_attempt_id": "att-uinotes-profile",
+      "source_candidate_id": "cand-uinotes-kugou",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/438158835260733576",
+      "requested_url": "https://uinotes.com/pin/438158835260733576",
+      "final_url": "https://uinotes.com/pin/438158835260733576",
+      "width": 480,
+      "height": 1039,
+      "decode_format": "WEBP",
+      "content_sha256": "d42771b6abf9a6abc655c2d0bf1e92162412bbede15c64423965bb774d66f007"
+    },
+    {
+      "id": "mat-cap-uinotes-duolingo",
+      "product_name": "Duolingo",
+      "page_name": "我的页 / 个人中心",
+      "target_page": "我的页 / 个人中心",
+      "region": "Global",
+      "product_type": "学习工具",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/923e0cd8e3008dca.webp",
+      "source_type": "ui_database",
+      "source_provider": "UI Notes",
+      "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/004403109497668392.webp?v1",
+      "source_url": "https://uinotes.com/pin/004403109497668392",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "头像、账号信息、学习语言、关系数据与添加好友入口组成本人资料页；与本次目标页面和移动端表面匹配。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "page_role": "own_profile",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-uinotes-duolingo",
+      "source_attempt_id": "att-uinotes-profile",
+      "source_candidate_id": "cand-uinotes-duolingo",
+      "source_entry_url": "https://uinotes.com/pin?functions=71",
+      "source_detail_url": "https://uinotes.com/pin/004403109497668392",
+      "requested_url": "https://uinotes.com/pin/004403109497668392",
+      "final_url": "https://uinotes.com/pin/004403109497668392",
+      "width": 480,
+      "height": 1039,
+      "decode_format": "WEBP",
+      "content_sha256": "17c20dfb4ad6d7a9d5488ba083eebbe8478da22bd2ac792bde21d53af38c777b"
+    },
+    {
+      "id": "mat-cap-refero-wise",
+      "product_name": "Wise",
+      "page_name": "我的页 / 个人中心",
+      "target_page": "我的页 / 个人中心",
+      "region": "Global",
+      "product_type": "金融工具",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/0738a67639829c8f.jpg",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_asset_url": "https://images.refero.design/screenshots/39/mobile/778adba6-19c0-4c90-8da3-e795d19ee5d5_thumb.jpg",
+      "source_url": "https://refero.design/screens/199c7406-cf97-46b2-8da0-0d80ab603631?page_types[id][]=15&source=search",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "账户切换、Settings 和 Help 等账户管理动作组成根层；与本次目标页面和移动端表面匹配。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "page_role": "account_management_root",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-refero-wise",
+      "source_attempt_id": "att-refero-profile",
+      "source_candidate_id": "cand-refero-wise",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/199c7406-cf97-46b2-8da0-0d80ab603631?page_types[id][]=15&source=search",
+      "requested_url": "https://refero.design/screens/199c7406-cf97-46b2-8da0-0d80ab603631?page_types[id][]=15&source=search",
+      "final_url": "https://refero.design/screens/199c7406-cf97-46b2-8da0-0d80ab603631?page_types[id][]=15&source=search",
+      "width": 488,
+      "height": 1056,
+      "decode_format": "JPEG",
+      "content_sha256": "fb5f505560070f046d77d9d63eef0ab8cd69bcd46345838216583d3eb18b2f20"
+    },
+    {
+      "id": "mat-cap-refero-kickstarter",
+      "product_name": "Kickstarter",
+      "page_name": "我的页 / 个人中心",
+      "target_page": "我的页 / 个人中心",
+      "region": "Global",
+      "product_type": "众筹平台",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/f04fa4fca6f4a325.jpg",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_asset_url": "https://images.refero.design/screenshots/171/mobile/4c96b3b6-7411-4e6a-aea4-8e8f6368df0f_thumb.jpg",
+      "source_url": "https://refero.design/screens/01bf2c7b-fbf6-4c25-8986-49d846699fef?page_types[id][]=15&source=search",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "Profile 标签下以 backed/saved 项目及状态进度承接回访任务；与本次目标页面和移动端表面匹配。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "page_role": "own_profile",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-refero-kickstarter",
+      "source_attempt_id": "att-refero-profile",
+      "source_candidate_id": "cand-refero-kickstarter",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/01bf2c7b-fbf6-4c25-8986-49d846699fef?page_types[id][]=15&source=search",
+      "requested_url": "https://refero.design/screens/01bf2c7b-fbf6-4c25-8986-49d846699fef?page_types[id][]=15&source=search",
+      "final_url": "https://refero.design/screens/01bf2c7b-fbf6-4c25-8986-49d846699fef?page_types[id][]=15&source=search",
+      "width": 488,
+      "height": 1056,
+      "decode_format": "JPEG",
+      "content_sha256": "2666781716bd80b5a4ced7df2e63930cafc935eb8a8f7db1df1f7aaa5895fd00"
+    },
+    {
+      "id": "mat-cap-refero-nyt",
+      "product_name": "The New York Times",
+      "page_name": "我的页 / 个人中心",
+      "target_page": "我的页 / 个人中心",
+      "region": "Global",
+      "product_type": "新闻内容",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/518cf4ad91ba8c1d.jpg",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_asset_url": "https://images.refero.design/screenshots/117/mobile/be5e6584-1045-4be2-8945-c53101553734_thumb.jpg",
+      "source_url": "https://refero.design/screens/bfcdc685-196c-4248-9161-0f2523082dae?page_types[id][]=15&source=search",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "底部 You 标签选中，当前可见下段以已保存/推荐内容卡片承接回访；根层关系待验证，只作局部内容参考。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "page_role": "you_tab_content",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-refero-nyt",
+      "source_attempt_id": "att-refero-profile",
+      "source_candidate_id": "cand-refero-nyt",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/bfcdc685-196c-4248-9161-0f2523082dae?page_types[id][]=15&source=search",
+      "requested_url": "https://refero.design/screens/bfcdc685-196c-4248-9161-0f2523082dae?page_types[id][]=15&source=search",
+      "final_url": "https://refero.design/screens/bfcdc685-196c-4248-9161-0f2523082dae?page_types[id][]=15&source=search",
+      "width": 488,
+      "height": 1056,
+      "decode_format": "JPEG",
+      "content_sha256": "9b028f6751535d662a94f8987aed09eaa73bb971555bc96e661d3206151aaa3f"
+    },
+    {
+      "id": "mat-cap-refero-airbuds",
+      "product_name": "Airbuds",
+      "page_name": "我的页 / 个人中心",
+      "target_page": "我的页 / 个人中心",
+      "region": "Global",
+      "product_type": "社交音乐",
+      "platform": "iOS",
+      "target_surface": "mobile_app",
+      "target_surface_match": "matched",
+      "image_path": "assets/894bb391f416237f.jpg",
+      "source_type": "ui_database",
+      "source_provider": "Refero",
+      "source_asset_url": "https://images.refero.design/screenshots/150/mobile/c5435be1-12d5-45fb-9630-41a3fcbd2fb5_thumb.jpg",
+      "source_url": "https://refero.design/screens/cdb87543-4d9a-4f5e-9a95-035361942d3c?page_types[id][]=15&source=search",
+      "captured_at": "2026-10-27T22:15:00+08:00",
+      "collection_method": "database_asset",
+      "provenance": "online",
+      "semantic_status": "accepted",
+      "semantic_reason": "本人身份、最近播放和收藏内容在同一资料页中；与本次目标页面和移动端表面匹配。",
+      "collection_status": "collected",
+      "quality_status": "accepted",
+      "quality_reason": "真实解码、格式和尺寸通过",
+      "page_role": "own_profile",
+      "interaction_stage": "before_action",
+      "render_state": "loaded",
+      "login_state": "logged_in",
+      "review_reason_codes": [
+        "product_identity",
+        "target_page",
+        "surface",
+        "render_state",
+        "completeness",
+        "source_context"
+      ],
+      "observed_structure": [],
+      "observed_patterns": [],
+      "notes": "",
+      "failure_reason": "",
+      "capture_id": "cap-refero-airbuds",
+      "source_attempt_id": "att-refero-profile",
+      "source_candidate_id": "cand-refero-airbuds",
+      "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+      "source_detail_url": "https://refero.design/screens/cdb87543-4d9a-4f5e-9a95-035361942d3c?page_types[id][]=15&source=search",
+      "requested_url": "https://refero.design/screens/cdb87543-4d9a-4f5e-9a95-035361942d3c?page_types[id][]=15&source=search",
+      "final_url": "https://refero.design/screens/cdb87543-4d9a-4f5e-9a95-035361942d3c?page_types[id][]=15&source=search",
+      "width": 488,
+      "height": 1056,
+      "decode_format": "JPEG",
+      "content_sha256": "7b10f0981313ecbe42e8c7c64f0be711de25aa3fcdc3f059c8b03919147c5e32"
+    }
+  ],
+  "classification": {
+    "classification_status": "ready",
+    "classification_dimension": "页面主任务与信息组织机制",
+    "classification_reason": "宽泛搜集先按页面主任务归组；跨行业样本只有在承担相同回访机制时才比较。",
+    "groups": [
+      {
+        "id": "group-profile",
+        "name": "身份与个人表达",
+        "reason": "比较身份如何承接好友关系或个人内容表达",
+        "material_ids": [
+          "mat-cap-uinotes-duolingo",
+          "mat-cap-refero-airbuds"
+        ],
+        "asset_ids": [
+          "mat-cap-uinotes-duolingo",
+          "mat-cap-refero-airbuds"
+        ],
+        "audit": {
+          "inclusion_criteria": "本人身份是页面锚点，并在当前可见区域承接好友关系或个人内容",
+          "shared_mechanism": "以身份为锚点，再承接好友关系或个人内容表达",
+          "adjacent_difference": "不包含他人公开主页，也不把账户设置页并入资料页",
+          "member_reasons": [
+            {
+              "material_id": "mat-cap-uinotes-duolingo",
+              "reason": "以学习身份、语言和好友关系组织本人资料"
+            },
+            {
+              "material_id": "mat-cap-refero-airbuds",
+              "reason": "以音乐身份、最近播放和收藏组织本人资料"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-return",
+        "name": "回到内容与进度",
+        "reason": "重点看页面如何让用户继续上次内容、收藏或项目进度",
+        "material_ids": [
+          "mat-cap-uinotes-kugou",
+          "mat-cap-refero-kickstarter",
+          "mat-cap-refero-nyt"
+        ],
+        "asset_ids": [
+          "mat-cap-uinotes-kugou",
+          "mat-cap-refero-kickstarter",
+          "mat-cap-refero-nyt"
+        ],
+        "audit": {
+          "inclusion_criteria": "当前可见区域以最近内容、收藏或项目状态承接回访；下段素材只作局部结构参考",
+          "shared_mechanism": "把个人页作为内容续接点，而非入口大全",
+          "adjacent_difference": "与身份与个人表达组的差异是当前可见主体为内容或项目，而非身份信息",
+          "member_reasons": [
+            {
+              "material_id": "mat-cap-uinotes-kugou",
+              "reason": "最近播放与收藏/下载在首屏形成音乐续接"
+            },
+            {
+              "material_id": "mat-cap-refero-kickstarter",
+              "reason": "backed/saved 项目状态承接项目回访"
+            },
+            {
+              "material_id": "mat-cap-refero-nyt",
+              "reason": "You 标签当前可见下段用内容卡片承接保存与阅读；根层关系待验证"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-service",
+        "name": "服务与资产总览",
+        "reason": "比较订单、权益和常用动作如何在高密度页面里划分层级",
+        "material_ids": [
+          "mat-cap-uinotes-bilibili",
+          "mat-cap-uinotes-pinduoduo"
+        ],
+        "asset_ids": [
+          "mat-cap-uinotes-bilibili",
+          "mat-cap-uinotes-pinduoduo"
+        ],
+        "audit": {
+          "inclusion_criteria": "根层同时承担资产、服务与常用动作总览",
+          "shared_mechanism": "用条带、横排和分区组织多种服务",
+          "adjacent_difference": "不因都含会员或钱包就与文件管理、公开主页等不同主任务合组",
+          "member_reasons": [
+            {
+              "material_id": "mat-cap-uinotes-bilibili",
+              "reason": "会员、内容动作和创作入口分成不同区域"
+            },
+            {
+              "material_id": "mat-cap-uinotes-pinduoduo",
+              "reason": "订单、资产、服务与推荐形成连续高密度分区"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-task",
+        "name": "任务与学习入口",
+        "reason": "看明确任务入口怎样在未登录骨架中仍保持可发现",
+        "material_ids": [
+          "mat-cap-uinotes-doubao"
+        ],
+        "asset_ids": [
+          "mat-cap-uinotes-doubao"
+        ],
+        "audit": {
+          "inclusion_criteria": "任务中心与学习相关入口在个人中心根层明确可见",
+          "shared_mechanism": "用少量入口卡把任务入口与通用设置区分",
+          "adjacent_difference": "与服务总览组的差异是核心对象为学习任务，而非多业务资产集合",
+          "member_reasons": [
+            {
+              "material_id": "mat-cap-uinotes-doubao",
+              "reason": "金币商城与任务中心位于通用功能列表之前"
+            }
+          ]
+        }
+      },
+      {
+        "id": "group-account",
+        "name": "账户管理根层",
+        "reason": "把它作为轻量账户管理参照，避免把设置动作误当内容或服务入口",
+        "material_ids": [
+          "mat-cap-refero-wise"
+        ],
+        "asset_ids": [
+          "mat-cap-refero-wise"
+        ],
+        "audit": {
+          "inclusion_criteria": "页面主任务是账户切换、设置与帮助",
+          "shared_mechanism": "以简短列表完成账户管理，不承载内容浏览",
+          "adjacent_difference": "不与任务中心或他人资料页合组",
+          "member_reasons": [
+            {
+              "material_id": "mat-cap-refero-wise",
+              "reason": "账户切换、Settings 和 Help 构成简短管理列表"
+            }
+          ]
+        }
+      }
+    ],
+    "material_labels": [
+      {
+        "material_id": "mat-cap-uinotes-duolingo",
+        "labels": {
+          "page_role": "own_profile",
+          "path_stage": "root",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-cap-refero-airbuds",
+        "labels": {
+          "page_role": "own_profile",
+          "path_stage": "root",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-cap-uinotes-kugou",
+        "labels": {
+          "page_role": "personal_center_root",
+          "path_stage": "root",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-cap-refero-kickstarter",
+        "labels": {
+          "page_role": "own_profile",
+          "path_stage": "root",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-cap-refero-nyt",
+        "labels": {
+          "page_role": "you_tab_content",
+          "path_stage": "you_tab_content",
+          "interaction_stage": "tab_selected",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-cap-uinotes-bilibili",
+        "labels": {
+          "page_role": "personal_center_root",
+          "path_stage": "root",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      },
+      {
+        "material_id": "mat-cap-uinotes-pinduoduo",
+        "labels": {
+          "page_role": "personal_center_root",
+          "path_stage": "root",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-cap-uinotes-doubao",
+        "labels": {
+          "page_role": "personal_center_root",
+          "path_stage": "root",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_out"
+        }
+      },
+      {
+        "material_id": "mat-cap-refero-wise",
+        "labels": {
+          "page_role": "account_management_root",
+          "path_stage": "root",
+          "interaction_stage": "browse_before_action",
+          "render_state": "loaded_complete",
+          "login_state": "logged_in"
+        }
+      }
+    ],
+    "schema_version": 2,
+    "comparison_basis": {
+      "primary_dimension": "页面主任务与信息组织机制",
+      "rationale": "宽泛搜集先按页面主任务归组；跨行业样本只有在承担相同回访机制时才比较。",
+      "scope": "只比较通过语义与机械质量审核的移动 App 单屏；状态、路径和登录情况另行标记。"
+    }
+  },
+  "fallback_requests": [
+    {
+      "product_name": "哔哩哔哩",
+      "target_page": "我的页 / 个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "拼多多",
+      "target_page": "我的页 / 个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "豆包爱学",
+      "target_page": "我的页 / 个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "酷狗畅听版",
+      "target_page": "我的页 / 个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Duolingo",
+      "target_page": "我的页 / 个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "斗鱼",
+      "target_page": "我的页 / 个人中心",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Wise",
+      "target_page": "我的页 / 个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Kickstarter",
+      "target_page": "我的页 / 个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "MD Vinyl",
+      "target_page": "我的页 / 个人中心",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "TIDAL",
+      "target_page": "我的页 / 个人中心",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Revolut",
+      "target_page": "我的页 / 个人中心",
+      "status": "open",
+      "reason": "公开截图失败或未通过语义审核",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "The New York Times",
+      "target_page": "我的页 / 个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    },
+    {
+      "product_name": "Airbuds",
+      "target_page": "我的页 / 个人中心",
+      "status": "resolved",
+      "reason": "已有有效素材",
+      "allowed_methods": [
+        "user_upload",
+        "device_capture"
+      ]
+    }
+  ],
+  "evidence_statistics": {
+    "sources": {
+      "attempted": 4,
+      "access_status": {
+        "accessible": 0,
+        "blocked": 0,
+        "empty": 0,
+        "error": 0,
+        "login_required": 1,
+        "paywall": 3,
+        "unknown": 0
+      },
+      "unknown_access": 0
+    },
+    "candidates": {
+      "accepted": 14,
+      "rejected": 0,
+      "not_reviewed": 0
+    },
+    "semantic_reviews": {
+      "accepted": 9,
+      "rejected": 5,
+      "not_reviewed": 0
+    },
+    "materials": {
+      "collected": 9,
+      "rejected": 5,
+      "pending": 0,
+      "needs_manual_capture": 0,
+      "unavailable": 0
+    },
+    "fallback": {
+      "resolved": 9,
+      "open": 4
+    },
+    "coverage": {
+      "planned_product_count": 13,
+      "products_with_collected_material": 9,
+      "products_without_collected_material": 4,
+      "pending_candidate_count": 0,
+      "source_access_boundary_count": 0
+    }
+  },
+  "coverage_boundary": {
+    "planned_product_count": 13,
+    "products_with_collected_material": 9,
+    "products_without_collected_material": 4,
+    "pending_candidate_count": 0,
+    "source_access_boundary_count": 0
+  },
+  "excluded_summary": {
+    "rejected": 5,
+    "pending": 0,
+    "unavailable": 0
+  },
+  "source_evidence": {
+    "source_attempts": [
+      {
+        "id": "att-uinotes-profile",
+        "source_type": "ui_database",
+        "source_provider": "UI Notes",
+        "entry_url": "https://uinotes.com/pin?functions=71",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "我的",
+            "个人中心"
+          ],
+          "source_taxonomy_terms": [
+            "个人中心"
+          ]
+        },
+        "actual_query": "功能：个人中心",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "web_text_accessible": true,
+        "browser_accessible": true,
+        "browser_interactive": true,
+        "content_available": true,
+        "access_status": "paywall",
+        "observed_scope": "当前会话为非会员；1877 条中首批 20 张可见，详情与原图可打开，后续结果需会员",
+        "attempt_status": "completed",
+        "failure_reason": ""
+      },
+      {
+        "id": "att-refero-profile",
+        "source_type": "ui_database",
+        "source_provider": "Refero",
+        "entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "Profile",
+            "Account"
+          ],
+          "source_taxonomy_terms": [
+            "Profile & Account"
+          ]
+        },
+        "actual_query": "Page type: Profile & Account",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "web_text_accessible": true,
+        "browser_accessible": true,
+        "browser_interactive": true,
+        "content_available": true,
+        "access_status": "paywall",
+        "observed_scope": "当前账号会话可见首批 8 张，详情与图像可打开；其余 2174 张受 Pro 订阅限制",
+        "attempt_status": "completed",
+        "failure_reason": ""
+      },
+      {
+        "id": "att-mobbin-profile",
+        "source_type": "ui_database",
+        "source_provider": "Mobbin",
+        "entry_url": "https://mobbin.com/browse/ios/screens?sort=popularity&filter=screenPatterns.My+Account+%26+Profile",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "My Account",
+            "Profile"
+          ],
+          "source_taxonomy_terms": [
+            "My Account & Profile"
+          ]
+        },
+        "actual_query": "Screen pattern: My Account & Profile",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "web_text_accessible": true,
+        "browser_accessible": true,
+        "browser_interactive": true,
+        "content_available": true,
+        "access_status": "paywall",
+        "observed_scope": "当前账号会话可见 2298 条中的首批 5 张；详情可开，下载与后续结果需 Pro",
+        "attempt_status": "completed",
+        "failure_reason": ""
+      },
+      {
+        "id": "att-pttrns-profile",
+        "source_type": "ui_database",
+        "source_provider": "PTTRNS",
+        "entry_url": "https://app.pttrns.com/",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "Profile",
+            "Account"
+          ],
+          "source_taxonomy_terms": []
+        },
+        "actual_query": "Profile / Account",
+        "search_mode": "site_filter",
+        "discovery_batch": 1,
+        "web_text_accessible": true,
+        "browser_accessible": true,
+        "browser_interactive": false,
+        "content_available": false,
+        "access_status": "login_required",
+        "observed_scope": "旧标签残留 419 条列表，但详情与新标签均跳回首页登录入口，未纳入候选",
+        "attempt_status": "blocked",
+        "failure_reason": "免费账号登录后才可稳定搜索和打开详情"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "cand-uinotes-bilibili",
+        "source_attempt_id": "att-uinotes-profile",
+        "product_name": "哔哩哔哩",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://uinotes.com/pin?functions=71",
+        "source_detail_url": "https://uinotes.com/pin/653270661085471375",
+        "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/653270661085471375.webp?v1",
+        "candidate_rank": 1,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "我的",
+            "个人中心"
+          ],
+          "source_taxonomy_terms": [
+            "个人中心"
+          ]
+        },
+        "actual_query": "功能：个人中心",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "UI Notes",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-uinotes-pinduoduo",
+        "source_attempt_id": "att-uinotes-profile",
+        "product_name": "拼多多",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://uinotes.com/pin?functions=71",
+        "source_detail_url": "https://uinotes.com/pin/658360019995979356",
+        "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/658360019995979356.webp?v1",
+        "candidate_rank": 2,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "我的",
+            "个人中心"
+          ],
+          "source_taxonomy_terms": [
+            "个人中心"
+          ]
+        },
+        "actual_query": "功能：个人中心",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "UI Notes",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-uinotes-doubao",
+        "source_attempt_id": "att-uinotes-profile",
+        "product_name": "豆包爱学",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://uinotes.com/pin?functions=71",
+        "source_detail_url": "https://uinotes.com/pin/133323406851668822",
+        "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/133323406851668822.webp?v1",
+        "candidate_rank": 3,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "我的",
+            "个人中心"
+          ],
+          "source_taxonomy_terms": [
+            "个人中心"
+          ]
+        },
+        "actual_query": "功能：个人中心",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "UI Notes",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-uinotes-kugou",
+        "source_attempt_id": "att-uinotes-profile",
+        "product_name": "酷狗畅听版",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://uinotes.com/pin?functions=71",
+        "source_detail_url": "https://uinotes.com/pin/438158835260733576",
+        "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/438158835260733576.webp?v1",
+        "candidate_rank": 4,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "我的",
+            "个人中心"
+          ],
+          "source_taxonomy_terms": [
+            "个人中心"
+          ]
+        },
+        "actual_query": "功能：个人中心",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "UI Notes",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-uinotes-duolingo",
+        "source_attempt_id": "att-uinotes-profile",
+        "product_name": "Duolingo",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://uinotes.com/pin?functions=71",
+        "source_detail_url": "https://uinotes.com/pin/004403109497668392",
+        "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/004403109497668392.webp?v1",
+        "candidate_rank": 5,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "我的",
+            "个人中心"
+          ],
+          "source_taxonomy_terms": [
+            "个人中心"
+          ]
+        },
+        "actual_query": "功能：个人中心",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "UI Notes",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-uinotes-douyu",
+        "source_attempt_id": "att-uinotes-profile",
+        "product_name": "斗鱼",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://uinotes.com/pin?functions=71",
+        "source_detail_url": "https://uinotes.com/pin/276511827925182237",
+        "source_asset_url": "https://uinotes-img.oss-cn-shanghai.aliyuncs.com/image/origin-webp/276511827925182237.webp?v1",
+        "candidate_rank": 6,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "我的",
+            "个人中心"
+          ],
+          "source_taxonomy_terms": [
+            "个人中心"
+          ]
+        },
+        "actual_query": "功能：个人中心",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "UI Notes",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-refero-wise",
+        "source_attempt_id": "att-refero-profile",
+        "product_name": "Wise",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+        "source_detail_url": "https://refero.design/screens/199c7406-cf97-46b2-8da0-0d80ab603631?page_types[id][]=15&source=search",
+        "source_asset_url": "https://images.refero.design/screenshots/39/mobile/778adba6-19c0-4c90-8da3-e795d19ee5d5_thumb.jpg",
+        "candidate_rank": 7,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "Profile",
+            "Account"
+          ],
+          "source_taxonomy_terms": [
+            "Profile & Account"
+          ]
+        },
+        "actual_query": "Page type: Profile & Account",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "Refero",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-refero-kickstarter",
+        "source_attempt_id": "att-refero-profile",
+        "product_name": "Kickstarter",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+        "source_detail_url": "https://refero.design/screens/01bf2c7b-fbf6-4c25-8986-49d846699fef?page_types[id][]=15&source=search",
+        "source_asset_url": "https://images.refero.design/screenshots/171/mobile/4c96b3b6-7411-4e6a-aea4-8e8f6368df0f_thumb.jpg",
+        "candidate_rank": 8,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "Profile",
+            "Account"
+          ],
+          "source_taxonomy_terms": [
+            "Profile & Account"
+          ]
+        },
+        "actual_query": "Page type: Profile & Account",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "Refero",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-refero-md-vinyl",
+        "source_attempt_id": "att-refero-profile",
+        "product_name": "MD Vinyl",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+        "source_detail_url": "https://refero.design/screens/0bf7f2db-473e-4f8e-a293-4a20657d66bd?page_types[id][]=15&source=search",
+        "source_asset_url": "https://images.refero.design/screenshots/291/mobile/80ede065-91b6-4dea-85c1-fa0679cee52b_thumb.jpg",
+        "candidate_rank": 9,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "Profile",
+            "Account"
+          ],
+          "source_taxonomy_terms": [
+            "Profile & Account"
+          ]
+        },
+        "actual_query": "Page type: Profile & Account",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "Refero",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-refero-tidal",
+        "source_attempt_id": "att-refero-profile",
+        "product_name": "TIDAL",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+        "source_detail_url": "https://refero.design/screens/7a4d4c3f-687d-4501-b747-2dc1233f1928?page_types[id][]=15&source=search",
+        "source_asset_url": "https://images.refero.design/screenshots/298/mobile/8e239981-6954-45a7-ba30-7626a9c56b46_thumb.jpg",
+        "candidate_rank": 10,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "Profile",
+            "Account"
+          ],
+          "source_taxonomy_terms": [
+            "Profile & Account"
+          ]
+        },
+        "actual_query": "Page type: Profile & Account",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "Refero",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-refero-duolingo-settings",
+        "source_attempt_id": "att-refero-profile",
+        "product_name": "Duolingo",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+        "source_detail_url": "https://refero.design/screens/b9a5366d-68c8-4e23-8c78-e84ed4359d8a?page_types[id][]=15&source=search",
+        "source_asset_url": "https://images.refero.design/screenshots/5/mobile/a0378378-a44b-4e50-a909-32dd83776a40_thumb.jpg",
+        "candidate_rank": 11,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "Profile",
+            "Account"
+          ],
+          "source_taxonomy_terms": [
+            "Profile & Account"
+          ]
+        },
+        "actual_query": "Page type: Profile & Account",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "Refero",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-refero-revolut",
+        "source_attempt_id": "att-refero-profile",
+        "product_name": "Revolut",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+        "source_detail_url": "https://refero.design/screens/8adec783-5f17-478d-ba28-f063eeebd7b8?page_types[id][]=15&source=search",
+        "source_asset_url": "https://images.refero.design/screenshots/74/mobile/5fdac796-2bb6-45cb-93e3-d436232e72eb_thumb.jpg",
+        "candidate_rank": 12,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "Profile",
+            "Account"
+          ],
+          "source_taxonomy_terms": [
+            "Profile & Account"
+          ]
+        },
+        "actual_query": "Page type: Profile & Account",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "Refero",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-refero-nyt",
+        "source_attempt_id": "att-refero-profile",
+        "product_name": "The New York Times",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+        "source_detail_url": "https://refero.design/screens/bfcdc685-196c-4248-9161-0f2523082dae?page_types[id][]=15&source=search",
+        "source_asset_url": "https://images.refero.design/screenshots/117/mobile/be5e6584-1045-4be2-8945-c53101553734_thumb.jpg",
+        "candidate_rank": 13,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "Profile",
+            "Account"
+          ],
+          "source_taxonomy_terms": [
+            "Profile & Account"
+          ]
+        },
+        "actual_query": "Page type: Profile & Account",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "Refero",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      },
+      {
+        "id": "cand-refero-airbuds",
+        "source_attempt_id": "att-refero-profile",
+        "product_name": "Airbuds",
+        "target_page": "我的页 / 个人中心",
+        "source_entry_url": "https://refero.design/apps/search?page_types[id][]=15",
+        "source_detail_url": "https://refero.design/screens/cdb87543-4d9a-4f5e-9a95-035361942d3c?page_types[id][]=15&source=search",
+        "source_asset_url": "https://images.refero.design/screenshots/150/mobile/c5435be1-12d5-45fb-9630-41a3fcbd2fb5_thumb.jpg",
+        "candidate_rank": 14,
+        "candidate_status": "accepted",
+        "disposition_reason": "来源详情和原图可访问，进入逐图语义审核；不预设最终纳入",
+        "query_mapping": {
+          "raw_page_intent": "我的页 / 个人中心",
+          "mapped_terms": [
+            "Profile",
+            "Account"
+          ],
+          "source_taxonomy_terms": [
+            "Profile & Account"
+          ]
+        },
+        "actual_query": "Page type: Profile & Account",
+        "search_mode": "taxonomy_filter",
+        "discovery_batch": 1,
+        "source_type": "ui_database",
+        "source_provider": "Refero",
+        "target_surface": "mobile_app",
+        "browser_session_id": "chrome-user1",
+        "browser_session_kind": "agent_browser"
+      }
+    ],
+    "candidate_pool": [
+      "cand-uinotes-bilibili",
+      "cand-uinotes-pinduoduo",
+      "cand-uinotes-doubao",
+      "cand-uinotes-kugou",
+      "cand-uinotes-duolingo",
+      "cand-uinotes-douyu",
+      "cand-refero-wise",
+      "cand-refero-kickstarter",
+      "cand-refero-md-vinyl",
+      "cand-refero-tidal",
+      "cand-refero-duolingo-settings",
+      "cand-refero-revolut",
+      "cand-refero-nyt",
+      "cand-refero-airbuds"
+    ],
+    "candidate_limit": {
+      "max": 50,
+      "unit": "candidate_records",
+      "applies_to": "candidate_pool",
+      "ordering_basis": "页面主任务匹配度、来源可追溯性和区域覆盖",
+      "truncated_candidate_ids": []
+    },
+    "access_preparation": {
+      "schema_version": 1,
+      "id": "access-我的页---个人中心",
+      "research_scope": "我的页 / 个人中心相关来源的采集能力与当前可见范围",
+      "started_at": "2026-10-27T21:30:00+08:00",
+      "completed_at": "2026-10-27T22:05:00+08:00",
+      "relevant_source_attempt_ids": [
+        "att-uinotes-profile",
+        "att-refero-profile",
+        "att-mobbin-profile",
+        "att-pttrns-profile"
+      ],
+      "checks": [
+        {
+          "id": "check-uinotes-preflight",
+          "source_attempt_id": "att-uinotes-profile",
+          "phase": "preflight",
+          "checked_at": "2026-10-27T21:35:00+08:00",
+          "browser_session_id": "chrome-user1",
+          "browser_session_kind": "agent_browser",
+          "browser_tab_id": "339184316",
+          "page_open": true,
+          "search_usable": true,
+          "filter_usable": true,
+          "detail_usable": true,
+          "original_asset_usable": true,
+          "pagination_usable": false,
+          "authentication_state": "authenticated",
+          "access_barrier": "paywall",
+          "visible_scope": "个人中心 1877 条中的首批 20 张",
+          "coverage_impact": "minor",
+          "notes": "账号显示非会员；原图可获取，继续浏览需订阅"
+        },
+        {
+          "id": "check-refero-preflight",
+          "source_attempt_id": "att-refero-profile",
+          "phase": "preflight",
+          "checked_at": "2026-10-27T21:43:00+08:00",
+          "browser_session_id": "chrome-user1",
+          "browser_session_kind": "agent_browser",
+          "browser_tab_id": "339183758",
+          "page_open": true,
+          "search_usable": true,
+          "filter_usable": true,
+          "detail_usable": true,
+          "original_asset_usable": true,
+          "pagination_usable": false,
+          "authentication_state": "authenticated",
+          "access_barrier": "paywall",
+          "visible_scope": "Profile & Account 首批 8 张可见",
+          "coverage_impact": "minor",
+          "notes": "账号页与历史记录可见；后续 2174 张需 Pro"
+        },
+        {
+          "id": "check-mobbin-preflight",
+          "source_attempt_id": "att-mobbin-profile",
+          "phase": "preflight",
+          "checked_at": "2026-10-27T21:51:00+08:00",
+          "browser_session_id": "chrome-user1",
+          "browser_session_kind": "agent_browser",
+          "browser_tab_id": "339183919",
+          "page_open": true,
+          "search_usable": true,
+          "filter_usable": true,
+          "detail_usable": true,
+          "original_asset_usable": false,
+          "pagination_usable": false,
+          "authentication_state": "authenticated",
+          "access_barrier": "paywall",
+          "visible_scope": "2298 条中的首批 5 张可见",
+          "coverage_impact": "minor",
+          "notes": "Badoo 详情可开，但下载与更多结果需 Pro；未把压缩预览纳入素材"
+        },
+        {
+          "id": "check-pttrns-preflight",
+          "source_attempt_id": "att-pttrns-profile",
+          "phase": "preflight",
+          "checked_at": "2026-10-27T21:58:00+08:00",
+          "browser_session_id": "chrome-user1",
+          "browser_session_kind": "agent_browser",
+          "browser_tab_id": "339184309",
+          "page_open": true,
+          "search_usable": false,
+          "filter_usable": false,
+          "detail_usable": false,
+          "original_asset_usable": false,
+          "pagination_usable": false,
+          "authentication_state": "anonymous",
+          "access_barrier": "login_required",
+          "visible_scope": "新标签只显示首页登录入口；旧标签列表不可稳定复用",
+          "coverage_impact": "minor",
+          "notes": "其他已验证来源已提供足够候选，因此本批不因该登录限制阻塞"
+        }
+      ],
+      "decision": {
+        "status": "not_required",
+        "prompted_at": "",
+        "decided_at": "2026-10-27T22:05:00+08:00",
+        "restricted_source_attempt_ids": [],
+        "summary": "登录或订阅限制未实质阻断本批覆盖：继续使用当前会话可见范围，不购买订阅；PTTRNS 不纳入候选。",
+        "choice_is_final_for_batch": false
+      },
+      "resume": {
+        "status": "not_needed",
+        "checkpoint_candidate_ids": [],
+        "completed_candidate_ids": [],
+        "remaining_candidate_ids": [],
+        "recheck_ids": [],
+        "resumed_at": ""
+      },
+      "current_checks_by_source": {
+        "att-uinotes-profile": "check-uinotes-preflight",
+        "att-refero-profile": "check-refero-preflight",
+        "att-mobbin-profile": "check-mobbin-preflight",
+        "att-pttrns-profile": "check-pttrns-preflight"
+      }
+    },
+    "access_preparation_status": "validated"
+  },
+  "analysis": {
+    "schema_version": 2,
+    "title": "App“我的”页参考",
+    "research": {
+      "question": "知名 App 的我的页用哪些结构承接不同回访任务？",
+      "scope": "9 张通过审核的中外移动 App 页面；另有 5 张候选因页面角色不匹配被拒绝",
+      "goals": [
+        "识别可比较的页面主任务",
+        "总结结构差异与适用场景"
+      ],
+      "constraints": [
+        "不虚构用户产品或业务目标",
+        "不从静态截图推断行为效果"
+      ]
+    },
+    "analysis_process": {
+      "material_observations": [
+        {
+          "id": "obs-uinotes-bilibili",
+          "material_id": "mat-cap-uinotes-bilibili",
+          "visible_facts": [
+            "会员横条位于身份区之后",
+            "离线缓存、历史、收藏独立成一排",
+            "创作中心与推荐服务分区"
+          ],
+          "evidence_boundaries": [
+            "素材为历史版本，不能代表当前线上结构",
+            "位置不能证明使用频率"
+          ]
+        },
+        {
+          "id": "obs-uinotes-pinduoduo",
+          "material_id": "mat-cap-uinotes-pinduoduo",
+          "visible_facts": [
+            "订单、钱包/优惠、服务工具和推荐内容连续排列",
+            "页面处于未登录完整状态"
+          ],
+          "evidence_boundaries": [
+            "只能观察信息密度和分区，不能判断转化效果"
+          ]
+        },
+        {
+          "id": "obs-uinotes-doubao",
+          "material_id": "mat-cap-uinotes-doubao",
+          "visible_facts": [
+            "登录入口之后是金币商城与任务中心卡片",
+            "学习记录、消息、帮助和设置使用列表"
+          ],
+          "evidence_boundaries": [
+            "未登录骨架不代表登录后的个性化内容"
+          ]
+        },
+        {
+          "id": "obs-uinotes-kugou",
+          "material_id": "mat-cap-uinotes-kugou",
+          "visible_facts": [
+            "收藏、下载和最近播放同屏",
+            "底部播放条与我的导航可见"
+          ],
+          "evidence_boundaries": [
+            "未登录状态不能证明真实内容丰富度"
+          ]
+        },
+        {
+          "id": "obs-uinotes-duolingo",
+          "material_id": "mat-cap-uinotes-duolingo",
+          "visible_facts": [
+            "身份、学习语言、关系数据和添加好友同屏"
+          ],
+          "evidence_boundaries": [
+            "关系数字不能推断活跃程度"
+          ]
+        },
+        {
+          "id": "obs-refero-wise",
+          "material_id": "mat-cap-refero-wise",
+          "visible_facts": [
+            "账户切换、Settings 和 Help 为主要条目"
+          ],
+          "evidence_boundaries": [
+            "仅能说明账户管理结构"
+          ]
+        },
+        {
+          "id": "obs-refero-kickstarter",
+          "material_id": "mat-cap-refero-kickstarter",
+          "visible_facts": [
+            "Profile 标签呈现 backed/saved 项目",
+            "项目卡展示状态和进度"
+          ],
+          "evidence_boundaries": [
+            "静态进度不能证明回访频率"
+          ]
+        },
+        {
+          "id": "obs-refero-nyt",
+          "material_id": "mat-cap-refero-nyt",
+          "visible_facts": [
+            "You 标签选中",
+            "内容卡片占据页面主体"
+          ],
+          "evidence_boundaries": [
+            "当前截图可能是标签下段，不能视为完整根层首屏"
+          ]
+        },
+        {
+          "id": "obs-refero-airbuds",
+          "material_id": "mat-cap-refero-airbuds",
+          "visible_facts": [
+            "身份信息、最近播放和收藏内容连续排列"
+          ],
+          "evidence_boundaries": [
+            "不能从卡片顺序推断内容重要性"
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "id": "cmp-return-task",
+          "material_ids": [
+            "mat-cap-uinotes-duolingo",
+            "mat-cap-refero-airbuds",
+            "mat-cap-uinotes-kugou",
+            "mat-cap-refero-kickstarter",
+            "mat-cap-refero-nyt"
+          ],
+          "comparison_findings": [
+            "身份型资料页以身份为锚点，可分别承接好友关系或个人内容；内容续接页围绕最近内容或项目状态组织"
+          ],
+          "design_judgment": "个人中心根层应先回答用户回来要做什么，再选择身份或内容作为主体",
+          "recommendation": "将回访任务相同的样本放在一起比较",
+          "applicability": "适合内容、学习和社交产品的个人入口",
+          "tradeoffs": [
+            "内容主体会压缩通用设置的首屏空间"
+          ],
+          "evidence_boundaries": [
+            "不能从截图判断回访频率"
+          ]
+        },
+        {
+          "id": "cmp-hub-density",
+          "material_ids": [
+            "mat-cap-uinotes-bilibili",
+            "mat-cap-uinotes-pinduoduo",
+            "mat-cap-uinotes-doubao",
+            "mat-cap-refero-wise"
+          ],
+          "comparison_findings": [
+            "多业务总览依赖分区，单任务页用少量卡片或列表即可完成层级"
+          ],
+          "design_judgment": "入口数量应由主任务数量决定，高密度总览不应成为默认模板",
+          "recommendation": "先确定首层任务，再决定使用横排、卡片或列表",
+          "applicability": "适合需要在资产、任务和设置之间取舍的个人中心",
+          "tradeoffs": [
+            "增加服务广度会削弱单一任务焦点"
+          ],
+          "evidence_boundaries": [
+            "页面密度不等于使用效率"
+          ]
+        }
+      ]
+    },
+    "overall": {
+      "id": "overall",
+      "kind": "inference",
+      "statement": "本批样本按用户回来要做的事分成三类：继续内容、查看身份关系、处理多项业务；设置仍可留在首层，但应降低视觉权重。",
+      "evidence_refs": [
+        {
+          "kind": "material",
+          "id": "mat-cap-uinotes-duolingo"
+        },
+        {
+          "kind": "material",
+          "id": "mat-cap-uinotes-kugou"
+        },
+        {
+          "kind": "material",
+          "id": "mat-cap-uinotes-bilibili"
+        },
+        {
+          "kind": "material",
+          "id": "mat-cap-refero-wise"
+        }
+      ],
+      "analysis_refs": [
+        "cmp-return-task",
+        "cmp-hub-density"
+      ],
+      "recommendation": "先确定用户进入“我的”页最想继续什么，再按任务分区；不要只因都出现会员、钱包或服务就归为一类。",
+      "applicability": "宽泛个人中心研究",
+      "limitations": "静态截图不能证明使用频率或业务效果"
+    },
+    "key_findings": [
+      {
+        "id": "finding-1",
+        "kind": "inference",
+        "statement": "酷狗与 Kickstarter 把最近内容或项目状态直接放进个人入口；设置仍可见，但以紧凑图标降低视觉权重。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-kugou"
+          },
+          {
+            "kind": "material",
+            "id": "mat-cap-refero-kickstarter"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-return-task"
+        ],
+        "recommendation": "把可继续对象作为主要内容，并把设置保留为紧凑辅助入口",
+        "applicability": "个人入口承担内容回访时",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      },
+      {
+        "id": "finding-2",
+        "kind": "inference",
+        "statement": "多业务总览的关键是按任务分区，而不是把会员、钱包和服务等宽泛名词当成共同分类依据。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-bilibili"
+          },
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-pinduoduo"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-hub-density"
+        ],
+        "recommendation": "按订单、创作、资产等可解释任务划分",
+        "applicability": "确需汇总多种业务时",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      }
+    ],
+    "groups": [
+      {
+        "group_id": "group-profile",
+        "takeaway": {
+          "id": "takeaway-group-profile",
+          "kind": "inference",
+          "statement": "先比较身份信息是否服务于后续关系或内容动作，而不是只看头像区样式。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-profile"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-return-task"
+          ],
+          "recommendation": "保留能引出关系或个人内容的身份字段",
+          "applicability": "产品存在公开关系或个人内容时",
+          "limitations": "静态截图不能证明使用频率或业务效果"
+        }
+      },
+      {
+        "group_id": "group-return",
+        "takeaway": {
+          "id": "takeaway-group-return",
+          "kind": "inference",
+          "statement": "值得比较的是当前可见区域如何呈现最近内容或项目状态；根层关系未确认的样本只作局部内容参考。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-return"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-return-task"
+          ],
+          "recommendation": "优先展示可继续的内容对象",
+          "applicability": "个人中心承担内容续接任务时",
+          "limitations": "静态截图不能证明使用频率或业务效果"
+        }
+      },
+      {
+        "group_id": "group-service",
+        "takeaway": {
+          "id": "takeaway-group-service",
+          "kind": "inference",
+          "statement": "多业务入口需要按订单、资产、创作等任务分区；只共享‘服务’一词不足以合组。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-service"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-hub-density"
+          ],
+          "recommendation": "用业务任务划分区域并控制首屏组数",
+          "applicability": "确有多种独立业务需要汇总时",
+          "limitations": "静态截图不能证明使用频率或业务效果"
+        }
+      },
+      {
+        "group_id": "group-task",
+        "takeaway": {
+          "id": "takeaway-group-task",
+          "kind": "inference",
+          "statement": "未登录页仍保留任务中心入口，能证明任务可发现；具体任务内容与收益需登录后再验证。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-task"
+            }
+          ],
+          "analysis_refs": [
+            "obs-uinotes-doubao"
+          ],
+          "recommendation": "让任务入口保持可发现，登录后再展示真实任务状态或收益",
+          "applicability": "任务是明确回访目标时",
+          "limitations": "静态截图不能证明使用频率或业务效果"
+        }
+      },
+      {
+        "group_id": "group-account",
+        "takeaway": {
+          "id": "takeaway-group-account",
+          "kind": "inference",
+          "statement": "轻量账户管理页可以用短列表完成，不必借用内容卡或服务宫格。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-account"
+            }
+          ],
+          "analysis_refs": [
+            "obs-refero-wise"
+          ],
+          "recommendation": "把账户切换、设置与帮助按动作排序",
+          "applicability": "页面主任务就是账户管理时",
+          "limitations": "静态截图不能证明使用频率或业务效果"
+        }
+      }
+    ],
+    "materials": [
+      {
+        "material_id": "mat-cap-uinotes-bilibili",
+        "insight": {
+          "id": "insight-uinotes-bilibili",
+          "kind": "inference",
+          "statement": "会员条带与常用内容动作、创作入口分区，可参考多角色任务的层级拆分。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-uinotes-bilibili"
+            }
+          ],
+          "analysis_refs": [
+            "obs-uinotes-bilibili"
+          ],
+          "recommendation": "先按会员权益、内容动作和创作管理拆区，再决定哪些区域需要进入首屏",
+          "applicability": "个人入口确实需要汇总多种独立业务时",
+          "limitations": "素材为历史版本，不能代表当前线上结构"
+        }
+      },
+      {
+        "material_id": "mat-cap-uinotes-pinduoduo",
+        "insight": {
+          "id": "insight-uinotes-pinduoduo",
+          "kind": "inference",
+          "statement": "订单、资产和服务分区提供高密度总览对照，也暴露首屏焦点被推荐内容稀释的取舍。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-uinotes-pinduoduo"
+            }
+          ],
+          "analysis_refs": [
+            "obs-uinotes-pinduoduo"
+          ],
+          "recommendation": "把订单、资产、服务和推荐列成密度清单，逐项检查哪些不应与主任务同级",
+          "applicability": "需要评审多业务总览的首屏密度时",
+          "limitations": "只能观察信息密度和分区，不能判断转化效果"
+        }
+      },
+      {
+        "material_id": "mat-cap-uinotes-doubao",
+        "insight": {
+          "id": "insight-uinotes-doubao",
+          "kind": "inference",
+          "statement": "金币商城与任务中心两个入口卡先于通用列表，其中任务中心被单独强调，适合验证任务入口是否需要成为独立一级对象。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-uinotes-doubao"
+            }
+          ],
+          "analysis_refs": [
+            "obs-uinotes-doubao"
+          ],
+          "recommendation": "用独立任务中心卡与通用列表拉开层级，但不要把未登录占位当成任务内容",
+          "applicability": "希望用户登录前也能发现任务入口时",
+          "limitations": "未登录骨架不代表登录后的个性化内容"
+        }
+      },
+      {
+        "material_id": "mat-cap-uinotes-kugou",
+        "insight": {
+          "id": "insight-uinotes-kugou",
+          "kind": "inference",
+          "statement": "收藏、下载与最近播放共同承接内容续接，适合内容型个人入口。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-uinotes-kugou"
+            }
+          ],
+          "analysis_refs": [
+            "obs-uinotes-kugou"
+          ],
+          "recommendation": "用最近播放对象承接续听，收藏与下载作为辅助捷径",
+          "applicability": "产品有可靠的本地或账号最近内容时",
+          "limitations": "未登录状态不能证明真实内容丰富度"
+        }
+      },
+      {
+        "material_id": "mat-cap-uinotes-duolingo",
+        "insight": {
+          "id": "insight-uinotes-duolingo",
+          "kind": "inference",
+          "statement": "学习身份与好友关系同屏，适合资料页需要引出关系动作的场景。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-uinotes-duolingo"
+            }
+          ],
+          "analysis_refs": [
+            "obs-uinotes-duolingo"
+          ],
+          "recommendation": "身份区只保留能引出好友或学习关系的字段和动作",
+          "applicability": "资料页需要承接真实关系任务时",
+          "limitations": "关系数字不能推断活跃程度"
+        }
+      },
+      {
+        "material_id": "mat-cap-refero-wise",
+        "insight": {
+          "id": "insight-refero-wise",
+          "kind": "inference",
+          "statement": "短列表把账户切换、设置和帮助收束为管理任务，适合作为减法参照。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-refero-wise"
+            }
+          ],
+          "analysis_refs": [
+            "obs-refero-wise"
+          ],
+          "recommendation": "用账户切换、设置与帮助的短列表作为个人入口减法基线",
+          "applicability": "页面主任务是账户管理而非内容或服务总览时",
+          "limitations": "仅能说明账户管理结构"
+        }
+      },
+      {
+        "material_id": "mat-cap-refero-kickstarter",
+        "insight": {
+          "id": "insight-refero-kickstarter",
+          "kind": "inference",
+          "statement": "项目状态直接出现在 Profile 标签中，适合需要持续跟踪对象的个人入口。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-refero-kickstarter"
+            }
+          ],
+          "analysis_refs": [
+            "obs-refero-kickstarter"
+          ],
+          "recommendation": "让项目卡直接展示阶段或截止状态，减少返回项目详情前的查找",
+          "applicability": "个人入口需要持续跟踪明确对象时",
+          "limitations": "静态进度不能证明回访频率"
+        }
+      },
+      {
+        "material_id": "mat-cap-refero-nyt",
+        "insight": {
+          "id": "insight-refero-nyt",
+          "kind": "inference",
+          "statement": "You 标签把个人入口变成内容续接面，但该图可能是标签下段，根层结构仍需验证。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-refero-nyt"
+            }
+          ],
+          "analysis_refs": [
+            "obs-refero-nyt"
+          ],
+          "recommendation": "先补验 You 标签根层与当前下段的关系，再决定是否借鉴内容卡结构",
+          "applicability": "目标产品也用个人内容列表承接回访时",
+          "limitations": "当前截图可能是标签下段，不能视为完整根层首屏"
+        }
+      },
+      {
+        "material_id": "mat-cap-refero-airbuds",
+        "insight": {
+          "id": "insight-refero-airbuds",
+          "kind": "inference",
+          "statement": "身份区后直接出现最近播放与收藏，适合以个人内容表达身份的产品。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-refero-airbuds"
+            }
+          ],
+          "analysis_refs": [
+            "obs-refero-airbuds"
+          ],
+          "recommendation": "把最近播放与收藏紧邻身份区，用个人内容补充身份表达",
+          "applicability": "个人内容能够表达用户身份时",
+          "limitations": "不能从卡片顺序推断内容重要性"
+        }
+      }
+    ],
+    "synthesis": {
+      "findings": [
+        {
+          "id": "synthesis-1",
+          "kind": "inference",
+          "statement": "先以主任务选择参考组：内容续接可看酷狗和 Kickstarter，NYT 只补充当前可见下段的内容卡；Duolingo 可看身份与好友关系，Airbuds 可看身份与个人内容表达；多业务层级可看哔哩哔哩与拼多多。",
+          "evidence_refs": [
+            {
+              "kind": "group",
+              "id": "group-return"
+            },
+            {
+              "kind": "group",
+              "id": "group-profile"
+            },
+            {
+              "kind": "group",
+              "id": "group-service"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-return-task",
+            "cmp-hub-density"
+          ],
+          "recommendation": "按目标任务缩小参考范围",
+          "applicability": "进入具体改版前",
+          "limitations": "静态截图不能证明使用频率或业务效果"
+        },
+        {
+          "id": "synthesis-2",
+          "kind": "inference",
+          "statement": "将 Wise 作为减法基线，可以检验某个模块是否属于账户管理；将拼多多作为密度上界，可以检验服务广度是否挤压主任务。",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-refero-wise"
+            },
+            {
+              "kind": "material",
+              "id": "mat-cap-uinotes-pinduoduo"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-hub-density"
+          ],
+          "recommendation": "同时保留轻量和高密度对照",
+          "applicability": "方案需要在简洁与业务覆盖之间取舍时",
+          "limitations": "静态截图不能证明使用频率或业务效果"
+        }
+      ],
+      "validation_questions": [
+        {
+          "id": "validation-1",
+          "kind": "question",
+          "statement": "不同产品的个人入口真实回访任务和使用频率是什么？",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-uinotes-bilibili"
+            }
+          ],
+          "analysis_refs": [
+            "cmp-hub-density"
+          ]
+        },
+        {
+          "id": "validation-2",
+          "kind": "question",
+          "statement": "NYT 的 You 标签根层首屏是否与当前截图下段保持同一内容结构？",
+          "evidence_refs": [
+            {
+              "kind": "material",
+              "id": "mat-cap-refero-nyt"
+            }
+          ],
+          "analysis_refs": [
+            "obs-refero-nyt"
+          ]
+        }
+      ]
+    },
+    "information_gaps": [
+      {
+        "section": "版本",
+        "status": "unknown",
+        "reason": "来源截图未统一提供 App 版本与日期，不能描述为当前最新版。"
+      },
+      {
+        "section": "来源覆盖",
+        "status": "unknown",
+        "reason": "三个数据库后续结果受订阅限制，本报告只代表当前可见范围。"
+      }
+    ],
+    "methodology": [
+      {
+        "title": "证据边界",
+        "text": "结论来自静态截图的可见结构；不推断使用频率、转化率或留存效果。"
+      }
+    ],
+    "quality_review": {
+      "review_type": "agent_self_review",
+      "independent": false,
+      "reviewed_claim_ids": [
+        "overall",
+        "finding-1",
+        "finding-2",
+        "synthesis-1",
+        "synthesis-2",
+        "validation-1",
+        "validation-2",
+        "takeaway-group-profile",
+        "takeaway-group-return",
+        "takeaway-group-service",
+        "takeaway-group-task",
+        "takeaway-group-account",
+        "insight-uinotes-bilibili",
+        "insight-uinotes-pinduoduo",
+        "insight-uinotes-doubao",
+        "insight-uinotes-kugou",
+        "insight-uinotes-duolingo",
+        "insight-refero-wise",
+        "insight-refero-kickstarter",
+        "insight-refero-nyt",
+        "insight-refero-airbuds"
+      ],
+      "checks": {
+        "evidence_supported": true,
+        "reference_value_clear": true,
+        "research_relevant": true,
+        "exceptions_considered": true,
+        "duplicates_resolved": true,
+        "generic_claims_removed": true
+      },
+      "edits": [
+        {
+          "candidate_id": "generic-claim",
+          "action": "removed",
+          "before": "突出重点可以提升体验",
+          "reason": "没有说明具体做法、条件或截图依据"
+        },
+        {
+          "candidate_id": "independent-audit-scope-and-card-advice",
+          "action": "rewritten",
+          "before": "‘我的’页没有通用模板；九张卡片共用泛化借鉴文案",
+          "after": "本批样本未呈现单一适用结构；逐图建议按内容续接、任务入口、关系表达或账户减法等可见机制分别给出",
+          "reason": "收窄为本批样本结论，并按每张截图的可见机制分别说明借鉴动作与条件"
+        },
+        {
+          "candidate_id": "second-independent-review-material-consistency",
+          "action": "rewritten",
+          "before": "Wise 含安全与退出；NYT 作为确定根层；Duolingo 与 Airbuds 均作为关系资料",
+          "after": "Wise 只记录可见的账户切换、Settings 与 Help；NYT 只作下段内容卡局部参考；好友关系只由 Duolingo 支持，Airbuds 用于身份与个人内容表达",
+          "reason": "逐图复核可见事实，并同步修正分类理由、卡片建议与综合结论"
+        }
+      ],
+      "notes": [
+        "逐图事实、横向比较和最终结论已由 Agent 人工复核；该记录不是独立验证。"
+      ]
+    },
+    "coverage_assessment": {
+      "status": "sufficient",
+      "summary": "9 张素材形成两组跨产品比较，覆盖内容续接、身份关系和多业务分区三类核心问题；NYT 只作可见下段参考。",
+      "research_question": "知名 App 的我的页用哪些结构承接不同回访任务？",
+      "questions": [
+        {
+          "id": "q-return",
+          "question": "最近内容或项目如何直接续接",
+          "material_ids": [
+            "mat-cap-uinotes-kugou",
+            "mat-cap-refero-kickstarter",
+            "mat-cap-refero-nyt"
+          ],
+          "comparison_ids": [
+            "cmp-return-task"
+          ],
+          "strategies": [
+            "直接展示最近内容或项目状态",
+            "设置保留但降低视觉权重"
+          ],
+          "status": "comparable"
+        },
+        {
+          "id": "q-identity",
+          "question": "身份与关系信息如何连接后续动作",
+          "material_ids": [
+            "mat-cap-uinotes-duolingo",
+            "mat-cap-refero-airbuds"
+          ],
+          "comparison_ids": [
+            "cmp-return-task"
+          ],
+          "strategies": [
+            "先展示身份或个人内容，再接相关动作"
+          ],
+          "status": "comparable"
+        },
+        {
+          "id": "q-hub",
+          "question": "多业务入口如何按任务分区",
+          "material_ids": [
+            "mat-cap-uinotes-bilibili",
+            "mat-cap-uinotes-pinduoduo",
+            "mat-cap-uinotes-doubao",
+            "mat-cap-refero-wise"
+          ],
+          "comparison_ids": [
+            "cmp-hub-density"
+          ],
+          "strategies": [
+            "按用户任务分区",
+            "账户设置保持轻量"
+          ],
+          "status": "comparable"
+        }
+      ],
+      "gaps": [
+        {
+          "reason": "evidence_boundary",
+          "detail": "NYT 当前截图可能是 You 标签下段，不能作为确定的根层结构证据",
+          "question_ids": [
+            "q-return"
+          ],
+          "source_attempt_ids": []
+        }
+      ],
+      "user_decision": {
+        "status": "not_required",
+        "research_question": "知名 App 的我的页用哪些结构承接不同回访任务？",
+        "provenance": "not_required"
+      }
+    }
+  },
+  "report_schema_version": 1,
+  "generation": {
+    "mode": "replay",
+    "analysis_status": "provided",
+    "analysis_standard": "v2_agent_self_review",
+    "standard_acceptance": "not_assessed"
+  }
+}

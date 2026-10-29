@@ -28,8 +28,13 @@ Agent 在逐图视觉审核后撰写 `classification-plan.json` 和 `analysis.js
 | `information_gaps` | 可选 | 明确未知、未提供或不适用 |
 | `methodology` | 可选 | 过程与证据边界，默认收进折叠区 |
 | `quality_review` | 必需 | Agent 自查或人工复核记录 |
+| `coverage_assessment` | 必需 | 核心问题覆盖、缺口和用户继续／补源决定 |
 
 所有字符串必须非空；未知字段、错误类型、重复 ID 和失效引用都会被拒绝。`information_gaps.status` 只允许 `unknown`、`not_provided`、`not_applicable`。缺失信息应明确说明，不为满足模板编造判断。
+
+`coverage_assessment.status` 为 `sufficient`、`limited` 或 `insufficient`。正式新任务还要保存与 `research.question` 一致的 `research_question`，并逐项记录 `questions`：核心问题、相关素材 ID、横向比较 ID、已观察到的策略和 `comparable/single_case/missing` 状态。标为 `comparable` 时至少需要两个不同产品的案例；同一页面的重复截图不算两个独立案例。`gaps` 使用明确原因（权限、订阅、发现不足、待审核、质量拒绝、语义拒绝、范围失衡或证据边界）和关联问题，避免把不足都归因于登录。
+
+`limited` 会在主界面显示“小样本方向参考”，完整缺口折叠；`insufficient` 必须保存与本次研究问题绑定、来源为 `user_explicit` 的 `continue_limited` 或 `supplement_sources`，不能用历史决定、`pending/not_required` 绕过选择。选择 `supplement_sources` 时正式生成入口拒绝提前发布报告。Python 校验字段、引用、独立案例和执行门槛；相关性、差异性与结论价值仍由 Agent 逐图判断。
 
 ## 先分析，再压缩表达
 
@@ -146,9 +151,9 @@ Agent 在逐图视觉审核后撰写 `classification-plan.json` 和 `analysis.js
 
 ## 默认结构与兼容
 
-标题与核心结论 → 分类导航 → 可选且默认关闭的现状分析 → 分类截图与参考分析 → 默认整体关闭的来源与筛选说明 → 竞品分析小结。分类副标题只显示一句 `statement`；建议、条件和限制保存在结构化数据与单图/综合分析中。卡片详情默认关闭，截图可放大，素材复制到独立 `assets/`，每组超过 20 张的渐进展开继续保留。
+标题与核心结论 → 分类导航 → 可选且默认关闭的现状分析 → 分类截图与参考分析 → 默认整体关闭的来源与筛选说明 → 竞品分析小结。标题只说明研究对象。头部将 `overall.statement` 与 `key_findings[].statement` 合并为一段带“结论”标签的正文，下面只显示必要的“建议”，不把关键发现渲染成无标签的独立卡片；结构化 Claim、引用和边界仍分别保存并在折叠区展示。样本数量、重放标签、证据链接、适用条件和通用限制进入折叠区。分类副标题只显示一句 `statement`；单卡默认显示一句观察和一条建议，完整条件与限制保存在结构化数据和页面详情中。卡片详情默认关闭，截图可放大，素材复制到独立 `assets/`，每组超过 20 张的渐进展开继续保留。
 
-v1 分析和分类计划仍可读取，以便历史报告重放；它们不会被补造 v2 工作底稿、分类审核或复核记录。`generation.analysis_standard` 为 `v2_agent_self_review`、`v2_human_review`、`legacy_v1` 或 `missing`，`standard_acceptance` 继续为 `not_assessed`。通过结构校验只表示数据可生成，不代表分析正确或历史证据升级为当前版本。
+v1 分析仍可通过显式 `--report-data-file` 历史重放；它不会被补造 v2 工作底稿、建议、覆盖评估或用户选择。正式 `--task-file` 的分析交付只接受 v2 和详细覆盖评估；未提供分析时仍可生成兼容图墙，但 `analysis_status=missing`、`standard_acceptance=not_assessed`，不能作为已完成分析交付。旧兼容输入不能成为新任务跳过覆盖门槛的路径。`generation.analysis_standard` 为 `v2_agent_self_review`、`v2_human_review`、`legacy_v1` 或 `missing`。通过结构校验只表示数据可生成，不代表分析正确或历史证据升级为当前版本。
 
 ## 正式生成与重放
 

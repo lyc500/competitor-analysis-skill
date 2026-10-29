@@ -8,14 +8,14 @@ from playwright.sync_api import sync_playwright
 from competitor_analysis_skill.pipeline import run_pipeline
 from competitor_analysis_skill.report_bundle import replay_report
 from competitor_analysis_skill.report_content import anchor
-from report_content_fixtures import analysis, inputs, claim
+from report_content_fixtures import analysis_v2, inputs, claim
 
 
 class BrowserReportContentTests(unittest.TestCase):
     def test_closed_sections_citations_zoom_and_portable_bundle(self):
         with TemporaryDirectory() as tmp:
             root=Path(tmp); source=root/"input"; data=inputs(source)
-            (source/"analysis.json").write_text(json.dumps(analysis(True),ensure_ascii=False))
+            (source/"analysis.json").write_text(json.dumps(analysis_v2(True),ensure_ascii=False))
             result=run_pipeline(data["task"],root/"output",reviewed_materials_file=source/"reviewed.json",
                                 classification_plan_file=source/"classification.json",analysis_file=source/"analysis.json")
             moved=root/"moved"; shutil.move(root/"output",moved)
@@ -63,7 +63,8 @@ class BrowserReportContentTests(unittest.TestCase):
                 browser=p.chromium.launch(headless=True)
                 page=browser.new_page(); page.goto((root/"out/report.html").as_uri())
                 self.assertEqual(page.locator('.gallery-card:not([hidden])').count(),20)
-                page.locator('header [data-evidence-target]').click()
+                page.locator('[data-module="methodology"] > summary').click()
+                page.locator('[data-module="methodology"] [data-evidence-target]').first.click()
                 self.assertEqual(page.locator('.gallery-card:not([hidden])').count(),25)
                 self.assertTrue(page.locator('#'+anchor('material','mat-24')).is_visible())
                 browser.close()

@@ -20,6 +20,17 @@ def analysis(with_current=False):
         "synthesis": {"findings": [claim("summary", "先确定主操作，再决定辅助入口位置")],
                       "validation_questions": [claim("check", "哪些入口实际使用更频繁？")]},
         "information_gaps": [],
+        "coverage_assessment": {
+            "status": "limited", "summary": "当前只有一个独立案例，只能作为方向参考",
+            "research_question": "怎样减少查找层级？",
+            "questions": [{"id": "q-layer", "question": "主要操作与辅助入口如何分层",
+                           "material_ids": ["mat-a"], "comparison_ids": [],
+                           "strategies": ["主要操作独立成行"], "status": "single_case"}],
+            "gaps": [{"reason": "discovery_insufficient", "detail": "缺少第二个独立案例",
+                      "question_ids": ["q-layer"], "source_attempt_ids": []}],
+            "user_decision": {"status": "not_required", "research_question": "怎样减少查找层级？",
+                              "provenance": "not_required"},
+        },
     }
     if with_current:
         value["current_state"] = {
@@ -90,6 +101,17 @@ def analysis_v2(with_current=False):
             "validation_questions": [v2claim("check", "哪些入口在目标任务中实际被使用？", kind="question")],
         },
         "information_gaps": [],
+        "coverage_assessment": {
+            "status": "limited", "summary": "当前只有一个独立案例，只能作为方向参考",
+            "research_question": "怎样减少查找层级？",
+            "questions": [{"id": "q-layer", "question": "主要操作与辅助入口如何分层",
+                           "material_ids": ["mat-a"], "comparison_ids": [],
+                           "strategies": ["主要操作独立成行"], "status": "single_case"}],
+            "gaps": [{"reason": "discovery_insufficient", "detail": "缺少第二个独立案例",
+                      "question_ids": ["q-layer"], "source_attempt_ids": []}],
+            "user_decision": {"status": "not_required", "research_question": "怎样减少查找层级？",
+                              "provenance": "not_required"},
+        },
     }
     if with_current:
         value["current_state"] = {
@@ -144,7 +166,7 @@ def inputs(root):
                       "groups": [{"id": "group-main", "name": "主操作成行", "reason": "归组审核理由，不是读者结论", "material_ids": ["mat-a"]}],
                       "material_labels": [{"material_id": "mat-a", "labels": {"state": "loaded"}}]}
     files = {"task": task, "reviewed": {"task": task, "materials": [material], "fallback_requests": []},
-             "classification": classification, "analysis": analysis(),
+             "classification": classification, "analysis": analysis_v2(),
              "snapshot": {"task": task, "materials": [material], "classification": classification, "fallback_requests": []}}
     for name, data in files.items():
         (root / (name + ".json")).write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")

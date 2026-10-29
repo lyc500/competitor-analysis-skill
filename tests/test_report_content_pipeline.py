@@ -26,7 +26,7 @@ class ReportContentPipelineTests(unittest.TestCase):
         with TemporaryDirectory() as tmp:
             root = Path(tmp); source = root/"input"; inputs(source)
             for detailed in (False, True):
-                data = analysis(detailed)
+                data = analysis_v2(detailed)
                 (source/"analysis.json").write_text(json.dumps(data, ensure_ascii=False))
                 out = root/str(detailed)
                 run = self.formal(source, out)
@@ -57,7 +57,7 @@ class ReportContentPipelineTests(unittest.TestCase):
     def test_snapshot_can_move_replay_and_change_from_input_without_html_edits(self):
         with TemporaryDirectory() as tmp:
             root = Path(tmp); source = root/"input"; inputs(source)
-            (source/"analysis.json").write_text(json.dumps(analysis(True), ensure_ascii=False))
+            (source/"analysis.json").write_text(json.dumps(analysis_v2(True), ensure_ascii=False))
             first = root/"first"; run = self.formal(source, first)
             self.assertEqual(run.returncode, 0, run.stderr)
             moved = root/"moved"; shutil.move(first, moved)
@@ -81,7 +81,7 @@ class ReportContentPipelineTests(unittest.TestCase):
     def test_unknown_reference_fails_without_publishing_report(self):
         with TemporaryDirectory() as tmp:
             root=Path(tmp); source=root/"input"; inputs(source)
-            data=analysis(); data["overall"]["evidence_refs"][0]["id"]="missing"
+            data=analysis_v2(); data["overall"]["evidence_refs"][0]["id"]="missing"
             (source/"analysis.json").write_text(json.dumps(data))
             run=self.formal(source,root/"out")
             self.assertNotEqual(run.returncode,0)
@@ -118,7 +118,8 @@ class ReportContentPipelineTests(unittest.TestCase):
             root = Path(tmp); source = root/"input"; inputs(source)
             data = analysis(); del data["overall"]; del data["synthesis"]
             (source/"analysis.json").write_text(json.dumps(data))
-            run = self.formal(source, root/"out")
+            (source/"snapshot.json").write_text(json.dumps({**json.loads((source/"snapshot.json").read_text()), "analysis": data}))
+            run = self.cli("--report-data-file",source/"snapshot.json","--output",root/"out")
             self.assertEqual(run.returncode, 0, run.stderr)
             html = (root/"out/report.html").read_text()
             self.assertIn("本报告未提供：总判断、综合小结", html)
@@ -126,7 +127,8 @@ class ReportContentPipelineTests(unittest.TestCase):
             data["information_gaps"] = [{"section": "overall", "status": "unknown", "reason": "缺少相同状态的对照图"},
                                         {"section": "synthesis", "status": "not_applicable", "reason": "本次只整理单图观察"}]
             (source/"analysis.json").write_text(json.dumps(data))
-            run = self.formal(source, root/"explained")
+            (source/"snapshot.json").write_text(json.dumps({**json.loads((source/"snapshot.json").read_text()), "analysis": data}))
+            run = self.cli("--report-data-file",source/"snapshot.json","--output",root/"explained")
             self.assertEqual(run.returncode, 0, run.stderr)
             html = (root/"explained/report.html").read_text()
             self.assertNotIn("本报告未提供：", html)
@@ -143,7 +145,7 @@ class ReportContentPipelineTests(unittest.TestCase):
         with TemporaryDirectory() as tmp:
             root=Path(tmp); source=root/"input"; inputs(source)
             for path in ("../outside.png","missing.png"):
-                data=analysis(True); data["current_state"]["images"][0]["image_path"]=path
+                data=analysis_v2(True); data["current_state"]["images"][0]["image_path"]=path
                 (source/"analysis.json").write_text(json.dumps(data))
                 run=self.formal(source,root/("bad-"+Path(path).name))
                 self.assertNotEqual(run.returncode,0)
@@ -183,8 +185,14 @@ class ReportContentPipelineTests(unittest.TestCase):
             self.assertEqual(run.returncode,0,run.stderr)
             html=(root/"out/report.html").read_text()
             header=html[html.index('<header'):html.index('</header>')]
-            self.assertIn("主要操作位于辅助入口之前",header)
+            self.assertNotIn("主要操作位于辅助入口之前",header)
+            self.assertIn("主要操作独立成行，适合先处理当前任务再浏览辅助入口",header)
+            self.assertIn("<strong>结论：</strong>",header)
+            self.assertNotIn('class="key-findings"',header)
             self.assertEqual(header.count("按当前研究目标选择该做法"),1)
+            self.assertNotIn("适用条件",header)
+            self.assertNotIn("限制",header)
+            self.assertNotIn("设计判断",header)
             gallery=html[html.index('data-module="gallery"'):html.index('data-module="methodology"')]
             subtitle=gallery[:gallery.index('<div id="gallery-0"')]
             self.assertIn("重点比较主操作是否与当前任务一致",subtitle)
@@ -203,6 +211,78 @@ class ReportContentPipelineTests(unittest.TestCase):
             self.assertIn("不是独立质量验证",methodology)
             report=json.loads((root/"out/report_data.json").read_text())
             self.assertIn("analysis_process",report["analysis"])
+
+    def test_reader_summary_is_generic_for_non_profile_page(self):
+        with TemporaryDirectory() as tmp:
+            root=Path(tmp); source=root/"input"; inputs(source)
+            task=json.loads((source/"task.json").read_text())
+            task["target_page"]="搜索结果页"; task["raw_request"]="比较搜索结果页的筛选方式"
+            task["research_goal"]="决定筛选项和结果卡片的层级"
+            for competitor in task["competitors"]: competitor["target_page"]="搜索结果页"
+            reviewed=json.loads((source/"reviewed.json").read_text()); reviewed["task"]=task
+            reviewed["materials"][0]["page_name"]="搜索结果页"
+            data=analysis_v2(); data["title"]="搜索结果页筛选参考"
+            data["research"]["question"]="搜索结果页如何区分常用筛选与更多筛选？"
+            data["overall"]["statement"]="常用筛选直接显示，更多条件按需展开。"
+            data["overall"]["recommendation"]="先确认用户最常比较的条件，再决定首层筛选项。"
+            cov=data["coverage_assessment"]; cov["research_question"]=data["research"]["question"]
+            cov["user_decision"]["research_question"]=data["research"]["question"]
+            (source/"task.json").write_text(json.dumps(task,ensure_ascii=False))
+            (source/"reviewed.json").write_text(json.dumps(reviewed,ensure_ascii=False))
+            (source/"analysis.json").write_text(json.dumps(data,ensure_ascii=False))
+            run=self.formal(source,root/"out")
+            self.assertEqual(run.returncode,0,run.stderr)
+            header=(root/"out/report.html").read_text().split("</header>",1)[0]
+            self.assertIn("搜索结果页筛选参考",header)
+            self.assertIn("<strong>结论：</strong>常用筛选直接显示",header)
+            self.assertNotIn("会员",header); self.assertNotIn("任务中心",header); self.assertNotIn("虎牙",header)
+
+    def test_limited_coverage_is_visible_but_full_coverage_notes_stay_folded(self):
+        with TemporaryDirectory() as tmp:
+            root=Path(tmp); source=root/"input"; inputs(source)
+            (source/"classification.json").write_text(json.dumps(classification_v2(),ensure_ascii=False))
+            data=analysis_v2()
+            data["coverage_assessment"]={
+                "status":"limited", "summary":"当前只有一个任务入口案例",
+                "research_question":data["research"]["question"],
+                "questions":[{"id":"q-entry","question":"入口可发现性","material_ids":["mat-a"],
+                              "comparison_ids":[],"strategies":["主入口独立成行"],"status":"single_case"}],
+                "gaps":[{"reason":"discovery_insufficient","detail":"缺少第二个任务案例",
+                         "question_ids":["q-entry"],"source_attempt_ids":[]}],
+                "user_decision":{"status":"not_required","research_question":data["research"]["question"],
+                                 "provenance":"not_required"},
+            }
+            (source/"analysis.json").write_text(json.dumps(data,ensure_ascii=False))
+            run=self.formal(source,root/"out")
+            self.assertEqual(run.returncode,0,run.stderr)
+            html=(root/"out/report.html").read_text()
+            self.assertIn("小样本方向参考",html)
+            self.assertIn("当前只有一个任务入口案例",html)
+            header=html[html.index('<header'):html.index('</header>')]
+            self.assertNotIn("缺少第二个任务案例",header)
+            methodology=html[html.index('data-module="methodology"'):html.index('data-module="synthesis"')]
+            self.assertIn("缺少第二个任务案例",methodology)
+
+    def test_insufficient_coverage_cannot_publish_when_user_chose_more_sources(self):
+        with TemporaryDirectory() as tmp:
+            root=Path(tmp); source=root/"input"; inputs(source)
+            (source/"classification.json").write_text(json.dumps(classification_v2(),ensure_ascii=False))
+            data=analysis_v2()
+            data["coverage_assessment"]={
+                "status":"insufficient", "summary":"核心任务缺少可比较案例",
+                "research_question":data["research"]["question"],
+                "questions":[{"id":"q-entry","question":"任务入口如何组织","material_ids":[],
+                              "comparison_ids":[],"strategies":[],"status":"missing"}],
+                "gaps":[{"reason":"discovery_insufficient","detail":"没有任务入口案例",
+                         "question_ids":["q-entry"],"source_attempt_ids":[]}],
+                "user_decision":{"status":"supplement_sources","research_question":data["research"]["question"],
+                                 "provenance":"user_explicit"},
+            }
+            (source/"analysis.json").write_text(json.dumps(data,ensure_ascii=False))
+            run=self.formal(source,root/"out")
+            self.assertNotEqual(run.returncode,0)
+            self.assertIn("不能提前生成正式报告",run.stderr)
+            self.assertFalse((root/"out/report.html").exists())
 
     def test_v2_current_state_renders_specific_problem_region(self):
         with TemporaryDirectory() as tmp:

@@ -19,22 +19,42 @@ def _claim_evidence(claim, names):
 
 def render_claim(claim, names, compact=False, show_evidence=True):
     detail = "" if compact else "".join(f'<p><strong>{label}：</strong>{escape(claim[field])}</p>'
-                     for field, label in (("recommendation", "借鉴"), ("applicability", "适用条件"), ("limitations", "限制")) if field in claim)
+                     for field, label in (("recommendation", "建议"), ("applicability", "适用条件"), ("limitations", "限制")) if field in claim)
     evidence = _claim_evidence(claim, names) if show_evidence else ""
     return f'<div class="analysis-claim" id="{anchor("claim", claim["id"])}"><p class="claim-statement">{escape(claim["statement"])}</p>{detail}{evidence}</div>'
+
+
+def render_reader_claim(claim, names, show_recommendation=True):
+    recommendation = ""
+    if show_recommendation and claim.get("recommendation"):
+        recommendation = f'<p class="reader-recommendation"><strong>建议：</strong>{escape(claim["recommendation"])}</p>'
+    return (f'<div class="analysis-claim reader-claim" id="{anchor("claim", claim["id"])}">'
+            f'<p class="claim-statement">{escape(claim["statement"])}</p>{recommendation}</div>')
+
+
+def render_overview_claim(overall):
+    """Render the Agent-authored reader summary without re-composing its workbench claims."""
+    conclusion = overall["statement"].strip()
+    recommendation = ""
+    if overall.get("recommendation"):
+        recommendation = (f'<p class="reader-recommendation"><strong>建议：</strong>'
+                          f'{escape(overall["recommendation"])}</p>')
+    return (f'<div class="analysis-claim reader-claim" id="{anchor("claim", overall["id"])}">'
+            f'<p class="claim-statement"><strong>结论：</strong>{escape(conclusion)}</p>'
+            f'{recommendation}</div>')
 
 
 def render_card_claim(claim, show_recommendation):
     recommendation = ""
     if show_recommendation and claim.get("recommendation"):
-        recommendation = f'<p class="card-recommendation"><strong>借鉴：</strong>{escape(claim["recommendation"])}</p>'
+        recommendation = f'<p class="card-recommendation"><strong>建议：</strong>{escape(claim["recommendation"])}</p>'
     return (f'<div class="analysis-claim card-focus" id="{anchor("claim", claim["id"])}">'
             f'<p class="claim-statement">{escape(claim["statement"])}</p>{recommendation}</div>')
 
 
 def render_claim_detail(claim, names):
     detail = "".join(f'<p><strong>{label}：</strong>{escape(claim[field])}</p>'
-                     for field, label in (("recommendation", "借鉴"), ("applicability", "适用条件"),
+                     for field, label in (("recommendation", "建议"), ("applicability", "适用条件"),
                                           ("limitations", "限制")) if field in claim)
     return f'<div class="claim-detail">{detail}{_claim_evidence(claim, names)}</div>'
 
@@ -53,12 +73,7 @@ def content_parts(task, materials, classification, analysis, generation):
     notice = '<p class="report-notice">历史数据重放 / 报告重渲染；未执行新的来源搜集或证据验收。</p>' if generation.get("mode") == "replay" else ""
     count = f'<p class="sample-count">{len({m["product_name"] for m in materials})} 个竞品 · {len(materials)} 张竞品截图</p>'
     if analysis:
-        main = render(analysis["overall"]) if "overall" in analysis else ""
-        findings = "".join(render_claim(c, names, compact=True) for c in analysis.get("key_findings", []))
-        if findings:
-            main += f'<div class="key-findings">{findings}</div>'
-        gaps = [g for g in analysis.get("information_gaps", []) if g["status"] != "not_applicable"]
-        main += "".join(f'<p class="information-gap">{escape(g["reason"])}</p>' for g in gaps)
+        main = render_overview_claim(analysis["overall"]) if "overall" in analysis else ""
         explained = {g["section"] for g in analysis.get("information_gaps", [])}
         summary = analysis.get("synthesis", {})
         absent = []
@@ -70,7 +85,7 @@ def content_parts(task, materials, classification, analysis, generation):
             main += f'<p class="information-gap">本报告未提供：{"、".join(absent)}；仅展示已有依据的分析。</p>'
     else:
         main = '<p class="report-notice">未提供结构化分析；保留已有截图与证据，未按新版分析标准验收。</p>'
-    overview = f'<header data-module="overview"><h1>{escape(title)}</h1>{notice}{main}{count}</header>'
+    overview = f'<header data-module="overview"><h1>{escape(title)}</h1>{main}</header>'
     navigation = ""
     if groups:
         links = "".join(f'<a href="#{anchor("group", g.get("id", g["name"]))}">{escape(g["name"])}</a>' for g in groups)
@@ -91,8 +106,8 @@ def content_parts(task, materials, classification, analysis, generation):
         baseline = f'<details data-module="current-state" id="{anchor("current_state", current["id"])}"><summary>现状与问题分析</summary>{text}<p>用户现状仅用于对照，不计入竞品数量。</p></details>'
     synthesis = ""
     summary = (analysis or {}).get("synthesis", {})
-    findings = "".join(render(c) for c in summary.get("findings", []))
-    questions = "".join(render(c) for c in summary.get("validation_questions", []))
+    findings = "".join(render_reader_claim(c, names) for c in summary.get("findings", []))
+    questions = "".join(render_reader_claim(c, names, show_recommendation=False) for c in summary.get("validation_questions", []))
     if findings or questions:
         synthesis = '<section data-module="synthesis"><h2>竞品分析小结</h2>' + findings
         if questions:
@@ -107,16 +122,45 @@ def content_parts(task, materials, classification, analysis, generation):
                         for m in (analysis or {}).get("materials", [])}
     methodology = ""
     if analysis:
+        methodology = notice + count
         research = analysis["research"]
-        methodology = f'<h3>研究问题与范围</h3><p>{escape(research["question"])}</p><p>{escape(research["scope"])}</p>'
+        methodology += f'<h3>研究问题与范围</h3><p>{escape(research["question"])}</p><p>{escape(research["scope"])}</p>'
         for field, label in (("goals", "目标"), ("constraints", "约束")):
             if research.get(field):
                 methodology += f'<h3>{label}</h3><ul>' + ''.join(f'<li>{escape(s)}</li>' for s in research[field]) + '</ul>'
         for note in analysis.get("methodology", []):
             methodology += f'<h3>{escape(note["title"])}</h3><p>{escape(note["text"])}</p>'
         for gap in analysis.get("information_gaps", []):
-            if gap["status"] == "not_applicable":
-                methodology += f'<p>不适用：{escape(gap["reason"])}</p>'
+            label = "不适用" if gap["status"] == "not_applicable" else "信息缺口"
+            methodology += f'<p>{label}：{escape(gap["reason"])}</p>'
+        coverage = analysis.get("coverage_assessment")
+        if coverage:
+            decision_labels = {
+                "not_required": "无需额外选择",
+                "continue_limited": "用户选择按当前样本继续",
+                "supplement_sources": "用户选择补充来源",
+                "pending": "等待用户选择",
+            }
+            methodology += f'<h3>样本覆盖</h3><p>{escape(coverage["summary"])}</p>'
+            questions = coverage.get("questions")
+            covered = ([item["question"] for item in questions if item["status"] == "comparable"]
+                       if questions else coverage.get("covered_questions", []))
+            if covered:
+                methodology += '<p><strong>已覆盖：</strong>' + '；'.join(escape(item) for item in covered) + '</p>'
+            gaps = coverage.get("gaps", [])
+            gap_text = [item["detail"] if isinstance(item, dict) else item for item in gaps]
+            if gap_text:
+                methodology += '<p><strong>仍缺：</strong>' + '；'.join(escape(item) for item in gap_text) + '</p>'
+            raw_decision = coverage["user_decision"]
+            decision_status = raw_decision.get("status") if isinstance(raw_decision, dict) else raw_decision
+            decision = decision_labels.get(decision_status, decision_status)
+            methodology += f'<p><strong>处理：</strong>{escape(decision)}</p>'
+        traceable_claims = ([analysis["overall"]] if analysis.get("overall") else [])
+        traceable_claims += analysis.get("key_findings", [])
+        traceable_claims += analysis.get("synthesis", {}).get("findings", [])
+        traceable_claims += analysis.get("synthesis", {}).get("validation_questions", [])
+        if traceable_claims:
+            methodology += '<h3>结论依据与边界</h3>' + ''.join(render(c) for c in traceable_claims)
     elif task.get("research_goal"):
         methodology += f'<h3>原始研究目标</h3><p>{escape(task["research_goal"])}</p>'
     if groups:

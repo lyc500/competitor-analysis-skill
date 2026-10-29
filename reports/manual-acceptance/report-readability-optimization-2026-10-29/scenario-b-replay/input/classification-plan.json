@@ -1,0 +1,147 @@
+{
+  "schema_version": 2,
+  "classification_dimension": "本次改版要解决的设计问题",
+  "classification_reason": "按会员/任务层级、内容续接和次要服务收纳三个问题归组；抽屉、未登录和历史版本作为状态标签保留。",
+  "comparison_basis": {
+    "primary_dimension": "本次改版要解决的设计问题",
+    "rationale": "按会员/任务层级、内容续接和次要服务收纳三个问题归组；抽屉、未登录和历史版本作为状态标签保留。",
+    "scope": "虎牙现状图只作为问题证据，不计入竞品；6 张竞品图均经过本轮来源复查和语义审核。"
+  },
+  "groups": [
+    {
+      "id": "group-priority",
+      "name": "会员与任务怎么分开",
+      "reason": "比较会员和任务如何获得明确位置，同时避免只靠放大卡片",
+      "material_ids": [
+        "mat-cap-uinotes-bilibili",
+        "mat-cap-uinotes-doubao"
+      ],
+      "audit": {
+        "inclusion_criteria": "会员或任务拥有独立区域，并与通用入口区分",
+        "shared_mechanism": "用独立条带或任务卡建立层级",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-uinotes-bilibili",
+            "reason": "会员条带与创作任务分区，说明两类对象可分层"
+          },
+          {
+            "material_id": "mat-cap-uinotes-doubao",
+            "reason": "金币商城与任务中心入口卡先于通用列表；登录后内容尚未展示"
+          }
+        ],
+        "adjacent_difference": "不把含会员字样但页面主任务不同的样本自动纳入"
+      }
+    },
+    {
+      "id": "group-content",
+      "name": "常用内容怎么直接展示",
+      "reason": "比较常用内容动作如何在不扩大入口数量时保持可见",
+      "material_ids": [
+        "mat-cap-uinotes-kugou",
+        "mat-cap-refero-airbuds"
+      ],
+      "audit": {
+        "inclusion_criteria": "页面用最近内容、收藏或下载承接回访",
+        "shared_mechanism": "以内容对象替代泛化功能宫格",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-uinotes-kugou",
+            "reason": "收藏、下载和最近播放同屏"
+          },
+          {
+            "material_id": "mat-cap-refero-airbuds",
+            "reason": "最近播放与收藏紧随身份区"
+          }
+        ],
+        "adjacent_difference": "适用于内容续接，不等同于所有产品的常用功能"
+      }
+    },
+    {
+      "id": "group-containment",
+      "name": "其他服务怎么收起",
+      "reason": "用抽屉与高密度根层对照，判断哪些入口应留在首层",
+      "material_ids": [
+        "mat-cap-uinotes-douyu",
+        "mat-cap-uinotes-pinduoduo"
+      ],
+      "audit": {
+        "inclusion_criteria": "样本展示两种次要服务承载方式：抽屉收纳与根层铺开",
+        "shared_mechanism": "通过收纳与铺开对照首屏成本",
+        "member_reasons": [
+          {
+            "material_id": "mat-cap-uinotes-douyu",
+            "reason": "服务抽屉把创作和推荐服务放在后续层级"
+          },
+          {
+            "material_id": "mat-cap-uinotes-pinduoduo",
+            "reason": "订单、资产、服务和推荐全部铺开，形成密度上界"
+          }
+        ],
+        "adjacent_difference": "斗鱼是抽屉状态，拼多多是未登录根层；两者不是等价页面，只用于机制对照"
+      }
+    }
+  ],
+  "material_labels": [
+    {
+      "material_id": "mat-cap-uinotes-bilibili",
+      "labels": {
+        "page_role": "personal_center_root",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in",
+        "version_status": "historical_version"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-doubao",
+      "labels": {
+        "page_role": "personal_center_root",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-kugou",
+      "labels": {
+        "page_role": "personal_center_root",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    },
+    {
+      "material_id": "mat-cap-refero-airbuds",
+      "labels": {
+        "page_role": "own_profile",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-douyu",
+      "labels": {
+        "page_role": "services_drawer",
+        "path_stage": "personal_center_drawer",
+        "interaction_stage": "drawer_open",
+        "render_state": "loaded_complete",
+        "login_state": "logged_in"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-pinduoduo",
+      "labels": {
+        "page_role": "personal_center_root",
+        "path_stage": "root",
+        "interaction_stage": "browse_before_action",
+        "render_state": "loaded_complete",
+        "login_state": "logged_out"
+      }
+    }
+  ]
+}

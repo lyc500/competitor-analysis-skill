@@ -1,0 +1,723 @@
+{
+  "schema_version": 2,
+  "title": "虎牙“我的”页改版参考",
+  "research": {
+    "question": "怎样在虎牙现状上简化首屏，同时突出常用内容、会员和任务中心？",
+    "scope": "用户提供现状图与 6 张本轮审核竞品；包含根层、未登录和服务抽屉状态",
+    "goals": [
+      "建立会员与任务的清楚层级",
+      "收纳次要服务",
+      "保留内容回访路径"
+    ],
+    "constraints": [
+      "现状图不计入竞品",
+      "没有使用数据，不判定功能高低频"
+    ]
+  },
+  "analysis_process": {
+    "material_observations": [
+      {
+        "id": "obs-uinotes-bilibili",
+        "material_id": "mat-cap-uinotes-bilibili",
+        "visible_facts": [
+          "会员条带位于身份区之后",
+          "常用内容动作与创作中心分成两个区域"
+        ],
+        "evidence_boundaries": [
+          "历史版本，不能视为当前线上方案",
+          "不能由位置推断高频"
+        ]
+      },
+      {
+        "id": "obs-uinotes-doubao",
+        "material_id": "mat-cap-uinotes-doubao",
+        "visible_facts": [
+          "任务中心和金币商城是列表前的独立卡片",
+          "设置类功能位于其后"
+        ],
+        "evidence_boundaries": [
+          "未登录状态，不能判断登录后个性化"
+        ]
+      },
+      {
+        "id": "obs-uinotes-kugou",
+        "material_id": "mat-cap-uinotes-kugou",
+        "visible_facts": [
+          "收藏、下载与最近播放同屏",
+          "通用入口数量较少"
+        ],
+        "evidence_boundaries": [
+          "未登录状态不能证明实际常用程度"
+        ]
+      },
+      {
+        "id": "obs-refero-airbuds",
+        "material_id": "mat-cap-refero-airbuds",
+        "visible_facts": [
+          "身份区后直接出现最近播放与收藏"
+        ],
+        "evidence_boundaries": [
+          "不能从排列推断转化或留存"
+        ]
+      },
+      {
+        "id": "obs-uinotes-douyu",
+        "material_id": "mat-cap-uinotes-douyu",
+        "visible_facts": [
+          "服务抽屉覆盖在个人页上方",
+          "创作和推荐服务集中在抽屉"
+        ],
+        "evidence_boundaries": [
+          "不是个人中心根层首屏，只能用于收纳机制参考"
+        ]
+      },
+      {
+        "id": "obs-uinotes-pinduoduo",
+        "material_id": "mat-cap-uinotes-pinduoduo",
+        "visible_facts": [
+          "订单、资产、服务和推荐内容连续铺开",
+          "页面为未登录完整状态"
+        ],
+        "evidence_boundaries": [
+          "只作为密度上界，不能证明高密度更有效"
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "id": "cmp-priority",
+        "material_ids": [
+          "mat-cap-uinotes-bilibili",
+          "mat-cap-uinotes-doubao",
+          "mat-cap-uinotes-kugou",
+          "mat-cap-refero-airbuds"
+        ],
+        "comparison_findings": [
+          "会员/任务样本用独立条带或卡片，内容样本用可继续对象形成首屏焦点"
+        ],
+        "design_judgment": "强化模块需要先说明用户要完成的任务，再决定条带、卡片或内容对象",
+        "recommendation": "先建立模块职责和排序依据，再调整视觉面积",
+        "applicability": "虎牙需要同时突出会员、任务和常用内容时",
+        "tradeoffs": [
+          "多个一级对象会重新造成首屏竞争"
+        ],
+        "evidence_boundaries": [
+          "截图不能证明哪些功能常用"
+        ]
+      },
+      {
+        "id": "cmp-containment",
+        "material_ids": [
+          "mat-cap-uinotes-douyu",
+          "mat-cap-uinotes-pinduoduo",
+          "mat-cap-uinotes-bilibili"
+        ],
+        "comparison_findings": [
+          "抽屉可延后次要服务，高密度根层则保留更强发现性但增加浏览成本"
+        ],
+        "design_judgment": "收起其他功能是层级决策，需要保留清楚入口和可恢复路径",
+        "recommendation": "把经业务与使用数据确认可降级的服务放入稳定二级容器，并在根层保留入口",
+        "applicability": "次要入口多且根层空间有限时",
+        "tradeoffs": [
+          "收纳会降低次要服务的直接可见性"
+        ],
+        "evidence_boundaries": [
+          "没有使用数据，不能判定具体入口应被收起"
+        ]
+      }
+    ],
+    "current_state": {
+      "id": "current-analysis",
+      "user_provided_facts": [
+        "用户目标是简化布局、突出常用功能、强化会员与任务中心并收起其他功能"
+      ],
+      "goal_relationship": "现状中多个业务入口和服务组同时竞争首屏，需要先定义一级任务与收纳边界。",
+      "inferences": [
+        "会员、任务、常用内容应按任务职责分层",
+        "次要服务可进入稳定二级容器"
+      ],
+      "reference_claim_ids": [
+        "takeaway-group-priority",
+        "takeaway-group-containment"
+      ],
+      "evidence_boundaries": [
+        "没有虎牙使用数据，不能据此判定具体功能高频或低频",
+        "不同会员业务是否合并需要业务关系验证"
+      ]
+    }
+  },
+  "overall": {
+    "id": "overall",
+    "kind": "inference",
+    "statement": "首屏可分成三层：会员区说明已有权益和下一步动作，任务区只提示当前可做的事，最近内容直接展示；其余服务收进“更多”。",
+    "evidence_refs": [
+      {
+        "kind": "material",
+        "id": "mat-cap-uinotes-bilibili"
+      },
+      {
+        "kind": "material",
+        "id": "mat-cap-uinotes-doubao"
+      },
+      {
+        "kind": "material",
+        "id": "mat-cap-uinotes-kugou"
+      },
+      {
+        "kind": "material",
+        "id": "mat-cap-uinotes-douyu"
+      }
+    ],
+    "analysis_refs": [
+      "cmp-priority",
+      "cmp-containment"
+    ],
+    "recommendation": "先定义会员和任务分别要用户完成什么，再确定首屏入口；用原型验证收起服务后，订单和客服是否仍容易找到。",
+    "applicability": "虎牙本次改版目标",
+    "limitations": "静态截图不能证明使用频率或业务效果"
+  },
+  "key_findings": [
+    {
+      "id": "finding-1",
+      "kind": "inference",
+      "statement": "会员区说明用户拥有什么和下一步能做什么；任务区只提示当前可执行动作。",
+      "evidence_refs": [
+        {
+          "kind": "material",
+          "id": "mat-cap-uinotes-bilibili"
+        },
+        {
+          "kind": "material",
+          "id": "mat-cap-uinotes-doubao"
+        }
+      ],
+      "analysis_refs": [
+        "cmp-priority"
+      ],
+      "recommendation": "分别定义信息和主动作",
+      "applicability": "两类业务都有独立用户任务时",
+      "limitations": "静态截图不能证明使用频率或业务效果"
+    },
+    {
+      "id": "finding-2",
+      "kind": "inference",
+      "statement": "常用功能如果是继续观看、收藏或关注，直接展示内容比再放一排入口更省一步。",
+      "evidence_refs": [
+        {
+          "kind": "material",
+          "id": "mat-cap-uinotes-kugou"
+        },
+        {
+          "kind": "material",
+          "id": "mat-cap-refero-airbuds"
+        }
+      ],
+      "analysis_refs": [
+        "cmp-priority"
+      ],
+      "recommendation": "优先验证最近内容模块",
+      "applicability": "内容回访占主要使用场景时",
+      "limitations": "静态截图不能证明使用频率或业务效果"
+    }
+  ],
+  "groups": [
+    {
+      "group_id": "group-priority",
+      "takeaway": {
+        "id": "takeaway-group-priority",
+        "kind": "inference",
+        "statement": "会员区与任务区分开：一个讲权益状态，一个讲现在能做什么。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-priority"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-priority"
+        ],
+        "recommendation": "分别定义会员状态和任务动作，再决定是否都放在首屏",
+        "applicability": "两者都有明确独立任务时",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      }
+    },
+    {
+      "group_id": "group-content",
+      "takeaway": {
+        "id": "takeaway-group-content",
+        "kind": "inference",
+        "statement": "常用功能如果是继续内容，直接展示最近对象，不必先进入列表。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-content"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-priority"
+        ],
+        "recommendation": "优先验证最近观看、收藏或关注是否值得进首屏",
+        "applicability": "虎牙有可靠的最近观看或关注内容时",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      }
+    },
+    {
+      "group_id": "group-containment",
+      "takeaway": {
+        "id": "takeaway-group-containment",
+        "kind": "inference",
+        "statement": "次要服务收进固定的“更多”入口，并保留订单、客服等关键路径。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-containment"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-containment"
+        ],
+        "recommendation": "先用数据确定要收起的入口，再测试用户能否找回",
+        "applicability": "已用数据确认哪些服务可降级后",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "mat-cap-uinotes-bilibili",
+      "insight": {
+        "id": "insight-uinotes-bilibili",
+        "kind": "inference",
+        "statement": "会员条带、创作中心和任务中心分区展示。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-bilibili"
+          }
+        ],
+        "analysis_refs": [
+          "obs-uinotes-bilibili"
+        ],
+        "recommendation": "会员与任务分开设置入口；这张图没有任务进度。",
+        "applicability": "虎牙两类业务都要保留一级入口时",
+        "limitations": "历史版本，不能视为当前线上方案"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-doubao",
+      "insight": {
+        "id": "insight-uinotes-doubao",
+        "kind": "inference",
+        "statement": "任务中心卡位于通用列表之前，入口容易被看到。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-doubao"
+          }
+        ],
+        "analysis_refs": [
+          "obs-uinotes-doubao"
+        ],
+        "recommendation": "先让任务入口可见，登录后再决定展示哪些任务信息。",
+        "applicability": "任务中心是明确回访任务时",
+        "limitations": "未登录状态，不能判断登录后个性化"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-kugou",
+      "insight": {
+        "id": "insight-uinotes-kugou",
+        "kind": "inference",
+        "statement": "收藏、下载和最近播放直接承接内容回访。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-kugou"
+          }
+        ],
+        "analysis_refs": [
+          "obs-uinotes-kugou"
+        ],
+        "recommendation": "把可继续的内容放在首屏，收藏和下载作为辅助入口。",
+        "applicability": "有稳定最近内容数据时",
+        "limitations": "未登录状态不能证明实际常用程度"
+      }
+    },
+    {
+      "material_id": "mat-cap-refero-airbuds",
+      "insight": {
+        "id": "insight-refero-airbuds",
+        "kind": "inference",
+        "statement": "身份信息后紧接最近播放与收藏。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-refero-airbuds"
+          }
+        ],
+        "analysis_refs": [
+          "obs-refero-airbuds"
+        ],
+        "recommendation": "需要表达个人内容时，让最近内容靠近身份区。",
+        "applicability": "个人内容能表达用户身份时",
+        "limitations": "不能从排列推断转化或留存"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-douyu",
+      "insight": {
+        "id": "insight-uinotes-douyu",
+        "kind": "inference",
+        "statement": "抽屉集中收纳次要服务，但它不是个人中心首屏。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-douyu"
+          }
+        ],
+        "analysis_refs": [
+          "obs-uinotes-douyu"
+        ],
+        "recommendation": "用固定“更多”入口收纳服务，并保留清楚的返回路径。",
+        "applicability": "次要服务已由数据确认后",
+        "limitations": "不是个人中心根层首屏，只能用于收纳机制参考"
+      }
+    },
+    {
+      "material_id": "mat-cap-uinotes-pinduoduo",
+      "insight": {
+        "id": "insight-uinotes-pinduoduo",
+        "kind": "inference",
+        "statement": "订单、资产、服务和推荐全部铺开，页面密度很高。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-pinduoduo"
+          }
+        ],
+        "analysis_refs": [
+          "obs-uinotes-pinduoduo"
+        ],
+        "recommendation": "把它当作删减清单，不要直接照搬布局。",
+        "applicability": "评审首屏信息量时",
+        "limitations": "只作为密度上界，不能证明高密度更有效"
+      }
+    }
+  ],
+  "synthesis": {
+    "findings": [
+      {
+        "id": "synthesis-1",
+        "kind": "inference",
+        "statement": "建议先确定首屏保留哪些入口，再定义会员状态和任务动作，最后把其余服务收进“更多”。",
+        "evidence_refs": [
+          {
+            "kind": "group",
+            "id": "group-priority"
+          },
+          {
+            "kind": "group",
+            "id": "group-content"
+          },
+          {
+            "kind": "group",
+            "id": "group-containment"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-priority",
+          "cmp-containment"
+        ],
+        "recommendation": "按“首屏名单—会员与任务职责—更多服务找回测试”的顺序推进",
+        "applicability": "进入线框图前",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      },
+      {
+        "id": "synthesis-2",
+        "kind": "inference",
+        "statement": "斗鱼可参考服务收纳，拼多多可作为页面密度上界；两者都不适合直接照搬。",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-douyu"
+          },
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-pinduoduo"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-containment"
+        ],
+        "recommendation": "只借用收纳机制和密度对照，不复制页面结构",
+        "applicability": "评审次要服务收纳时",
+        "limitations": "静态截图不能证明使用频率或业务效果"
+      }
+    ],
+    "validation_questions": [
+      {
+        "id": "validation-1",
+        "kind": "question",
+        "statement": "哪些入口必须留在首屏？",
+        "evidence_refs": [
+          {
+            "kind": "current_state",
+            "id": "current-huya-actions"
+          }
+        ],
+        "analysis_refs": [
+          "current-analysis"
+        ]
+      },
+      {
+        "id": "validation-2",
+        "kind": "question",
+        "statement": "贵族、守护和平台会员分别要表达什么权益？",
+        "evidence_refs": [
+          {
+            "kind": "current_state",
+            "id": "current-huya-membership"
+          }
+        ],
+        "analysis_refs": [
+          "current-analysis"
+        ]
+      },
+      {
+        "id": "validation-3",
+        "kind": "question",
+        "statement": "服务收进“更多”后，订单和客服还能否被快速找到？",
+        "evidence_refs": [
+          {
+            "kind": "material",
+            "id": "mat-cap-uinotes-douyu"
+          }
+        ],
+        "analysis_refs": [
+          "cmp-containment"
+        ]
+      }
+    ]
+  },
+  "information_gaps": [
+    {
+      "section": "使用数据",
+      "status": "not_provided",
+      "reason": "缺少虎牙真实入口使用与任务数据，不能判定具体功能高频或低频。"
+    },
+    {
+      "section": "业务关系",
+      "status": "unknown",
+      "reason": "贵族、守护和平台会员的业务关系需由产品侧确认。"
+    },
+    {
+      "section": "版本",
+      "status": "unknown",
+      "reason": "部分来源没有当前版本时间，哔哩哔哩明确标记为历史版本。"
+    }
+  ],
+  "methodology": [
+    {
+      "title": "证据边界",
+      "text": "结论来自静态截图的可见结构；不推断使用频率、转化率或留存效果。"
+    }
+  ],
+  "current_state": {
+    "id": "current-huya",
+    "description": "用户提供的虎牙‘我的’页归档现状图，作为本轮明确输入基线；不计入竞品数量。",
+    "images": [
+      {
+        "id": "current-huya-image",
+        "image_path": "huya-current.png",
+        "caption": "虎牙现状图（用户测试归档输入）"
+      }
+    ],
+    "regions": [
+      {
+        "id": "current-huya-membership",
+        "image_id": "current-huya-image",
+        "label": "身份、等级与业务入口区",
+        "visible_fact": "身份信息与 LV 等级位于顶部，守护、贵族入口与关注、历史等动作在下方宫格中并列"
+      },
+      {
+        "id": "current-huya-actions",
+        "image_id": "current-huya-image",
+        "label": "常用动作区",
+        "visible_fact": "观看记录、关注和任务等动作分散在多个模块"
+      },
+      {
+        "id": "current-huya-services",
+        "image_id": "current-huya-image",
+        "label": "更多服务区",
+        "visible_fact": "页面下方连续铺开多组服务入口"
+      }
+    ],
+    "findings": [
+      {
+        "id": "current-1",
+        "kind": "observation",
+        "statement": "现状上半区同时可见身份与 LV 等级、钱包、任务中心，以及守护、贵族等入口；截图未显示独立的平台会员入口。",
+        "evidence_refs": [
+          {
+            "kind": "current_state",
+            "id": "current-huya-membership"
+          },
+          {
+            "kind": "current_state",
+            "id": "current-huya-actions"
+          }
+        ],
+        "analysis_refs": [
+          "current-analysis"
+        ]
+      },
+      {
+        "id": "current-2",
+        "kind": "observation",
+        "statement": "下方连续铺开游戏服务与更多服务；哪些入口可以收起仍需使用数据确认。",
+        "evidence_refs": [
+          {
+            "kind": "current_state",
+            "id": "current-huya-services"
+          }
+        ],
+        "analysis_refs": [
+          "current-analysis"
+        ]
+      }
+    ]
+  },
+  "quality_review": {
+    "review_type": "agent_self_review",
+    "independent": false,
+    "reviewed_claim_ids": [
+      "overall",
+      "finding-1",
+      "finding-2",
+      "synthesis-1",
+      "synthesis-2",
+      "validation-1",
+      "validation-2",
+      "validation-3",
+      "takeaway-group-priority",
+      "takeaway-group-content",
+      "takeaway-group-containment",
+      "insight-uinotes-bilibili",
+      "insight-uinotes-doubao",
+      "insight-uinotes-kugou",
+      "insight-refero-airbuds",
+      "insight-uinotes-douyu",
+      "insight-uinotes-pinduoduo",
+      "current-1",
+      "current-2"
+    ],
+    "checks": {
+      "evidence_supported": true,
+      "reference_value_clear": true,
+      "research_relevant": true,
+      "exceptions_considered": true,
+      "duplicates_resolved": true,
+      "generic_claims_removed": true
+    },
+    "edits": [
+      {
+        "candidate_id": "generic-claim",
+        "action": "removed",
+        "before": "突出重点可以提升体验",
+        "reason": "没有说明具体做法、条件或截图依据"
+      },
+      {
+        "candidate_id": "independent-audit-task-and-current-state",
+        "action": "rewritten",
+        "before": "任务进度、可执行进度；现状含独立会员入口；两个大卡片继续争抢首屏",
+        "after": "截图只证明任务入口可见；现状截图未显示独立平台会员入口；若拟议方案同时使用两个大卡片，需要验证首屏权重",
+        "reason": "截图只支持任务入口可见，会员属于用户改版目标；大卡片竞争改为拟议方案的条件性取舍"
+      },
+      {
+        "candidate_id": "second-independent-review-doubao-classification",
+        "action": "rewritten",
+        "before": "分类理由称任务对象清楚",
+        "after": "分类理由只记录金币商城与任务中心入口卡先于通用列表，登录后内容尚未展示",
+        "reason": "同步修正默认卡片、可见事实、分类理由与综合结论的证据口径"
+      }
+    ],
+    "notes": [
+      "逐图事实、横向比较和最终结论已由 Agent 人工复核；该记录不是独立验证。"
+    ]
+  },
+  "coverage_assessment": {
+    "status": "limited",
+    "summary": "6 张素材可比较内容续接和服务收纳，但任务入口只有一个直接案例，会员状态也缺少更多可比较状态。",
+    "research_question": "怎样在虎牙现状上简化首屏，同时突出常用内容、会员和任务中心？",
+    "questions": [
+      {
+        "id": "q-content",
+        "question": "常用内容如何减少一次跳转",
+        "material_ids": [
+          "mat-cap-uinotes-kugou",
+          "mat-cap-refero-airbuds"
+        ],
+        "comparison_ids": [
+          "cmp-priority"
+        ],
+        "strategies": [
+          "直接展示最近内容",
+          "将个人内容与业务入口分开"
+        ],
+        "status": "comparable"
+      },
+      {
+        "id": "q-containment",
+        "question": "次要服务如何收纳且保持可找回",
+        "material_ids": [
+          "mat-cap-uinotes-douyu",
+          "mat-cap-uinotes-pinduoduo",
+          "mat-cap-uinotes-bilibili"
+        ],
+        "comparison_ids": [
+          "cmp-containment"
+        ],
+        "strategies": [
+          "按服务类型分组",
+          "控制首屏密度"
+        ],
+        "status": "comparable"
+      },
+      {
+        "id": "q-task",
+        "question": "任务入口如何提示当前可做的事",
+        "material_ids": [
+          "mat-cap-uinotes-doubao"
+        ],
+        "comparison_ids": [],
+        "strategies": [
+          "入口直接写出当前动作"
+        ],
+        "status": "single_case"
+      }
+    ],
+    "gaps": [
+      {
+        "reason": "subscription_restricted",
+        "detail": "UI Notes 非会员范围限制了继续浏览",
+        "question_ids": [
+          "q-task"
+        ],
+        "source_attempt_ids": []
+      },
+      {
+        "reason": "discovery_insufficient",
+        "detail": "缺少第二个任务入口案例和更多会员状态案例",
+        "question_ids": [
+          "q-task"
+        ],
+        "source_attempt_ids": []
+      }
+    ],
+    "user_decision": {
+      "status": "not_required",
+      "research_question": "怎样在虎牙现状上简化首屏，同时突出常用内容、会员和任务中心？",
+      "provenance": "not_required"
+    }
+  }
+}

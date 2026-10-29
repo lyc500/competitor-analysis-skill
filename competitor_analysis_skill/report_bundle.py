@@ -44,8 +44,15 @@ def write_report_bundle(payload, output_dir, materials_base, analysis_base=None,
     valid = _collected(task, materials)
     classification = classify_assets(valid, data["classification"])
     analysis = data.get("analysis")
+    if mode == "formal" and analysis and analysis.get("schema_version") != 2:
+        raise ValueError("正式报告只接受 analysis v2；旧分析仅可用于历史重放")
     if "analysis" in data:
-        analysis = validate_analysis(analysis, valid, classification)
+        analysis = validate_analysis(analysis, valid, classification, require_detailed_coverage=mode == "formal")
+        coverage = analysis.get("coverage_assessment", {})
+        decision = coverage.get("user_decision", {})
+        decision_status = decision.get("status") if isinstance(decision, dict) else decision
+        if coverage.get("status") == "insufficient" and decision_status == "supplement_sources":
+            raise ValueError("样本不足且用户选择补充来源，不能提前生成正式报告")
     output_dir = Path(output_dir).resolve()
     # A replay must never overwrite the snapshot (including archived inputs).
     if mode == "replay" and output_dir == Path(materials_base).resolve():

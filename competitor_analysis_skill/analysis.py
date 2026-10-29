@@ -35,7 +35,7 @@ def _text_array(value, field, required=False):
     return items
 
 
-def validate_analysis(value, materials, classification):
+def validate_analysis(value, materials, classification, require_detailed_coverage=False):
     """Return a deep copy; absent fields stay absent (no invented analysis)."""
     if not isinstance(value, dict):
         raise AnalysisError("analysis 必须是对象")
@@ -43,11 +43,11 @@ def validate_analysis(value, materials, classification):
     if type(version) is not int or version not in (1, 2):
         raise AnalysisError("analysis.schema_version 只支持 1 或 2")
     allowed = {"schema_version", "title", "research", "overall", "key_findings", "current_state",
-               "groups", "materials", "synthesis", "information_gaps", "methodology"}
+               "groups", "materials", "synthesis", "information_gaps", "methodology", "coverage_assessment"}
     required = {"schema_version", "title", "research"}
     if version == 2:
         allowed |= {"analysis_process", "quality_review"}
-        required |= {"analysis_process", "quality_review", "overall", "groups", "materials", "synthesis"}
+        required |= {"analysis_process", "quality_review", "coverage_assessment", "overall", "groups", "materials", "synthesis"}
     _object(value, allowed, "analysis", required)
     _text(value["title"], "analysis.title")
     research = value["research"]
@@ -57,6 +57,47 @@ def validate_analysis(value, materials, classification):
     for field in ("goals", "constraints"):
         for item in _array(research.get(field, []), f"research.{field}"):
             _text(item, f"research.{field}")
+
+    coverage = value.get("coverage_assessment")
+    if coverage is not None:
+        _object(coverage, {"status", "summary", "covered_questions", "questions", "gaps", "user_decision",
+                           "research_question"},
+                "coverage_assessment", {"status", "summary", "gaps", "user_decision"})
+        if coverage["status"] not in ("sufficient", "limited", "insufficient"):
+            raise AnalysisError("coverage_assessment.status 无效")
+        decision = coverage["user_decision"]
+        if isinstance(decision, dict):
+            _object(decision, {"status", "research_question", "provenance"}, "coverage_assessment.user_decision",
+                    {"status", "research_question", "provenance"})
+            decision_status = decision["status"]
+            _text(decision["research_question"], "coverage_assessment.user_decision.research_question")
+            if decision["provenance"] not in ("not_required", "user_explicit"):
+                raise AnalysisError("coverage_assessment.user_decision.provenance 无效")
+        else:
+            decision_status = decision
+        if decision_status not in ("not_required", "continue_limited", "supplement_sources", "pending"):
+            raise AnalysisError("coverage_assessment.user_decision 无效")
+        _text(coverage["summary"], "coverage_assessment.summary")
+        if "covered_questions" in coverage:
+            _text_array(coverage["covered_questions"], "coverage_assessment.covered_questions", required=True)
+        if not isinstance(coverage["gaps"], list):
+            raise AnalysisError("coverage_assessment.gaps 必须是数组")
+        if coverage["status"] in ("limited", "insufficient") and not coverage["gaps"]:
+            raise AnalysisError("覆盖有限或不足时必须记录缺口")
+        if coverage["status"] == "sufficient" and decision_status != "not_required":
+            raise AnalysisError("覆盖充分时不应要求用户选择")
+        if coverage["status"] == "insufficient" and decision_status in ("pending", "not_required"):
+            raise AnalysisError("样本不足时必须记录用户选择继续小样本分析或补充来源")
+        if require_detailed_coverage and not {"research_question", "questions"} <= set(coverage):
+            raise AnalysisError("正式分析必须提供与本次研究问题关联的详细覆盖评估")
+        if require_detailed_coverage and not isinstance(decision, dict):
+            raise AnalysisError("正式分析必须记录与本次研究问题绑定的覆盖选择")
+        if require_detailed_coverage and decision["research_question"] != value["research"]["question"]:
+            raise AnalysisError("覆盖选择与本次研究问题不一致")
+        if require_detailed_coverage and coverage["research_question"] != value["research"]["question"]:
+            raise AnalysisError("覆盖评估与本次研究问题不一致")
+        if require_detailed_coverage and coverage["status"] == "insufficient" and decision["provenance"] != "user_explicit":
+            raise AnalysisError("样本不足时必须保存本次用户的明确选择")
 
     material_ids = {m["id"] for m in materials if m.get("collection_status") == "collected"
                     and m.get("semantic_status") == "accepted" and m.get("quality_status") == "accepted"
@@ -152,6 +193,62 @@ def validate_analysis(value, materials, classification):
             raise AnalysisError("横向比较必须覆盖全部有效素材；例外也需进入比较记录")
         if len(material_ids) <= 1 and comparisons:
             raise AnalysisError("单张素材不能伪造横向比较")
+
+        if coverage and "questions" in coverage:
+            question_ids = set()
+            question_statuses = []
+            product_by_material = {m["id"]: m.get("product_name", m["id"]) for m in materials}
+            comparison_ids = {item["id"] for item in comparisons}
+            for index, item in enumerate(_array(coverage["questions"], "coverage_assessment.questions")):
+                field = f"coverage_assessment.questions[{index}]"
+                _object(item, {"id", "question", "material_ids", "comparison_ids", "strategies", "status"}, field,
+                        {"id", "question", "material_ids", "comparison_ids", "strategies", "status"})
+                _text(item["id"], field+".id"); _text(item["question"], field+".question")
+                if item["id"] in question_ids:
+                    raise AnalysisError("覆盖问题 ID 重复")
+                question_ids.add(item["id"])
+                mids = _text_array(item["material_ids"], field+".material_ids")
+                if len(set(mids)) != len(mids) or not set(mids) <= material_ids:
+                    raise AnalysisError("覆盖问题引用不存在或重复的素材")
+                cids = _text_array(item["comparison_ids"], field+".comparison_ids")
+                if len(set(cids)) != len(cids) or not set(cids) <= comparison_ids:
+                    raise AnalysisError("覆盖问题引用不存在或重复的横向比较")
+                _text_array(item["strategies"], field+".strategies")
+                if item["status"] not in ("comparable", "single_case", "missing"):
+                    raise AnalysisError("覆盖问题 status 无效")
+                independent = len({product_by_material[mid] for mid in mids})
+                if item["status"] == "comparable" and (independent < 2 or not cids):
+                    raise AnalysisError("可比较问题必须有至少两个独立产品案例及横向比较")
+                if item["status"] == "single_case" and independent != 1:
+                    raise AnalysisError("单案例问题必须只引用一个独立产品案例")
+                if item["status"] == "missing" and mids:
+                    raise AnalysisError("缺失问题不得引用素材")
+                question_statuses.append(item["status"])
+            if require_detailed_coverage and not question_statuses:
+                raise AnalysisError("正式分析至少需要一个核心覆盖问题")
+            if coverage["status"] == "sufficient" and any(s != "comparable" for s in question_statuses):
+                raise AnalysisError("覆盖充分时每个核心问题都必须有可比较证据")
+            if coverage["status"] == "insufficient" and all(s != "missing" for s in question_statuses):
+                raise AnalysisError("覆盖不足必须对应至少一个缺少证据的核心问题")
+            allowed_reasons = {"permission_restricted", "subscription_restricted", "discovery_insufficient",
+                               "pending_review", "quality_rejected", "semantic_rejected", "scope_imbalance",
+                               "evidence_boundary", "other"}
+            for index, gap in enumerate(coverage["gaps"]):
+                field = f"coverage_assessment.gaps[{index}]"
+                if isinstance(gap, str):
+                    if require_detailed_coverage:
+                        raise AnalysisError("正式分析的覆盖缺口必须区分原因")
+                    _text(gap, field)
+                    continue
+                _object(gap, {"reason", "detail", "question_ids", "source_attempt_ids"}, field,
+                        {"reason", "detail", "question_ids", "source_attempt_ids"})
+                if gap["reason"] not in allowed_reasons:
+                    raise AnalysisError("覆盖缺口 reason 无效")
+                _text(gap["detail"], field+".detail")
+                qids = _text_array(gap["question_ids"], field+".question_ids")
+                if not set(qids) <= question_ids:
+                    raise AnalysisError("覆盖缺口引用不存在的核心问题")
+                _text_array(gap["source_attempt_ids"], field+".source_attempt_ids")
 
         current_process = process.get("current_state")
         if current:
