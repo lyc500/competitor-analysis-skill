@@ -31,3 +31,11 @@
 - R8 的真实“用户选择登录或公开继续—人工认证—同会话复查—恢复采集”仍未完整触发。
 - UI Notes 购买会员后能增加多少合格素材未验证。
 - NYT 截图与 You 标签根层首屏的关系未证实，只作可见下段局部参考。
+
+## GitHub 与安装生效
+
+- 功能提交：`fe28022`；与远端等价文档历史非破坏性合并后推送点：`27846e7`，分支 `main`。
+- GitHub：`https://github.com/lyc500/competitor-analysis-skill/commit/fe28022`。
+- 实际安装：`/Users/yuchunli/.codex/skills/competitor-analysis`；更新前 `2b5aa22`，回退分支 `rollback/pre-readability-20261029`。
+- 安装目录关键文件 SHA-256 与交付仓库一致；Python 从安装目录导入。安装目录定向测试 19＋15 项通过，quick validator 通过。
+- 新会话 `01a185cd-c069-7812-8632-ad8193a2bd85` 从自然语言“设置页”任务加载实际安装路径和 `27846e7`。真实来源预检后，浏览器安全策略阻止保存原图；流程正确停在覆盖不足待选择，没有生成正式 HTML、没有伪造截图审核或用户选择。检查点位于 `/Users/yuchunli/Documents/Codex/2026-10-29/competitor-analysis-live-check/outputs/acceptance-20261029-settings-live/`。

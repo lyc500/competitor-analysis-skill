@@ -11,7 +11,8 @@
 - [x] 正式分析拒绝 v1；无分析兼容图墙明确保持 `analysis_status=missing` 和 `standard_acceptance=not_assessed`。历史 v1 仍可显式重放且不补造建议或覆盖选择。
 - [x] A/B 两份历史素材报告已从结构化输入重生成；A 头部概括三类回访任务，B 显示小样本方向参考和分原因缺口。新增非个人中心“搜索结果页”回归，确认无虎牙、会员或任务中心硬编码。
 - [x] 全量 196 项通过，0 failure/error/skip；保留 3 条既有 socket `ResourceWarning`。quick validator、隔离 pycache compileall、`git diff --check` 通过；Chromium 桌面/移动、图片、折叠、放大和横向溢出检查通过。
-- [ ] 本节提交号、远端同步和实际 Skill 安装版本将在本次交付完成后补记。
+- [x] 功能与验收提交 `fe28022` 已通过非破坏性合并推送至 `origin/main`；远端合并点为 `27846e7`。实际安装 `/Users/yuchunli/.codex/skills/competitor-analysis` 已 fast-forward 到该版本，回退分支为 `rollback/pre-readability-20261029`。
+- [x] 安装目录关键文件哈希、实际 Python 导入路径、19＋15 项定向测试和 quick validator 均通过。新会话从自然语言设置页任务加载同一路径与 HEAD，并在原图下载被浏览器安全策略阻断时停在 coverage pending，没有伪造用户选择或正式报告。
 
 ## 2026-10-28 正式交付与生效验证
 
